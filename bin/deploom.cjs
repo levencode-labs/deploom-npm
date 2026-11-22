@@ -197,6 +197,9 @@ async function main() {
     return;
   }
   const refreshCache = command === 'cache' && client === 'refresh';
+  if (refreshCache && process.env.DEPLOOM_MCP_LOCAL_CACHE_ONLY === '1') {
+    throw Error('Cache refresh disabled by DEPLOOM_MCP_LOCAL_CACHE_ONLY');
+  }
   const clientCommand = ['setup', 'rollback'].includes(command) && ['opencode', 'codex', 'claude'].includes(client);
   if ((!refreshCache && !clientCommand) || process.argv.length !== 4) {
     throw Error('Usage: deploom <setup|rollback> <opencode|codex|claude>, deploom cache <refresh|status>, or deploom diagnose-coverage <result.json> [options]');

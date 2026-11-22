@@ -93,6 +93,12 @@ Semgrep scans the installer and exact Core and MCP revisions. Trivy scans the fo
 
 Run `python cache/build_osv.py build/osv` with Python 3.12 or newer to create an index from the public npm ecosystem export. The output includes the compressed SQLite database and its versioned manifest. Run `python -m unittest discover -s cache` for the synthetic export test.
 
+### Local-only cache
+
+Set `DEPLOOM_MCP_LOCAL_CACHE_ONLY=1` in the MCP server's environment and restart the client. DepLoom reads its verified local records or the bundled examples and skips GitHub cache updates, including manual refresh in a CLI with the same environment. Offline OSV coverage depends on the local edition and its expiry. Package installation and registry operations requested by a planning tool have separate network requirements.
+
+If the OSV snapshot has a coverage gap, the planner can send a package name and exact version to npm's Bulk Advisory endpoint only after verifying the version against anonymous public npm metadata. A completed zero-finding assessment needs no second query. Set `DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK=0` to disable those public advisory requests.
+
 ## Sharing an observation
 
 Reproduce a migration in a public fixture under `fixtures/<name>/check.cjs`. The fixture should install exact public versions and run the stated check. Once it passes on GitHub, use its immutable commit URL as `source` in a pull request against `docs/v1/history.json` or `docs/v1/knowledge.json`. The record identifies the package, old and new version, and the observed check or named recipe. Reviewers can rerun the fixture before merging. Installed clients only read the snapshots. Project lockfiles, dependency inventories and local results stay on the developer's machine.
