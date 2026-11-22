@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+import shutil
 from pathlib import Path
 import subprocess
 import tempfile
@@ -12,6 +13,14 @@ source.add_argument("--registry")
 source.add_argument("archive", nargs="?", type=Path)
 args = parser.parse_args()
 spec = args.registry or str(args.archive.resolve(strict=True))
+expected = None
+if args.registry:
+    package, separator, release = args.registry.rpartition("@")
+    if package != "@levencode/deploom" or not separator or not release:
+        parser.error("--registry requires an exact @levencode/deploom release")
+    expected = release
+    if "-" not in release:
+        spec = package
 with tempfile.TemporaryDirectory() as temp:
     profile = Path(temp).resolve()
     env = {**os.environ, "HOME": str(profile), "CODEX_HOME": str(profile / ".codex"),
@@ -21,14 +30,25 @@ with tempfile.TemporaryDirectory() as temp:
     if args.archive:
         env.update({"npm_config_offline": "true", "HTTPS_PROXY": "http://127.0.0.1:1", "HTTP_PROXY": "http://127.0.0.1:1",
            "ALL_PROXY": "http://127.0.0.1:1", "NO_PROXY": "127.0.0.1,localhost"})
+    first_setup = env
+    if args.registry:
+        # Exercise a fresh online install with Node, npm and tar, without a system curl.
+        commands = profile / "minimal-bin"
+        commands.mkdir()
+        for name in ("node", "npm", "tar", "gzip", "sh", "dirname"):
+            (commands / name).symlink_to(Path(shutil.which(name)).resolve(strict=True))
+        first_setup = {**env, "PATH": str(commands)}
     for client in ("claude", "codex", "opencode"):
         subprocess.run(["npm", "exec", "--yes", "--package=" + spec, "--",
-                        "deploom", "setup", client], cwd=profile, env=env, check=True, timeout=600)
+                        "deploom", "setup", client], cwd=profile,
+                       env=first_setup if client == "claude" else env, check=True, timeout=600)
     base = profile / "data/DepLoom/public"
     version = json.loads((base / "clients/codex/active.json").read_bytes())["version"]
+    if expected and version != expected:
+        raise RuntimeError(f"Installed {version} from {spec}, expected {expected}")
     python = base / "versions" / version / "bin/python3.13"
-    subprocess.run([str(python), "-I", "-B", str(Path(__file__).with_name("smoke_clients.py").resolve()), str(profile)],
-                   cwd=profile, env=env, check=True, timeout=180)
+    subprocess.run([str(python), "-I", "-B", str(Path(__file__).with_name("smoke_clients.py").resolve()), str(profile),
+                    *(["--verify-react"] if args.registry else [])], cwd=profile, env=env, check=True, timeout=450)
     scripts = Path(__file__).resolve().parent
     subprocess.run(["node", str(scripts / "codex-skill.cjs"), str(profile)], cwd=profile, env=env, check=True, timeout=90)
     subprocess.run(["node", str(scripts / "opencode-skill.cjs")], cwd=profile, env=env, check=True, timeout=90)

@@ -62,7 +62,20 @@ function buildRuntime(dir, pkg, scratch) {
   } else {
     const archive = path.join(scratch, 'python.tar.gz');
     const url = 'https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.13.18%2B20261110-' + triple + '-install_only_stripped.tar.gz';
-    run('curl', ['--fail', '--silent', '--show-error', '--location', '--retry', '3', '--proto', '=https', '--proto-redir', '=https', '-o', archive, url]);
+    try {
+      run('curl', ['--fail', '--silent', '--show-error', '--location', '--retry', '3', '--proto', '=https', '--proto-redir', '=https', '-o', archive, url]);
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+      const flags = [];
+      if (process.env.HTTPS_PROXY || process.env.https_proxy || process.env.ALL_PROXY || process.env.all_proxy) {
+        if (!process.allowedNodeEnvironmentFlags.has('--use-env-proxy') ||
+            !(process.env.HTTPS_PROXY || process.env.https_proxy)) {
+          throw Error('Install curl to use the configured proxy, or use the offline runtime archive');
+        }
+        flags.push('--use-env-proxy');
+      }
+      run(process.execPath, [...flags, path.join(__dirname, 'download-runtime.cjs'), url, archive]);
+    }
     if (sha(archive) !== digest) throw Error('CPython archive digest mismatch');
     run('tar', ['-xzf', archive, '-C', dir, '--strip-components=1']);
     const lib = path.join(dir, site);
@@ -74,6 +87,10 @@ function buildRuntime(dir, pkg, scratch) {
     run(python, [...pip, 'check']);
     fs.copyFileSync(path.join(pkg, 'bin/Z3-LICENSE.txt'), path.join(lib, 'z3', 'Z3-LICENSE.txt'));
   }
+  // pip's shebang points into the staging directory, which is renamed after verification.
+  const workspace = path.join(dir, 'bin/deploom-workspace');
+  fs.writeFileSync(workspace, '#!/bin/sh\nexec "$(dirname "$0")/python3.13" -I -B -m deploom_mcp.workspace_edits "$@"\n');
+  fs.chmodSync(workspace, 0o755);
   run(path.join(dir, 'bin/python3.13'), ['-I', '-B', '-c', 'from deploom_mcp import server; import z3; x=z3.Int("x"); s=z3.Solver(); s.add(x==17); assert s.check()==z3.sat and s.model()[x].as_long()==17']);
 }
 module.exports = { buildRuntime, checkPlatform, verifyArchive, target, sha, runtimeDigest };

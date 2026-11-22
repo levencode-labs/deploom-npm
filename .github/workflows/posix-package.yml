@@ -1,9 +1,9 @@
 name: Test native Linux and macOS npm archives
 on:
   push:
-    paths: ['bin/**', 'ci/*posix*', 'package.json', '.github/workflows/posix-package.yml']
+    paths: ['bin/**', 'ci/*posix*', 'ci/smoke_clients.py', 'package.json', '.github/workflows/posix-package.yml']
   pull_request:
-    paths: ['bin/**', 'ci/*posix*', 'package.json', '.github/workflows/posix-package.yml']
+    paths: ['bin/**', 'ci/*posix*', 'ci/smoke_clients.py', 'package.json', '.github/workflows/posix-package.yml']
   workflow_call:
 permissions:
   contents: read
@@ -33,6 +33,18 @@ jobs:
           python3 ci/posix-opencode.py "$RUNNER_TEMP/deploom-clients/node_modules/.bin"
       - name: Install offline and call each registered MCP
         run: PATH="$RUNNER_TEMP/deploom-clients/node_modules/.bin:$PATH" python3 ci/test-posix.py native-build/*.tgz
+      - name: Verify online bootstrap without curl and apply a real React upgrade
+        if: matrix.runner == 'ubuntu-24.04'
+        shell: bash
+        run: |
+          test_profile=$(mktemp -d)
+          export XDG_DATA_HOME="$test_profile/data" CLAUDE_CONFIG_DIR="$test_profile/.claude"
+          export npm_config_cache="$test_profile/npm-cache" DEPLOOM_MCP_LOCAL_CACHE_ONLY=1
+          unset DEPLOOM_WORKSPACE_NPM_REGISTRY
+          mkdir "$test_profile/bin"
+          for tool in node tar gzip sh dirname; do ln -s "$(command -v "$tool")" "$test_profile/bin/$tool"; done
+          HOME="$test_profile" PATH="$test_profile/bin" node bin/deploom.cjs setup claude
+          HOME="$test_profile" "$XDG_DATA_HOME"/DepLoom/public/versions/*/bin/python3.13 -I -B ci/smoke_clients.py "$test_profile" --client claude --verify-react
       - uses: actions/upload-artifact@v4
         with:
           name: posix-${{ matrix.runner }}
