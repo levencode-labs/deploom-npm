@@ -1,0 +1,30 @@
+name: Submit npm 0.2.25 for maintainer review
+on:
+  push:
+    branches: [automation/propose-npm-025-review]
+permissions: {}
+jobs:
+  propose:
+    if: github.repository == 'levencode-labs/deploom-npm' && github.actor == 'AlexanderLevenskikh'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Open the release pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE: 8836624e48ce0343910d8b3733a48689eca1fcfd
+          HEAD_SHA: 5b22b2e76eab8f739db349821a6ef6184a640a80
+          BRANCH: fix/portable-workspace-cli
+        run: |
+          set -euo pipefail
+          api="repos/$GITHUB_REPOSITORY"
+          test "$(gh api "$api/git/ref/heads/main" --jq .object.sha)" = "$BASE"
+          test "$(gh api "$api/git/ref/heads/$BRANCH" --jq .object.sha)" = "$HEAD_SHA"
+          prior=$(gh api "$api/pulls?state=open&base=main&head=levencode-labs:$BRANCH" --jq '.[0].html_url // empty')
+          if test -n "$prior"; then echo "$prior"; exit 0; fi
+          gh api -X POST "$api/pulls" -f base=main -f head="$BRANCH" \
+            -f title='Release 0.2.25 with portable workspace apply on Linux and macOS' \
+            -f body="Prepared by Codex for maintainer review at $HEAD_SHA. Pins MCP 0.2.27, fixes the relocated workspace launcher and supports HTTPS bootstrap without curl. CI exercises clean profiles, real manifest apply, strict npm ci and React SSR. Public registry acceptance installs stable releases by name." --jq .html_url
