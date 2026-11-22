@@ -1,6 +1,7 @@
 name: Test native Linux and macOS npm archives
 on:
   push:
+    branches: [main]
     paths: ['bin/**', 'ci/*posix*', 'ci/smoke_clients.py', 'package.json', '.github/workflows/posix-package.yml']
   pull_request:
     paths: ['bin/**', 'ci/*posix*', 'ci/smoke_clients.py', 'package.json', '.github/workflows/posix-package.yml']

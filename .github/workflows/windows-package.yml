@@ -28,9 +28,25 @@ jobs:
         with:
           persist-credentials: false
       - name: Install cross compiler
-        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends g++-mingw-w64-x86-64-posix
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ccache g++-mingw-w64-x86-64-posix
+      - name: Identify the cross compiler and headers
+        id: toolchain
+        run: |
+          digest=$(dpkg-query -W 'gcc-mingw*' 'g++-mingw*' 'mingw-w64*' 'binutils-mingw*' ccache | sha256sum | cut -d' ' -f1)
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/restore@v4
+        id: compiler-cache
+        with:
+          path: ~/.cache/ccache
+          key: z3-mingw-v1-${{ runner.arch }}-${{ steps.toolchain.outputs.digest }}-${{ hashFiles('ci/build-z3-mingw.sh') }}
       - name: Build the original solver without MSVC runtime dependencies
         run: bash ci/build-z3-mingw.sh
+      - run: ccache --show-stats
+      - uses: actions/cache/save@v4
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.compiler-cache.outputs.cache-hit != 'true'
+        with:
+          path: ~/.cache/ccache
+          key: ${{ steps.compiler-cache.outputs.cache-primary-key }}
       - uses: actions/upload-artifact@v4
         with:
           name: portable-z3
@@ -50,7 +66,7 @@ jobs:
         if: ${{ !inputs.release }}
         with:
           repository: levencode-labs/deploom-mcp
-          ref: 7ebc3991dfee86a8d7d6633566f4e38e8b6b9cba
+          ref: 523c1b831ae6e1b8defc254fa65f2b4a4c768cb8
           submodules: true
           path: build/upstream
           persist-credentials: false
