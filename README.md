@@ -60,7 +60,7 @@ Run `deploom cache status` to inspect the local OSV snapshot. This read-only com
 
 ### Interpreting vulnerability coverage
 
-The npm launcher selects a local OSV directory even on a clean installation. A fresh, conclusive assessment ends the advisory check. When coverage is missing, the public planner can query npm's Bulk Advisory endpoint for an independently confirmed public package and exact version. Missing identity, conflicting lockfile evidence, an unavailable registry or an inconclusive response leave the result `UNKNOWN`.
+The npm launcher selects a local OSV directory even on a clean installation. A fresh, conclusive assessment ends the advisory check. When coverage is missing, the public planner can query npm's Bulk Advisory endpoint for an independently confirmed public package and exact version. MCP 0.2.25 uses direct anonymous HTTPS for this check. When npm explicitly marks metadata public and offers a cookie, the client discards the cookie and uses the response only for that advisory lookup. Missing identity, conflicting lockfile evidence, an unavailable registry or an inconclusive response leave the result `UNKNOWN`.
 
 DepLoom 0.2.22 can also use the public npm metadata it already fetched for planning. If an anonymous response directly from `https://registry.npmjs.org` confirms the name and exact version, the planner can report zero known findings when the fresh snapshot has no matching advisory. For example, `clsx@2.1.1` can be assessed even in an edition containing no entries for `clsx`. In this case the row reports `publicIdentitySource: NPM_PUBLIC_PACKUMENT`, and the advisory check makes no additional network request. A registry mirror, a system proxy or metadata for another version cannot establish this identity.
 

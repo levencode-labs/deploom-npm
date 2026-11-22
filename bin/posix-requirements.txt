@@ -36,4 +36,4 @@ tzdata==2026.6 --hash=sha256:0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e
 urllib3==2.8.0 --hash=sha256:0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3
 uvicorn==0.54.0 --hash=sha256:505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf
 z3-solver==4.13.0.0 --hash=sha256:4a4731fded91b32e1861e1c7c96e500da743bb9431246cac51f7c3ffc0f21b5d --hash=sha256:8c42de82b6e3ff7ee61287d03c7af8a99f9f6554cdd1204c6b9bca96ff1cb7fb --hash=sha256:9d622022a3511c059915c56b2c231c84b5c1be1b82f457d7560dda3d916474fe --hash=sha256:bca7d59a699a440247537c2180c519d682c9df3520a16ce288fced61a70d253d
-deploom-mcp @ https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.24/deploom_mcp-0.2.24-py3-none-any.whl --hash=sha256:8ce42f6b4f76efe099492ba328553d1bfceb87973065bdb5f7ae3bba68726e16
+deploom-mcp @ https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.25/deploom_mcp-0.2.25-py3-none-any.whl --hash=sha256:c97471e71a1039bee75e710cd9a263f7d8a9e983a872fff286a17b42c482e173
