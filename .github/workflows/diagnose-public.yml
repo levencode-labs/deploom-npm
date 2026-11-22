@@ -20,7 +20,8 @@ jobs:
         with:
           python-version: '3.13'
       - name: Install the exact released wheel
-        run: python -m pip install --only-binary=:all: "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.24/deploom_mcp-0.2.24-py3-none-any.whl#sha256=8ce42f6b4f76efe099492ba328553d1bfceb87973065bdb5f7ae3bba68726e16"
+        run: |
+          python -m pip install --only-binary=:all: "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.24/deploom_mcp-0.2.24-py3-none-any.whl#sha256=8ce42f6b4f76efe099492ba328553d1bfceb87973065bdb5f7ae3bba68726e16"
       - name: Observe anonymous registry and the released planner
         shell: bash
         run: |
