@@ -16,6 +16,7 @@ jobs:
       - run: npm test
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
+      - run: node fixtures/vitest-vite-peer/check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
