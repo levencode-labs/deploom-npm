@@ -1,0 +1,17 @@
+{
+  "name": "deploom-react-renderer-baseline",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "18.3.1",
+    "react-test-renderer": "18.3.1"
+  },
+  "overrides": {
+    "scheduler": "0.23.2",
+    "react-shallow-renderer": "16.15.0",
+    "react-is": "18.3.1",
+    "loose-envify": "1.4.0",
+    "js-tokens": "4.0.0",
+    "object-assign": "4.1.1"
+  }
+}

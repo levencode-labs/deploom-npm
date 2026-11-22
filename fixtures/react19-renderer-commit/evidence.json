@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "d7e2ee9cf79f5f298f59cedaa65c864cff438e2c532da2588557241cfb283b7f",
+  "claims": [
+    {
+      "package": "react-test-renderer",
+      "from": "18.3.1",
+      "to": "19.3.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

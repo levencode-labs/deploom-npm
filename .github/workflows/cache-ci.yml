@@ -16,6 +16,7 @@ jobs:
       - run: npm test
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
+      - run: node fixtures/react19-renderer-commit/check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
@@ -36,3 +37,14 @@ jobs:
           PY
           python -m unittest discover -s cache -v
           python ci/check_record_signature.py
+
+  renderer-fixture-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node fixtures/react19-renderer-commit/check.cjs
