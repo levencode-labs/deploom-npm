@@ -10,7 +10,12 @@ curl --fail --location --retry 3 "$url" -o "$archive"
 echo "$sha  $archive" | sha256sum --check --strict
 tar xzf "$archive"
 linkflags='-static -static-libgcc -static-libstdc++ -Wl,--strip-all,--no-insert-timestamp'
-cmake -S z3-solver-4.13.0.0/core -B obj -G Ninja \
+launchers=()
+if command -v ccache >/dev/null; then
+  export CCACHE_COMPILERCHECK=content CCACHE_BASEDIR="$PWD" CCACHE_MAXSIZE=768M
+  launchers=(-DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache)
+fi
+cmake "${launchers[@]}" -S z3-solver-4.13.0.0/core -B obj -G Ninja \
   -DCMAKE_SYSTEM_NAME=Windows -DCMAKE_SYSTEM_PROCESSOR=AMD64 \
   -DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc-posix -DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++-posix \
   -DCMAKE_RC_COMPILER=x86_64-w64-mingw32-windres -DCMAKE_BUILD_TYPE=Release \
