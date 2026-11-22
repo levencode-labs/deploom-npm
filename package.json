@@ -1,6 +1,6 @@
 {
   "name": "@levencode/deploom",
-  "version": "0.2.23",
+  "version": "0.2.24",
   "description": "Install the DepLoom MCP server and migration Skill for Windows, Linux and macOS",
   "keywords": ["deploom", "mcp", "mcp-server", "dependency-upgrades", "windows", "linux", "macos", "arm64", "offline", "codex", "claude-code", "opencode", "osv"],
   "license": "Apache-2.0",

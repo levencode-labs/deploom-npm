@@ -26,10 +26,10 @@ npm.cmd exec --yes --package=@levencode/deploom -- deploom setup codex
 
 ## Offline setup
 
-Copy the `.tgz` from the [Windows release](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.23) to the target machine. Open PowerShell in the directory containing the archive. The same command works with an empty npm cache.
+Copy the `.tgz` from the [Windows release](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.24) to the target machine. Open PowerShell in the directory containing the archive. The same command works with an empty npm cache.
 
 ```powershell
-npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.23.tgz -- deploom setup codex
+npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.24.tgz -- deploom setup codex
 ```
 
 Restart the client after setup to load the server and discover the Skill.
@@ -44,31 +44,31 @@ For an online installation, run the following from your project. First setup dow
 npm exec --yes --package=@levencode/deploom -- deploom setup codex
 ```
 
-For an offline installation, download the archive matching the destination machine from the [release assets](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.23). The available archive prefixes are `deploom-linux-x64`, `deploom-linux-arm64`, and `deploom-darwin-arm64`. For example, on Apple Silicon run the following in the directory containing the file.
+For an offline installation, download the archive matching the destination machine from the [release assets](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.24). The available archive prefixes are `deploom-linux-x64`, `deploom-linux-arm64`, and `deploom-darwin-arm64`. For example, on Apple Silicon run the following in the directory containing the file.
 
 ```sh
-npm exec --offline --yes --package=./deploom-darwin-arm64-0.2.23.tgz -- deploom setup codex
+npm exec --offline --yes --package=./deploom-darwin-arm64-0.2.24.tgz -- deploom setup codex
 ```
 
 Use `claude` or `opencode` in place of `codex` to register another client. Keep running Node.js on its native architecture. Intel macOS, Alpine/musl and Windows ARM64 are outside this release's supported matrix.
 
 ## Updates and rollback
 
-To switch back to the previous version retained for that client, run `deploom rollback codex` from an installed CLI. Setup installs the server. To install or refresh the shared public npm advisory snapshot, run `deploom cache refresh`. The client fetches fixed public URLs, verifies the snapshot locally and retains the previous working data if refresh fails. Restart your MCP client after the first refresh so the launcher selects the snapshot. Refresh it again before its seven-day freshness window expires.
+To switch back to the previous version retained for that client, run `deploom rollback codex` from an installed CLI. Setup installs the server. To install or refresh the shared public npm advisory snapshot, run `deploom cache refresh`. The client fetches fixed public URLs, verifies the snapshot locally and retains the previous working data if refresh fails. Refresh it again before its seven-day freshness window expires.
 
 Run `deploom cache status` to inspect the local OSV snapshot. This read-only command checks the installed database's size and digest against its local manifest and prints the edition and its UTC expiry. It works offline before client setup and honors `DEPLOOM_MCP_OSV_DIR`. Status is `fresh`, `expiring` during the last 48 hours, `expired`, `missing`, or `invalid`. The last three return exit code 1. For a custom directory, its owner supplies and refreshes the snapshot. The installer's `cache refresh` updates the default shared cache.
 
 ### Interpreting vulnerability coverage
 
-For a public npm project, `get_upgrade_plan` works with OSV alone. On a clean installation with external evidence enabled, the planner sends package names and versions to the public OSV API. When the launcher selects a snapshot, the planner checks advisories locally. Resolving package versions can still require registry access. A stale snapshot or an inconclusive lookup produces `UNKNOWN`.
+The npm launcher selects a local OSV directory even on a clean installation. A fresh, conclusive assessment ends the advisory check. When coverage is missing, the public planner can query npm's Bulk Advisory endpoint for an independently confirmed public package and exact version. Missing identity, conflicting lockfile evidence, an unavailable registry or an inconclusive response leave the result `UNKNOWN`.
 
 DepLoom 0.2.22 can also use the public npm metadata it already fetched for planning. If an anonymous response directly from `https://registry.npmjs.org` confirms the name and exact version, the planner can report zero known findings when the fresh snapshot has no matching advisory. For example, `clsx@2.1.1` can be assessed even in an edition containing no entries for `clsx`. In this case the row reports `publicIdentitySource: NPM_PUBLIC_PACKUMENT`, and the advisory check makes no additional network request. A registry mirror, a system proxy or metadata for another version cannot establish this identity.
 
 On Windows, run these commands from the directory containing the official release archive, then restart Codex. The second command downloads the shared snapshot and requires internet access.
 
 ```powershell
-npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.23.tgz -- deploom setup codex
-npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.23.tgz -- deploom cache refresh
+npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.24.tgz -- deploom setup codex
+npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.24.tgz -- deploom cache refresh
 ```
 
 Hosts can still set `DEPLOOM_MCP_PUBLIC_NAMES` to comma-separated exact npm names whose public identity they have independently verified. For mixed projects, declare private scopes such as `@internal` in `DEPLOOM_MCP_PRIVATE_SCOPES`. These scopes take precedence over public identity evidence and are excluded from public metadata and OSV requests.
