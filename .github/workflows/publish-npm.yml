@@ -118,8 +118,19 @@ jobs:
           New-Item -ItemType Directory -Path $env:USERPROFILE | Out-Null
           Push-Location -LiteralPath $env:USERPROFILE
           try {
-            npm.cmd exec --yes "--package=$installSpec" -- deploom setup codex
-            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+            $active = Join-Path $env:LOCALAPPDATA 'DepLoom/public/clients/codex/active.json'
+            foreach ($attempt in 1..41) {
+              $log = npm.cmd exec --prefer-online --yes "--package=$installSpec" -- deploom setup codex 2>&1
+              $code = $LASTEXITCODE
+              $log | ForEach-Object { Write-Host $_ }
+              if ($code -eq 0) {
+                $installed = (Get-Content -LiteralPath $active -Raw | ConvertFrom-Json).version
+                if ($installed -ceq $release.version) { break }
+                throw "Expected $($release.version) in the clean profile, installed $installed"
+              }
+              if ($attempt -eq 41 -or ($log -join "`n") -notmatch '\bETARGET\b') { exit $code }
+              Start-Sleep -Seconds 30
+            }
           } finally { Pop-Location }
           ./ci/test-install.ps1 -Tarball $received -Work (Join-Path $PWD 'registry-smoke')
   registry-rollback:
