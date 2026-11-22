@@ -8,6 +8,9 @@ import hashlib
 import json
 import re
 import subprocess
+from functools import lru_cache
+from urllib.parse import quote
+from urllib.request import HTTPRedirectHandler, build_opener
 from collections import defaultdict
 from pathlib import Path
 
@@ -24,6 +27,29 @@ def encode(obj):
 
 def git(*args):
     return subprocess.check_output(["git", *args], timeout=60)
+
+
+class NoRegistryRedirect(HTTPRedirectHandler):
+    def redirect_request(self, *args):
+        raise ValueError("Anonymous npm metadata must not redirect")
+
+
+@lru_cache(maxsize=4096)
+def public_version(package, version):
+    """Prove that this is an exact, anonymously visible npm package version."""
+    name = quote(package, safe="@")
+    release = quote(version, safe=".-")
+    url = f"https://registry.npmjs.org/{name}/{release}"
+    with build_opener(NoRegistryRedirect()).open(url, timeout=15) as response:
+        if response.status != 200:
+            raise ValueError("Unexpected public npm response")
+        raw = response.read(2_000_001)
+    if len(raw) > 2_000_000:
+        raise ValueError("Unbounded npm metadata response")
+    metadata = json.loads(raw)
+    if not isinstance(metadata, dict) or metadata.get("name") != package or metadata.get("version") != version:
+        raise ValueError("Public npm did not confirm package/version")
+    return True
 
 
 def trusted_fixture(record, trusted_commit):
@@ -50,6 +76,9 @@ def trusted_fixture(record, trusted_commit):
         raise ValueError("No independently reviewed matching source-exact fixture claim")
     text = raw.decode("utf-8")
     claim = record["evidence"]["claim"]
+    for transition in record["verifiedTransitions"]:
+        public_version(record["package"], transition["from"])
+        public_version(record["package"], transition["to"])
     for expected in (claim["package"], claim["from"], claim["to"],
                      *(item["fixtureAssertion"] for item in record["negativeControls"])):
         if expected not in text:
