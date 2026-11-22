@@ -49,10 +49,17 @@ jobs:
         env:
           PYTHONPATH: build/contracts/src
         run: python cache/records_intake.py "$(git rev-parse HEAD)" build/site/v1/cache.json
-      - name: Partition reviewed data into v2 shards
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: ae62997d2214cfaaaf2d8c4d1ff816614f2a4458
+          path: build/consumer-v2
+          persist-credentials: false
+      - name: Validate maintainer-controlled v2-native knowledge and pinned fixture claims
         env:
-          PYTHONPATH: build/contracts/src
-        run: python cache/shards_v2.py build/site/v1/cache.json build/site/v2
+          PYTHONPATH: build/consumer-v2/src:cache
+        run: |
+          python cache/shards_v2.py knowledge/v2/records.json build/site/v2 --revision "$(git rev-list --first-parent --count HEAD)" --trusted-commit "$(git rev-parse HEAD)"
       - id: digest
         run: |
           echo "sha=$(sha256sum build/site/v1/cache.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"

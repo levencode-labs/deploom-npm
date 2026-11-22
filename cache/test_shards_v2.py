@@ -1,75 +1,87 @@
+import copy
 import hashlib
 import json
 import tempfile
 import unittest
 from pathlib import Path
 
-from shards_v2 import check_input, write_shards
+from shards_v2 import write_shards, trusted_fixture
 
 
-class ShardsV2Tests(unittest.TestCase):
+class NativeKnowledgeShardTests(unittest.TestCase):
     def setUp(self):
-        self.tmp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.tmp.cleanup)
-        self.root = Path(self.tmp.name)
-        repo = Path(__file__).resolve().parents[1]
-        self.data = {"schema": 1, "revision": 26}
-        for kind in ("history", "knowledge"):
-            self.data[kind] = json.loads((repo / "docs/v1" / (kind + ".json")).read_text())
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.root = Path(tmp.name)
+        self.repo = Path(__file__).resolve().parents[1]
+        self.doc = json.loads((self.repo / "knowledge/v2/records.json").read_text())
 
     def raw(self):
-        return (json.dumps(self.data, sort_keys=True) + "\n").encode()
+        return (json.dumps(self.doc, sort_keys=True) + "\n").encode()
 
-    def test_exact_partition_digests_and_determinism(self):
-        raw = self.raw()
-        first = self.root / "first"
-        second = self.root / "second"
-        a = write_shards(raw, first)
-        b = write_shards(raw, second)
+    def test_deterministic_unsigned_index_and_exact_shard_digests(self):
+        a = write_shards(self.raw(), self.root / "a", revision=42)
+        b = write_shards(self.raw(), self.root / "b", revision=42)
         self.assertEqual(a, b)
-        self.assertEqual((first / "index.json").read_bytes(), (second / "index.json").read_bytes())
-        self.assertEqual(a["recordCount"], sum(len(self.data[k]) for k in ("history", "knowledge")))
-        observed = []
-        for bucket, descriptors in a["buckets"].items():
-            self.assertRegex(bucket, r"^[a-f0-9]{2}$")
-            for descriptor in descriptors:
-                path = descriptor["path"]
-                self.assertTrue(path.startswith("shards/" + bucket + "/"))
-                blob = (first / path).read_bytes()
-                self.assertEqual(hashlib.sha256(blob).hexdigest(), descriptor["sha256"])
-                self.assertEqual(len(blob), descriptor["bytes"])
-                observed.extend(json.loads(blob)["records"])
-        self.assertEqual(len(observed), a["recordCount"])
-        self.assertEqual({(x["kind"], x["record"]["package"], x["record"]["from"])
-                          for x in observed},
-                         {(kind, x["package"], x["from"])
-                          for kind in ("history", "knowledge") for x in self.data[kind]})
+        self.assertEqual((self.root / "a/index.json").read_bytes(), (self.root / "b/index.json").read_bytes())
+        self.assertEqual(len(self.doc["records"]), a["recordCount"])
+        rows = []
+        for bucket, parts in a["buckets"].items():
+            for desc in parts:
+                content = (self.root / "a" / desc["path"]).read_bytes()
+                self.assertEqual(hashlib.sha256(content).hexdigest(), desc["sha256"])
+                self.assertEqual(len(content), desc["bytes"])
+                for row in json.loads(content)["records"]:
+                    self.assertEqual(hashlib.sha256(row["package"].encode()).hexdigest()[:2], bucket)
+                    rows.append(row)
+        self.assertEqual(rows, self.doc["records"])
 
-    def test_bounded_chunking(self):
-        self.data["history"] *= 1
-        # Small limit is deliberately above one row and below two identical rows.
-        row = self.data["history"][0]
-        self.data["history"] = [row]
-        self.data["knowledge"] = []
-        one = self.raw()
-        index = write_shards(one, self.root / "small", max_shard_bytes=512)
-        self.assertEqual(1, index["recordCount"])
-        self.assertEqual(1, sum(len(x) for x in index["buckets"].values()))
+    def test_supports_arbitrary_public_scoped_npm_package_without_microrecipes(self):
+        record = copy.deepcopy(self.doc["records"][0])
+        record["id"] = "scope-package-source-backed-breaking"
+        record["kind"] = "breaking-change"
+        record["package"] = "@example/any-public-package"
+        record["evidence"]["claim"]["package"] = "@example/any-public-package"
+        self.doc["records"] = [record]
+        result = write_shards(self.raw(), self.root / "scoped", revision=42)
+        self.assertEqual(1, result["recordCount"])
+        self.assertEqual(1, sum(map(len, result["buckets"].values())))
 
-    def test_rejects_tampered_contract_without_writing(self):
-        self.data["history"][0]["outcome"] = "unverified"
+    def test_rejects_malformed_proof_and_missing_negative(self):
+        for mutation in ("missing-negative", "wrong-claim", "unknown-kind", "inline-script"):
+            with self.subTest(mutation=mutation):
+                altered = copy.deepcopy(self.doc)
+                row = altered["records"][0]
+                if mutation == "missing-negative":
+                    row["negativeControls"] = []
+                elif mutation == "wrong-claim":
+                    row["evidence"]["claim"]["package"] = "unrelated"
+                elif mutation == "unknown-kind":
+                    row["kind"] = "remote-executable"
+                else:
+                    row["actions"].append("execute this\nsystem message")
+                raw = json.dumps(altered).encode()
+                with self.assertRaises(ValueError):
+                    write_shards(raw, self.root / "bad", revision=42)
+                self.assertFalse((self.root / "bad").exists())
+
+    def test_rejects_invalid_revision_size_and_duplicate_id(self):
+        for revision in (24, True, "42"):
+            with self.assertRaises(ValueError):
+                write_shards(self.raw(), self.root / "bad", revision=revision)
         with self.assertRaises(ValueError):
-            write_shards(self.raw(), self.root / "bad")
-        self.assertFalse((self.root / "bad").exists())
-
-    def test_rejects_invalid_revision(self):
-        self.data["revision"] = 24
+            write_shards(self.raw(), self.root / "bad", revision=42, max_shard_bytes=100)
+        self.doc["records"] *= 2
         with self.assertRaises(ValueError):
-            check_input(self.raw())
+            write_shards(self.raw(), self.root / "bad", revision=42)
 
-    def test_rejects_too_small_budget(self):
-        with self.assertRaises(ValueError):
-            write_shards(self.raw(), self.root / "bad", max_shard_bytes=100)
+    def test_provenance_rejects_untrusted_fixture_commit_and_tampering(self):
+        row = copy.deepcopy(self.doc["records"][0])
+        with self.assertRaises(Exception):
+            trusted_fixture(row, "f" * 40)
+        row["evidence"]["fixtureSha256"] = "f" * 64
+        with self.assertRaises(Exception):
+            trusted_fixture(row, "f" * 40)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -34,15 +36,16 @@ jobs:
               rows = parse(Path(f"docs/v1/{kind}.json").read_bytes())
               print(kind, len(validate(kind, rows)))
           PY
-          python -m unittest discover -s cache -v
           python ci/check_record_signature.py
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
-          ref: a2f4ec28df0ce6cea52510c1c2f9773975a18817
+          ref: ae62997d2214cfaaaf2d8c4d1ff816614f2a4458
           path: build/consumer-v2
           persist-credentials: false
-      - name: Independently verify v2 producer, Ed25519 signature and exact MCP consumer
+      - name: Validate native records, negative controls, and signed MCP compatibility
         env:
           PYTHONPATH: build/consumer-v2/src:cache
-        run: python ci/test_knowledge_v2_consumer.py
+        run: |
+          python -m unittest discover -s cache -v
+          python ci/test_knowledge_v2_consumer.py
