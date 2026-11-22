@@ -120,7 +120,12 @@ async function launch(profile) {
     const runtime = path.join(base, 'versions', version);
     const cache = path.join(base, 'cache', 'osv');
     const env = { ...process.env };
-    if (!env.DEPLOOM_MCP_OSV_DIR && fs.existsSync(cache)) env.DEPLOOM_MCP_OSV_DIR = cache;
+    if (env.DEPLOOM_MCP_LOCAL_CACHE_ONLY === '1') {
+      env.DEPLOOM_MCP_DISABLE_EXTERNAL_EVIDENCE = '1';
+      env.DEPLOOM_MCP_MIGRATION_OFFLINE = '1';
+    }
+    env.DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK ??= '1';
+    if (!env.DEPLOOM_MCP_OSV_DIR) env.DEPLOOM_MCP_OSV_DIR = cache;
     const records = path.join(base, 'cache', 'records');
     if (!env.DEPLOOM_MCP_RECORDS_DIR) env.DEPLOOM_MCP_RECORDS_DIR = records;
     const leases = path.join(base, 'running', version);
