@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: levencode-labs/deploom-mcp
-          ref: 8957f1e6d928978482905d04736f4bbdd946f3bb
+          ref: d624dd9d38f2f3ce97702631717f56621fcacb2d
           path: build/consumer-v2
           persist-credentials: false
       - name: Validate maintainer-controlled v2-native knowledge and pinned fixture claims
