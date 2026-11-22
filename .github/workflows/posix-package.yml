@@ -37,13 +37,14 @@ jobs:
         if: matrix.runner == 'ubuntu-24.04'
         shell: bash
         run: |
-          export HOME="$(mktemp -d)" DEPLOOM_MCP_LOCAL_CACHE_ONLY=1
-          export XDG_DATA_HOME="$HOME/data" CLAUDE_CONFIG_DIR="$HOME/.claude" npm_config_cache="$HOME/npm-cache"
+          test_profile=$(mktemp -d)
+          export XDG_DATA_HOME="$test_profile/data" CLAUDE_CONFIG_DIR="$test_profile/.claude"
+          export npm_config_cache="$test_profile/npm-cache" DEPLOOM_MCP_LOCAL_CACHE_ONLY=1
           unset DEPLOOM_WORKSPACE_NPM_REGISTRY
-          mkdir "$HOME/bin"
-          for tool in node tar gzip sh dirname; do ln -s "$(command -v "$tool")" "$HOME/bin/$tool"; done
-          PATH="$HOME/bin" node bin/deploom.cjs setup claude
-          "$XDG_DATA_HOME"/DepLoom/public/versions/*/bin/python3.13 -I -B ci/smoke_clients.py "$HOME" --client claude --verify-react
+          mkdir "$test_profile/bin"
+          for tool in node tar gzip sh dirname; do ln -s "$(command -v "$tool")" "$test_profile/bin/$tool"; done
+          HOME="$test_profile" PATH="$test_profile/bin" node bin/deploom.cjs setup claude
+          HOME="$test_profile" "$XDG_DATA_HOME"/DepLoom/public/versions/*/bin/python3.13 -I -B ci/smoke_clients.py "$test_profile" --client claude --verify-react
       - uses: actions/upload-artifact@v4
         with:
           name: posix-${{ matrix.runner }}
