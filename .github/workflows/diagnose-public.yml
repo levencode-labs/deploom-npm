@@ -1,0 +1,57 @@
+name: Diagnose public npm identity for lodash
+on:
+  push:
+    branches: [diagnostic/public-advisory-024]
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, windows-2025]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install the exact released wheel
+        run: python -m pip install --only-binary=:all: "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.24/deploom_mcp-0.2.24-py3-none-any.whl#sha256=8ce42f6b4f76efe099492ba328553d1bfceb87973065bdb5f7ae3bba68726e16"
+      - name: Observe anonymous registry and the released planner
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, sys, tempfile
+          from pathlib import Path
+          from deploom_mcp.blueprint import _default_core_dir
+          sys.path.insert(0, str(_default_core_dir()))
+          import dependency_live_roadmap_generator as core
+          url = 'https://registry.npmjs.org'
+          name, ver = 'lodash','4.17.20'
+          with tempfile.TemporaryDirectory() as tmp:
+              os.environ.update(DEPLOOM_DRAFT_OSV_DIR=tmp, DEPLOOM_DRAFT_PUBLIC_ADVISORY_FALLBACK="1")
+              client = core.LiveDataClient(url, 12, 20, 0, use_system_proxy=False)
+              print('request eligible before GET:', client.metadata_request_context()[1])
+              with client.session.get(url+'/'+name,timeout=12) as r:
+                  print('public GET:', r.status_code, 'matching URL:',r.url==url+'/'+name,'redirects:',len(r.history),
+                        'set-cookie' in r.headers, {k:r.headers.get(k) for k in ('cache-control','vary')})
+                  d=r.json()
+                  print('exact version identified:', bool(core.published_version(d, name, ver)))
+              client = core.LiveDataClient(url, 12, 20, 0, use_system_proxy=False)
+              meta = client.fetch_npm_metadata(name)
+              print('stored response type:',type(client.npm_cache.get(name)).__name__,
+                    'request eligible after GET:',client.metadata_request_context()[1])
+              diagnosis = {}
+              try: client.query_osv_versions(name,[ver],diagnostics=diagnosis,public_fallback=True)
+              except core.VulnerabilityEvidenceUnavailable: pass
+              print('exact version diagnostic:',diagnosis)
+              direct=client.query_registry_advisory_evidence([(name,ver)],url)[name,ver]
+              print('public control POST:',direct.status,direct.reason,len(direct.advisories))
+              sys.path.insert(0,str(Path("ci").resolve()))
+              from probe_public_cache import check_public_advisory_fallback
+              print('installed MCP:',check_public_advisory_fallback(Path(tmp)))
+          PY
