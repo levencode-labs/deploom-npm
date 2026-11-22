@@ -50,6 +50,24 @@ jobs:
               try: client.query_osv_versions(name,[ver],diagnostics=diagnosis,public_fallback=True)
               except core.VulnerabilityEvidenceUnavailable: pass
               print('exact version diagnostic:',diagnosis)
+              from http.cookiejar import DefaultCookiePolicy
+              import requests
+              with requests.Session() as isolated:
+                  isolated.trust_env=False
+                  isolated.cookies.set_policy(DefaultCookiePolicy(allowed_domains=()))
+                  def anonymous(response):
+                      assert response.status_code == 200 and not response.history and not isolated.cookies
+                      assert response.url == response.request.url and response.url.startswith(url+'/')
+                      assert not ({k.lower() for k in response.request.headers} & {'cookie','authorization','proxy-authorization'})
+                  with isolated.get(url+'/'+name,allow_redirects=False,timeout=12) as metadata:
+                      anonymous(metadata)
+                      directives={d.strip().lower() for d in metadata.headers.get('Cache-Control','').split(',')}
+                      assert 'public' in directives and not directives.intersection({'private','no-store','no-cache'})
+                      assert core.published_version(metadata.json(), name, ver)
+                  with isolated.post(url+'/-/npm/v1/security/advisories/bulk',json={name:[ver]},allow_redirects=False,timeout=12) as evidence:
+                      anonymous(evidence)
+                      assert evidence.json().get(name)
+                      print('Isolated GET and POST: exact public release verified, no redirects, credentials or cookies on either request.')
               direct=client.query_registry_advisory_evidence([(name,ver)],url)[name,ver]
               print('public control POST:',direct.status,direct.reason,len(direct.advisories))
               sys.path.insert(0,str(Path("ci").resolve()))
