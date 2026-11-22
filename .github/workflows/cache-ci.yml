@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
-          ref: d624dd9d38f2f3ce97702631717f56621fcacb2d
+          ref: b3eea1f58950286049ec13cbf7449e613b53f8b9
           path: build/consumer-v2
           persist-credentials: false
       - name: Validate native records, negative controls, and signed MCP compatibility
