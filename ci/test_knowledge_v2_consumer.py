@@ -64,7 +64,8 @@ with tempfile.TemporaryDirectory() as tmp:
         assert hit["snapshotSource"] == "verified-pages", hit
         assert hit["snapshotSchema"] == 2 and hit["status"] == "found"
         assert hit["recipes"] == [], hit
-        assert any(x["kind"] == "incompatibility" and x["matchStrength"] == "verified-exact-transition"
+        assert any(x["id"] == "align-react-renderers" and x["kind"] == "incompatibility"
+                   and x["matchStrength"] == "verified-exact-transition"
                    for x in hit["knowledge"]), hit
         trial = shared_records.lookup(local, "react-dom", "18.1.0", "18.3.2")
         assert trial["knowledge"][0]["matchStrength"] == "major-line-candidate"
