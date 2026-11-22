@@ -1,0 +1,36 @@
+name: Propose the npm 0.2.24 release for owner review
+on:
+  push:
+    branches: [automation/propose-reviewed-npm-024]
+permissions: {}
+env:
+  BASE: dd5a43a9b1eb200b7da24e1a23ebcb84336e56f9
+  SOURCE: 12a4d22e0398746d8e3390f80fb99d6d28f2b653
+  TREE: df4a57ff425714cd783635bf6ba0c5460c320aea
+  BRANCH: bot/review-npm-0.2.24
+jobs:
+  propose:
+    if: github.repository == 'levencode-labs/deploom-npm' && github.actor == 'AlexanderLevenskikh'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Open a draft for human code-owner review
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          api="repos/$GITHUB_REPOSITORY"
+          gh api "$api/pulls/23" | jq -e --arg base "$BASE" --arg source "$SOURCE" '
+            .base.sha == $base and .head.sha == $source'
+          head=$(gh api "$api/git/ref/heads/$BRANCH" --jq .object.sha)
+          test "$head" = "$SOURCE"
+          gh api "$api/git/commits/$head" | jq -e --arg parent "d17d2d5df623bd64827d1a696d338028bedd5ead" --arg tree "$TREE" '
+            .tree.sha == $tree and [.parents[].sha] == [$parent]'
+          prior=$(gh api "$api/pulls?state=open&base=main&head=levencode-labs:$BRANCH" --jq '.[0].html_url // empty')
+          if test -n "$prior"; then echo "$prior"; exit 0; fi
+          gh api -X POST "$api/pulls" -f base=main -f head="$BRANCH" -F draft=true \
+            -f title='Release 0.2.24 with local-only cache and public advisory fallback' \
+            -f body="Prepared by Codex and submitted by GitHub Actions for independent human CODEOWNER review. The earlier PR #23 was submitted through the owner session. Both proposals point to the exact same commit $SOURCE and tree $TREE on base $BASE. Please review the CI source pin, wheel digest, launcher cache policy and installed advisory fallback check. Normal branch rules and required checks apply." --jq .html_url
