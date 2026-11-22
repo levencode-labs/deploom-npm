@@ -2,8 +2,10 @@
 import argparse
 import asyncio
 import base64
+import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -44,12 +46,18 @@ async def check(client, command, skill, fixture, profile, targets):
             proposal = plan.structured_content or json.loads(plan.content[0].text)
             if plan.is_error or not proposal.get("ok"):
                 raise RuntimeError(f"Fresh profile could not produce a manifest patch: {proposal}")
-            argv = proposal["action"]["argv"]
-            if argv[:2] != [str(Path(sys.executable).with_name("deploom-workspace")), "apply"]:
+            cli = Path(sys.executable).with_name("deploom-workspace")
+            inventory = proposal["inventoryDigest"]
+            patch = Path(proposal["patch"]["path"]).resolve(strict=True)
+            if (patch.parent != (profile / "state").resolve() or patch.suffix != ".patch"
+                    or not 0 < patch.stat().st_size <= 1024 * 1024 or not re.fullmatch("[0-9a-f]{64}", inventory)):
+                raise RuntimeError("Patch is outside the test profile or has an invalid binding")
+            digest = hashlib.sha256(patch.read_bytes()).hexdigest()
+            if proposal["action"]["argv"] != [str(cli), "apply", str(fixture), inventory, str(patch), digest]:
                 raise RuntimeError("Unexpected apply command")
             lock = fixture / "package-lock.json"
             before = lock.read_bytes()
-            subprocess.run(argv, cwd=fixture, env=env, check=True, timeout=30)
+            subprocess.run([cli, "apply", fixture, inventory, patch, digest], cwd=fixture, check=True, timeout=30)
             if json.loads((fixture / "package.json").read_bytes())["dependencies"] != targets:
                 raise RuntimeError("Installed workspace command did not apply the planned version")
             if lock.read_bytes() != before:
