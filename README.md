@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/levencode-labs/deploom-npm/main/assets/social-preview.png" width="768" alt="DepLoom npm installer" />
+<img src="assets/product-hero.jpg" width="1200" alt="Levencode Labs Deploom npm — cross-platform setup, local runtime and advisory snapshots" />
 
 # Deploom npm
 
