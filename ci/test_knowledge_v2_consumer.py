@@ -15,13 +15,20 @@ from shards_v2 import write_shards
 
 root = Path(__file__).resolve().parents[1]
 corpus = (root / "knowledge/v2/records.json").read_bytes()
-commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+# The PR tree is untrusted. The source-of-truth fixture must already exist
+# in the trusted upstream main reference, not merely in this PR's head.
+trusted_main = subprocess.check_output(
+    ["git", "rev-parse", "--verify", "refs/remotes/origin/main"],
+    text=True).strip()
+head_sha = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+subprocess.run(["git", "merge-base", "--is-ancestor", trusted_main, head_sha],
+               check=True, timeout=30)
 revision = 42
 
 with tempfile.TemporaryDirectory() as tmp:
     scratch = Path(tmp)
     site = scratch / "site"
-    result = write_shards(corpus, site, revision=revision, trusted_commit=commit)
+    result = write_shards(corpus, site, revision=revision, trusted_commit=trusted_main)
     assert result["schema"] == 2 and result["recordCount"] >= 1
     key = Ed25519PrivateKey.generate()
     pkcs8 = key.private_bytes(serialization.Encoding.DER, serialization.PrivateFormat.PKCS8,

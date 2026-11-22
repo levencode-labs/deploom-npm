@@ -58,3 +58,13 @@ equal-revision substitution. The production signing key is never used in CI.
 
 Do not merge the publishing workflow or promote a new release until the
 entire existing Linux/Windows and package matrix remains green at exact SHA.
+
+## PR trust-root regression
+
+A pull-request test must validate fixture provenance against
+`refs/remotes/origin/main`, **never** the untrusted PR HEAD or merge commit.
+The full-history checkout is intentional: if the main ref or proof ancestry
+cannot be established, the run fails. Production publication checks the exact
+main commit using the protected signing workflow, after ordinary checks pass.
+This prevents a contributor from introducing both an assertion and a
+self-signed fake fixture receipt in one PR.
