@@ -1,0 +1,61 @@
+{
+  "schema": 2,
+  "records": [
+    {
+      "schema": 2,
+      "id": "react-dom-peer-renderer-alignment-18",
+      "kind": "incompatibility",
+      "package": "react-dom",
+      "fromMajor": 18,
+      "toMajor": 18,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.2.0",
+          "to": "18.3.1"
+        }
+      ],
+      "title": "React DOM renderer requires a compatible React peer",
+      "summary": "A React DOM 18.3.1 renderer paired with React 18.2.0 fails a strict npm peer-resolution check. In the pinned fixture, upgrading both React and React DOM to 18.3.1 passes the same installation check. This is evidence for the tested pair, not a universal version guarantee.",
+      "conditions": [
+        "The project declares react-dom and react versions whose peer requirements must be reconciled.",
+        "The authorized scope permits checking or aligning the React renderer and the React package together."
+      ],
+      "actions": [
+        "Read the actual react-dom target peerDependencies from the approved registry before changing declarations.",
+        "If the current React provider violates that peer range, propose an in-scope compatible React version; never silently change held declarations.",
+        "Run the receiving project's frozen install, renderer tests, and runtime acceptance on its final tree."
+      ],
+      "verification": [
+        "Run a strict npm peer-resolution check against the exact approved versions.",
+        "Inspect the effective installed react/react-dom pair using npm ls.",
+        "Run the recipient project's React renderer and server-rendering tests."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-react-peer-conflict",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(result.status, 0)"
+        },
+        {
+          "name": "npm-eresolve-peer-conflict",
+          "expected": "reject",
+          "fixtureAssertion": "ERESOLVE"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/36216f29d52bacd92e0b64e87433c8ed3e84b5a4/fixtures/react-renderers/check.cjs",
+        "fixtureSha256": "6c4f9d031d1d9201c353e44845bf77e6b3de6ad52c4de9697bda0d527ea55970",
+        "claim": {
+          "package": "react-dom",
+          "from": "18.2.0",
+          "to": "18.3.1",
+          "check": "install",
+          "outcome": "passed"
+        }
+      }
+    }
+  ]
+}

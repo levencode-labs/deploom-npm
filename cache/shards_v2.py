@@ -1,97 +1,126 @@
-"""Deterministic, content-addressed v2 shards from reviewed v1 records.
+"""Deterministically partition the trusted v2-native migration-knowledge corpus.
 
-This is a *publication format*, not a new admission route: the input must be
-the validated v1 snapshot emitted by records_intake.py from trusted main.
+The source is repository-maintained, immutable first-party fixture evidence.
+No user contributions or LLM-generated records enter the signed publisher.
 """
 import argparse
 import hashlib
 import json
 import re
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
-from deploom_mcp.record_contract import KINDS, LIMIT, parse, validate
+from deploom_mcp.knowledge_contract_v2 import MAX_CORPUS_BYTES, SOURCE, validate_corpus
 
 MAX_SHARD = 256_000
-MAX_MANIFEST = LIMIT
-HEX = re.compile(r"[a-f0-9]{64}\Z")
+MAX_MANIFEST = 2_000_000
+MAX_TOTAL = 32_000_000
 
 
 def encode(obj):
     return (json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=True) + "\n").encode("ascii")
 
 
-def check_input(raw):
-    data = parse(raw)
-    if (not isinstance(data, dict) or set(data) != {"schema", "revision", *KINDS}
-            or type(data["schema"]) is not int or data["schema"] != 1
-            or type(data["revision"]) is not int or not 25 <= data["revision"] < 2 ** 53):
-        raise ValueError("Expected a validated v1 snapshot")
-    records = []
-    for kind in KINDS:
-        for row in validate(kind, data[kind]):
-            records.append({"kind": kind, "record": row})
-    return data["revision"], records
+def git(*args):
+    return subprocess.check_output(["git", *args], timeout=60)
 
 
-def write_shards(raw, destination, *, max_shard_bytes=MAX_SHARD):
-    if not 512 <= max_shard_bytes <= 1_000_000:
-        raise ValueError("Invalid shard limit")
-    revision, records = check_input(raw)
-    destination = Path(destination)
+def trusted_fixture(record, trusted_commit):
+    """Verify source/receipt from a pinned ancestor of trusted main, never PR files."""
+    source = record["evidence"]["source"]
+    match = SOURCE.fullmatch(source)
+    if not match or not re.fullmatch(r"[a-f0-9]{40}", trusted_commit):
+        raise ValueError("Invalid immutable fixture identity")
+    commit, path = match.groups()
+    subprocess.run(["git", "merge-base", "--is-ancestor", commit, trusted_commit],
+                   stdout=subprocess.DEVNULL, check=True, timeout=30)
+    raw = git("show", f"{commit}:{path}")
+    actual_sha = hashlib.sha256(raw).hexdigest()
+    if actual_sha != record["evidence"]["fixtureSha256"] or len(raw) > 16_000:
+        raise ValueError("Fixture identity differs from recorded SHA256")
+    receipt_path = path.removesuffix("check.cjs") + "evidence.json"
+    receipt_raw = git("show", f"{commit}:{receipt_path}")
+    if len(receipt_raw) > 64_000:
+        raise ValueError("Oversized evidence receipt")
+    receipt = json.loads(receipt_raw)
+    if (not isinstance(receipt, dict) or set(receipt) != {"fixtureSha256", "claims"}
+            or receipt["fixtureSha256"] != actual_sha
+            or record["evidence"]["claim"] not in receipt["claims"]):
+        raise ValueError("No independently reviewed matching source-exact fixture claim")
+    text = raw.decode("utf-8")
+    claim = record["evidence"]["claim"]
+    for expected in (claim["package"], claim["from"], claim["to"],
+                     *(item["fixtureAssertion"] for item in record["negativeControls"])):
+        if expected not in text:
+            raise ValueError("Missing negative control or version claim in pinned fixture")
+    return True
+
+
+def write_shards(raw, destination, *, revision, trusted_commit=None, max_shard_bytes=MAX_SHARD):
+    if type(revision) is not int or not 25 <= revision < 2**53:
+        raise ValueError("Invalid signed edition revision")
+    if not 512 <= max_shard_bytes <= MAX_SHARD:
+        raise ValueError("Invalid shard size budget")
+    data = validate_corpus(raw)
+    if trusted_commit is not None:
+        for row in data["records"]:
+            trusted_fixture(row, trusted_commit)
     grouped = defaultdict(list)
-    for item in records:
-        package = item["record"]["package"]
-        bucket = hashlib.sha256(package.encode("ascii")).hexdigest()[:2]
-        grouped[bucket].append(item)
-    index = {"schema": 2, "revision": revision, "sourceSha256": hashlib.sha256(raw).hexdigest(),
-             "recordCount": len(records), "buckets": {}}
-    pending = {}
+    for record in data["records"]:
+        bucket = hashlib.sha256(record["package"].encode("ascii")).hexdigest()[:2]
+        grouped[bucket].append(record)
+    manifest = {"schema": 2, "revision": revision, "sourceSha256": hashlib.sha256(raw).hexdigest(),
+                "recordCount": len(data["records"]), "buckets": {}}
+    blobs = {}
     for bucket in sorted(grouped):
-        rows = sorted(grouped[bucket], key=lambda v: encode(v))
+        records = sorted(grouped[bucket], key=lambda r: encode(r))
         pieces, current = [], []
-        for row in rows:
-            trial = current + [row]
-            blob = encode({"schema": 2, "records": trial})
-            if len(blob) > max_shard_bytes:
+        for record in records:
+            item = current + [record]
+            if len(encode({"schema": 2, "records": item})) > max_shard_bytes:
                 if not current:
-                    raise ValueError("Single record exceeds shard budget")
+                    raise ValueError("One record exceeds the per-shard limit")
                 pieces.append(current)
-                current = [row]
+                current = [record]
                 if len(encode({"schema": 2, "records": current})) > max_shard_bytes:
-                    raise ValueError("Single record exceeds shard budget")
+                    raise ValueError("One record exceeds the per-shard limit")
             else:
-                current = trial
+                current = item
         if current:
             pieces.append(current)
         descriptors = []
-        for piece in pieces:
-            blob = encode({"schema": 2, "records": piece})
+        for rows in pieces:
+            blob = encode({"schema": 2, "records": rows})
             sha = hashlib.sha256(blob).hexdigest()
-            path = f"shards/{bucket}/{sha}.json"
-            pending[path] = blob
-            descriptors.append({"path": path, "sha256": sha, "bytes": len(blob), "records": len(piece)})
-        index["buckets"][bucket] = descriptors
-    manifest = encode(index)
-    if len(manifest) > MAX_MANIFEST:
-        raise ValueError("Index exceeds v2 size budget")
-    # Only write after all size and schema checks have passed.
-    for name, blob in pending.items():
-        path = destination / name
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(blob)
+            rel = f"shards/{bucket}/{sha}.json"
+            blobs[rel] = blob
+            descriptors.append({"path": rel, "sha256": sha, "bytes": len(blob), "records": len(rows)})
+        manifest["buckets"][bucket] = descriptors
+    raw_manifest = encode(manifest)
+    if len(raw_manifest) > MAX_MANIFEST or sum(len(x) for x in blobs.values()) > MAX_TOTAL:
+        raise ValueError("Edition exceeds bounded index or download budget")
+    destination = Path(destination)
+    for rel, blob in blobs.items():
+        file = destination / rel
+        file.parent.mkdir(parents=True, exist_ok=True)
+        file.write_bytes(blob)
     destination.mkdir(parents=True, exist_ok=True)
-    (destination / "index.json").write_bytes(manifest)
-    return index
+    (destination / "index.json").write_bytes(raw_manifest)
+    return manifest
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("reviewed_v1_snapshot", type=Path)
+    parser.add_argument("trusted_v2_corpus", type=Path)
     parser.add_argument("destination", type=Path)
+    parser.add_argument("--revision", type=int, required=True)
+    parser.add_argument("--trusted-commit", required=True)
     args = parser.parse_args()
-    print(json.dumps(write_shards(args.reviewed_v1_snapshot.read_bytes(), args.destination),
-                     sort_keys=True))
+    manifest = write_shards(args.trusted_v2_corpus.read_bytes(), args.destination,
+                            revision=args.revision, trusted_commit=args.trusted_commit)
+    print(json.dumps({"revision": manifest["revision"], "records": manifest["recordCount"],
+                      "shards": sum(map(len, manifest["buckets"].values()))}, sort_keys=True))
 
 
 if __name__ == "__main__":
