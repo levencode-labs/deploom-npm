@@ -36,3 +36,13 @@ jobs:
           PY
           python -m unittest discover -s cache -v
           python ci/check_record_signature.py
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: a2f4ec28df0ce6cea52510c1c2f9773975a18817
+          path: build/consumer-v2
+          persist-credentials: false
+      - name: Independently verify v2 producer, Ed25519 signature and exact MCP consumer
+        env:
+          PYTHONPATH: build/consumer-v2/src:cache
+        run: python ci/test_knowledge_v2_consumer.py
