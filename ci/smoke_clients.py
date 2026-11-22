@@ -57,7 +57,8 @@ async def check(client, command, skill, fixture, profile, targets):
                 raise RuntimeError("Unexpected apply command")
             lock = fixture / "package-lock.json"
             before = lock.read_bytes()
-            subprocess.run([cli, "apply", fixture, inventory, patch, digest], cwd=fixture, check=True, timeout=30)
+            subprocess.run(["deploom-workspace", "apply", fixture, inventory, patch, digest],
+                           executable=cli, cwd=fixture, check=True, timeout=30)
             if json.loads((fixture / "package.json").read_bytes())["dependencies"] != targets:
                 raise RuntimeError("Installed workspace command did not apply the planned version")
             if lock.read_bytes() != before:
