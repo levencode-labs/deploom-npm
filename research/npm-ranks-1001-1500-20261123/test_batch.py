@@ -102,5 +102,53 @@ class ResearchTests(unittest.TestCase):
         self.assertEqual(1501, obj["selection"]["continuationStartRank"])
 
 
+    def test_completed_registry_receipt_index(self):
+        from collections import Counter
+        original = batch.manifest()
+        final = json.loads((ROOT / "registry-receipts-manifest.json").read_text())
+        self.assertEqual("deploom.research.npm-ranks-1001-1500-coverage.v1", final["schema"])
+        self.assertEqual("RESEARCH_ONLY_NOT_V2_ADMISSION", final["authority"])
+        self.assertEqual(original["source"]["sha256"], final["sourceCsvSha256"])
+        self.assertEqual(original["source"]["commit"], final["sourceCommit"])
+        self.assertEqual(500, final["recordCount"])
+        self.assertEqual(499, final["verifiedMetadataCount"])
+        self.assertEqual(1, final["unknownCount"])
+        self.assertEqual(0, final["productionV2Adds"])
+        self.assertEqual(0, final["newTrustedFixtureCount"])
+        self.assertEqual(False, final["signingPerformed"])
+        self.assertEqual(45205588796, final["workflowRun"])
+        self.assertEqual("SUCCESS_ALL_6_JOBS", final["workflowResult"])
+        self.assertEqual(1501, final["cumulative"]["nextRank"])
+        self.assertEqual(1496, final["cumulative"]["exactMetadata"])
+        self.assertEqual(4, final["cumulative"]["unknowns"])
+        self.assertEqual(5, len(final["artifactData"]))
+        self.assertEqual([1001, 1101, 1201, 1301, 1401],
+                         [r["fromRank"] for r in final["artifactData"]])
+        self.assertEqual([1100, 1200, 1300, 1400, 1500],
+                         [r["toRank"] for r in final["artifactData"]])
+        for part in final["artifactData"]:
+            self.assertEqual(64, len(part["sha256"]))
+            self.assertEqual(64, len(part["zipSha256"]))
+            self.assertTrue(part["jsonBytes"] > 0)
+        self.assertEqual(list(range(1001, 1501)),
+                         [r["rank"] for r in final["items"]])
+        self.assertEqual([r["name"] for r in original["items"]],
+                         [r["package"] for r in final["items"]])
+        self.assertEqual([r["datasetLatestVersion"] for r in original["items"]],
+                         [r["version"] for r in final["items"]])
+        self.assertEqual(final["statusCounts"],
+                         dict(Counter(r["status"] for r in final["items"])))
+        self.assertEqual([1495],
+                         [r["rank"] for r in final["items"]
+                          if r["status"] != "PUBLIC_EXACT_VERSION_OBSERVED"])
+        self.assertEqual("browser-request", final["unknowns"][0]["package"])
+        self.assertEqual("UNKNOWN_INVALID_METADATA", final["unknowns"][0]["status"])
+        for i, row in enumerate(final["items"]):
+            self.assertEqual(i // 100, row["subbatch"])
+            self.assertEqual("RESEARCH_ONLY_NOT_V2_ADMISSION", row["authority"])
+            self.assertEqual("GITHUB_ACTIONS_45205588796_PART_" + str(i // 100),
+                             row["sourceReceipt"])
+
+
 if __name__ == "__main__":
     unittest.main()
