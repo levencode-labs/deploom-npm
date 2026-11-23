@@ -412,7 +412,7 @@
           "to": "8.3.8"
         },
         "fixtureSha256": "53aed218c1bc18e2ae3696a8df617dca7be17b628da8d76dbe12a26cb4502d08",
-        "source": "https://github.com/levencode-labs/deploom-npm/blob/3c1078c1d0777ef29a107b29b5fa5b19a937d386/fixtures/vite-library-css-filename/check.cjs"
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/72aea06ae3b5862cb5e36d7c68900c4099627dfa/fixtures/vite-library-css-filename/check.cjs"
       },
       "fromMajor": 5,
       "id": "vite-library-css-filename",
