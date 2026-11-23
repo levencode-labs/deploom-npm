@@ -107,7 +107,7 @@ def manifest():
     for i, item in enumerate(items):
         if (
             type(item.get("rank")) is not int or item["rank"] != i + 3501
-            or item.get("csvLine") != i + 3002
+            or item.get("csvLine") != i + 3502
             or item.get("subbatch") != i // 100
             or not isinstance(item.get("name"), str)
             or not PKG.fullmatch(item["name"])

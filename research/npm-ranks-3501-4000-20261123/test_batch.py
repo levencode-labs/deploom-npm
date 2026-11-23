@@ -104,5 +104,22 @@ class ResearchTests(unittest.TestCase):
 
 
 
+
+    def test_source_csv_physical_line_offset_and_negative_control(self):
+        import tempfile
+        obj = batch.manifest()
+        self.assertTrue(all(x["csvLine"] == x["rank"] + 1 for x in obj["items"]))
+        obj["items"][0]["csvLine"] = 3002
+        prior = batch.INDEX
+        with tempfile.TemporaryDirectory() as temp:
+            invalid = Path(temp) / "bad-index.json"
+            invalid.write_text(json.dumps(obj), encoding="utf-8")
+            try:
+                batch.INDEX = invalid
+                with self.assertRaises(ValueError):
+                    batch.manifest()
+            finally:
+                batch.INDEX = prior
+
 if __name__ == "__main__":
     unittest.main()
