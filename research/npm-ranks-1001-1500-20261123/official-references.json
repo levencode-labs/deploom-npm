@@ -4,35 +4,195 @@
   "batch": "npm-ranks-1001-1500-20261123",
   "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
   "notes": [
-    "Official sources and tagged manifests are research only, not independent fixture results.",
-    "No migration recipe is verified or production-admitted without trusted-main fixture receipts and negative controls.",
-    "Unknown transitions, tag pins, metadata or official codemods stay explicitly UNKNOWN."
+    "Exact npm registry metadata existence and tagged upstream docs are reference evidence, not a source-exact project migration.",
+    "No codemod described here was executed or version-pinned as a standalone released executable unless independently shown; user project gates remain necessary.",
+    "Every applicability condition is scoped to matching recipient code and exact version/peer constraints; missing pins and coverage are UNKNOWN.",
+    "Production v2 requires separately trusted-main reviewed source-exact positive and negative fixture receipts, deduplication, schema, provenance and protected signing."
   ],
-  "records": [],
-  "priorityCandidates": [
+  "records": [
     {
-      "rank": 1117,
+      "id": "mui-data-grid-8-to-9",
       "package": "@mui/x-data-grid",
-      "topic": "MUI X Data Grid 8 to 9 peers and codemods",
-      "status": "PENDING_SOURCE_BACKED_REVIEW"
+      "datasetRank": 1117,
+      "transition": {
+        "from": "8.0.0",
+        "to": "9.0.0",
+        "scope": "EXACT_TAGGED_MANIFESTS_AND_OFFICIAL_V9_GUIDE"
+      },
+      "source": {
+        "repository": "mui/mui-x",
+        "fromTag": "v8.0.0",
+        "fromTagObjectSha1": "d81030b05fa608aef815278b557e956794213467",
+        "fromCommit": "881de933a844a406897b582266344d041a0538f3",
+        "fromManifestBlobSha1": "524f8cb195bd41c7fec8aafeb6c23a0bd2fc0a39",
+        "toTag": "v9.0.0",
+        "toTagObjectSha1": "8c1822babd6d6e8a1aec46e0e900eb1e44d6df59",
+        "toCommit": "3027c85363a3cccc29c71b223aad82feda5b65ab",
+        "toManifestBlobSha1": "5e6efcf723b0f8e1fc71080216435b94ad32b6f0",
+        "taggedGuideBlobSha1": "2805d93d17ce3d6a856d3e8e2877cb23f93cb130",
+        "taggedGuide": "https://github.com/mui/mui-x/blob/3027c85363a3cccc29c71b223aad82feda5b65ab/docs/data/migration/migration-data-grid-v8/migration-data-grid-v8.md"
+      },
+      "manifestEvidence": {
+        "fromEngines": {
+          "node": ">=14.0.0"
+        },
+        "toEngines": {
+          "node": ">=14.0.0"
+        },
+        "fromMuiMaterialAndSystemPeers": "^5.15.14 || ^6.0.0 || ^7.0.0",
+        "toMuiMaterialAndSystemPeers": "^7.3.0 || ^9.0.0",
+        "fromReactAndReactDomPeers": "^17.0.0 || ^18.0.0 || ^19.0.0",
+        "toReactAndReactDomPeers": "^17.0.0 || ^18.0.0 || ^19.0.0"
+      },
+      "sourceBackedBehavior": [
+        "The v9 guide documents removal of experimentalFeatures.charts in favor of chartsIntegration on DataGridPremium.",
+        "The v9 guide documents a filterPanelColumns to filterPanelColumn locale-text key change and further behavior/DOM changes.",
+        "The pinned target peer range excludes MUI Material and System v5/v6, and requires v7.3+ or v9 as listed."
+      ],
+      "applicability": [
+        "A project explicitly upgrades the MUI Data Grid 8 to 9 line and uses supported peers.",
+        "Inspect DataGridPremium charts experimental flag, locale overrides and DOM/keyboard tests before proposing changes.",
+        "Check exactly installed React, Material and System providers and lockfile; do not broaden held declarations."
+      ],
+      "controlsRecommendedNotRun": [
+        "Strict target frozen install with compatible MUI Material and System positive and held-v6 negative peer-resolution cases.",
+        "Grid navigation, sorting/filtering, locale label and DOM role controls in an isolated UI fixture."
+      ],
+      "codemod": {
+        "status": "OFFICIALLY_DOCUMENTED_BUT_NOT_EXECUTED",
+        "package": "@mui/x-codemod",
+        "exampleVersion": "latest",
+        "recipe": "v9.0.0/data-grid/remove-stabilized-experimentalFeatures",
+        "source": "https://github.com/mui/mui-x/blob/3027c85363a3cccc29c71b223aad82feda5b65ab/docs/data/migration/migration-data-grid-v8/migration-data-grid-v8.md",
+        "executableExactVersion": "UNKNOWN_UNPINNED_LATEST_IN_GUIDE",
+        "scopeLimits": [
+          "Only the documented experimentalFeatures charts flag; do not claim coverage of every migration change."
+        ]
+      }
     },
     {
-      "rank": 1174,
+      "id": "svelte-vite-plugin-6-to-7",
       "package": "@sveltejs/vite-plugin-svelte",
-      "topic": "Svelte Vite plugin 6 to 7 runtime/peer transition",
-      "status": "PENDING_SOURCE_BACKED_REVIEW"
+      "datasetRank": 1174,
+      "transition": {
+        "from": "6.0.0",
+        "to": "7.0.0",
+        "scope": "EXACT_TAGS_AND_TAGGED_CHANGELOG"
+      },
+      "source": {
+        "repository": "sveltejs/vite-plugin-svelte",
+        "fromTag": "@sveltejs/vite-plugin-svelte@6.0.0",
+        "fromCommit": "f7b1e99498692f718e6c0c7699a7cf9664222f9b",
+        "fromManifestBlobSha1": "0f455783188a138eabd250caec1e3165c5b6e4a8",
+        "toTag": "@sveltejs/vite-plugin-svelte@7.0.0",
+        "toCommit": "836e79e14e61de52fde5eff999089f2dff9cb107",
+        "toManifestBlobSha1": "765ff1f580d019ffe63f029c90e63deabc149022",
+        "toChangelogBlobSha1": "7aad9c30ba7986107bb7be5a04c98f2937dbbbff",
+        "changelog": "https://github.com/sveltejs/vite-plugin-svelte/blob/836e79e14e61de52fde5eff999089f2dff9cb107/packages/vite-plugin-svelte/CHANGELOG.md",
+        "taggedAdvancedUsageBlobSha1": "9d3cd31c68303bfb7facc842fb0a7c074cd28e04"
+      },
+      "manifestEvidence": {
+        "fromEngines": {
+          "node": "^20.19 || ^22.12 || >=24"
+        },
+        "toEngines": {
+          "node": "^20.19 || ^22.12 || >=24"
+        },
+        "fromPeers": {
+          "svelte": "^5.0.0",
+          "vite": "^6.3.0 || ^7.0.0"
+        },
+        "toPeers": {
+          "svelte": "^5.46.4",
+          "vite": "^8.0.0-beta.7 || ^8.0.0"
+        }
+      },
+      "sourceBackedBehavior": [
+        "Version 7.0.0 requires Vite 8 and Svelte >=5.46.4, while version 6.0.0 accepts Vite 6.3/7 and Svelte 5.",
+        "The 7.0.0 official changelog removes deprecated vitePlugin.hot and ignorePluginPreprocessors options; it directs hot configuration to compilerOptions.hmr.",
+        "The public vite-plugin-svelte API idFilter is replaced by filter; third-party integrations with plugin.api.sveltePreprocess require separate review."
+      ],
+      "applicability": [
+        "Direct Svelte/Vite plugin upgrades from exact 6.0.0 to 7.0.0; check Vite/Svelte graph before upgrading.",
+        "Only mention config/plugin API rewrites when the source uses the deprecated options or plugin API.",
+        "Run pinned Node, Vite and Svelte installation and actual SFC/HMR SSR acceptance on a representative recipient."
+      ],
+      "controlsRecommendedNotRun": [
+        "Vite 7 held-negative peer gate and Vite 8 positive resolution control.",
+        "Svelte 5.45 negative vs 5.46.4 positive peer gate, and plugin API code-use AST inspection.",
+        "SFC compile/HMR and SSR tests after any plugin option/API update."
+      ],
+      "codemod": {
+        "status": "NO_OFFICIAL_AUTOMATED_CODEMOD_CONFIRMED_IN_TAGGED_CHANGELOG",
+        "manualReference": "https://github.com/sveltejs/vite-plugin-svelte/blob/836e79e14e61de52fde5eff999089f2dff9cb107/packages/vite-plugin-svelte/CHANGELOG.md"
+      }
     },
     {
-      "rank": 1296,
+      "id": "nx-vite-22-to-23",
       "package": "@nx/vite",
-      "topic": "Nx 22 to 23 monorepo migration",
-      "status": "PENDING_SOURCE_BACKED_REVIEW"
-    },
+      "datasetRank": 1296,
+      "transition": {
+        "fromTag": "22.0.0",
+        "toTag": "23.0.0",
+        "publishedNpmPair": "UNVERIFIED_SOURCE_MONOREPO_MANIFEST_VERSION_0_0_1",
+        "scope": "EXACT_UPSTREAM_TAGS_ONLY_NOT_NPM_RELEASE_MANIFEST"
+      },
+      "source": {
+        "repository": "nrwl/nx",
+        "fromTag": "22.0.0",
+        "fromCommit": "420091d9df511574eb3fe9c02ecab0d984cb98e7",
+        "fromManifestBlobSha1": "22e21a99abcbef0b7eb9b393ea15d359cc94df94",
+        "toTag": "23.0.0",
+        "toCommit": "d9d260c1eeea2a160ba39a704fd4821fbc9e0e22",
+        "toManifestBlobSha1": "42122a0646528ce68f05d59e6142516de1a6a8a1",
+        "fromMigrationsBlobSha1": "4b68ab0ffe4704cd90e255002641d40b2a9da860",
+        "toMigrationsBlobSha1": "6d618a5fdc8a93d2f596a9541371df29c7e5c8e4",
+        "toMigrations": "https://github.com/nrwl/nx/blob/d9d260c1eeea2a160ba39a704fd4821fbc9e0e22/packages/vite/migrations.json",
+        "ensureVitestDocBlobSha1": "03d5ca599dfebbcad716497ef71c4cb22913a692",
+        "ensureVitestDoc": "https://github.com/nrwl/nx/blob/d9d260c1eeea2a160ba39a704fd4821fbc9e0e22/packages/vite/src/migrations/update-23-0-0/ensure-vitest-package-migration.md",
+        "rolldownDocBlobSha1": "505704838d9980bb6cd70981ed2638a65d319bbc"
+      },
+      "manifestEvidence": {
+        "taggedManifestVersionBoth": "0.0.1 (monorepo build sentinel; do not treat as npm dist version)",
+        "fromVitePeer": "^5.0.0 || ^6.0.0 || ^7.0.0",
+        "toVitePeer": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+        "fromVitestPeer": "^1.3.1 || ^2.0.0 || ^3.0.0",
+        "toVitestPeer": "ABSENT_IN_TAGGED_NX_VITE_MANIFEST",
+        "toDependenciesInclude": "@nx/vitest"
+      },
+      "sourceBackedBehavior": [
+        "Tag 23.0.0 migration registry documents an automatic safety net moving @nx/vite:test to @nx/vitest:test when Vitest is present.",
+        "The same tagged migrations registry conditions Vitest 4 migrations on vitest >=4.0.0 and Vite 8 rollupOptions rename on vite >=8.0.0.",
+        "Tagged Nx source manifest expands the Vite peer to include Vite 8 but no longer lists the old Vitest peer; do not infer published npm peers from monorepo source manifest."
+      ],
+      "applicability": [
+        "Requires an Nx workspace with @nx/vite test executor or Vite plugin Vitest inference; skip migrations for workspaces without Vitest.",
+        "Check selected Vite and Vitest versions separately. Rename rollupOptions only for matching Vite 8 configs, including nested environments; inspect helper modules manually.",
+        "Do not treat generator suggestions as evidence that affected project builds/tests pass."
+      ],
+      "controlsRecommendedNotRun": [
+        "Nx 22 baseline /23 migration CLI dry run with a frozen public fixture and nx.json/project.json target diff.",
+        "Positive direct @nx/vitest executor and negative held @nx/vite:test route; Vitest 4 config tests and Vite 8 manualChunks semantics.",
+        "Pinned public npm package versions/peers and lockfile installation, not only monorepo tag manifests."
+      ],
+      "codemod": {
+        "status": "OFFICIAL_TAGGED_NX_MIGRATION_GENERATORS_UNEXECUTED",
+        "source": "https://github.com/nrwl/nx/blob/d9d260c1eeea2a160ba39a704fd4821fbc9e0e22/packages/vite/migrations.json",
+        "names": [
+          "ensure-vitest-package-migration-23",
+          "rename-rollup-options-to-rolldown-options",
+          "migrate-to-vitest-4"
+        ],
+        "executed": false
+      }
+    }
+  ],
+  "priorityCandidates": [
     {
       "rank": 1500,
       "package": "react-native-mmkv",
       "topic": "MMKV 3 to 4 runtime compatibility",
-      "status": "PENDING_SOURCE_BACKED_REVIEW"
+      "status": "UNKNOWN_UPSTREAM_MOVED_AND_VERSIONED_EVIDENCE_NOT_COMPLETELY_PINNED"
     }
   ]
 }
