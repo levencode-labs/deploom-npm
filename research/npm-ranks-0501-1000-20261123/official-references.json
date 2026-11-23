@@ -1,0 +1,242 @@
+{
+  "schema": "deploom.research.official-upstream-migration-references.v1",
+  "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION",
+  "batch": "npm-ranks-0501-1000-20261123",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "notes": [
+    "Official documentation plus tag-pinned manifests are research, not source-exact independently executed fixtures.",
+    "Dataset latest versions were observed in June 2026 and are not a present-day npm dist-tag claim.",
+    "No official codemod, standalone version or peer compatibility is assumed unless explicitly linked; no remote code is downloaded/executed.",
+    "Conditions are only source-backed applicability predicates; not installation, runtime or migration claims.",
+    "Production v2 admission requires a separate accepted first-party fixture with positive and negative controls in trusted main."
+  ],
+  "records": [
+    {
+      "id": "vite-plugin-vue-5-to-6",
+      "package": "@vitejs/plugin-vue",
+      "datasetRank": 721,
+      "transition": {
+        "from": "5.0.0",
+        "to": "6.0.0",
+        "scope": "EXACT_TAG_MANIFESTS_ONLY"
+      },
+      "source": {
+        "repo": "vitejs/vite-plugin-vue",
+        "fromTag": "plugin-vue@5.0.0",
+        "fromCommit": "e0593a6cadafbe62a60f10277538cac3e51874ca",
+        "fromManifestBlobSha1": "97c4344632a2da36e6b7dfcd7e4493e6c43e2873",
+        "toTag": "plugin-vue@6.0.0",
+        "toCommit": "9c078180527b0f308e2398247f9f2fe2be2b002d",
+        "toManifestBlobSha1": "5ba1c32aad5fe89121d1a4b086f30a65891182c5",
+        "taggedChangelogBlobSha1": "7b8f105698f2059985ec5556eb3694f6178bd7c6",
+        "changelog": "https://github.com/vitejs/vite-plugin-vue/blob/9c078180527b0f308e2398247f9f2fe2be2b002d/packages/plugin-vue/CHANGELOG.md"
+      },
+      "manifestEvidence": {
+        "fromEngines": {
+          "node": "^18.0.0 || >=20.0.0"
+        },
+        "toEngines": {
+          "node": "^20.19.0 || >=22.12.0"
+        },
+        "fromPeerDependencies": {
+          "vite": "^5.0.0",
+          "vue": "^3.2.25"
+        },
+        "toPeerDependencies": {
+          "vite": "^5.0.0 || ^6.0.0 || ^7.0.0",
+          "vue": "^3.2.25"
+        }
+      },
+      "sourceBackedBehavior": [
+        "v6 beta release notes explicitly require Node 20.19+ or 22.12+ and drop the CommonJS build",
+        "v6 changelog mentions altered public plugin API include/exclude handling and a filter in a v6 beta"
+      ],
+      "applicability": [
+        "Using plugin-vue v5 and targeting v6",
+        "Run exact lockfile install against supported Node and selected Vite peer; module consumers relying on CJS plugin entry need separate runtime check",
+        "If plugin callers read api.options.include/exclude or call plugin filters, check the actual API; do not claim all Vue projects require codemods"
+      ],
+      "controlsRecommendedNotRun": [
+        "Reject unsupported Node 18 target without changing Node silently",
+        "Check Node ESM loader and Vite build with real SFCs",
+        "Assert no regression for simple SFC and a custom-filter negative control"
+      ],
+      "codemod": {
+        "status": "NOT_FOUND_OFFICIAL_FOR_THIS_EXACT_TRANSITION"
+      }
+    },
+    {
+      "id": "vue-router-4-to-5",
+      "package": "vue-router",
+      "datasetRank": 723,
+      "transition": {
+        "from": "4.6.0",
+        "to": "5.0.0",
+        "scope": "EXACT_TAG_MANIFESTS_AND_OFFICIAL_DOC_RANGE"
+      },
+      "source": {
+        "repo": "vuejs/router",
+        "fromTag": "v4.6.0",
+        "fromCommit": "37cc3a5c27a8ef555ef262dc9fb86dbc4a50903a",
+        "fromManifestBlobSha1": "d04f33bb0e16bc63b67be287efe15c63825ae5f6",
+        "toTag": "v5.0.0",
+        "toCommit": "a9b6ea8cd4cfc5b1385ad3ce5ba1d354f44217cf",
+        "toManifestBlobSha1": "ead9687d625c336b121901fe0caf65557de442bb",
+        "taggedChangelogBlobSha1": "20556e3b99e877777cf46bda2f2bb34236625fb6",
+        "changelog": "https://github.com/vuejs/router/blob/a9b6ea8cd4cfc5b1385ad3ce5ba1d354f44217cf/packages/router/CHANGELOG.md",
+        "migrationGuide": "https://router.vuejs.org/guide/migration/v4-to-v5.html"
+      },
+      "manifestEvidence": {
+        "fromEngines": "ABSENT_IN_TAGGED_MANIFEST",
+        "toEngines": "ABSENT_IN_TAGGED_MANIFEST",
+        "fromPeerDependencies": {
+          "vue": "^3.5.0"
+        },
+        "toPeerDependencies": {
+          "vue": "^3.5.0",
+          "@pinia/colada": "^0.18.1",
+          "@vue/compiler-sfc": "^3.5.17",
+          "pinia": "^3.0.4"
+        },
+        "toOptionalPeers": [
+          "@pinia/colada",
+          "@vue/compiler-sfc",
+          "pinia"
+        ]
+      },
+      "sourceBackedBehavior": [
+        "Official guide treats Vue Router 4 without unplugin-vue-router as no breaking source changes for the common path, with an IIFE devtools-api exception",
+        "For unplugin-vue-router clients, file-based router functionality is moved into vue-router, and several import entrypoints change",
+        "Tagged v5 changelog confirms merge of unplugin-vue-router into core"
+      ],
+      "applicability": [
+        "Check whether unplugin-vue-router is actually installed and used before recommending import replacements",
+        "If file-based routing exists, inspect vite plugin, data loaders, typed routes, Volar config and old client type references",
+        "If absent, avoid unneeded codemod and preserve route semantics"
+      ],
+      "controlsRecommendedNotRun": [
+        "Frozen baseline and target install",
+        "Positive render/route navigation, file-based routes typed declarations, deep-link 404 and SSR controls",
+        "Negative case with unplugin-specific v4 import path and no false positive for plain vue-router v4"
+      ],
+      "codemod": {
+        "status": "OFFICIAL_MANUAL_IMPORT_CHECKLIST_NOT_AUTOMATED_CODEMOD",
+        "source": "https://router.vuejs.org/guide/migration/v4-to-v5.html"
+      }
+    },
+    {
+      "id": "mui-date-pickers-8-to-9",
+      "package": "@mui/x-date-pickers",
+      "datasetRank": 863,
+      "transition": {
+        "from": "8.0.0",
+        "to": "9.0.0",
+        "scope": "EXACT_TAG_MANIFESTS_AND_OFFICIAL_TAGGED_GUIDE"
+      },
+      "source": {
+        "repo": "mui/mui-x",
+        "fromTag": "v8.0.0",
+        "fromCommit": "881de933a844a406897b582266344d041a0538f3",
+        "fromManifestBlobSha1": "1d0c64e8b08b5d1c3a466414ad9689d5afbbfb2b",
+        "toTag": "v9.0.0",
+        "toCommit": "3027c85363a3cccc29c71b223aad82feda5b65ab",
+        "toManifestBlobSha1": "be6838d781ac137664414974c83875694f776ca5",
+        "taggedGuideBlobSha1": "a298a3b73a4afa1ec757bc3e458d5bf040713a00",
+        "taggedGuide": "https://github.com/mui/mui-x/blob/3027c85363a3cccc29c71b223aad82feda5b65ab/docs/data/migration/migration-pickers-v8/migration-pickers-v8.md",
+        "currentGuide": "https://next.mui.com/x/migration/migration-pickers-v8/"
+      },
+      "manifestEvidence": {
+        "fromEngines": {
+          "node": ">=14.0.0"
+        },
+        "toEngines": {
+          "node": ">=14.0.0"
+        },
+        "fromMaterialAndSystemPeers": "^5.15.14 || ^6.0.0 || ^7.0.0",
+        "toMaterialAndSystemPeers": "^7.3.0 || ^9.0.0",
+        "fromReactPeer": "^17.0.0 || ^18.0.0 || ^19.0.0",
+        "toReactPeer": "^17.0.0 || ^18.0.0 || ^19.0.0"
+      },
+      "sourceBackedBehavior": [
+        "Official v9 guide documents accessible field DOM structure as default and loss of legacy input fallback",
+        "Official v9 guide documents renamed field ref APIs and PickersDay component changes",
+        "Required @mui/material and @mui/system peer ranges exclude v5/v6 under target manifest"
+      ],
+      "applicability": [
+        "Check installed @mui/material and @mui/system peers and custom textField/field slots",
+        "A custom plain HTML input slot or dynamic spread of enableAccessibleFieldDOMStructure may require manual review",
+        "Any codemod can only be proposed for matching source and verified separately; it was not run here"
+      ],
+      "controlsRecommendedNotRun": [
+        "Strict frozen npm peer install with held Material v6 negative case",
+        "Run UI pickers in keyboard, locale, timezone and custom slot tests",
+        "Check replaced DatePicker props and JSX source before and after codemod"
+      ],
+      "codemod": {
+        "status": "OFFICIALLY_DOCUMENTED_NOT_EXECUTED",
+        "package": "@mui/x-codemod",
+        "recipe": "v9.0.0/pickers/preset-safe",
+        "source": "https://github.com/mui/mui-x/blob/3027c85363a3cccc29c71b223aad82feda5b65ab/docs/data/migration/migration-pickers-v8/migration-pickers-v8.md",
+        "versionPin": "UNPINNED_UPSTREAM_EXAMPLE_USES_LATEST",
+        "scopeLimits": [
+          "spread or variable-sourced removed props not automatically handled",
+          "other breaking changes manual"
+        ]
+      }
+    },
+    {
+      "id": "angular-21-to-22-documentation",
+      "package": "@angular/core",
+      "datasetRank": 792,
+      "companionBatchRanks": [
+        {
+          "rank": 812,
+          "package": "@angular/compiler"
+        },
+        {
+          "rank": 861,
+          "package": "@angular/compiler-cli"
+        },
+        {
+          "rank": 864,
+          "package": "@angular/router"
+        }
+      ],
+      "transition": {
+        "fromMajor": 21,
+        "toMajor": 22,
+        "exactPair": "NOT_SOURCE_PINNED",
+        "scope": "OFFICIAL_DOCUMENTATION_RANGE_ONLY"
+      },
+      "source": {
+        "repo": "angular/angular",
+        "officialGuide": "https://angular.dev/update-guide",
+        "updatingReference": "https://angular.dev/update",
+        "release": "https://angular.dev/events/v22",
+        "tagPins": "UNKNOWN: v22.0.2 tag not resolved by GitHub matching-refs in this research attempt"
+      },
+      "manifestEvidence": {
+        "fromEngines": "UNKNOWN_NOT_PINNED",
+        "toEngines": "UNKNOWN_NOT_PINNED",
+        "fromPeerDependencies": "UNKNOWN_NOT_PINNED",
+        "toPeerDependencies": "UNKNOWN_NOT_PINNED"
+      },
+      "sourceBackedBehavior": [
+        "Angular provides interactive official Update Guide with v21 to v22 selection",
+        "Angular CLI ng update is a documented official migration mechanism, not evidence that an unseen project migrates successfully"
+      ],
+      "applicability": [
+        "Requires exact approved application and CLI/compiler TypeScript version pins",
+        "Review the selected public official v21 to v22 instructions and generated migrations, without assuming uniform behavior for 22.0.2"
+      ],
+      "controlsRecommendedNotRun": [
+        "Freeze matching Angular core/cli/compiler/router graph and record engines/peers from exact registry metadata",
+        "Run ng update dry staging against isolated source, then typecheck/build/routing/runtime and negative controls"
+      ],
+      "codemod": {
+        "status": "OFFICIAL_NG_UPDATE_WORKFLOW_NOT_EXECUTED",
+        "source": "https://angular.dev/update-guide"
+      }
+    }
+  ]
+}
