@@ -1,0 +1,38 @@
+{
+  "schema": "deploom.research.official-upstream-migration-references.v1",
+  "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION",
+  "batch": "npm-ranks-1501-2000-20261123",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "notes": [
+    "Only exact first-party tag/docs+Git blob verified references may be promoted from the research queue into records; all remain unexecuted and not v2 fixtures.",
+    "Dataset latest is the pinned historical CSV value; an exact public registry hit does not verify a transition.",
+    "Production admission requires separately merged first-party positive and negative receipts plus review/signing/reader gates."
+  ],
+  "records": [],
+  "priorityCandidates": [
+    {
+      "rank": 1546,
+      "package": "@eslint-react/eslint-plugin",
+      "topic": "ESLint React plugin major configuration/compatibility boundary",
+      "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
+    },
+    {
+      "rank": 1565,
+      "package": "angular-eslint",
+      "topic": "Angular ESLint 21→22 compatibility and workspace configuration",
+      "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
+    },
+    {
+      "rank": 1660,
+      "package": "vite-plugin-vue-inspector",
+      "topic": "Vue inspector plugin 6→7 Vite compatibility",
+      "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
+    },
+    {
+      "rank": 1876,
+      "package": "vite-plugin-css-injected-by-js",
+      "topic": "CSS injection Vite plugin 4→5 behavior/peer boundary",
+      "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
+    }
+  ]
+}
