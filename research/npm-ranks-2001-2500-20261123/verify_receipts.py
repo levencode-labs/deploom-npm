@@ -32,7 +32,7 @@ def validate(ledger=None, index=None, *, part=None):
         ledger = json.loads((ROOT / "registry-receipts-manifest.json").read_text(encoding="utf-8"))
     if index is None:
         index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
-    require(ledger.get("schema") == "deploom.research.npm-ranks-2501-2500-coverage.v1", "Schema")
+    require(ledger.get("schema") == "deploom.research.npm-ranks-2001-2500-coverage.v1", "Schema")
     require(ledger.get("authority") == "RESEARCH_ONLY_NOT_V2_ADMISSION", "Authority")
     require(ledger.get("sourceCsvSha256") == DATASET == index["source"]["sha256"], "Source digest")
     require(ledger.get("sourceCommit") == index["source"]["commit"], "Source revision")
