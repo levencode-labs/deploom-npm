@@ -1,0 +1,4620 @@
+{
+  "schema": "deploom.research.npm-ranks-4501-5000-coverage.v1",
+  "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "sourceCommit": "54cf58bc9bafa35fef1c4acf6435d667b4af47c1",
+  "sourceCsvGitBlobSha1": "0d45bc4b8bdd2a8016e582af7fef6f3d0f310272",
+  "originalIndexGitBlobSha1": "b122e1457e636473aca5d6eb354d7f5aa926a904",
+  "selection": {
+    "startRank": 4501,
+    "endRank": 5000,
+    "subbatchSize": 100,
+    "continuationStartRank": 5001
+  },
+  "testedCodeCommit": "1753efe9c6058fa56c30b99ab94a2874bca7c2e8",
+  "workflowRun": 45232399468,
+  "workflowResult": "SUCCESS_ALL_6_JOBS",
+  "recordCount": 500,
+  "verifiedMetadataCount": 499,
+  "unknownCount": 1,
+  "statusCounts": {
+    "PUBLIC_EXACT_VERSION_OBSERVED": 499,
+    "UNKNOWN_HTTP_404": 1
+  },
+  "unknowns": [
+    {
+      "rank": 4749,
+      "package": "@zeniai/client-epic-state",
+      "version": "5.1.29",
+      "status": "UNKNOWN_HTTP_404"
+    }
+  ],
+  "productionV2Adds": 0,
+  "newTrustedFixtureCount": 0,
+  "signingPerformed": false,
+  "cumulative": {
+    "exactMetadata": 4993,
+    "unknowns": 7,
+    "nextRank": 5001
+  },
+  "items": [
+    {
+      "rank": 4501,
+      "package": "@pagefind/windows-x64",
+      "version": "1.5.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4502,
+      "package": "@vscode/deviceid",
+      "version": "0.1.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4503,
+      "package": "browserstacktunnel-wrapper",
+      "version": "2.0.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4504,
+      "package": "@sitecore-feaas/clientside",
+      "version": "0.6.4",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4505,
+      "package": "@rkusa/linebreak",
+      "version": "1.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4506,
+      "package": "@metamask/react-native-search-api",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4507,
+      "package": "@loglayer/transport-pino",
+      "version": "3.2.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4508,
+      "package": "@svgmoji/twemoji",
+      "version": "3.2.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4509,
+      "package": "@rive-app/react-canvas-lite",
+      "version": "4.29.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4510,
+      "package": "@ai-sdk/replicate",
+      "version": "2.0.36",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4511,
+      "package": "@dydxprotocol/v4-client-js",
+      "version": "3.6.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4512,
+      "package": "supermemory",
+      "version": "4.24.12",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4513,
+      "package": "hapi-pino",
+      "version": "13.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4514,
+      "package": "@forge/manifest",
+      "version": "12.9.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4515,
+      "package": "jest-mock-console",
+      "version": "2.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4516,
+      "package": "guacamole-common-js",
+      "version": "1.5.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4517,
+      "package": "reveal.js",
+      "version": "6.0.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4518,
+      "package": "jgexml",
+      "version": "0.4.4",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4519,
+      "package": "rollup-plugin-node-globals",
+      "version": "1.4.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4520,
+      "package": "@rpldy/uploader",
+      "version": "1.13.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4521,
+      "package": "nopt-usage",
+      "version": "0.1.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4522,
+      "package": "dag-jose",
+      "version": "5.1.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4523,
+      "package": "@flags-sdk/growthbook",
+      "version": "0.2.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4524,
+      "package": "@tryfinch/react-connect",
+      "version": "5.0.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4525,
+      "package": "@claude-flow/memory",
+      "version": "3.0.0-alpha.20",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4526,
+      "package": "@types/sharedworker",
+      "version": "0.0.226",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4527,
+      "package": "@payloadcms/plugin-nested-docs",
+      "version": "3.85.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4528,
+      "package": "@openfga/syntax-transformer",
+      "version": "0.2.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4529,
+      "package": "@elastic/ems-client",
+      "version": "8.7.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4530,
+      "package": "@middy/http-response-serializer",
+      "version": "7.6.8",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4531,
+      "package": "precision",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4532,
+      "package": "vue-lazyload",
+      "version": "3.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4533,
+      "package": "lodash._topath",
+      "version": "3.8.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4534,
+      "package": "moment-jdateformatparser",
+      "version": "1.2.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4535,
+      "package": "nuxt-svgo",
+      "version": "5.3.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4536,
+      "package": "lodash._baseget",
+      "version": "3.7.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4537,
+      "package": "native-is-elevated",
+      "version": "0.9.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4538,
+      "package": "@module-federation/retry-plugin",
+      "version": "2.5.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4539,
+      "package": "react-scrollbars-custom",
+      "version": "4.1.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4540,
+      "package": "node-opcua-address-space",
+      "version": "2.173.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4541,
+      "package": "common-prefix",
+      "version": "1.1.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4542,
+      "package": "@fumadocs/ui",
+      "version": "16.5.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4543,
+      "package": "@directus/utils",
+      "version": "13.5.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4544,
+      "package": "@rspress/core",
+      "version": "2.0.14",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4545,
+      "package": "nitrogen",
+      "version": "0.35.9",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4546,
+      "package": "apollo-link-dedup",
+      "version": "1.0.21",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4547,
+      "package": "@remirror/extension-code",
+      "version": "3.0.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4548,
+      "package": "@cerbos/core",
+      "version": "0.31.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4549,
+      "package": "luhn",
+      "version": "2.4.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4550,
+      "package": "@snowfork/snowbridge-types",
+      "version": "0.2.7",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4551,
+      "package": "universal-serialize",
+      "version": "1.0.10",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4552,
+      "package": "@envelop/response-cache",
+      "version": "9.1.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4553,
+      "package": "encoding-negotiator",
+      "version": "3.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4554,
+      "package": "shadcn-nuxt",
+      "version": "2.7.4",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4555,
+      "package": "node-opcua-data-access",
+      "version": "2.173.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4556,
+      "package": "node-opcua-address-space-for-conformance-testing",
+      "version": "2.173.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4557,
+      "package": "@primevue/nuxt-module",
+      "version": "4.5.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4558,
+      "package": "snyk-module",
+      "version": "3.3.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4559,
+      "package": "typescript-plugin-styled-components",
+      "version": "3.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4560,
+      "package": "lodash.pull",
+      "version": "4.1.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4561,
+      "package": "deemon",
+      "version": "1.13.7",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4562,
+      "package": "@node-redis/search",
+      "version": "1.0.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4563,
+      "package": "pouchdb-abstract-mapreduce",
+      "version": "9.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4564,
+      "package": "node-opcua-nodeset-ua",
+      "version": "2.173.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4565,
+      "package": "@cloudscape-design/component-toolkit",
+      "version": "1.0.0-beta.167",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4566,
+      "package": "@authenio/samlify-node-xmllint",
+      "version": "2.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4567,
+      "package": "find-up-json",
+      "version": "2.0.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4568,
+      "package": "twin.macro",
+      "version": "3.4.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4569,
+      "package": "@open-mercato/shared",
+      "version": "0.6.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4570,
+      "package": "@runloop/api-client",
+      "version": "1.24.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4571,
+      "package": "@wordpress/plugins",
+      "version": "7.48.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4572,
+      "package": "node-static",
+      "version": "0.7.11",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4573,
+      "package": "@remirror/extension-find",
+      "version": "1.0.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4574,
+      "package": "@activeadmin/activeadmin",
+      "version": "3.5.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4575,
+      "package": "json-schema-compatibility",
+      "version": "1.1.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4576,
+      "package": "react-native-map-link",
+      "version": "3.13.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4577,
+      "package": "@ember-data/private-build-infra",
+      "version": "5.3.3",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4578,
+      "package": "tsame",
+      "version": "2.0.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4579,
+      "package": "node-opcua-server-discovery",
+      "version": "2.173.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4580,
+      "package": "reduce-object",
+      "version": "0.1.3",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4581,
+      "package": "supabase-management-js",
+      "version": "2.0.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4582,
+      "package": "antd-mobile-icons",
+      "version": "0.3.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4583,
+      "package": "js-crypto-random",
+      "version": "1.0.5",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4584,
+      "package": "yarn-audit-fix",
+      "version": "10.1.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4585,
+      "package": "connected-domain",
+      "version": "1.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4586,
+      "package": "@vee-validate/nuxt",
+      "version": "4.15.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4587,
+      "package": "is-uuid",
+      "version": "1.0.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4588,
+      "package": "babel-plugin-external-helpers",
+      "version": "6.22.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4589,
+      "package": "vite-express",
+      "version": "0.22.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4590,
+      "package": "@zeit/fetch-cached-dns",
+      "version": "1.2.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4591,
+      "package": "company-email-validator",
+      "version": "1.2.4",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4592,
+      "package": "@ai-sdk/vercel",
+      "version": "2.0.53",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4593,
+      "package": "@pagefind/darwin-x64",
+      "version": "1.5.2",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4594,
+      "package": "node-color-log",
+      "version": "14.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4595,
+      "package": "zapier-platform-cli",
+      "version": "19.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4596,
+      "package": "node-opcua-service-node-management",
+      "version": "2.173.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4597,
+      "package": "rollup-plugin-filesize",
+      "version": "10.0.0",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4598,
+      "package": "chartjs-chart-matrix",
+      "version": "3.0.4",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4599,
+      "package": "@n8n/api-types",
+      "version": "1.26.3",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4600,
+      "package": "get-youtube-id",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_0",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4601,
+      "package": "ember-cache-primitive-polyfill",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4602,
+      "package": "winston-transport-sentry-node",
+      "version": "3.0.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4603,
+      "package": "@ocavue/svgmoji-cjs",
+      "version": "0.1.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4604,
+      "package": "@pinia/colada",
+      "version": "1.3.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4605,
+      "package": "@solana-program/address-lookup-table",
+      "version": "0.12.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4606,
+      "package": "ngx-webstorage",
+      "version": "21.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4607,
+      "package": "broccoli-amd-funnel",
+      "version": "2.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4608,
+      "package": "@postgresql-typed/oids",
+      "version": "0.2.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4609,
+      "package": "@ckeditor/ckeditor5-export-inline-styles",
+      "version": "48.2.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4610,
+      "package": "alea",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4611,
+      "package": "@octopusdeploy/design-system-icons",
+      "version": "2026.1.11572",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4612,
+      "package": "@nut-tree-fork/libnut-win32",
+      "version": "2.7.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4613,
+      "package": "string_decoder-okam",
+      "version": "1.3.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4614,
+      "package": "@payloadcms/payload-cloud",
+      "version": "3.85.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4615,
+      "package": "@ax-llm/ax",
+      "version": "22.0.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4616,
+      "package": "tiny-levenshtein",
+      "version": "1.1.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4617,
+      "package": "@jmespath-community/jmespath",
+      "version": "1.3.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4618,
+      "package": "graphql-key-transformer",
+      "version": "3.2.80",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4619,
+      "package": "when-dom-ready",
+      "version": "1.2.12",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4620,
+      "package": "random-string",
+      "version": "0.2.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4621,
+      "package": "@pixi/canvas-renderer",
+      "version": "7.4.3",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4622,
+      "package": "@primer/css",
+      "version": "22.3.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4623,
+      "package": "@kaizen/design-tokens",
+      "version": "11.0.11",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4624,
+      "package": "rollup-plugin-livereload",
+      "version": "2.0.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4625,
+      "package": "graphql-auth-transformer",
+      "version": "7.2.82",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4626,
+      "package": "sst-aws-cdk",
+      "version": "2.1018.1-3",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4627,
+      "package": "hipchat-notifier",
+      "version": "1.1.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4628,
+      "package": "nanotime",
+      "version": "1.0.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4629,
+      "package": "@modelcontextprotocol/server-everything",
+      "version": "2026.1.26",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4630,
+      "package": "graphql-function-transformer",
+      "version": "3.3.71",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4631,
+      "package": "@arcjet/body",
+      "version": "1.5.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4632,
+      "package": "lodash.round",
+      "version": "4.0.4",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4633,
+      "package": "@nextui-org/use-disclosure",
+      "version": "2.2.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4634,
+      "package": "@nextui-org/use-scroll-position",
+      "version": "2.1.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4635,
+      "package": "graphql-predictions-transformer",
+      "version": "3.2.80",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4636,
+      "package": "node-opcua-server",
+      "version": "2.173.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4637,
+      "package": "@elastic/elasticsearch-mock",
+      "version": "2.1.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4638,
+      "package": "lodash.times",
+      "version": "4.3.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4639,
+      "package": "perf_hooks",
+      "version": "0.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4640,
+      "package": "lodash._createcompounder",
+      "version": "3.0.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4641,
+      "package": "ipfs-unixfs-exporter",
+      "version": "16.0.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4642,
+      "package": "node-opcua-vendor-diagnostic",
+      "version": "2.173.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4643,
+      "package": "node-opcua-client-proxy",
+      "version": "2.173.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4644,
+      "package": "@nut-tree-fork/libnut-darwin",
+      "version": "2.7.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4645,
+      "package": "bentocache",
+      "version": "1.6.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4646,
+      "package": "@xn-sakina/rml-linux-arm64-gnu",
+      "version": "2.8.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4647,
+      "package": "react-runner",
+      "version": "1.0.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4648,
+      "package": "node-opcua-aggregates",
+      "version": "2.173.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4649,
+      "package": "@appsignal/opentelemetry-instrumentation-bullmq",
+      "version": "0.8.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4650,
+      "package": "get-current-package",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4651,
+      "package": "affine-hull",
+      "version": "1.0.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4652,
+      "package": "lazy-debug-legacy",
+      "version": "0.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4653,
+      "package": "stylelint-no-unresolved-module",
+      "version": "2.5.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4654,
+      "package": "@sgratzl/chartjs-chart-boxplot",
+      "version": "4.4.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4655,
+      "package": "@cloudscape-design/collection-hooks",
+      "version": "1.0.98",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4656,
+      "package": "node-opcua-nodesets",
+      "version": "2.163.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4657,
+      "package": "@1password/op-js",
+      "version": "0.1.13",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4658,
+      "package": "@qiwi/npm-registry-client",
+      "version": "8.9.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4659,
+      "package": "@brightcove/player-url",
+      "version": "1.3.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4660,
+      "package": "babel-plugin-transform-remove-imports",
+      "version": "1.8.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4661,
+      "package": "@backstage/plugin-scaffolder-backend-module-notifications",
+      "version": "0.1.23",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4662,
+      "package": "@antora/logger",
+      "version": "3.1.15",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4663,
+      "package": "ngx-socket-io",
+      "version": "4.11.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4664,
+      "package": "cldr-data",
+      "version": "36.0.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4665,
+      "package": "@xn-sakina/rml-linux-arm64-musl",
+      "version": "2.8.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4666,
+      "package": "karma-babel-preprocessor",
+      "version": "8.0.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4667,
+      "package": "@nut-tree-fork/libnut-linux",
+      "version": "2.7.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4668,
+      "package": "@libp2p/identify",
+      "version": "4.1.8",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4669,
+      "package": "@criteria/json-schema",
+      "version": "0.10.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4670,
+      "package": "@ckeditor/ckeditor5-footnotes",
+      "version": "48.2.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4671,
+      "package": "react-native-key-command",
+      "version": "1.0.15",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4672,
+      "package": "prompt-base",
+      "version": "5.0.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4673,
+      "package": "obsidian",
+      "version": "1.13.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4674,
+      "package": "lodash.split",
+      "version": "4.4.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4675,
+      "package": "@unocss/nuxt",
+      "version": "66.7.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4676,
+      "package": "iter-tools-es",
+      "version": "7.5.4",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4677,
+      "package": "vue-upload-component",
+      "version": "2.8.23",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4678,
+      "package": "@ampproject/toolbox-script-csp",
+      "version": "2.10.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4679,
+      "package": "@matterlabs/hardhat-zksync-solc",
+      "version": "1.5.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4680,
+      "package": "buffer-okam",
+      "version": "4.9.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4681,
+      "package": "notifier",
+      "version": "0.2.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4682,
+      "package": "chartjs-chart-sankey",
+      "version": "0.14.3",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4683,
+      "package": "@craftjs/utils",
+      "version": "0.2.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4684,
+      "package": "find-up-path",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4685,
+      "package": "@axiomhq/winston",
+      "version": "1.7.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4686,
+      "package": "url2",
+      "version": "1.0.4",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4687,
+      "package": "parse-css-font",
+      "version": "4.0.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4688,
+      "package": "@middy/http-router",
+      "version": "7.6.8",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4689,
+      "package": "@pnpm/client",
+      "version": "1001.1.24",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4690,
+      "package": "ember-cookies",
+      "version": "1.3.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4691,
+      "package": "assert-okam",
+      "version": "1.5.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4692,
+      "package": "@umijs/es-module-parser",
+      "version": "0.0.7",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4693,
+      "package": "@fix-webm-duration/parser",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4694,
+      "package": "node-libs-browser-okam",
+      "version": "2.2.5",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4695,
+      "package": "@pnpm/network.auth-header",
+      "version": "1101.1.2",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4696,
+      "package": "@tldraw/driver",
+      "version": "5.1.1",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4697,
+      "package": "monaco-promql",
+      "version": "1.8.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4698,
+      "package": "@nut-tree-fork/libnut",
+      "version": "4.2.6",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4699,
+      "package": "@etchteam/storybook-addon-status",
+      "version": "8.1.0",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4700,
+      "package": "i18n-2",
+      "version": "0.7.3",
+      "subbatch": 1,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_1",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4701,
+      "package": "@markuplint/parser-utils",
+      "version": "4.18.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4702,
+      "package": "@jasminejs/reporters",
+      "version": "1.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4703,
+      "package": "@microsoft/sp-page-context",
+      "version": "1.23.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4704,
+      "package": "@onfido/api",
+      "version": "6.2.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4705,
+      "package": "react-native-code-push",
+      "version": "9.0.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4706,
+      "package": "@pixi/canvas-display",
+      "version": "7.4.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4707,
+      "package": "grapesjs-preset-newsletter",
+      "version": "1.0.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4708,
+      "package": "lodash.eq",
+      "version": "4.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4709,
+      "package": "lodash.random",
+      "version": "3.2.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4710,
+      "package": "office-ui-fabric-core",
+      "version": "11.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4711,
+      "package": "tree-node-cli",
+      "version": "3.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4712,
+      "package": "querystring-browser",
+      "version": "1.0.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4713,
+      "package": "xml-to-json-stream",
+      "version": "1.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4714,
+      "package": "check-ends-with-period",
+      "version": "3.0.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4715,
+      "package": "@remotion/compositor-linux-arm64-gnu",
+      "version": "4.0.481",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4716,
+      "package": "util-okam",
+      "version": "0.11.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4717,
+      "package": "@rstest/core",
+      "version": "0.10.6",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4718,
+      "package": "isbot-fast",
+      "version": "1.2.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4719,
+      "package": "expo-cellular",
+      "version": "56.0.5",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4720,
+      "package": "@rdfjs/dataset",
+      "version": "2.0.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4721,
+      "package": "@cloudscape-design/global-styles",
+      "version": "1.0.60",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4722,
+      "package": "stream-mime-type",
+      "version": "2.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4723,
+      "package": "@brightcove/player-loader",
+      "version": "1.8.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4724,
+      "package": "@dbos-inc/dbos-sdk",
+      "version": "4.20.11",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4725,
+      "package": "react-audio-player",
+      "version": "0.17.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4726,
+      "package": "iso-3166-1-alpha-2",
+      "version": "1.0.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4727,
+      "package": "nestjs-console",
+      "version": "10.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4728,
+      "package": "@pixi/canvas-graphics",
+      "version": "7.4.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4729,
+      "package": "@milkdown/theme-nord",
+      "version": "7.21.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4730,
+      "package": "@pixi/canvas-sprite",
+      "version": "7.4.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4731,
+      "package": "@pixi/canvas-text",
+      "version": "7.4.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4732,
+      "package": "@vscode/windows-mutex",
+      "version": "0.5.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4733,
+      "package": "enum",
+      "version": "3.0.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4734,
+      "package": "@microsoft/sp-diagnostics",
+      "version": "1.23.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4735,
+      "package": "@mastra/express",
+      "version": "1.4.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4736,
+      "package": "@ethereum-waffle/compiler",
+      "version": "4.0.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4737,
+      "package": "tree-sitter-swift",
+      "version": "0.7.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4738,
+      "package": "temporary",
+      "version": "1.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4739,
+      "package": "watch-size",
+      "version": "2.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4740,
+      "package": "multi-progress",
+      "version": "4.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4741,
+      "package": "@pnpm/resolving.bun-resolver",
+      "version": "1005.0.11",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4742,
+      "package": "@testcontainers/rabbitmq",
+      "version": "12.0.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4743,
+      "package": "@zkochan/diable",
+      "version": "1.0.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4744,
+      "package": "import-html-entry",
+      "version": "1.17.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4745,
+      "package": "@opentok/client",
+      "version": "2.34.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4746,
+      "package": "better-dx",
+      "version": "0.2.15",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4747,
+      "package": "@chromaui/localtunnel",
+      "version": "2.0.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4748,
+      "package": "@pnpm/worker",
+      "version": "1100.2.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4749,
+      "package": "@zeniai/client-epic-state",
+      "version": "5.1.29",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "UNKNOWN_HTTP_404",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4750,
+      "package": "nestjs-kysely",
+      "version": "3.1.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4751,
+      "package": "shellwords-ts",
+      "version": "3.0.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4752,
+      "package": "@prelude.so/sdk",
+      "version": "0.12.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4753,
+      "package": "@vltpkg/semver",
+      "version": "1.0.0-rc.32",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4754,
+      "package": "nest-keycloak-connect",
+      "version": "1.10.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4755,
+      "package": "@wangeditor/code-highlight",
+      "version": "1.0.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4756,
+      "package": "@spec2ts/core",
+      "version": "3.0.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4757,
+      "package": "frappe-datatable",
+      "version": "1.20.5",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4758,
+      "package": "@visactor/vutils-extension",
+      "version": "2.0.22",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4759,
+      "package": "stylelint-config-recommended-less",
+      "version": "4.2.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4760,
+      "package": "@wangeditor/table-module",
+      "version": "1.1.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4761,
+      "package": "@scaffdog/error",
+      "version": "4.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4762,
+      "package": "storybook-addon-tags",
+      "version": "0.0.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4763,
+      "package": "@wangeditor/video-module",
+      "version": "1.1.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4764,
+      "package": "@pixiv/three-vrm-node-constraint",
+      "version": "3.5.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4765,
+      "package": "hash-object",
+      "version": "5.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4766,
+      "package": "@uniswap/token-lists",
+      "version": "1.0.0-beta.35",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4767,
+      "package": "dir-is-case-sensitive",
+      "version": "3.0.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4768,
+      "package": "async.util.setimmediate",
+      "version": "0.5.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4769,
+      "package": "@scaffdog/config",
+      "version": "4.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4770,
+      "package": "@middy/do-not-wait-for-empty-event-loop",
+      "version": "7.6.8",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4771,
+      "package": "lodash.rest",
+      "version": "4.0.5",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4772,
+      "package": "@pixiv/three-vrm-springbone",
+      "version": "3.5.4",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4773,
+      "package": "@pnpm/store-path",
+      "version": "1000.0.6",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4774,
+      "package": "xdl",
+      "version": "60.0.12",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4775,
+      "package": "cypress-image-diff-html-report",
+      "version": "2.2.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4776,
+      "package": "zipkin",
+      "version": "0.22.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4777,
+      "package": "@wangeditor/list-module",
+      "version": "1.0.5",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4778,
+      "package": "vite-plugin-remove-console",
+      "version": "2.2.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4779,
+      "package": "zod-package-json",
+      "version": "2.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4780,
+      "package": "@microsoft/sp-loader",
+      "version": "1.23.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4781,
+      "package": "hexo-fs",
+      "version": "5.0.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4782,
+      "package": "react-password-strength-bar",
+      "version": "0.4.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4783,
+      "package": "@spectrum-web-components/icon",
+      "version": "1.12.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4784,
+      "package": "@claude-flow/shared",
+      "version": "3.0.0-alpha.8",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4785,
+      "package": "@antora/cli",
+      "version": "3.1.15",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4786,
+      "package": "@privy-io/expo",
+      "version": "0.69.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4787,
+      "package": "reconnecting-eventsource",
+      "version": "1.6.5",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4788,
+      "package": "get-root-path",
+      "version": "3.0.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4789,
+      "package": "spectrum-colorpicker",
+      "version": "1.8.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4790,
+      "package": "@egjs/imready",
+      "version": "1.4.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4791,
+      "package": "checkit",
+      "version": "0.7.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4792,
+      "package": "@stoprocent/bleno",
+      "version": "0.12.5",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4793,
+      "package": "ndarray-crout-decomposition",
+      "version": "1.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4794,
+      "package": "jest-webextension-mock",
+      "version": "4.1.1",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4795,
+      "package": "@scaffdog/engine",
+      "version": "4.1.0",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4796,
+      "package": "resolve-accept-language",
+      "version": "3.2.2",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4797,
+      "package": "node-sass-magic-importer",
+      "version": "5.3.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4798,
+      "package": "@antora/site-publisher",
+      "version": "3.1.15",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4799,
+      "package": "react-intl-translations-manager",
+      "version": "5.0.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4800,
+      "package": "judoscale-node-core",
+      "version": "2.5.3",
+      "subbatch": 2,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_2",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4801,
+      "package": "@milkdown/plugin-streaming",
+      "version": "7.21.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4802,
+      "package": "react-compiler-webpack",
+      "version": "1.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4803,
+      "package": "lodash._arraymap",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4804,
+      "package": "@pnpm/workspace.manifest-writer",
+      "version": "1001.3.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4805,
+      "package": "@middy/error-logger",
+      "version": "7.6.8",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4806,
+      "package": "set-cookie",
+      "version": "0.0.4",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4807,
+      "package": "@testcontainers/redpanda",
+      "version": "12.0.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4808,
+      "package": "@rollup/browser",
+      "version": "4.62.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4809,
+      "package": "cordova-fetch",
+      "version": "5.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4810,
+      "package": "@chakra-ui/storybook-addon",
+      "version": "5.2.5",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4811,
+      "package": "@libpg-query/parser",
+      "version": "17.6.10",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4812,
+      "package": "next-sanity-image",
+      "version": "6.2.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4813,
+      "package": "@backstage/plugin-catalog-backend-module-github",
+      "version": "0.13.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4814,
+      "package": "@pnpm/config.config-writer",
+      "version": "1000.1.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4815,
+      "package": "@axiomhq/nextjs",
+      "version": "0.2.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4816,
+      "package": "is-win",
+      "version": "1.0.11",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4817,
+      "package": "@privy-io/wagmi",
+      "version": "4.0.13",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4818,
+      "package": "v0-sdk",
+      "version": "0.16.4",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4819,
+      "package": "react-fontawesome",
+      "version": "1.7.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4820,
+      "package": "webauth",
+      "version": "1.1.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4821,
+      "package": "@pnpm/resolving.deno-resolver",
+      "version": "1005.0.11",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4822,
+      "package": "@pixi/canvas-mesh",
+      "version": "7.4.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4823,
+      "package": "focus-options-polyfill",
+      "version": "1.6.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4824,
+      "package": "proc-output",
+      "version": "2.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4825,
+      "package": "scrollbar-width",
+      "version": "3.1.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4826,
+      "package": "@perplexity-ai/perplexity_ai",
+      "version": "0.33.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4827,
+      "package": "lodash.isdate",
+      "version": "4.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4828,
+      "package": "@ethereumjs/blockchain",
+      "version": "10.1.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4829,
+      "package": "@pixiv/three-vrm-materials-mtoon",
+      "version": "3.5.4",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4830,
+      "package": "quill-image-resize-module-react",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4831,
+      "package": "toggle-array",
+      "version": "1.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4832,
+      "package": "node-homedir",
+      "version": "2.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4833,
+      "package": "@wangeditor/upload-image-module",
+      "version": "1.0.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4834,
+      "package": "babel-plugin-rewire",
+      "version": "1.2.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4835,
+      "package": "url-okam",
+      "version": "0.11.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4836,
+      "package": "@uniswap/universal-router-sdk",
+      "version": "5.8.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4837,
+      "package": "@antora/user-require-helper",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4838,
+      "package": "@atlassian-test-prod/hello-world",
+      "version": "9.7.16707",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4839,
+      "package": "@xn-sakina/rml-linux-arm-gnueabihf",
+      "version": "2.8.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4840,
+      "package": "@cubejs-backend/native",
+      "version": "1.6.60",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4841,
+      "package": "@solid-primitives/context",
+      "version": "0.3.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4842,
+      "package": "@pnpm/cafs-types",
+      "version": "1000.1.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4843,
+      "package": "quadprog",
+      "version": "1.6.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4844,
+      "package": "magic-string-stack",
+      "version": "1.1.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4845,
+      "package": "@redocly/replay",
+      "version": "0.25.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4846,
+      "package": "async_hooks",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4847,
+      "package": "@cerbos/api",
+      "version": "0.9.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4848,
+      "package": "lodash-checkit",
+      "version": "2.4.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4849,
+      "package": "@stdlib/math-base-special-gamma-delta-ratio",
+      "version": "0.3.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4850,
+      "package": "inherit",
+      "version": "2.2.7",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4851,
+      "package": "@llamaindex/llama-cloud",
+      "version": "2.9.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4852,
+      "package": "protoc",
+      "version": "25.9.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4853,
+      "package": "@stdlib/math-base-special-minabs",
+      "version": "0.2.4",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4854,
+      "package": "jsmin",
+      "version": "1.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4855,
+      "package": "getmac",
+      "version": "6.6.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4856,
+      "package": "eslint-type-tracer",
+      "version": "0.5.2",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4857,
+      "package": "@testcontainers/valkey",
+      "version": "12.0.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4858,
+      "package": "time-analytics-webpack-plugin",
+      "version": "0.1.20",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4859,
+      "package": "@xn-sakina/rml-win32-x64-msvc",
+      "version": "2.8.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4860,
+      "package": "is-elevated",
+      "version": "4.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4861,
+      "package": "vite-plugin-require-transform",
+      "version": "1.0.21",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4862,
+      "package": "gulp-size",
+      "version": "5.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4863,
+      "package": "@sumsub/react-native-mobilesdk-module",
+      "version": "1.44.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4864,
+      "package": "@remotion/compositor-darwin-x64",
+      "version": "4.0.481",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4865,
+      "package": "event-loop-stats",
+      "version": "1.4.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4866,
+      "package": "get-package-name",
+      "version": "2.2.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4867,
+      "package": "expo-app-metrics",
+      "version": "56.0.19",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4868,
+      "package": "lodash.isobjectlike",
+      "version": "4.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4869,
+      "package": "pixi.js-legacy",
+      "version": "7.4.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4870,
+      "package": "@lerna-lite/core",
+      "version": "5.3.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4871,
+      "package": "@wordpress/interface",
+      "version": "9.33.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4872,
+      "package": "@xn-sakina/rml-darwin-x64",
+      "version": "2.8.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4873,
+      "package": "@html-ng/bounding-client-rect-observer",
+      "version": "0.1.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4874,
+      "package": "@analytics/google-tag-manager",
+      "version": "0.6.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4875,
+      "package": "emscripten-wasm-loader",
+      "version": "3.0.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4876,
+      "package": "@xn-sakina/rml-darwin-arm64",
+      "version": "2.8.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4877,
+      "package": "lolcatjs",
+      "version": "2.4.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4878,
+      "package": "angular-local-storage",
+      "version": "0.7.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4879,
+      "package": "@ngneat/overview",
+      "version": "8.1.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4880,
+      "package": "@serwist/turbopack",
+      "version": "9.5.11",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4881,
+      "package": "mergesort",
+      "version": "0.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4882,
+      "package": "@antora/file-publisher",
+      "version": "3.1.15",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4883,
+      "package": "@middy/secrets-manager",
+      "version": "7.6.8",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4884,
+      "package": "@xn-sakina/rml-win32-arm64-msvc",
+      "version": "2.8.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4885,
+      "package": "ember-maybe-import-regenerator",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4886,
+      "package": "electronmon",
+      "version": "2.0.4",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4887,
+      "package": "serverless-plugin-log-retention",
+      "version": "2.1.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4888,
+      "package": "@babel/plugin-transform-instanceof",
+      "version": "8.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4889,
+      "package": "@universal-deploy/vite",
+      "version": "0.1.10",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4890,
+      "package": "blockhash-core",
+      "version": "0.1.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4891,
+      "package": "@useshortcut/client",
+      "version": "3.2.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4892,
+      "package": "@microsoft/sp-http",
+      "version": "1.23.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4893,
+      "package": "lodash.findlast",
+      "version": "4.6.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4894,
+      "package": "@joshua.litt/get-ripgrep",
+      "version": "0.0.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4895,
+      "package": "@elastic/app-search-javascript",
+      "version": "8.13.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4896,
+      "package": "next-power-of-two",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4897,
+      "package": "cordova-create",
+      "version": "6.0.0",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4898,
+      "package": "@capacitor/text-zoom",
+      "version": "8.0.1",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4899,
+      "package": "@pixi/canvas-extract",
+      "version": "7.4.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4900,
+      "package": "@markuplint/ml-core",
+      "version": "4.18.3",
+      "subbatch": 3,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_3",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4901,
+      "package": "chartjs-chart-treemap",
+      "version": "3.1.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4902,
+      "package": "vuex-module-decorators",
+      "version": "2.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4903,
+      "package": "@pnpm/registry.types",
+      "version": "1000.1.4",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4904,
+      "package": "@ovhcloud/node-ovh",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4905,
+      "package": "@octokit/webhooks-examples",
+      "version": "7.6.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4906,
+      "package": "custom-idle-queue",
+      "version": "5.0.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4907,
+      "package": "gocardless-nodejs",
+      "version": "8.4.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4908,
+      "package": "firstline",
+      "version": "2.0.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4909,
+      "package": "find-insert-index",
+      "version": "0.0.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4910,
+      "package": "opentelemetry-instrumentation-elasticsearch",
+      "version": "0.41.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4911,
+      "package": "rollup-plugin-ignore",
+      "version": "1.0.10",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4912,
+      "package": "langfuse-cli",
+      "version": "0.0.11",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4913,
+      "package": "@asyncapi/studio",
+      "version": "1.3.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4914,
+      "package": "cordova-app-hello-world",
+      "version": "7.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4915,
+      "package": "@pgtyped/cli",
+      "version": "2.4.3",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4916,
+      "package": "ml-kernel-gaussian",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4917,
+      "package": "@pixi/canvas-prepare",
+      "version": "7.4.3",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4918,
+      "package": "ml-convolution",
+      "version": "2.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4919,
+      "package": "sort-keys-recursive",
+      "version": "2.1.10",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4920,
+      "package": "lodash.take",
+      "version": "4.1.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4921,
+      "package": "@winth03/n8n-nodes-minio",
+      "version": "1.3.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4922,
+      "package": "@phenomnomnominal/tstemplate",
+      "version": "0.1.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4923,
+      "package": "@maizzle/cli",
+      "version": "2.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4924,
+      "package": "react-native-volume-manager",
+      "version": "2.0.8",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4925,
+      "package": "@arcadeai/arcadejs",
+      "version": "2.4.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4926,
+      "package": "@lerna-lite/cli",
+      "version": "5.3.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4927,
+      "package": "eslint-formatter-checkstyle",
+      "version": "9.0.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4928,
+      "package": "@sitecore-content-sdk/core",
+      "version": "1.6.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4929,
+      "package": "@module-federation/bridge-react",
+      "version": "2.5.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4930,
+      "package": "sublevel-pouchdb",
+      "version": "9.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4931,
+      "package": "@microsoft/sp-http-base",
+      "version": "1.23.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4932,
+      "package": "module-from-string",
+      "version": "3.3.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4933,
+      "package": "react-notifications-component",
+      "version": "4.0.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4934,
+      "package": "@backstage/plugin-scaffolder-backend-module-bitbucket-cloud",
+      "version": "0.3.7",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4935,
+      "package": "@umijs/es-module-parser-linux-x64-gnu",
+      "version": "0.0.7",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4936,
+      "package": "@shopify/shopify_function",
+      "version": "2.0.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4937,
+      "package": "@bitgo-beta/sdk-hmac",
+      "version": "1.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4938,
+      "package": "edge-launcher",
+      "version": "1.2.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4939,
+      "package": "@zag-js/solid",
+      "version": "1.41.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4940,
+      "package": "@stdlib/math-base-special-gamma-lanczos-sum",
+      "version": "0.3.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4941,
+      "package": "console-title",
+      "version": "1.1.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4942,
+      "package": "expiry-js",
+      "version": "0.1.7",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4943,
+      "package": "@quasar/cli",
+      "version": "5.0.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4944,
+      "package": "@ember/jquery",
+      "version": "2.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4945,
+      "package": "@pnpm/registry.pkg-metadata-filter",
+      "version": "1000.1.6",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4946,
+      "package": "lodash.islength",
+      "version": "4.0.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4947,
+      "package": "@prometheus-io/codemirror-promql",
+      "version": "0.312.0-rc.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4948,
+      "package": "async.util.map",
+      "version": "0.5.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4949,
+      "package": "@forestadmin/forestadmin-client",
+      "version": "1.40.3",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4950,
+      "package": "cli-check-node",
+      "version": "1.3.4",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4951,
+      "package": "ndarray-determinant",
+      "version": "1.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4952,
+      "package": "lodash.uppercase",
+      "version": "4.3.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4953,
+      "package": "serverless-plugin-scripts",
+      "version": "1.0.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4954,
+      "package": "ts-generator",
+      "version": "0.1.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4955,
+      "package": "@duffel/api",
+      "version": "4.27.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4956,
+      "package": "@runwayml/sdk",
+      "version": "4.2.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4957,
+      "package": "gamma",
+      "version": "1.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4958,
+      "package": "@knocklabs/mgmt",
+      "version": "0.30.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4959,
+      "package": "pbxproj-dom",
+      "version": "1.2.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4960,
+      "package": "ngtemplate-loader",
+      "version": "2.1.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4961,
+      "package": "lodash.remove",
+      "version": "4.7.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4962,
+      "package": "@markuplint/file-resolver",
+      "version": "4.18.3",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4963,
+      "package": "async.util.arrayeach",
+      "version": "0.5.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4964,
+      "package": "load-pkg",
+      "version": "4.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4965,
+      "package": "pg-copy-streams-binary",
+      "version": "2.2.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4966,
+      "package": "cdnizer",
+      "version": "3.3.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4967,
+      "package": "@wormhole-foundation/sdk-connect",
+      "version": "5.2.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4968,
+      "package": "@zag-js/svelte",
+      "version": "1.41.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4969,
+      "package": "pexels",
+      "version": "1.4.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4970,
+      "package": "esbuild-plugin-es5",
+      "version": "2.1.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4971,
+      "package": "@settlemint/dalp-cli",
+      "version": "3.0.0-rc.6",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4972,
+      "package": "fathom-client",
+      "version": "3.7.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4973,
+      "package": "semver-range-intersect",
+      "version": "0.3.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4974,
+      "package": "@short.io/opensearch-mock",
+      "version": "0.4.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4975,
+      "package": "@asyncapi/optimizer",
+      "version": "1.0.4",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4976,
+      "package": "@remirror/i18n",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4977,
+      "package": "expo-observe",
+      "version": "56.0.21",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4978,
+      "package": "pdf-parse-fork",
+      "version": "1.2.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4979,
+      "package": "dodopayments",
+      "version": "2.39.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4980,
+      "package": "@nuxtjs/supabase",
+      "version": "2.0.9",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4981,
+      "package": "@eppo/buffer",
+      "version": "6.2.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4982,
+      "package": "lezer-elixir",
+      "version": "1.1.3",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4983,
+      "package": "@kusto/monaco-kusto",
+      "version": "14.2.3",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4984,
+      "package": "@babel/plugin-syntax-explicit-resource-management",
+      "version": "7.29.7",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4985,
+      "package": "twitter-api-sdk",
+      "version": "1.2.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4986,
+      "package": "react-native-mime-types",
+      "version": "2.5.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4987,
+      "package": "@envelop/generic-auth",
+      "version": "11.1.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4988,
+      "package": "sourcemapped-stacktrace-node",
+      "version": "2.1.8",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4989,
+      "package": "@shopware-ag/meteor-component-library",
+      "version": "5.1.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4990,
+      "package": "angular-i18next",
+      "version": "21.0.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4991,
+      "package": "@jsverse/transloco-locale",
+      "version": "8.4.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4992,
+      "package": "lodash._basedifference",
+      "version": "4.5.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4993,
+      "package": "wikipedia",
+      "version": "2.5.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4994,
+      "package": "@asyncapi/html-template",
+      "version": "3.5.6",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4995,
+      "package": "@backstage/plugin-scaffolder-backend-module-bitbucket-server",
+      "version": "0.2.22",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4996,
+      "package": "node-opcua",
+      "version": "2.173.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4997,
+      "package": "@libp2p/websockets",
+      "version": "10.1.15",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4998,
+      "package": "@jsonforms/vue",
+      "version": "3.8.0",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4999,
+      "package": "ember-wormhole",
+      "version": "0.6.1",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 5000,
+      "package": "@zkochan/boxen",
+      "version": "5.1.2",
+      "subbatch": 4,
+      "sourceReceipt": "GITHUB_ACTIONS_45232399468_PART_4",
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    }
+  ],
+  "artifactData": [
+    {
+      "id": 14846708781,
+      "zipSha256": "7e999acdffd9b7479eb7504fd3ee7bd6f84001c5b3ca62f9cc23d7555edc8074",
+      "sha256": "8856cb7af46985e72f1d81b1a372539108b7ca45679389a8fef334dc2913ab97",
+      "zipBytes": 8633,
+      "jsonBytes": 56701,
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "part": 0,
+      "fromRank": 4501,
+      "toRank": 4600,
+      "resultFile": "part-0.json",
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45232399468/artifacts/14846708781"
+    },
+    {
+      "id": 14845968756,
+      "zipSha256": "41e16319c25abf38d263627062a23a955b771a9931ab3639489667e0899b3966",
+      "sha256": "502722116e17ab7b6a95b28b36bcc4238f3291366bdcf52635218f5dc7e3aa6d",
+      "zipBytes": 8791,
+      "jsonBytes": 57297,
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "part": 1,
+      "fromRank": 4601,
+      "toRank": 4700,
+      "resultFile": "part-1.json",
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45232399468/artifacts/14845968756"
+    },
+    {
+      "id": 14846133726,
+      "zipSha256": "5488c021c14b6f5299e216bd76c3b83d1a84192f95111e33a704fca241c755cd",
+      "sha256": "01964d6b056665901da3599e9742deda9c9a8e3af6c606c7826d5b0a3e3f632f",
+      "zipBytes": 9000,
+      "jsonBytes": 58884,
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 99,
+        "UNKNOWN_HTTP_404": 1
+      },
+      "part": 2,
+      "fromRank": 4701,
+      "toRank": 4800,
+      "resultFile": "part-2.json",
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45232399468/artifacts/14846133726"
+    },
+    {
+      "id": 14847962059,
+      "zipSha256": "f0f28b77a604c9a6b312dc3144fca8c0434eac85df006cfe3cbee6c2edb354b0",
+      "sha256": "e3dacf44844cf86ab8b4610cda0b671835568071f2dae0de9916cf9aa2c56f53",
+      "zipBytes": 9087,
+      "jsonBytes": 58600,
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "part": 3,
+      "fromRank": 4801,
+      "toRank": 4900,
+      "resultFile": "part-3.json",
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45232399468/artifacts/14847962059"
+    },
+    {
+      "id": 14845593791,
+      "zipSha256": "32e9fe574478b7767ab8b5309b09088b890eb4912b3771088e2335b658e69023",
+      "sha256": "c52de8a9bdf97c932bdb926cd2928adfb0a8890257c5c56017cf6cc09016e804",
+      "zipBytes": 8951,
+      "jsonBytes": 57731,
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "part": 4,
+      "fromRank": 4901,
+      "toRank": 5000,
+      "resultFile": "part-4.json",
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45232399468/artifacts/14845593791"
+    }
+  ]
+}
