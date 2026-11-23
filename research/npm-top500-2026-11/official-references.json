@@ -1,0 +1,330 @@
+{
+  "schema": "deploom.research.official-guides.v1",
+  "authority": "REFERENCE_ONLY_NO_EXECUTION_OR_SIGNING",
+  "registryComparison": "PENDING_CI_INDEPENDENT_REGISTRY_LOOKUP",
+  "productionAdmission": false,
+  "checks": "NOT_RUN",
+  "entries": [
+    {
+      "id": "vite-5-to-6",
+      "package": "vite",
+      "inBatch": false,
+      "proposedExactPair": {
+        "from": "5.4.2",
+        "to": "6.0.0"
+      },
+      "officialGuides": [
+        "https://v6.vite.dev/guide/migration.html"
+      ],
+      "source": {
+        "repository": "vitejs/vite",
+        "fromTag": "v5.4.2",
+        "fromCommit": "b1ecdaf6594b48d2fcbff8682e9ef68916806089",
+        "fromManifestGitBlobSha1": "ccd013e45889becce0012440d5cfa13ca5c54983",
+        "toTag": "v6.0.0",
+        "toCommit": "814120f2ad387ca3d1e16c7dd403b04ca4b97f75",
+        "toManifestGitBlobSha1": "dc59563b5ca05a557ec44e34d9fda6ab8d86f681"
+      },
+      "upstreamManifest": {
+        "fromEngines": {
+          "node": "^18.0.0 || >=20.0.0"
+        },
+        "toEngines": {
+          "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+        },
+        "fromOptionalTerser": "^5.4.0",
+        "toOptionalTerser": "^5.16.0"
+      },
+      "conditions": [
+        "Vite library mode consumer assumes style.css, or a Sass preprocessor still uses the legacy JS API",
+        "Exact Vite and plugin target versions must independently resolve"
+      ],
+      "officiallyDocumentedBehavior": [
+        "Vite 6 library CSS filename defaults to package name rather than style.css",
+        "Modern Sass API becomes the default"
+      ],
+      "recommendedControls": [
+        "Compare emitted library CSS filename with exported/imported paths",
+        "Build application (non-library) negative control",
+        "Run Sass preprocess cases with pinned dependency versions"
+      ],
+      "codemod": "NONE_OFFICIALLY_ESTABLISHED_FOR_THIS_CLAIM"
+    },
+    {
+      "id": "vitest-3-to-4",
+      "package": "vitest",
+      "inBatch": false,
+      "proposedExactPair": {
+        "from": "3.0.0",
+        "to": "4.0.0"
+      },
+      "officialGuides": [
+        "https://v4.vitest.dev/guide/migration.html"
+      ],
+      "source": {
+        "repository": "vitest-dev/vitest",
+        "fromTag": "v3.0.0",
+        "fromCommit": "01600e04c2252abee78fc8a695197ce62f2846d4",
+        "fromManifestGitBlobSha1": "4d895442a3726d4a623f3b52fb549b27e7943707",
+        "toTag": "v4.0.0",
+        "toCommit": "da7ce1712fd4d0e4e807ec01ce755581e6892d5b",
+        "toManifestGitBlobSha1": "4aab3cc5d23094113de1ca739f80891afd102753"
+      },
+      "upstreamManifest": {
+        "fromEngines": {
+          "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+        },
+        "toEngines": {
+          "node": "^20.0.0 || ^22.0.0 || >=24.0.0"
+        },
+        "fromBrowserPeer": "@vitest/browser",
+        "toBrowserPeers": [
+          "@vitest/browser-playwright",
+          "@vitest/browser-preview",
+          "@vitest/browser-webdriverio"
+        ]
+      },
+      "conditions": [
+        "Vitest 4 requires a compatible Vite >=6 and supported Node line",
+        "Coverage or browser-mode config uses removed or renamed options"
+      ],
+      "officiallyDocumentedBehavior": [
+        "V8 coverage remapping changes and removal of coverage.all",
+        "Version 4 no longer supports the legacy browser.name/providerOptions shape"
+      ],
+      "recommendedControls": [
+        "Compare frozen install Node/Vite requirements",
+        "Coverage include/exclude and uncovered file assertions",
+        "Run browser provider and negative held-config controls"
+      ],
+      "codemod": "NONE_OFFICIALLY_ESTABLISHED_FOR_THIS_CLAIM"
+    },
+    {
+      "id": "react-router-dom-6-to-7",
+      "package": "react-router-dom",
+      "inBatch": false,
+      "proposedExactPair": {
+        "from": "6.30.1",
+        "to": "7.0.0"
+      },
+      "officialGuides": [
+        "https://reactrouter.com/start/changelog",
+        "https://reactrouter.com/changelog"
+      ],
+      "source": {
+        "repository": "remix-run/react-router",
+        "fromTag": "react-router-dom@6.30.1",
+        "fromCommit": "6f6443a3ab083abcb03bdc3f4f3871a49c7c4213",
+        "fromManifestGitBlobSha1": "7aa4da072cdf32197fdbe9a2563718d5804ce973",
+        "toTag": "react-router@7.0.0",
+        "toCommit": "e8e3b004d94a949372e77ce97a543bff5bc6fb89",
+        "toDomManifestGitBlobSha1": "612cd7e7c9caea68a70b5d6b322315f38195a69e"
+      },
+      "upstreamManifest": {
+        "fromEngines": {
+          "node": ">=14.0.0"
+        },
+        "toEngines": {
+          "node": ">=20.0.0"
+        },
+        "fromPeers": {
+          "react": ">=16.8",
+          "react-dom": ">=16.8"
+        },
+        "toPeers": {
+          "react": ">=18",
+          "react-dom": ">=18"
+        }
+      },
+      "conditions": [
+        "Projects still import react-router-dom and depend on v6 behaviors",
+        "Node >=20, React >=18 and renderer >=18 must be independently met"
+      ],
+      "officiallyDocumentedBehavior": [
+        "v7 react-router-dom remains a re-export compatibility package",
+        "v7 collapses multiple packages into react-router; do not confuse v8 removal with v7"
+      ],
+      "recommendedControls": [
+        "Check imports and route render/loader behavior in both versions",
+        "Reject unsupported Node 18 + old React peers and preserve supported v7 re-export"
+      ],
+      "codemod": "NONE_OFFICIALLY_ESTABLISHED_FOR_THIS_EXACT_PAIR"
+    },
+    {
+      "id": "typescript-eslint-5-to-8",
+      "package": "@typescript-eslint/eslint-plugin",
+      "inBatch": false,
+      "proposedExactPair": {
+        "from": "5.62.0",
+        "to": "8.0.0"
+      },
+      "officialGuides": [
+        "https://typescript-eslint.io/blog/announcing-typescript-eslint-v6/",
+        "https://typescript-eslint.io/blog/announcing-typescript-eslint-v7/",
+        "https://typescript-eslint.io/blog/announcing-typescript-eslint-v8/"
+      ],
+      "source": {
+        "repository": "typescript-eslint/typescript-eslint",
+        "fromTag": "v5.62.0",
+        "fromCommit": "cba0d113bba1bbcee69149c954dc6bd4c658c714",
+        "fromManifestGitBlobSha1": "615dde0888022d813db6e3da97d17f284c0c1922",
+        "intermediateCommits": [
+          "6ae1fa74b18af8a2d4baa0d3d4b43997cf9a9781",
+          "b27de997c87ffd62785acd86269491dd41883ab9"
+        ],
+        "toTag": "v8.0.0",
+        "toCommit": "1db993aa9c4ffa19ea06ad5349310101af71680e",
+        "toManifestGitBlobSha1": "49e86a12f12127f4766b0d96685ccef576a103d1"
+      },
+      "upstreamManifest": {
+        "fromEngines": {
+          "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+        },
+        "toEngines": {
+          "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+        },
+        "fromPeers": {
+          "@typescript-eslint/parser": "^5.0.0",
+          "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0"
+        },
+        "toPeers": {
+          "@typescript-eslint/parser": "^8.0.0 || ^8.0.0-alpha.0",
+          "eslint": "^8.57.0 || ^9.0.0"
+        }
+      },
+      "conditions": [
+        "Update parser and plugin as a compatible pair",
+        "Audit v5→v6 config and rules, v7 node/peer, v8 ESLint9/rules/AST individually",
+        "Distinguish ESLint flat-config migration from plugin version issues"
+      ],
+      "officiallyDocumentedBehavior": [
+        "v6 reworks recommended config names and rules",
+        "v7 advertises new flat config support",
+        "v8 supports ESLint9 and updates multiple AST and rule contracts"
+      ],
+      "sourceConflict": "Upstream v7.0.0 tag manifest node engine ^16.0.0 || >=18.0.0, while v7 announcement says ^18.18.0 || >=20.0.0; do not resolve without official published metadata",
+      "recommendedControls": [
+        "Pinned ESLint lint baseline and target with flat versus legacy config",
+        "Negative Node/ESLint peer check and parser version mismatch",
+        "RuleTester and typed linting on real TS fixtures"
+      ],
+      "codemod": "NO_UNIVERSAL_OFFICIAL_5_TO_8_CODEMOD_ESTABLISHED"
+    },
+    {
+      "id": "react-dom-18-to-19",
+      "package": "react-dom",
+      "inBatch": true,
+      "rank": 52,
+      "proposedExactPair": {
+        "from": "18.3.1",
+        "to": "19.0.0"
+      },
+      "officialGuides": [
+        "https://react.dev/blog/2024/04/25/react-19-upgrade-guide"
+      ],
+      "source": {
+        "repository": "facebook/react",
+        "tagCommit": "NOT_PINNED_AT_RESEARCH_TIME"
+      },
+      "upstreamManifest": {
+        "peerDependencies": "PENDING_EXACT_NPM_LOOKUP",
+        "engines": "PENDING_EXACT_NPM_LOOKUP"
+      },
+      "conditions": [
+        "Project uses deprecated react-dom render/hydrate/test-utils, or legacy function component defaults",
+        "Upgrade React and react-dom together using compatible exact versions"
+      ],
+      "officiallyDocumentedBehavior": [
+        "React 19 removes ReactDOM.render/hydrate and changes legacy function defaultProps/propTypes handling"
+      ],
+      "recommendedControls": [
+        "Scan usage, run React 18.3 warnings and React 19 render/hydration positive and negative fixture",
+        "Check target peerDependencies and installed renderer pair"
+      ],
+      "officialCodemod": {
+        "source": "https://react.dev/blog/2024/04/25/react-19-upgrade-guide",
+        "recipe": "react/19/migration-recipe",
+        "execution": "NOT_RUN"
+      }
+    },
+    {
+      "id": "next-14-to-15",
+      "package": "next",
+      "inBatch": true,
+      "rank": 246,
+      "proposedExactPair": {
+        "from": "14.2.0",
+        "to": "15.0.0"
+      },
+      "officialGuides": [
+        "https://nextjs.org/docs/15/app/guides/upgrading/version-15"
+      ],
+      "source": {
+        "repository": "vercel/next.js",
+        "toTag": "v15.0.0",
+        "toCommit": "51bfe3c1863b191f4b039bc230e8ed5c57b0baf3",
+        "toManifestGitBlobSha1": "29e5204e09443e062403a33b5e3556a61ccc74a4"
+      },
+      "upstreamManifest": {
+        "toEngines": {
+          "node": ">=18.18.0"
+        },
+        "toPeers": {
+          "react": "^18.2.0 || 19.0.0-rc-65a56d0e-20241020",
+          "react-dom": "^18.2.0 || 19.0.0-rc-65a56d0e-20241020"
+        }
+      },
+      "conditions": [
+        "App Router code uses synchronous runtime data APIs such as cookies/headers or params/searchParams",
+        "Check exact target published Next peer and Node ranges"
+      ],
+      "officiallyDocumentedBehavior": [
+        "Next 15 async request APIs and changed default fetch/route caching",
+        "Versioned guide links official @next/codemod"
+      ],
+      "sourceConflict": "Guide recommends React 19 for v15, but pinned next@15.0.0 tag manifest permits react ^18.2.0; compare exact published npm manifest before asserting a minimum",
+      "recommendedControls": [
+        "Async request API typecheck and runtime gates",
+        "Compare caching behavior under same requests, including negative controls"
+      ],
+      "officialCodemod": {
+        "source": "https://nextjs.org/docs/15/app/guides/upgrading/version-15",
+        "package": "@next/codemod",
+        "execution": "NOT_RUN"
+      }
+    },
+    {
+      "id": "vue-2-to-3",
+      "package": "vue",
+      "inBatch": true,
+      "rank": 480,
+      "proposedDocumentedRange": {
+        "fromMajor": 2,
+        "toMajor": 3
+      },
+      "officialGuides": [
+        "https://v3-migration.vuejs.org/"
+      ],
+      "source": {
+        "repository": "vuejs/core",
+        "tagCommit": "NOT_PINNED_AT_RESEARCH_TIME"
+      },
+      "upstreamManifest": {
+        "peerDependencies": "NOT_CHECKED",
+        "engines": "NOT_CHECKED"
+      },
+      "conditions": [
+        "Application still uses Vue 2 component lifecycle, plugin, global and render APIs",
+        "Exact minor, plugins and build pipeline must be independently pinned"
+      ],
+      "officiallyDocumentedBehavior": [
+        "Vue has an official major migration guide and compatibility strategy"
+      ],
+      "recommendedControls": [
+        "Component and build behavior baseline/target and plugin compatibility",
+        "Negative Vue2-only plugin control"
+      ],
+      "codemod": "NO_EXACT_OFFICIAL_CODEMOD_PIN_ESTABLISHED"
+    }
+  ]
+}
