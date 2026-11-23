@@ -1,0 +1,13 @@
+{
+  "name": "deploom-react-renderer-target",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "19.3.0",
+    "react-test-renderer": "19.3.0"
+  },
+  "overrides": {
+    "scheduler": "0.28.0",
+    "react-is": "19.3.0"
+  }
+}

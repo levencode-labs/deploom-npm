@@ -1,0 +1,28 @@
+name: Prisma mapped enum fixture
+on:
+  pull_request:
+    paths:
+      - 'fixtures/prisma-mapped-enum/**'
+      - '.github/workflows/prisma-mapped-enum-fixture.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'fixtures/prisma-mapped-enum/**'
+      - '.github/workflows/prisma-mapped-enum-fixture.yml'
+permissions:
+  contents: read
+jobs:
+  fixture:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.17.1'
+      - run: npm install --prefix .fixture-tools @yarnpkg/cli-dist@4.6.0 --ignore-scripts --no-audit --no-fund
+      - run: node fixtures/prisma-mapped-enum/check.cjs .fixture-tools/node_modules/@yarnpkg/cli-dist/bin/yarn.js
