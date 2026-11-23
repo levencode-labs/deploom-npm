@@ -26,10 +26,10 @@ npm.cmd exec --yes --package=@levencode/deploom -- deploom setup codex
 
 ## Offline setup
 
-Copy the `.tgz` from the [Windows release](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.27) to the target machine. Open PowerShell in the directory containing the archive. The same command works with an empty npm cache.
+Copy the `.tgz` from the [Windows release](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.28) to the target machine. Open PowerShell in the directory containing the archive. The same command works with an empty npm cache.
 
 ```powershell
-npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.27.tgz -- deploom setup codex
+npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.28.tgz -- deploom setup codex
 ```
 
 Restart the client after setup to load the server and discover the Skill.
@@ -44,10 +44,10 @@ For an online installation, run the following from your project. First setup dow
 npm exec --yes --package=@levencode/deploom -- deploom setup codex
 ```
 
-For an offline installation, download the archive matching the destination machine from the [release assets](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.27). The available archive prefixes are `deploom-linux-x64`, `deploom-linux-arm64`, and `deploom-darwin-arm64`. For example, on Apple Silicon run the following in the directory containing the file.
+For an offline installation, download the archive matching the destination machine from the [release assets](https://github.com/levencode-labs/deploom-npm/releases/tag/npm-v0.2.28). The available archive prefixes are `deploom-linux-x64`, `deploom-linux-arm64`, and `deploom-darwin-arm64`. For example, on Apple Silicon run the following in the directory containing the file.
 
 ```sh
-npm exec --offline --yes --package=./deploom-darwin-arm64-0.2.27.tgz -- deploom setup codex
+npm exec --offline --yes --package=./deploom-darwin-arm64-0.2.28.tgz -- deploom setup codex
 ```
 
 Use `claude` or `opencode` in place of `codex` to register another client. Keep running Node.js on its native architecture. Intel macOS, Alpine/musl and Windows ARM64 are outside this release's supported matrix.
@@ -67,8 +67,8 @@ DepLoom 0.2.22 can also use the public npm metadata it already fetched for plann
 On Windows, run these commands from the directory containing the official release archive, then restart Codex. The second command downloads the shared snapshot and requires internet access.
 
 ```powershell
-npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.27.tgz -- deploom setup codex
-npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.27.tgz -- deploom cache refresh
+npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.28.tgz -- deploom setup codex
+npm.cmd exec --offline --yes --package=./levencode-deploom-0.2.28.tgz -- deploom cache refresh
 ```
 
 Hosts can still set `DEPLOOM_MCP_PUBLIC_NAMES` to comma-separated exact npm names whose public identity they have independently verified. For mixed projects, declare private scopes such as `@internal` in `DEPLOOM_MCP_PRIVATE_SCOPES`. These scopes take precedence over public identity evidence and are excluded from public metadata and OSV requests.
@@ -99,9 +99,9 @@ Set `DEPLOOM_MCP_LOCAL_CACHE_ONLY=1` in the MCP server's environment and restart
 
 If the OSV snapshot has a coverage gap, the planner can send a package name and exact version to npm's Bulk Advisory endpoint only after verifying the version against anonymous public npm metadata. A completed zero-finding assessment needs no second query. Set `DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK=0` to disable those public advisory requests.
 
-## Collective migration knowledge (development)
+## Collective migration knowledge
 
-Future versions will use a **maintainer-controlled, signed, sharded v2 knowledge base** built
+DepLoom uses a **maintainer-controlled, signed, sharded v2 knowledge base** built
 from independently reproducible public migration fixtures. It stores broader
 breaking changes, codemod guidance, package incompatibilities, playbooks and
 known failure modes. The matching scope, negative controls, immutable proof
@@ -114,9 +114,7 @@ branch. The older signed v1 snapshot is kept as a fixed compatibility fallback,
 but it is not the knowledge corpus developed by the factory. The signing
 private key remains in the protected publisher environment, never in agents.
 
-This change has no effect on the currently published npm release until full
-cross-repository CI, independent fixture acceptance, and explicit release gates
-are completed. Source: [v2 protocol](docs/KNOWLEDGE_CACHE_V2.md).
+The [v2 protocol](docs/KNOWLEDGE_CACHE_V2.md) describes the signed index, the shards, and how MCP verifies them.
 
 ## License
 
