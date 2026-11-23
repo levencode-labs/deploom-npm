@@ -3,6 +3,7 @@ const { spawnSync } = require('node:child_process')
 const { createHash } = require('node:crypto')
 const fs = require('node:fs')
 const path = require('node:path')
+const { stripVTControlCharacters } = require('node:util')
 
 const viteVersion = '7.3.6'
 const methods = ['mock', 'unmock', 'hoisted']
@@ -23,7 +24,7 @@ function run(dir, selection) {
   const cwd = own(dir, '.')
   const run = spawnSync(process.execPath, argv, { cwd, encoding: 'utf8', timeout: 60000 })
   if (run.error) throw run.error
-  const output = run.stdout + run.stderr
+  const output = stripVTControlCharacters(run.stdout + run.stderr)
   results.push({ dir, argv, cwd, exitCode: run.status, output })
   return { status: run.status, output }
 }

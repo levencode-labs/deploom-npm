@@ -1,5 +1,5 @@
 {
-  "fixtureSha256": "cc34809df222c5e2d631bebb8c5de5d2e90da7880111590ed63f92d72c3c2623",
+  "fixtureSha256": "f33cc4435d3012d4c682690b349b81662764d58c1b24c9237d98f8ba07592a34",
   "claims": [
     {
       "package": "vitest",
