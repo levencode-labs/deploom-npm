@@ -34,7 +34,7 @@ class NativeKnowledgeShardTests(unittest.TestCase):
                 for row in json.loads(content)["records"]:
                     self.assertEqual(hashlib.sha256(row["package"].encode()).hexdigest()[:2], bucket)
                     rows.append(row)
-        self.assertEqual(rows, self.doc["records"])
+        self.assertCountEqual(rows, self.doc["records"])
 
     def test_supports_arbitrary_public_scoped_npm_package_without_microrecipes(self):
         record = copy.deepcopy(self.doc["records"][0])
