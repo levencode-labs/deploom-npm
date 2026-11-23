@@ -2,16 +2,18 @@
 
 **RESEARCH_ONLY_NOT_V2_ADMISSION.** Draft and unmerged. No paid OpenAI API, Cache v2 admission, signing, deployment or merge.
 
-## Immutable pinned input
+## Pinned input and one registry run
 
-The source-only bootstrap and committed `index.json` pin the June 2026 CSV snapshot at `curran/npm-top-packages-dataset@54cf58bc9bafa35fef1c4acf6435d667b4af47c1`, SHA-256 `8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82`, Git blob `0d45bc4b8bdd2a8016e582af7fef6f3d0f310272`. Five disjoint windows cover ranks 5001–5500. First package: `@financial-times/useragent_parser@1.6.3`; last: `archieml@0.5.0`.
+The source is pinned to `curran/npm-top-packages-dataset@54cf58bc9bafa35fef1c4acf6435d667b4af47c1`, CSV SHA-256 `8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82`. The committed index blob is `ca9f7d2e2f659b0af0f289de341475acefdf8fb1`. The 500 contiguous rows cover ranks 5001–5500.
 
-## One registry run, then offline only
+Original registry workflow run [#45236591264](https://github.com/levencode-labs/deploom-npm/actions/runs/45236591264) completed once, attempt 1, with all six jobs successful. It reported 499 exact public npm version metadata records and one `UNKNOWN_HTTP_404`: rank 5484, `@voyantjs/core@0.109.0`. No registry probes have been repeated.
 
-The first registry transition is a single commit that removes the source-only workflow and adds this research workflow. Inventory must verify source SHA, Git blob, physical CSV order and all five 100-row boundaries before registry jobs start. Each job only reads exact public npm metadata, has bounded retries/timeouts/response size, and uploads its original JSON as a ZIP artifact.
+## Original artifact integrity
 
-After the first successful registry run, independently download and hash all five original ZIPs and inner JSON. Then one atomic follow-up commit must add the immutable artifact manifest, offline verifier and tamper-negative tests. Because the manifest switches workflow jobs to archive verification, future PR synchronizations must never repeat registry requests.
+The separate no-npm audit workflow [#45239960358](https://github.com/levencode-labs/deploom-npm/actions/runs/45239960358) passed. It downloaded the five original ZIPs, verified ZIP SHA-256/size and inner JSON SHA-256/size, then checked all 500 record identities, versions, ranks and statuses against the pinned index and original run. Digests and artifact URLs are recorded in `registry-receipts-manifest.json`; `verify_receipts.py --artifact-dir <directory>` replays archive byte and record checks offline.
+
+The next PR synchronization uses the manifest-backed offline verifier for all five matrix parts; it must not make npm requests. Tamper-negative controls run with `python -m unittest discover -s research/npm-ranks-5001-5500-20261123 -p 'test_*.py' -v`.
 
 ## Interpretation
 
-Pinned CSV fields and exact-version npm metadata are **not** changelogs, breaking-change evidence, codemods, compatibility tests or migration fixtures. All 500 items remain research-only; no Cache v2 admission is authorized by this batch.
+CSV rows and exact-version npm metadata do not establish changelogs, breaking changes, codemods, compatibility, or successful migrations. Batch 11 adds zero migration fixtures and zero Cache v2 records.
