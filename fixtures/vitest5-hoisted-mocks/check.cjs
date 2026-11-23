@@ -7,9 +7,9 @@ const path = require('node:path')
 const viteVersion = '7.3.6'
 const methods = ['mock', 'unmock', 'hoisted']
 const files = [
-  'dependency.js', 'nested-mock.test.js', 'nested-unmock.test.js',
-  'nested-hoisted.test.js', 'valid-hoisted-controls.test.js',
-  'valid-unmock.test.js', 'valid-dynamic.test.js', 'vitest.config.mjs',
+  'dependency.js', 'nested-mock.spec.js', 'nested-unmock.spec.js',
+  'nested-hoisted.spec.js', 'valid-hoisted-controls.spec.js',
+  'valid-unmock.spec.js', 'valid-dynamic.spec.js', 'vitest.config.mjs',
 ]
 const hash = (file) => createHash('sha256').update(fs.readFileSync(file)).digest('hex')
 const json = (file) => JSON.parse(fs.readFileSync(file, 'utf8'))
