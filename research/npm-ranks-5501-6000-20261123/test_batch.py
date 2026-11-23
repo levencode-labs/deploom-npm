@@ -36,6 +36,9 @@ class ResearchTests(unittest.TestCase):
         self.assertEqual(500, len(obj["items"]))
         self.assertEqual("@wdio/sync", obj["items"][0]["name"])
         self.assertEqual("@appsignal/nodejs", obj["items"][-1]["name"])
+        self.assertEqual(214, len(obj["items"][6]["name"]))
+        self.assertTrue(batch.valid_package_name(obj["items"][6]["name"]))
+        self.assertFalse(batch.valid_package_name("a" * 215))
         self.assertEqual(0, obj["counts"]["productionV2Adds"])
         self.assertEqual([100] * 5, [
             sum(row["subbatch"] == part for row in obj["items"]) for part in range(5)

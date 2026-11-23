@@ -31,7 +31,12 @@ SOURCE_URL = (
 )
 MAX_CSV_DOWNLOAD = 8_000_000
 MAX_REGISTRY_RESPONSE = 500_000
-PKG = re.compile(r"(?:@[a-z0-9][a-z0-9._~-]{0,79}/)?[a-z0-9][a-z0-9._~-]{0,99}\Z")
+PKG = re.compile(r"(?:@[a-z0-9._~-]+/[a-z0-9._~-]+|[a-z0-9][a-z0-9._~-]*)\Z")
+MAX_PACKAGE_NAME_LENGTH = 214
+
+
+def valid_package_name(name):
+    return isinstance(name, str) and len(name) <= MAX_PACKAGE_NAME_LENGTH and PKG.fullmatch(name) is not None
 FIELDS = [
     "name", "downloads_last_month", "latest", "description", "license",
     "homepage", "repository", "keywords", "maintainers", "created",
@@ -109,8 +114,7 @@ def manifest():
             type(item.get("rank")) is not int or item["rank"] != i + 5501
             or item.get("csvLine") != i + 5502
             or item.get("subbatch") != i // 100
-            or not isinstance(item.get("name"), str)
-            or not PKG.fullmatch(item["name"])
+            or not valid_package_name(item.get("name"))
             or item["name"] in seen
             or item.get("exactRegistryMetadataStatus") != "PENDING"
             or item.get("productionAdmission") != "NOT_REQUESTED"
@@ -180,7 +184,7 @@ def probe_one(row, *, opener=None, sleeper=time.sleep, attempts=3):
     url = ("https://registry.npmjs.org/"
            + urllib.parse.quote(name, safe="")
            + "/" + urllib.parse.quote(version, safe=""))
-    if not PKG.fullmatch(name) or not isinstance(version, str) or not version:
+    if not valid_package_name(name) or not isinstance(version, str) or not version:
         return _unknown(row, url, "UNKNOWN_INVALID_SELECTION")
     req = urllib.request.Request(
         url, headers={"Accept": "application/json", "User-Agent": "DepLoom-public-research/1"}
