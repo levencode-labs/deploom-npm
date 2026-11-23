@@ -56,6 +56,563 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "actions": [
+        "For the tested pair, set esbuild.jsx to transform while preserving the existing factory and fragment. Vite 8 deprecates this compatibility option.",
+        "Use explicit Oxc classic JSX settings only after the supported host range permits them. Verify peer ranges and receiving project behavior."
+      ],
+      "conditions": [
+        "The Vite config sets esbuild.jsxFactory and jsxFragment to the non-React Html factory and Fragment without selecting a JSX runtime.",
+        "The receiving project uses classic JSX and verifies the exact transition from Vite 7.3.6 to 8.1.5."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "build",
+          "from": "7.3.6",
+          "outcome": "passed",
+          "package": "vite",
+          "to": "8.1.5"
+        },
+        "fixtureSha256": "57d507745314d33655455774b168ef7bff9ad8158338f001d6681777addc764b",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/ab0ca272bc0cf8b137287c9e372a2a22ac55eaed/fixtures/fastify-htmx-vite-jsx/check.cjs"
+      },
+      "fromMajor": 7,
+      "id": "fastify-htmx-vite8-classic-jsx",
+      "kind": "incompatibility",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(build(), /react\\/jsx-runtime/);",
+          "name": "original-options-vite8-select-react"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(load(), /React is not defined/);",
+          "name": "oxc-only-vite7-breaks-runtime"
+        }
+      ],
+      "package": "vite",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "The classic Html factory and fragment settings in Fastify HTMX 0.4.1 work with Vite 7.3.6. With Vite 8.1.5, the original settings select a React JSX runtime. Explicitly selecting the classic transform restores the expected HTML on both tested versions.",
+      "title": "Preserve classic JSX for Fastify HTMX on Vite 8.1.5",
+      "toMajor": 8,
+      "verification": [
+        "Use a frozen install and build a representative JSX entry. Assert the emitted code renders the expected HTML.",
+        "Run the same control on every supported host Vite line before changing a reusable plugin."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.3.6",
+          "to": "8.1.5"
+        }
+      ]
+    },
+    {
+      "schema": 2,
+      "id": "prisma-mapped-enum-generation-boundary",
+      "kind": "incompatibility",
+      "package": "@prisma/client",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "yarn"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.19.0",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Check generated Prisma enum values when moving to 7.0.0",
+      "summary": "The pinned fixture emits mapped database values for UserPermissionRole on Prisma 7.0.0. Prisma 6.19.0 and 7.3.0 emit the schema member names. This finding applies to the tested generator versions.",
+      "conditions": [
+        "The evaluated transition is @prisma/client 6.19.0 to 7.0.0 with the Prisma CLI at the same exact version.",
+        "The PostgreSQL schema has @map on enum members and application code observes or serializes the generated enum values."
+      ],
+      "actions": [
+        "Check the exact CLI and client pins, then regenerate Prisma Client on a frozen lockfile.",
+        "Compare emitted values with application comparisons, fixtures, API responses and persisted database values before changing callers.",
+        "Test the actual selected Prisma patch. The 7.3.0 control restored the same generated values as 6.19.0."
+      ],
+      "verification": [
+        "Check generated values using the recipient schema and exact CLI/client versions.",
+        "Test database round trips and the external representation of enum values in the receiving application when it exposes them."
+      ],
+      "negativeControls": [
+        {
+          "name": "initial-v7-rejects-baseline-output",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notDeepEqual(initial, baseline)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/e9a417192403e3a3a5fbf7b8ce8d5dae79bf6d6f/fixtures/prisma-mapped-enum/check.cjs",
+        "fixtureSha256": "5bfc4339b114ab44199fd300163fae1f2d033ead999be3e0ce71daa69c7004cc",
+        "claim": {
+          "package": "@prisma/client",
+          "from": "6.19.0",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "actions": [
+        "Keep the React runtime and renderer pair aligned. Reproduce the immediate read on the selected pair before changing the benchmark.",
+        "If the selected legacy fixture returns null before commit, wait for a bounded initial commit signal before starting benchmark timing. Fail when the expected static tree never commits."
+      ],
+      "conditions": [
+        "The benchmark consumes toJSON() immediately after create() for a static host tree using the deprecated React Test Renderer.",
+        "The verified transition pairs React and react-test-renderer at 18.3.1 before the change and 19.3.0 after it. Reproduce the timing independently on any other pair.",
+        "Check that the benchmark measures serialization and permits waiting for fixture setup before timing starts."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "test",
+          "from": "18.3.1",
+          "outcome": "passed",
+          "package": "react-test-renderer",
+          "to": "19.3.0"
+        },
+        "fixtureSha256": "d7e2ee9cf79f5f298f59cedaa65c864cff438e2c532da2588557241cfb283b7f",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/a95a6c66cf25841d4dcdd305365de00477113b6f/fixtures/react19-renderer-commit/check.cjs"
+      },
+      "fromMajor": 18,
+      "id": "react19-renderer-commit",
+      "kind": "breaking-change",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(immediate, name === 'target' ? null : expected)",
+          "name": "react19-immediate-read-returns-null"
+        }
+      ],
+      "package": "react-test-renderer",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "For the static legacy host-tree benchmark pattern, immediate toJSON() on the matched React and renderer 19.3.0 pair returned null in development and production. A bounded initial commit signal preserved the expected static JSON in both modes. The 18.3.1 pair returned that tree synchronously.",
+      "title": "Read React Test Renderer JSON after the initial commit",
+      "toMajor": 19,
+      "verification": [
+        "Freeze dependencies and verify the installed React and renderer versions.",
+        "Compare the exact static host tree with the React 18.3.1 synchronous control in development and production. Check that the benchmark still serializes the same fixture outside setup timing.",
+        "Run the receiving benchmark and compatibility tests."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.3.1",
+          "to": "19.3.0"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Run the Tailwind v4 CLI with --optimize when generating the CSS consumed by next build.",
+        "Regenerate the stylesheet in the build lifecycle when it is a precompiled app import."
+      ],
+      "conditions": [
+        "Next.js is exactly 13.4.6 and its production CssMinimizerPlugin processes generated CSS.",
+        "The npm migration is Tailwind 3.3.2 to 4.0.0 with CLI, node and oxide all 4.0.0.",
+        "The generated stylesheet contains nested responsive rules such as lg:flex and lg:hidden. The evidence is scoped to their CSS behavior."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "build",
+          "from": "3.3.2",
+          "outcome": "passed",
+          "package": "tailwindcss",
+          "to": "4.0.0"
+        },
+        "fixtureSha256": "f88520f137c907b1df82d0e69c4d42b7ad382e64b8319b000e671263397cf689",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d51ccd6ff723124565241e8719de5689b5421dc1/fixtures/tailwind4-next13-responsive-minifier/check.cjs"
+      },
+      "fromMajor": 3,
+      "id": "tailwind4-next13-responsive-css-minifier",
+      "kind": "incompatibility",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(displays(broken, showOnDesktop, true), ['none'])",
+          "name": "unoptimized-nested-responsive-merge"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(displays(fixed, hideOnDesktop, true), ['none'])",
+          "name": "desktop-hidden-control"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(displays(fixed, '.hidden', false), ['none'])",
+          "name": "mobile-hidden-control"
+        }
+      ],
+      "package": "tailwindcss",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "Next 13.4.6 can merge nested responsive selectors that share a media query and lose distinct display declarations. On the checked npm transition, Tailwind 4.0.0 CLI --optimize flattens the selectors before Next minifies the CSS and restores desktop menu visibility.",
+      "title": "Flatten Tailwind 4 responsive CSS before Next 13.4.6 production minification",
+      "toMajor": 4,
+      "verification": [
+        "Inspect the real production CSS, then verify mobile hidden, desktop visible, and desktop hidden controls.",
+        "Retain the caller’s browser and runtime gates. A successful build alone does not detect this issue."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.3.2",
+          "to": "4.0.0"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Install the matching @tailwindcss/postcss adapter and use the Tailwind CSS import. Explicitly load any retained JS configuration.",
+        "Where the original default small shadow must remain, use shadow-xs and compare actual rendered shadow geometry. Verify custom radius independently.",
+        "Use outline-hidden where retaining the v3 forced-colors outline is required. Verify keyboard focus in the receiving application."
+      ],
+      "conditions": [
+        "The npm project moves from Tailwind 3.4.4 to 4.3.3 and directly uses Tailwind as a PostCSS plugin.",
+        "Default utility names are present in rendered controls. Compare custom theme values before applying any codemod.",
+        "The checked compiler uses @tailwindcss/postcss 4.3.3 and PostCSS 8.5.33; the v3 control uses PostCSS 8.4.38."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "build",
+          "from": "3.4.4",
+          "outcome": "passed",
+          "package": "tailwindcss",
+          "to": "4.3.3"
+        },
+        "fixtureSha256": "3b0aca4271e5fb2cc4cd0ec6f0b567dddd19dcb8770996f8ee05ced76f73c3af",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/efa1310ad9890f61b8133829fdb22fe4ae4db0f0/fixtures/tailwind4-utility-semantics/check.cjs"
+      },
+      "fromMajor": 3,
+      "id": "tailwind4-postcss-and-utility-semantics",
+      "kind": "breaking-change",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => load('tailwindcss')(), /PostCSS plugin has moved/)",
+          "name": "old-postcss-plugin-fails"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(heldShadow,/^0 1px 3px 0 /)",
+          "name": "held-shadow-changes-geometry"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(declarations(fixed,'.rounded-xs','border-radius'), ['var(--radius-xs)'])",
+          "name": "blind-radius-rename-loses-theme"
+        }
+      ],
+      "package": "tailwindcss",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "Tailwind 4.3.3 rejects the v3 direct PostCSS plugin. After changing adapter and CSS entry, held shadow-sm compiles with different geometry. Select shadow-xs for the verified default shadow. For a custom rounded-sm, preserve the configured radius and verify its emitted value.",
+      "title": "Check emitted styles after switching Tailwind to its v4 PostCSS adapter",
+      "toMajor": 4,
+      "verification": [
+        "Use frozen installs and verify the compiler versions and applicable browser targets.",
+        "Inspect built CSS for shadow geometry, the configured radius and the forced-colors selector. Compare the receiving application in relevant browsers and themes."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.4.4",
+          "to": "4.3.3"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Check the declaration worker and its effective compiler options in addition to the top-level tsc version.",
+        "For a bundled ESM leaf with no aliases, check bundler module resolution and remove the empty baseUrl and paths configuration.",
+        "If tsup still injects an unused baseUrl, test a pinned pnpm patch that removes only the implicit fallback. Review other tsup users before adopting it across a workspace."
+      ],
+      "conditions": [
+        "The source specifically upgrades TypeScript 5.9.2 to 6.0.3 with tsup 8.5.0 held and declarations enabled under pnpm.",
+        "The leaf emits through a bundler, legacy aliases are absent, and the actual tsup DTS worker uses TypeScript 6.0.3."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "build",
+          "from": "5.9.2",
+          "outcome": "passed",
+          "package": "typescript",
+          "to": "6.0.3"
+        },
+        "fixtureSha256": "be1f3cc86a917527651a673b5d3d5f02df406de68a804f29d9933e5e867d3bae",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/014af897cb75cd394abfd54b83142b794374b2a3/fixtures/ts6-tsup-dts/check.cjs"
+      },
+      "fromMajor": 5,
+      "id": "typescript6-tsup-declaration-base-url",
+      "kind": "incompatibility",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(t.log, /TS5101/)",
+          "name": "held-config-rejects-base-url"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(t.log, /TS5107/)",
+          "name": "held-config-rejects-node10"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(configOnly.log, /TS5101/)",
+          "name": "config-only-still-rejects-implicit-base-url"
+        }
+      ],
+      "package": "typescript",
+      "packageManagers": [
+        "pnpm"
+      ],
+      "schema": 2,
+      "summary": "tsup 8.5.0 inserts baseUrl into its declaration compiler options. On TypeScript 6.0.3 this can cause TS5101 even after a leaf tsconfig removes baseUrl and changes module resolution to bundler.",
+      "title": "Check tsup’s implicit baseUrl when TypeScript 6 declaration builds fail",
+      "toMajor": 6,
+      "verification": [
+        "Frozen install the exact graph. Run tsup through declaration emission; a JavaScript-only success or passing Vitest run leaves DTS unverified.",
+        "Exercise ESM and CJS entry points and declaration consumers with the receiving project’s export map, recording baseline failures.",
+        "Compare generated JavaScript and declarations against a clean baseline and verify downstream typecheck."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.9.2",
+          "to": "6.0.3"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Set build.lib.cssFileName to the basename used by the existing public stylesheet contract.",
+        "Check package exports and consumers that reference the file by name."
+      ],
+      "conditions": [
+        "The receiving package uses Vite library mode, emits a stylesheet, and exposes or otherwise relies on its filename.",
+        "The exact verified transition is Vite 5.4.2 to 8.3.8 with the same source CSS."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "build",
+          "from": "5.4.2",
+          "outcome": "passed",
+          "package": "vite",
+          "to": "8.3.8"
+        },
+        "fixtureSha256": "53aed218c1bc18e2ae3696a8df617dca7be17b628da8d76dbe12a26cb4502d08",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/72aea06ae3b5862cb5e36d7c68900c4099627dfa/fixtures/vite-library-css-filename/check.cjs"
+      },
+      "fromMajor": 5,
+      "id": "vite-library-css-filename",
+      "kind": "incompatibility",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(fs.access(path.join(held.outDir, 'style.css')), { code: 'ENOENT' });",
+          "name": "implicit-library-name-changes"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert(app.css.length === 1 && !app.css[0].endsWith('probe-library.css'));",
+          "name": "ordinary-app-no-library-css-filename"
+        }
+      ],
+      "package": "vite",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "With build.lib enabled and a package name of probe-library, Vite 5.4.2 writes style.css and Vite 8.3.8 writes probe-library.css. An explicit build.lib.cssFileName value of style restores style.css on 8.3.8.",
+      "title": "Preserve a published Vite library stylesheet filename",
+      "toMajor": 8,
+      "verification": [
+        "Use npm ci with a pinned lockfile and run both library builds.",
+        "Assert the emitted name and CSS contents, then check downstream imports if the receiving project exports the stylesheet."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.4.2",
+          "to": "8.3.8"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Convert the object mapping to build.rolldownOptions.output.codeSplitting.groups.",
+        "Match the actual resolved Vue runtime module IDs and give their group a higher priority when dependencies compete for ownership.",
+        "Keep independent controls for successful typecheck and correct runtime module placement."
+      ],
+      "conditions": [
+        "The project moves from Vite 7.3.6 to 8.3.8 and uses an explicit object-form build.rollupOptions.output.manualChunks configuration.",
+        "The intended chunk topology groups Vue runtime code with Vue Router and Pinia and separates the UI library. Check the receiving project's emitted graph and peer versions."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "build",
+          "from": "7.3.6",
+          "outcome": "passed",
+          "package": "vite",
+          "to": "8.3.8"
+        },
+        "fixtureSha256": "09569fdf2eb15f2d8ca282f5a4d36178f13889fb6db639ead598b956ca57dc5e",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/107ae02666451d4224fcf51428aa4c25d8751021/fixtures/vite8-vue-runtime-chunks/check.cjs"
+      },
+      "fromMajor": 7,
+      "id": "vite8-vue-runtime-chunks",
+      "kind": "incompatibility",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(diagnostics, /ManualChunksFunction/)",
+          "name": "object-form-rejected-by-vite8-types"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.ok(!inChunk('vue', '@vue/runtime-dom'))",
+          "name": "vue-runtime-missing-in-name-only-group"
+        }
+      ],
+      "package": "vite",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "With the same Vue plugin 6.0.7, Vite 8.3.8 rejects the object-form manualChunks accepted by Vite 7.3.6. A name-only Rolldown port can still build while moving @vue/runtime-dom outside the intended Vue chunk.",
+      "title": "Replace object-form manualChunks and verify Vue runtime placement",
+      "toMajor": 8,
+      "verification": [
+        "Use a frozen dependency installation with compatible Vite plugin and Vue versions.",
+        "Run typecheck and production build. Inspect module membership and chunk import links in the emitted output.",
+        "Exercise the receiving app's lazy routes and UI interactions."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.3.6",
+          "to": "8.3.8"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Read the chosen Vitest version peerDependencies and match the exact Vite version before updating declarations.",
+        "If the Vite version is held outside the asserted peer range, report the conflict. Otherwise choose a compatible Vite version and check every Vite plugin peer range.",
+        "Check Vitest-specific typing and setup imports, then run the receiving project build and tests."
+      ],
+      "conditions": [
+        "The current graph contains Vitest 2.1.2 with Vite 5.4.8 and the selected Vitest target is 5.0.0.",
+        "The environment satisfies the exact target Node.js engines and uses npm 11.16.0 for the reproduced resolver check. The authorized scope allows changes to Vite and affected plugins."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "install",
+          "from": "2.1.2",
+          "outcome": "passed",
+          "package": "vitest",
+          "to": "5.0.0"
+        },
+        "fixtureSha256": "4bc60fc9ba88dc9104c10934d4308e4019f542fef8a3aef79c9a2be8b4c008b5",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/1c6d425f6ba4fe61204c14fdd4d61710043d17e4/fixtures/vitest-vite-peer/check.cjs"
+      },
+      "fromMajor": 2,
+      "id": "vitest-5-required-vite-peer",
+      "kind": "incompatibility",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(install.stderr, /ERESOLVE/)",
+          "name": "held-vite-5-eresolve"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(install.stderr, /peer vite/)",
+          "name": "required-vite-peer"
+        }
+      ],
+      "package": "vitest",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "In a strict npm fixture, Vitest 5.0.0 rejects held Vite 5.4.8 with ERESOLVE. Vitest 5.0.0 with Vite 6.4.0 passes the same check and installs with the generated lock unchanged.",
+      "title": "Vitest 5 requires a compatible Vite peer",
+      "toMajor": 5,
+      "verification": [
+        "Use strict npm peer resolution and compare installed Vite and Vitest versions with the intended pair.",
+        "Run npm ci and verify the lock remains unchanged.",
+        "Run the receiving project build, typecheck and runtime tests."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.1.2",
+          "to": "5.0.0"
+        }
+      ]
+    },
+    {
+      "actions": [
+        "Use module scope for calls that should be hoisted.",
+        "For dynamic mocking, use vi.doMock or vi.doUnmock with a later dynamic import and verify the ordering for the test."
+      ],
+      "conditions": [
+        "The receiving Node runner is moving from Vitest 4.1.10 to 5.0.0 and contains vi.mock, vi.unmock or vi.hoisted below module scope.",
+        "The worked fixture uses npm and resolves Vite 7.3.6 on both sides."
+      ],
+      "evidence": {
+        "claim": {
+          "check": "test",
+          "from": "4.1.10",
+          "outcome": "passed",
+          "package": "vitest",
+          "to": "5.0.0"
+        },
+        "fixtureSha256": "f33cc4435d3012d4c682690b349b81662764d58c1b24c9237d98f8ba07592a34",
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/1589f0b2aff935852fc44a8b86b577f2f2918247/fixtures/vitest5-hoisted-mocks/check.cjs"
+      },
+      "fromMajor": 4,
+      "id": "vitest5-hoisted-mocks",
+      "kind": "breaking-change",
+      "negativeControls": [
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1)",
+          "name": "nested-mocks-fail-before-tests"
+        },
+        {
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal((held.output.match(/Plugin: vitest:mocks/g) || []).length, 3)",
+          "name": "all-three-api-files-rejected-in-mock-transform"
+        }
+      ],
+      "package": "vitest",
+      "packageManagers": [
+        "npm"
+      ],
+      "schema": 2,
+      "summary": "Vitest 4.1.10 warns for nested vi.mock, vi.unmock and vi.hoisted. Vitest 5.0.0 rejects their test modules during the mock transform, before any test runs.",
+      "title": "Move hoisted Vitest mocking calls to module scope",
+      "toMajor": 5,
+      "verification": [
+        "Install both graphs from frozen npm lockfiles.",
+        "Require each nested API to fail before tests in the Vitest 5 runner. Check a valid top-level version and a dynamic mocking case in both runners."
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.1.10",
+          "to": "5.0.0"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,28 @@
+name: Tailwind CSS utility migration fixture
+on:
+  pull_request:
+    paths:
+      - 'fixtures/tailwind4-utility-semantics/**'
+      - '.github/workflows/tailwind-utility-fixture.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'fixtures/tailwind4-utility-semantics/**'
+      - '.github/workflows/tailwind-utility-fixture.yml'
+permissions:
+  contents: read
+jobs:
+  fixture:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - run: npm install --global npm@11.16.0 --ignore-scripts --no-audit --no-fund
+      - run: node fixtures/tailwind4-utility-semantics/check.cjs

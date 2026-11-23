@@ -1,0 +1,11 @@
+{
+  "name": "deploom-ts6-tsup-dts-target",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.12.1",
+  "devDependencies": {
+    "tsup": "8.5.0",
+    "typescript": "6.0.3"
+  }
+}
