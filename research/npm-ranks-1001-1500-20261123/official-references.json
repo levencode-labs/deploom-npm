@@ -1,0 +1,38 @@
+{
+  "schema": "deploom.research.official-upstream-migration-references.v1",
+  "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION",
+  "batch": "npm-ranks-1001-1500-20261123",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "notes": [
+    "Official sources and tagged manifests are research only, not independent fixture results.",
+    "No migration recipe is verified or production-admitted without trusted-main fixture receipts and negative controls.",
+    "Unknown transitions, tag pins, metadata or official codemods stay explicitly UNKNOWN."
+  ],
+  "records": [],
+  "priorityCandidates": [
+    {
+      "rank": 1117,
+      "package": "@mui/x-data-grid",
+      "topic": "MUI X Data Grid 8 to 9 peers and codemods",
+      "status": "PENDING_SOURCE_BACKED_REVIEW"
+    },
+    {
+      "rank": 1174,
+      "package": "@sveltejs/vite-plugin-svelte",
+      "topic": "Svelte Vite plugin 6 to 7 runtime/peer transition",
+      "status": "PENDING_SOURCE_BACKED_REVIEW"
+    },
+    {
+      "rank": 1296,
+      "package": "@nx/vite",
+      "topic": "Nx 22 to 23 monorepo migration",
+      "status": "PENDING_SOURCE_BACKED_REVIEW"
+    },
+    {
+      "rank": 1500,
+      "package": "react-native-mmkv",
+      "topic": "MMKV 3 to 4 runtime compatibility",
+      "status": "PENDING_SOURCE_BACKED_REVIEW"
+    }
+  ]
+}
