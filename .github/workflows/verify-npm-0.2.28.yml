@@ -1,0 +1,38 @@
+name: Verify release evidence for npm 0.2.28
+on:
+  push:
+    branches: ['ops/verify-npm-v0.2.28']
+    paths: ['.github/workflows/verify-npm-0.2.28.yml']
+permissions:
+  contents: read
+  attestations: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify the immutable release and registry provenance
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in $(seq 1 40); do
+            if gh api repos/levencode-labs/deploom-npm/releases/tags/npm-v0.2.28 --jq '.draft == false and .immutable == true' 2>/dev/null | grep -qx true; then
+              break
+            fi
+            sleep 30
+          done
+          python ci/verify-published-release.py 0.2.28 "$RUNNER_TEMP/verified-npm"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-npm-0.2.28-evidence
+          path: |
+            ${{ runner.temp }}/verified-npm/upstream.json
+            ${{ runner.temp }}/verified-npm/*.jsonl
+            ${{ runner.temp }}/verified-npm/npm-provenance.json
+          if-no-files-found: error
