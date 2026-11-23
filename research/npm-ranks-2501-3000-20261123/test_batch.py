@@ -103,6 +103,37 @@ class ResearchTests(unittest.TestCase):
 
 
 
+    def test_terminal_receipts_and_unknown_fail_closed(self):
+        import copy
+        spec = importlib.util.spec_from_file_location("verify_receipts", ROOT / "verify_receipts.py")
+        receipts = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(receipts)
+        result = receipts.validate()
+        self.assertEqual("PASS_ORIGINAL_RECEIPTS_VERIFIED_OFFLINE", result["status"])
+        for part in range(5):
+            with self.subTest(part=part):
+                self.assertEqual((2501+part*100, 2600+part*100),
+                                 tuple(receipts.validate(part=part)[k] for k in ("rankStart","rankEnd")))
+        ledger = json.loads((ROOT / "registry-receipts-manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual({"PUBLIC_EXACT_VERSION_OBSERVED":499,"UNKNOWN_HTTP_404":1}, ledger["statusCounts"])
+        self.assertEqual(2502, ledger["unknowns"][0]["rank"])
+        self.assertEqual("UNKNOWN_HTTP_404", ledger["items"][1]["status"])
+        controls = (
+            lambda data: data["items"][0].update(package="not-the-pinned-package"),
+            lambda data: data["items"][1].update(status="PUBLIC_EXACT_VERSION_OBSERVED"),
+            lambda data: data["items"][99].update(rank=2501),
+            lambda data: data["artifactData"][2].update(zipSha256="0" * 64),
+            lambda data: data.update(unknownCount=0),
+            lambda data: data.update(productionV2Adds=1),
+            lambda data: data["cumulative"].update(nextRank=1),
+        )
+        for mutate in controls:
+            with self.subTest(mutation=str(mutate)):
+                tampered = copy.deepcopy(ledger)
+                mutate(tampered)
+                with self.assertRaises(ValueError):
+                    receipts.validate(ledger=tampered)
+
 
 if __name__ == "__main__":
     unittest.main()
