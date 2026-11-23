@@ -10,6 +10,6 @@
     "vite8": "npm:vite@8.1.5"
   },
   "scripts": {
-    "test": "node check.mjs"
+    "test": "node check.cjs"
   }
 }
