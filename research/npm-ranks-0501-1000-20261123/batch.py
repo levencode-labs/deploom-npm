@@ -139,13 +139,13 @@ def verify_inventory(raw, obj):
             raise ValueError("Bad CSV name, duplicate or unexpected source rank")
         prev_downloads = downloads
         seen.add(name)
-        if len(first) >= 500:
+        if count <= 500 or len(first) >= 500:
             continue
         expected = obj["items"][len(first)]
         tests = {
             "rank": count,
             "csvLine": count + 1,
-            "subbatch": (count - 1) // 100,
+            "subbatch": (count - 501) // 100,
             "name": name,
             "datasetDownloadsLastMonth": downloads,
             "datasetLatestVersion": row["latest"],
