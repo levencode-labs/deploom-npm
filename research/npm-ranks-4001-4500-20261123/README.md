@@ -15,4 +15,13 @@
 - On the **first** valid npm run only, save five original ZIP artifacts with 30-day retention. Then independently recompute ZIP and inner JSON SHA256, verify 500 exact rank/package/version/status identities, add append-only manifest + offline-only verifier + tamper negatives, and rerun final HEAD CI **without repeating registry probes**.
 - These exact version metadata records are not migration findings, fix recipes, codemod proofs or project fixtures. No trusted migration records or Cache v2 admissions.
 
-**Status:** first registry run and reconciliation pending. Do not mark batch terminal until original 6/6 and final 11/11 checks are reconciled. Next rank **4501** only after complete terminal Batch 09; next chat rotation after terminal rank **5000**.
+## Original Batch 09 evidence (2026-11-23)
+
+- First valid original registry [workflow #45230313707](https://github.com/levencode-labs/deploom-npm/actions/runs/45230313707), tested code HEAD `2e64891b7a717e687b795b8a1e32d9418e4346e6`, **6/6 SUCCESS**.
+- Five original artifact ZIPs were downloaded and hashed in the ChatGPT coordinator container, all inner `part-N.json` extracted and separately hashed. Exact 500 contiguous ranks, 500 unique packages, exact registry URLs, authority, and metadata shapes verified with no npm resubmission by this verifier.
+- **499 PUBLIC_EXACT_VERSION_OBSERVED / 1 UNKNOWN_INVALID_METADATA**: rank 4187 `levenshtein@1.0.5` is preserved as UNKNOWN, not absence or a migration finding.
+- A second [workflow #45230379231](https://github.com/levencode-labs/deploom-npm/actions/runs/45230379231) was triggered by a second PR synchronization and actually duplicated the npm probes. This is explicitly disclosed, not substituted for original evidence. No further retries authorized.
+- Original ZIP and JSON SHA256, sizes, ids and per-part counts: [manifest](registry-receipts-manifest.json); [offline verifier](verify_receipts.py); [tamper tests](test_receipts.py). Optional full replay: `python research/npm-ranks-4001-4500-20261123/verify_receipts.py --artifact-dir /path/to/original-zips`.
+- No production admissions, migration fixtures, signing, deployment or merge. **Cumulative through 4500 = 4494 exact public metadata / 6 historical UNKNOWN**.
+- Terminal gate: final HEAD ordinary CI and offline-only 6/6 research jobs, then durable issue #9 checkpoint; next new ranks 4501–5000 and rotation after 5000.
+
