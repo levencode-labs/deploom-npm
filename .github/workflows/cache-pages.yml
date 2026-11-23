@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       digest: ${{ steps.digest.outputs.sha }}
+      v2_digest: ${{ steps.digest.outputs.v2_sha }}
     timeout-minutes: 20
     permissions:
       contents: read
@@ -48,8 +49,21 @@ jobs:
         env:
           PYTHONPATH: build/contracts/src
         run: python cache/records_intake.py "$(git rev-parse HEAD)" build/site/v1/cache.json
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: b3eea1f58950286049ec13cbf7449e613b53f8b9
+          path: build/consumer-v2
+          persist-credentials: false
+      - name: Validate maintainer-controlled v2-native knowledge and pinned fixture claims
+        env:
+          PYTHONPATH: build/consumer-v2/src:cache
+        run: |
+          python cache/shards_v2.py knowledge/v2/records.json build/site/v2 --revision "$(git rev-list --first-parent --count HEAD)" --trusted-commit "$(git rev-parse HEAD)"
       - id: digest
-        run: echo "sha=$(sha256sum build/site/v1/cache.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "sha=$(sha256sum build/site/v1/cache.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          echo "v2_sha=$(sha256sum build/site/v2/index.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: validated-site
@@ -75,10 +89,16 @@ jobs:
         env:
           EXPECTED: ${{ needs.prepare.outputs.digest }}
         run: echo "$EXPECTED  build/site/v1/cache.json" | sha256sum --check
+      - name: Check v2 index matches the reviewed candidate
+        env:
+          EXPECTED_V2: ${{ needs.prepare.outputs.v2_digest }}
+        run: echo "$EXPECTED_V2  build/site/v2/index.json" | sha256sum --check
       - name: Sign the validated public snapshot
         env:
           DEPLOOM_RECORDS_SIGNING_KEY: ${{ secrets.DEPLOOM_RECORDS_SIGNING_KEY }}
-        run: node cache/sign-records.cjs build/site/v1/cache.json build/site/v1/cache.sig cache/records-public.hex
+        run: |
+          node cache/sign-records.cjs build/site/v1/cache.json build/site/v1/cache.sig cache/records-public.hex
+          node cache/sign-shards-v2.cjs build/site/v2/index.json build/site/v2/index.sig cache/records-public.hex
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: build/site

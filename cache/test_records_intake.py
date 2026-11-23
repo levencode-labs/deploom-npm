@@ -1,4 +1,4 @@
-"""Exercise the actual Git object guard and the Node/Python signature boundary."""
+"""The retained v1 fallback is read-only and built from trusted main Git blobs."""
 import json
 import os
 import subprocess
@@ -8,26 +8,20 @@ from pathlib import Path
 from unittest.mock import patch
 
 
-class IntakeTests(unittest.TestCase):
+class LegacyFallbackTests(unittest.TestCase):
     def setUp(self):
         import records_intake
         self.intake = records_intake
-        self.original = Path.cwd()
-        self.temp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.temp.cleanup)
-        os.chdir(self.temp.name)
-        self.addCleanup(os.chdir, self.original)
-        self.path = Path("docs/v1/history.json")
-        self.path.parent.mkdir(parents=True)
-        self.path.write_text("[]")
+        original = Path.cwd()
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        os.chdir(temp.name)
+        self.addCleanup(os.chdir, original)
+        (Path("docs/v1")).mkdir(parents=True)
+        Path("docs/v1/history.json").write_text("[]")
+        Path("docs/v1/knowledge.json").write_text("[]")
         subprocess.run(["git", "init", "-q"], check=True)
-        fixture = Path("fixtures/react")
-        fixture.mkdir(parents=True)
-        import hashlib
-        row = {"package": "react", "from": "18.2.0", "to": "18.3.1", "check": "test", "outcome": "passed"}
-        (fixture / "evidence.json").write_text(json.dumps({"fixtureSha256": hashlib.sha256(
-            b"react 18.2.0 18.3.1").hexdigest(), "claims": [row]}))
-        self.base = self.commit()
+        self.sha = self.commit()
 
     def commit(self):
         subprocess.run(["git", "add", "."], check=True)
@@ -35,29 +29,30 @@ class IntakeTests(unittest.TestCase):
                         "commit", "-qm", "fixture"], check=True)
         return self.intake.git("rev-parse", "HEAD").decode().strip()
 
-    def test_only_small_append_only_regular_data(self):
-        row = {"schema": 1, "package": "react", "from": "18.2.0", "to": "18.3.1",
-               "source": "https://github.com/levencode-labs/deploom-npm/blob/" + "a"*40 + "/fixtures/react/check.cjs",
-               "check": "test", "outcome": "passed"}
-        self.path.write_text(json.dumps([row]))
-        head = self.commit()
-        with patch.object(self.intake, "npm_version"), patch.object(self.intake, "evidence", return_value="react 18.2.0 18.3.1"):
-            self.assertEqual(self.intake.inspect_pr(self.base, head)[0]["record"], row)
-            self.path.with_name("knowledge.json").write_text("[]")
-            self.path.write_text(json.dumps([dict(row, outcome="failed")]))
-            with self.assertRaisesRegex(ValueError, "matching fixture outcome"):
-                self.intake.snapshot(self.commit())
-        self.path.write_text("[]")
-        with self.assertRaisesRegex(ValueError, "removals"):
-            self.intake.inspect_pr(head, self.commit())
-        self.path.write_text(json.dumps([dict(row, to=f"18.3.{i}") for i in range(12)]))
-        with self.assertRaisesRegex(ValueError, "many"):
-            self.intake.inspect_pr(self.base, self.commit())
-        Path("code.cjs").write_text("/* manual review */")
-        with self.assertRaisesRegex(ValueError, "data-only"):
-            self.intake.inspect_pr(self.base, self.commit())
+    def test_source_exact_empty_fallback_and_bad_head(self):
+        data = json.loads(self.intake.snapshot(self.sha))
+        self.assertEqual([], data["history"])
+        self.assertEqual([], data["knowledge"])
+        self.assertEqual(1, data["schema"])
+        with self.assertRaises(ValueError):
+            self.intake.snapshot("main")
+        with self.assertRaises(ValueError):
+            self.intake.snapshot("../HEAD")
 
-    def test_evidence_must_come_from_main(self):
+    def test_only_regular_tracked_files_and_valid_schemas(self):
+        with self.assertRaisesRegex(ValueError, "regular"):
+            self.intake.blob(self.sha, "not-a-file", 4096)
+        Path("docs/v1/knowledge.json").write_text('[{"custom":"LLM text"}]')
+        with self.assertRaises(ValueError):
+            self.intake.snapshot(self.commit())
+
+    def test_pinned_evidence_must_be_ancestor(self):
         with self.assertRaises(subprocess.CalledProcessError):
-            self.intake.evidence(self.base, "https://github.com/levencode-labs/deploom-npm/blob/" +
+            self.intake.evidence(self.sha, "https://github.com/levencode-labs/deploom-npm/blob/" +
                                  "0"*40 + "/fixtures/test/check.cjs")
+        self.assertFalse(hasattr(self.intake, "inspect_pr"))
+        self.assertFalse(hasattr(self.intake, "additions"))
+
+
+if __name__ == "__main__":
+    unittest.main()

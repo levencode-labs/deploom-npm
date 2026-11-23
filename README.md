@@ -99,17 +99,24 @@ Set `DEPLOOM_MCP_LOCAL_CACHE_ONLY=1` in the MCP server's environment and restart
 
 If the OSV snapshot has a coverage gap, the planner can send a package name and exact version to npm's Bulk Advisory endpoint only after verifying the version against anonymous public npm metadata. A completed zero-finding assessment needs no second query. Set `DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK=0` to disable those public advisory requests.
 
-## Sharing an observation
+## Collective migration knowledge (development)
 
-After you run a migration check, the public Skill can show a local preview of the public package, versions, check and outcome. If you explicitly agree to share those fields, an agent with GitHub access can open a data-only PR and return its link. The local-only mode suppresses this offer. A new public fixture needs separate review and approval before upload.
+Future versions will use a **maintainer-controlled, signed, sharded v2 knowledge base** built
+from independently reproducible public migration fixtures. It stores broader
+breaking changes, codemod guidance, package incompatibilities, playbooks and
+known failure modes. The matching scope, negative controls, immutable proof
+and recipient verification requirements accompany each item. An item with a
+matching major line is only a candidate, never proof for an untested version.
 
-Reproduce a migration in a public fixture under `fixtures/<name>/check.cjs`. The fixture should install exact public versions and run the stated check. Once it passes on GitHub, use its immutable commit URL as `source` in a pull request against `docs/v1/history.json` or `docs/v1/knowledge.json`. The record identifies the package, old and new version, and the observed check or named recipe. Reviewers can rerun the fixture before merging. Installed clients only read the snapshots. Project lockfiles, dependency inventories and local results stay on the developer's machine.
+**Users do not submit telemetry, code, migration observations, PRs, or recipes.**
+There is no public-contribution or data-only auto-merge workflow in this
+branch. The older signed v1 snapshot is kept as a fixed compatibility fallback,
+but it is not the knowledge corpus developed by the factory. The signing
+private key remains in the protected publisher environment, never in agents.
 
-For automatic intake, submit only additions to the two data files (up to 10 rows and 3 packages). The validator reads regular Git blobs against the schema shipped by MCP, checks both versions on the public npm registry and matches the exact claim against the maintainer-reviewed evidence.json beside the pinned fixture. One reviewed fixture can support several contributions. A pinned local model on an isolated GitHub runner checks semantics. A failed or unavailable audit leaves the PR for review. Changes to fixtures, code or policies require a maintainer. Arbitrary notes and instructions do not belong in a record.
-
-Use `get_shared_migration_evidence` to look up an exact transition after refreshing the cache. A passing result on the example is advisory. Run the checks that matter for the receiving project.
-
-MCP 0.2.23 and later verify the Ed25519 signature over the domain-separated SHA-256 digest of the exact Pages payload at `v1/cache.json`, using `v1/cache.sig` and the public key bundled with the client. The stdio server refreshes in the background on startup and daily. A network, schema or authenticity failure selects the bundled example. The result reports `snapshotSource`. Restricted corporate mode skips this background network request. Key rotation requires distributing the new public key to clients before retiring the previous one.
+This change has no effect on the currently published npm release until full
+cross-repository CI, independent fixture acceptance, and explicit release gates
+are completed. Source: [v2 protocol](docs/KNOWLEDGE_CACHE_V2.md).
 
 ## License
 
