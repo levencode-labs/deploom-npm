@@ -94,6 +94,34 @@ class ResearchTests(unittest.TestCase):
         self.assertEqual([501, 601, 701, 801, 901],
                          [obj["items"][i]["rank"] for i in (0,100,200,300,400)])
 
+    def test_completed_receipt_manifest_full_rank_provenance(self):
+        from collections import Counter
+        obj = batch.manifest()
+        done = json.loads((ROOT / "registry-receipts-manifest.json").read_text())
+        self.assertEqual("RESEARCH_ONLY_NOT_V2_ADMISSION", done["authority"])
+        self.assertEqual(0, done["productionV2Adds"])
+        self.assertEqual(500, done["recordCount"])
+        self.assertEqual(1, done["unknownCount"])
+        self.assertEqual(5, len(done["artifactData"]))
+        self.assertEqual(list(range(501, 1001)), [i["rank"] for i in done["items"]])
+        self.assertEqual([x["name"] for x in obj["items"]],
+                         [x["package"] for x in done["items"]])
+        self.assertEqual(done["statusCounts"],
+                         dict(Counter(x["status"] for x in done["items"])))
+        self.assertEqual(773, done["unknowns"][0]["rank"])
+        self.assertEqual("ansi-html", done["unknowns"][0]["package"])
+        self.assertEqual(1001, done["cumulative"]["nextRank"])
+        for ix, item in enumerate(done["items"]):
+            self.assertEqual(ix // 100, item["subbatch"])
+            self.assertEqual(obj["items"][ix]["datasetLatestVersion"], item["version"])
+            self.assertEqual("RESEARCH_ONLY_NOT_V2_ADMISSION", item["authority"])
+        for i, part in enumerate(done["artifactData"]):
+            self.assertEqual(i, part["part"])
+            self.assertEqual(i*100+501, part["fromRank"])
+            self.assertEqual(i*100+600, part["toRank"])
+            self.assertEqual(64, len(part["sha256"]))
+            self.assertEqual(64, len(part["zipSha256"]))
+
 
 if __name__ == "__main__":
     unittest.main()
