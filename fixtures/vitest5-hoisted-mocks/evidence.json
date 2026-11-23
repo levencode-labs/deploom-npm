@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "f33cc4435d3012d4c682690b349b81662764d58c1b24c9237d98f8ba07592a34",
+  "claims": [
+    {
+      "package": "vitest",
+      "from": "4.1.10",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

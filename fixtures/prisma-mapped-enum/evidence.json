@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "5bfc4339b114ab44199fd300163fae1f2d033ead999be3e0ce71daa69c7004cc",
+  "claims": [
+    {
+      "package": "@prisma/client",
+      "from": "6.19.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

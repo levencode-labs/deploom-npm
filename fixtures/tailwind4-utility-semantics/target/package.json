@@ -1,0 +1,10 @@
+{
+  "name": "deploom-tailwind4-target",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "tailwindcss": "4.3.3",
+    "postcss": "8.5.33",
+    "@tailwindcss/postcss": "4.3.3"
+  }
+}
