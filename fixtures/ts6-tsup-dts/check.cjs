@@ -5,14 +5,12 @@ const os = require('node:os');
 const path = require('node:path');
 
 const fixture = __dirname;
+assert.ok(process.argv[2], 'Pass the path to pnpm 10.12.1 pnpm.cjs');
+const pnpmJs = path.resolve(process.argv[2]);
 const scratch = fs.mkdtempSync(path.join(os.tmpdir(), 'deploom-ts6-tsup-'));
-const pnpmJs = process.argv[2] && path.resolve(process.argv[2]);
-const pnpm = pnpmJs
-  ? [process.execPath, [pnpmJs]]
-  : [process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm', []];
 
-function run(executable, args, cwd, shell = false) {
-  const result = spawnSync(executable, args, { cwd, encoding: 'utf8', shell,
+function run(executable, args, cwd) {
+  const result = spawnSync(executable, args, { cwd, encoding: 'utf8',
     env: { ...process.env, CI: 'true' }, timeout: 180_000 });
   if (result.error) throw result.error;
   return { code: result.status, log: result.stdout + result.stderr };
@@ -23,10 +21,8 @@ function install(name) {
   fs.cpSync(path.join(fixture, name), dir, {
     recursive: true, filter: source => path.basename(source) !== 'node_modules',
   });
-  const [bin, prefix] = pnpm;
-  const installed = run(bin, [...prefix, 'install', '--frozen-lockfile', '--ignore-scripts',
-    '--config.registry=https://registry.npmjs.org/', '--config.no-proxy=registry.npmjs.org'],
-    dir, !pnpmJs && process.platform === 'win32');
+  const installed = run(process.execPath, [pnpmJs, 'install', '--frozen-lockfile', '--ignore-scripts',
+    '--config.registry=https://registry.npmjs.org/', '--config.no-proxy=registry.npmjs.org'], dir);
   assert.equal(installed.code, 0, installed.log);
   fs.writeFileSync(path.join(dir, 'index.ts'), "export const format = (name: string): string => 'Hello ' + name;\n");
   const tsupConfig = 'export default { entry: ["index.ts"], format: ["cjs", "esm"], dts: true,' +
