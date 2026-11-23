@@ -103,6 +103,28 @@ class ResearchTests(unittest.TestCase):
 
 
 
+    def test_terminal_receipt_ledger_and_negative_controls(self):
+        import copy
+        spec = importlib.util.spec_from_file_location("verify_receipts", ROOT / "verify_receipts.py")
+        receipts = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(receipts)
+        self.assertEqual("PASS_ORIGINAL_RECEIPTS_VERIFIED_OFFLINE", receipts.validate()["status"])
+        for part in range(5):
+            self.assertEqual((2001 + part * 100, 2100 + part * 100),
+                             tuple(receipts.validate(part=part)[k] for k in ("rankStart", "rankEnd")))
+        ledger = json.loads((ROOT / "registry-receipts-manifest.json").read_text(encoding="utf-8"))
+        for mutation in (
+            lambda data: data["items"][0].update(package="tampered-package"),
+            lambda data: data["artifactData"][2].update(zipSha256="0" * 64),
+            lambda data: data.update(productionV2Adds=1),
+            lambda data: data["cumulative"].update(nextRank=2000),
+            lambda data: data["items"][99].update(rank=2001),
+        ):
+            tampered = copy.deepcopy(ledger)
+            mutation(tampered)
+            with self.assertRaises(ValueError):
+                receipts.validate(ledger=tampered)
+
 
 if __name__ == "__main__":
     unittest.main()
