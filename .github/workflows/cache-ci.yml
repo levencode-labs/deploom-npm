@@ -16,6 +16,12 @@ jobs:
       - run: npm test
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
+      - name: Check Vitest hoisted APIs on the exact release pair
+        working-directory: fixtures/vitest5-hoisted-mocks
+        run: |
+          npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
+          npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp

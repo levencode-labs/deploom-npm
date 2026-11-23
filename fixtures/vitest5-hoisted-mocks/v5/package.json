@@ -1,0 +1,10 @@
+{
+  "name": "vitest-hoisted-apis-frozen-v5",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "vite": "7.3.6",
+    "vitest": "5.0.0"
+  }
+}
