@@ -32,7 +32,7 @@ def main():
                   platform="win32-x64", python=runtime["python"], coreRevision=runtime["coreRevision"],
                   coreVersion=runtime["coreVersion"], mcp=upstream, skill=runtime["skill"],
                   solverSha256=runtime["solverSha256"],
-                  dataSchemas={"osv": 1, "history": 1, "knowledge": 1}, blueprintSchema=runtime["blueprintSchemaVersion"])
+                  dataSchemas={"osv": 1, "history": 1, "knowledge": 2}, blueprintSchema=runtime["blueprintSchemaVersion"])
     platform_archives = []
     for target in ("linux-x64", "linux-arm64", "darwin-arm64"):
         filename = f"deploom-{target}-{pkg['version']}.tgz"
