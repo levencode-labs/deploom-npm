@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "53aed218c1bc18e2ae3696a8df617dca7be17b628da8d76dbe12a26cb4502d08",
+  "claims": [
+    {
+      "package": "vite",
+      "from": "5.4.2",
+      "to": "8.3.8",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+name: TypeScript 6 tsup declarations fixture
+on:
+  pull_request:
+    paths:
+      - 'fixtures/ts6-tsup-dts/**'
+      - '.github/workflows/ts6-tsup-dts-fixture.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'fixtures/ts6-tsup-dts/**'
+      - '.github/workflows/ts6-tsup-dts-fixture.yml'
+permissions:
+  contents: read
+jobs:
+  fixture:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.17.1'
+      - run: npm install --prefix .fixture-tools pnpm@10.12.1 --ignore-scripts --no-audit --no-fund
+      - run: node fixtures/ts6-tsup-dts/check.cjs .fixture-tools/node_modules/pnpm/bin/pnpm.cjs

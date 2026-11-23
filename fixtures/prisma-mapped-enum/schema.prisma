@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client"
+  output   = "./generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Role mapping from belgattitude/nextjs-monorepo-example at b7953382e5efc3173356bf977dfa6e88f28d8bfc.
+enum UserPermissionRole {
+  ADMIN @map("admin")
+  USER  @map("user")
+}
+
+model User {
+  id   Int                @id @default(autoincrement())
+  role UserPermissionRole @default(USER)
+}

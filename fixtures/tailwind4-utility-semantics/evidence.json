@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "3b0aca4271e5fb2cc4cd0ec6f0b567dddd19dcb8770996f8ee05ced76f73c3af",
+  "claims": [
+    {
+      "package": "tailwindcss",
+      "from": "3.4.4",
+      "to": "4.3.3",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}
