@@ -27,7 +27,7 @@ class ReceiptTests(unittest.TestCase):
                             ("status","PUBLIC_EXACT_VERSION_OBSERVED"),("sourceReceipt","forged")]:
             with self.subTest(field=field):
                 ledger=copy.deepcopy(self.ledger)
-                target=ledger["items"][248]
+                target=ledger["items"][483 if field=="status" else 248]
                 target[field]=value
                 with self.assertRaises(ValueError):
                     verifier.validate(ledger,self.index)
