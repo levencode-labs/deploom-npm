@@ -31,7 +31,7 @@ def sha256(x):
     return hashlib.sha256(x).hexdigest()
 
 def git_blob(raw):
-    return hashlib.sha1(b"blob "+str(len(raw)).encode("ascii")+b"\\x00"+raw).hexdigest()
+    return hashlib.sha1(b"blob "+str(len(raw)).encode("ascii")+b"\x00"+raw).hexdigest()
 
 def validate(ledger=None,index=None,*,part=None):
     if ledger is None:
