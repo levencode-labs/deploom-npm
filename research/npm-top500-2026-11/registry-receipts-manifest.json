@@ -1,0 +1,4618 @@
+{
+  "schema": "deploom.research.npm-top500-registry-coverage.v1",
+  "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "sourceCommit": "54cf58bc9bafa35fef1c4acf6435d667b4af47c1",
+  "inventory": "index.json",
+  "pinnedGitHubActionsRun": 45195924677,
+  "testedCodeCommit": "18d8de683048e7f9aa8a8320f5d32d3848633f3d",
+  "workflowURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677",
+  "runStatus": "COMPLETED_SUCCESS",
+  "discoveryStatus": "COMPLETE_SOURCE_EXACT_CSV_500",
+  "recordsCount": 500,
+  "registryMetadataObserved": 498,
+  "unknownCount": 2,
+  "statusCounts": {
+    "PUBLIC_EXACT_VERSION_OBSERVED": 498,
+    "UNKNOWN_INVALID_METADATA": 2
+  },
+  "newProductionAdmissions": 0,
+  "newTrustedFixtures": 0,
+  "allFiveArtifactsChecked": true,
+  "artifactData": [
+    {
+      "part": 0,
+      "id": 14828950681,
+      "sha256": "62c17fe7d9cd325ef10ca97eac4e36c5704e326e56d3f3fee835da79400e6bcf",
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "fromRank": 1,
+      "toRank": 100,
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677/artifacts/14828950681",
+      "receiptPath": "part-0.json",
+      "status": "ARTIFACT_DOWNLOADED_JSON_VALIDATED"
+    },
+    {
+      "part": 1,
+      "id": 14828975766,
+      "sha256": "4b2339bcd3879494385bd66c6583d1140e5f4a45fc7e34ec1028de98b47d2859",
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "fromRank": 101,
+      "toRank": 200,
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677/artifacts/14828975766",
+      "receiptPath": "part-1.json",
+      "status": "ARTIFACT_DOWNLOADED_JSON_VALIDATED"
+    },
+    {
+      "part": 2,
+      "id": 14828985785,
+      "sha256": "c6442ae3dffd8aa85f81bb06459321c86f01db97b63abcce8d146a32dec754f6",
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 99,
+        "UNKNOWN_INVALID_METADATA": 1
+      },
+      "fromRank": 201,
+      "toRank": 300,
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677/artifacts/14828985785",
+      "receiptPath": "part-2.json",
+      "status": "ARTIFACT_DOWNLOADED_JSON_VALIDATED"
+    },
+    {
+      "part": 3,
+      "id": 14827922409,
+      "sha256": "d20f8d27677a4a3094c4595d6291c2ea0fbc323c6ace702fa4a08cb85329a8d1",
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 100
+      },
+      "fromRank": 301,
+      "toRank": 400,
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677/artifacts/14827922409",
+      "receiptPath": "part-3.json",
+      "status": "ARTIFACT_DOWNLOADED_JSON_VALIDATED"
+    },
+    {
+      "part": 4,
+      "id": 14829080938,
+      "sha256": "8c6425dcd0aef6ea492b9860b0c913ef4f419a27060b4d4d5df780f7890e0f84",
+      "counts": {
+        "PUBLIC_EXACT_VERSION_OBSERVED": 99,
+        "UNKNOWN_INVALID_METADATA": 1
+      },
+      "fromRank": 401,
+      "toRank": 500,
+      "artifactURL": "https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677/artifacts/14829080938",
+      "receiptPath": "part-4.json",
+      "status": "ARTIFACT_DOWNLOADED_JSON_VALIDATED"
+    }
+  ],
+  "issues": [
+    {
+      "rank": 253,
+      "package": "concat-stream",
+      "version": "2.0.0",
+      "status": "UNKNOWN_INVALID_METADATA",
+      "reason": "Registry response passed exact name/version but at least one optional metadata field was not a JSON object; do not infer which field without raw-source inspection",
+      "artifactId": 14828985785
+    },
+    {
+      "rank": 426,
+      "package": "ansi-html-community",
+      "version": "0.0.8",
+      "status": "UNKNOWN_INVALID_METADATA",
+      "reason": "Registry response passed exact name/version but at least one optional metadata field was not a JSON object; do not infer which field without raw-source inspection",
+      "artifactId": 14829080938
+    }
+  ],
+  "limitations": [
+    "Historical CSV latest versions are not necessarily current at time of retrieval.",
+    "A successful exact npm metadata read is not evidence of migration success, breaking changes, peer satisfiability or test completion.",
+    "Per-package metadata SHA256, engines and peers are preserved in the version-specific JSON receipts in artifacts; the root inventory lists the exact artifact and sha256 for each 100-row subbatch. GitHub Actions artifact retention is 30 days, so download and mirror under reviewed source control before expiration for a permanent exact copy.",
+    "Source bodies of upstream guides/codemods are not embedded in the research corpus.",
+    "This is not an authorization to modify knowledge/v2/records.json or publish signed Pages."
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "package": "semver",
+      "version": "7.8.5",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 2,
+      "package": "debug",
+      "version": "4.4.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 3,
+      "package": "ansi-styles",
+      "version": "6.2.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 4,
+      "package": "lru-cache",
+      "version": "11.5.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 5,
+      "package": "string-width",
+      "version": "8.2.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 6,
+      "package": "emoji-regex",
+      "version": "10.6.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 7,
+      "package": "commander",
+      "version": "15.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 8,
+      "package": "glob",
+      "version": "13.0.6",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 9,
+      "package": "readable-stream",
+      "version": "4.7.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 10,
+      "package": "which",
+      "version": "7.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 11,
+      "package": "glob-parent",
+      "version": "6.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 12,
+      "package": "p-locate",
+      "version": "7.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 13,
+      "package": "locate-path",
+      "version": "8.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 14,
+      "package": "isexe",
+      "version": "4.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 15,
+      "package": "is-fullwidth-code-point",
+      "version": "5.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 16,
+      "package": "ignore",
+      "version": "7.0.5",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 17,
+      "package": "path-key",
+      "version": "4.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 18,
+      "package": "@esbuild/linux-x64",
+      "version": "0.28.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 19,
+      "package": "mime-types",
+      "version": "3.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 20,
+      "package": "string_decoder",
+      "version": "1.3.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 21,
+      "package": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 22,
+      "package": "yargs-parser",
+      "version": "22.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 23,
+      "package": "yargs",
+      "version": "18.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 24,
+      "package": "shebang-command",
+      "version": "2.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 25,
+      "package": "resolve-from",
+      "version": "5.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 26,
+      "package": "fs-extra",
+      "version": "11.3.5",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 27,
+      "package": "picocolors",
+      "version": "1.1.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 28,
+      "package": "whatwg-url",
+      "version": "16.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 29,
+      "package": "webidl-conversions",
+      "version": "8.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 30,
+      "package": "tr46",
+      "version": "6.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 31,
+      "package": "caniuse-lite",
+      "version": "1.0.30001799",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 32,
+      "package": "es-errors",
+      "version": "1.3.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 33,
+      "package": "braces",
+      "version": "3.0.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 34,
+      "package": "@typescript-eslint/types",
+      "version": "8.61.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 35,
+      "package": "@typescript-eslint/visitor-keys",
+      "version": "8.61.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 36,
+      "package": "@babel/traverse",
+      "version": "8.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 37,
+      "package": "node-fetch",
+      "version": "3.3.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 38,
+      "package": "y18n",
+      "version": "5.0.8",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 39,
+      "package": "jsesc",
+      "version": "3.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 40,
+      "package": "is-core-module",
+      "version": "2.16.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 41,
+      "package": "util-deprecate",
+      "version": "1.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 42,
+      "package": "has-symbols",
+      "version": "1.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 43,
+      "package": "rimraf",
+      "version": "6.1.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 44,
+      "package": "scheduler",
+      "version": "0.27.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 45,
+      "package": "@babel/helper-module-imports",
+      "version": "8.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 46,
+      "package": "detect-libc",
+      "version": "2.1.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 47,
+      "package": "@babel/compat-data",
+      "version": "8.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 48,
+      "package": "@babel/helper-module-transforms",
+      "version": "8.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 49,
+      "package": "buffer",
+      "version": "6.0.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 50,
+      "package": "fdir",
+      "version": "6.5.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 51,
+      "package": "flat-cache",
+      "version": "6.1.22",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 52,
+      "package": "react-dom",
+      "version": "19.2.7",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 53,
+      "package": "object-inspect",
+      "version": "1.13.4",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 54,
+      "package": "import-fresh",
+      "version": "4.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 55,
+      "package": "callsites",
+      "version": "4.2.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 56,
+      "package": "dunder-proto",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 57,
+      "package": "natural-compare",
+      "version": "1.4.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 58,
+      "package": "kind-of",
+      "version": "6.0.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 59,
+      "package": "parent-module",
+      "version": "3.2.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 60,
+      "package": "rollup",
+      "version": "4.62.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 61,
+      "package": "ci-info",
+      "version": "4.4.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 62,
+      "package": "@eslint/eslintrc",
+      "version": "3.3.5",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 63,
+      "package": "has-tostringtag",
+      "version": "1.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 64,
+      "package": "foreground-child",
+      "version": "4.0.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 65,
+      "package": "@nodelib/fs.scandir",
+      "version": "4.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 66,
+      "package": "get-proto",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 67,
+      "package": "type-check",
+      "version": "0.4.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 68,
+      "package": "axios",
+      "version": "1.18.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 69,
+      "package": "depd",
+      "version": "2.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 70,
+      "package": "raw-body",
+      "version": "3.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 71,
+      "package": "@nodelib/fs.stat",
+      "version": "4.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 72,
+      "package": "supports-preserve-symlinks-flag",
+      "version": "1.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 73,
+      "package": "type-is",
+      "version": "2.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 74,
+      "package": "proxy-from-env",
+      "version": "2.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 75,
+      "package": "cosmiconfig",
+      "version": "9.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 76,
+      "package": "ts-api-utils",
+      "version": "2.5.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 77,
+      "package": "whatwg-mimetype",
+      "version": "5.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 78,
+      "package": "ansi-escapes",
+      "version": "7.3.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 79,
+      "package": "tapable",
+      "version": "2.3.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 80,
+      "package": "lodash.merge",
+      "version": "4.6.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 81,
+      "package": "jest-worker",
+      "version": "30.4.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 82,
+      "package": "postcss-value-parser",
+      "version": "4.2.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 83,
+      "package": "aria-query",
+      "version": "5.3.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 84,
+      "package": "es-module-lexer",
+      "version": "2.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 85,
+      "package": "is-wsl",
+      "version": "3.1.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 86,
+      "package": "require-from-string",
+      "version": "2.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 87,
+      "package": "@aws-sdk/types",
+      "version": "3.973.13",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 88,
+      "package": "restore-cursor",
+      "version": "5.1.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 89,
+      "package": "cli-cursor",
+      "version": "5.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 90,
+      "package": "is-docker",
+      "version": "4.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 91,
+      "package": "@jridgewell/remapping",
+      "version": "2.3.5",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 92,
+      "package": "@humanwhocodes/module-importer",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 93,
+      "package": "@jest/schemas",
+      "version": "30.4.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 94,
+      "package": "strip-final-newline",
+      "version": "4.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 95,
+      "package": "core-util-is",
+      "version": "1.0.3",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 96,
+      "package": "package-json-from-dist",
+      "version": "1.0.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 97,
+      "package": "proc-log",
+      "version": "7.0.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 98,
+      "package": "ip-address",
+      "version": "10.2.0",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 99,
+      "package": "has-property-descriptors",
+      "version": "1.0.2",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 100,
+      "package": "mdn-data",
+      "version": "2.28.1",
+      "subbatch": 0,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_0",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 101,
+      "package": "cssesc",
+      "version": "3.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 102,
+      "package": "vary",
+      "version": "1.1.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 103,
+      "package": "cjs-module-lexer",
+      "version": "2.2.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 104,
+      "package": "is-unicode-supported",
+      "version": "2.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 105,
+      "package": "@humanfs/core",
+      "version": "0.19.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 106,
+      "package": "ee-first",
+      "version": "1.1.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 107,
+      "package": "@humanfs/node",
+      "version": "0.16.8",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 108,
+      "package": "domelementtype",
+      "version": "3.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 109,
+      "package": "get-tsconfig",
+      "version": "4.14.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 110,
+      "package": "fs.realpath",
+      "version": "1.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 111,
+      "package": "@floating-ui/dom",
+      "version": "1.7.6",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 112,
+      "package": "is-typed-array",
+      "version": "1.1.15",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 113,
+      "package": "chai",
+      "version": "6.2.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 114,
+      "package": "available-typed-arrays",
+      "version": "1.0.7",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 115,
+      "package": "abbrev",
+      "version": "5.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 116,
+      "package": "kleur",
+      "version": "4.1.5",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 117,
+      "package": "is-date-object",
+      "version": "1.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 118,
+      "package": "object-hash",
+      "version": "3.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 119,
+      "package": "is-string",
+      "version": "1.1.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 120,
+      "package": "is-boolean-object",
+      "version": "1.2.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 121,
+      "package": "typed-array-buffer",
+      "version": "1.0.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 122,
+      "package": "has-bigints",
+      "version": "1.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 123,
+      "package": "extend-shallow",
+      "version": "3.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 124,
+      "package": "is-number-object",
+      "version": "1.1.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 125,
+      "package": "has-proto",
+      "version": "1.2.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 126,
+      "package": "is-weakref",
+      "version": "1.1.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 127,
+      "package": "html-encoding-sniffer",
+      "version": "6.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 128,
+      "package": "import-in-the-middle",
+      "version": "3.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 129,
+      "package": "get-symbol-description",
+      "version": "1.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 130,
+      "package": "functions-have-names",
+      "version": "1.2.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 131,
+      "package": "array-buffer-byte-length",
+      "version": "1.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 132,
+      "package": "typed-array-length",
+      "version": "1.0.8",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 133,
+      "package": "sharp",
+      "version": "0.35.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 134,
+      "package": "xml-name-validator",
+      "version": "5.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 135,
+      "package": "typed-array-byte-length",
+      "version": "1.0.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 136,
+      "package": "extend",
+      "version": "3.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 137,
+      "package": "is-weakmap",
+      "version": "2.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 138,
+      "package": "is-set",
+      "version": "2.0.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 139,
+      "package": "typed-array-byte-offset",
+      "version": "1.0.4",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 140,
+      "package": "ssri",
+      "version": "14.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 141,
+      "package": "is-plain-object",
+      "version": "5.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 142,
+      "package": "thenify-all",
+      "version": "1.6.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 143,
+      "package": "@vitest/mocker",
+      "version": "4.1.9",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 144,
+      "package": "is-map",
+      "version": "2.0.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 145,
+      "package": "is-weakset",
+      "version": "2.0.4",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 146,
+      "package": "data-view-buffer",
+      "version": "1.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 147,
+      "package": "@swc/helpers",
+      "version": "0.5.23",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 148,
+      "package": "autoprefixer",
+      "version": "10.5.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 149,
+      "package": "cli-spinners",
+      "version": "3.4.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 150,
+      "package": "@vitejs/plugin-react",
+      "version": "6.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 151,
+      "package": "is-data-view",
+      "version": "1.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 152,
+      "package": "which-builtin-type",
+      "version": "1.2.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 153,
+      "package": "tldts-core",
+      "version": "7.4.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 154,
+      "package": "expect",
+      "version": "30.4.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 155,
+      "package": "lodash.isplainobject",
+      "version": "4.0.6",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 156,
+      "package": "array-union",
+      "version": "3.0.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 157,
+      "package": "fraction.js",
+      "version": "5.3.4",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 158,
+      "package": "@tanstack/query-core",
+      "version": "5.101.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 159,
+      "package": "type-detect",
+      "version": "4.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 160,
+      "package": "@tailwindcss/oxide-linux-x64-musl",
+      "version": "4.3.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 161,
+      "package": "data-view-byte-offset",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 162,
+      "package": "data-view-byte-length",
+      "version": "1.0.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 163,
+      "package": "web-streams-polyfill",
+      "version": "4.3.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 164,
+      "package": "use-callback-ref",
+      "version": "1.3.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 165,
+      "package": "cssstyle",
+      "version": "6.2.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 166,
+      "package": "dayjs",
+      "version": "1.11.21",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 167,
+      "package": "isobject",
+      "version": "4.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 168,
+      "package": "ast-types",
+      "version": "0.14.2",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 169,
+      "package": "gcp-metadata",
+      "version": "8.1.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 170,
+      "package": "xmlchars",
+      "version": "2.2.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 171,
+      "package": "@smithy/signature-v4",
+      "version": "5.5.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 172,
+      "package": "read-cache",
+      "version": "1.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 173,
+      "package": "@aws-sdk/xml-builder",
+      "version": "3.972.30",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 174,
+      "package": "is-potential-custom-element-name",
+      "version": "1.0.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 175,
+      "package": "is-finalizationregistry",
+      "version": "1.1.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 176,
+      "package": "@smithy/credential-provider-imds",
+      "version": "4.4.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 177,
+      "package": "leven",
+      "version": "4.1.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 178,
+      "package": "async-function",
+      "version": "1.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 179,
+      "package": "set-proto",
+      "version": "1.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 180,
+      "package": "jest-get-type",
+      "version": "29.6.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 181,
+      "package": "get-east-asian-width",
+      "version": "1.6.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 182,
+      "package": "siginfo",
+      "version": "2.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 183,
+      "package": "@sinonjs/commons",
+      "version": "4.0.0-alpha.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 184,
+      "package": "generator-function",
+      "version": "2.0.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 185,
+      "package": "@npmcli/fs",
+      "version": "6.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 186,
+      "package": "eslint-module-utils",
+      "version": "2.13.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 187,
+      "package": "hermes-estree",
+      "version": "0.36.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 188,
+      "package": "@jridgewell/source-map",
+      "version": "0.3.11",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 189,
+      "package": "setimmediate",
+      "version": "1.0.5",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 190,
+      "package": "@babel/plugin-syntax-import-attributes",
+      "version": "7.29.7",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 191,
+      "package": "@tailwindcss/oxide-linux-x64-gnu",
+      "version": "4.3.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 192,
+      "package": "immer",
+      "version": "11.1.8",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 193,
+      "package": "@protobufjs/fetch",
+      "version": "1.1.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 194,
+      "package": "ansi-colors",
+      "version": "4.1.3",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 195,
+      "package": "file-type",
+      "version": "22.0.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 196,
+      "package": "@jest/expect-utils",
+      "version": "30.4.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 197,
+      "package": "redent",
+      "version": "4.0.0",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 198,
+      "package": "hermes-parser",
+      "version": "0.36.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 199,
+      "package": "minipass-collect",
+      "version": "2.0.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 200,
+      "package": "@testing-library/jest-dom",
+      "version": "6.9.1",
+      "subbatch": 1,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_1",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 201,
+      "package": "regjsparser",
+      "version": "0.13.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 202,
+      "package": "jsx-ast-utils",
+      "version": "3.3.5",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 203,
+      "package": "is-descriptor",
+      "version": "3.1.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 204,
+      "package": "@pkgr/core",
+      "version": "0.3.6",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 205,
+      "package": "deep-eql",
+      "version": "5.0.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 206,
+      "package": "cli-truncate",
+      "version": "6.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 207,
+      "package": "@img/colour",
+      "version": "1.1.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 208,
+      "package": "promise-retry",
+      "version": "2.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 209,
+      "package": "min-indent",
+      "version": "1.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 210,
+      "package": "jest-docblock",
+      "version": "30.4.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 211,
+      "package": "check-error",
+      "version": "2.1.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 212,
+      "package": "jest-leak-detector",
+      "version": "30.4.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 213,
+      "package": "@babel/plugin-syntax-nullish-coalescing-operator",
+      "version": "7.8.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 214,
+      "package": "@protobufjs/inquire",
+      "version": "1.1.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 215,
+      "package": "string-length",
+      "version": "7.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 216,
+      "package": "pg-protocol",
+      "version": "1.15.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 217,
+      "package": "detect-newline",
+      "version": "4.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 218,
+      "package": "jest-changed-files",
+      "version": "30.4.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 219,
+      "package": "resolve-cwd",
+      "version": "3.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 220,
+      "package": "property-information",
+      "version": "7.2.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 221,
+      "package": "get-package-type",
+      "version": "0.1.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 222,
+      "package": "lodash.debounce",
+      "version": "4.0.8",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 223,
+      "package": "require-in-the-middle",
+      "version": "8.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 224,
+      "package": "@protobufjs/path",
+      "version": "1.1.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 225,
+      "package": "lodash.isstring",
+      "version": "4.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 226,
+      "package": "lodash.once",
+      "version": "4.1.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 227,
+      "package": "psl",
+      "version": "1.15.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 228,
+      "package": "fb-watchman",
+      "version": "2.0.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 229,
+      "package": "mdast-util-to-string",
+      "version": "4.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 230,
+      "package": "util",
+      "version": "0.12.5",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 231,
+      "package": "css.escape",
+      "version": "1.5.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 232,
+      "package": "log-update",
+      "version": "8.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 233,
+      "package": "@babel/plugin-syntax-json-strings",
+      "version": "7.8.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 234,
+      "package": "babel-preset-current-node-syntax",
+      "version": "1.2.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 235,
+      "package": "@humanfs/types",
+      "version": "0.15.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 236,
+      "package": "lodash.camelcase",
+      "version": "4.3.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 237,
+      "package": "@babel/plugin-transform-class-properties",
+      "version": "8.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 238,
+      "package": "lodash.isboolean",
+      "version": "3.0.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 239,
+      "package": "@babel/plugin-syntax-logical-assignment-operators",
+      "version": "7.10.4",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 240,
+      "package": "handlebars",
+      "version": "4.7.9",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 241,
+      "package": "@babel/plugin-syntax-import-assertions",
+      "version": "7.29.7",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 242,
+      "package": "bser",
+      "version": "2.1.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 243,
+      "package": "axobject-query",
+      "version": "4.1.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 244,
+      "package": "unicode-match-property-value-ecmascript",
+      "version": "2.2.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 245,
+      "package": "@aws-crypto/supports-web-crypto",
+      "version": "5.2.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 246,
+      "package": "next",
+      "version": "16.2.9",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 247,
+      "package": "unicode-canonical-property-names-ecmascript",
+      "version": "2.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 248,
+      "package": "lodash.isinteger",
+      "version": "4.0.4",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 249,
+      "package": "@npmcli/agent",
+      "version": "5.0.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 250,
+      "package": "@webassemblyjs/floating-point-hex-parser",
+      "version": "1.14.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 251,
+      "package": "@babel/plugin-transform-block-scoped-functions",
+      "version": "8.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 252,
+      "package": "lodash.isnumber",
+      "version": "3.0.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 253,
+      "package": "concat-stream",
+      "version": "2.0.0",
+      "subbatch": 2,
+      "status": "UNKNOWN_INVALID_METADATA",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 254,
+      "package": "streamx",
+      "version": "2.28.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 255,
+      "package": "which-module",
+      "version": "2.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 256,
+      "package": "@smithy/util-body-length-node",
+      "version": "4.4.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 257,
+      "package": "run-applescript",
+      "version": "7.1.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 258,
+      "package": "@testing-library/user-event",
+      "version": "14.6.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 259,
+      "package": "@babel/plugin-transform-dotall-regex",
+      "version": "8.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 260,
+      "package": "napi-postinstall",
+      "version": "0.3.4",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 261,
+      "package": "string.prototype.repeat",
+      "version": "1.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 262,
+      "package": "default-browser",
+      "version": "5.5.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 263,
+      "package": "collect-v8-coverage",
+      "version": "1.0.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 264,
+      "package": "unicode-match-property-ecmascript",
+      "version": "2.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 265,
+      "package": "@standard-schema/utils",
+      "version": "0.3.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 266,
+      "package": "default-browser-id",
+      "version": "5.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 267,
+      "package": "lodash.includes",
+      "version": "4.3.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 268,
+      "package": "unist-util-position",
+      "version": "5.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 269,
+      "package": "b4a",
+      "version": "1.8.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 270,
+      "package": "@smithy/util-body-length-browser",
+      "version": "4.4.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 271,
+      "package": "@ampproject/remapping",
+      "version": "2.3.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 272,
+      "package": "run-async",
+      "version": "4.0.6",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 273,
+      "package": "cheerio",
+      "version": "1.2.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 274,
+      "package": "lodash.memoize",
+      "version": "4.1.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 275,
+      "package": "fast-fifo",
+      "version": "1.3.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 276,
+      "package": "is-inside-container",
+      "version": "1.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 277,
+      "package": "tunnel-agent",
+      "version": "0.6.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 278,
+      "package": "@next/swc-linux-x64-gnu",
+      "version": "16.2.9",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 279,
+      "package": "language-subtag-registry",
+      "version": "0.4.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 280,
+      "package": "client-only",
+      "version": "0.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 281,
+      "package": "module-details-from-path",
+      "version": "1.0.4",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 282,
+      "package": "path-browserify",
+      "version": "1.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 283,
+      "package": "fs-constants",
+      "version": "1.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 284,
+      "package": "damerau-levenshtein",
+      "version": "1.0.8",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 285,
+      "package": "lowercase-keys",
+      "version": "4.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 286,
+      "package": "@xmldom/xmldom",
+      "version": "0.9.10",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 287,
+      "package": "commondir",
+      "version": "1.0.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 288,
+      "package": "ast-types-flow",
+      "version": "0.0.8",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 289,
+      "package": "@swc/counter",
+      "version": "0.1.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 290,
+      "package": "micromark-core-commonmark",
+      "version": "2.0.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 291,
+      "package": "exsolve",
+      "version": "1.0.8",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 292,
+      "package": "is-windows",
+      "version": "1.0.2",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 293,
+      "package": "@swc/types",
+      "version": "0.1.27",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 294,
+      "package": "longest-streak",
+      "version": "3.1.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 295,
+      "package": "interpret",
+      "version": "3.1.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 296,
+      "package": "pg",
+      "version": "8.22.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 297,
+      "package": "memoize-one",
+      "version": "6.0.0",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 298,
+      "package": "enquirer",
+      "version": "2.4.1",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 299,
+      "package": "@inquirer/external-editor",
+      "version": "3.0.3",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 300,
+      "package": "cli-table3",
+      "version": "0.6.5",
+      "subbatch": 2,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_2",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 301,
+      "package": "@jridgewell/set-array",
+      "version": "1.2.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 302,
+      "package": "sirv",
+      "version": "3.0.2",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 303,
+      "package": "fd-slicer",
+      "version": "1.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 304,
+      "package": "global-prefix",
+      "version": "4.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 305,
+      "package": "lodash.uniq",
+      "version": "4.5.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 306,
+      "package": "@smithy/util-waiter",
+      "version": "4.5.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 307,
+      "package": "denque",
+      "version": "2.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 308,
+      "package": "es-toolkit",
+      "version": "1.48.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 309,
+      "package": "css-loader",
+      "version": "7.1.4",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 310,
+      "package": "npm-package-arg",
+      "version": "14.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 311,
+      "package": "pgpass",
+      "version": "1.0.6",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 312,
+      "package": "is-bun-module",
+      "version": "2.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 313,
+      "package": "global-modules",
+      "version": "2.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 314,
+      "package": "events-universal",
+      "version": "1.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 315,
+      "package": "widest-line",
+      "version": "6.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 316,
+      "package": "@parcel/watcher",
+      "version": "2.5.6",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 317,
+      "package": "yoctocolors-cjs",
+      "version": "2.1.3",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 318,
+      "package": "lodash.defaults",
+      "version": "4.2.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 319,
+      "package": "postcss-modules-local-by-default",
+      "version": "4.2.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 320,
+      "package": "encoding-sniffer",
+      "version": "1.0.2",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 321,
+      "package": "@next/swc-linux-x64-musl",
+      "version": "16.2.9",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 322,
+      "package": "bindings",
+      "version": "1.5.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 323,
+      "package": "string.prototype.includes",
+      "version": "2.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 324,
+      "package": "openai",
+      "version": "6.44.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 325,
+      "package": "@jest/pattern",
+      "version": "30.4.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 326,
+      "package": "http-proxy-middleware",
+      "version": "4.1.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 327,
+      "package": "stream-shift",
+      "version": "1.0.3",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 328,
+      "package": "lodash.clonedeep",
+      "version": "4.5.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 329,
+      "package": "node-abi",
+      "version": "4.31.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 330,
+      "package": "http2-wrapper",
+      "version": "2.2.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 331,
+      "package": "assert-plus",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 332,
+      "package": "bidi-js",
+      "version": "1.0.3",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 333,
+      "package": "babel-loader",
+      "version": "10.1.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 334,
+      "package": "postcss-modules-values",
+      "version": "4.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 335,
+      "package": "boxen",
+      "version": "8.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 336,
+      "package": "http-proxy",
+      "version": "1.18.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 337,
+      "package": "cli-boxes",
+      "version": "4.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 338,
+      "package": "devtools-protocol",
+      "version": "0.0.1648812",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 339,
+      "package": "yoctocolors",
+      "version": "2.1.2",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 340,
+      "package": "is-data-descriptor",
+      "version": "2.1.3",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 341,
+      "package": "mlly",
+      "version": "1.8.2",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 342,
+      "package": "is-accessor-descriptor",
+      "version": "3.0.5",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 343,
+      "package": "url",
+      "version": "0.11.4",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 344,
+      "package": "@anthropic-ai/sdk",
+      "version": "0.105.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 345,
+      "package": "@parcel/watcher-linux-x64-glibc",
+      "version": "2.5.6",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 346,
+      "package": "lodash.sortby",
+      "version": "4.7.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 347,
+      "package": "detect-indent",
+      "version": "7.0.2",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 348,
+      "package": "bcrypt-pbkdf",
+      "version": "1.0.2",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 349,
+      "package": "defer-to-connect",
+      "version": "2.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 350,
+      "package": "find-root",
+      "version": "1.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 351,
+      "package": "isbot",
+      "version": "5.1.43",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 352,
+      "package": "@discoveryjs/json-ext",
+      "version": "1.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 353,
+      "package": "@nolyfill/is-core-module",
+      "version": "1.0.39",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 354,
+      "package": "@opentelemetry/exporter-trace-otlp-http",
+      "version": "0.219.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 355,
+      "package": "style-loader",
+      "version": "4.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 356,
+      "package": "@reduxjs/toolkit",
+      "version": "2.12.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 357,
+      "package": "formidable",
+      "version": "3.5.4",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 358,
+      "package": "@jest/get-type",
+      "version": "30.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 359,
+      "package": "registry-auth-token",
+      "version": "5.1.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 360,
+      "package": "external-editor",
+      "version": "3.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 361,
+      "package": "repeat-string",
+      "version": "1.6.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 362,
+      "package": "@opentelemetry/instrumentation-fs",
+      "version": "0.38.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 363,
+      "package": "form-data-encoder",
+      "version": "4.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 364,
+      "package": "@opentelemetry/instrumentation-amqplib",
+      "version": "0.66.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 365,
+      "package": "@esbuild/linux-arm64",
+      "version": "0.28.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 366,
+      "package": "builtin-modules",
+      "version": "5.2.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 367,
+      "package": "@opentelemetry/exporter-logs-otlp-http",
+      "version": "0.219.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 368,
+      "package": "is-ci",
+      "version": "4.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 369,
+      "package": "debounce",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 370,
+      "package": "color-support",
+      "version": "1.1.3",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 371,
+      "package": "one-time",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 372,
+      "package": "is-node-process",
+      "version": "1.2.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 373,
+      "package": "@oozcitak/infra",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 374,
+      "package": "@babel/plugin-syntax-flow",
+      "version": "8.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 375,
+      "package": "forever-agent",
+      "version": "0.6.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 376,
+      "package": "aws-sign2",
+      "version": "0.7.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 377,
+      "package": "stringify-object",
+      "version": "6.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 378,
+      "package": "text-hex",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 379,
+      "package": "webpack-dev-server",
+      "version": "5.2.5",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 380,
+      "package": "gzip-size",
+      "version": "7.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 381,
+      "package": "@oozcitak/url",
+      "version": "4.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 382,
+      "package": "vscode-uri",
+      "version": "3.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 383,
+      "package": "temp-dir",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 384,
+      "package": "urlpattern-polyfill",
+      "version": "10.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 385,
+      "package": "resolve-alpn",
+      "version": "1.2.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 386,
+      "package": "effect",
+      "version": "3.21.4",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 387,
+      "package": "void-elements",
+      "version": "3.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 388,
+      "package": "@emotion/babel-plugin",
+      "version": "11.13.5",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 389,
+      "package": "trim-newlines",
+      "version": "5.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 390,
+      "package": "engine.io-parser",
+      "version": "5.2.3",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 391,
+      "package": "stream-browserify",
+      "version": "3.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 392,
+      "package": "tagged-tag",
+      "version": "1.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 393,
+      "package": "github-from-package",
+      "version": "0.0.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 394,
+      "package": "puppeteer-core",
+      "version": "25.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 395,
+      "package": "postcss-reduce-initial",
+      "version": "8.0.1",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 396,
+      "package": "wide-align",
+      "version": "1.1.5",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 397,
+      "package": "browserify-zlib",
+      "version": "0.2.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 398,
+      "package": "@babel/helper-function-name",
+      "version": "7.24.7",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 399,
+      "package": "lodash.isarguments",
+      "version": "3.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 400,
+      "package": "assert",
+      "version": "2.1.0",
+      "subbatch": 3,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_3",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 401,
+      "package": "@google-cloud/projectify",
+      "version": "5.0.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 402,
+      "package": "dezalgo",
+      "version": "1.0.4",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 403,
+      "package": "for-in",
+      "version": "1.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 404,
+      "package": "@opentelemetry/propagator-b3",
+      "version": "2.8.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 405,
+      "package": "import-lazy",
+      "version": "4.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 406,
+      "package": "cssnano",
+      "version": "8.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 407,
+      "package": "raf",
+      "version": "3.4.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 408,
+      "package": "registry-url",
+      "version": "7.2.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 409,
+      "package": "forwarded-parse",
+      "version": "2.1.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 410,
+      "package": "arr-diff",
+      "version": "4.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 411,
+      "package": "connect-history-api-fallback",
+      "version": "2.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 412,
+      "package": "remove-trailing-separator",
+      "version": "1.1.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 413,
+      "package": "terminal-link",
+      "version": "5.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 414,
+      "package": "@opentelemetry/exporter-metrics-otlp-http",
+      "version": "0.219.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 415,
+      "package": "chromium-bidi",
+      "version": "16.0.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 416,
+      "package": "@sentry/cli-linux-x64",
+      "version": "3.5.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 417,
+      "package": "dns-packet",
+      "version": "5.6.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 418,
+      "package": "fast-string-width",
+      "version": "3.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 419,
+      "package": "spdy",
+      "version": "4.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 420,
+      "package": "@tabby_ai/hijri-converter",
+      "version": "1.0.5",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 421,
+      "package": "expand-tilde",
+      "version": "2.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 422,
+      "package": "@storybook/icons",
+      "version": "2.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 423,
+      "package": "youch",
+      "version": "4.1.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 424,
+      "package": "throat",
+      "version": "6.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 425,
+      "package": "@opentelemetry/exporter-trace-otlp-grpc",
+      "version": "0.219.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 426,
+      "package": "ansi-html-community",
+      "version": "0.0.8",
+      "subbatch": 4,
+      "status": "UNKNOWN_INVALID_METADATA",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 427,
+      "package": "lodash.flatten",
+      "version": "4.4.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 428,
+      "package": "@esbuild/darwin-arm64",
+      "version": "0.28.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 429,
+      "package": "@opentelemetry/exporter-zipkin",
+      "version": "2.8.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 430,
+      "package": "@parcel/watcher-linux-x64-musl",
+      "version": "2.5.6",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 431,
+      "package": "oauth-sign",
+      "version": "0.9.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 432,
+      "package": "is-module",
+      "version": "1.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 433,
+      "package": "thunky",
+      "version": "1.1.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 434,
+      "package": "sort-keys",
+      "version": "6.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 435,
+      "package": "cose-base",
+      "version": "2.2.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 436,
+      "package": "csv-parse",
+      "version": "7.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 437,
+      "package": "@babel/helper-environment-visitor",
+      "version": "7.24.7",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 438,
+      "package": "@yarnpkg/lockfile",
+      "version": "1.1.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 439,
+      "package": "lodash.truncate",
+      "version": "4.4.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 440,
+      "package": "d3-delaunay",
+      "version": "6.0.4",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 441,
+      "package": "@opentelemetry/exporter-trace-otlp-proto",
+      "version": "0.219.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 442,
+      "package": "select-hose",
+      "version": "2.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 443,
+      "package": "@sentry/babel-plugin-component-annotate",
+      "version": "5.3.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 444,
+      "package": "caniuse-api",
+      "version": "4.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 445,
+      "package": "limiter",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 446,
+      "package": "katex",
+      "version": "0.17.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 447,
+      "package": "npm-packlist",
+      "version": "11.2.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 448,
+      "package": "is-retry-allowed",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 449,
+      "package": "split-on-first",
+      "version": "4.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 450,
+      "package": "extglob",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 451,
+      "package": "npm-install-checks",
+      "version": "9.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 452,
+      "package": "chrome-launcher",
+      "version": "1.2.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 453,
+      "package": "@expo/json-file",
+      "version": "10.2.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 454,
+      "package": "engine.io",
+      "version": "6.6.9",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 455,
+      "package": "@firebase/logger",
+      "version": "0.5.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 456,
+      "package": "@npmcli/promise-spawn",
+      "version": "10.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 457,
+      "package": "iceberg-js",
+      "version": "1.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 458,
+      "package": "@poppinss/colors",
+      "version": "4.1.6",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 459,
+      "package": "@esbuild/win32-x64",
+      "version": "0.28.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 460,
+      "package": "lodash.escaperegexp",
+      "version": "4.1.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 461,
+      "package": "canvas-confetti",
+      "version": "1.9.4",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 462,
+      "package": "arch",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 463,
+      "package": "lodash.throttle",
+      "version": "4.1.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 464,
+      "package": "lodash.isfunction",
+      "version": "3.0.9",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 465,
+      "package": "lodash.union",
+      "version": "4.6.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 466,
+      "package": "walk-up-path",
+      "version": "4.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 467,
+      "package": "@poppinss/dumper",
+      "version": "0.7.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 468,
+      "package": "workerpool",
+      "version": "10.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 469,
+      "package": "lodash.difference",
+      "version": "4.5.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 470,
+      "package": "engine.io-client",
+      "version": "6.6.6",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 471,
+      "package": "vscode-languageserver-types",
+      "version": "3.18.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 472,
+      "package": "bson",
+      "version": "7.3.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 473,
+      "package": "d3-brush",
+      "version": "3.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 474,
+      "package": "mongodb",
+      "version": "7.3.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 475,
+      "package": "@opentelemetry/exporter-logs-otlp-grpc",
+      "version": "0.219.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 476,
+      "package": "@clack/prompts",
+      "version": "1.6.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 477,
+      "package": "@opentelemetry/exporter-metrics-otlp-proto",
+      "version": "0.219.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 478,
+      "package": "@esbuild/darwin-x64",
+      "version": "0.28.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 479,
+      "package": "googleapis-common",
+      "version": "8.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 480,
+      "package": "vue",
+      "version": "3.5.38",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 481,
+      "package": "@ai-sdk/gateway",
+      "version": "3.0.133",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 482,
+      "package": "object.pick",
+      "version": "1.3.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 483,
+      "package": "resolve-dir",
+      "version": "1.0.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 484,
+      "package": "global-directory",
+      "version": "5.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 485,
+      "package": "portfinder",
+      "version": "1.0.38",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 486,
+      "package": "is-relative",
+      "version": "1.0.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 487,
+      "package": "assign-symbols",
+      "version": "2.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 488,
+      "package": "resize-observer-polyfill",
+      "version": "1.5.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 489,
+      "package": "chart.js",
+      "version": "4.5.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 490,
+      "package": "@opentelemetry/exporter-metrics-otlp-grpc",
+      "version": "0.219.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 491,
+      "package": "hard-rejection",
+      "version": "2.1.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 492,
+      "package": "@prisma/engines-version",
+      "version": "7.8.0-6.3c6e192761c0362d496ed980de936e2f3cebcd3a",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 493,
+      "package": "better-opn",
+      "version": "3.0.2",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 494,
+      "package": "react-i18next",
+      "version": "17.0.8",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 495,
+      "package": "@firebase/database",
+      "version": "1.1.3",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 496,
+      "package": "pbkdf2",
+      "version": "3.1.6",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 497,
+      "package": "needle",
+      "version": "3.5.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 498,
+      "package": "esbuild-register",
+      "version": "3.6.0",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 499,
+      "package": "metro-runtime",
+      "version": "0.84.4",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    },
+    {
+      "rank": 500,
+      "package": "@jest/create-cache-key-function",
+      "version": "30.4.1",
+      "subbatch": 4,
+      "status": "PUBLIC_EXACT_VERSION_OBSERVED",
+      "sourceProof": "RUN_45195924677_ARTIFACT_PART_4",
+      "authority": "RESEARCH_ONLY_NOT_V2_ADMISSION"
+    }
+  ]
+}

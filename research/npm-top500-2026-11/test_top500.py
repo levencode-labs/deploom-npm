@@ -85,5 +85,31 @@ class ResearchTests(unittest.TestCase):
                 self.assertIsNone(result["sourceSha256"])
 
 
+    def test_completed_research_coverage_matches_pinned_inventory(self):
+        from collections import Counter
+        obj = top500.manifest()
+        covered = json.loads((ROOT / "registry-receipts-manifest.json").read_text())
+        self.assertEqual("RESEARCH_ONLY_NOT_V2_ADMISSION", covered["authority"])
+        self.assertEqual(0, covered["newProductionAdmissions"])
+        self.assertEqual(500, len(covered["items"]))
+        self.assertEqual(5, len(covered["artifactData"]))
+        self.assertEqual(498, covered["registryMetadataObserved"])
+        self.assertEqual(2, covered["unknownCount"])
+        self.assertEqual(covered["statusCounts"],
+                         dict(Counter(x["status"] for x in covered["items"])))
+        self.assertEqual(list(range(1,501)), [x["rank"] for x in covered["items"]])
+        self.assertEqual([x["name"] for x in obj["items"]],
+                         [x["package"] for x in covered["items"]])
+        for idx, row in enumerate(covered["items"]):
+            self.assertEqual(row["version"], obj["items"][idx]["datasetLatestVersion"])
+            self.assertEqual(row["subbatch"], idx//100)
+            self.assertEqual("RESEARCH_ONLY_NOT_V2_ADMISSION", row["authority"])
+        for p, item in enumerate(covered["artifactData"]):
+            self.assertEqual(p, item["part"])
+            self.assertEqual(p*100+1, item["fromRank"])
+            self.assertEqual((p+1)*100, item["toRank"])
+            self.assertEqual(64, len(item["sha256"]))
+
+
 if __name__ == "__main__":
     unittest.main()

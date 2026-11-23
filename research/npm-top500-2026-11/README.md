@@ -15,3 +15,14 @@ Pinned source: [curran/npm-top-packages-dataset at 54cf58b](https://github.com/c
 Only report a subbatch as registry-screened after its uploaded receipt is checked; never call a 200 response a migration-proof pass. Keep each status including 404/429/timeout/redirect without blind retries of paid work. Cross-check official guides with exact published npm manifests before making peer/engine claims. Any guide-manifest conflict remains explicitly UNKNOWN. The workflow does not write/sign/deploy the cache, does not use paid agents, and has `contents: read` only. Count any missing artifact as UNKNOWN. No admission from PR HEAD.
 
 Next unit of work after this checkpoint: examine rank 501, only after checking full 500 inventory, all five distinct reports, source pin and the current main/revision. Do not re-collect 1–500 merely to repeat observations.
+
+## Completed read-only GitHub registry scan (2026-11-23)
+
+The [actual GitHub Actions run](https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677) on `18d8de683048e7f9aa8a8320f5d32d3848633f3d` completed **six of six** jobs successfully: CSV SHA-256/Git blob and 500-row selection, plus five disjoint 100-package registry probes. Four hundred ninety-eight exact anonymous npm version documents were observed; **two UNKNOWN** are retained, never converted to negative claims or admitted. See [per-rank coverage and immutable source-artifact SHA-256](registry-receipts-manifest.json).
+
+- `concat-stream@2.0.0`, rank 253: `UNKNOWN_INVALID_METADATA`.
+- `ansi-html-community@0.0.8`, rank 426: `UNKNOWN_INVALID_METADATA`.
+
+Each [Actions artifact](https://github.com/levencode-labs/deploom-npm/actions/runs/45195924677) includes the full 100-item JSON, exact anonymous-response SHA-256, URL, `engines`, `peerDependencies`, `peerDependenciesMeta`, and explicit failure statuses. This repository stores a machine-readable artifact-ID/JSON-digest index and every rank's status. **Artifacts currently have 30-day retention; raw-response bodies and detailed per-package receipt metadata are not yet committed as immutable files**, and must not be claimed durable beyond that retention. The original pinned CSV inventory and this completion index are durable.
+
+The original production trust boundary remains unchanged: **0 new signed v2 records, 0 new trusted fixtures, no snapshot revision increase**. The research contains evidence for public existence and some official migration *references*, but not 500 independently validated upgrade recommendations.
