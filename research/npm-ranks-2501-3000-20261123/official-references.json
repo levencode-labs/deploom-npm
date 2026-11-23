@@ -1,0 +1,13 @@
+{
+  "schema": "deploom.research.official-upstream-migration-references.v1",
+  "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION",
+  "batch": "npm-ranks-2501-3000-20261123",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "notes": [
+    "All rank/version observations are research-only. No first-party source-exact breaking-change transitions have been verified in the current batch intake.",
+    "Pinned historical CSV versions and public registry existence do not establish migration behavior, a codemod or an executed recipient fixture.",
+    "Require reviewed/merged positive and negative fixtures, signing and protected reader gates for production."
+  ],
+  "records": [],
+  "priorityCandidates": []
+}
