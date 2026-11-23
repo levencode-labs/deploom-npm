@@ -3,7 +3,7 @@
   "records": [
     {
       "schema": 2,
-      "id": "react-dom-peer-renderer-alignment-18",
+      "id": "align-react-renderers",
       "kind": "incompatibility",
       "package": "react-dom",
       "fromMajor": 18,
