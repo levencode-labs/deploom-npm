@@ -2,6 +2,8 @@ const assert = require('node:assert/strict');
 const { spawnSync } = require('node:child_process');
 const { createRequire } = require('node:module');
 const path = require('node:path');
+const { readFileSync } = require('node:fs');
+const tailwind3 = require('tailwindcss-v3');
 
 // Responsive classes reproduced on Notus Next.js at 83af9355cf3373c31d5f5f3845e65185d327186d.
 const next = createRequire(require.resolve('next/package.json'));
@@ -30,7 +32,7 @@ async function minify(css) {
   return String(result.source());
 }
 
-function displays(css, selector, media) {
+function displays(css, selector, media, query = '(width >= 64rem)') {
   const values = [];
   postcss.parse(css).walkDecls('display', decl => {
     let matchesClass = false;
@@ -38,7 +40,7 @@ function displays(css, selector, media) {
     for (let parent = decl.parent; parent.type !== 'root'; parent = parent.parent) {
       if (parent.type === 'rule' && parent.selectors.includes(selector)) matchesClass = true;
       if (parent.type === 'atrule' && parent.name === 'media') {
-        matchesMedia = parent.params === '(width >= 64rem)';
+        matchesMedia = parent.params.replace(/ /g, '') === query.replace(/ /g, '');
       }
     }
     if (matchesClass && matchesMedia === media) values.push(decl.value);
@@ -50,6 +52,7 @@ async function main() {
   const lock = require('./package-lock.json');
   assert.equal(next('./package.json').version, '13.4.6');
   assert.equal(require('tailwindcss/package.json').version, '4.0.0');
+  assert.equal(require('tailwindcss-v3/package.json').version, '3.3.2');
   for (const name of ['cli', 'node', 'oxide']) {
     assert.equal(lock.packages['node_modules/@tailwindcss/' + name].version, '4.0.0');
   }
@@ -58,6 +61,11 @@ async function main() {
   const fixed = await minify(compile(['--optimize']));
   const showOnDesktop = '.lg\\:flex';
   const hideOnDesktop = '.lg\\:hidden';
+  const baseline = await postcss([tailwind3({
+    content: [{ raw: readFileSync(path.join(__dirname, 'control.html'), 'utf8') }],
+    corePlugins: { preflight: false },
+  })]).process('@tailwind utilities;', { from: undefined });
+  assert.deepEqual(displays(await minify(baseline.css), showOnDesktop, true, '(min-width: 1024px)'), ['flex']);
   assert.deepEqual(displays(raw, showOnDesktop, true), ['flex']);
   assert.deepEqual(displays(broken, showOnDesktop, true), ['none']);
   assert.deepEqual(displays(fixed, showOnDesktop, true), ['flex']);
