@@ -103,5 +103,29 @@ class ResearchTests(unittest.TestCase):
 
 
 
+    def test_terminal_receipts_all_five_and_fail_closed_tamper(self):
+        import copy
+        spec = importlib.util.spec_from_file_location("verify_receipts", ROOT / "verify_receipts.py")
+        receipts = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(receipts)
+        self.assertEqual("PASS_ORIGINAL_RECEIPTS_VERIFIED_OFFLINE", receipts.validate()["status"])
+        for part in range(5):
+            self.assertEqual((1501 + part * 100, 1600 + part * 100),
+                             tuple(receipts.validate(part=part)[k] for k in ("rankStart", "rankEnd")))
+        ledger = json.loads((ROOT / "registry-receipts-manifest.json").read_text())
+        bad = copy.deepcopy(ledger)
+        bad["items"][0]["package"] = "different-package"
+        with self.assertRaises(ValueError):
+            receipts.validate(ledger=bad)
+        bad = copy.deepcopy(ledger)
+        bad["artifactData"][2]["zipSha256"] = "0" * 64
+        with self.assertRaises(ValueError):
+            receipts.validate(ledger=bad)
+        bad = copy.deepcopy(ledger)
+        bad["productionV2Adds"] = 1
+        with self.assertRaises(ValueError):
+            receipts.validate(ledger=bad)
+
+
 if __name__ == "__main__":
     unittest.main()

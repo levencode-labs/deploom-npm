@@ -8,7 +8,98 @@
     "Dataset latest is the pinned historical CSV value; an exact public registry hit does not verify a transition.",
     "Production admission requires separately merged first-party positive and negative receipts plus review/signing/reader gates."
   ],
-  "records": [],
+  "records": [
+    {
+      "id": "angular-eslint-21-to-22-eslint-config",
+      "package": "angular-eslint",
+      "datasetRank": 1565,
+      "transition": {
+        "from": "21.0.0",
+        "to": "22.0.0",
+        "scope": "EXACT_ANNOTATED_GIT_TAGS_AND_SOURCE_MANIFESTS_ONLY"
+      },
+      "source": {
+        "repository": "angular-eslint/angular-eslint",
+        "fromTag": "v21.0.0",
+        "fromTagObjectSha1": "0eade5a227e8eede686584720f97ef54edf72d58",
+        "fromCommit": "9ae353f71d8135399f9e3cb776963a98f4cc4f08",
+        "fromManifestBlobSha1": "0d7ee46e1bcf92466bc7b3936e2f89ba2e6dfdd2",
+        "toTag": "v22.0.0",
+        "toTagObjectSha1": "adcd7e8172b0100a29bd354deed31d66b3fc0c27",
+        "toCommit": "7ee4556badebf8c140ffdefdd0b07b02820d5e96",
+        "toManifestBlobSha1": "ec61fecce0d32690d9490d071a2c5fe30405c1f0",
+        "taggedChangelogBlobSha1": "ae7d7519c201303d3663c6202df0d93c2125b72b",
+        "taggedChangelog": "https://github.com/angular-eslint/angular-eslint/blob/7ee4556badebf8c140ffdefdd0b07b02820d5e96/packages/angular-eslint/CHANGELOG.md"
+      },
+      "manifestEvidence": {
+        "fromPeerEslint": "^8.57.0 || ^9.0.0",
+        "toPeerEslint": "^9.0.0 || ^10.0.0",
+        "sourceAngularCliCatalogPeer": "catalog:other-runtime-dependencies (NOT published npm range)"
+      },
+      "sourceBackedBehavior": [
+        "Official v22.0.0 changelog removes ESLint v8 and legacy .eslintrc support, requiring flat config evaluation.",
+        "In v22 the prefer-on-push-component-change-detection rule now reports explicit opt-outs (Eager/Default) rather than merely omitted changeDetection; rule enters recommended config.",
+        "The source monorepo manifest tightens ESLint peer from v8/v9 to v9/v10; published package metadata must be checked separately."
+      ],
+      "applicability": [
+        "Projects upgrading exact angular-eslint major 21 to 22; inspect actual ESLint config entrypoint and installed versions before making a fix.",
+        "Rule rewrite applies only where source has affected component annotations or extends recommended; never automatically rewrite unrelated Angular code."
+      ],
+      "controlsRecommendedNotRun": [
+        "ESLint 8 + legacy .eslintrc negative; ESLint 9/10 + flat config positive, exact installed npm peers.",
+        "Rule lint positive/negative against missing vs explicit changeDetection annotation; avoid claiming Angular v22 source semantics without recipient testing."
+      ],
+      "codemod": {
+        "status": "NO_TAG_PINNED_AUTOMATED_CODEMOD_EXECUTED"
+      },
+      "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION"
+    },
+    {
+      "id": "vite-css-inject-4-to-5-vite8-peers",
+      "package": "vite-plugin-css-injected-by-js",
+      "datasetRank": 1876,
+      "transition": {
+        "from": "4.0.0",
+        "to": "5.0.0",
+        "scope": "EXACT_PUBLISHED_VERSION_NUMBERS_IN_SOURCE_TAGS_NOT_REGISTRY_TRANSITION_RECEIPTS"
+      },
+      "source": {
+        "repository": "Marco-Prontera/vite-plugin-css-injected-by-js",
+        "fromTag": "v4.0.0",
+        "fromCommit": "6580812430dc01a8113eaafd5704fba3026651fc",
+        "fromManifestBlobSha1": "b12f7f531a65b49c4193e19746ae934a4cfdb474",
+        "fromReadmeBlobSha1": "2fd748ad3c44dfc167acc144de9b9e2ff0d4dfaf",
+        "toTag": "v5.0.0",
+        "toCommit": "8eb979052f18dc37fdfac46acb67c701afeb807d",
+        "toManifestBlobSha1": "27cc4ad5276898d513179e708a33cfd780ee7e07",
+        "toReadmeBlobSha1": "6329093c2ab54ff8fec37a802512ea1273357617",
+        "sourceUrl": "https://github.com/Marco-Prontera/vite-plugin-css-injected-by-js/blob/8eb979052f18dc37fdfac46acb67c701afeb807d/package.json"
+      },
+      "manifestEvidence": {
+        "fromPeerVite": ">2.0.0-0",
+        "toPeerVite": ">8.0.0-0",
+        "fromSourceVersion": "4.0.0",
+        "toSourceVersion": "5.0.0",
+        "datasetRank1876Latest": "5.0.1 (HISTORICAL_CSV_DIFFERENT_FROM_PINNED_5_0_0_TRANSITION)"
+      },
+      "sourceBackedBehavior": [
+        "The tagged v5.0.0 source manifest excludes Vite 7, unlike tagged v4.0.0, and requires Vite 8 prerelease-or-newer semver range.",
+        "The tagged v5 README documents opt-in virtual module virtual:css-injected-by-js for deferred CSS injection, not proof that every existing build must adopt it."
+      ],
+      "applicability": [
+        "Exact migration 4.0.0→5.0.0 only; inspect installed Vite version, plugin config and bundler build output.",
+        "Source tree documents Vite8 peer expectation, not an independent observed npm ERESOLVE or compatibility test."
+      ],
+      "controlsRecommendedNotRun": [
+        "Held Vite 7 strict peer-resolution negative and Vite 8 pinned positive, compare frozen lockfiles and CSS-injected build output.",
+        "Test static CSS, dynamic import and Shadow DOM behavior before recommending virtual-module changes."
+      ],
+      "codemod": {
+        "status": "NO_OFFICIAL_EXECUTED_CODEMOD_CONFIRMED"
+      },
+      "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION"
+    }
+  ],
   "priorityCandidates": [
     {
       "rank": 1546,
@@ -17,21 +108,9 @@
       "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
     },
     {
-      "rank": 1565,
-      "package": "angular-eslint",
-      "topic": "Angular ESLint 21→22 compatibility and workspace configuration",
-      "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
-    },
-    {
       "rank": 1660,
       "package": "vite-plugin-vue-inspector",
       "topic": "Vue inspector plugin 6→7 Vite compatibility",
-      "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
-    },
-    {
-      "rank": 1876,
-      "package": "vite-plugin-css-injected-by-js",
-      "topic": "CSS injection Vite plugin 4→5 behavior/peer boundary",
       "status": "UNKNOWN_UPSTREAM_TAGGED_TRANSITION_NOT_VERIFIED"
     }
   ]
