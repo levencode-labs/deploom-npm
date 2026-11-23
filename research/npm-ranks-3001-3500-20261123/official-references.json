@@ -1,0 +1,13 @@
+{
+  "schema": "deploom.research.official-upstream-migration-references.v1",
+  "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION",
+  "batch": "npm-ranks-3001-3500-20261123",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "notes": [
+    "This collection starts with no verified upstream breaking-change/codemod transitions.",
+    "Pinned CSV and exact npm registry metadata observe version existence/parsed metadata, not recipient migration compatibility.",
+    "Require independently reviewed/merged positive+negative project fixtures, original CI and protected signer/reader gates before v2 admission."
+  ],
+  "records": [],
+  "priorityCandidates": []
+}
