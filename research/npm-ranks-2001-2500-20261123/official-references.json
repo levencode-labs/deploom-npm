@@ -1,0 +1,13 @@
+{
+  "schema": "deploom.research.official-upstream-migration-references.v1",
+  "authority": "REFERENCE_ONLY_NOT_FIXTURE_ADMISSION",
+  "batch": "npm-ranks-2001-2500-20261123",
+  "sourceCsvSha256": "8099b3adae50e7136749baa0aaca2e3e53061b69835f323eefcbb97559990d82",
+  "notes": [
+    "No migration transition/source-exact fixture has been attested for ranks 2001–2500 at intake.",
+    "Pinned CSV latest version and npm exact-version metadata only establish historical inventory/version existence, not breaking changes, codemod applicability or target build acceptance.",
+    "No records, signing, deployment, protected Cache v2 admission or paid API requests are authorized by this research branch."
+  ],
+  "records": [],
+  "priorityCandidates": []
+}

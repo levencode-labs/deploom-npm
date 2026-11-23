@@ -1,0 +1,60 @@
+name: npm ranks 2001-2500 research (read-only)
+on:
+  pull_request:
+    paths:
+      - 'research/npm-ranks-2001-2500-20261123/**'
+      - '.github/workflows/npm-ranks-2001-2500-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    name: pinned CSV and disjoint ranks 2001-2500
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Offline negative and boundary controls
+        run: python -m unittest discover -s research/npm-ranks-2001-2500-20261123 -p 'test_*.py' -v
+      - name: Download immutable source and verify rank 2001-2500 against CSV
+        run: python research/npm-ranks-2001-2500-20261123/batch.py inventory --download
+  public-registry:
+    name: exact npm metadata / batch05 part ${{ matrix.part }}
+    needs: inventory
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        part: [0, 1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: First run probes registry; after receipt reconciliation verify original hashes offline
+        id: receipt
+        shell: bash
+        run: |
+          if [ -f research/npm-ranks-2001-2500-20261123/registry-receipts-manifest.json ]; then
+            python research/npm-ranks-2001-2500-20261123/verify_receipts.py --part ${{ matrix.part }}
+            echo 'mode=archive' >> "$GITHUB_OUTPUT"
+          else
+            python research/npm-ranks-2001-2500-20261123/batch.py probe --part ${{ matrix.part }} --output registry-receipts/part-${{ matrix.part }}.json
+            echo 'mode=probe' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.receipt.outputs.mode == 'probe'
+        with:
+          name: npm-ranks-2001-2500-part-${{ matrix.part }}
+          path: registry-receipts/part-${{ matrix.part }}.json
+          if-no-files-found: error
+          retention-days: 30
