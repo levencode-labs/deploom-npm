@@ -1,0 +1,9 @@
+{
+  "name": "deploom-typescript7-node10-exports-proof",
+  "private": true,
+  "packageManager": "pnpm@12.15.0",
+  "devDependencies": {
+    "typescript6": "npm:typescript@6.0.3",
+    "typescript7": "npm:typescript@7.0.2"
+  }
+}
