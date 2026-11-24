@@ -17,6 +17,12 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - name: Verify Biome 2 config migrator and exclusions
+        working-directory: fixtures/biome2-assist-config
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs

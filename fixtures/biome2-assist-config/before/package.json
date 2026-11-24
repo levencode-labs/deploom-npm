@@ -1,0 +1,8 @@
+{
+  "name": "fixture-biome2-assist-config-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
+}
