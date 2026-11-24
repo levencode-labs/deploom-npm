@@ -1450,6 +1450,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "mongoose9-validate-hook",
+      "kind": "breaking-change",
+      "package": "mongoose",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.24.6",
+          "to": "9.11.3"
+        }
+      ],
+      "title": "Remove the callback from Mongoose 9 pre-validate middleware",
+      "summary": "Keeping a Mongoose 8 pre-validate callback makes valid input fail in Mongoose 9. A synchronous hook preserves the original validation rule.",
+      "conditions": [
+        "A schema registers pre('validate') middleware that calls next."
+      ],
+      "actions": [
+        "For synchronous logic, remove the next parameter and call, preserving the document context and validation rule.",
+        "Use a returned promise for async pre middleware and preserve errors. Confirm the Node.js version meets the target engine (at least 20.19.0 for 9.11.3)."
+      ],
+      "verification": [
+        "Await document.validate() for a normal input, an equality boundary and a rejected value. Check the field-specific error."
+      ],
+      "negativeControls": [
+        {
+          "name": "callback-fails-valid-input",
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(valid.validate(), /next is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/ad3e1a5fddb67664846b4f89be4fecc0c8352035/fixtures/mongoose9-validate-hook/check.cjs",
+        "fixtureSha256": "77a7ccb0512d81dc275f23f6754dd3d3bbe866374d46de4595102eb86877bb5a",
+        "claim": {
+          "package": "mongoose",
+          "from": "8.24.6",
+          "to": "9.11.3",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "storybook9-test-imports",
+      "kind": "breaking-change",
+      "package": "storybook",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.6.18",
+          "to": "9.1.20"
+        }
+      ],
+      "title": "Move Storybook play helpers to storybook/test",
+      "summary": "The old @storybook/test import cannot resolve after that dependency is removed in the Storybook 9 upgrade. The storybook/test subpath preserves a play-style interaction.",
+      "conditions": [
+        "The upgraded workspace removes its standalone @storybook/test dependency and still imports it from stories or helpers."
+      ],
+      "actions": [
+        "Move imports of expect, fn, userEvent and within to storybook/test in the owning workspace.",
+        "Remove the old dependency once the workspace has no imports that still need it."
+      ],
+      "verification": [
+        "Build the workspace Storybook and run a representative play test using an accessible query, click and handler assertion."
+      ],
+      "negativeControls": [
+        {
+          "name": "standalone-test-import-no-longer-resolves",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /ERR_MODULE_NOT_FOUND/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/8ea29418d63473cd3d23a920f609847caca75bbb/fixtures/storybook9-test-imports/check.cjs",
+        "fixtureSha256": "c2c2f6315c8b5abcfa9dc83bfe0be9fe92b67788442d45e47b48f362068db73f",
+        "claim": {
+          "package": "storybook",
+          "from": "8.6.18",
+          "to": "9.1.20",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
