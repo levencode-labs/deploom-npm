@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "0004cc3f17e1f67eb4fe6fb87bc3b945c8e2980c0f1227ddf485c0d704710ce4",
+  "claims": [
+    {
+      "package": "vue-router",
+      "from": "3.6.5",
+      "to": "4.5.1",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
