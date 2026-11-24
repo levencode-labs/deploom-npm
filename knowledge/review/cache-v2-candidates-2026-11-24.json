@@ -3313,6 +3313,60 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "jsdom27-virtual-console-forwarding",
+      "kind": "breaking-change",
+      "package": "jsdom",
+      "fromMajor": 26,
+      "toMajor": 27,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "26.1.0",
+          "to": "27.0.0"
+        }
+      ],
+      "title": "Preserve the virtual console error policy when moving to jsdom 27",
+      "summary": "jsdom 27.0.0 removes VirtualConsole.sendTo. Changing the method alone leaves omitJSDOMErrors ineffective. Using forwardTo with jsdomErrors set to none preserved page logs, the explicit jsdomError listener and the suppressed default forwarding in the pinned replay.",
+      "conditions": [
+        "The project or an installed adapter calls sendTo on a jsdom VirtualConsole while upgrading to jsdom 27.",
+        "Map the suppression option only when the old code set omitJSDOMErrors to true, and keep any existing jsdomError listener."
+      ],
+      "actions": [
+        "For application-owned code, use VirtualConsole.forwardTo. Replace omitJSDOMErrors: true with jsdomErrors: 'none' when preserving suppression.",
+        "If the call is inside an installed test adapter, verify the adapter release supports the target jsdom or retain the working jsdom version until it can be upgraded."
+      ],
+      "verification": [
+        "Run the test setup through the actual runner and confirm a representative page message still reaches the configured sink.",
+        "Trigger a jsdom error and verify the explicit handler and default forwarding match the original policy."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-method-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => replay(after, legacy), /sendTo is not a function/);"
+        },
+        {
+          "name": "method-only-changing-error-policy",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(renameOnly.length, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f29aee5cbbd316b188c5b567a42a33da3c5020cd/fixtures/jsdom27-virtual-console/check.cjs",
+        "fixtureSha256": "3e1dae895bb6aaa6ae0c3ea8708df2e8a8ba8daa05a29d5dbaa7f2bc23f0cca5",
+        "claim": {
+          "package": "jsdom",
+          "from": "26.1.0",
+          "to": "27.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
