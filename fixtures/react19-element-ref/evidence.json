@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "478e61e6b79f9dd476a7850157cfdeddb3cf24b4dd26de66241bee144822a975",
+  "claims": [
+    {
+      "package": "react",
+      "from": "18.3.1",
+      "to": "19.3.1",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
