@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "d82f3d4457e1bd097dc51253303bb777cb0934078071cc8dc8b775ab5dd512d6",
+  "claims": [
+    {
+      "package": "next",
+      "from": "15.5.6",
+      "to": "16.4.5",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}

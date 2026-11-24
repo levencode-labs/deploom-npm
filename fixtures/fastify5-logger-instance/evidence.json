@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "94c05bd0bb664fd225f7f91889d4f98a9a35a57fdacc6867b49869e48a750e29",
+  "claims": [
+    {
+      "package": "fastify",
+      "from": "4.29.1",
+      "to": "5.12.5",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

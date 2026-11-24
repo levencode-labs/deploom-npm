@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "326630af9fbd15eb0e4c6254d8a34abd2530af80d5914c4bcb0e2ac16db532fc",
+  "claims": [
+    {
+      "package": "vue",
+      "from": "3.4.38",
+      "to": "3.5.13",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

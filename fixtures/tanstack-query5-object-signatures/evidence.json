@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "e660f80c1ab05b281201f33d0b35b20359d81a52f7d040afaf9f1982cd5cf8b1",
+  "claims": [
+    {
+      "package": "@tanstack/react-query",
+      "from": "4.36.1",
+      "to": "5.75.5",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

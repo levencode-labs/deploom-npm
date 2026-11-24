@@ -1,0 +1,9 @@
+{
+  "name": "deploom-vue35-reactive-props-destructure-before",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "vue": "3.4.38",
+    "jsdom": "25.0.1"
+  }
+}

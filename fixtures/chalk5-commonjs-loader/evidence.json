@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "c53ce0155a5fbaf7bcf70d652c430c70b412af95d8b1d7bb9b0cd8db5e9e95d1",
+  "claims": [
+    {
+      "package": "chalk",
+      "from": "4.1.2",
+      "to": "5.6.2",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

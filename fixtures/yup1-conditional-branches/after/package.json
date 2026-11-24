@@ -1,0 +1,8 @@
+{
+  "name": "fixture-yup1-conditional-branches-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "yup": "1.7.1"
+  }
+}

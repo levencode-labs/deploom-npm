@@ -1,0 +1,8 @@
+{
+  "name": "fixture-esbuild017-watch-context-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "esbuild": "0.15.6"
+  }
+}

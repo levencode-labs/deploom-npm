@@ -1,0 +1,9 @@
+{
+  "name": "deploom-axios1-interceptor-headers-after",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "axios": "1.21.0",
+    "typescript": "5.9.2"
+  }
+}

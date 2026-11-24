@@ -1,0 +1,11 @@
+{
+  "name": "deploom-next-lint-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "next": "16.4.5",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "eslint": "9.0.0"
+  }
+}

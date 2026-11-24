@@ -1,0 +1,10 @@
+{
+  "name": "fixture-user-event14-await-interactions-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/user-event": "13.5.0",
+    "@testing-library/dom": "9.3.3",
+    "jsdom": "25.0.1"
+  }
+}

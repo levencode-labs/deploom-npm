@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "e02d78627056678fe0534edf2c0613e09764300df74b9a55486c405d09b94f80",
+  "claims": [
+    {
+      "package": "@biomejs/biome",
+      "from": "1.9.4",
+      "to": "2.0.4",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "23239e6acbe7de0f9e61ba588b9f9f20bb60e7b9d123af19925e75c247514b73",
+  "claims": [
+    {
+      "package": "dotenv",
+      "from": "16.6.1",
+      "to": "18.0.8",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

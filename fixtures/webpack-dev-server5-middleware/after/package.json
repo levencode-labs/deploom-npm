@@ -1,0 +1,9 @@
+{
+  "name": "deploom-wds5-hook-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "webpack": "5.100.2",
+    "webpack-dev-server": "5.2.2"
+  }
+}

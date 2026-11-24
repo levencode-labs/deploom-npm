@@ -1,0 +1,13 @@
+{
+  "name": "deploom-next-i18next16-pages-exports-after",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "next-i18next": "16.5.1",
+    "next": "16.4.5",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "i18next": "25.8.13",
+    "react-i18next": "16.5.4"
+  }
+}

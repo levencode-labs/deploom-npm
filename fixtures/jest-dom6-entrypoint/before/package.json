@@ -1,0 +1,8 @@
+{
+  "name": "jest-dom6-entrypoint-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "5.17.0"
+  }
+}

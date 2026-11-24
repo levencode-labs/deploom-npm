@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "cca6a3ae4bbc927b9920d4654c109445d28cc42fa3d29054ba8082d9cf63ef3e",
+  "claims": [
+    {
+      "package": "stylelint",
+      "from": "15.10.1",
+      "to": "16.2.0",
+      "check": "lint",
+      "outcome": "passed"
+    }
+  ]
+}

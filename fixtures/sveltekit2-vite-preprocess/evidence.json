@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "41c4f5bd4fa497a50cd1133217d01f67e31339be4e8308ed5d92fc420d8c86ad",
+  "claims": [
+    {
+      "package": "@sveltejs/kit",
+      "from": "1.30.4",
+      "to": "2.70.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -1,0 +1,473 @@
+name: Migration fixtures
+on:
+  push:
+    branches: [main]
+    paths: ['fixtures/**', '.github/workflows/migration-fixtures.yml']
+  pull_request:
+    paths: ['fixtures/**', '.github/workflows/migration-fixtures.yml']
+permissions:
+  contents: read
+jobs:
+  fixtures-1:
+    name: Migration fixtures (1/4)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: "Check the TypeScript 6 ES5 target transition"
+        working-directory: fixtures/typescript6-es5-target
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Check the Prettier 3 format result"
+        working-directory: fixtures/prettier3-await-format
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Verify the Vite 8 Vue plugin peer transition"
+        working-directory: fixtures/vite8-vue-peer
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify React 19 element classification in snapshot tooling"
+        working-directory: fixtures/react19-snapshot-classifier
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify custom Fastify 5 logger registration"
+        working-directory: fixtures/fastify5-logger-instance
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Vue 3.5 reactive prop destructuring"
+        working-directory: fixtures/vue35-reactive-props-destructure
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Axios 1 interceptor header migration"
+        working-directory: fixtures/axios1-interceptor-headers
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Svelte 5 imperative client mount"
+        working-directory: fixtures/svelte5-client-mount
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Storybook 9 test utility imports"
+        working-directory: fixtures/storybook9-test-imports
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify React Hook Form 7 registration codemod"
+        working-directory: fixtures/rhf7-register-codemod
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Pino 10 pretty transport output"
+        working-directory: fixtures/pino10-pretty-transport
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Sentry 8 tracing integration with local event transport"
+        working-directory: fixtures/sentry8-browser-tracing
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify RxJS 7 single-emission Promise migration"
+        working-directory: fixtures/rxjs7-first-value-from
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify GraphQL 16 argument object execution"
+        working-directory: fixtures/graphql16-object-arguments
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify node-cron 4 explicit task start"
+        working-directory: fixtures/node-cron4-start-gate
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Chalk 5 dynamic import from CommonJS"
+        working-directory: fixtures/chalk5-commonjs-loader
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Stylelint 16 hex color policy"
+        working-directory: fixtures/stylelint16-hex-policy
+        run: |
+          npm ci --prefix before --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
+      - name: "Verify the React Markdown 10 wrapper"
+        working-directory: fixtures/react-markdown10-classname
+        run: |
+          npm ci --prefix before --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
+
+  fixtures-2:
+    name: Migration fixtures (2/4)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: "Check recursive ESLint ignores in flat config"
+        working-directory: fixtures/eslint9-recursive-ignore
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Check the Jest 30 test path filter"
+        working-directory: fixtures/jest30-test-path-patterns
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Verify the Webpack 4 hash fix under OpenSSL 3"
+        working-directory: fixtures/webpack4-openssl
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify the Next.js 16 Webpack-only configuration guard"
+        working-directory: fixtures/next16-webpack-guard
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify dotenv 18 quiet option preserves parsed values"
+        working-directory: fixtures/dotenv18-quiet
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Vue Router 4 SSR navigation readiness"
+        working-directory: fixtures/vue-router4-ssr-ready
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify TanStack Query 5 object-form calls"
+        working-directory: fixtures/tanstack-query5-object-signatures
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Redux Toolkit 2 extraReducers builder"
+        working-directory: fixtures/rtk2-extra-reducers
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify MSW 2 HTTP handler responses"
+        working-directory: fixtures/msw2-http-response
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Sass 1.80 module imports under strict deprecations"
+        working-directory: fixtures/sass180-module-imports
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Apollo Client 4 React exports and cached query"
+        working-directory: fixtures/apollo4-react-entrypoints
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify glob 10 Promise workspace matching"
+        working-directory: fixtures/glob10-promise-workspace-match
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify esbuild 0.17 watch context rebuild"
+        working-directory: fixtures/esbuild017-watch-context
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify SvelteKit 2 preprocess import and compilation"
+        working-directory: fixtures/sveltekit2-vite-preprocess
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Faker 9 bounded integer fixtures"
+        working-directory: fixtures/faker9-bounded-integers
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Jest 28 explicit jsdom dependency"
+        working-directory: fixtures/jest28-explicit-jsdom
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix held --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify webpack-dev-server 5 middleware ordering"
+        working-directory: fixtures/webpack-dev-server5-middleware
+        run: |
+          npm ci --prefix before --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
+      - name: "Verify jest-dom 6 global matcher setup"
+        working-directory: fixtures/jest-dom6-entrypoint
+        run: |
+          npm ci --prefix before --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
+
+  fixtures-3:
+    name: Migration fixtures (3/4)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: "Check the Next.js 16 lint command migration"
+        working-directory: fixtures/next16-lint-cli
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Check the Zod 4 record key schema"
+        working-directory: fixtures/zod4-record-key-schema
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Verify Headless UI state variants on Tailwind 4"
+        working-directory: fixtures/tailwind4-headlessui-variants
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify React DOM 19 transitions with explicit nodeRef"
+        working-directory: fixtures/react-dom19-transition-ref
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify next-i18next 16 Pages Router exports"
+        working-directory: fixtures/next-i18next16-pages-exports
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify the Prisma 7 datasource config boundary"
+        working-directory: fixtures/prisma7-datasource-config
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify React Router 7 relative links under splat routes"
+        working-directory: fixtures/react-router7-relative-splat
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Express 5 root-matching wildcard"
+        working-directory: fixtures/express5-root-wildcard
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Astro 6 Content Layer route generation"
+        working-directory: fixtures/astro6-content-layer
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify date-fns 3 named imports, types and bundled output"
+        working-directory: fixtures/date-fns3-named-imports
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify MUI 7 Grid entry point and responsive widths"
+        working-directory: fixtures/mui7-grid-responsive-size
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Redis 4 explicit connection"
+        working-directory: fixtures/redis4-explicit-connect
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Ajv 8 date validation with formats"
+        working-directory: fixtures/ajv8-date-formats
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Marked heading anchor migration"
+        working-directory: fixtures/marked17-heading-anchors
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify date-fns-tz 3 daylight-saving conversion"
+        working-directory: fixtures/date-fns-tz3-wall-time
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Ember 7 explicit test helpers"
+        working-directory: fixtures/ember7-test-helpers
+        run: |
+          npm pack ember-source@6.10.1 ember-source@7.2.0 typescript@6.0.3 @ember/test-helpers@5.4.3 --ignore-scripts
+          node check.cjs
+      - name: "Verify Rollup 4 optional native package"
+        working-directory: fixtures/rollup4-native-optional
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --omit=optional --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs omitted
+          npm ci --prefix after --include=optional --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs restored
+      - name: "Verify jsdom 27 virtual console forwarding"
+        working-directory: fixtures/jsdom27-virtual-console
+        run: |
+          npm ci --prefix before --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
+
+  fixtures-4:
+    name: Migration fixtures (4/4)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: "Check React element ref compatibility"
+        working-directory: fixtures/react19-element-ref
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
+      - name: "Check Vitest 5 custom matcher declarations"
+        working-directory: fixtures/vitest5-matcher-declarations
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify TypeScript 6 baseUrl migration for explicit and bare aliases"
+        working-directory: fixtures/typescript6-baseurl-alias
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify TypeScript 6 CSS side-effect import declarations"
+        working-directory: fixtures/typescript6-side-effect-imports
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify node-aware custom rules on ESLint 9"
+        working-directory: fixtures/eslint9-rule-scope
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Zod 4 request validation error responses"
+        working-directory: fixtures/zod4-error-issues
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Next.js 16 async route parameters"
+        working-directory: fixtures/next16-async-route-params
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Mongoose 9 pre-validate middleware"
+        working-directory: fixtures/mongoose9-validate-hook
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Yup 1 conditional schema branches"
+        working-directory: fixtures/yup1-conditional-branches
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify user-event 14 async typing and focus"
+        working-directory: fixtures/user-event14-await-interactions
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Commander 7 explicit options access"
+        working-directory: fixtures/commander7-options
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Angular 19 NgModule declaration migration"
+        working-directory: fixtures/angular19-ngmodule-standalone
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Socket.IO 4 legacy client handshakes"
+        working-directory: fixtures/socketio4-legacy-handshake
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Biome 2 config migrator and exclusions"
+        working-directory: fixtures/biome2-assist-config
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify tRPC 11 HTTP link transformer"
+        working-directory: fixtures/trpc11-link-transformer
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Chokidar 4 glob watcher migration"
+        working-directory: fixtures/chokidar4-glob-watch
+        run: |
+          npm ci --prefix before --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
+      - name: "Verify jQuery 4 with the legacy Fancybox gallery"
+        working-directory: fixtures/jquery4-fancybox
+        run: |
+          npm ci --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs

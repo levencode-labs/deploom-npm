@@ -1,0 +1,10 @@
+{
+  "name": "deploom-fixture-vite8-vue-peer-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "vite": "5.0.10",
+    "@vitejs/plugin-vue": "4.5.0",
+    "vue": "3.3.8"
+  }
+}

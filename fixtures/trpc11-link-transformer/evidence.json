@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "4ce885c119497978262a1e08ff3e0443fecc84bea1af07ca8a2e7121376be378",
+  "claims": [
+    {
+      "package": "@trpc/client",
+      "from": "10.45.4",
+      "to": "11.19.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

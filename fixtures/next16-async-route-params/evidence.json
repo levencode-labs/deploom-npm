@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "ffe1a4f09d2111874610fca3e3b1919b6a0ab6ee46caed1d2d37d757aa9f6146",
+  "claims": [
+    {
+      "package": "next",
+      "from": "14.2.18",
+      "to": "16.4.2",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

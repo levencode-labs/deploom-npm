@@ -1,0 +1,8 @@
+{
+  "name": "fixture-astro6-content-layer-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "astro": "6.4.8"
+  }
+}

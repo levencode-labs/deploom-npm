@@ -1,0 +1,10 @@
+{
+  "name": "deploom-vue-router4-ssr-ready-before",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "vue-router": "3.6.5",
+    "vue": "2.7.16",
+    "vue-server-renderer": "2.7.16"
+  }
+}

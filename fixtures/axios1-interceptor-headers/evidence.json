@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "61543676a2d710507aa325f34c995f55bcb8c5cc2a5cb6ec1cfd2f7a35e2810b",
+  "claims": [
+    {
+      "package": "axios",
+      "from": "0.23.0",
+      "to": "1.21.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    }
+  ]
+}

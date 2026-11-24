@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "807b259c5dafe4d6e4ccd5e630a4fb810ee66481186aef229795a89a2b012638",
+  "claims": [
+    {
+      "package": "@sentry/react",
+      "from": "7.120.4",
+      "to": "8.55.2",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

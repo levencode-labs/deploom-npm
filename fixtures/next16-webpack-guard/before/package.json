@@ -1,0 +1,10 @@
+{
+  "name": "deploom-next16-webpack-guard-before",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "next": "15.5.6",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  }
+}

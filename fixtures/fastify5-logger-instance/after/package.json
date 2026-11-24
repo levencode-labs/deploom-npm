@@ -1,0 +1,9 @@
+{
+  "name": "deploom-fastify5-logger-instance-after",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "fastify": "5.12.5",
+    "pino": "9.6.0"
+  }
+}

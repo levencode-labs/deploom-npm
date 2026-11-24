@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "15a39e0b4a8bf58becfdeec5b46920e26fc988b2515f4d7ee6f4b398949e4a35",
+  "claims": [
+    {
+      "package": "zod",
+      "from": "3.25.76",
+      "to": "4.6.7",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

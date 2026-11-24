@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "0c24b21c79188044d9ad00327b53cf8040c8dccd7e1e3d7ade6e2ee392734c00",
+  "claims": [
+    {
+      "package": "@reduxjs/toolkit",
+      "from": "1.9.3",
+      "to": "2.13.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

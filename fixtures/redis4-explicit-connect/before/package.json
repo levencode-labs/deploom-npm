@@ -1,0 +1,8 @@
+{
+  "name": "fixture-redis4-explicit-connect-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "redis": "3.1.2"
+  }
+}

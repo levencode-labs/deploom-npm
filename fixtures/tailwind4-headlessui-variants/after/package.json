@@ -1,0 +1,11 @@
+{
+  "name": "deploom-fixture-tailwind4-headlessui-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "tailwindcss": "4.3.3",
+    "@headlessui/tailwindcss": "0.2.2",
+    "postcss": "8.4.38",
+    "@tailwindcss/postcss": "4.3.3"
+  }
+}

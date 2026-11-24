@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "aadf3c98aaebf905337cb10bb8a2aa4d4bec152d690b99952f10c94ad3886bd4",
+  "claims": [
+    {
+      "package": "react-hook-form",
+      "from": "6.15.4",
+      "to": "7.4.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

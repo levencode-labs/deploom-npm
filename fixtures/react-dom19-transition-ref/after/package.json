@@ -1,0 +1,11 @@
+{
+  "name": "deploom-react-dom19-transition-ref-after",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-transition-group": "4.4.5",
+    "jsdom": "25.0.1"
+  }
+}

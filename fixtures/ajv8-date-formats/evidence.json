@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "b6862900292b57b215a831bc06b00c8d7a2358eabeb968333d1388e4c6d6d03b",
+  "claims": [
+    {
+      "package": "ajv",
+      "from": "6.15.0",
+      "to": "8.20.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

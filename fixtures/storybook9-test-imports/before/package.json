@@ -1,0 +1,10 @@
+{
+  "name": "fixture-storybook9-test-imports-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "storybook": "8.6.18",
+    "@storybook/test": "8.6.15",
+    "jsdom": "25.0.1"
+  }
+}

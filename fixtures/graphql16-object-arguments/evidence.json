@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "985b31dd5534f2a80750ebb0b791944bf0d62e6b7438c6a7f03800cb41f62455",
+  "claims": [
+    {
+      "package": "graphql",
+      "from": "15.8.0",
+      "to": "16.13.2",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
