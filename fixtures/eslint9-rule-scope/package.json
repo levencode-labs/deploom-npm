@@ -1,0 +1,9 @@
+{
+  "name": "deploom-eslint9-rule-scope",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "eslint-before": "npm:eslint@8.57.1",
+    "eslint-after": "npm:eslint@9.0.0"
+  }
+}
