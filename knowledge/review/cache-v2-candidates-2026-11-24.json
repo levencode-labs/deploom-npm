@@ -2504,6 +2504,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "sveltekit2-vite-preprocess",
+      "kind": "breaking-change",
+      "package": "@sveltejs/kit",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.30.4",
+          "to": "2.70.0"
+        }
+      ],
+      "title": "Move vitePreprocess to the Vite plugin in SvelteKit 2",
+      "summary": "SvelteKit 2 no longer exports vitePreprocess from @sveltejs/kit/vite. The Vite plugin export restores preprocessing and component compilation.",
+      "conditions": [
+        "The Svelte config imports vitePreprocess from @sveltejs/kit/vite."
+      ],
+      "actions": [
+        "Import vitePreprocess from @sveltejs/vite-plugin-svelte and align the plugin with the target Svelte and Vite versions.",
+        "Keep the project's preprocessing options when switching import paths."
+      ],
+      "verification": [
+        "Preprocess and compile a component that uses an affected language such as TypeScript."
+      ],
+      "negativeControls": [
+        {
+          "name": "kit-vite-v2-missing-vitepreprocess-export",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /does not provide an export named 'vitePreprocess'/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/fdbc21ef6c28aac686f55d160aa32b77dc5ac313/fixtures/sveltekit2-vite-preprocess/check.cjs",
+        "fixtureSha256": "41c4f5bd4fa497a50cd1133217d01f67e31339be4e8308ed5d92fc420d8c86ad",
+        "claim": {
+          "package": "@sveltejs/kit",
+          "from": "1.30.4",
+          "to": "2.70.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "marked17-heading-anchors",
+      "kind": "breaking-change",
+      "package": "marked",
+      "fromMajor": 4,
+      "toMajor": 17,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.3.0",
+          "to": "17.0.1"
+        }
+      ],
+      "title": "Restore Marked heading IDs with the GFM extension",
+      "summary": "The Marked 17 renderer leaves intra-document links in place while dropping heading IDs. The GFM heading extension restores the tested anchor IDs, including repeated headings.",
+      "conditions": [
+        "Links, bookmarks or a table of contents depend on heading IDs emitted by the old Marked renderer."
+      ],
+      "actions": [
+        "Register a compatible marked-gfm-heading-id extension on the renderer.",
+        "Compare existing slug conventions and prefixes for representative documents."
+      ],
+      "verification": [
+        "Render duplicate headings and confirm an intra-document link points to the matching ID."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-renderer-omits-heading-ids",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(headingIds(held), [])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/91d89fb255f83df1669958e5e00937a37384f29f/fixtures/marked17-heading-anchors/check.cjs",
+        "fixtureSha256": "f081f21daae70710f1da3da53748234b2a88e8b968963bf051612c63eab9b0fe",
+        "claim": {
+          "package": "marked",
+          "from": "4.3.0",
+          "to": "17.0.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
