@@ -27,6 +27,14 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Verify Rollup 4 optional native package
+        working-directory: fixtures/rollup4-native-optional
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          npm ci --prefix after --omit=optional --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs omitted
+          npm ci --prefix after --include=optional --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs restored
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
