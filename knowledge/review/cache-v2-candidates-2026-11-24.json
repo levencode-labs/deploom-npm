@@ -1544,6 +1544,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "msw2-http-response",
+      "kind": "breaking-change",
+      "package": "msw",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.3.0",
+          "to": "2.13.4"
+        }
+      ],
+      "title": "Preserve HTTP mock behavior when moving to MSW 2",
+      "summary": "MSW 2 rejects the held rest.get handler. Using http.get and HttpResponse.json preserves the fixture's payload, status and response headers.",
+      "conditions": [
+        "Tests register MSW 1 HTTP handlers through rest and return composed status, JSON and header transformers."
+      ],
+      "actions": [
+        "Use http handlers and their params argument. Pass the original body, status and headers to HttpResponse.json.",
+        "Keep any project-specific setup, polyfills and worker checks in scope when verifying the receiving test suite."
+      ],
+      "verification": [
+        "Run a representative mock request for both success and error. Assert JSON, status, headers and the unhandled route behavior."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-rest-handler-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /Cannot read properties of undefined \\(reading 'get'\\)/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/86c0e1beea3d6017348c9493131f1595afa2e6e6/fixtures/msw2-http-response/check.cjs",
+        "fixtureSha256": "99f0ad93add166171b76ab7fe5e5c0f66c96140d742eae3e688bebfee05d5487",
+        "claim": {
+          "package": "msw",
+          "from": "1.3.0",
+          "to": "2.13.4",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "astro6-content-layer",
+      "kind": "breaking-change",
+      "package": "astro",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.18.2",
+          "to": "6.4.8"
+        }
+      ],
+      "title": "Use an explicit Content Layer loader on Astro 6",
+      "summary": "Astro 6 rejects the legacy src/content/config.ts in the fixture. An explicit loader and migrated entry consumers restore the rendered route.",
+      "conditions": [
+        "The site has a legacy src/content/config.ts collection and reads its entries to build static pages."
+      ],
+      "actions": [
+        "Move collection configuration to src/content.config.ts and add the appropriate loader.",
+        "Replace legacy slug and entry.render() reads as needed. Compare output paths for custom slugs and nested IDs."
+      ],
+      "verification": [
+        "Build the site and verify the same entry URLs, rendered Markdown and an unrelated static page."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-content-config-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.log, /LegacyContentConfigError/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f45e437788a55bc03f21d3b91c17db0778c372f1/fixtures/astro6-content-layer/check.cjs",
+        "fixtureSha256": "cc9f06a49d533df4222e6d84b6b7e04fc338f1c22f82b3961dc268cc2c7309e6",
+        "claim": {
+          "package": "astro",
+          "from": "5.18.2",
+          "to": "6.4.8",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
