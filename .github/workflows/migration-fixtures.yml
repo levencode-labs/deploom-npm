@@ -19,6 +19,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: "Verify exact TypeScript migration recipes"
+        working-directory: fixtures/typescript-csv-transitions
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
+      - name: "Verify Playwright route and accessibility migrations"
+        working-directory: fixtures/playwright-api-transitions
+        run: |
+          npm ci --prefix test --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix component-before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix component-after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - name: "Check the TypeScript 6 ES5 target transition"
         working-directory: fixtures/typescript6-es5-target
         run: |

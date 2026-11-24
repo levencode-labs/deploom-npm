@@ -1,0 +1,26 @@
+{
+  "fixtureSha256": "909c8f63518c8d927f2daba03ebbed4f05d09421fb20d607853f1116a82b6b38",
+  "claims": [
+    {
+      "package": "@playwright/test",
+      "from": "1.51.1",
+      "to": "1.52.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/experimental-ct-react17",
+      "from": "1.51.1",
+      "to": "1.52.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.56.1",
+      "to": "1.57.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

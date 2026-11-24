@@ -1,0 +1,54 @@
+{
+  "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+  "claims": [
+    {
+      "package": "typescript",
+      "from": "5.3.3",
+      "to": "5.4.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.4.5",
+      "to": "5.5.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.5.4",
+      "to": "5.6.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.6.3",
+      "to": "5.7.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.7.3",
+      "to": "5.8.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.8.3",
+      "to": "5.9.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "6.0.2",
+      "to": "7.0.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    }
+  ]
+}
