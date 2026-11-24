@@ -1,0 +1,1455 @@
+{
+  "schema": 2,
+  "records": [
+    {
+      "kind": "breaking-change",
+      "id": "typescript6-explicit-es5-target",
+      "title": "Check explicit ES5 targets before adopting TypeScript 6",
+      "summary": "TypeScript 6.0.3 reports TS5107 for explicit ES5 targets accepted by 5.9.2.",
+      "conditions": [
+        "The effective tsconfig compiler options select ES5, including inherited configurations."
+      ],
+      "actions": [
+        "Raise the affected target to ES2015 or later if the runtime floor allows it.",
+        "If consumers still require ES5, verify the temporary TypeScript 6 ignoreDeprecations setting and plan target removal."
+      ],
+      "verification": [
+        "Rerun the owning typecheck and tests. Confirm emitted syntax meets the runtime support policy."
+      ],
+      "schema": 2,
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.9.2",
+          "to": "6.0.3"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "held-es5-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(targetDiagnostics(candidate, options), [5107])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/c6eb725a081137e2c9904197144e5e5007465704/fixtures/typescript6-es5-target/check.cjs",
+        "fixtureSha256": "66aff5c66a7cc5253bf45c718460bba1b2414f22321bd873db3d1f4ed2b01556",
+        "claim": {
+          "package": "typescript",
+          "from": "5.9.2",
+          "to": "6.0.3",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Preserve recursive coverage ignores in ESLint 9",
+      "summary": "Moving a bare ESLint 8 coverage ignore to a root-only flat pattern exposes nested coverage reports to lint.",
+      "conditions": [
+        "The legacy .eslintignore has a bare coverage entry and the project intends to ignore that basename recursively."
+      ],
+      "actions": [
+        "In flat config use a global ignores-only object containing **/coverage/ to preserve the recursion."
+      ],
+      "verification": [
+        "Check root and nested coverage paths and one ordinary source path. Run the owning lint command."
+      ],
+      "schema": 2,
+      "id": "eslint9-recursive-ignore",
+      "package": "eslint",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.57.1",
+          "to": "9.0.0"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "nested-coverage-no-longer-ignored",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(wrong, [true, false, false])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/b160d94082fd7cd71a63936eaddc76b2862326df/fixtures/eslint9-recursive-ignore/check.cjs",
+        "fixtureSha256": "3e082eb95ff14a1912c0599008b29154f811d6de9b6a99ec4a639d4871490cad",
+        "claim": {
+          "package": "eslint",
+          "from": "8.57.1",
+          "to": "9.0.0",
+          "check": "lint",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Replace the removed Next.js lint command",
+      "summary": "Keeping next lint on Next.js 16.4.5 fails. Running the ESLint CLI with the intended scope restores the lint check.",
+      "conditions": [
+        "An application or CI script still invokes next lint."
+      ],
+      "actions": [
+        "Migrate the ESLint configuration as needed and replace next lint with the ESLint CLI. Preserve Next-specific rules and the intended file scope."
+      ],
+      "verification": [
+        "Check one clean source and one deliberate rule violation before running the regular lint command."
+      ],
+      "schema": 2,
+      "id": "next16-lint-cli",
+      "package": "next",
+      "fromMajor": 15,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "15.2.8",
+          "to": "16.4.5"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "next-lint-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.output, /Invalid project directory/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/b248dc39fb6ec1cf9c714cd1dac4002db56fe367/fixtures/next16-lint-cli/check.cjs",
+        "fixtureSha256": "a1683354fe8a33277655642aa1f7c4ca08738af4913af05508a404406841f57a",
+        "claim": {
+          "package": "next",
+          "from": "15.2.8",
+          "to": "16.4.5",
+          "check": "lint",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Read React element refs with the supported major-version API",
+      "summary": "Reading element.ref warns on React 19. Reading element.props.ref warns and loses the callback on React 17 and 18 in the fixture.",
+      "conditions": [
+        "Code reads ref from a React element object and may support both React 18 and React 19."
+      ],
+      "actions": [
+        "Read props.ref on React 19. Preserve a compatible element.ref path for older supported consumers."
+      ],
+      "verification": [
+        "Check callback identity, a missing ref, and development warnings on every supported major."
+      ],
+      "schema": 2,
+      "id": "react19-element-ref",
+      "package": "react",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.3.1",
+          "to": "19.3.1"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-element-ref-warns",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(warnings.join('\\n'), /element\\.ref.*React 19/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/bc4753d673808039433cbef95be2ba71cf537aff/fixtures/react19-element-ref/check.cjs",
+        "fixtureSha256": "478e61e6b79f9dd476a7850157cfdeddb3cf24b4dd26de66241bee144822a975",
+        "claim": {
+          "package": "react",
+          "from": "18.3.1",
+          "to": "19.3.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Await Prettier 3 format results",
+      "summary": "The format API returns a promise on Prettier 3. Consuming it as text fails; awaiting it preserves the formatted output.",
+      "conditions": [
+        "A direct prettier.format call is used synchronously as text."
+      ],
+      "actions": [
+        "Await the result before passing it to formatters, file writes or string operations. Review affected wrappers and callers for async propagation."
+      ],
+      "verification": [
+        "Check the expected formatted string and confirm a rejected parse reaches the error path."
+      ],
+      "schema": 2,
+      "id": "prettier3-await-format",
+      "package": "prettier",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.8.8",
+          "to": "3.0.0"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "sync-format-result-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => consume(pending), TypeError)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/15172cf670b04b311d24556def87f95a75cf00d6/fixtures/prettier3-await-format/check.cjs",
+        "fixtureSha256": "edb167566e61b9b8ea170bba8d6cdd7255a2705d308bf9fc24efd00f4aea1644",
+        "claim": {
+          "package": "prettier",
+          "from": "2.8.8",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Preserve Jest 30 test path selection",
+      "summary": "Jest 30 rejects the singular --testPathPattern flag. Replacing it with --testPathPatterns retains the same focused test selection.",
+      "conditions": [
+        "An npm script or CI job invokes Jest with --testPathPattern."
+      ],
+      "actions": [
+        "Rename the CLI flag and preserve the original patterns and selection scope."
+      ],
+      "verification": [
+        "Compare the selected test inventory and verify a deliberately excluded suite stays excluded."
+      ],
+      "schema": 2,
+      "id": "jest30-test-path-patterns",
+      "package": "jest",
+      "fromMajor": 29,
+      "toMajor": 30,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "29.7.0",
+          "to": "30.5.2"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "singular-test-path-flag-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /testPathPattern.*replaced.*testPathPatterns/si)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/7af296efbce3e58c404b1993a58aa0fdac9ade35/fixtures/jest30-test-path-patterns/check.cjs",
+        "fixtureSha256": "e32b17d9d8db9c5a720fb247f8d7213a83dd120d290102c03970616aa6cbdeca",
+        "claim": {
+          "package": "jest",
+          "from": "29.7.0",
+          "to": "30.5.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Pass a key schema to Zod 4 records",
+      "summary": "The single-argument declaration of z.record reaches TS2554 with Zod 4.6.7; the explicit unrestricted string key form preserves the tested value behavior.",
+      "conditions": [
+        "A z.record call supplies only the value schema and intends unrestricted string keys."
+      ],
+      "actions": [
+        "Pass z.string() as the key schema and retain the value schema and any default."
+      ],
+      "verification": [
+        "Typecheck and parse populated, missing, empty and invalid cases."
+      ],
+      "schema": 2,
+      "id": "zod4-record-key-schema",
+      "package": "zod",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.25.76",
+          "to": "4.6.7"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "single-argument-record-rejected-by-types",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(diagnostics('zod-after', ''), [2554])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/2a89b3af83f511dc494e055a7fbe5186a70e6351/fixtures/zod4-record-key-schema/check.cjs",
+        "fixtureSha256": "adefeb4a5843bd167160ecc8eef7b72ea3e3756f60e5bd1ef9a1dbd30010d37f",
+        "claim": {
+          "package": "zod",
+          "from": "3.25.76",
+          "to": "4.6.7",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "kind": "breaking-change",
+      "title": "Align custom matcher type augmentation with Vitest 5",
+      "summary": "The held one-parameter Matchers declaration reports TS2428 with Vitest 5. The two-parameter form clears the diagnostic on the tested target.",
+      "conditions": [
+        "Project declarations augment Vitest Matchers<T> with custom matcher types."
+      ],
+      "actions": [
+        "Match the installed declaration shape and use Matchers<R, T> with the correct matcher return type in the tested Vitest 5 target."
+      ],
+      "verification": [
+        "Typecheck normal, resolves, asymmetric and invalid-argument cases. Check any older supported major separately."
+      ],
+      "schema": 2,
+      "id": "vitest5-matcher-declarations",
+      "package": "vitest",
+      "fromMajor": 3,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.2.4",
+          "to": "5.0.0"
+        }
+      ],
+      "negativeControls": [
+        {
+          "name": "held-matcher-generics-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.ok(held.some(item => item.code === 2428), JSON.stringify(held))"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/737eab844e97cab63bcbaaddd1b7da9c8e5008e9/fixtures/vitest5-matcher-declarations/check.cjs",
+        "fixtureSha256": "709fddb420b932438900a4e1ef4f462cd076dea69d608441709debab701cd1cf",
+        "claim": {
+          "package": "vitest",
+          "from": "3.2.4",
+          "to": "5.0.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "vite8-vue-peer",
+      "kind": "incompatibility",
+      "package": "vite",
+      "fromMajor": 5,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.10",
+          "to": "8.3.8"
+        }
+      ],
+      "title": "Coordinate Vite 8 with the Vue plugin peer range",
+      "summary": "Vite 8.3.8 fails strict npm resolution with @vitejs/plugin-vue 4.5.0. Updating the plugin to 6.0.7 compiles the same Vue component while holding Vue 3.3.8.",
+      "conditions": [
+        "The owning workspace pairs Vite 5.0.10 with @vitejs/plugin-vue 4.5.0, as in the pinned Vue Router example."
+      ],
+      "actions": [
+        "Update the owning Vite and Vue plugin together after checking their exact peer and Node.js engine ranges. Keep Vue 3.3.8 if the rest of the graph permits it.",
+        "Check each other Vite plugin in the workspace before widening the change. Defer Vite 8 if a required plugin cannot move."
+      ],
+      "verification": [
+        "Run a strict install and the owning build on the target Node.js. For PWA applications, exercise the service worker and offline path separately."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-vue-plugin-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /ERESOLVE/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/485e523f42c6f1def8f0c478e205ffec4dd63993/fixtures/vite8-vue-peer/check.cjs",
+        "fixtureSha256": "a6f6b626820317c789e17a34735151bcc2dd760d2c78a25b6ae9ac415b8d5f9d",
+        "claim": {
+          "package": "vite",
+          "from": "5.0.10",
+          "to": "8.3.8",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "webpack4-openssl",
+      "kind": "failure-mode",
+      "package": "webpack",
+      "fromMajor": 4,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.46.0",
+          "to": "4.47.0"
+        }
+      ],
+      "title": "Repair the Webpack 4 build hash on OpenSSL 3",
+      "summary": "Webpack 4.46.0 fails to build with the default hash under OpenSSL 3. Webpack 4.47.0 builds and runs the same bundle.",
+      "conditions": [
+        "A build uses Webpack 4.46.0 and its default MD4 hash on an OpenSSL 3 Node.js runtime."
+      ],
+      "actions": [
+        "Resolve the Webpack copy used by the owning build. Upgrade it to 4.47.0 if the project must remain on Webpack 4 and the owner permits the patch.",
+        "Check for explicit native-md4 settings or MD4 calls in loaders. They are outside the scope of the fix."
+      ],
+      "verification": [
+        "Rerun the owning build on the target Node.js with the standard environment, and execute or smoke-test its generated output."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-default-md4-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /ERR_OSSL_EVP_UNSUPPORTED/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62dcb26275a81790f732e254fa2594e13ed0a583/fixtures/webpack4-openssl/check.cjs",
+        "fixtureSha256": "cde109809dc96e26476b6a40a92e61d58828536aa74cf5513daa675b7280d469",
+        "claim": {
+          "package": "webpack",
+          "from": "4.46.0",
+          "to": "4.47.0",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "tailwind4-headlessui-variants",
+      "kind": "breaking-change",
+      "package": "tailwindcss",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.4.0",
+          "to": "4.3.3"
+        }
+      ],
+      "title": "Preserve Headless UI state variants on Tailwind 4",
+      "summary": "Tailwind 4.3.3 rejects the old PostCSS integration. Explicit Headless UI plugin registration and its prefix preserve the open-state selectors produced by Tailwind 3.4.0.",
+      "conditions": [
+        "A Tailwind 3 PostCSS project uses @headlessui/tailwindcss state variants, possibly with a custom prefix."
+      ],
+      "actions": [
+        "Install the matching @tailwindcss/postcss package and use the Tailwind 4 stylesheet import. Carry the existing Headless UI plugin and its prefix into the stylesheet via @plugin.",
+        "Locate the actual UI variants used by the application and confirm the supported browser floor."
+      ],
+      "verification": [
+        "Rebuild CSS, compare selectors for the owning component's state and prefix, then exercise the interactive component in the browser."
+      ],
+      "negativeControls": [
+        {
+          "name": "missing-headlessui-plugin-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(selectors(unregistered.root, 'ui-open:underline'), [])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f361d1b4c0864ee8b60cbf4363bd44febe284ef0/fixtures/tailwind4-headlessui-variants/check.cjs",
+        "fixtureSha256": "2089b734c6b048cc547e0b8332b76c3007a486710f721ff2953cb89b0e93bb0b",
+        "claim": {
+          "package": "tailwindcss",
+          "from": "3.4.0",
+          "to": "4.3.3",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript6-baseurl-alias",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.9.2",
+          "to": "6.0.3"
+        }
+      ],
+      "title": "Preserve import resolution when removing TypeScript baseUrl",
+      "summary": "TS6 reports TS5101 for baseUrl. Removing it preserves the explicit Platformatic alias, but a bare local lookup now produces TS2307.",
+      "conditions": [
+        "The owning tsconfig or inherited config declares baseUrl. Some imports may rely on that lookup root rather than an explicit paths entry."
+      ],
+      "actions": [
+        "Remove baseUrl and keep explicit path entries relative to the config that declares them.",
+        "Rewrite bare local lookups as relative imports or explicit aliases, and check any matching runtime bundler configuration."
+      ],
+      "verification": [
+        "Run the owning typecheck and build. Verify a known mapped import and each bare import previously resolved via baseUrl."
+      ],
+      "negativeControls": [
+        {
+          "name": "bare-lookup-rejected-after-removal",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(diagnostics(typescript6, updated, 'app/dep'), [2307])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19cf943cbeae8d685c7c75e443b0ca41097cca00/fixtures/typescript6-baseurl-alias/check.cjs",
+        "fixtureSha256": "7b09c25ddb5f27d4cbd5b70bb721a873172aa91e5304378590e487f820752189",
+        "claim": {
+          "package": "typescript",
+          "from": "5.9.2",
+          "to": "6.0.3",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "react19-snapshot-classifier",
+      "kind": "incompatibility",
+      "package": "react",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.3.1",
+          "to": "19.3.0"
+        }
+      ],
+      "title": "Align the React element checker used in snapshot tooling",
+      "summary": "react-is 18.3.1 classifies React 18.3.1 elements but silently rejects React 19.3.0. The matching classifier recognizes them.",
+      "conditions": [
+        "A serializer or test helper classifies React element values with an explicit or indirectly held react-is dependency."
+      ],
+      "actions": [
+        "Align the classifier with the runtime producing the elements. Test both classifiers if one tool must support both React majors.",
+        "Check the owning snapshot serializer before accepting broad snapshot churn."
+      ],
+      "verification": [
+        "Exercise an actual React element, a non-element control and the targeted snapshots in each supported runtime."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-react-is-rejects-new-element",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(ReactIs18.isElement(upgraded), false)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/ff172c62f73e198ef2c0fb2a5e9661055ecea98c/fixtures/react19-snapshot-classifier/check.cjs",
+        "fixtureSha256": "aec18aa3d5a63184750ccb47a372d8ceb30d96972dd2d49ca3af2eb3cc12b619",
+        "claim": {
+          "package": "react",
+          "from": "18.3.1",
+          "to": "19.3.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "next16-webpack-guard",
+      "kind": "failure-mode",
+      "package": "next",
+      "fromMajor": 15,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "15.5.6",
+          "to": "16.4.5"
+        }
+      ],
+      "title": "Choose an explicit bundler for a Next.js 16 Webpack-only configuration",
+      "summary": "Next 16.4.5 rejects a default Turbopack build with Webpack-only configuration. Selecting Webpack or implementing the equivalent Turbopack alias restores the build.",
+      "conditions": [
+        "The composed Next config adds required Webpack settings and the owning build command relies on the default bundler without equivalent Turbopack settings."
+      ],
+      "actions": [
+        "Inspect the effective config after wrappers. Keep --webpack for required hooks until the Turbopack implementation is verified.",
+        "If both are configured, exercise the transformed feature or alias on the default build. Check Node.js and the commands used by CI."
+      ],
+      "verification": [
+        "Run the owning build and verify the generated page or asset that depends on the customization."
+      ],
+      "negativeControls": [
+        {
+          "name": "webpack-only-default-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.text, /webpack.{0,10} config and no .{0,5}turbopack/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d14769fa805ef34795f66836570b4a463324f4a5/fixtures/next16-webpack-guard/check.cjs",
+        "fixtureSha256": "d82f3d4457e1bd097dc51253303bb777cb0934078071cc8dc8b775ab5dd512d6",
+        "claim": {
+          "package": "next",
+          "from": "15.5.6",
+          "to": "16.4.5",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "react-dom19-transition-ref",
+      "kind": "breaking-change",
+      "package": "react-dom",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.3.1",
+          "to": "19.3.0"
+        }
+      ],
+      "title": "Pass nodeRef to transitions when adopting React DOM 19",
+      "summary": "React DOM 19 removes findDOMNode. React Transition Group 4.4.5 fails without a DOM ref and completes both CSS transition phases with nodeRef.",
+      "conditions": [
+        "A transition uses react-transition-group 4.4.5 without nodeRef and React DOM is moving from 18 to 19."
+      ],
+      "actions": [
+        "Attach one stable DOM ref to the child element and pass it as nodeRef. For keyed transitions use one ref per key.",
+        "Review callbacks that relied on the DOM node argument. Read the element from the ref and account for changed callback arguments."
+      ],
+      "verification": [
+        "Replay enter and exit. Assert the DOM classes and callback arguments. Check animation in a supported browser."
+      ],
+      "negativeControls": [
+        {
+          "name": "implicit-finddomnode-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /findDOMNode is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/da0a0c427bd1160d8ab76e27f0ff6521874657e3/fixtures/react-dom19-transition-ref/check.cjs",
+        "fixtureSha256": "8731a2c4c42da950fd561ec31a49c5db72518747aef361e6f3e4d1da355c0cbd",
+        "claim": {
+          "package": "react-dom",
+          "from": "18.3.1",
+          "to": "19.3.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript6-side-effect-imports",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.9.2",
+          "to": "6.0.3"
+        }
+      ],
+      "title": "Declare known side-effect assets when adopting TypeScript 6",
+      "summary": "TypeScript 6.0.3 reports TS2882 on an undeclared side-effect CSS import. An asset-specific declaration restores the valid import and a misspelled import still fails.",
+      "conditions": [
+        "The project imports CSS or other bundler-managed assets for side effects and previously relied on the TypeScript default."
+      ],
+      "actions": [
+        "Confirm bundler support and add an asset-specific declaration such as global.d.css.ts with allowArbitraryExtensions where appropriate.",
+        "Prefer declarations narrow enough to keep TypeScript reporting misspelled asset imports."
+      ],
+      "verification": [
+        "Typecheck the owning project with a known import and a misspelled-path control. Verify the actual asset load in the build."
+      ],
+      "negativeControls": [
+        {
+          "name": "asset-typo-still-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(diagnostics(upgraded, 'gloabl'), [2882])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/59249be9b9ce85131cd49117c88488260d3b0738/fixtures/typescript6-side-effect-imports/check.cjs",
+        "fixtureSha256": "079844e8ff377ada4dc29e57d94899bff39a336a218a46fb93a5ae02f9339acd",
+        "claim": {
+          "package": "typescript",
+          "from": "5.9.2",
+          "to": "6.0.3",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "fastify5-logger-instance",
+      "kind": "breaking-change",
+      "package": "fastify",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.29.1",
+          "to": "5.12.5"
+        }
+      ],
+      "title": "Pass prepared loggers as loggerInstance on Fastify 5",
+      "summary": "Fastify 5.12.5 rejects a Pino instance in logger. loggerInstance preserves the request and its structured log, and logger still accepts settings.",
+      "conditions": [
+        "Fastify options pass a prepared Pino-compatible logger to the logger field."
+      ],
+      "actions": [
+        "Move the existing logger instance to loggerInstance. Keep logger as the field for configuration objects.",
+        "Review request serializers and transports when moving the existing instance."
+      ],
+      "verification": [
+        "Start the owning application or use its injection test. Check the response and expected structured log fields."
+      ],
+      "negativeControls": [
+        {
+          "name": "instance-in-old-logger-field-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "code: 'FST_ERR_LOG_INVALID_LOGGER_CONFIG'"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/1ff8d5b53f1318f0217bf8fdddf6d3f9c529778e/fixtures/fastify5-logger-instance/check.cjs",
+        "fixtureSha256": "94c05bd0bb664fd225f7f91889d4f98a9a35a57fdacc6867b49869e48a750e29",
+        "claim": {
+          "package": "fastify",
+          "from": "4.29.1",
+          "to": "5.12.5",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "dotenv18-quiet",
+      "kind": "failure-mode",
+      "package": "dotenv",
+      "fromMajor": 16,
+      "toMajor": 18,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "16.6.1",
+          "to": "18.0.8"
+        }
+      ],
+      "title": "Keep dotenv 18 startup banners out of captured stderr",
+      "summary": "dotenv 18.0.8 emits an initialization banner on stderr by default. quiet true suppresses it and leaves the parsed value and JSON on stdout intact.",
+      "conditions": [
+        "The program calls dotenv.config and its process output is consumed as structured logs or checked by automation."
+      ],
+      "actions": [
+        "Set quiet true on the affected dotenv.config call when the initialization banner is unwanted.",
+        "Check the installed release and the launcher separately if it uses preloads or CLI flags."
+      ],
+      "verification": [
+        "Capture stdout and stderr independently. Check the output format and the required parsed environment values."
+      ],
+      "negativeControls": [
+        {
+          "name": "default-stderr-banner-observed",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held, /injected env/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/0175129678a328bbc21589c6149c72c37441f60e/fixtures/dotenv18-quiet/check.cjs",
+        "fixtureSha256": "23239e6acbe7de0f9e61ba588b9f9f20bb60e7b9d123af19925e75c247514b73",
+        "claim": {
+          "package": "dotenv",
+          "from": "16.6.1",
+          "to": "18.0.8",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "next-i18next16-pages-exports",
+      "kind": "breaking-change",
+      "package": "next-i18next",
+      "fromMajor": 15,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "15.4.2",
+          "to": "16.5.1"
+        }
+      ],
+      "title": "Use Pages Router entry points on next-i18next 16",
+      "summary": "next-i18next 16.5.1 moves the legacy Pages Router exports. The new server entry point loads the same local namespace.",
+      "conditions": [
+        "A Next.js Pages Router route or its app wrapper imports appWithTranslation or serverSideTranslations from a v15 entry point."
+      ],
+      "actions": [
+        "Use next-i18next/pages for appWithTranslation and next-i18next/pages/serverSideTranslations for the server helper.",
+        "Limit the import changes to Pages Router code in mixed-router apps."
+      ],
+      "verification": [
+        "Exercise one translated route with its local namespace, then check client hydration in the owning application."
+      ],
+      "negativeControls": [
+        {
+          "name": "root-pages-export-absent",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(after('next-i18next').appWithTranslation, undefined)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/7e9f5f52e7159889a1ed64c8c807a334c3cd4927/fixtures/next-i18next16-pages-exports/check.cjs",
+        "fixtureSha256": "3dc046d99812f79187eb9bc08a67932bb2abdab49ab2e6b3388f6278ceac264d",
+        "claim": {
+          "package": "next-i18next",
+          "from": "15.4.2",
+          "to": "16.5.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "eslint9-rule-scope",
+      "kind": "breaking-change",
+      "package": "eslint",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.57.1",
+          "to": "9.0.0"
+        }
+      ],
+      "title": "Use node-aware scope lookup in custom rules on ESLint 9",
+      "summary": "ESLint 9 removes context.getScope. The node-aware SourceCode API resolves a closed-over binding and preserves the custom rule diagnostic.",
+      "conditions": [
+        "A project-owned or bundled custom rule still calls context.getScope, including calls inside helpers."
+      ],
+      "actions": [
+        "Use context.sourceCode.getScope(node) with the rule's current AST node.",
+        "Traverse parent scopes where the rule must resolve declarations outside the immediate scope."
+      ],
+      "verification": [
+        "Run positive and negative custom-rule tests, including an outer binding and an input that still reports a diagnostic."
+      ],
+      "negativeControls": [
+        {
+          "name": "removed-context-method-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => lint(after, original, good), /context.getScope is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/7d7bc9f51b8286fef8319f2ec2742ec7e4c399da/fixtures/eslint9-rule-scope/check.cjs",
+        "fixtureSha256": "3bd058f5fb22826e29198f598b56de900a556be973491a914ff68c10e68e2d18",
+        "claim": {
+          "package": "eslint",
+          "from": "8.57.1",
+          "to": "9.0.0",
+          "check": "lint",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "vue35-reactive-props-destructure",
+      "kind": "breaking-change",
+      "package": "vue",
+      "fromMajor": 3,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.4.38",
+          "to": "3.5.13"
+        }
+      ],
+      "title": "Check the SFC compiler before destructuring props on Vue 3.5",
+      "summary": "Vue 3.5.13 refreshes the computed value after its destructured input changes. Vue 3.4.38 defaults and an explicit disabled feature both leave it stale.",
+      "conditions": [
+        "A script setup component destructures defineProps and uses a binding in computed or watched logic."
+      ],
+      "actions": [
+        "Verify that the effective SFC compiler supports reactive props destructuring and that the feature is enabled.",
+        "Keep props object access for older defaults and verify getter usage at watch or composable boundaries."
+      ],
+      "verification": [
+        "After mounting the component, change one prop from the parent and assert the rendered or watched value."
+      ],
+      "negativeControls": [
+        {
+          "name": "disabled-prop-rewrite-stays-stale",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(render('after', '3.5.13', 'disabled'), '2')"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/0d929782df79f05d7c31c483a2913f9b9d6f4d3d/fixtures/vue35-reactive-props-destructure/check.cjs",
+        "fixtureSha256": "326630af9fbd15eb0e4c6254d8a34abd2530af80d5914c4bcb0e2ac16db532fc",
+        "claim": {
+          "package": "vue",
+          "from": "3.4.38",
+          "to": "3.5.13",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "vue-router4-ssr-ready",
+      "kind": "breaking-change",
+      "package": "vue-router",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.6.5",
+          "to": "4.5.1"
+        }
+      ],
+      "title": "Wait for the Vue Router 4 request route before SSR",
+      "summary": "Vue Router 4 replaces onReady with isReady and makes currentRoute a ref. The adjusted server entry renders the same requested route.",
+      "conditions": [
+        "The server entry pushes the request URL and calls onReady or reads currentRoute directly on the router instance."
+      ],
+      "actions": [
+        "Use a fresh memory router for SSR. Push the request URL, await isReady and read currentRoute.value.",
+        "Keep component route reads through useRoute and preserve the server's navigation error and redirect handling."
+      ],
+      "verification": [
+        "Render a deep link with a route parameter and verify the expected HTML after navigation."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-onready-missing",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => router.onReady(() => {}), /router.onReady is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/b49f9ba5e4dd9763c220fea910cc30f83cdb43c3/fixtures/vue-router4-ssr-ready/check.cjs",
+        "fixtureSha256": "0004cc3f17e1f67eb4fe6fb87bc3b945c8e2980c0f1227ddf485c0d704710ce4",
+        "claim": {
+          "package": "vue-router",
+          "from": "3.6.5",
+          "to": "4.5.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "prisma7-datasource-config",
+      "kind": "breaking-change",
+      "package": "prisma",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.19.3",
+          "to": "7.10.0"
+        }
+      ],
+      "title": "Move the Prisma datasource URL into Prisma 7 configuration",
+      "summary": "The Prisma 7.10.0 schema validator rejects a datasource URL in schema.prisma. The matching config loader accepts the URL in prisma.config.ts.",
+      "conditions": [
+        "The workspace is adopting Prisma 7 and its schema still declares datasource.url for a relational database."
+      ],
+      "actions": [
+        "Move the URL into the Prisma config used by the CLI and explicitly load environment variables when needed.",
+        "Keep config loading possible before credentials exist if generation precedes configuration. Verify the runtime adapter separately."
+      ],
+      "verification": [
+        "Validate the schema, generate the client and test the configured adapter against a controlled database before applying migrations."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-datasource-url-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "/datasource property.*url.*no longer supported/i"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f0a622e6fbb5e2fb23884ef5090a09ba13ed13cb/fixtures/prisma7-datasource-config/check.cjs",
+        "fixtureSha256": "4e608c72e052d2d46262afd3fe3950766685f2e12c228e8e89536757aa07b7fe",
+        "claim": {
+          "package": "prisma",
+          "from": "6.19.3",
+          "to": "7.10.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "zod4-error-issues",
+      "kind": "breaking-change",
+      "package": "zod",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.25.76",
+          "to": "4.6.7"
+        }
+      ],
+      "title": "Read Zod 4 issues to preserve validation responses",
+      "summary": "Reading the old errors alias in a Zod 4.6.7 validation failure throws before the handler can return HTTP 400. The issues array restores the configured message.",
+      "conditions": [
+        "An error handler reads ZodError.errors after safeParse or after catching a validation exception."
+      ],
+      "actions": [
+        "Read error.issues and preserve the owning response's status and fields.",
+        "Keep custom messages and stable path fields that callers depend on."
+      ],
+      "verification": [
+        "Exercise valid and invalid requests. Verify the status, custom error message and field path."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-error-alias-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => subscribe(after, invalid, 'errors'), TypeError)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/dd7700a238bfea13de97c284c7f630adb060ead8/fixtures/zod4-error-issues/check.cjs",
+        "fixtureSha256": "15a39e0b4a8bf58becfdeec5b46920e26fc988b2515f4d7ee6f4b398949e4a35",
+        "claim": {
+          "package": "zod",
+          "from": "3.25.76",
+          "to": "4.6.7",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "axios1-interceptor-headers",
+      "kind": "breaking-change",
+      "package": "axios",
+      "fromMajor": 0,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "0.23.0",
+          "to": "1.21.0"
+        }
+      ],
+      "title": "Update headers through AxiosHeaders on Axios 1",
+      "summary": "The Axios 1 request interceptor rejects a plain headers object at typecheck. AxiosHeaders.set preserves caller headers at the adapter boundary.",
+      "conditions": [
+        "The owning request interceptor assigns a new object to config.headers."
+      ],
+      "actions": [
+        "Use config.headers.set for the affected headers, keeping unrelated values and existing conditions.",
+        "Review whether intentionally removed headers need an explicit deletion."
+      ],
+      "verification": [
+        "Run the typecheck and inspect the adapter input for the updated and unrelated caller headers."
+      ],
+      "negativeControls": [
+        {
+          "name": "plain-headers-assignment-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(diagnostics(after, legacy), [2322])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/0a8a55c73ecc6d92096680ef92e44ba7b6a4f406/fixtures/axios1-interceptor-headers/check.cjs",
+        "fixtureSha256": "61543676a2d710507aa325f34c995f55bcb8c5cc2a5cb6ec1cfd2f7a35e2810b",
+        "claim": {
+          "package": "axios",
+          "from": "0.23.0",
+          "to": "1.21.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "tanstack-query5-object-signatures",
+      "kind": "breaking-change",
+      "package": "@tanstack/react-query",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.36.1",
+          "to": "5.75.5"
+        }
+      ],
+      "title": "Use object signatures in TanStack Query v5",
+      "summary": "TanStack Query 5.75.5 rejects the old positional hook and client fetch. Passing queryKey and queryFn together preserves the rendered result and cache key.",
+      "conditions": [
+        "A React Query v4 hook or QueryClient method still relies on positional arguments."
+      ],
+      "actions": [
+        "Convert the hook and any nested client fetch to object forms and preserve the existing key, fetcher and enabled options.",
+        "Check any dynamically constructed options for accidental query-key changes."
+      ],
+      "verification": [
+        "Render a cached or disabled state and verify the resolved data under the intended key."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-positional-client-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(v5.fetchQuery(key, fetchRegion), /Missing queryFn/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/94c941ae750d796423cd4287a1c10f6c7aca85b9/fixtures/tanstack-query5-object-signatures/check.cjs",
+        "fixtureSha256": "e660f80c1ab05b281201f33d0b35b20359d81a52f7d040afaf9f1982cd5cf8b1",
+        "claim": {
+          "package": "@tanstack/react-query",
+          "from": "4.36.1",
+          "to": "5.75.5",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "react-router7-relative-splat",
+      "kind": "breaking-change",
+      "package": "react-router-dom",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.30.3",
+          "to": "7.18.4"
+        }
+      ],
+      "title": "Preserve relative sibling links under React Router 7 splats",
+      "summary": "React Router 7.18.4 includes the splat portion in relative resolution. Splitting the route and adjusting the link restores the intended sibling href.",
+      "conditions": [
+        "A multi-segment splat such as dashboard/* contains relative links intended to target siblings."
+      ],
+      "actions": [
+        "Separate the named parent and the splat child, then make the sibling link parent-relative.",
+        "Preserve absolute links and verify any index route separately."
+      ],
+      "verification": [
+        "Render or follow a relative link from a populated splat and confirm the intended sibling URL."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-splat-moves-relative-href",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(links(v7), moved)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d566a0588bf9c1cdaf55d522c3b054209bbdedfa/fixtures/react-router7-relative-splat/check.cjs",
+        "fixtureSha256": "b86a42cbf8164f44c9b657e24619e9c2090d524a513311169b728af1e3212b04",
+        "claim": {
+          "package": "react-router-dom",
+          "from": "6.30.3",
+          "to": "7.18.4",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "next16-async-route-params",
+      "kind": "breaking-change",
+      "package": "next",
+      "fromMajor": 14,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "14.2.18",
+          "to": "16.4.2"
+        }
+      ],
+      "title": "Await route params and searchParams on Next.js 16",
+      "summary": "Reading params synchronously on Next.js 16.4.2 makes a valid dynamic route return 404 in the fixture. Awaiting both inputs restores the route and query mode.",
+      "conditions": [
+        "An App Router server page reads properties from params or searchParams synchronously."
+      ],
+      "actions": [
+        "Make the page async and await params and searchParams before validating or using their fields.",
+        "Check metadata, layouts and route handlers for equivalent synchronous access."
+      ],
+      "verification": [
+        "Request a valid deep link with and without a query parameter. Confirm that an invalid ID still produces 404."
+      ],
+      "negativeControls": [
+        {
+          "name": "valid-id-failed-with-sync-params",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(held, Array(3).fill({ status: 404, answer: null }))"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/6d2a1873aca38a8aa780e9b500c03e1a38165025/fixtures/next16-async-route-params/check.cjs",
+        "fixtureSha256": "ffe1a4f09d2111874610fca3e3b1919b6a0ab6ee46caed1d2d37d757aa9f6146",
+        "claim": {
+          "package": "next",
+          "from": "14.2.18",
+          "to": "16.4.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "svelte5-client-mount",
+      "kind": "breaking-change",
+      "package": "svelte",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.2.18",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Use mount and unmount at Svelte 5 client entry points",
+      "summary": "A Svelte 5.0.0 component compiled with the default API rejects construction with new. Mounting through the runtime preserves the target, props and teardown.",
+      "conditions": [
+        "A client entry manually constructs a Svelte component at an empty DOM target."
+      ],
+      "actions": [
+        "Import mount and pass the existing target and props. Use unmount when the integration manages teardown.",
+        "Review existing SSR hydration separately before replacing its startup call."
+      ],
+      "verification": [
+        "Check the component renders with a supplied prop and removes its DOM on teardown."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-component-constructor-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /component_api_invalid_new|no longer valid in Svelte 5/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/2150f5e1546f559e134934f72649c86f92bbe9cd/fixtures/svelte5-client-mount/check.cjs",
+        "fixtureSha256": "621ffdee90b019d9b35d72c660704f2e8b6934cd50a31acf7fa7baf5fb93daab",
+        "claim": {
+          "package": "svelte",
+          "from": "4.2.18",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "rtk2-extra-reducers",
+      "kind": "breaking-change",
+      "package": "@reduxjs/toolkit",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.9.3",
+          "to": "2.13.0"
+        }
+      ],
+      "title": "Use the Redux Toolkit builder for extraReducers",
+      "summary": "The old object-valued extraReducers fails store initialization in Redux Toolkit 2 development mode. The builder callback preserves the three async thunk states.",
+      "conditions": [
+        "A slice uses an extraReducers object keyed by computed async-thunk action types."
+      ],
+      "actions": [
+        "Convert the object to a builder callback and register existing handlers with addCase and their matching action creators.",
+        "The builder works on both pinned versions, so the code change can ship before the version bump."
+      ],
+      "verification": [
+        "Dispatch the success and rejection cases. Assert pending, fulfilled and rejected state and preserve unrelated state."
+      ],
+      "negativeControls": [
+        {
+          "name": "object-extra-reducers-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => createPlansStore(newer, false), objectSyntaxRemoved)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/ad1ec94db913332915207d853eb010836b6c9f91/fixtures/rtk2-extra-reducers/check.cjs",
+        "fixtureSha256": "0c24b21c79188044d9ad00327b53cf8040c8dccd7e1e3d7ade6e2ee392734c00",
+        "claim": {
+          "package": "@reduxjs/toolkit",
+          "from": "1.9.3",
+          "to": "2.13.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "express5-root-wildcard",
+      "kind": "breaking-change",
+      "package": "express",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.18.1",
+          "to": "5.2.1"
+        }
+      ],
+      "title": "Preserve an Express 5 catch-all that includes the root",
+      "summary": "The bare Express 4 wildcard fails to register on Express 5. The optional named wildcard preserves the root and nested fallback.",
+      "conditions": [
+        "The application registers a bare '*' or '/*' catch-all and its fallback is expected to include the root."
+      ],
+      "actions": [
+        "Use /{*splat} for a root-inclusive fallback and keep it after specific routes.",
+        "If handlers read wildcard captures, check the new capture key and array representation."
+      ],
+      "verification": [
+        "Request the root, a nested miss and a known route. Compare the actual fallback response body as well as its status."
+      ],
+      "negativeControls": [
+        {
+          "name": "bare-wildcard-rejected-at-registration",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => createApp(newer, '*'), /Missing parameter name/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/751121b74fecfb07eedcc7100ec7803cfe667bea/fixtures/express5-root-wildcard/check.cjs",
+        "fixtureSha256": "3a53b592b20941f567fe7bc0be8dcd141aca3d616700c7af9fe513415852550e",
+        "claim": {
+          "package": "express",
+          "from": "4.18.1",
+          "to": "5.2.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    }
+  ]
+}
