@@ -1,8 +1,8 @@
 # Knowledge Cache v2 fixture review
 
-Snapshot date is 2026-11-24. This review covers 62 draft recipes from 62 public repositories and 54 distinct npm package names. Each row links to the pinned upstream example, the exact fixture receipt and the two green workflows on that PR head.
+Snapshot date is 2026-11-24. This review covers 63 draft recipes from 63 public repositories and 55 distinct npm package names. Each row links to the pinned upstream example, the exact fixture receipt and the two green workflows on that PR head.
 
-The earlier research corpus includes 80 pinned projects and 69 reports with verified hashes. Its index contains 257 entries with mixed evidence. The table covers the 62 entries reproduced and proposed for review in this round.
+The earlier research corpus includes 80 pinned projects and 69 reports with verified hashes. Its index contains 257 entries with mixed evidence. The table covers the 63 entries reproduced and proposed for review in this round.
 
 ## Verified draft recipes
 
@@ -70,12 +70,13 @@ The earlier research corpus includes 80 pinned projects and 69 reports with veri
 | [#120](https://github.com/levencode-labs/deploom-npm/pull/120) | [jdlennoxs/radiofy](https://github.com/jdlennoxs/radiofy/commit/f7beca66e445113edb61adcc9feed7a5212d4f04) | `@trpc/client` `10.45.4` → `11.19.0` | HTTP link restores the Date and exact timestamp | [test](https://github.com/levencode-labs/deploom-npm/blob/eb797d42de1a48aa8d543684e58b7fda00174cde/fixtures/trpc11-link-transformer/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45394132973) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45394133004) |
 | [#121](https://github.com/levencode-labs/deploom-npm/pull/121) | [strapi/sdk-plugin](https://github.com/strapi/sdk-plugin/commit/938189b99d313bc93b131a66c0cc745f7a87944a) | `chalk` `4.1.2` → `5.6.2` | Dynamic import preserves plain and ANSI output | [test](https://github.com/levencode-labs/deploom-npm/blob/b6c0615890d2c6964cba255dbcb2f88fced7f667/fixtures/chalk5-commonjs-loader/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45394144348) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45394144337) |
 | [#122](https://github.com/levencode-labs/deploom-npm/pull/122) | [SimonAlling/userscripter](https://github.com/SimonAlling/userscripter/commit/4b5e36f905703648f846e128196f6e255eaec963) | `jest` `27.5.1` → `28.1.3` | Explicit jsdom environment restores the same DOM test | [test](https://github.com/levencode-labs/deploom-npm/blob/2150a555f758ed474d9c8f791aa6ae1c5d426394/fixtures/jest28-explicit-jsdom/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45397363921) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45397363735) |
+| [#124](https://github.com/levencode-labs/deploom-npm/pull/124) | [discourse/discourse](https://github.com/discourse/discourse/commit/746d9e266dd746aec9d4c25debe56289c051d926) | `ember-source` `6.10.1` → `7.2.0` | Explicit imports restore the typed test setup after legacy application helper injection is removed | [typecheck](https://github.com/levencode-labs/deploom-npm/blob/cf47c550fca9113bdf5c34be9a53eb02a66a68e9/fixtures/ember7-test-helpers/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45407046653) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45407046456) |
 
 ## MCP and publication
 
 The installed MCP 0.2.32 was checked with locally test-signed snapshots. Each listed exact transition was found offline and appeared in `get_upgrade_plan` when tested on its own with zero plan HTTP transactions. The wrong-package-manager and empty-snapshot controls were exercised. The recipes wait for maintainer review and the [existing Cache v2 publication process](KNOWLEDGE_CACHE_V2.md).
 
-The [machine-readable review bundle](../knowledge/review/cache-v2-candidates-2026-11-24.json) contains all 62 v2 records with their pinned Git receipts. The installed reader found all 62 exact records in the same locally test-signed snapshot. All 58 distinct exact requests returned matching advice in `get_upgrade_plan` with zero HTTP transactions. The compact response omitted four additional exact matches and four major-line candidates across the 58 requests. For the TypeScript 5.9.2 → 6.0.3 example, `get_shared_migration_knowledge_batch` returned all three exact records while the plan showed one. See the [TypeScript replay receipt](https://github.com/levencode-labs/deploom-npm/pull/75).
+The [machine-readable review bundle](../knowledge/review/cache-v2-candidates-2026-11-24.json) contains all 63 v2 records with their pinned Git receipts. The installed reader found all 63 exact records in the same locally test-signed snapshot. All 59 distinct exact requests returned matching advice in `get_upgrade_plan` with zero HTTP transactions. The compact response omitted four additional exact matches and four major-line candidates across the 59 requests. For the TypeScript 5.9.2 → 6.0.3 example, `get_shared_migration_knowledge_batch` returned all three exact records while the plan showed one. See the [TypeScript replay receipt](https://github.com/levencode-labs/deploom-npm/pull/75).
 
 The producer's fixture check passed against each exact fixture head with the public registry check stubbed for the offline proof. Its trusted-main gate rejected every draft. Admission still requires maintainer review, trusted fixture ancestry and the publisher's public registry checks.
 
@@ -88,6 +89,8 @@ The date-fns-tz example verified a dependency-group decision. The target 3.2.0 p
 ## Frontend project discovery
 
 The [frontend project index](FRONTEND_PROJECT_INDEX.md) contains 37 distinct public repositories and 40 verified manifests. Its working target is 150 repositories. The index records workspace declarations and any catalog indirection separately from the reproduced migration recipes. See also the [React UI release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md).
+
+In a separate offline control on MCP 0.2.32, the TypeScript `5.9.2 → 6.0.3` npm query returned three `verified-exact-transition` records. The `5.9.3 → 6.0.2` query returned the same three as `major-line-candidate`. The compact plan showed one with `recipientApplicability=UNKNOWN` and `omittedCount=2`. A `4.9.5 → 6.0.2` query and a pnpm query returned zero. The batch lookup exposes the remaining candidates and their applicability conditions.
 
 ## Coverage limits
 

@@ -2927,6 +2927,54 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "ember7-explicit-test-helpers",
+      "kind": "breaking-change",
+      "package": "ember-source",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.10.1",
+          "to": "7.2.0"
+        }
+      ],
+      "title": "Ember 7 removes legacy application test-helper injection",
+      "summary": "The shipped test extension and its TestableApp types disappear by ember-source 7.2.0. A pinned consumer typecheck passed on 6.10.1, rejected the legacy setup with 7.2.0, and passed on both after switching to explicit helpers.",
+      "conditions": [
+        "The test setup calls Application#injectTestHelpers() or imports TestableApp from ember-testing/lib/ext/application."
+      ],
+      "actions": [
+        "Remove legacy global helper injection and import the helpers used by the tests from @ember/test-helpers.",
+        "Keep the modern setApplication(app) setup. If an intentional debug global is still needed, expose only that named helper explicitly."
+      ],
+      "verification": [
+        "Run the project's typecheck against the actual target Ember and compatible @ember/test-helpers.",
+        "Run representative application tests and look for remaining uses of injected globals."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-test-extension-on-ember-7",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(held.status, 0)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/cf47c550fca9113bdf5c34be9a53eb02a66a68e9/fixtures/ember7-test-helpers/check.cjs",
+        "fixtureSha256": "31862a182b32368060348d0b75fd6e9139697fc9c9e8541712feb05681ddcf15",
+        "claim": {
+          "package": "ember-source",
+          "from": "6.10.1",
+          "to": "7.2.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
