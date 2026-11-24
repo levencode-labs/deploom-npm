@@ -27,6 +27,11 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Check the TypeScript 6 ES5 target transition
+        working-directory: fixtures/typescript6-es5-target
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
