@@ -19,6 +19,12 @@ jobs:
       - run: npm test
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
+      - name: Check the Jest 30 test path filter
+        working-directory: fixtures/jest30-test-path-patterns
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund
+          node check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
       - run: npx --yes --package=npm@11.16.0 -- node fixtures/vitest-vite-peer/check.cjs
       - name: Check the Vitest mock transform
