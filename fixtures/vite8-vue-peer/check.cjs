@@ -31,9 +31,15 @@ const smoke = `
   }
 `;
 
-const held = spawnSync('npm install --package-lock-only --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps', {
+const flags = [
+  'install', '--package-lock-only', '--ignore-scripts', '--no-audit', '--no-fund',
+  '--engine-strict', '--strict-peer-deps',
+];
+const windows = process.platform === 'win32';
+const executable = windows ? process.env.ComSpec || 'cmd.exe' : 'npm';
+const args = windows ? ['/d', '/c', 'npm.cmd', ...flags] : flags;
+const held = spawnSync(executable, args, {
   cwd: join(__dirname, 'held'),
-  shell: true,
   encoding: 'utf8',
   timeout: 45000,
 });
