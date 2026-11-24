@@ -2316,6 +2316,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "esbuild017-watch-context",
+      "kind": "breaking-change",
+      "package": "esbuild",
+      "fromMajor": 0,
+      "toMajor": 0,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "0.15.6",
+          "to": "0.17.0"
+        }
+      ],
+      "title": "Use an esbuild build context for watch mode",
+      "summary": "At 0.17.0, esbuild removed the watch option from build(). context.watch() preserves edit-driven rebuilds, and context.dispose() stops the watcher.",
+      "conditions": [
+        "The update crosses esbuild 0.17.0 from an earlier release and an affected JavaScript build() call passes watch."
+      ],
+      "actions": [
+        "Use an awaited context.watch() in the watch branch and dispose the context on shutdown.",
+        "Keep one-shot build() calls without watch. If startup requires the first artifact, wait for completion explicitly."
+      ],
+      "verification": [
+        "Check the initial output, edit an input, and confirm the watcher emits the updated bundle."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-build-watch-option-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.rejects(target.build({ ...watchOptions(cwd, []), watch: true }), /Invalid option.*\"watch\"/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/ef32f04e7bf0e94147400f6009709aafe4bac65b/fixtures/esbuild017-watch-context/check.cjs",
+        "fixtureSha256": "38bd7927122aa0faf0d03bf92e3880519f44a1a8e4088f115cd1867d8f4c9935",
+        "claim": {
+          "package": "esbuild",
+          "from": "0.15.6",
+          "to": "0.17.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "ajv8-date-formats",
+      "kind": "breaking-change",
+      "package": "ajv",
+      "fromMajor": 6,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.15.0",
+          "to": "8.20.0"
+        }
+      ],
+      "title": "Register standard date formats on Ajv 8 before compiling",
+      "summary": "Ajv 8 rejects the unregistered date format under strict defaults. ajv-formats restores validation and its full date check can reject dates the old default accepted.",
+      "conditions": [
+        "Project schemas use format: date and rely on Ajv 6's built-in formats."
+      ],
+      "actions": [
+        "Register a compatible ajv-formats plugin on the Ajv instance before compiling the schema.",
+        "Check persisted and user-entered dates that may have passed the old validator."
+      ],
+      "verification": [
+        "Validate a real leap day, malformed input and a non-leap February 29."
+      ],
+      "negativeControls": [
+        {
+          "name": "unregistered-ajv8-date-format-rejects-compilation",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => new Ajv8().compile(schema), /unknown format \"date\"/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/5f7a191970e716905e5187bfd1084f4e7e32ac08/fixtures/ajv8-date-formats/check.cjs",
+        "fixtureSha256": "b6862900292b57b215a831bc06b00c8d7a2358eabeb968333d1388e4c6d6d03b",
+        "claim": {
+          "package": "ajv",
+          "from": "6.15.0",
+          "to": "8.20.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
