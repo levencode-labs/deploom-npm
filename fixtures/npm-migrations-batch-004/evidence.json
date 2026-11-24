@@ -1,0 +1,523 @@
+{
+  "fixtureSha256": "9c689d8ffce513186bce7a2dd4a0ce820da14b2d4575439a2e98322d02c3452c",
+  "claims": [
+    {
+      "package": "glob",
+      "from": "7.2.3",
+      "to": "8.1.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "glob",
+      "from": "8.1.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "glob",
+      "from": "10.4.4",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/types",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "4.5.5",
+      "to": "4.6.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "4.6.4",
+      "to": "4.7.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "4.7.4",
+      "to": "4.8.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "4.8.4",
+      "to": "4.9.3",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "4.9.5",
+      "to": "5.0.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.0.4",
+      "to": "5.1.3",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.1.6",
+      "to": "5.2.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.2.2",
+      "to": "5.3.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript",
+      "from": "5.9.3",
+      "to": "6.0.2",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "13.24.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/runtime",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "build",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/core",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "2.9.14",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "4.5.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "4.5.5",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "5.4.11",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "5.4.19",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react",
+      "from": "18.3.1",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "rimraf",
+      "from": "4.4.1",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "rimraf",
+      "from": "5.0.9",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dom",
+      "from": "18.3.1",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint",
+      "from": "8.57.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint",
+      "from": "8.57.1",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/react",
+      "from": "17.0.43",
+      "to": "18.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/react",
+      "from": "18.3.13",
+      "to": "19.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@typescript-eslint/eslint-plugin",
+      "from": "5.62.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@typescript-eslint/eslint-plugin",
+      "from": "6.21.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@typescript-eslint/parser",
+      "from": "5.62.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@typescript-eslint/parser",
+      "from": "6.21.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "prettier",
+      "from": "2.8.8",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "prettier",
+      "from": "3.4.2",
+      "to": "3.5.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@eslint/js",
+      "from": "8.57.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/react-dom",
+      "from": "18.3.1",
+      "to": "19.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "axios",
+      "from": "0.27.2",
+      "to": "1.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "chai",
+      "from": "4.3.10",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "0.34.6",
+      "to": "1.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitejs/plugin-react",
+      "from": "1.3.2",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitejs/plugin-react",
+      "from": "2.2.0",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitejs/plugin-react",
+      "from": "4.7.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/chai",
+      "from": "4.3.19",
+      "to": "5.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-modules-commonjs",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/dom",
+      "from": "8.20.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/dom",
+      "from": "9.3.4",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/react",
+      "from": "12.1.4",
+      "to": "13.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/react",
+      "from": "13.4.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/react",
+      "from": "14.3.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/preset-typescript",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-router",
+      "from": "6.28.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/preset-env",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "reselect",
+      "from": "4.1.8",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-router-dom",
+      "from": "6.28.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-import",
+      "from": "14.1.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-import",
+      "from": "15.1.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "redux",
+      "from": "4.2.1",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-prettier",
+      "from": "4.2.1",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/jest",
+      "from": "27.5.2",
+      "to": "28.1.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/jest",
+      "from": "29.5.14",
+      "to": "30.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/eslint",
+      "from": "8.56.10",
+      "to": "9.6.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "big.js",
+      "from": "6.2.2",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-redux",
+      "from": "8.1.3",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-runtime",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-markdown",
+      "from": "8.0.7",
+      "to": "9.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-markdown",
+      "from": "9.1.0",
+      "to": "10.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/preset-react",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "7.114.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "css-loader",
+      "from": "6.11.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-proposal-decorators",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@reduxjs/toolkit",
+      "from": "1.9.7",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "babel-loader",
+      "from": "8.2.5",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "babel-loader",
+      "from": "9.2.1",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

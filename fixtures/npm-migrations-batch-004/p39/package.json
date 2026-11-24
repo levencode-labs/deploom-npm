@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-big.js",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-6-2-2": "npm:big.js@6.2.2",
+    "v-7-0-0": "npm:big.js@7.0.0"
+  }
+}

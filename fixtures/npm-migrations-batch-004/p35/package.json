@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-redux",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-4-2-1": "npm:redux@4.2.1",
+    "v-5-0-0": "npm:redux@5.0.0"
+  }
+}

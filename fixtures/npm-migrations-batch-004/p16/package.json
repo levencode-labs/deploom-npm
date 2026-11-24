@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-prettier",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-2-8-8": "npm:prettier@2.8.8",
+    "v-3-0-0": "npm:prettier@3.0.0",
+    "v-3-4-2": "npm:prettier@3.4.2",
+    "v-3-5-0": "npm:prettier@3.5.0"
+  }
+}

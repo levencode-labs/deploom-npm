@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-globals",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-13-24-0": "npm:globals@13.24.0",
+    "v-14-0-0": "npm:globals@14.0.0"
+  }
+}

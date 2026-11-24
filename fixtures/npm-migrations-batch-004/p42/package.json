@@ -1,0 +1,13 @@
+{
+  "name": "deploom-migration-react-markdown",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-10-0-0": "npm:react-markdown@10.0.0",
+    "v-7-1-2": "npm:react-markdown@7.1.2",
+    "v-8-0-0": "npm:react-markdown@8.0.0",
+    "v-8-0-7": "npm:react-markdown@8.0.7",
+    "v-9-0-0": "npm:react-markdown@9.0.0",
+    "v-9-1-0": "npm:react-markdown@9.1.0"
+  }
+}
