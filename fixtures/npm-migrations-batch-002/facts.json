@@ -1,0 +1,3962 @@
+{
+  "@faker-js/faker": {
+    "10.0.0": {
+      "integrity": "sha512-UollFEUkVXutsaP+Vndjxar40Gs5JL2HeLcl8xO1QAjJgOdhc3OmBFWyEylS+RddWaaBiAzH+5/17PLQJwDiLw==",
+      "engines": {
+        "node": "^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0",
+        "npm": ">=10"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "default": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+          }
+        },
+        "./locale/*": {
+          "default": {
+            "types": "./dist/locale/*.d.ts",
+            "default": "./dist/locale/*.js"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js"
+    },
+    "9.0.0": {
+      "integrity": "sha512-dTDHJSmz6c1OJ6HO7jiUiIb4sB20Dlkb3pxYsKm0qTXm2Bmj97rlXIhlvaFsW2rvCi+OLlwKLVSS6ZxFUVZvjQ==",
+      "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/types/index.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs",
+          "default": "./dist/index.js"
+        },
+        "./locale/*": {
+          "types": "./dist/types/locale/*.d.ts",
+          "import": "./dist/locale/*.js",
+          "require": "./dist/locale/*.cjs",
+          "default": "./dist/locale/*.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.cjs"
+    }
+  },
+  "@playwright/test": {
+    "1.48.2": {
+      "integrity": "sha512-54w1xCWfXuax7dz4W2M9uw0gDyh+ti/0K/MxcCUxChFh37kkdxPdfZDw5QBbuPUJHr1CiHJ1hXgSs+GgeQc5Zw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.48.2"
+      }
+    },
+    "1.49.0": {
+      "integrity": "sha512-DMulbwQURa8rNIQrf94+jPJQ4FmOVdpE5ZppRNvWVjvhC+6sOeo28r8MgIpQRYouXRtt/FCCXU7zn20jnHR4Qw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.49.0"
+      }
+    },
+    "1.49.1": {
+      "integrity": "sha512-Ky+BVzPz8pL6PQxHqNRW1k3mIyv933LML7HktS8uik0bUXNCdPhoS/kLihiO1tMf/egaJb4IutXd7UywvXEW+g==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.49.1"
+      }
+    },
+    "1.50.0": {
+      "integrity": "sha512-ZGNXbt+d65EGjBORQHuYKj+XhCewlwpnSd/EDuLPZGSiEWmgOJB5RmMCCYGy5aMfTs9wx61RivfDKi8H/hcMvw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.50.0"
+      }
+    },
+    "1.54.2": {
+      "integrity": "sha512-A+znathYxPf+72riFd1r1ovOLqsIIB0jKIoPjyK2kqEIe30/6jF6BC7QNluHuwUmsD2tv1XZVugN8GqfTMOxsA==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.54.2"
+      }
+    },
+    "1.55.0": {
+      "integrity": "sha512-04IXzPwHrW69XusN/SIdDdKZBzMfOT9UNT/YiJit/xpy2VuAoB8NHc8Aplb96zsWDddLnbkPL3TsmrS04ZU2xQ==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.55.0"
+      }
+    },
+    "1.55.1": {
+      "integrity": "sha512-IVAh/nOJaw6W9g+RJVlIQJ6gSiER+ae6mKQ5CX1bERzQgbC1VSeBlwdvczT7pxb0GWiyrxH4TGKbMfDb4Sq/ig==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.55.1"
+      }
+    },
+    "1.56.0": {
+      "integrity": "sha512-Tzh95Twig7hUwwNe381/K3PggZBZblKUe2wv25oIpzWLr6Z0m4KgV1ZVIjnR6GM9ANEqjZD7XsZEa6JL/7YEgg==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.56.0"
+      }
+    },
+    "1.57.0": {
+      "integrity": "sha512-6TyEnHgd6SArQO8UO2OMTxshln3QMWBtPGrOCgs3wVEmQmwyuNtB10IZMfmYDE0riwNR1cu4q+pPcxMVtaG3TA==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.57.0"
+      }
+    },
+    "1.58.0": {
+      "integrity": "sha512-fWza+Lpbj6SkQKCrU6si4iu+fD2dD3gxNHFhUPxsfXBPhnv3rRSQVd0NtBUT9Z/RhF/boCBcuUaMUSTRTopjZg==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.58.0"
+      }
+    },
+    "1.58.2": {
+      "integrity": "sha512-akea+6bHYBBfA9uQqSYmlJXn61cTa+jbO87xVLCWbTqbWadRVmhxlXATaOjOgcBaWU4ePo0wB41KMFv3o35IXA==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.58.2"
+      }
+    },
+    "1.59.0": {
+      "integrity": "sha512-TOA5sTLd49rTDaZpYpvCQ9hGefHQq/OYOyCVnGqS2mjMfX+lGZv2iddIJd0I48cfxqSPttS9S3OuLKyylHcO1w==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.59.0"
+      }
+    },
+    "1.59.1": {
+      "integrity": "sha512-PG6q63nQg5c9rIi4/Z5lR5IVF7yU5MqmKaPOe0HSc0O2cX1fPi96sUQu5j7eo4gKCkB2AnNGoWt7y4/Xx3Kcqg==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.59.1"
+      }
+    },
+    "1.60.0": {
+      "integrity": "sha512-O71yZIbAh/PxDMNGns37GHBIfrVkEVyn+AXyIa5dOTfb4/xNvRWV+Vv/NMbNCtODB/pO7vLlF2OTmMVLhmr7Ag==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.60.0"
+      }
+    },
+    "1.63.0": {
+      "integrity": "sha512-oxMK4vllB9RK5NQ2l1pq1IfOf2AvnEuj/vYGDj0H2nMtmtZpKtCwt/l00GEO6xjGfpBNAvjovvYdCm50dRQkpQ==",
+      "engines": {
+        "node": ">=20"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.63.0"
+      }
+    },
+    "1.64.0": {
+      "integrity": "sha512-oTN9FNYuN6bqQMwiho6jJKLCG2/QOYCixGXuCjRmzOq23eODeukuY2XiAVoVpAECbuezMt1MHQjAiQxK8F+Y+g==",
+      "engines": {
+        "node": ">=20"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.64.0"
+      }
+    },
+    "1.64.1": {
+      "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg==",
+      "engines": {
+        "node": ">=20"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.64.1"
+      }
+    },
+    "1.65.0": {
+      "integrity": "sha512-iGURLGuKDLakSEl7Pgfv8h7f+XLT+V861Wfhz0zlEl5nyFuKUopdkFBPKqTllTUp06aOwPuH8iuUEb3yp3MpbQ==",
+      "engines": {
+        "node": ">=20"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./index.mjs",
+          "require": "./index.js",
+          "default": "./index.js"
+        },
+        "./cli": "./cli.js",
+        "./package.json": "./package.json",
+        "./reporter": "./reporter.js"
+      },
+      "dependencies": {
+        "playwright": "1.65.0"
+      }
+    }
+  },
+  "@sentry/browser": {
+    "10.0.0": {
+      "integrity": "sha512-heta2gqiVBOPN59H4PRPS956ZNagXlqrTUeoaQdcLa8AVmPBFZqkkBbZIogieHDMGp/m1M6WqdOcV6rAb26NHw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./build/npm/types/index.d.ts",
+            "default": "./build/npm/esm/index.js"
+          },
+          "require": {
+            "types": "./build/npm/types/index.d.ts",
+            "default": "./build/npm/cjs/index.js"
+          }
+        }
+      },
+      "main": "build/npm/cjs/index.js",
+      "dependencies": {
+        "@sentry-internal/browser-utils": "10.0.0",
+        "@sentry-internal/feedback": "10.0.0",
+        "@sentry-internal/replay": "10.0.0",
+        "@sentry-internal/replay-canvas": "10.0.0",
+        "@sentry/core": "10.0.0"
+      }
+    },
+    "11.0.0": {
+      "integrity": "sha512-a09jUpx4OBebmY0XLYXLhfvkCIken8xoncjmOmbPIa3ibUHI6ZJVyh3jAzMu56LY9xfJRV5bOfp92yf41Yr6dQ==",
+      "engines": {
+        "node": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "types": "./build/npm/types/index.d.ts",
+          "react-native": "./build/npm/esm/prod/index.js",
+          "development": {
+            "import": "./build/npm/esm/dev/index.js",
+            "require": "./build/npm/cjs/dev/index.js"
+          },
+          "production": {
+            "import": "./build/npm/esm/prod/index.js",
+            "require": "./build/npm/cjs/prod/index.js"
+          },
+          "default": {
+            "import": "./build/npm/esm/prod/index.js",
+            "require": "./build/npm/cjs/prod/index.js"
+          }
+        }
+      },
+      "main": "build/npm/cjs/prod/index.js",
+      "dependencies": {
+        "@sentry/browser-utils": "11.0.0",
+        "@sentry/conventions": "^0.23.0",
+        "@sentry/feedback": "11.0.0",
+        "@sentry/replay": "11.0.0",
+        "@sentry/replay-canvas": "11.0.0",
+        "@sentry/core": "11.0.0"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-HZt5bjujxz2XJA1iUqD51gEz/h8Ij+BYLu6D+qh6WpVtCSS1cfKoxJj8mQef7j5tIVVofxRtRr9PvAoFnehO0A==",
+      "engines": {
+        "node": ">=14.18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./types/index.d.ts",
+            "default": "./esm/index.js"
+          },
+          "require": {
+            "types": "./build/npm.types/index.d.ts",
+            "default": "./cjs/index.js"
+          }
+        }
+      },
+      "main": "cjs/index.js",
+      "dependencies": {
+        "@sentry-internal/browser-utils": "8.0.0",
+        "@sentry-internal/feedback": "8.0.0",
+        "@sentry-internal/replay": "8.0.0",
+        "@sentry-internal/replay-canvas": "8.0.0",
+        "@sentry/core": "8.0.0",
+        "@sentry/types": "8.0.0",
+        "@sentry/utils": "8.0.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-+BgusObsLnHwiA+xLm9d3YmdzRXFSUTG7YSSZYZ94NpQdnQlEb6a0ER6abCzmxmKAhNykf5MzLrPRz65bL83WQ==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./build/npm/types/index.d.ts",
+            "default": "./build/npm/esm/index.js"
+          },
+          "require": {
+            "types": "./build/npm/types/index.d.ts",
+            "default": "./build/npm/cjs/index.js"
+          }
+        }
+      },
+      "main": "build/npm/cjs/index.js",
+      "dependencies": {
+        "@sentry-internal/browser-utils": "9.0.0",
+        "@sentry-internal/feedback": "9.0.0",
+        "@sentry-internal/replay": "9.0.0",
+        "@sentry-internal/replay-canvas": "9.0.0",
+        "@sentry/core": "9.0.0"
+      }
+    }
+  },
+  "@sentry/react": {
+    "10.0.0": {
+      "integrity": "sha512-/vmHGVaHL+TO5h116fo63qiJJc9OhrFKXM797E+BYVRE4WsawaCfbbT/UQjFgw21LsxyyY+LB9CuQwviNAjQ1Q==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/esm/index.js"
+          },
+          "require": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/cjs/index.js"
+          }
+        }
+      },
+      "main": "build/cjs/index.js",
+      "dependencies": {
+        "@sentry/browser": "10.0.0",
+        "@sentry/core": "10.0.0",
+        "hoist-non-react-statics": "^3.3.2"
+      },
+      "peerDependencies": {
+        "react": "^16.14.0 || 17.x || 18.x || 19.x"
+      }
+    },
+    "11.0.0": {
+      "integrity": "sha512-YMF4t9659byD3rYZ9zjE5vdL3NUVFBEQfHzbMJf4kow7h7eyDdQi8GN4K1qsOFBim5C/7/ry0dkP1r4p7qtEWA==",
+      "engines": {
+        "node": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "react-native": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/esm/index.js"
+          },
+          "import": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/esm/index.js"
+          },
+          "require": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/cjs/index.js"
+          }
+        },
+        "./react-router": {
+          "react-native": {
+            "types": "./build/types/react-router.d.ts",
+            "default": "./build/esm/react-router.js"
+          },
+          "import": {
+            "types": "./build/types/react-router.d.ts",
+            "default": "./build/esm/react-router.js"
+          },
+          "require": {
+            "types": "./build/types/react-router.d.ts",
+            "default": "./build/cjs/react-router.js"
+          }
+        }
+      },
+      "main": "build/cjs/index.js",
+      "dependencies": {
+        "@sentry/browser": "11.0.0",
+        "@sentry/core": "11.0.0",
+        "@sentry/conventions": "^0.23.0"
+      },
+      "peerDependencies": {
+        "react": "17.x || 18.x || 19.x",
+        "react-router": "6.x || 7.x || 8.x"
+      },
+      "peerDependenciesMeta": {
+        "react-router": {
+          "optional": true
+        }
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-TbAtOAKY2QKqpuy0uoO/ujL0J5djZjQ2K8iE3/j3+EX/3DaZ3ydUGNdJ0rDQQoJgRUsPidBM+SBco2dI38sCdQ==",
+      "engines": {
+        "node": ">=14.18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./types/index.d.ts",
+            "default": "./esm/index.js"
+          },
+          "require": {
+            "types": "./types/index.d.ts",
+            "default": "./cjs/index.js"
+          }
+        }
+      },
+      "main": "cjs/index.js",
+      "dependencies": {
+        "@sentry/browser": "8.0.0",
+        "@sentry/core": "8.0.0",
+        "@sentry/types": "8.0.0",
+        "@sentry/utils": "8.0.0",
+        "hoist-non-react-statics": "^3.3.2"
+      },
+      "peerDependencies": {
+        "react": "16.x || 17.x || 18.x"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-sx63e0DEPGEpOty6iTBmVB0hsT4x3L2KT8XHN891FUBorHcifH5Lwu85xDVp6Lsp4T2D2Strq64uNiOPiZ+12A==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/esm/index.js"
+          },
+          "require": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/cjs/index.js"
+          }
+        }
+      },
+      "main": "build/cjs/index.js",
+      "dependencies": {
+        "@sentry/browser": "9.0.0",
+        "@sentry/core": "9.0.0",
+        "hoist-non-react-statics": "^3.3.2"
+      },
+      "peerDependencies": {
+        "react": "^16.14.0 || 17.x || 18.x || 19.x"
+      }
+    }
+  },
+  "@sentry/types": {
+    "10.0.0": {
+      "integrity": "sha512-oi4J509W5rfFbZXHLUCLGT8HNf67V2VLY3sWRgNUitoZlf9VAPi75xdov4VOTbvFywxgqBZfqaptdpGCxX8G9w==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/esm/index.js"
+          },
+          "require": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/cjs/index.js"
+          }
+        }
+      },
+      "main": "build/cjs/index.js",
+      "dependencies": {
+        "@sentry/core": "10.0.0"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-Dtd8dtFEq1XtdAntkguYHaL4tokzm4Aq5t0HP6Vl1P+MPImokDE1UcpKglkh0Z5aym/vF6e0qW9/CM7lAI5R/A==",
+      "engines": {
+        "node": ">=14.18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./types/index.d.ts",
+            "default": "./esm/index.js"
+          },
+          "require": {
+            "types": "./types/index.d.ts",
+            "default": "./cjs/index.js"
+          }
+        }
+      },
+      "main": "cjs/index.js"
+    },
+    "9.0.0": {
+      "integrity": "sha512-AC2fHkyOEl8zgWbFYu2F5I8iAxzRzYGx6GZNANNSKxbP+mO6BgVG95GA6JW2EQggf45O/ySf7EthIZ/miD5/fA==",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/esm/index.js"
+          },
+          "require": {
+            "types": "./build/types/index.d.ts",
+            "default": "./build/cjs/index.js"
+          }
+        }
+      },
+      "main": "build/cjs/index.js",
+      "dependencies": {
+        "@sentry/core": "9.0.0"
+      }
+    }
+  },
+  "@storybook/addon-docs": {
+    "10.0.0": {
+      "integrity": "sha512-mwEI/os48ncIQMrLFAI3rJf88Ge/2/7Pj+g6+MRYjWAz5x9zCLrOgRUJFRvuzVY4SJKsKuSPYplrbmj4L+YlRQ==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./angular": {
+          "types": "./dist/angular/index.d.ts",
+          "default": "./dist/angular/index.js"
+        },
+        "./blocks": {
+          "types": "./dist/blocks.d.ts",
+          "default": "./dist/blocks.js"
+        },
+        "./ember": {
+          "types": "./dist/ember/index.d.ts",
+          "default": "./dist/ember/index.js"
+        },
+        "./manager": "./dist/manager.js",
+        "./mdx-loader": "./dist/mdx-loader.js",
+        "./mdx-react-shim": {
+          "types": "./dist/mdx-react-shim.d.ts",
+          "default": "./dist/mdx-react-shim.js"
+        },
+        "./package.json": "./package.json",
+        "./preset": "./dist/preset.js",
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "default": "./dist/preview.js"
+        },
+        "./web-components": {
+          "types": "./dist/web-components/index.d.ts",
+          "default": "./dist/web-components/index.js"
+        }
+      },
+      "dependencies": {
+        "@mdx-js/react": "^3.0.0",
+        "@storybook/csf-plugin": "10.0.0",
+        "@storybook/icons": "^1.6.0",
+        "@storybook/react-dom-shim": "10.0.0",
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "ts-dedent": "^2.0.0"
+      },
+      "peerDependencies": {
+        "storybook": "^10.0.0"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-P86M4Mo3FKtMIzSc8Hao46NmrlBs4w81BVf3AWNVka5aIPdWP2pINgDDDweASPgFKMVQNWUreR5pl0DHZfaJ5g==",
+      "exports": {
+        ".": {
+          "node": "./dist/index.js",
+          "types": "./dist/index.d.ts",
+          "require": "./dist/index.js",
+          "import": "./dist/index.mjs"
+        },
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "require": "./dist/preview.js",
+          "import": "./dist/preview.mjs"
+        },
+        "./preset": {
+          "types": "./dist/preset.d.ts",
+          "require": "./dist/preset.js",
+          "import": "./dist/preset.js"
+        },
+        "./blocks": {
+          "types": "./dist/blocks.d.ts",
+          "require": "./dist/blocks.js",
+          "import": "./dist/blocks.mjs"
+        },
+        "./dist/preview": {
+          "types": "./dist/preview.d.ts",
+          "require": "./dist/preview.js",
+          "import": "./dist/preview.mjs"
+        },
+        "./dist/preset": {
+          "types": "./dist/preset.d.ts",
+          "require": "./dist/preset.js"
+        },
+        "./dist/shims/mdx-react-shim": {
+          "types": "./dist/shims/mdx-react-shim.d.ts",
+          "require": "./dist/shims/mdx-react-shim.js",
+          "import": "./dist/shims/mdx-react-shim.mjs"
+        },
+        "./mdx-react-shim": {
+          "types": "./dist/shims/mdx-react-shim.d.ts",
+          "require": "./dist/shims/mdx-react-shim.js",
+          "import": "./dist/shims/mdx-react-shim.mjs"
+        },
+        "./mdx-loader": "./dist/mdx-loader.js",
+        "./svelte/HOC.svelte": "./svelte/HOC.svelte",
+        "./ember": "./ember/index.js",
+        "./ember/index.js": "./ember/index.js",
+        "./angular": "./angular/index.js",
+        "./angular/index.js": "./angular/index.js",
+        "./web-components/index.js": "./web-components/index.js",
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@babel/core": "^7.12.3",
+        "@mdx-js/react": "^3.0.0",
+        "@storybook/blocks": "8.0.0",
+        "@storybook/client-logger": "8.0.0",
+        "@storybook/components": "8.0.0",
+        "@storybook/csf-plugin": "8.0.0",
+        "@storybook/csf-tools": "8.0.0",
+        "@storybook/global": "^5.0.0",
+        "@storybook/node-logger": "8.0.0",
+        "@storybook/preview-api": "8.0.0",
+        "@storybook/react-dom-shim": "8.0.0",
+        "@storybook/theming": "8.0.0",
+        "@storybook/types": "8.0.0",
+        "@types/react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "fs-extra": "^11.1.0",
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "rehype-external-links": "^3.0.0",
+        "rehype-slug": "^6.0.0",
+        "ts-dedent": "^2.0.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-uTUfJvZL3cYbDKllYXWTZTa353sO6xyyNjG8xrjDNqUIod/V0JSxbMNt/87HT443SeWZzNiWQGoenR4op7fJMA==",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "import": "./dist/preview.mjs",
+          "require": "./dist/preview.js"
+        },
+        "./preset": "./dist/preset.js",
+        "./blocks": {
+          "types": "./dist/blocks.d.ts",
+          "import": "./dist/blocks.mjs",
+          "require": "./dist/blocks.js"
+        },
+        "./dist/preview": {
+          "types": "./dist/preview.d.ts",
+          "import": "./dist/preview.mjs",
+          "require": "./dist/preview.js"
+        },
+        "./dist/preset": "./dist/preset.js",
+        "./dist/shims/mdx-react-shim": {
+          "types": "./dist/shims/mdx-react-shim.d.ts",
+          "import": "./dist/shims/mdx-react-shim.mjs",
+          "require": "./dist/shims/mdx-react-shim.js"
+        },
+        "./mdx-react-shim": {
+          "types": "./dist/shims/mdx-react-shim.d.ts",
+          "import": "./dist/shims/mdx-react-shim.mjs",
+          "require": "./dist/shims/mdx-react-shim.js"
+        },
+        "./mdx-loader": "./dist/mdx-loader.js",
+        "./svelte/HOC.svelte": "./svelte/HOC.svelte",
+        "./ember": "./ember/index.js",
+        "./ember/index.js": "./ember/index.js",
+        "./angular": "./angular/index.js",
+        "./angular/index.js": "./angular/index.js",
+        "./web-components/index.js": "./web-components/index.js",
+        "./package.json": "./package.json",
+        "./manager": "./dist/manager.js"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@mdx-js/react": "^3.0.0",
+        "@storybook/csf-plugin": "9.0.0",
+        "@storybook/icons": "^1.2.12",
+        "@storybook/react-dom-shim": "9.0.0",
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "ts-dedent": "^2.0.0"
+      },
+      "peerDependencies": {
+        "storybook": "^9.0.0"
+      }
+    }
+  },
+  "@storybook/builder-vite": {
+    "10.0.0": {
+      "integrity": "sha512-D8rcLAJSKeAol/xFA+uB9YGKOzg/SZiSMw12DkrJGgJD7GGM9xPR7VwQVxPtMUewmQrPtYB7LZ3Eaa+7PlMQ4Q==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./input/iframe.html": "./input/iframe.html",
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "@storybook/csf-plugin": "10.0.0",
+        "ts-dedent": "^2.0.0"
+      },
+      "peerDependencies": {
+        "storybook": "^10.0.0",
+        "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-dJhd8QwQDELwStbM1P6LEXjFHVbhMM4jH5L+UkDDrS42m2YTvizdGhyRvEJajLz1Ar7o4++p2hBBA/dU9NXfJQ==",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
+          "require": "./dist/index.js",
+          "import": "./dist/index.mjs"
+        },
+        "./input/iframe.html": "./input/iframe.html",
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@storybook/channels": "8.0.0",
+        "@storybook/client-logger": "8.0.0",
+        "@storybook/core-common": "8.0.0",
+        "@storybook/core-events": "8.0.0",
+        "@storybook/csf-plugin": "8.0.0",
+        "@storybook/node-logger": "8.0.0",
+        "@storybook/preview": "8.0.0",
+        "@storybook/preview-api": "8.0.0",
+        "@storybook/types": "8.0.0",
+        "@types/find-cache-dir": "^3.2.1",
+        "browser-assert": "^1.2.1",
+        "es-module-lexer": "^0.9.3",
+        "express": "^4.17.3",
+        "find-cache-dir": "^3.0.0",
+        "fs-extra": "^11.1.0",
+        "magic-string": "^0.30.0",
+        "ts-dedent": "^2.0.0"
+      },
+      "peerDependencies": {
+        "@preact/preset-vite": "*",
+        "typescript": ">= 4.3.x",
+        "vite": "^4.0.0 || ^5.0.0",
+        "vite-plugin-glimmerx": "*"
+      },
+      "peerDependenciesMeta": {
+        "@preact/preset-vite": {
+          "optional": true
+        },
+        "typescript": {
+          "optional": true
+        },
+        "vite-plugin-glimmerx": {
+          "optional": true
+        }
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-0idj9v6ttbuT8ms/N7J4y1x034XM1vgAbfpJHUaO0+AcRoER3/hOiVG6563mE/uDFe+DXyf1BZk6n/VvhtgQcA==",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "./input/iframe.html": "./input/iframe.html",
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@storybook/csf-plugin": "9.0.0",
+        "ts-dedent": "^2.0.0"
+      },
+      "peerDependencies": {
+        "storybook": "^9.0.0",
+        "vite": "^5.0.0 || ^6.0.0"
+      }
+    }
+  },
+  "@storybook/react": {
+    "10.0.0": {
+      "integrity": "sha512-9e0RMlMG1QJFbga258AchHQlpD9uF+uGALi63kVILm5OApVyc9sC1FGgHtVS7DrEIdW5wVCWAFLNzgSw2YFC2w==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./entry-preview": "./dist/entry-preview.js",
+        "./entry-preview-argtypes": "./dist/entry-preview-argtypes.js",
+        "./entry-preview-docs": "./dist/entry-preview-docs.js",
+        "./entry-preview-rsc": "./dist/entry-preview-rsc.js",
+        "./experimental-playwright": {
+          "types": "./dist/playwright.d.ts",
+          "default": "./dist/playwright.js"
+        },
+        "./package.json": "./package.json",
+        "./preset": "./dist/preset.js",
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "default": "./dist/preview.js"
+        }
+      },
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "@storybook/react-dom-shim": "10.0.0"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "storybook": "^10.0.0",
+        "typescript": ">= 4.9.x"
+      },
+      "peerDependenciesMeta": {
+        "typescript": {
+          "optional": true
+        }
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-Nl3jEd8Ezd2aDXfoQAgfGmwna3U6NOLMcCRSYOR63bH4/u16MnnDE8ACy+mH/+yWGEoxNjqcWUJiDk2h4C07LA==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
+          "require": "./dist/index.js",
+          "import": "./dist/index.mjs"
+        },
+        "./preset": "./preset.js",
+        "./dist/entry-preview.mjs": "./dist/entry-preview.mjs",
+        "./dist/entry-preview-docs.mjs": "./dist/entry-preview-docs.mjs",
+        "./dist/entry-preview-rsc.mjs": "./dist/entry-preview-rsc.mjs",
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@storybook/client-logger": "8.0.0",
+        "@storybook/docs-tools": "8.0.0",
+        "@storybook/global": "^5.0.0",
+        "@storybook/preview-api": "8.0.0",
+        "@storybook/react-dom-shim": "8.0.0",
+        "@storybook/types": "8.0.0",
+        "@types/escodegen": "^0.0.6",
+        "@types/estree": "^0.0.51",
+        "@types/node": "^18.0.0",
+        "acorn": "^7.4.1",
+        "acorn-jsx": "^5.3.1",
+        "acorn-walk": "^7.2.0",
+        "escodegen": "^2.1.0",
+        "html-tags": "^3.1.0",
+        "lodash": "^4.17.21",
+        "prop-types": "^15.7.2",
+        "react-element-to-jsx-string": "^15.0.0",
+        "semver": "^7.3.7",
+        "ts-dedent": "^2.0.0",
+        "type-fest": "~2.19",
+        "util-deprecate": "^1.0.2"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "typescript": ">= 4.2.x"
+      },
+      "peerDependenciesMeta": {
+        "typescript": {
+          "optional": true
+        }
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-GhiV7lnMOezZXUPbgxlDXK5jSQq63hgvPDku3Qw/r3w+LZUIihO8hMPK7Ml1o0BnLu6SwOh4Zp0nSyb8En1U9g==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "import": "./dist/preview.mjs",
+          "require": "./dist/preview.js"
+        },
+        "./experimental-playwright": {
+          "types": "./dist/playwright.d.ts",
+          "import": "./dist/playwright.mjs",
+          "require": "./dist/playwright.js"
+        },
+        "./preset": "./preset.js",
+        "./dist/entry-preview.mjs": "./dist/entry-preview.mjs",
+        "./dist/entry-preview-argtypes.mjs": "./dist/entry-preview-argtypes.mjs",
+        "./dist/entry-preview-docs.mjs": "./dist/entry-preview-docs.mjs",
+        "./dist/entry-preview-rsc.mjs": "./dist/entry-preview-rsc.mjs",
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "@storybook/react-dom-shim": "9.0.0"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+        "storybook": "^9.0.0",
+        "typescript": ">= 4.9.x"
+      },
+      "peerDependenciesMeta": {
+        "typescript": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "@testing-library/jest-dom": {
+    "7.0.0": {
+      "integrity": "sha512-HKAH9C6mBo5yBG6yRO5i43L2iisencAo5z+o5P/saHUoY+miC5ivXRxHBJcFyB5ypPNxHJdK3BoF/3O4DIptMg==",
+      "engines": {
+        "node": ">=22",
+        "npm": ">=6",
+        "yarn": ">=1"
+      },
+      "exports": {
+        ".": {
+          "require": {
+            "types": "./types/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "import": {
+            "types": "./types/index.d.ts",
+            "default": "./dist/index.mjs"
+          }
+        },
+        "./jest-globals": {
+          "require": {
+            "types": "./types/jest-globals.d.ts",
+            "default": "./dist/jest-globals.js"
+          },
+          "import": {
+            "types": "./types/jest-globals.d.ts",
+            "default": "./dist/jest-globals.mjs"
+          }
+        },
+        "./matchers": {
+          "require": {
+            "types": "./types/matchers-standalone.d.ts",
+            "default": "./dist/matchers.js"
+          },
+          "import": {
+            "types": "./types/matchers-standalone.d.ts",
+            "default": "./dist/matchers.mjs"
+          }
+        },
+        "./vitest": {
+          "require": {
+            "types": "./types/vitest.d.ts",
+            "default": "./dist/vitest.js"
+          },
+          "import": {
+            "types": "./types/vitest.d.ts",
+            "default": "./dist/vitest.mjs"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@adobe/css-tools": "^4.4.0",
+        "aria-query": "^5.0.0",
+        "css.escape": "^1.5.1",
+        "dom-accessibility-api": "^0.6.3",
+        "picocolors": "^1.1.1",
+        "redent": "^3.0.0"
+      },
+      "peerDependencies": {
+        "@testing-library/dom": ">=10 <11"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-Nu45KEeFgP/ydCMipnisMblq6YHViqEFi3fKN0a40s+zdKDDD7vEPCEavS0i7i4RxmclcEIL8q2o42pu+WgNgg==",
+      "engines": {
+        "node": ">=22",
+        "npm": ">=6",
+        "yarn": ">=1"
+      },
+      "exports": {
+        ".": {
+          "require": {
+            "types": "./types/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "import": {
+            "types": "./types/index.d.ts",
+            "default": "./dist/index.mjs"
+          }
+        },
+        "./jest-globals": {
+          "require": {
+            "types": "./types/jest-globals.d.ts",
+            "default": "./dist/jest-globals.js"
+          },
+          "import": {
+            "types": "./types/jest-globals.d.ts",
+            "default": "./dist/jest-globals.mjs"
+          }
+        },
+        "./matchers": {
+          "require": {
+            "types": "./types/matchers-standalone.d.ts",
+            "default": "./dist/matchers.js"
+          },
+          "import": {
+            "types": "./types/matchers-standalone.d.ts",
+            "default": "./dist/matchers.mjs"
+          }
+        },
+        "./vitest": {
+          "require": {
+            "types": "./types/vitest.d.ts",
+            "default": "./dist/vitest.js"
+          },
+          "import": {
+            "types": "./types/vitest.d.ts",
+            "default": "./dist/vitest.mjs"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@adobe/css-tools": "^4.4.0",
+        "aria-query": "^5.0.0",
+        "css.escape": "^1.5.1",
+        "dom-accessibility-api": "^0.6.3",
+        "picocolors": "^1.1.1",
+        "redent": "^3.0.0"
+      },
+      "peerDependencies": {
+        "@testing-library/dom": ">=10 <11",
+        "vitest": ">=5 <6"
+      },
+      "peerDependenciesMeta": {
+        "vitest": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "@testing-library/react": {
+    "15.0.0": {
+      "integrity": "sha512-Nb2Sq8MoSvGVdOGGppRqXeafLtvXCOwiOQtcbqCfkpVNZZNUqIjeSOwrfJ59zBfmZbAn8PitnWEzUKD1YwMrCg==",
+      "engines": {
+        "node": ">=18"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@babel/runtime": "^7.12.5",
+        "@testing-library/dom": "^10.0.0",
+        "@types/react-dom": "^18.0.0"
+      },
+      "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+      }
+    },
+    "16.0.0": {
+      "integrity": "sha512-guuxUKRWQ+FgNX0h0NS0FIq3Q3uLtWVpBzcLOggmfMoUpgBnzBzvLLd4fbm6yS8ydJd94cIfY4yP9qUQjM2KwQ==",
+      "engines": {
+        "node": ">=18"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@babel/runtime": "^7.12.5"
+      },
+      "peerDependencies": {
+        "@testing-library/dom": "^10.0.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        },
+        "@types/react-dom": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "@vitejs/plugin-react": {
+    "5.0.0": {
+      "integrity": "sha512-Jx9JfsTa05bYkS9xo0hkofp2dCmp1blrKjw9JONs5BTHOvJCgLbaPSuZLGSVJW6u2qe0tc4eevY0+gSNNi0YCw==",
+      "engines": {
+        "node": "^20.19.0 || >=22.12.0"
+      },
+      "type": "module",
+      "exports": "./dist/index.js",
+      "dependencies": {
+        "@babel/core": "^7.28.0",
+        "@babel/plugin-transform-react-jsx-self": "^7.27.1",
+        "@babel/plugin-transform-react-jsx-source": "^7.27.1",
+        "@rolldown/pluginutils": "1.0.0-beta.30",
+        "@types/babel__core": "^7.20.5",
+        "react-refresh": "^0.17.0"
+      },
+      "peerDependencies": {
+        "vite": "^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
+      }
+    },
+    "6.0.0": {
+      "integrity": "sha512-Bu5/eP6td3WI654+tRq+ryW1PbgA90y5pqMKpb3U7UpNk6VjI53P/ncPUd192U9dSrepLy7DHnq1XEMDz5H++w==",
+      "engines": {
+        "node": "^20.19.0 || >=22.12.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": "./dist/index.js",
+        "./preamble": "./types/preamble.d.ts"
+      },
+      "dependencies": {
+        "@rolldown/pluginutils": "1.0.0-rc.7"
+      },
+      "peerDependencies": {
+        "@rolldown/plugin-babel": "^0.1.7",
+        "babel-plugin-react-compiler": "^1.0.0",
+        "vite": "^8.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@rolldown/plugin-babel": {
+          "optional": true
+        },
+        "babel-plugin-react-compiler": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "@vitest/coverage-v8": {
+    "1.0.0": {
+      "integrity": "sha512-SiBaQkGqjLzC4mfSNtWoAndHgwiwHJ9XeSqAmy7N0L3zownuqzOUcLwp8yvKvVjqOyvB4bZ9Ek16kAaboDD7Cg==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@ampproject/remapping": "^2.2.1",
+        "@bcoe/v8-coverage": "^0.2.3",
+        "debug": "^4.3.4",
+        "istanbul-lib-coverage": "^3.2.2",
+        "istanbul-lib-report": "^3.0.1",
+        "istanbul-lib-source-maps": "^4.0.1",
+        "istanbul-reports": "^3.1.6",
+        "magic-string": "^0.30.5",
+        "magicast": "^0.3.2",
+        "picocolors": "^1.0.0",
+        "std-env": "^3.5.0",
+        "test-exclude": "^6.0.0",
+        "v8-to-istanbul": "^9.2.0"
+      },
+      "peerDependencies": {
+        "vitest": "^1.0.0-0"
+      }
+    },
+    "2.0.0": {
+      "integrity": "sha512-k2OgMH8e4AyUVsmLk2P3vT++VVaUQbvVaP5NJQDgXgv1q4lG56Z4nb26QNcxgk4ZLypmOrfultAShMo+okIOYw==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@ampproject/remapping": "^2.3.0",
+        "@bcoe/v8-coverage": "^0.2.3",
+        "debug": "^4.3.5",
+        "istanbul-lib-coverage": "^3.2.2",
+        "istanbul-lib-report": "^3.0.1",
+        "istanbul-lib-source-maps": "^5.0.6",
+        "istanbul-reports": "^3.1.7",
+        "magic-string": "^0.30.10",
+        "magicast": "^0.3.4",
+        "picocolors": "^1.0.1",
+        "std-env": "^3.7.0",
+        "strip-literal": "^2.1.0",
+        "test-exclude": "^7.0.1"
+      },
+      "peerDependencies": {
+        "vitest": "2.0.0"
+      }
+    },
+    "3.0.0": {
+      "integrity": "sha512-wfXdOyYhm6L5GndWv6qP95gfyfkNKDFpTZPplOxHLo9DiQ1B7L3bMNngWAvDa+PMK4WrX4Pzef2FZ8E8qKVBuw==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@ampproject/remapping": "^2.3.0",
+        "@bcoe/v8-coverage": "^1.0.1",
+        "debug": "^4.4.0",
+        "istanbul-lib-coverage": "^3.2.2",
+        "istanbul-lib-report": "^3.0.1",
+        "istanbul-lib-source-maps": "^5.0.6",
+        "istanbul-reports": "^3.1.7",
+        "magic-string": "^0.30.17",
+        "magicast": "^0.3.5",
+        "std-env": "^3.8.0",
+        "test-exclude": "^7.0.1",
+        "tinyrainbow": "^2.0.0"
+      },
+      "peerDependencies": {
+        "@vitest/browser": "3.0.0",
+        "vitest": "3.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@vitest/browser": {
+          "optional": true
+        }
+      }
+    },
+    "4.0.0": {
+      "integrity": "sha512-VyVmZ8TccaGCZT9C0/vIi3kbPmvD/rLUcRx1AC8QzqaCm9SLYr1p3rxirW3EuwEGWnVU7KjGckAwJR1SRtgurA==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@bcoe/v8-coverage": "^1.0.2",
+        "ast-v8-to-istanbul": "^0.3.5",
+        "debug": "^4.4.3",
+        "istanbul-lib-coverage": "^3.2.2",
+        "istanbul-lib-report": "^3.0.1",
+        "istanbul-lib-source-maps": "^5.0.6",
+        "istanbul-reports": "^3.2.0",
+        "magicast": "^0.3.5",
+        "std-env": "^3.9.0",
+        "tinyrainbow": "^3.0.3",
+        "@vitest/utils": "4.0.0"
+      },
+      "peerDependencies": {
+        "@vitest/browser": "4.0.0",
+        "vitest": "4.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@vitest/browser": {
+          "optional": true
+        }
+      }
+    },
+    "5.0.0": {
+      "integrity": "sha512-toMg6PZGCIa/lQNCDoASrfb1ly4hsUKXFtFYC9kD4t78o5Y6LyNJU7AENt8eHPr3quYdxaxK7hj2mnbFfUk9NA==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@bcoe/v8-coverage": "^1.0.2",
+        "@vitest/istanbul-lib-coverage": "^1.0.0",
+        "@vitest/istanbul-lib-report": "^1.0.0",
+        "ast-v8-to-istanbul": "^1.0.5",
+        "magicast": "^0.5.4",
+        "obug": "^2.1.4",
+        "std-env": "^4.2.0",
+        "tinyrainbow": "^3.1.1"
+      },
+      "peerDependencies": {
+        "@vitest/browser": "5.0.0",
+        "vitest": "5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@vitest/browser": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "concurrently": {
+    "10.0.0": {
+      "integrity": "sha512-DRrk10z3sVPpguNe8od2cGNqZGqbT15rwAnxD4dG3b78mdNNb/gJyr8T834Oj518WcBmTktrt4FhdwZn09ZWSg==",
+      "engines": {
+        "node": ">=22"
+      },
+      "type": "module",
+      "exports": {
+        ".": "./dist/lib/index.js",
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "chalk": "5.6.2",
+        "rxjs": "7.8.2",
+        "shell-quote": "1.8.4",
+        "supports-color": "10.2.2",
+        "tree-kill": "1.2.2",
+        "yargs": "18.0.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-iAxbsDeUkn8E/4+QalT7T3WvlyTfmsoez+19lbbcsxZdOEMfBukd8LA30KYez2UR5xkKFzbcqXIZy5RisCbaxw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./index.d.mts",
+            "default": "./index.mjs"
+          },
+          "require": {
+            "types": "./index.d.ts",
+            "default": "./index.js"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "index.js",
+      "dependencies": {
+        "chalk": "^4.1.2",
+        "lodash": "^4.17.21",
+        "rxjs": "^7.8.1",
+        "shell-quote": "^1.8.1",
+        "supports-color": "^8.1.1",
+        "tree-kill": "^1.2.2",
+        "yargs": "^17.7.2"
+      }
+    }
+  },
+  "debounce": {
+    "3.0.0": {
+      "integrity": "sha512-64byRbF0/AirwbuHqB3/ZpMG9/nckDa6ZA0yd6UnaQNwbbemCOwvz2sL5sjXLHhZHADyiwLm0M5qMhltUUx+TA==",
+      "engines": {
+        "node": ">=20"
+      },
+      "type": "module",
+      "exports": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "4.0.0": {
+      "integrity": "sha512-o6nMNFRtqLR6mRlyt0b21cgYPSKAEMZFpROIRS9ZRH6hhSJWvGErqeSCJnWyiwVQYMSw7f/DZLilF5YRDwFz7w==",
+      "engines": {
+        "node": ">=22.2"
+      },
+      "type": "module",
+      "exports": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    }
+  },
+  "eslint-plugin-jest": {
+    "28.0.0": {
+      "integrity": "sha512-FHiVI/nMYy48juLJKIt34MWPemvZyl0XT8JC3HTiUu/jgKJzoGgrNTCsyq4DzMlEjPZfmXKc0ogIzfrm6DJEuQ==",
+      "engines": {
+        "node": "^16.10.0 || ^18.12.0 || >=20.0.0"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@typescript-eslint/utils": "^6.0.0"
+      },
+      "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.0.0 || ^7.0.0",
+        "eslint": "^7.0.0 || ^8.0.0 || ^9.0.0",
+        "jest": "*"
+      },
+      "peerDependenciesMeta": {
+        "@typescript-eslint/eslint-plugin": {
+          "optional": true
+        },
+        "jest": {
+          "optional": true
+        }
+      }
+    },
+    "29.0.0": {
+      "integrity": "sha512-r7wZBErZ4LEJ9NPgePyCMIRWQY+XPgGnGJUcda9EhSEs3/PdxpVMj8LxBpQ8H4w9r9B6hiqHkaZmFDG5VM0ytA==",
+      "engines": {
+        "node": "^20.12.0 || ^22.0.0 || >=24.0.0"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@typescript-eslint/utils": "^8.0.0"
+      },
+      "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "eslint": "^8.57.0 || ^9.0.0",
+        "jest": "*"
+      },
+      "peerDependenciesMeta": {
+        "@typescript-eslint/eslint-plugin": {
+          "optional": true
+        },
+        "jest": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "eslint-plugin-react-hooks": {
+    "5.0.0": {
+      "integrity": "sha512-hIOwI+5hYGpJEc4uPRmz2ulCjAGD/N13Lukkh8cLV0i2IRk/bdZDYjgLVHj+U9Z704kLIdIO6iueGvxNur0sgw==",
+      "engines": {
+        "node": ">=10"
+      },
+      "peerDependencies": {
+        "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0"
+      }
+    },
+    "6.0.0": {
+      "integrity": "sha512-NyC3yIC9fazLitYiN8eHykV5wLp/SMuUZMh+sdPSHIeN4ReXIc7if40jtGjDplAgVL/4OkN1d9gneWe9lFZgag==",
+      "engines": {
+        "node": ">=18"
+      },
+      "main": "./index.js",
+      "dependencies": {
+        "@babel/core": "^7.24.4",
+        "@babel/parser": "^7.24.4",
+        "@babel/plugin-transform-private-methods": "^7.24.4",
+        "hermes-parser": "^0.25.1",
+        "zod": "^3.22.4",
+        "zod-validation-error": "^3.0.3"
+      },
+      "peerDependencies": {
+        "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0"
+      }
+    },
+    "7.0.0": {
+      "integrity": "sha512-fNXaOwvKwq2+pXiRpXc825Vd63+KM4DLL40Rtlycb8m7fYpp6efrTp1sa6ZbP/Ap58K2bEKFXRmhURE+CJAQWw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "main": "./index.js",
+      "dependencies": {
+        "@babel/core": "^7.24.4",
+        "@babel/parser": "^7.24.4",
+        "hermes-parser": "^0.25.1",
+        "zod": "^3.22.4 || ^4.0.0",
+        "zod-validation-error": "^3.0.3 || ^4.0.0"
+      },
+      "peerDependencies": {
+        "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0"
+      }
+    }
+  },
+  "happy-dom": {
+    "13.0.0": {
+      "integrity": "sha512-R0j/6qco6wmihOKmelRGt6Coao9gDNEkhcZ8fB73zzr7qo8EaM+BBSmfe2f2hBhC81dykLVVZ1ONcI+zSRoWMQ==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "css.escape": "^1.5.1",
+        "entities": "^4.5.0",
+        "iconv-lite": "^0.6.3",
+        "webidl-conversions": "^7.0.0",
+        "whatwg-encoding": "^2.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "14.0.0": {
+      "integrity": "sha512-XdxaqufN4QZs0WFuo7L4vGkKpj08gmpEpSMFxDtvYo4OipZLssz7VlavE03FuLabHBTJAWxcR6MlKyOQZM9e0w==",
+      "engines": {
+        "node": ">=16.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "entities": "^4.5.0",
+        "webidl-conversions": "^7.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "15.0.0": {
+      "integrity": "sha512-DsvANUcxxY20iCo3Yllm7dqwzPVPduGfVFxa7mONwMBLczFeQgkN0LpDir1kIY322JMh+hrcPV3aGLyHCESDlA==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "entities": "^4.5.0",
+        "webidl-conversions": "^7.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "16.0.0": {
+      "integrity": "sha512-Br2gCVyasiuBFSunZpgkKJ84ruoM/a1e6OnJj3MU1O2pz9+HDBc03WD00/DNQ2xnQpLlpGwU37TaubonvlZWIQ==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "webidl-conversions": "^7.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-jGuUr3UrgMzt1Mopyof3RzD49/GudAp1suP5KFU+EvNXmqUAMXpxux2zEJbabE1YXs0APrY61iRZ0BKMMWCGTg==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "webidl-conversions": "^7.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "18.0.0": {
+      "integrity": "sha512-o3p2Axi1EdIfMaOUulDzO/5yXzLLV0g/54eLPVrkt3u20r3yOuOenHpyp2clAJ0eHMc+HyE139ulQxl+8pEJIw==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "whatwg-mimetype": "^3.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/node": "^20.0.0"
+      }
+    },
+    "19.0.0": {
+      "integrity": "sha512-UThsdvW0hiNGKddxPf1G3kf0oQcJgdazlzoq8bgzFy+X0hdl+6cj9N0sJD8Dk1exYHH67wVehec3ENhZZoErUA==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "whatwg-mimetype": "^3.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/node": "^20.0.0"
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-GkWnwIFxVGCf2raNrxImLo397RdGhLapj5cT3R2PT7FwL62Ze1DROhzmYW7+J3p9105DYMVenEejEbnq5wA37w==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "whatwg-mimetype": "^3.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/node": "^20.0.0"
+      }
+    },
+    "21.0.0": {
+      "integrity": "sha512-J4gG3KbH+kCFvrmUjrxAUOXz/SH9V65UIO9Nj8PC7nM2ni3JeaN7j4Xs0P4jS17o7jNo6auvLHpYB2HIyQ3mYw==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "@types/node": ">=20.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/ws": "^8.18.1",
+        "entities": "^7.0.1",
+        "whatwg-mimetype": "^3.0.0",
+        "buffer-image-size": "^0.6.4",
+        "ws": "^8.21.0"
+      }
+    }
+  },
+  "lint-staged": {
+    "16.0.0": {
+      "integrity": "sha512-sUCprePs6/rbx4vKC60Hez6X10HPkpDJaGcy3D1NdwR7g1RcNkWL8q9mJMreOqmHBTs+1sNFp+wOiX9fr+hoOQ==",
+      "engines": {
+        "node": ">=20.18"
+      },
+      "type": "module",
+      "exports": {
+        ".": "./lib/index.js",
+        "./bin": "./bin/lint-staged.js",
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "chalk": "^5.4.1",
+        "commander": "^13.1.0",
+        "debug": "^4.4.0",
+        "lilconfig": "^3.1.3",
+        "listr2": "^8.3.3",
+        "micromatch": "^4.0.8",
+        "nano-spawn": "^1.0.0",
+        "pidtree": "^0.6.0",
+        "string-argv": "^0.3.2",
+        "yaml": "^2.7.1"
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-286BsrsEp/7taRKY839AAU8E78uModiwmU7/cbuHbGfNA4mQVtLXA2Au9pLgWI2v4/M+PHq+s/rH+LJlVKucwA==",
+      "engines": {
+        "node": ">=22.22.1"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./lib/index.d.ts",
+          "default": "./lib/index.js"
+        },
+        "./bin": "./bin/lint-staged.js",
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "listr2": "^10.2.1",
+        "picomatch": "^4.0.4",
+        "string-argv": "^0.3.2",
+        "tinyexec": "^1.1.2"
+      }
+    }
+  },
+  "mocha": {
+    "11.0.0": {
+      "integrity": "sha512-9VQaK0N4YQ2F89Vy4wTIEyTm/Ggcv1PejfVeI82wOw0vBO6BjFyBGHCiNbl+wyHmgWDyFmHb2Yw1QlLaWzaEoA==",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "type": "commonjs",
+      "dependencies": {
+        "ansi-colors": "^4.1.3",
+        "browser-stdout": "^1.3.1",
+        "chokidar": "^3.5.3",
+        "debug": "^4.3.5",
+        "diff": "^5.2.0",
+        "escape-string-regexp": "^4.0.0",
+        "find-up": "^5.0.0",
+        "glob": "^8.1.0",
+        "he": "^1.2.0",
+        "js-yaml": "^4.1.0",
+        "log-symbols": "^4.1.0",
+        "minimatch": "^5.1.6",
+        "ms": "^2.1.3",
+        "serialize-javascript": "^6.0.2",
+        "strip-json-comments": "^3.1.1",
+        "supports-color": "^8.1.1",
+        "workerpool": "^6.5.1",
+        "yargs": "^16.2.0",
+        "yargs-parser": "^20.2.9",
+        "yargs-unparser": "^2.0.0"
+      }
+    },
+    "12.0.0": {
+      "integrity": "sha512-NYNh5IFt6WYqm9bi4601m7vix8MZdXC0DwS4gY6WhXO2RgJWhivhISVmq1oklCif18OSI9l+vx5Mdm5oh1XGiQ==",
+      "engines": {
+        "node": "^20.19.0 || >=22.12.0"
+      },
+      "type": "module",
+      "main": "./index.js",
+      "dependencies": {
+        "browser-stdout": "^1.3.1",
+        "chokidar": "^5.0.0",
+        "debug": "^4.3.5",
+        "diff": "^9.0.0",
+        "find-up": "^5.0.0",
+        "glob": "^13.0.0",
+        "is-path-inside": "^3.0.3",
+        "is-unicode-supported": "^0.1.0",
+        "js-yaml": "^5.0.0",
+        "minimatch": "^10.2.2",
+        "ms": "^2.1.3",
+        "picocolors": "^1.1.1",
+        "serialize-javascript": "^7.0.2",
+        "strip-json-comments": "^5.0.3",
+        "supports-color": "^8.1.1",
+        "workerpool": "^10.0.0"
+      }
+    }
+  },
+  "pdfjs-dist": {
+    "5.0.375": {
+      "integrity": "sha512-QDRlEVldf/cX88CElGAyRhjqNOO69kmB3HZlalDAfqJ/IvmqJNkipomhBZy4cWATfLVlkQTXE3H4yFvMF2uPsg==",
+      "engines": {
+        "node": ">=20"
+      },
+      "main": "build/pdf.mjs"
+    },
+    "6.0.227": {
+      "integrity": "sha512-/P6M4SXw+70waMVLUM7rdRtvo+dEzqE1t6W/zQNvBETo2MaRa5rrvCcAYdfWGiUzadTgM0lJmRApUrW0d9zgKg==",
+      "engines": {
+        "node": ">=22.13.0 || >=24"
+      },
+      "main": "build/pdf.mjs"
+    }
+  },
+  "postcss-import": {
+    "16.0.0": {
+      "integrity": "sha512-e77lhVvrD1I2y7dYmBv0k9ULTdArgEYZt97T4w6sFIU5uxIHvDFQlKgUUyY7v7Barj0Yf/zm5A4OquZN7jKm5Q==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "dependencies": {
+        "postcss-value-parser": "^4.0.0",
+        "read-cache": "^1.0.0",
+        "resolve": "^1.1.7"
+      },
+      "peerDependencies": {
+        "postcss": "^8.0.0"
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-qzVMJhcq39KweT7Fp0HcjE5YxL5yI854Q3CtufxDuZKO9HLQUp2rptB9+U0MIj3pT1ZEVXoqnpeC1mSkfYuz4Q==",
+      "engines": {
+        "node": ">=22.0.0"
+      },
+      "dependencies": {
+        "postcss-value-parser": "^4.0.0",
+        "read-cache": "^1.0.0",
+        "resolve": "^1.1.7"
+      },
+      "peerDependencies": {
+        "postcss": "^8.0.0"
+      }
+    }
+  },
+  "query-string": {
+    "10.0.0": {
+      "integrity": "sha512-QYodx/Ywk8lCcOmsyupXVN91yWPAdjq0xVqE2FE2BHFYnma71C8txR8JCBptjzoUpkfAK7Qjua9VjYRTru4LYg==",
+      "engines": {
+        "node": ">=22"
+      },
+      "type": "module",
+      "exports": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "dependencies": {
+        "filter-obj": "^6.1.0",
+        "split-on-first": "^4.0.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-4EWwcRGsO2H+yzq6ddHcVqkCQ2EFUSfDMEjF8ryp8ReymyZhIuaFRGLomeOQLkrzacMHoyky2HW0Qe30UbzkKw==",
+      "engines": {
+        "node": ">=18"
+      },
+      "type": "module",
+      "exports": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "dependencies": {
+        "decode-uri-component": "^0.4.1",
+        "filter-obj": "^5.1.0",
+        "split-on-first": "^3.0.0"
+      }
+    }
+  },
+  "react-error-boundary": {
+    "5.0.0": {
+      "integrity": "sha512-tnjAxG+IkpLephNcePNA7v6F/QpWLH8He65+DmedchDwg162JZqx4NmbXj0mlAYVVEd81OW7aFhmbsScYfiAFQ==",
+      "exports": {
+        ".": {
+          "types": {
+            "import": "./dist/react-error-boundary.cjs.mjs",
+            "default": "./dist/react-error-boundary.cjs.js"
+          },
+          "development": {
+            "module": "./dist/react-error-boundary.development.esm.js",
+            "import": "./dist/react-error-boundary.development.cjs.mjs",
+            "default": "./dist/react-error-boundary.development.cjs.js"
+          },
+          "module": "./dist/react-error-boundary.esm.js",
+          "import": "./dist/react-error-boundary.cjs.mjs",
+          "default": "./dist/react-error-boundary.cjs.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/react-error-boundary.cjs.js",
+      "dependencies": {
+        "@babel/runtime": "^7.12.5"
+      },
+      "peerDependencies": {
+        "react": ">=16.13.1"
+      }
+    },
+    "6.0.0": {
+      "integrity": "sha512-gdlJjD7NWr0IfkPlaREN2d9uUZUlksrfOx7SX62VRerwXbMY6ftGCIZua1VG1aXFNOimhISsTq+Owp725b9SiA==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/react-error-boundary.js",
+          "development": "./dist/react-error-boundary.development.js",
+          "default": "./dist/react-error-boundary.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "@babel/runtime": "^7.12.5"
+      },
+      "peerDependencies": {
+        "react": ">=16.13.1"
+      }
+    }
+  },
+  "react-router": {
+    "7.0.0": {
+      "integrity": "sha512-1xf+yMVhUjAzZGY90ZnYJ9KVe1R8FggpugzRBkh+p6vl4cC1sHDe3nO+r5rxWTAgCMf8uN5hfoV2M7rLVTWPUA==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "exports": {
+        ".": {
+          "node": {
+            "types": "./dist/production/index.d.ts",
+            "development": {
+              "module-sync": "./dist/development/index.mjs",
+              "default": "./dist/development/index.js"
+            },
+            "module-sync": "./dist/production/index.mjs",
+            "default": "./dist/production/index.js"
+          },
+          "import": {
+            "types": "./dist/production/index.d.mts",
+            "development": "./dist/development/index.mjs",
+            "default": "./dist/production/index.mjs"
+          },
+          "default": {
+            "types": "./dist/production/index.d.ts",
+            "development": "./dist/development/index.js",
+            "default": "./dist/production/index.js"
+          }
+        },
+        "./route-module": {
+          "import": {
+            "types": "./dist/production/lib/types/route-module.d.mts"
+          },
+          "default": {
+            "types": "./dist/production/lib/types/route-module.d.ts"
+          }
+        },
+        "./dom": {
+          "node": {
+            "types": "./dist/production/dom-export.d.ts",
+            "development": {
+              "module-sync": "./dist/development/dom-export.mjs",
+              "default": "./dist/development/dom-export.js"
+            },
+            "module-sync": "./dist/production/dom-export.mjs",
+            "default": "./dist/production/dom-export.js"
+          },
+          "import": {
+            "types": "./dist/production/dom-export.d.mts",
+            "development": "./dist/development/dom-export.mjs",
+            "default": "./dist/production/dom-export.mjs"
+          },
+          "default": {
+            "types": "./dist/production/dom-export.d.ts",
+            "development": "./dist/development/dom-export.js",
+            "default": "./dist/production/dom-export.js"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/production/index.js",
+      "dependencies": {
+        "@types/cookie": "^0.6.0",
+        "cookie": "^1.0.1",
+        "set-cookie-parser": "^2.6.0",
+        "turbo-stream": "2.4.0"
+      },
+      "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+      },
+      "peerDependenciesMeta": {
+        "react-dom": {
+          "optional": true
+        }
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-AyS7LUn9M3g2/IBJDJNpWqElaQjPVBHGgMsdLGee6B2JLwP9STSpRwN8N4SauOeFTb0X5ZN0wxa1Iek78jF8Iw==",
+      "engines": {
+        "node": ">=22.22.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/production/index.d.ts",
+          "react-server": {
+            "module-sync": {
+              "development": "./dist/development/index-react-server.js",
+              "default": "./dist/production/index-react-server.js"
+            },
+            "development": "./dist/development/index-react-server.js",
+            "default": "./dist/production/index-react-server.js"
+          },
+          "module-sync": {
+            "development": "./dist/development/index.js",
+            "default": "./dist/production/index.js"
+          },
+          "development": "./dist/development/index.js",
+          "default": "./dist/production/index.js"
+        },
+        "./dom": {
+          "types": "./dist/production/dom-export.d.ts",
+          "module-sync": {
+            "development": "./dist/development/dom-export.js",
+            "default": "./dist/production/dom-export.js"
+          },
+          "development": "./dist/development/dom-export.js",
+          "default": "./dist/production/dom-export.js"
+        },
+        "./internal": {
+          "types": "./dist/development/lib/types/internal.d.ts"
+        },
+        "./internal/react-server-client": {
+          "types": "./dist/production/index-react-server-client.d.ts",
+          "module-sync": {
+            "development": "./dist/development/index-react-server-client.js",
+            "default": "./dist/production/index-react-server-client.js"
+          },
+          "development": "./dist/development/index-react-server-client.js",
+          "default": "./dist/production/index-react-server-client.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "cookie-es": "^3.1.1"
+      },
+      "peerDependencies": {
+        "react": ">=19.2.7",
+        "react-dom": ">=19.2.7"
+      },
+      "peerDependenciesMeta": {
+        "react-dom": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "sass": {
+    "1.106.1": {
+      "integrity": "sha512-kD+Gi66vycZcbJt+42NC4z4PXNMcCajVrJPhqoKKXy5cOBMmJQt052CxIBcRjwYXeImHYOpu/ydWWGZQIenl7A==",
+      "engines": {
+        "node": ">=20.19.0"
+      },
+      "exports": {
+        "types": "./types/index.d.ts",
+        "node": {
+          "require": "./sass.node.js",
+          "default": "./sass.node.mjs"
+        },
+        "default": {
+          "require": "./sass.default.cjs",
+          "default": "./sass.default.js"
+        }
+      },
+      "main": "sass.node.js",
+      "dependencies": {
+        "chokidar": "^5.0.0",
+        "immutable": "^5.1.5",
+        "source-map-js": ">=0.6.2 <2.0.0"
+      }
+    },
+    "1.107.0": {
+      "integrity": "sha512-+whPilvVNoAD57xvdIPLQT0gXo4RD1lHYw+Uw8zYHlojaeaMDxK14tc0JmEsz/XMns48h3lpypisMP+3E8eHQA==",
+      "engines": {
+        "node": ">=20.19.0"
+      },
+      "exports": {
+        "types": "./types/index.d.ts",
+        "node": {
+          "require": "./sass.node.js",
+          "default": "./sass.node.mjs"
+        },
+        "default": {
+          "require": "./sass.default.cjs",
+          "default": "./sass.default.js"
+        }
+      },
+      "main": "sass.node.js",
+      "dependencies": {
+        "chokidar": "^5.0.0",
+        "immutable": "^5.1.5",
+        "source-map-js": ">=0.6.2 <2.0.0"
+      }
+    },
+    "1.91.0": {
+      "integrity": "sha512-aFOZHGf+ur+bp1bCHZ+u8otKGh77ZtmFyXDo4tlYvT7PWql41Kwd8wdkPqhhT+h2879IVblcHFglIMofsFd1EA==",
+      "engines": {
+        "node": ">=14.0.0"
+      },
+      "exports": {
+        "types": "./types/index.d.ts",
+        "node": {
+          "require": "./sass.node.js",
+          "default": "./sass.node.mjs"
+        },
+        "default": {
+          "require": "./sass.default.cjs",
+          "default": "./sass.default.js"
+        }
+      },
+      "main": "sass.node.js",
+      "dependencies": {
+        "chokidar": "^4.0.0",
+        "immutable": "^5.0.2",
+        "source-map-js": ">=0.6.2 <2.0.0"
+      }
+    },
+    "1.92.0": {
+      "integrity": "sha512-KDNI0BxgIRDAfJgzNm5wuy+4yOCIZyrUbjSpiU/JItfih+KGXAVefKL53MTml054MmBA3DDKIBMSI/7XLxZJ3A==",
+      "engines": {
+        "node": ">=14.0.0"
+      },
+      "exports": {
+        "types": "./types/index.d.ts",
+        "node": {
+          "require": "./sass.node.js",
+          "default": "./sass.node.mjs"
+        },
+        "default": {
+          "require": "./sass.default.cjs",
+          "default": "./sass.default.js"
+        }
+      },
+      "main": "sass.node.js",
+      "dependencies": {
+        "chokidar": "^4.0.0",
+        "immutable": "^5.0.2",
+        "source-map-js": ">=0.6.2 <2.0.0"
+      }
+    }
+  },
+  "sass-loader": {
+    "14.0.0": {
+      "integrity": "sha512-oceP9wWbep/yRJ2+sMbCzk0UsXsDzdNis+N8nu9i5GwPXjy6v3DNB6TqfJLSpPO9k4+B8x8p/CEgjA9ZLkoLug==",
+      "engines": {
+        "node": ">= 18.12.0"
+      },
+      "main": "dist/cjs.js",
+      "dependencies": {
+        "neo-async": "^2.6.2"
+      },
+      "peerDependencies": {
+        "node-sass": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+        "sass": "^1.3.0",
+        "sass-embedded": "*",
+        "webpack": "^5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "node-sass": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        },
+        "sass-embedded": {
+          "optional": true
+        }
+      }
+    },
+    "15.0.0": {
+      "integrity": "sha512-mbXAL7sI/fgt3skXR6xHxtKkaGyxRrGf7zrU4hLLWxBDJEcAe0QsoNy92qKttCb3zfMniTkU2kD9yakUKtW7vQ==",
+      "engines": {
+        "node": ">= 18.12.0"
+      },
+      "main": "dist/cjs.js",
+      "dependencies": {
+        "neo-async": "^2.6.2"
+      },
+      "peerDependencies": {
+        "@rspack/core": "0.x || 1.x",
+        "node-sass": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+        "sass": "^1.3.0",
+        "sass-embedded": "*",
+        "webpack": "^5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@rspack/core": {
+          "optional": true
+        },
+        "node-sass": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        },
+        "sass-embedded": {
+          "optional": true
+        },
+        "webpack": {
+          "optional": true
+        }
+      }
+    },
+    "16.0.0": {
+      "integrity": "sha512-n13Z+3rU9A177dk4888czcVFiC8CL9dii4qpXWUg3YIIgZEvi9TCFKjOQcbK0kJM7DJu9VucrZFddvNfYCPwtw==",
+      "engines": {
+        "node": ">= 18.12.0"
+      },
+      "main": "dist/cjs.js",
+      "dependencies": {
+        "neo-async": "^2.6.2"
+      },
+      "peerDependencies": {
+        "@rspack/core": "0.x || 1.x",
+        "node-sass": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+        "sass": "^1.3.0",
+        "sass-embedded": "*",
+        "webpack": "^5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@rspack/core": {
+          "optional": true
+        },
+        "node-sass": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        },
+        "sass-embedded": {
+          "optional": true
+        },
+        "webpack": {
+          "optional": true
+        }
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-0Ybm8ohBQ9LcrycVrFQp/KQBNX5a3Wda9/smS0mE/xLffzEnwvV8nykOzrbiSWNzTE3IB/jiXx8O4QmDPG2+Gw==",
+      "engines": {
+        "node": ">= 22.11.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./types/index.d.ts",
+          "import": "./dist/esm/index.js",
+          "require": "./dist/cjs/index.js",
+          "default": "./dist/esm/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/cjs/index.js",
+      "dependencies": {},
+      "peerDependencies": {
+        "@rspack/core": "0.x || ^1.0.0 || ^2.0.0-0",
+        "sass": "^1.3.0",
+        "sass-embedded": "*",
+        "webpack": "^5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@rspack/core": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        },
+        "sass-embedded": {
+          "optional": true
+        },
+        "webpack": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "storybook": {
+    "10.0.0": {
+      "integrity": "sha512-lJfn3+4koKQW1kp3RotkAYlvV8C/3lnhXOJYm+4aD9CACoT48qEOLwEmvIho6u+KTlbDnGonP5697Jw6rZ2E9A==",
+      "type": "module",
+      "exports": {
+        "./actions": {
+          "types": "./dist/actions/index.d.ts",
+          "default": "./dist/actions/index.js"
+        },
+        "./actions/decorator": {
+          "types": "./dist/actions/decorator.d.ts",
+          "default": "./dist/actions/decorator.js"
+        },
+        "./highlight": {
+          "types": "./dist/highlight/index.d.ts",
+          "default": "./dist/highlight/index.js"
+        },
+        "./internal/babel": {
+          "types": "./dist/babel/index.d.ts",
+          "default": "./dist/babel/index.js"
+        },
+        "./internal/bin/dispatcher": "./dist/bin/dispatcher.js",
+        "./internal/bin/loader": "./dist/bin/loader.js",
+        "./internal/channels": {
+          "types": "./dist/channels/index.d.ts",
+          "default": "./dist/channels/index.js"
+        },
+        "./internal/cli": {
+          "types": "./dist/cli/index.d.ts",
+          "default": "./dist/cli/index.js"
+        },
+        "./internal/client-logger": {
+          "types": "./dist/client-logger/index.d.ts",
+          "default": "./dist/client-logger/index.js"
+        },
+        "./internal/common": {
+          "types": "./dist/common/index.d.ts",
+          "default": "./dist/common/index.js"
+        },
+        "./internal/components": {
+          "types": "./dist/components/index.d.ts",
+          "default": "./dist/components/index.js"
+        },
+        "./internal/core-events": {
+          "types": "./dist/core-events/index.d.ts",
+          "default": "./dist/core-events/index.js"
+        },
+        "./internal/core-server": {
+          "types": "./dist/core-server/index.d.ts",
+          "default": "./dist/core-server/index.js"
+        },
+        "./internal/core-server/presets/common-override-preset": "./dist/core-server/presets/common-override-preset.js",
+        "./internal/csf": {
+          "types": "./dist/csf/index.d.ts",
+          "default": "./dist/csf/index.js"
+        },
+        "./internal/csf-tools": {
+          "types": "./dist/csf-tools/index.d.ts",
+          "default": "./dist/csf-tools/index.js"
+        },
+        "./internal/docs-tools": {
+          "types": "./dist/docs-tools/index.d.ts",
+          "default": "./dist/docs-tools/index.js"
+        },
+        "./internal/instrumenter": {
+          "types": "./dist/instrumenter/index.d.ts",
+          "default": "./dist/instrumenter/index.js"
+        },
+        "./internal/manager-errors": {
+          "types": "./dist/manager-errors.d.ts",
+          "default": "./dist/manager-errors.js"
+        },
+        "./internal/manager/globals": {
+          "types": "./dist/manager/globals.d.ts",
+          "default": "./dist/manager/globals.js"
+        },
+        "./internal/manager/globals-runtime": "./dist/manager/globals-runtime.js",
+        "./internal/node-logger": {
+          "types": "./dist/node-logger/index.d.ts",
+          "default": "./dist/node-logger/index.js"
+        },
+        "./internal/preview-api": {
+          "types": "./dist/preview-api/index.d.ts",
+          "default": "./dist/preview-api/index.js"
+        },
+        "./internal/preview-errors": {
+          "types": "./dist/preview-errors.d.ts",
+          "default": "./dist/preview-errors.js"
+        },
+        "./internal/preview/globals": {
+          "types": "./dist/preview/globals.d.ts",
+          "default": "./dist/preview/globals.js"
+        },
+        "./internal/preview/runtime": "./dist/preview/runtime.js",
+        "./internal/router": {
+          "types": "./dist/router/index.d.ts",
+          "default": "./dist/router/index.js"
+        },
+        "./internal/server-errors": {
+          "types": "./dist/server-errors.d.ts",
+          "default": "./dist/server-errors.js"
+        },
+        "./internal/telemetry": {
+          "types": "./dist/telemetry/index.d.ts",
+          "default": "./dist/telemetry/index.js"
+        },
+        "./internal/types": {
+          "types": "./dist/types/index.d.ts",
+          "default": "./dist/types/index.js"
+        },
+        "./manager-api": {
+          "types": "./dist/manager-api/index.d.ts",
+          "default": "./dist/manager-api/index.js"
+        },
+        "./package.json": "./package.json",
+        "./preview-api": {
+          "types": "./dist/preview-api/index.d.ts",
+          "default": "./dist/preview-api/index.js"
+        },
+        "./test": {
+          "types": "./dist/test/index.d.ts",
+          "default": "./dist/test/index.js"
+        },
+        "./theming": {
+          "types": "./dist/theming/index.d.ts",
+          "default": "./dist/theming/index.js"
+        },
+        "./theming/create": {
+          "types": "./dist/theming/create.d.ts",
+          "default": "./dist/theming/create.js"
+        },
+        "./viewport": {
+          "types": "./dist/viewport/index.d.ts",
+          "default": "./dist/viewport/index.js"
+        },
+        "./webpack/loaders/storybook-mock-transform-loader": "./dist/core-server/presets/webpack/loaders/storybook-mock-transform-loader.js",
+        "./webpack/loaders/webpack-automock-loader": "./dist/core-server/presets/webpack/loaders/webpack-automock-loader.js"
+      },
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "@storybook/icons": "^1.6.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/user-event": "^14.6.1",
+        "@vitest/expect": "3.2.4",
+        "@vitest/mocker": "3.2.4",
+        "@vitest/spy": "3.2.4",
+        "esbuild": "^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0",
+        "recast": "^0.23.5",
+        "semver": "^7.6.2",
+        "ws": "^8.18.0"
+      },
+      "peerDependencies": {
+        "prettier": "^2 || ^3"
+      },
+      "peerDependenciesMeta": {
+        "prettier": {
+          "optional": true
+        }
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-ZWfFoKLsZ7kYgqcVgDeUZpN89cxzEx2Mw9afhfMNzwSnjhx9xRdzdNvK7DY1nDnfborxzBhkvwYf/oxRbifKuw==",
+      "dependencies": {
+        "@storybook/cli": "8.0.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-/deRNPirp/q2JIZVXrgO4YtzCSvOXTKat4mYn76vqElwwN7GcD87ELNMm99SJIvghX+Ed/AfyR30Mf37B3E4/A==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./internal/node-logger": {
+          "types": "./dist/node-logger/index.d.ts",
+          "import": "./dist/node-logger/index.js",
+          "require": "./dist/node-logger/index.cjs"
+        },
+        "./internal/client-logger": {
+          "types": "./dist/client-logger/index.d.ts",
+          "import": "./dist/client-logger/index.js",
+          "require": "./dist/client-logger/index.cjs"
+        },
+        "./internal/theming": {
+          "types": "./dist/theming/index.d.ts",
+          "import": "./dist/theming/index.js",
+          "require": "./dist/theming/index.cjs"
+        },
+        "./theming": {
+          "types": "./dist/theming/index.d.ts",
+          "import": "./dist/theming/index.js",
+          "require": "./dist/theming/index.cjs"
+        },
+        "./internal/theming/create": {
+          "types": "./dist/theming/create.d.ts",
+          "import": "./dist/theming/create.js",
+          "require": "./dist/theming/create.cjs"
+        },
+        "./theming/create": {
+          "types": "./dist/theming/create.d.ts",
+          "import": "./dist/theming/create.js",
+          "require": "./dist/theming/create.cjs"
+        },
+        "./internal/core-server": {
+          "types": "./dist/core-server/index.d.ts",
+          "import": "./dist/core-server/index.js",
+          "require": "./dist/core-server/index.cjs"
+        },
+        "./internal/core-server/presets/common-preset": {
+          "import": "./dist/core-server/presets/common-preset.js",
+          "require": "./dist/core-server/presets/common-preset.cjs"
+        },
+        "./internal/core-server/presets/common-manager": {
+          "import": "./dist/core-server/presets/common-manager.js"
+        },
+        "./internal/core-server/presets/common-override-preset": {
+          "import": "./dist/core-server/presets/common-override-preset.js",
+          "require": "./dist/core-server/presets/common-override-preset.cjs"
+        },
+        "./internal/backgrounds": {
+          "types": "./dist/backgrounds/index.d.ts",
+          "import": "./dist/backgrounds/index.js",
+          "require": "./dist/backgrounds/index.cjs"
+        },
+        "./backgrounds": {
+          "types": "./dist/backgrounds/index.d.ts",
+          "import": "./dist/backgrounds/index.js",
+          "require": "./dist/backgrounds/index.cjs"
+        },
+        "./internal/backgrounds/preview": {
+          "types": "./dist/backgrounds/preview.d.ts",
+          "import": "./dist/backgrounds/preview.js",
+          "require": "./dist/backgrounds/preview.cjs"
+        },
+        "./backgrounds/preview": {
+          "types": "./dist/backgrounds/preview.d.ts",
+          "import": "./dist/backgrounds/preview.js",
+          "require": "./dist/backgrounds/preview.cjs"
+        },
+        "./internal/measure": {
+          "types": "./dist/measure/index.d.ts",
+          "import": "./dist/measure/index.js",
+          "require": "./dist/measure/index.cjs"
+        },
+        "./measure": {
+          "types": "./dist/measure/index.d.ts",
+          "import": "./dist/measure/index.js",
+          "require": "./dist/measure/index.cjs"
+        },
+        "./internal/measure/preview": {
+          "types": "./dist/measure/preview.d.ts",
+          "import": "./dist/measure/preview.js",
+          "require": "./dist/measure/preview.cjs"
+        },
+        "./measure/preview": {
+          "types": "./dist/measure/preview.d.ts",
+          "import": "./dist/measure/preview.js",
+          "require": "./dist/measure/preview.cjs"
+        },
+        "./internal/outline": {
+          "types": "./dist/outline/index.d.ts",
+          "import": "./dist/outline/index.js",
+          "require": "./dist/outline/index.cjs"
+        },
+        "./outline": {
+          "types": "./dist/outline/index.d.ts",
+          "import": "./dist/outline/index.js",
+          "require": "./dist/outline/index.cjs"
+        },
+        "./internal/outline/preview": {
+          "types": "./dist/outline/preview.d.ts",
+          "import": "./dist/outline/preview.js",
+          "require": "./dist/outline/preview.cjs"
+        },
+        "./outline/preview": {
+          "types": "./dist/outline/preview.d.ts",
+          "import": "./dist/outline/preview.js",
+          "require": "./dist/outline/preview.cjs"
+        },
+        "./internal/highlight": {
+          "types": "./dist/highlight/index.d.ts",
+          "import": "./dist/highlight/index.js",
+          "require": "./dist/highlight/index.cjs"
+        },
+        "./highlight": {
+          "types": "./dist/highlight/index.d.ts",
+          "import": "./dist/highlight/index.js",
+          "require": "./dist/highlight/index.cjs"
+        },
+        "./internal/highlight/preview": {
+          "types": "./dist/highlight/preview.d.ts",
+          "import": "./dist/highlight/preview.js",
+          "require": "./dist/highlight/preview.cjs"
+        },
+        "./highlight/preview": {
+          "types": "./dist/highlight/preview.d.ts",
+          "import": "./dist/highlight/preview.js",
+          "require": "./dist/highlight/preview.cjs"
+        },
+        "./internal/actions": {
+          "types": "./dist/actions/index.d.ts",
+          "import": "./dist/actions/index.js",
+          "require": "./dist/actions/index.cjs"
+        },
+        "./actions": {
+          "types": "./dist/actions/index.d.ts",
+          "import": "./dist/actions/index.js",
+          "require": "./dist/actions/index.cjs"
+        },
+        "./internal/actions/preview": {
+          "types": "./dist/actions/preview.d.ts",
+          "import": "./dist/actions/preview.js",
+          "require": "./dist/actions/preview.cjs"
+        },
+        "./actions/preview": {
+          "types": "./dist/actions/preview.d.ts",
+          "import": "./dist/actions/preview.js",
+          "require": "./dist/actions/preview.cjs"
+        },
+        "./internal/actions/decorator": {
+          "types": "./dist/actions/decorator.d.ts",
+          "import": "./dist/actions/decorator.js"
+        },
+        "./actions/decorator": {
+          "types": "./dist/actions/decorator.d.ts",
+          "import": "./dist/actions/decorator.js"
+        },
+        "./internal/component-testing": {
+          "types": "./dist/component-testing/index.d.ts",
+          "import": "./dist/component-testing/index.js",
+          "require": "./dist/component-testing/index.cjs"
+        },
+        "./internal/component-testing/preview": {
+          "types": "./dist/component-testing/preview.d.ts",
+          "import": "./dist/component-testing/preview.js",
+          "require": "./dist/component-testing/preview.cjs"
+        },
+        "./internal/viewport": {
+          "types": "./dist/viewport/index.d.ts",
+          "import": "./dist/viewport/index.js",
+          "require": "./dist/viewport/index.cjs"
+        },
+        "./viewport": {
+          "types": "./dist/viewport/index.d.ts",
+          "import": "./dist/viewport/index.js",
+          "require": "./dist/viewport/index.cjs"
+        },
+        "./internal/viewport/preview": {
+          "types": "./dist/viewport/preview.d.ts",
+          "import": "./dist/viewport/preview.js",
+          "require": "./dist/viewport/preview.cjs"
+        },
+        "./viewport/preview": {
+          "types": "./dist/viewport/preview.d.ts",
+          "import": "./dist/viewport/preview.js",
+          "require": "./dist/viewport/preview.cjs"
+        },
+        "./internal/controls": {
+          "types": "./dist/controls/index.d.ts",
+          "import": "./dist/controls/index.js",
+          "require": "./dist/controls/index.cjs"
+        },
+        "./internal/controls/preview": {
+          "types": "./dist/controls/preview.d.ts",
+          "import": "./dist/controls/preview.js",
+          "require": "./dist/controls/preview.cjs"
+        },
+        "./internal/controls/decorator": {
+          "types": "./dist/controls/decorator.d.ts",
+          "import": "./dist/controls/decorator.js"
+        },
+        "./internal/core-events": {
+          "types": "./dist/core-events/index.d.ts",
+          "import": "./dist/core-events/index.js",
+          "require": "./dist/core-events/index.cjs"
+        },
+        "./internal/manager-errors": {
+          "types": "./dist/manager-errors.d.ts",
+          "import": "./dist/manager-errors.js"
+        },
+        "./internal/preview-errors": {
+          "types": "./dist/preview-errors.d.ts",
+          "import": "./dist/preview-errors.js",
+          "require": "./dist/preview-errors.cjs"
+        },
+        "./internal/server-errors": {
+          "types": "./dist/server-errors.d.ts",
+          "import": "./dist/server-errors.js",
+          "require": "./dist/server-errors.cjs"
+        },
+        "./internal/channels": {
+          "types": "./dist/channels/index.d.ts",
+          "import": "./dist/channels/index.js",
+          "require": "./dist/channels/index.cjs"
+        },
+        "./internal/types": {
+          "types": "./dist/types/index.d.ts",
+          "import": "./dist/types/index.js",
+          "require": "./dist/types/index.cjs"
+        },
+        "./internal/csf-tools": {
+          "types": "./dist/csf-tools/index.d.ts",
+          "import": "./dist/csf-tools/index.js",
+          "require": "./dist/csf-tools/index.cjs"
+        },
+        "./internal/csf": {
+          "types": "./dist/csf/index.d.ts",
+          "import": "./dist/csf/index.js",
+          "require": "./dist/csf/index.cjs"
+        },
+        "./internal/common": {
+          "types": "./dist/common/index.d.ts",
+          "import": "./dist/common/index.js",
+          "require": "./dist/common/index.cjs"
+        },
+        "./internal/builder-manager": {
+          "types": "./dist/builder-manager/index.d.ts",
+          "import": "./dist/builder-manager/index.js",
+          "require": "./dist/builder-manager/index.cjs"
+        },
+        "./internal/telemetry": {
+          "types": "./dist/telemetry/index.d.ts",
+          "import": "./dist/telemetry/index.js",
+          "require": "./dist/telemetry/index.cjs"
+        },
+        "./internal/preview-api": {
+          "types": "./dist/preview-api/index.d.ts",
+          "import": "./dist/preview-api/index.js",
+          "require": "./dist/preview-api/index.cjs"
+        },
+        "./preview-api": {
+          "types": "./dist/preview-api/index.d.ts",
+          "import": "./dist/preview-api/index.js",
+          "require": "./dist/preview-api/index.cjs"
+        },
+        "./internal/manager-api": {
+          "types": "./dist/manager-api/index.d.ts",
+          "import": "./dist/manager-api/index.js",
+          "require": "./dist/manager-api/index.cjs"
+        },
+        "./manager-api": {
+          "types": "./dist/manager-api/index.d.ts",
+          "import": "./dist/manager-api/index.js",
+          "require": "./dist/manager-api/index.cjs"
+        },
+        "./internal/router": {
+          "types": "./dist/router/index.d.ts",
+          "import": "./dist/router/index.js",
+          "require": "./dist/router/index.cjs"
+        },
+        "./internal/components": {
+          "types": "./dist/components/index.d.ts",
+          "import": "./dist/components/index.js",
+          "require": "./dist/components/index.cjs"
+        },
+        "./internal/docs-tools": {
+          "types": "./dist/docs-tools/index.d.ts",
+          "import": "./dist/docs-tools/index.js",
+          "require": "./dist/docs-tools/index.cjs"
+        },
+        "./internal/manager/globals-module-info": {
+          "types": "./dist/manager/globals-module-info.d.ts",
+          "import": "./dist/manager/globals-module-info.js",
+          "require": "./dist/manager/globals-module-info.cjs"
+        },
+        "./internal/manager/globals": {
+          "types": "./dist/manager/globals.d.ts",
+          "import": "./dist/manager/globals.js",
+          "require": "./dist/manager/globals.cjs"
+        },
+        "./internal/preview/globals": {
+          "types": "./dist/preview/globals.d.ts",
+          "import": "./dist/preview/globals.js",
+          "require": "./dist/preview/globals.cjs"
+        },
+        "./internal/cli": {
+          "types": "./dist/cli/index.d.ts",
+          "import": "./dist/cli/index.js",
+          "require": "./dist/cli/index.cjs"
+        },
+        "./internal/babel": {
+          "types": "./dist/babel/index.d.ts",
+          "import": "./dist/babel/index.js",
+          "require": "./dist/babel/index.cjs"
+        },
+        "./internal/cli/bin": {
+          "types": "./dist/cli/bin/index.d.ts",
+          "import": "./dist/cli/bin/index.js",
+          "require": "./dist/cli/bin/index.cjs"
+        },
+        "./internal/bin": {
+          "import": "./dist/bin/index.js",
+          "require": "./dist/bin/index.cjs"
+        },
+        "./internal/instrumenter": {
+          "types": "./dist/instrumenter/index.d.ts",
+          "import": "./dist/instrumenter/index.js",
+          "require": "./dist/instrumenter/index.cjs"
+        },
+        "./internal/test/preview": {
+          "types": "./dist/test/preview.d.ts",
+          "import": "./dist/test/preview.js",
+          "require": "./dist/test/preview.cjs"
+        },
+        "./test/preview": {
+          "types": "./dist/test/preview.d.ts",
+          "import": "./dist/test/preview.js",
+          "require": "./dist/test/preview.cjs"
+        },
+        "./internal/test": {
+          "types": "./dist/test/index.d.ts",
+          "import": "./dist/test/index.js",
+          "require": "./dist/test/index.cjs"
+        },
+        "./test": {
+          "types": "./dist/test/index.d.ts",
+          "import": "./dist/test/index.js",
+          "require": "./dist/test/index.cjs"
+        },
+        "./internal/preview/runtime": {
+          "import": "./dist/preview/runtime.js"
+        },
+        "./internal/manager/globals-runtime": {
+          "import": "./dist/manager/globals-runtime.js"
+        },
+        "./package.json": "./package.json",
+        "./internal/package.json": "./package.json"
+      },
+      "main": "dist/index.cjs",
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/user-event": "^14.6.1",
+        "@vitest/expect": "3.0.9",
+        "@vitest/spy": "3.0.9",
+        "better-opn": "^3.0.2",
+        "esbuild": "^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0",
+        "esbuild-register": "^3.5.0",
+        "recast": "^0.23.5",
+        "semver": "^7.6.2",
+        "ws": "^8.18.0"
+      },
+      "peerDependencies": {
+        "prettier": "^2 || ^3"
+      },
+      "peerDependenciesMeta": {
+        "prettier": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "typescript-eslint": {
+    "7.0.0": {
+      "integrity": "sha512-7wY7NWQwC8oZzzuzAeHb5D+zSdZcWACxh1IrcdTxiVoIzqqQrBrXe5IiI60KCJBqYM1J/9016iG44bXURlHmCw==",
+      "engines": {
+        "node": "^16.0.0 || >=18.0.0"
+      },
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "@typescript-eslint/eslint-plugin": "7.0.0",
+        "@typescript-eslint/parser": "7.0.0"
+      },
+      "peerDependencies": {
+        "eslint": "^8.56.0"
+      },
+      "peerDependenciesMeta": {
+        "typescript": {
+          "optional": true
+        }
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-yQWBJutWL1PmpmDddIOl9/Mi6vZjqNCjqSGBMQ4vsc2Aiodk0SnbQQWPXbSy0HNuKCuGkw1+u4aQ2mO40TdhDQ==",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "dependencies": {
+        "@typescript-eslint/eslint-plugin": "8.0.0",
+        "@typescript-eslint/parser": "8.0.0",
+        "@typescript-eslint/utils": "8.0.0"
+      },
+      "peerDependenciesMeta": {
+        "typescript": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "vitest": {
+    "2.0.0": {
+      "integrity": "sha512-NvccE2tZhIoPSq3o3AoTBmItwhHNjzIxvOgfdzILIscyzSGOtw2+A1d/JJbS86HDVbc6TS5HnckQuCgTfp0HDQ==",
+      "engines": {
+        "node": "^18.0.0 || >=20.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "require": {
+            "types": "./index.d.cts",
+            "default": "./index.cjs"
+          }
+        },
+        "./*": "./*",
+        "./globals": {
+          "types": "./globals.d.ts"
+        },
+        "./jsdom": {
+          "types": "./jsdom.d.ts"
+        },
+        "./importMeta": {
+          "types": "./importMeta.d.ts"
+        },
+        "./import-meta": {
+          "types": "./import-meta.d.ts"
+        },
+        "./node": {
+          "types": "./dist/node.d.ts",
+          "default": "./dist/node.js"
+        },
+        "./execute": {
+          "types": "./dist/execute.d.ts",
+          "default": "./dist/execute.js"
+        },
+        "./workers": {
+          "types": "./dist/workers.d.ts",
+          "import": "./dist/workers.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./runners": {
+          "types": "./dist/runners.d.ts",
+          "default": "./dist/runners.js"
+        },
+        "./suite": {
+          "types": "./dist/suite.d.ts",
+          "default": "./dist/suite.js"
+        },
+        "./environments": {
+          "types": "./dist/environments.d.ts",
+          "default": "./dist/environments.js"
+        },
+        "./utils": {
+          "types": "./dist/utils.d.ts",
+          "default": "./dist/utils.js"
+        },
+        "./config": {
+          "types": "./config.d.ts",
+          "require": "./dist/config.cjs",
+          "default": "./dist/config.js"
+        },
+        "./coverage": {
+          "types": "./coverage.d.ts",
+          "default": "./dist/coverage.js"
+        },
+        "./reporters": {
+          "types": "./dist/reporters.d.ts",
+          "default": "./dist/reporters.js"
+        },
+        "./snapshot": {
+          "types": "./dist/snapshot.d.ts",
+          "default": "./dist/snapshot.js"
+        }
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@ampproject/remapping": "^2.3.0",
+        "chai": "^5.1.1",
+        "debug": "^4.3.5",
+        "execa": "^8.0.1",
+        "magic-string": "^0.30.10",
+        "pathe": "^1.1.2",
+        "picocolors": "^1.0.1",
+        "std-env": "^3.7.0",
+        "tinybench": "^2.8.0",
+        "tinypool": "^1.0.0",
+        "vite": "^5.0.0",
+        "why-is-node-running": "^2.2.2",
+        "@vitest/expect": "2.0.0",
+        "@vitest/runner": "2.0.0",
+        "@vitest/spy": "2.0.0",
+        "@vitest/snapshot": "2.0.0",
+        "@vitest/utils": "2.0.0",
+        "vite-node": "2.0.0"
+      },
+      "peerDependencies": {
+        "@edge-runtime/vm": "*",
+        "@types/node": "^18.0.0 || >=20.0.0",
+        "happy-dom": "*",
+        "jsdom": "*",
+        "@vitest/browser": "2.0.0",
+        "@vitest/ui": "2.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@edge-runtime/vm": {
+          "optional": true
+        },
+        "@types/node": {
+          "optional": true
+        },
+        "@vitest/browser": {
+          "optional": true
+        },
+        "@vitest/ui": {
+          "optional": true
+        },
+        "happy-dom": {
+          "optional": true
+        },
+        "jsdom": {
+          "optional": true
+        }
+      }
+    },
+    "3.0.0": {
+      "integrity": "sha512-fwfPif+EV0jyms9h1Crb6rwJttH/KBzKrcUesjxHgldmc6R0FaMNLsd+Rgc17NoxzLcb/sYE2Xs9NQ/vnTBf6Q==",
+      "engines": {
+        "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "require": {
+            "types": "./index.d.cts",
+            "default": "./index.cjs"
+          }
+        },
+        "./*": "./*",
+        "./globals": {
+          "types": "./globals.d.ts"
+        },
+        "./jsdom": {
+          "types": "./jsdom.d.ts"
+        },
+        "./importMeta": {
+          "types": "./importMeta.d.ts"
+        },
+        "./import-meta": {
+          "types": "./import-meta.d.ts"
+        },
+        "./node": {
+          "types": "./dist/node.d.ts",
+          "default": "./dist/node.js"
+        },
+        "./execute": {
+          "types": "./dist/execute.d.ts",
+          "default": "./dist/execute.js"
+        },
+        "./workers": {
+          "types": "./dist/workers.d.ts",
+          "import": "./dist/workers.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./runners": {
+          "types": "./dist/runners.d.ts",
+          "default": "./dist/runners.js"
+        },
+        "./suite": {
+          "types": "./dist/suite.d.ts",
+          "default": "./dist/suite.js"
+        },
+        "./environments": {
+          "types": "./dist/environments.d.ts",
+          "default": "./dist/environments.js"
+        },
+        "./utils": {
+          "types": "./dist/utils.d.ts",
+          "default": "./dist/utils.js"
+        },
+        "./config": {
+          "types": "./config.d.ts",
+          "require": "./dist/config.cjs",
+          "default": "./dist/config.js"
+        },
+        "./coverage": {
+          "types": "./coverage.d.ts",
+          "default": "./dist/coverage.js"
+        },
+        "./reporters": {
+          "types": "./dist/reporters.d.ts",
+          "default": "./dist/reporters.js"
+        },
+        "./snapshot": {
+          "types": "./dist/snapshot.d.ts",
+          "default": "./dist/snapshot.js"
+        },
+        "./mocker": {
+          "types": "./dist/mocker.d.ts",
+          "default": "./dist/mocker.js"
+        }
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "chai": "^5.1.2",
+        "debug": "^4.4.0",
+        "expect-type": "^1.1.0",
+        "magic-string": "^0.30.17",
+        "pathe": "^2.0.0",
+        "std-env": "^3.8.0",
+        "tinybench": "^2.9.0",
+        "tinyexec": "^0.3.2",
+        "tinypool": "^1.0.2",
+        "tinyrainbow": "^2.0.0",
+        "vite": "^5.0.0 || ^6.0.0",
+        "why-is-node-running": "^2.3.0",
+        "@vitest/mocker": "3.0.0",
+        "@vitest/pretty-format": "^3.0.0",
+        "@vitest/snapshot": "3.0.0",
+        "@vitest/spy": "3.0.0",
+        "@vitest/utils": "3.0.0",
+        "@vitest/runner": "3.0.0",
+        "vite-node": "3.0.0",
+        "@vitest/expect": "3.0.0"
+      },
+      "peerDependencies": {
+        "@edge-runtime/vm": "*",
+        "@types/node": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "happy-dom": "*",
+        "jsdom": "*",
+        "@vitest/browser": "3.0.0",
+        "@vitest/ui": "3.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@edge-runtime/vm": {
+          "optional": true
+        },
+        "@types/node": {
+          "optional": true
+        },
+        "@vitest/browser": {
+          "optional": true
+        },
+        "@vitest/ui": {
+          "optional": true
+        },
+        "happy-dom": {
+          "optional": true
+        },
+        "jsdom": {
+          "optional": true
+        }
+      }
+    },
+    "4.0.0": {
+      "integrity": "sha512-Z+qKuTt2py+trSv2eJNYPaQKos88EmmLntXLAJkOHdd1v3BdcS4DgIkyC6cQPRoh8tWb+QiFfW08U347mjcV0g==",
+      "engines": {
+        "node": "^20.0.0 || ^22.0.0 || >=24.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "require": {
+            "types": "./index.d.cts",
+            "default": "./index.cjs"
+          }
+        },
+        "./browser": {
+          "types": "./browser/context.d.ts",
+          "default": "./browser/context.js"
+        },
+        "./package.json": "./package.json",
+        "./optional-types.js": {
+          "types": "./optional-types.d.ts"
+        },
+        "./src/*": "./src/*",
+        "./globals": {
+          "types": "./globals.d.ts"
+        },
+        "./jsdom": {
+          "types": "./jsdom.d.ts"
+        },
+        "./importMeta": {
+          "types": "./importMeta.d.ts"
+        },
+        "./import-meta": {
+          "types": "./import-meta.d.ts"
+        },
+        "./node": {
+          "types": "./dist/node.d.ts",
+          "default": "./dist/node.js"
+        },
+        "./internal/browser": {
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./internal/module-runner": {
+          "types": "./dist/module-runner.d.ts",
+          "default": "./dist/module-runner.js"
+        },
+        "./runners": {
+          "types": "./dist/runners.d.ts",
+          "default": "./dist/runners.js"
+        },
+        "./suite": {
+          "types": "./dist/suite.d.ts",
+          "default": "./dist/suite.js"
+        },
+        "./environments": {
+          "types": "./dist/environments.d.ts",
+          "default": "./dist/environments.js"
+        },
+        "./config": {
+          "types": "./config.d.ts",
+          "require": "./dist/config.cjs",
+          "default": "./dist/config.js"
+        },
+        "./coverage": {
+          "types": "./coverage.d.ts",
+          "default": "./dist/coverage.js"
+        },
+        "./reporters": {
+          "types": "./dist/reporters.d.ts",
+          "default": "./dist/reporters.js"
+        },
+        "./snapshot": {
+          "types": "./dist/snapshot.d.ts",
+          "default": "./dist/snapshot.js"
+        },
+        "./mocker": {
+          "types": "./dist/mocker.d.ts",
+          "default": "./dist/mocker.js"
+        },
+        "./worker": {
+          "types": "./worker.d.ts",
+          "default": "./dist/worker.js"
+        }
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "debug": "^4.4.3",
+        "es-module-lexer": "^1.7.0",
+        "expect-type": "^1.2.2",
+        "magic-string": "^0.30.19",
+        "pathe": "^2.0.3",
+        "picomatch": "^4.0.3",
+        "std-env": "^3.9.0",
+        "tinybench": "^2.9.0",
+        "tinyexec": "^0.3.2",
+        "tinyglobby": "^0.2.15",
+        "tinyrainbow": "^3.0.3",
+        "vite": "^6.0.0 || ^7.0.0",
+        "why-is-node-running": "^2.3.0",
+        "@vitest/expect": "4.0.0",
+        "@vitest/mocker": "4.0.0",
+        "@vitest/pretty-format": "4.0.0",
+        "@vitest/runner": "4.0.0",
+        "@vitest/snapshot": "4.0.0",
+        "@vitest/utils": "4.0.0",
+        "@vitest/spy": "4.0.0"
+      },
+      "peerDependencies": {
+        "@edge-runtime/vm": "*",
+        "@types/debug": "^4.1.12",
+        "@types/node": "^20.0.0 || ^22.0.0 || >=24.0.0",
+        "happy-dom": "*",
+        "jsdom": "*",
+        "@vitest/browser-playwright": "4.0.0",
+        "@vitest/browser-preview": "4.0.0",
+        "@vitest/ui": "4.0.0",
+        "@vitest/browser-webdriverio": "4.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@edge-runtime/vm": {
+          "optional": true
+        },
+        "@types/debug": {
+          "optional": true
+        },
+        "@types/node": {
+          "optional": true
+        },
+        "@vitest/browser-playwright": {
+          "optional": true
+        },
+        "@vitest/browser-preview": {
+          "optional": true
+        },
+        "@vitest/browser-webdriverio": {
+          "optional": true
+        },
+        "@vitest/ui": {
+          "optional": true
+        },
+        "happy-dom": {
+          "optional": true
+        },
+        "jsdom": {
+          "optional": true
+        }
+      }
+    },
+    "5.0.0": {
+      "integrity": "sha512-gpsMNoRhMjMktVxPtstOH4/PJuPyovVaMDr4oDilXaGH1EcqM2OE96SoHT2VIQ6fTGtTjqmHDrEu2X9RQiXf8Q==",
+      "engines": {
+        "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "require": {
+            "types": "./index.d.cts",
+            "default": "./index.cjs"
+          }
+        },
+        "./browser": {
+          "types": "./browser/context.d.ts",
+          "default": "./browser/context.js"
+        },
+        "./package.json": "./package.json",
+        "./optional-types.js": {
+          "types": "./optional-types.d.ts"
+        },
+        "./optional-runtime-types.js": {
+          "types": "./optional-runtime-types.d.ts"
+        },
+        "./globals": {
+          "types": "./globals.d.ts"
+        },
+        "./jsdom": {
+          "types": "./jsdom.d.ts"
+        },
+        "./importMeta": {
+          "types": "./importMeta.d.ts"
+        },
+        "./import-meta": {
+          "types": "./import-meta.d.ts"
+        },
+        "./node": {
+          "types": "./dist/node.d.ts",
+          "default": "./dist/node.js"
+        },
+        "./internal/browser": {
+          "__vitest_source__": "./src/public/browser.ts",
+          "types": "./dist/browser.d.ts",
+          "default": "./dist/browser.js"
+        },
+        "./internal/traces": {
+          "__vitest_source__": "./src/utils/traces.ts",
+          "default": "./dist/traces.js"
+        },
+        "./config": {
+          "types": "./config.d.ts",
+          "require": "./dist/config.cjs",
+          "default": "./dist/config.js"
+        },
+        "./runtime": {
+          "types": "./dist/runtime.d.ts",
+          "default": "./dist/runtime.js"
+        },
+        "./worker": {
+          "types": "./worker.d.ts",
+          "default": "./dist/worker.js"
+        }
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@types/chai": "^5.2.2",
+        "@vitest/mocker": "5.0.0",
+        "chai": "^6.2.2",
+        "es-module-lexer": "^2.3.2",
+        "expect-type": "^1.4.0",
+        "magic-string": "^1.2.3",
+        "obug": "^2.1.4",
+        "picomatch": "^4.0.7",
+        "std-env": "^4.2.0",
+        "tinybench": "6.1.4",
+        "tinyexec": "1.3.0",
+        "tinyglobby": "^0.2.17",
+        "why-is-node-running": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@edge-runtime/vm": "*",
+        "@opentelemetry/api": "^1.9.0",
+        "@types/node": "^22.0.0 || >=24.0.0",
+        "@vitest/browser-playwright": "5.0.0",
+        "@vitest/browser-preview": "5.0.0",
+        "@vitest/browser-webdriverio": "^5.0.0-beta.5 || >=5.0.0",
+        "@vitest/coverage-istanbul": "5.0.0",
+        "@vitest/coverage-v8": "5.0.0",
+        "@vitest/ui": "5.0.0",
+        "happy-dom": "*",
+        "jsdom": "*",
+        "vite": "^6.4.0 || ^7.0.0 || ^8.0.0"
+      },
+      "peerDependenciesMeta": {
+        "@edge-runtime/vm": {
+          "optional": true
+        },
+        "@opentelemetry/api": {
+          "optional": true
+        },
+        "@types/node": {
+          "optional": true
+        },
+        "@vitest/browser-playwright": {
+          "optional": true
+        },
+        "@vitest/browser-preview": {
+          "optional": true
+        },
+        "@vitest/browser-webdriverio": {
+          "optional": true
+        },
+        "@vitest/coverage-istanbul": {
+          "optional": true
+        },
+        "@vitest/coverage-v8": {
+          "optional": true
+        },
+        "@vitest/ui": {
+          "optional": true
+        },
+        "happy-dom": {
+          "optional": true
+        },
+        "jsdom": {
+          "optional": true
+        },
+        "vite": {
+          "optional": false
+        }
+      }
+    }
+  },
+  "webpack-dev-server": {
+    "5.0.0": {
+      "integrity": "sha512-3nEQmKcNTrHMcYoOOwOb+Uy/SuJ5I1uEvNPXxrXct/QDBV1l8xc2vh21GAPNUWcw7ECfNX051yhNCpR4VYqVdw==",
+      "engines": {
+        "node": ">= 18.12.0"
+      },
+      "main": "lib/Server.js",
+      "dependencies": {
+        "@types/bonjour": "^3.5.13",
+        "@types/connect-history-api-fallback": "^1.5.4",
+        "@types/express": "^4.17.21",
+        "@types/serve-index": "^1.9.4",
+        "@types/serve-static": "^1.15.5",
+        "@types/sockjs": "^0.3.36",
+        "@types/ws": "^8.5.10",
+        "ansi-html-community": "^0.0.8",
+        "bonjour-service": "^1.2.1",
+        "chokidar": "^3.6.0",
+        "colorette": "^2.0.10",
+        "compression": "^1.7.4",
+        "connect-history-api-fallback": "^2.0.0",
+        "default-gateway": "^6.0.3",
+        "express": "^4.17.3",
+        "graceful-fs": "^4.2.6",
+        "html-entities": "^2.4.0",
+        "http-proxy-middleware": "^2.0.3",
+        "ipaddr.js": "^2.1.0",
+        "launch-editor": "^2.6.1",
+        "open": "^10.0.3",
+        "p-retry": "^6.2.0",
+        "rimraf": "^5.0.5",
+        "schema-utils": "^4.2.0",
+        "selfsigned": "^2.4.1",
+        "serve-index": "^1.9.1",
+        "sockjs": "^0.3.24",
+        "spdy": "^4.0.2",
+        "webpack-dev-middleware": "^7.0.0",
+        "ws": "^8.16.0"
+      },
+      "peerDependencies": {
+        "webpack": "^5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "webpack-cli": {
+          "optional": true
+        },
+        "webpack": {
+          "optional": true
+        }
+      }
+    },
+    "6.0.0": {
+      "integrity": "sha512-q9SD4ItOGhZLeU6EGT10caDZdHjF50Pz1DtkRZZOPsfluMXOkacWKKOtSBSLVkPqKiF67eFUC0rI88U/tSFPEw==",
+      "engines": {
+        "node": ">= 22.15.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./types/lib/Server.d.ts",
+          "import": "./lib/Server.js",
+          "require": "./dist/Server.js",
+          "default": "./lib/Server.js"
+        },
+        "./client/*": "./client/*",
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/Server.js",
+      "dependencies": {
+        "@types/bonjour": "^3.5.13",
+        "@types/connect-history-api-fallback": "^1.5.4",
+        "@types/express": "^5.0.6",
+        "@types/express-serve-static-core": "^5.1.1",
+        "@types/serve-index": "^1.9.4",
+        "@types/serve-static": "^2.2.0",
+        "@types/ws": "^8.18.1",
+        "ansi-html-community": "^0.0.8",
+        "bonjour-service": "^1.3.0",
+        "chokidar": "^5.0.0",
+        "compression": "^1.8.1",
+        "connect-history-api-fallback": "^2.0.0",
+        "express": "^5.2.1",
+        "graceful-fs": "^4.2.11",
+        "http-proxy-middleware": "^4.1.1",
+        "ipaddr.js": "^2.3.0",
+        "launch-editor": "^2.14.1",
+        "open": "^11.0.0",
+        "p-retry": "^8.0.0",
+        "schema-utils": "^4.3.3",
+        "selfsigned": "^5.5.0",
+        "serve-index": "^1.9.2",
+        "tinyglobby": "^0.2.15",
+        "webpack-dev-middleware": "^8.0.3",
+        "ws": "^8.20.0"
+      },
+      "peerDependencies": {
+        "webpack": "^5.101.0"
+      },
+      "peerDependenciesMeta": {
+        "webpack-cli": {
+          "optional": true
+        },
+        "webpack": {
+          "optional": true
+        }
+      }
+    }
+  }
+}

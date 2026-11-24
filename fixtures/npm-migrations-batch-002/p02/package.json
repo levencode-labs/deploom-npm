@@ -1,0 +1,10 @@
+{
+  "name": "deploom-migration-eslint-plugin-react-hooks",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-5-0-0": "npm:eslint-plugin-react-hooks@5.0.0",
+    "v-6-0-0": "npm:eslint-plugin-react-hooks@6.0.0",
+    "v-7-0-0": "npm:eslint-plugin-react-hooks@7.0.0"
+  }
+}

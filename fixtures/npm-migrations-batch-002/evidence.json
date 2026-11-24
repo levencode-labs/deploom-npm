@@ -1,0 +1,691 @@
+{
+  "fixtureSha256": "8d64b926bdfed18f93d84c4d4c4c0c961c8d133059cbdce581c49e0a5af030bc",
+  "claims": [
+    {
+      "package": "vitest",
+      "from": "2.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-react-hooks",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-react-hooks",
+      "from": "5.0.0",
+      "to": "7.0.0",
+      "check": "lint",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-react-hooks",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "lint",
+      "outcome": "passed"
+    },
+    {
+      "package": "typescript-eslint",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitejs/plugin-react",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/jest-dom",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/react",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.48.2",
+      "to": "1.49.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.49.1",
+      "to": "1.50.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.55.1",
+      "to": "1.56.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.57.0",
+      "to": "1.58.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.58.2",
+      "to": "1.59.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.59.1",
+      "to": "1.60.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.63.0",
+      "to": "1.64.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/test",
+      "from": "1.64.1",
+      "to": "1.65.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-router",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-import",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "1.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "1.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "2.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/coverage-v8",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass",
+      "from": "1.91.0",
+      "to": "1.92.0",
+      "check": "build",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass",
+      "from": "1.106.1",
+      "to": "1.107.0",
+      "check": "build",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "8.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "9.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/browser",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "lint-staged",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "debounce",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "pdfjs-dist",
+      "from": "5.0.375",
+      "to": "6.0.227",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "query-string",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/react",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/react",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/react",
+      "from": "8.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/react",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/react",
+      "from": "9.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/react",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "storybook",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "storybook",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "storybook",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "concurrently",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-dev-server",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-docs",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-docs",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-docs",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "14.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "14.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "15.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@faker-js/faker",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "from": "28.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/builder-vite",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/builder-vite",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/builder-vite",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/types",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/types",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-error-boundary",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mocha",
+      "from": "11.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "15.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "16.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "17.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "18.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "19.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "20.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "13.0.0",
+      "to": "21.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "14.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "15.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "15.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "15.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "15.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "15.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

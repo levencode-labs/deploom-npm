@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-sentry-react",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-10-0-0": "npm:@sentry/react@10.0.0",
+    "v-11-0-0": "npm:@sentry/react@11.0.0",
+    "v-8-0-0": "npm:@sentry/react@8.0.0",
+    "v-9-0-0": "npm:@sentry/react@9.0.0"
+  }
+}

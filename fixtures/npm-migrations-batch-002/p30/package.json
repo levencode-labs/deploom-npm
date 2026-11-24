@@ -1,0 +1,16 @@
+{
+  "name": "deploom-migration-happy-dom",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-13-0-0": "npm:happy-dom@13.0.0",
+    "v-14-0-0": "npm:happy-dom@14.0.0",
+    "v-15-0-0": "npm:happy-dom@15.0.0",
+    "v-16-0-0": "npm:happy-dom@16.0.0",
+    "v-17-0-0": "npm:happy-dom@17.0.0",
+    "v-18-0-0": "npm:happy-dom@18.0.0",
+    "v-19-0-0": "npm:happy-dom@19.0.0",
+    "v-20-0-0": "npm:happy-dom@20.0.0",
+    "v-21-0-0": "npm:happy-dom@21.0.0"
+  }
+}

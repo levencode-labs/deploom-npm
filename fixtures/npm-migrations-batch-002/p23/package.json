@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-sass-loader",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-14-0-0": "npm:sass-loader@14.0.0",
+    "v-15-0-0": "npm:sass-loader@15.0.0",
+    "v-16-0-0": "npm:sass-loader@16.0.0",
+    "v-17-0-0": "npm:sass-loader@17.0.0"
+  }
+}

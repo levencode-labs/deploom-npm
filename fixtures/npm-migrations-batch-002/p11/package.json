@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-sass",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-1-106-1": "npm:sass@1.106.1",
+    "v-1-107-0": "npm:sass@1.107.0",
+    "v-1-91-0": "npm:sass@1.91.0",
+    "v-1-92-0": "npm:sass@1.92.0"
+  }
+}
