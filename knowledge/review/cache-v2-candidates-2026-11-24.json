@@ -2598,6 +2598,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "biome2-assist-config",
+      "kind": "codemod",
+      "package": "@biomejs/biome",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.9.4",
+          "to": "2.0.4"
+        }
+      ],
+      "title": "Migrate Biome 2 import assist and file exclusions",
+      "summary": "Biome 2 rejects legacy organizer and ignore keys. The pinned CLI migrates them and keeps import sorting and the tested file exclusion.",
+      "conditions": [
+        "The Biome 1 configuration uses organizeImports and files.ignore to sort selected imports while omitting generated source files."
+      ],
+      "actions": [
+        "Run the locally installed Biome 2.0.4 CLI as biome migrate --write from the affected config root.",
+        "Inspect the converted assist action and glob exclusions before applying other fixes."
+      ],
+      "verification": [
+        "Run Biome on an included source and an excluded generated file. Confirm imports sort and the excluded file stays unchanged."
+      ],
+      "negativeControls": [
+        {
+          "name": "biome2-rejects-held-configuration",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.diagnostics, /unknown key.*(?:organizeImports|ignore)/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/b61eb12888a60b190a61170c99675cd30bff7dbe/fixtures/biome2-assist-config/check.cjs",
+        "fixtureSha256": "e02d78627056678fe0534edf2c0613e09764300df74b9a55486c405d09b94f80",
+        "claim": {
+          "package": "@biomejs/biome",
+          "from": "1.9.4",
+          "to": "2.0.4",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "node-cron4-start-gate",
+      "kind": "breaking-change",
+      "package": "node-cron",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.3",
+          "to": "4.6.0"
+        }
+      ],
+      "title": "Create stopped node-cron 4 tasks with createTask()",
+      "summary": "node-cron 4 schedule() ignores scheduled: false and executes on its schedule before an explicit start. createTask() restores the deferred startup contract.",
+      "conditions": [
+        "A task uses schedule(..., { scheduled: false }) and must wait for an explicit application start."
+      ],
+      "actions": [
+        "Use createTask() for the deferred task and retain the explicit start() call.",
+        "Keep automatically started jobs on schedule() and verify each job's runtime options."
+      ],
+      "verification": [
+        "Observe a schedule tick before activation, then start the task and confirm its callback runs."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-node-cron4-schedule-runs-before-start",
+          "expected": "reject",
+          "fixtureAssertion": "assert.ok(runs.held > 0)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/1f1383fefc6be687eef37b4dc11259d253f9b319/fixtures/node-cron4-start-gate/check.cjs",
+        "fixtureSha256": "e8af5c56c50ad846902f4f1247a3033c12e39c688b23899528f12a0ba1215bb6",
+        "claim": {
+          "package": "node-cron",
+          "from": "3.0.3",
+          "to": "4.6.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
