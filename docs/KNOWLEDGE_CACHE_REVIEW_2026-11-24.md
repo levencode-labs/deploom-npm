@@ -100,7 +100,7 @@ Rollup 4 first failed to find its native package when npm omitted optional depen
 
 ## Frontend project discovery
 
-The [frontend project index](FRONTEND_PROJECT_INDEX.md) contains 95 distinct public repositories and 103 verified manifests. Its working target is 150 repositories. The index records workspace declarations and any catalog indirection separately from the reproduced migration recipes. See also the [React UI release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md).
+The [frontend project index](FRONTEND_PROJECT_INDEX.md) contains 155 distinct public repositories and 163 verified manifests, above the initial target of 150 repositories. The index records workspace declarations and any catalog indirection separately from the reproduced migration recipes. See also the [React UI release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md).
 
 In a separate offline control on MCP 0.2.32, the TypeScript `5.9.2 → 6.0.3` npm query returned three `verified-exact-transition` records. The `5.9.3 → 6.0.2` query returned the same three as `major-line-candidate`. The compact plan showed one with `recipientApplicability=UNKNOWN` and `omittedCount=2`. A `4.9.5 → 6.0.2` query and a pnpm query returned zero. The batch lookup exposes the remaining candidates and their applicability conditions.
 
