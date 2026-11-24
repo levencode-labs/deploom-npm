@@ -20,6 +20,11 @@ jobs:
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
+      - name: Verify React 19 element classification in snapshot tooling
+        working-directory: fixtures/react19-snapshot-classifier
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - run: npx --yes --package=npm@11.16.0 -- node fixtures/vitest-vite-peer/check.cjs
       - name: Check the Vitest mock transform
         working-directory: fixtures/vitest5-hoisted-mocks

@@ -1,0 +1,11 @@
+{
+  "name": "deploom-react19-snapshot-classifier-replay",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "react-before": "npm:react@18.3.1",
+    "react-after": "npm:react@19.3.0",
+    "react-is-before": "npm:react-is@18.3.1",
+    "react-is-after": "npm:react-is@19.3.0"
+  }
+}
