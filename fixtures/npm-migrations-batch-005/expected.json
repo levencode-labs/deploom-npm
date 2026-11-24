@@ -1,0 +1,1206 @@
+[
+  {
+    "row": [
+      "style-loader",
+      "3.3.4",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": "^5.0.0",
+        "b": "^5.27.0",
+        "before": "5.0.0",
+        "after": "5.82.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "webpack-merge",
+      "5.10.0",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10.0.0",
+        "b": ">=18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "storybook",
+      "6.5.16",
+      "7.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "storybook",
+      "7.6.17",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "fork-ts-checker-webpack-plugin",
+      "6.5.0",
+      "7.0.0"
+    ],
+    "report": [
+      "fork-ts-checker-eslint",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "fork-ts-checker-webpack-plugin",
+      "7.3.0",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "fork-ts-checker-webpack-plugin",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "concurrently",
+      "6.5.1",
+      "7.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10.0.0",
+        "b": "^12.20.0 || ^14.13.0 || >=16.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "concurrently",
+      "7.6.0",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.20.0 || ^14.13.0 || >=16.0.0",
+        "b": "^14.13.0 || >=16.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "concurrently",
+      "8.2.2",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": "^14.13.0 || >=16.0.0",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "postcss-loader",
+      "6.2.1",
+      "7.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">= 12.13.0",
+        "b": ">= 14.15.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "postcss-loader",
+      "7.3.4",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react",
+      "6.5.16",
+      "7.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10.13.0",
+        "b": ">=16.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react",
+      "7.6.17",
+      "8.0.0"
+    ],
+    "report": [
+      "storybook-csf",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "webpack-dev-server",
+      "4.15.1",
+      "5.0.0"
+    ],
+    "report": [
+      "webpack-dev-server-middleware",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "jquery",
+      "3.7.1",
+      "4.0.0"
+    ],
+    "report": [
+      "jquery-native-array",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-docs",
+      "6.5.16",
+      "7.0.0"
+    ],
+    "report": [
+      "storybook-docs-blocks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-docs",
+      "7.6.17",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "sass-loader",
+      "12.6.0",
+      "13.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">= 12.13.0",
+        "b": ">= 14.15.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "13.3.3",
+      "14.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-error-boundary",
+      "4.1.2",
+      "5.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "mocha",
+      "9.2.2",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">= 12.0.0",
+        "b": ">= 14.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "mocha",
+      "10.8.2",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.0.0",
+        "b": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "2.55.0",
+      "3.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "3.2.2",
+      "4.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "4.1.0",
+      "5.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "5.4.0",
+      "6.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "6.0.4",
+      "7.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "7.8.1",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "8.9.0",
+      "9.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "9.20.3",
+      "10.0.0"
+    ],
+    "report": [
+      "happy-dom-public-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "10.11.2",
+      "11.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "11.2.0",
+      "12.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "happy-dom",
+      "12.10.3",
+      "13.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "webpack-bundle-analyzer",
+      "4.10.2",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">= 10.13.0",
+        "b": ">= 20.9.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "copy-webpack-plugin",
+      "10.2.4",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">= 12.20.0",
+        "b": ">= 14.15.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "copy-webpack-plugin",
+      "11.0.0",
+      "12.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/plugin-proposal-export-default-from",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitejs/plugin-react-swc",
+      "3.11.0",
+      "4.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "0.34.7",
+      "1.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": ">=0.30.1 <1",
+        "b": "^1.0.0-0",
+        "before": "0.34.7",
+        "after": "1.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "13.0.2",
+      "14.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "sinon",
+      "14.0.2",
+      "15.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "sinon",
+      "15.2.0",
+      "16.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "sinon",
+      "16.1.3",
+      "17.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "sinon",
+      "17.0.1",
+      "18.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "12.0.1",
+      "13.0.0"
+    ],
+    "report": [
+      "puppeteer-handled-type",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "13.7.0",
+      "14.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10.18.1",
+        "b": ">=14.1.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "14.4.1",
+      "15.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "15.5.0",
+      "16.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "16.2.0",
+      "17.0.0"
+    ],
+    "report": [
+      "puppeteer-root-selector",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "17.1.3",
+      "18.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "18.2.1",
+      "19.0.0"
+    ],
+    "report": [
+      "puppeteer-known-devices",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "19.11.1",
+      "20.0.0"
+    ],
+    "report": [
+      "puppeteer-standalone-browser-manager",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "20.9.0",
+      "21.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "21.11.0",
+      "22.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "16.20.2",
+        "a": ">=16.13.2",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "webpack-cli",
+      "4.10.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": "4.x.x || 5.x.x",
+        "b": "5.x.x",
+        "before": "4.47.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "webpack-cli",
+      "5.1.4",
+      "6.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": "5.x.x",
+        "b": "^5.82.0",
+        "before": "5.0.0",
+        "after": "5.82.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/plugin-transform-react-constant-elements",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint",
+      "14.16.1",
+      "15.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.20.0 || ^14.13.1 || >=16.0.0",
+        "b": "^14.13.1 || >=16.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint",
+      "15.11.0",
+      "16.0.0"
+    ],
+    "report": [
+      "stylelint-remove-stylistic-rule",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "1.20.1",
+      "2.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "8.17.0",
+        "a": ">= 8",
+        "b": ">= 10"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "2.23.0",
+      "3.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "nx",
+      "13.10.3",
+      "14.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "nx",
+      "14.8.6",
+      "15.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "nx",
+      "15.9.3",
+      "16.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "nx",
+      "16.10.0",
+      "17.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "nx",
+      "17.3.1",
+      "18.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "jest-junit",
+      "13.2.0",
+      "14.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "jest-junit",
+      "14.0.1",
+      "15.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "jest-junit",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "jest-junit",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10.12.0",
+        "b": ">=20.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-a11y",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "storybook-a11y-registration",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "css-minimizer-webpack-plugin",
+      "6.0.0",
+      "7.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "css-minimizer-webpack-plugin",
+      "6.0.0",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.16.1",
+        "a": ">= 18.12.0",
+        "b": ">= 20.9.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "css-minimizer-webpack-plugin",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.16.1",
+        "a": ">= 18.12.0",
+        "b": ">= 20.9.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "css-minimizer-webpack-plugin",
+      "3.4.1",
+      "4.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">= 12.13.0",
+        "b": ">= 14.15.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "css-minimizer-webpack-plugin",
+      "4.2.2",
+      "5.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "css-minimizer-webpack-plugin",
+      "5.0.1",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-storybook",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "node-html-parser",
+      "7.0.1",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "node-html-parser",
+      "7.0.1",
+      "9.0.0"
+    ],
+    "report": [
+      "html-parser-public-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "node-html-parser",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "html-parser-public-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-test-renderer",
+      "18.3.1",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": "^18.3.1",
+        "b": "^19.0.0",
+        "before": "18.3.1",
+        "after": "19.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "14.0.0",
+      "15.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.0.0",
+        "b": "^16.13.0",
+        "before": "16.0.0",
+        "after": "16.13.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "14.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.0.0",
+        "b": "^16.16.0",
+        "before": "16.0.0",
+        "after": "16.16.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "14.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.0.0",
+        "b": "^16.23.0",
+        "before": "16.0.0",
+        "after": "16.23.1"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "14.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.0.0",
+        "b": "^17.0.0",
+        "before": "16.0.0",
+        "after": "17.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "14.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.0.0",
+        "b": "^18.0.0",
+        "before": "16.0.0",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.13.0",
+        "b": "^16.16.0",
+        "before": "16.13.0",
+        "after": "16.16.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "15.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.13.0",
+        "b": "^16.23.0",
+        "before": "16.13.0",
+        "after": "16.23.1"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "15.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.13.0",
+        "b": "^17.0.0",
+        "before": "16.13.0",
+        "after": "17.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "15.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.13.0",
+        "b": "^18.0.0",
+        "before": "16.13.0",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.16.0",
+        "b": "^16.23.0",
+        "before": "16.16.0",
+        "after": "16.23.1"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "16.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.16.0",
+        "b": "^17.0.0",
+        "before": "16.16.0",
+        "after": "17.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "16.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.16.0",
+        "b": "^18.0.0",
+        "before": "16.16.0",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "17.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.23.0",
+        "b": "^17.0.0",
+        "before": "16.23.1",
+        "after": "17.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "17.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^16.23.0",
+        "b": "^18.0.0",
+        "before": "16.23.1",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-config-recommended",
+      "18.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "^17.0.0",
+        "b": "^18.0.0",
+        "before": "17.0.0",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "qrcode.react",
+      "2.0.0",
+      "3.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "qrcode.react",
+      "3.1.0",
+      "4.0.0"
+    ],
+    "report": [
+      "qrcode-named-renderer",
+      {}
+    ]
+  }
+]

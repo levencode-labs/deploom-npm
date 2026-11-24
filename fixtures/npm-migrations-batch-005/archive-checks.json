@@ -1,0 +1,112 @@
+{
+  "webpack-dev-server": {
+    "beforeMiddleware": [
+      "lib/options.json",
+      "\"onBeforeSetupMiddleware\"\\s*:"
+    ],
+    "setupMiddlewares": [
+      "lib/options.json",
+      "\"setupMiddlewares\"\\s*:"
+    ]
+  },
+  "jquery": {
+    "isArray": [
+      "dist/jquery.js",
+      "\\bjQuery\\.isArray\\s*=\\s*Array\\.isArray\\b"
+    ],
+    "arrayIsArray": [
+      "dist/jquery.js",
+      "\\bArray\\.isArray\\b"
+    ]
+  },
+  "fork-ts-checker-webpack-plugin": {
+    "eslint": [
+      "lib/(?:ForkTsCheckerWebpackPluginOptions|plugin-options)\\.json",
+      "\"eslint\"\\s*:"
+    ],
+    "typescript": [
+      "lib/(?:ForkTsCheckerWebpackPluginOptions|plugin-options)\\.json",
+      "\"typescript\"\\s*:"
+    ]
+  },
+  "qrcode.react": {
+    "default": [
+      "lib/index\\.d\\.ts",
+      "export\\s*\\{[^}]*\\bas default\\s*\\}"
+    ],
+    "namedCases": [
+      "lib/index\\.d\\.ts",
+      "export\\s*\\{[^}]*\\bQRCodeCanvas\\b[^}]*\\bQRCodeSVG\\b"
+    ]
+  },
+  "stylelint": {
+    "colorHexCase": [
+      "lib/rules/color-hex-case/index\\.(?:js|cjs|mjs)",
+      ""
+    ],
+    "colorNoHex": [
+      "lib/rules/color-no-hex/index\\.(?:js|cjs|mjs)",
+      ""
+    ]
+  },
+  "@storybook/react": {
+    "storiesOf": [
+      "dist/(?:ts3\\.[49]/client/)?index\\.d\\.ts",
+      "\\bstoriesOf\\b"
+    ],
+    "meta": [
+      "dist/(?:ts3\\.[49]/client/)?index\\.d\\.ts",
+      "\\bMeta\\b"
+    ]
+  },
+  "puppeteer": {
+    "browserFetcher": [
+      "lib/cjs/puppeteer/puppeteer\\.d\\.ts",
+      "\\bcreateBrowserFetcher\\b"
+    ],
+    "configuration": [
+      "lib/cjs/puppeteer/puppeteer\\.d\\.ts",
+      "\\bexport default\\b"
+    ],
+    "oldHandled": [
+      "lib/cjs/puppeteer/common/HTTPRequest\\.js",
+      "['\\x22]alreay-handled['\\x22]"
+    ],
+    "handled": [
+      "lib/cjs/puppeteer/common/HTTPRequest\\.js",
+      "['\\x22]already-handled['\\x22]"
+    ],
+    "selectorRoot": [
+      "lib/types\\.d\\.ts",
+      "(?ms)^([ ]+)(?:export )?(?:declare )?interface WaitForSelectorOptions\\b(?:(?!^\\1\\}).)*\\broot\\?\\s*:\\s*ElementHandle\\b"
+    ],
+    "elementWait": [
+      "lib/types\\.d\\.ts",
+      "\\bElementHandle\\b[\\s\\S]*?\\bwaitForSelector\\("
+    ],
+    "puppeteerDevices": [
+      "lib/types\\.d\\.ts",
+      "\\bget devices\\(\\):"
+    ],
+    "knownDevices": [
+      "lib/types\\.d\\.ts",
+      "\\bconst KnownDevices\\b"
+    ]
+  },
+  "node-html-parser": {
+    "deepHtml": [
+      "dist/nodes/html\\.js",
+      ""
+    ],
+    "rootHtml": [
+      "dist/index\\.d\\.ts",
+      "\\bexport\\s*\\{[^}]*\\bHTMLElement\\b"
+    ]
+  },
+  "@storybook/addon-docs": {
+    "oldBlocks": [
+      "dist/cjs/blocks/index\\.js",
+      ""
+    ]
+  }
+}
