@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-dotenv",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-17-0-0": "npm:dotenv@17.0.0",
+    "v-18-0-0": "npm:dotenv@18.0.0"
+  }
+}

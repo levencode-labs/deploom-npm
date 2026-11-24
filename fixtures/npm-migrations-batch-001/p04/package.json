@@ -1,0 +1,12 @@
+{
+  "name": "deploom-migration-uuid",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-10-0-0": "npm:uuid@10.0.0",
+    "v-11-0-0": "npm:uuid@11.0.0",
+    "v-12-0-0": "npm:uuid@12.0.0",
+    "v-13-0-0": "npm:uuid@13.0.0",
+    "v-14-0-0": "npm:uuid@14.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-types-node",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-22-0-0": "npm:@types/node@22.0.0",
+    "v-24-0-0": "npm:@types/node@24.0.0",
+    "v-25-0-0": "npm:@types/node@25.0.0",
+    "v-26-0-0": "npm:@types/node@26.0.0"
+  }
+}

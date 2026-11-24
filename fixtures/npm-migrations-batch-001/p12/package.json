@@ -1,0 +1,10 @@
+{
+  "name": "deploom-migration-content-disposition",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-1-0-0": "npm:content-disposition@1.0.0",
+    "v-2-0-0": "npm:content-disposition@2.0.0",
+    "v-3-0-0": "npm:content-disposition@3.0.0"
+  }
+}

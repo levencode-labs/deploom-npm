@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-glob",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-11-0-0": "npm:glob@11.0.0",
+    "v-12-0-0": "npm:glob@12.0.0",
+    "v-13-0-0": "npm:glob@13.0.0",
+    "v-14-0-0": "npm:glob@14.0.0"
+  }
+}

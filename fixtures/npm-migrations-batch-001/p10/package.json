@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-eslint",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-10-0-0": "npm:eslint@10.0.0",
+    "v-9-0-0": "npm:eslint@9.0.0"
+  }
+}

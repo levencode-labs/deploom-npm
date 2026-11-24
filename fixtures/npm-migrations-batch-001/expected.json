@@ -1,0 +1,1320 @@
+[
+  {
+    "row": [
+      "p01",
+      "commander",
+      "12.0.0",
+      "13.0.0"
+    ],
+    "result": [
+      "commander13-excess-arguments",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p01",
+      "commander",
+      "12.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "commander13-excess-arguments",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p01",
+      "commander",
+      "12.0.0",
+      "15.0.0"
+    ],
+    "result": [
+      "commander13-excess-arguments",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p01",
+      "commander",
+      "13.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": ">=18",
+        "newRange": ">=20"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p01",
+      "commander",
+      "13.0.0",
+      "15.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": ">=18",
+        "newRange": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p01",
+      "commander",
+      "14.0.0",
+      "15.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "20.0.0",
+        "oldRange": ">=20",
+        "newRange": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p02",
+      "@types/node",
+      "22.0.0",
+      "24.0.0"
+    ],
+    "result": [
+      "types-node-typescript-floor",
+      {
+        "oldFloor": "4.8",
+        "newFloor": "5.1"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p02",
+      "@types/node",
+      "22.0.0",
+      "25.0.0"
+    ],
+    "result": [
+      "types-node-typescript-floor",
+      {
+        "oldFloor": "4.8",
+        "newFloor": "5.2"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p02",
+      "@types/node",
+      "22.0.0",
+      "26.0.0"
+    ],
+    "result": [
+      "types-node-typescript-floor",
+      {
+        "oldFloor": "4.8",
+        "newFloor": "5.6"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p02",
+      "@types/node",
+      "24.0.0",
+      "25.0.0"
+    ],
+    "result": [
+      "types-node-typescript-floor",
+      {
+        "oldFloor": "5.1",
+        "newFloor": "5.2"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p02",
+      "@types/node",
+      "24.0.0",
+      "26.0.0"
+    ],
+    "result": [
+      "types-node-typescript-floor",
+      {
+        "oldFloor": "5.1",
+        "newFloor": "5.6"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p02",
+      "@types/node",
+      "25.0.0",
+      "26.0.0"
+    ],
+    "result": [
+      "types-node-typescript-floor",
+      {
+        "oldFloor": "5.2",
+        "newFloor": "5.6"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p03",
+      "glob",
+      "11.0.0",
+      "12.0.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p03",
+      "glob",
+      "11.0.0",
+      "13.0.0"
+    ],
+    "result": [
+      "glob13-cli-split",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p03",
+      "glob",
+      "11.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "glob13-cli-split",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p03",
+      "glob",
+      "12.0.0",
+      "13.0.0"
+    ],
+    "result": [
+      "glob13-cli-split",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p03",
+      "glob",
+      "12.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "glob13-cli-split",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p03",
+      "glob",
+      "13.0.0",
+      "14.0.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "10.0.0",
+      "11.0.0"
+    ],
+    "result": [
+      "uuid11-v7-options",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "10.0.0",
+      "12.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "10.0.0",
+      "13.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "10.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "11.0.0",
+      "12.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "11.0.0",
+      "13.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "11.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "12.0.0",
+      "13.0.0"
+    ],
+    "result": [
+      "uuid13-node-export-condition",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "12.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "uuid14-web-crypto",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p04",
+      "uuid",
+      "13.0.0",
+      "14.0.0"
+    ],
+    "result": [
+      "uuid14-web-crypto",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p05",
+      "esbuild",
+      "0.19.12",
+      "0.20.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p05",
+      "esbuild",
+      "0.21.5",
+      "0.22.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "12.22.12",
+        "oldRange": ">=12",
+        "newRange": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p05",
+      "esbuild",
+      "0.22.0",
+      "0.23.0"
+    ],
+    "result": [
+      "esbuild23-keep-packages-external",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p05",
+      "esbuild",
+      "0.23.1",
+      "0.24.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p05",
+      "esbuild",
+      "0.24.2",
+      "0.25.0"
+    ],
+    "result": [
+      "esbuild25-serve-hosts",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p05",
+      "esbuild",
+      "0.26.0",
+      "0.27.0"
+    ],
+    "result": [
+      "esbuild27-binary-target",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p06",
+      "globals",
+      "14.0.0",
+      "15.0.0"
+    ],
+    "result": [
+      "globals15-prototype-keys",
+      {
+        "profile": "es2021",
+        "key": "hasOwnProperty"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p06",
+      "globals",
+      "14.0.0",
+      "16.0.0"
+    ],
+    "result": [
+      "globals15-prototype-keys",
+      {
+        "profile": "es2021",
+        "key": "hasOwnProperty"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p06",
+      "globals",
+      "14.0.0",
+      "17.0.0"
+    ],
+    "result": [
+      "globals15-prototype-keys",
+      {
+        "profile": "es2021",
+        "key": "hasOwnProperty"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p06",
+      "globals",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "result": [
+      "globals16-worker-list",
+      {
+        "profile": "serviceworker",
+        "key": "FileReaderSync"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p06",
+      "globals",
+      "15.0.0",
+      "17.0.0"
+    ],
+    "result": [
+      "globals16-worker-list",
+      {
+        "profile": "serviceworker",
+        "key": "FileReaderSync"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p06",
+      "globals",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "result": [
+      "globals17-audio-worklet",
+      {
+        "profile": "browser",
+        "key": "registerProcessor"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p07",
+      "path-to-regexp",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "result": [
+      "path8-named-wildcard",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p07",
+      "path-to-regexp",
+      "7.0.0",
+      "9.0.0"
+    ],
+    "result": [
+      "path8-named-wildcard",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p07",
+      "path-to-regexp",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "result": [
+      "esm-package-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p08",
+      "dotenv",
+      "17.0.0",
+      "18.0.0"
+    ],
+    "result": [
+      "dotenv18-banner-stream",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p09",
+      "vite",
+      "6.0.0",
+      "7.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "newRange": "^20.19.0 || >=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p09",
+      "vite",
+      "6.0.0",
+      "8.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "newRange": "^20.19.0 || >=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p09",
+      "vite",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "result": [
+      "vite8-esbuild-optional",
+      {
+        "old": "^0.25.0",
+        "next": "^0.27.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p10",
+      "eslint",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": "^18.18.0 || ^20.9.0 || >=21.1.0",
+        "newRange": "^20.19.0 || ^22.13.0 || >=24"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p11",
+      "@typescript-eslint/eslint-plugin",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "result": [
+      "typescript-eslint8-parser-peer",
+      {
+        "old": "^6.0.0 || ^6.0.0-alpha",
+        "next": "^8.0.0 || ^8.0.0-alpha.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p12",
+      "content-disposition",
+      "1.0.0",
+      "2.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "12.22.12",
+        "oldRange": ">= 0.6",
+        "newRange": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p12",
+      "content-disposition",
+      "1.0.0",
+      "3.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "12.22.12",
+        "oldRange": ">= 0.6",
+        "newRange": ">=22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p12",
+      "content-disposition",
+      "2.0.0",
+      "3.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": ">=18",
+        "newRange": ">=22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p13",
+      "@typescript-eslint/parser",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "16.20.2",
+        "oldRange": "^16.0.0 || >=18.0.0",
+        "newRange": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p14",
+      "@eslint/js",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p15",
+      "axios",
+      "1.7.9",
+      "1.8.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p15",
+      "axios",
+      "1.11.0",
+      "1.12.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p15",
+      "axios",
+      "1.15.2",
+      "1.16.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p16",
+      "chai",
+      "5.0.0",
+      "6.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "12.22.12",
+        "oldRange": ">=12",
+        "newRange": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p17",
+      "date-fns",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "24.0.0"
+    ],
+    "result": null
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "25.0.0"
+    ],
+    "result": [
+      "jsdom25-window-realm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "26.0.0"
+    ],
+    "result": [
+      "jsdom25-window-realm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "27.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "28.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "29.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "23.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^3.0.0",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "25.0.0"
+    ],
+    "result": [
+      "jsdom25-window-realm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "26.0.0"
+    ],
+    "result": [
+      "jsdom26-canvas-peer",
+      {
+        "oldPeer": "^2.11.2",
+        "newPeer": "^3.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "27.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "28.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "29.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "24.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^2.11.2",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "25.0.0",
+      "26.0.0"
+    ],
+    "result": [
+      "jsdom26-canvas-peer",
+      {
+        "oldPeer": "^2.11.2",
+        "newPeer": "^3.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "25.0.0",
+      "27.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "25.0.0",
+      "28.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "25.0.0",
+      "29.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "25.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "25.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^2.11.2",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "26.0.0",
+      "27.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "26.0.0",
+      "28.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "26.0.0",
+      "29.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "26.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "jsdom27-virtual-console",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "26.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^3.0.0",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "27.0.0",
+      "28.0.0"
+    ],
+    "result": [
+      "jsdom28-resource-options",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "27.0.0",
+      "29.0.0"
+    ],
+    "result": [
+      "jsdom28-resource-options",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "27.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "jsdom28-resource-options",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "27.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^3.0.0",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "28.0.0",
+      "29.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "22.12.0",
+        "oldRange": "^20.19.0 || ^22.12.0 || >=24.0.0",
+        "newRange": "^20.19.0 || ^22.13.0 || >=24.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "28.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "20.19.0",
+        "oldRange": "^20.19.0 || ^22.12.0 || >=24.0.0",
+        "newRange": "^22.22.2 || ^24.15.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "28.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^3.0.0",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "29.0.0",
+      "30.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "20.19.0",
+        "oldRange": "^20.19.0 || ^22.13.0 || >=24.0.0",
+        "newRange": "^22.22.2 || ^24.15.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "29.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^3.0.0",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p18",
+      "jsdom",
+      "30.0.0",
+      "31.0.0"
+    ],
+    "result": [
+      "jsdom31-canvas-backend",
+      {
+        "canvas": "^3.2.3",
+        "native": "^1.0.13"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p19",
+      "vitest",
+      "1.0.0",
+      "2.0.0"
+    ],
+    "result": [
+      "vitest2-pool-default",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "p19",
+      "vitest",
+      "1.0.0",
+      "3.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "21.7.3",
+        "oldRange": "^18.0.0 || >=20.0.0",
+        "newRange": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p19",
+      "vitest",
+      "1.0.0",
+      "4.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": "^18.0.0 || >=20.0.0",
+        "newRange": "^20.0.0 || ^22.0.0 || >=24.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p19",
+      "vitest",
+      "1.0.0",
+      "5.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "18.20.8",
+        "oldRange": "^18.0.0 || >=20.0.0",
+        "newRange": "^22.12.0 || ^24.0.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "p19",
+      "vitest",
+      "2.0.0",
+      "3.0.0"
+    ],
+    "result": [
+      "node-engine-floor",
+      {
+        "held": "21.7.3",
+        "oldRange": "^18.0.0 || >=20.0.0",
+        "newRange": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      }
+    ]
+  }
+]

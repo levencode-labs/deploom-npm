@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-commander",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-12-0-0": "npm:commander@12.0.0",
+    "v-13-0-0": "npm:commander@13.0.0",
+    "v-14-0-0": "npm:commander@14.0.0",
+    "v-15-0-0": "npm:commander@15.0.0"
+  }
+}
