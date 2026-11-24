@@ -1,8 +1,8 @@
 # Knowledge Cache v2 fixture review
 
-Snapshot date is 2026-11-24. This review covers 26 draft recipes from 26 public repositories and 20 distinct npm package names. Each row links to the pinned upstream example, the exact fixture receipt and the two green workflows on that PR head.
+Snapshot date is 2026-11-24. This review covers 29 draft recipes from 29 public repositories and 22 distinct npm package names. Each row links to the pinned upstream example, the exact fixture receipt and the two green workflows on that PR head.
 
-The earlier research corpus includes 80 pinned projects and 69 reports with verified hashes. Its index contains 257 entries with mixed evidence. The table covers the 26 entries reproduced and proposed for review in this round.
+The earlier research corpus includes 80 pinned projects and 69 reports with verified hashes. Its index contains 257 entries with mixed evidence. The table covers the 29 entries reproduced and proposed for review in this round.
 
 ## Verified draft recipes
 
@@ -34,6 +34,9 @@ The earlier research corpus includes 80 pinned projects and 69 reports with veri
 | [#83](https://github.com/levencode-labs/deploom-npm/pull/83) | [ugurkocde/AwesomeIntune](https://github.com/ugurkocde/AwesomeIntune/commit/c980a77e4863578f3a26281d9c20505bc43b1e01) | `zod` `3.25.76` → `4.6.7` | `ZodError.issues` preserves a validation response | [test](https://github.com/levencode-labs/deploom-npm/blob/dd7700a238bfea13de97c284c7f630adb060ead8/fixtures/zod4-error-issues/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45364426616) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45364426906) |
 | [#84](https://github.com/levencode-labs/deploom-npm/pull/84) | [orlandovallejos/movie-mates](https://github.com/orlandovallejos/movie-mates/commit/677eadc753bbfe2cd3000837e07c6624176cf247) | `axios` `0.23.0` → `1.21.0` | AxiosHeaders preserves caller headers | [typecheck](https://github.com/levencode-labs/deploom-npm/blob/0a8a55c73ecc6d92096680ef92e44ba7b6a4f406/fixtures/axios1-interceptor-headers/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45365433974) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45365433952) |
 | [#85](https://github.com/levencode-labs/deploom-npm/pull/85) | [Availity/availity-react](https://github.com/Availity/availity-react/commit/a24b615cb063fffea8738a537d0efd4f91b2a1da) | `@tanstack/react-query` `4.36.1` → `5.75.5` | Object calls preserve the rendered data and query key | [test](https://github.com/levencode-labs/deploom-npm/blob/94c941ae750d796423cd4287a1c10f6c7aca85b9/fixtures/tanstack-query5-object-signatures/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45365445813) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45365446003) |
+| [#87](https://github.com/levencode-labs/deploom-npm/pull/87) | [remix-run/react-router](https://github.com/remix-run/react-router/blob/c662ca366a414bf42624dd6cd20a7c414b2602e3/packages/react-router/__tests__/useResolvedPath-test.tsx) | `react-router-dom` `6.30.3` → `7.18.4` | Nested splat preserves the relative sibling link | [test](https://github.com/levencode-labs/deploom-npm/blob/d566a0588bf9c1cdaf55d522c3b054209bbdedfa/fixtures/react-router7-relative-splat/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45367194757) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45367195333) |
+| [#88](https://github.com/levencode-labs/deploom-npm/pull/88) | [capitalism-killed-software/localcontacts](https://github.com/capitalism-killed-software/localcontacts/commit/497d0f8390a3fc357d10bb5fb42abe3cc6014e54) | `next` `14.2.18` → `16.4.2` | Awaited inputs restore the deep link and query mode | [test](https://github.com/levencode-labs/deploom-npm/blob/6d2a1873aca38a8aa780e9b500c03e1a38165025/fixtures/next16-async-route-params/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45367719732) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45367719186) |
+| [#89](https://github.com/levencode-labs/deploom-npm/pull/89) | [vitejs/vite](https://github.com/vitejs/vite/blob/cf50e548d4ae7f6ed9ade507d70acbd39b4e0b93/packages/create-vite/template-svelte/src/main.js) | `svelte` `4.2.18` → `5.0.0` | Mount preserves props and teardown | [test](https://github.com/levencode-labs/deploom-npm/blob/2150f5e1546f559e134934f72649c86f92bbe9cd/fixtures/svelte5-client-mount/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45367733310) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45367733263) |
 
 ## MCP and publication
 
@@ -46,6 +49,6 @@ The Vite example verified a version decision. Its exact old Vue plugin blocked t
 ## Coverage limits
 
 - Each fixture's README describes the public source pattern, local commands and limits of the reproduction. Complete application migrations and measured agent time or token savings are outside these results.
-- The configured registry returned HTTP 404 for the Svelte and graphql-ws tarballs selected during research. Those cases remain candidates.
+- The selected Svelte 3 and graphql-ws tarballs returned HTTP 404 in the configured registry. The separately verified Svelte 4 to 5 entry covers the client mount.
 - Prisma used the official WASM validators pinned by the two releases and the matching loader. The local native CLI bootstrap returned HTTP 403 while fetching the engine checksum.
 - Fixtures and plan checks used public examples and no paid API sessions. The publication gate remains with the maintainers.
