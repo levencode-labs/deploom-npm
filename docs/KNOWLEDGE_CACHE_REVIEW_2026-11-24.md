@@ -1,8 +1,8 @@
 # Knowledge Cache v2 fixture review
 
-Snapshot date is 2026-11-24. This review covers 61 draft recipes from 61 public repositories and 54 distinct npm package names. Each row links to the pinned upstream example, the exact fixture receipt and the two green workflows on that PR head.
+Snapshot date is 2026-11-24. This review covers 62 draft recipes from 62 public repositories and 54 distinct npm package names. Each row links to the pinned upstream example, the exact fixture receipt and the two green workflows on that PR head.
 
-The earlier research corpus includes 80 pinned projects and 69 reports with verified hashes. Its index contains 257 entries with mixed evidence. The table covers the 61 entries reproduced and proposed for review in this round.
+The earlier research corpus includes 80 pinned projects and 69 reports with verified hashes. Its index contains 257 entries with mixed evidence. The table covers the 62 entries reproduced and proposed for review in this round.
 
 ## Verified draft recipes
 
@@ -69,12 +69,13 @@ The earlier research corpus includes 80 pinned projects and 69 reports with veri
 | [#119](https://github.com/levencode-labs/deploom-npm/pull/119) | [eliaslecomte/portdebruges.eu](https://github.com/eliaslecomte/portdebruges.eu/commit/328b9d49cff70d07445e58927ac05820a4b64b63) | `date-fns-tz` `2.0.0` → `3.2.0` | Renamed helper preserves wall time at both clock changes | [test](https://github.com/levencode-labs/deploom-npm/blob/63e5e2809286e8de862ad9712fb1ba1ab1d3b60d/fixtures/date-fns-tz3-wall-time/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45392671495) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45392671310) |
 | [#120](https://github.com/levencode-labs/deploom-npm/pull/120) | [jdlennoxs/radiofy](https://github.com/jdlennoxs/radiofy/commit/f7beca66e445113edb61adcc9feed7a5212d4f04) | `@trpc/client` `10.45.4` → `11.19.0` | HTTP link restores the Date and exact timestamp | [test](https://github.com/levencode-labs/deploom-npm/blob/eb797d42de1a48aa8d543684e58b7fda00174cde/fixtures/trpc11-link-transformer/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45394132973) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45394133004) |
 | [#121](https://github.com/levencode-labs/deploom-npm/pull/121) | [strapi/sdk-plugin](https://github.com/strapi/sdk-plugin/commit/938189b99d313bc93b131a66c0cc745f7a87944a) | `chalk` `4.1.2` → `5.6.2` | Dynamic import preserves plain and ANSI output | [test](https://github.com/levencode-labs/deploom-npm/blob/b6c0615890d2c6964cba255dbcb2f88fced7f667/fixtures/chalk5-commonjs-loader/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45394144348) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45394144337) |
+| [#122](https://github.com/levencode-labs/deploom-npm/pull/122) | [SimonAlling/userscripter](https://github.com/SimonAlling/userscripter/commit/4b5e36f905703648f846e128196f6e255eaec963) | `jest` `27.5.1` → `28.1.3` | Explicit jsdom environment restores the same DOM test | [test](https://github.com/levencode-labs/deploom-npm/blob/2150a555f758ed474d9c8f791aa6ae1c5d426394/fixtures/jest28-explicit-jsdom/evidence.json) | [Data](https://github.com/levencode-labs/deploom-npm/actions/runs/45397363921) · [Scan](https://github.com/levencode-labs/deploom-npm/actions/runs/45397363735) |
 
 ## MCP and publication
 
 The installed MCP 0.2.32 was checked with locally test-signed snapshots. Each listed exact transition was found offline and appeared in `get_upgrade_plan` when tested on its own with zero plan HTTP transactions. The wrong-package-manager and empty-snapshot controls were exercised. The recipes wait for maintainer review and the [existing Cache v2 publication process](KNOWLEDGE_CACHE_V2.md).
 
-The [machine-readable review bundle](../knowledge/review/cache-v2-candidates-2026-11-24.json) contains all 61 v2 records with their pinned Git receipts. The installed reader found all 61 exact records in the same locally test-signed snapshot. All 57 distinct exact requests returned matching advice in `get_upgrade_plan` with zero HTTP transactions. The compact response omitted four additional exact matches and four major-line candidates across the 57 requests. For the TypeScript 5.9.2 → 6.0.3 example, `get_shared_migration_knowledge_batch` returned all three exact records while the plan showed one. See the [TypeScript replay receipt](https://github.com/levencode-labs/deploom-npm/pull/75).
+The [machine-readable review bundle](../knowledge/review/cache-v2-candidates-2026-11-24.json) contains all 62 v2 records with their pinned Git receipts. The installed reader found all 62 exact records in the same locally test-signed snapshot. All 58 distinct exact requests returned matching advice in `get_upgrade_plan` with zero HTTP transactions. The compact response omitted four additional exact matches and four major-line candidates across the 58 requests. For the TypeScript 5.9.2 → 6.0.3 example, `get_shared_migration_knowledge_batch` returned all three exact records while the plan showed one. See the [TypeScript replay receipt](https://github.com/levencode-labs/deploom-npm/pull/75).
 
 The producer's fixture check passed against each exact fixture head with the public registry check stubbed for the offline proof. Its trusted-main gate rejected every draft. Admission still requires maintainer review, trusted fixture ancestry and the publisher's public registry checks.
 
@@ -86,22 +87,7 @@ The date-fns-tz example verified a dependency-group decision. The target 3.2.0 p
 
 ## Frontend project discovery
 
-The expanded research target is 150 public frontend application or website repositories with at least one confirmed manifest. [GitHub Topics](https://github.com/topics/frontend) and [repository search](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) provide the discovery list. Search per frontend framework and use stars for ordering. A starting query is `topic:vue stars:>=1000 archived:false fork:false`. Keep a mix of frameworks and project sizes as the sample grows.
-
-Confirm each candidate by reading its root or workspace `package.json` at a pinned commit. Record the repository, commit, path, dependency name, section and declared range. Deduplicate by repository and retain separate workspace manifests where they establish distinct adoption. Use the associated lockfile or pinned manifest versions when choosing an exact transition for a reproducible recipe.
-
-[Ecosyste.ms Repos](https://repos.ecosyste.ms/docs/index.html) documents a reverse dependency repository index and a manifest lookup. The runner's network proxy blocked both the live Ecosyste.ms index probe and direct GitHub REST search. GitHub topic pages and connected manifest reads worked. Manifest reads verified the initial seven repositories and eight manifests below. These candidates are tracked separately from the verified migration recipes.
-
-| Project | Pinned manifest | Direct declaration |
-| --- | --- | --- |
-| excalidraw/excalidraw | [`excalidraw-app/package.json`](https://github.com/excalidraw/excalidraw/blob/542ad76fa6968b370a48de4ed2491a5b308cdbc0/excalidraw-app/package.json) | `dependencies.react` = `19.0.0` |
-| formbricks/formbricks | [`apps/web/package.json`](https://github.com/formbricks/formbricks/blob/2592398cd9d2d23d93e8c6d5e76a65d059165a08/apps/web/package.json) | `dependencies.next` = `16.4.5` |
-| hoppscotch/hoppscotch | [`packages/hoppscotch-common/package.json`](https://github.com/hoppscotch/hoppscotch/blob/6177eae1875ea4cc8fc46604d65bf85478912d85/packages/hoppscotch-common/package.json) | `dependencies.vue` = `3.5.41` |
-| hoppscotch/hoppscotch | [`packages/hoppscotch-selfhost-web/package.json`](https://github.com/hoppscotch/hoppscotch/blob/6177eae1875ea4cc8fc46604d65bf85478912d85/packages/hoppscotch-selfhost-web/package.json) | `dependencies.vue` = `3.5.41` |
-| thingsboard/thingsboard | [`ui-ngx/package.json`](https://github.com/thingsboard/thingsboard/blob/d39bcf650ed7aefd84267b7ec452b743cb7a3def/ui-ngx/package.json) | `dependencies.@angular/core` = `20.3.34` |
-| immich-app/immich | [`web/package.json`](https://github.com/immich-app/immich/blob/ba6213bcfca32b73c58d3424043174fec64f52bf/web/package.json) | `devDependencies.@sveltejs/kit` = `^3.0.0` |
-| nuxt/nuxt.com | [`package.json`](https://github.com/nuxt/nuxt.com/blob/93e13005a1fc8a76b9371c149cfabd57fa756a46/package.json) | `dependencies.nuxt` = `^4.6.4` |
-| withastro/docs | [`package.json`](https://github.com/withastro/docs/blob/eeead30f4417db26e329ba6c15034eae514c3b47/package.json) | `devDependencies.astro` = `^7.4.2` |
+The [frontend project index](FRONTEND_PROJECT_INDEX.md) contains 30 distinct public repositories and 31 verified manifests. Its working target is 150 repositories. The index records workspace declarations and any catalog indirection separately from the reproduced migration recipes. See also the [React UI release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md).
 
 ## Coverage limits
 

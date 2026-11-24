@@ -2880,6 +2880,53 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "jest28-explicit-jsdom",
+      "kind": "breaking-change",
+      "package": "jest",
+      "fromMajor": 27,
+      "toMajor": 28,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "27.5.1",
+          "to": "28.1.3"
+        }
+      ],
+      "title": "Declare jest-environment-jsdom for Jest 28 DOM tests",
+      "summary": "Jest 28 no longer brings the jsdom environment into the tested installation. The matching direct environment dependency restores test initialization.",
+      "conditions": [
+        "The project uses testEnvironment: jsdom or a jsdom environment annotation."
+      ],
+      "actions": [
+        "Add a compatible jest-environment-jsdom development dependency alongside the Jest update.",
+        "Keep the project environment selection and review test transformers separately."
+      ],
+      "verification": [
+        "Run a representative DOM test and check that the jsdom environment initializes."
+      ],
+      "negativeControls": [
+        {
+          "name": "jest28-install-without-jsdom-fails-environment-selection",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.output, /Test environment jest-environment-jsdom cannot be found/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/2150a555f758ed474d9c8f791aa6ae1c5d426394/fixtures/jest28-explicit-jsdom/check.cjs",
+        "fixtureSha256": "a59df3e912cfdbeedd404d51d1abb26edfd5fde8d1ac0db788e3ce8378d78ae5",
+        "claim": {
+          "package": "jest",
+          "from": "27.5.1",
+          "to": "28.1.3",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
