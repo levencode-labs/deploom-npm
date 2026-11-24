@@ -4,7 +4,7 @@ The public [Kontur UI repository](https://github.com/skbkontur/retail-ui) publis
 
 ## Release evidence
 
-The pinned [public changelog](https://github.com/skbkontur/retail-ui/blob/d8b87adc82a1fcb7f717c55f05d911815ae70ee5/packages/react-ui/CHANGELOG.md) contains 321 distinct stable version headings from 0.18.12 through 6.5.7. The counts describe that file at the pinned commit. Build the release inventory from version tags and the associated package manifests as well as the changelog. Earlier releases require their own source evidence.
+The pinned [public changelog](https://github.com/skbkontur/retail-ui/blob/d8b87adc82a1fcb7f717c55f05d911815ae70ee5/packages/react-ui/CHANGELOG.md) contains 321 distinct stable version headings from 0.18.12 through 6.5.7. The counts describe that file at the pinned commit. Build the release inventory from version tags and the associated package manifests as well as the changelog. Earlier releases require their own source evidence. The [public release index](REACT_UI_PUBLIC_RELEASE_INDEX.md) links every changelog entry and preserves its listed comparison base.
 
 | Major line | Stable headings | Explicit BREAKING CHANGES sections |
 | --- | ---: | ---: |
@@ -26,7 +26,8 @@ The [codemod package manifest](https://github.com/skbkontur/retail-ui/blob/d8b87
 - 4.0 `label` to `caption` and theme variable renames.
 - 5.0 and 6.0 theme variable renames.
 
-Pin the transform version and test it against a matching code sample and an unchanged control before recommending it. The current inventory establishes the upstream documentation and source locations. Fixture verification is pending.
+Pin the transform version and test it against a matching code sample and an unchanged control before recommending it. The [6.0 theme transform source](https://github.com/skbkontur/retail-ui/blob/d8b87adc82a1fcb7f717c55f05d911815ae70ee5/packages/react-ui-codemod/react-ui-6.0/renameThemeVars.ts) matches identifier names inside object expressions. An unrelated object with a matching name can also change. Scope the transform to confirmed theme files and review its diff, including keys, shorthand properties and variable references.
+A local TSX transform check with [`react-ui-codemod@2.2.0`](https://www.npmjs.com/package/react-ui-codemod/v/2.2.0) and `jscodeshift@0.15.2` covered five synthetic inputs. It renamed the unquoted key `tooltipPaddingY` in theme and unrelated objects. It also renamed an unrelated shorthand reference, left a quoted key and a nonmatching name intact, and made no further changes on three reruns. Review quoted theme keys separately and inspect matching identifiers in the patch. This check ran the pinned transform in isolation. The React UI package transition still needs its own fixture.
 
 ## First version-specific checks
 
