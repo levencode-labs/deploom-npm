@@ -1935,6 +1935,105 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "apollo4-react-entrypoints",
+      "kind": "breaking-change",
+      "package": "@apollo/client",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.9.5",
+          "to": "4.2.10"
+        }
+      ],
+      "title": "Move Apollo Client 4 React bindings out of the root import",
+      "summary": "Root React imports fail to render on Apollo Client 4. The React entry point restores the fixture's cache-only markup.",
+      "conditions": [
+        "A React component imports ApolloProvider or useQuery from the @apollo/client root."
+      ],
+      "actions": [
+        "Move React imports to @apollo/client/react and keep ApolloClient, InMemoryCache and gql at the root.",
+        "Satisfy the target version's RxJS peer requirement and verify other changed entry points separately."
+      ],
+      "verification": [
+        "Render a representative query and check data and loading behavior. Include a cache-only test for SSR where applicable."
+      ],
+      "negativeControls": [
+        {
+          "name": "root-react-import-breaks-render",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /Element type is invalid/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/5c14339de73b463e2fff04b7346bb32827dcfab6/fixtures/apollo4-react-entrypoints/check.cjs",
+        "fixtureSha256": "dd6febfdbe53825ac5a0deab7f48aa8e7fae7b3b9ba966bfc9baf7ae5c96855b",
+        "claim": {
+          "package": "@apollo/client",
+          "from": "3.9.5",
+          "to": "4.2.10",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "mui7-grid-responsive-size",
+      "kind": "breaking-change",
+      "package": "@mui/material",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.5.0",
+          "to": "7.3.11"
+        }
+      ],
+      "title": "Use Material UI 7 Grid and retain responsive sizes",
+      "summary": "The v6 Grid2 entry point fails on v7. The new Grid with a responsive size object preserves the expected width rules.",
+      "conditions": [
+        "A project imports the v6 Grid2 entry point or sends legacy item and breakpoint props to the v7 Grid."
+      ],
+      "actions": [
+        "Import the v7 component from @mui/material/Grid. Keep an existing size object or convert legacy xs and sm props to it.",
+        "Check the owning layout's spacing and custom breakpoints."
+      ],
+      "verification": [
+        "Check width at the base breakpoint and at sm, along with the rendered content."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-grid2-path-not-resolved",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /Cannot find module.*Grid2|ERR_PACKAGE_PATH_NOT_EXPORTED/s)"
+        },
+        {
+          "name": "legacy-grid-props-omit-responsive-width",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(sizes(unconverted.stdout), { base: false, tablet: false })"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/e474fa7bb8219ff536a2290f2034c2710f2004e2/fixtures/mui7-grid-responsive-size/check.cjs",
+        "fixtureSha256": "4b512732ff5082043234ad9cccbdc9cf8dcb8237dd6b8ff9652c4badb8fccbca",
+        "claim": {
+          "package": "@mui/material",
+          "from": "6.5.0",
+          "to": "7.3.11",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
