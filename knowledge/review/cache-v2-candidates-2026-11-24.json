@@ -2692,6 +2692,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "faker9-bounded-integers",
+      "kind": "breaking-change",
+      "package": "@faker-js/faker",
+      "fromMajor": 7,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.6.0",
+          "to": "9.8.0"
+        }
+      ],
+      "title": "Use Faker number.int for bounded integer data",
+      "summary": "Faker 9 removes datatype.number. number.int preserves the tested bounds and within-version seed repeatability. The seeded sequence changes across the pinned releases.",
+      "conditions": [
+        "The project uses faker.datatype.number with explicit bounds to generate integer data."
+      ],
+      "actions": [
+        "Use faker.number.int with the same integer bounds.",
+        "Review tests or snapshots that depend on exact seeded values across versions."
+      ],
+      "verification": [
+        "Check bounds, integer output and repeatability after resetting the seed on the target version."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-faker-datatype-number-is-removed",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => legacyDraw(after), /datatype.number is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/4d8ef2576be64d438991e6b0c609e5cfe37b4d03/fixtures/faker9-bounded-integers/check.cjs",
+        "fixtureSha256": "2c0c154e63a785aba052a78fc7b9956c26bdb94c3fddffca76a653a4876e223b",
+        "claim": {
+          "package": "@faker-js/faker",
+          "from": "7.6.0",
+          "to": "9.8.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "date-fns-tz3-wall-time",
+      "kind": "breaking-change",
+      "package": "date-fns-tz",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.2.0"
+        }
+      ],
+      "title": "Use toZonedTime for date-fns-tz 3 display conversion",
+      "summary": "date-fns-tz 3 removes utcToZonedTime. toZonedTime preserves the tested local display values around daylight-saving boundaries.",
+      "conditions": [
+        "The project uses utcToZonedTime to render UTC instants as local wall time."
+      ],
+      "actions": [
+        "Rename the import and call to toZonedTime. If date-fns is still 2.x, include a compatible 3.x or 4.x peer in the upgrade.",
+        "Keep the original instant for ordering or identity when local times can repeat."
+      ],
+      "verification": [
+        "Compare local display values around both daylight-saving transitions in the affected time zone."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-date-fns-tz-function-is-removed",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(legacyCall, /utcToZonedTime is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/63e5e2809286e8de862ad9712fb1ba1ab1d3b60d/fixtures/date-fns-tz3-wall-time/check.cjs",
+        "fixtureSha256": "6da1f3e377b99b45d9095336611679a5ec7f14546dadb699da92e843850621bc",
+        "claim": {
+          "package": "date-fns-tz",
+          "from": "2.0.0",
+          "to": "3.2.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
