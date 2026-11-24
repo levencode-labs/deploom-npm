@@ -27,6 +27,11 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Check recursive ESLint ignores in flat config
+        working-directory: fixtures/eslint9-recursive-ignore
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
