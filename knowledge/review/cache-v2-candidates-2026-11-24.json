@@ -2128,6 +2128,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "glob10-promise-workspace-match",
+      "kind": "breaking-change",
+      "package": "glob",
+      "fromMajor": 7,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.2.3",
+          "to": "10.5.0"
+        }
+      ],
+      "title": "Await the named glob export for workspace matching",
+      "summary": "glob 10 uses a named Promise API. The old CommonJS module call fails, and passing a callback to the named export does not process the result. On Windows, the default result uses backslashes where v7 emitted slashes.",
+      "conditions": [
+        "A CommonJS script calls require('glob') as a function and handles file matches in a callback."
+      ],
+      "actions": [
+        "Destructure glob from require('glob'), await glob(pattern, options), and propagate matching errors to the existing handler.",
+        "Keep async error handling. If downstream consumers require slash-delimited paths, pass posix: true and check the returned spelling."
+      ],
+      "verification": [
+        "Compare the selected workspace files including nested matches and excluded paths."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-commonjs-call-fails-on-target",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => target(pattern, { cwd }, () => {}), /target is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/e4b8d528894e83a4697174fe7125159d9c5bae26/fixtures/glob10-promise-workspace-match/check.cjs",
+        "fixtureSha256": "04ce535ef9aed5f03460db39b07f5a34551a786a280f8bebf652e35931a9cdc4",
+        "claim": {
+          "package": "glob",
+          "from": "7.2.3",
+          "to": "10.5.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "redis4-explicit-connect",
+      "kind": "breaking-change",
+      "package": "redis",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.1.2",
+          "to": "4.7.1"
+        }
+      ],
+      "title": "Await Redis 4 connection before running commands",
+      "summary": "The old client connects during creation. The v4 client rejects commands before connect(). Awaiting the connection restores the initial PING.",
+      "conditions": [
+        "Server startup calls createClient() and relies on implicit connection before issuing Redis commands."
+      ],
+      "actions": [
+        "Register connection error handling and await client.connect() before the application issues Promise-based commands.",
+        "Review client configuration and verify connection failure and shutdown with the actual Redis service."
+      ],
+      "verification": [
+        "Start the affected code path and confirm Redis reaches readiness and PING returns PONG."
+      ],
+      "negativeControls": [
+        {
+          "name": "v4-rejects-command-before-connect",
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(client.ping(), { name: 'Error', message: 'The client is closed' })"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/44dc5c588c9f33b6e256f84e7100458eb80b4caa/fixtures/redis4-explicit-connect/check.cjs",
+        "fixtureSha256": "d4dd6de6378b13823db6f4beb189f4bcb8a0c16b86470944c03a16f91fe2df03",
+        "claim": {
+          "package": "redis",
+          "from": "3.1.2",
+          "to": "4.7.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
