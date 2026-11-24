@@ -6,11 +6,28 @@
 
 **Install the DepLoom MCP server and upgrade Skill on Windows, Linux, and macOS.**
 
-[Windows setup](#windows-installer) · [Linux and macOS](#linux-and-macos) · [Offline setup](#offline-setup) · [Public data](#public-data) · [Releases](https://github.com/levencode-labs/deploom-npm/releases?q=npm-v) · [Levencode Labs](https://github.com/levencode-labs)
+[Quick start](#quick-start) · [Windows setup](#windows-installer) · [Linux and macOS](#linux-and-macos) · [Offline setup](#offline-setup) · [Public data](#public-data) · [Releases](https://github.com/levencode-labs/deploom-npm/releases?q=npm-v) · [Levencode Labs](https://github.com/levencode-labs)
 
 </div>
 
-Use one package with Codex, Claude Code, or OpenCode. It includes the [MCP server and Skill](https://github.com/levencode-labs/deploom-mcp), the pinned [planning engine](https://github.com/levencode-labs/deploom-core), and an embedded Python runtime. The project also publishes a shared index of npm security advisories.
+DepLoom helps a coding agent upgrade npm dependencies. The MCP server produces a plan with exact versions and compatibility constraints. The upgrade Skill guides the agent through the changes and project checks.
+
+## Quick start
+
+1. Use Node.js 22 or later with npm. Run this from a terminal for Codex, or replace `codex` with `claude` or `opencode`.
+
+   ```sh
+   npm exec --yes --package=@levencode/deploom -- deploom setup codex
+   ```
+
+   In Windows PowerShell, use `npm.cmd` if the PowerShell shim is blocked. See the [platform details](#windows-installer) and [offline setup](#offline-setup).
+2. Restart your agent and open a branch of an npm project with Vite and a `package-lock.json`. Send this request.
+
+> Use the deploom-upgrade skill. Plan an upgrade of vite to the latest compatible patch in its current minor line. Show the exact versions, files and checks. Keep the project unchanged while planning.
+
+When the scope is right, ask the agent to apply the agreed blueprint in your branch, verify the installation and peer dependencies, and run the project's usual checks. Review the manifest and lockfile diff, the installed version and the check results. Optionally ask for a vulnerability audit with unknown coverage called out.
+
+[Version history](https://github.com/levencode-labs/deploom-npm/releases?q=npm-v)
 
 ## Windows installer
 
@@ -83,22 +100,6 @@ deploom diagnose-coverage path/to/result.json
 
 To replay older rows, pass `--snapshot-dir path/to/osv` explicitly and supply the original host scope and public-name settings. The command checks the snapshot identity against the saved run. Add `--inventory path/to/canonical-yarn-inventory.json` to count identical package–version pairs in the saved Yarn inventory, or `--focus package-name` to show reasons for one dependency. The command runs locally using the installed runtime for that CLI version.
 
-## Release checks
-
-The Windows CI workflow builds a development wheel from the pinned public sources, verifies the CPython archive and every wheel against the lock file, and checks the actual npm tarball. The release workflow pins the official MCP wheel in `ci/mcp-release.json`, tests the packed bytes on Windows, and publishes the same archive to npm using the `latest` tag for stable versions and `next` for prereleases with GitHub OIDC. A second Windows runner checks the npm download and the exact-version install before the GitHub release publishes `upstream.json` and the tarball for downstream import. To run the installation test on Windows with the three clients on PATH, use `ci/test-install.ps1 -Tarball <archive> -Work <new-directory>`.
-
-Semgrep scans the installer and exact Core and MCP revisions. Trivy scans the four unpacked runtimes and checks that it recognized the installed Python and npm package versions. High or critical findings and unreviewed security rules block publication. The source report also lists variable subprocess calls for audit.
-
-## Public data
-
-Run `python cache/build_osv.py build/osv` with Python 3.12 or newer to create an index from the public npm ecosystem export. The output includes the compressed SQLite database and its versioned manifest. Run `python -m unittest discover -s cache` for the synthetic export test.
-
-### Local-only cache
-
-Set `DEPLOOM_MCP_LOCAL_CACHE_ONLY=1` in the MCP server's environment and restart the client. DepLoom reads its verified local records or the bundled examples and skips GitHub cache updates, including manual refresh in a CLI with the same environment. Offline OSV coverage depends on the local edition and its expiry. Package installation and registry operations requested by a planning tool have separate network requirements.
-
-If the OSV snapshot has a coverage gap, the planner can send a package name and exact version to npm's Bulk Advisory endpoint only after verifying the version against anonymous public npm metadata. A completed zero-finding assessment needs no second query. Set `DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK=0` to disable those public advisory requests.
-
 ## Collective migration knowledge
 
 DepLoom uses a **maintainer-controlled, signed, sharded v2 knowledge base** built
@@ -115,6 +116,22 @@ but it is not the knowledge corpus developed by the factory. The signing
 private key remains in the protected publisher environment, never in agents.
 
 The [v2 protocol](docs/KNOWLEDGE_CACHE_V2.md) describes the signed index, the shards, and how MCP verifies them.
+
+## Public data
+
+Run `python cache/build_osv.py build/osv` with Python 3.12 or newer to create an index from the public npm ecosystem export. The output includes the compressed SQLite database and its versioned manifest. Run `python -m unittest discover -s cache` for the synthetic export test.
+
+### Disable shared cache updates
+
+Set `DEPLOOM_MCP_LOCAL_CACHE_ONLY=1` in the MCP server's environment and restart the client. DepLoom reads its verified local records or the bundled examples and skips GitHub cache updates, including manual refresh in a CLI with the same environment. Offline OSV coverage depends on the local edition and its expiry. Package installation and registry operations requested by a planning tool have separate network requirements.
+
+If the OSV snapshot has a coverage gap, the planner can send a package name and exact version to npm's Bulk Advisory endpoint only after verifying the version against anonymous public npm metadata. A completed zero-finding assessment needs no second query. Set `DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK=0` to disable those public advisory requests.
+
+## Release checks
+
+The Windows CI workflow builds a development wheel from the pinned public sources, verifies the CPython archive and every wheel against the lock file, and checks the actual npm tarball. The release workflow pins the official MCP wheel in `ci/mcp-release.json`, tests the packed bytes on Windows, and publishes the same archive to npm using the `latest` tag for stable versions and `next` for prereleases with GitHub OIDC. A second Windows runner checks the npm download and the exact-version install before the GitHub release publishes `upstream.json` and the tarball for downstream import. To run the installation test on Windows with the three clients on PATH, use `ci/test-install.ps1 -Tarball <archive> -Work <new-directory>`.
+
+Semgrep scans the installer and exact Core and MCP revisions. Trivy scans the four unpacked runtimes and checks that it recognized the installed Python and npm package versions. High or critical findings and unreviewed security rules block publication. The source report also lists variable subprocess calls for audit.
 
 ## License
 
