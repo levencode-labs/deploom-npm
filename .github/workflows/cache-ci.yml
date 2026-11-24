@@ -27,6 +27,11 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Verify Ember 7 explicit test helpers
+        working-directory: fixtures/ember7-test-helpers
+        run: |
+          npm pack ember-source@6.10.1 ember-source@7.2.0 typescript@6.0.3 @ember/test-helpers@5.4.3 --ignore-scripts
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
