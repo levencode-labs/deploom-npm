@@ -17,6 +17,12 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - name: Verify Yup 1 conditional schema branches
+        working-directory: fixtures/yup1-conditional-branches
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
