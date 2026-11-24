@@ -2034,6 +2034,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "commander7-options",
+      "kind": "breaking-change",
+      "package": "commander",
+      "fromMajor": 4,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.1.1",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Read parsed Commander options with opts()",
+      "summary": "Commander 7's default storage no longer exposes parsed options as Command properties. opts() preserves explicit flags and defaults across this transition.",
+      "conditions": [
+        "A CLI reads parsed flags directly on its Command instance and relies on default option storage."
+      ],
+      "actions": [
+        "Use program.opts() at the readers of the parsed options.",
+        "The fixture verifies the edit on both pinned versions, so the code migration can be tested before the bump."
+      ],
+      "verification": [
+        "Exercise explicit values, flags and default values with no arguments."
+      ],
+      "negativeControls": [
+        {
+          "name": "default-storage-omits-command-properties",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(parse(after, args, true), { format: undefined, verbose: false })"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/ccf1d5dea99a208f08fc4ef0f5f679415575feda/fixtures/commander7-options/check.cjs",
+        "fixtureSha256": "5a1810d34e97ef58af9097e8d548af33e68355cc7b188f34b0fdbfb581c109b1",
+        "claim": {
+          "package": "commander",
+          "from": "4.1.1",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "sentry8-browser-tracing",
+      "kind": "breaking-change",
+      "package": "@sentry/react",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.120.4",
+          "to": "8.55.2"
+        }
+      ],
+      "title": "Register Sentry BrowserTracing with the v8 factory",
+      "summary": "The legacy tracing entry point is missing when the old package is removed. The Sentry React factory registers BrowserTracing and preserves local event dispatch.",
+      "conditions": [
+        "Sentry initialization imports BrowserTracing via @sentry/tracing and the v8 upgrade removes that dependency."
+      ],
+      "actions": [
+        "Use browserTracingIntegration() from @sentry/react and review the integration options.",
+        "Check the React peer range before the upgrade and verify routing instrumentation and sampling separately."
+      ],
+      "verification": [
+        "Confirm the integration registers and a test event reaches a local transport before using the real service."
+      ],
+      "negativeControls": [
+        {
+          "name": "removed-tracing-package-breaks-held-import",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /Cannot find module '@sentry\\/tracing'/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f19bcbaa7a3a7dd6a8acff86f6b5e05276c29ce0/fixtures/sentry8-browser-tracing/check.cjs",
+        "fixtureSha256": "807b259c5dafe4d6e4ccd5e630a4fb810ee66481186aef229795a89a2b012638",
+        "claim": {
+          "package": "@sentry/react",
+          "from": "7.120.4",
+          "to": "8.55.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
