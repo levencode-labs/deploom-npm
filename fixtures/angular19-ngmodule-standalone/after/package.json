@@ -1,0 +1,13 @@
+{
+  "name": "fixture-angular19-ngmodule-standalone-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@angular/core": "19.2.25",
+    "@angular/compiler": "19.2.25",
+    "@angular/compiler-cli": "19.2.25",
+    "typescript": "5.5.4",
+    "rxjs": "7.8.2",
+    "zone.js": "0.15.1"
+  }
+}

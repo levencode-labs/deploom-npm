@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "4963145484330d54386f813349be35e8a4c24339920b52242e24aa7a6898441e",
+  "claims": [
+    {
+      "package": "@angular/core",
+      "from": "18.2.14",
+      "to": "19.2.25",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
