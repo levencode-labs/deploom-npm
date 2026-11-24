@@ -1,0 +1,8 @@
+{
+  "name": "fixture-marked17-heading-anchors-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "marked": "4.3.0"
+  }
+}
