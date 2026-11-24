@@ -1638,6 +1638,105 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "yup1-conditional-branches",
+      "kind": "breaking-change",
+      "package": "yup",
+      "fromMajor": 0,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "0.29.3",
+          "to": "1.7.1"
+        }
+      ],
+      "title": "Use branch callbacks in Yup 1 conditional schemas",
+      "summary": "Passing schemas directly to then or otherwise fails on Yup 1. Applying callbacks to the incoming schema preserves both conditional presence and the fixture's shared restriction.",
+      "conditions": [
+        "A Yup when() call supplies schema objects directly as then or otherwise."
+      ],
+      "actions": [
+        "Return the intended schema from a callback. Extend the incoming schema to retain its existing validators.",
+        "Preserve any intentionally separate branch constraints when moving them into callbacks."
+      ],
+      "verification": [
+        "Validate both branches, a missing required value and an unsupported present value."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-schema-branch-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.rejects(async () => held.validate(valid), /branch is not a function/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/e311a4efa8610f14d02794d01a33bfece3b68171/fixtures/yup1-conditional-branches/check.cjs",
+        "fixtureSha256": "5a0a047a62d84146e6587a95f576b0feb41b35b7aa5996b5f1be43ca557bc432",
+        "claim": {
+          "package": "yup",
+          "from": "0.29.3",
+          "to": "1.7.1",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "rhf7-register-codemod",
+      "kind": "codemod",
+      "package": "react-hook-form",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.15.4",
+          "to": "7.4.0"
+        }
+      ],
+      "title": "Migrate named React Hook Form inputs with the v7 registration codemod",
+      "summary": "A v6 ref registration call fails on the v7 runtime. The official named-field transform preserves validation and submitted data for the fixture.",
+      "conditions": [
+        "A JSX input has a literal name attribute and a ref registration from a destructured React Hook Form useForm result."
+      ],
+      "actions": [
+        "Apply the official v7/update-register transform from @hookform/codemod 1.0.0 on matching fields.",
+        "Inspect spread-only names, wrapper components and forwarded refs manually."
+      ],
+      "verification": [
+        "Review the codemod source diff for retained names and options. Run required validation and submit a populated form."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-registration-call-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /TypeError: .*\\.split is not a function/)"
+        },
+        {
+          "name": "spread-only-name-not-migrated",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(run('after', spreadResult).status, 1)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/9ff3c2cc6ce6bc19707d99e03ada79dcbf5fc13c/fixtures/rhf7-register-codemod/check.cjs",
+        "fixtureSha256": "aadf3c98aaebf905337cb10bb8a2aa4d4bec152d690b99952f10c94ad3886bd4",
+        "claim": {
+          "package": "react-hook-form",
+          "from": "6.15.4",
+          "to": "7.4.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
