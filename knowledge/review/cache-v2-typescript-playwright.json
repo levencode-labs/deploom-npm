@@ -1,0 +1,465 @@
+{
+  "schema": 2,
+  "records": [
+    {
+      "schema": 2,
+      "id": "typescript54-enum-values",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.3.3",
+          "to": "5.4.2"
+        }
+      ],
+      "title": "Map values between same-named enums",
+      "summary": "TypeScript 5.4 rejects assigning same-named enums when known member values differ.",
+      "conditions": [
+        "Two distinct enum declarations have the same name and member names with different numeric values."
+      ],
+      "actions": [
+        "Translate values explicitly at the boundary and handle every externally supplied value."
+      ],
+      "verification": [
+        "Rerun the owning typecheck and test the mapping for each stable enum value."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "5.3.3",
+          "to": "5.4.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript55-filter-type-predicate",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.4.5",
+          "to": "5.5.2"
+        }
+      ],
+      "title": "Preserve intended writes to a filtered array",
+      "summary": "TypeScript 5.5 narrows filter results for inferred type predicates. A later push of undefined can report TS2345.",
+      "conditions": [
+        "An array filtered for defined values intentionally accepts undefined in later writes."
+      ],
+      "actions": [
+        "Declare the result as the intended wider mutable array. If undefined is unintended, remove the write instead."
+      ],
+      "verification": [
+        "Rerun typecheck and test the code that consumes the mutated result."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "5.4.5",
+          "to": "5.5.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript56-iterator-return",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.5.4",
+          "to": "5.6.2"
+        }
+      ],
+      "title": "Check iterator completion before using value",
+      "summary": "TypeScript 5.6 with strict mode types a built-in iterator's completion value as undefined.",
+      "conditions": [
+        "The owning project enables strictBuiltinIteratorReturn and uses a built-in iterator's next().value without checking done."
+      ],
+      "actions": [
+        "Branch on done and handle an exhausted iterator explicitly before reading value."
+      ],
+      "verification": [
+        "Run typecheck and test both nonempty and exhausted iterators."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "5.5.4",
+          "to": "5.6.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript57-uninitialized-closure",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.6.3",
+          "to": "5.7.2"
+        }
+      ],
+      "title": "Initialize values read by nested functions",
+      "summary": "TypeScript 5.7 diagnoses variables read by a nested function if they are never initialized.",
+      "conditions": [
+        "A nested callback or function reads a strictly typed variable that was declared without an initializer and never assigned."
+      ],
+      "actions": [
+        "Set a valid initial value or move the read after initialization."
+      ],
+      "verification": [
+        "Run the owning typecheck and exercise the callback at its earliest invocation."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "5.6.3",
+          "to": "5.7.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript58-import-attributes",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.7.3",
+          "to": "5.8.2"
+        }
+      ],
+      "title": "Use import attributes for NodeNext JSON imports",
+      "summary": "TypeScript 5.8 reports TS2880 for a static JSON import with an import assertion under NodeNext.",
+      "conditions": [
+        "An ESM file in a NodeNext project uses import ... assert { type: 'json' }."
+      ],
+      "actions": [
+        "Replace assert with with and verify the runtime accepts import attributes."
+      ],
+      "verification": [
+        "Run the owning typecheck and load the emitted module using the target Node version."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "5.7.3",
+          "to": "5.8.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript59-buffer-source",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.8.3",
+          "to": "5.9.2"
+        }
+      ],
+      "title": "Use ArrayBuffer-backed bytes for Blob parts",
+      "summary": "TypeScript 5.9 rejects a Uint8Array<ArrayBufferLike> in a BlobPart position.",
+      "conditions": [
+        "The project types input as Uint8Array and passes it to a DOM API requiring ArrayBuffer-backed bytes."
+      ],
+      "actions": [
+        "Keep the narrower buffer type if guaranteed, or copy the view with new Uint8Array(bytes) before creating the Blob."
+      ],
+      "verification": [
+        "Rerun typecheck and verify that the Blob preserves the incoming byte range."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "5.8.3",
+          "to": "5.9.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "typescript7-baseurl",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.2",
+          "to": "7.0.2"
+        }
+      ],
+      "title": "Replace baseUrl with explicit paths mappings",
+      "summary": "TypeScript 7 rejects baseUrl, and a relative paths mapping resolves the same source module in the fixture.",
+      "conditions": [
+        "An effective tsconfig uses baseUrl for nonrelative imports from the source tree."
+      ],
+      "actions": [
+        "Remove baseUrl and its obsolete ignoreDeprecations override. Add explicit paths prefixes anchored at the owning tsconfig."
+      ],
+      "verification": [
+        "Run typecheck and confirm the bundler or runtime resolves the same aliases."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.notEqual(broken.status, 0,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/typescript-csv-transitions/check.cjs",
+        "fixtureSha256": "67d66a5c4e0fdec54d7c2fa26ce252bfe8cb6f113c0211e2cb20768ed3f84c91",
+        "claim": {
+          "package": "typescript",
+          "from": "6.0.2",
+          "to": "7.0.2",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "playwright152-route-regex",
+      "kind": "breaking-change",
+      "package": "@playwright/test",
+      "fromMajor": 1,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.51.1",
+          "to": "1.52.0"
+        }
+      ],
+      "title": "Replace legacy route glob metacharacters",
+      "summary": "Playwright 1.52 no longer treats ? and bracket classes as wildcards in route URL globs.",
+      "conditions": [
+        "The suite relies on ? or a bracket class as a wildcard in page.route or browserContext.route."
+      ],
+      "actions": [
+        "Replace the affected glob with a scoped RegExp and keep exact host and path constraints."
+      ],
+      "verification": [
+        "Run the route test against a matching URL and a nearby URL that should not be intercepted."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(routeMatches(after, glob, sample), false);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/playwright-api-transitions/check.cjs",
+        "fixtureSha256": "909c8f63518c8d927f2daba03ebbed4f05d09421fb20d607853f1116a82b6b38",
+        "claim": {
+          "package": "@playwright/test",
+          "from": "1.51.1",
+          "to": "1.52.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "playwright-ct-react17-152-route-regex",
+      "kind": "breaking-change",
+      "package": "@playwright/experimental-ct-react17",
+      "fromMajor": 1,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.51.1",
+          "to": "1.52.0"
+        }
+      ],
+      "title": "Replace legacy route glob metacharacters in React CT",
+      "summary": "Playwright React 17 component testing resolves the same 1.52 route matcher, which stops treating ? and [] as wildcards.",
+      "conditions": [
+        "A React 17 component test uses page.route or browserContext.route with these glob metacharacters."
+      ],
+      "actions": [
+        "Replace affected globs with scoped regular expressions."
+      ],
+      "verification": [
+        "Run the component route test with matching and excluded URLs."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(routeMatches(after, glob, sample), false);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/playwright-api-transitions/check.cjs",
+        "fixtureSha256": "909c8f63518c8d927f2daba03ebbed4f05d09421fb20d607853f1116a82b6b38",
+        "claim": {
+          "package": "@playwright/experimental-ct-react17",
+          "from": "1.51.1",
+          "to": "1.52.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "playwright157-accessibility-snapshot",
+      "kind": "breaking-change",
+      "package": "@playwright/test",
+      "fromMajor": 1,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.56.1",
+          "to": "1.57.0"
+        }
+      ],
+      "title": "Replace removed Page accessibility snapshots",
+      "summary": "Playwright 1.57 removes page.accessibility. Locator.ariaSnapshot sends a scoped selector and returns a YAML snapshot.",
+      "conditions": [
+        "The suite calls page.accessibility.snapshot and uses its result to assert the roles and accessible names within a known region."
+      ],
+      "actions": [
+        "Use Locator.ariaSnapshot for the same region and review the new snapshot expectations. Use a rule-based accessibility test for audit intent."
+      ],
+      "verification": [
+        "Rebaseline the owning Playwright snapshot and verify its region, roles, and accessible names in the browser."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-previous-usage",
+          "expected": "reject",
+          "fixtureAssertion": "assert.doesNotMatch(newApi,"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/62b0c9eee41f4a80901b393fa7fd8a53bfe78e6c/fixtures/playwright-api-transitions/check.cjs",
+        "fixtureSha256": "909c8f63518c8d927f2daba03ebbed4f05d09421fb20d607853f1116a82b6b38",
+        "claim": {
+          "package": "@playwright/test",
+          "from": "1.56.1",
+          "to": "1.57.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "deploom-csv-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "pw-before": "npm:@playwright/test@1.51.1",
+    "pw-after": "npm:@playwright/test@1.52.0",
+    "pw-156": "npm:@playwright/test@1.56.1",
+    "pw-157": "npm:@playwright/test@1.57.0"
+  }
+}
