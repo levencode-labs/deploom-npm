@@ -1,0 +1,9 @@
+{
+  "name": "deploom-prisma7-datasource-config-after",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@prisma/prisma-schema-wasm": "7.10.0-4.0edf323efd1d98336f3f0a68684b56f689b900d3",
+    "prisma": "7.10.0"
+  }
+}
