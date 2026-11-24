@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "240aacf9bb52d7d05edaab8dbeeb9ca22aeb1023bc8b3152e74e075812566834",
+  "claims": [
+    {
+      "package": "@testing-library/jest-dom",
+      "from": "5.17.0",
+      "to": "6.1.5",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
