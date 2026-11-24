@@ -1,0 +1,8 @@
+{
+  "name": "fixture-mongoose9-validate-hook-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "mongoose": "9.11.3"
+  }
+}
