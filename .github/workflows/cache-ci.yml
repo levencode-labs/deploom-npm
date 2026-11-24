@@ -27,6 +27,12 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Check the Next.js 16 lint command migration
+        working-directory: fixtures/next16-lint-cli
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
