@@ -1,0 +1,78 @@
+{
+  "jotai": {
+    "initialValues": [
+      "(?:core|react|dist/react)/Provider\\.d\\.ts",
+      "\\binitialValues\\s*\\??:"
+    ],
+    "providerStore": [
+      "(?:react|dist/react)/Provider\\.d\\.ts",
+      "\\bstore\\s*\\??:"
+    ]
+  },
+  "vite-plugin-dts": {
+    "outputDir": [
+      "dist/index\\.d\\.ts",
+      "(?m)^\\s*outputDir\\??:"
+    ],
+    "outDir": [
+      "dist/index\\.d\\.ts",
+      "(?m)^\\s*outDir\\??:"
+    ]
+  },
+  "@storybook/addon-actions": {
+    "action": [
+      "dist/index\\.d\\.ts",
+      "\\bexport\\s*\\{[^}]*\\baction\\b[^}]*\\}"
+    ]
+  },
+  "@types/chai-as-promised": {
+    "requirePlugin": [
+      "index\\.d\\.ts",
+      "\\bexport\\s*=\\s*chaiAsPromised"
+    ],
+    "defaultPlugin": [
+      "index\\.d\\.ts",
+      "\\bexport\\s+default\\s+chaiAsPromised"
+    ]
+  },
+  "@hello-pangea/dnd": {
+    "reset": [
+      "dist/dnd\\.d\\.ts",
+      "\\bdeclare function resetServerContext\\b"
+    ],
+    "context": [
+      "dist/dnd\\.d\\.ts",
+      "\\b(?:declare function|declare const) DragDropContext\\b"
+    ]
+  },
+  "mobx-react": {
+    "provider": [
+      "dist/index\\.d\\.ts",
+      "export\\s*\\{[^}]*\\bProvider\\b[^}]*\\}"
+    ],
+    "observer": [
+      "dist/index\\.d\\.ts",
+      "export\\s*\\{[^}]*\\bobserver\\b[^}]*\\}"
+    ]
+  },
+  "react-youtube": {
+    "oldFrameClass": [
+      "dist/(?:index|YouTube)\\.js",
+      "className:\\s*this\\.props\\.containerClassName"
+    ],
+    "newFrameClass": [
+      "dist/(?:index|YouTube)\\.js",
+      "className:\\s*this\\.props\\.iframeClassName"
+    ]
+  },
+  "react-resize-detector": {
+    "exportHook": [
+      "build/index\\.js",
+      "(?s)\\bexport\\s*\\{[^}]*\\bas useResizeDetector\\b"
+    ],
+    "commonjs": [
+      "build/index\\.js",
+      "\\b(?:module\\.exports|exports\\.useResizeDetector)\\b"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "deploom-syncpack-cli",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "before12": "npm:syncpack@12.0.0",
+    "before13": "npm:syncpack@13.0.0",
+    "after14": "npm:syncpack@14.0.0",
+    "after15": "npm:syncpack@15.0.0"
+  }
+}

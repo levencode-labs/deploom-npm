@@ -1,0 +1,10 @@
+{
+  "name": "deploom-pwa-size",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "vite": "5.4.19",
+    "before": "npm:vite-plugin-pwa@0.20.1",
+    "after": "npm:vite-plugin-pwa@0.20.2"
+  }
+}

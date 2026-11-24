@@ -1,0 +1,320 @@
+{
+  "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+  "claims": [
+    {
+      "package": "postcss-preset-env",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-preset-env",
+      "from": "7.8.3",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-preset-env",
+      "from": "9.6.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "rollup-plugin-visualizer",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/mocha",
+      "from": "9.1.1",
+      "to": "10.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-links",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/vite-plugin",
+      "from": "3.0.0",
+      "to": "11.8.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/vite-plugin",
+      "from": "4.0.0",
+      "to": "11.8.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/vite-plugin",
+      "from": "5.0.0",
+      "to": "11.8.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/react-test-renderer",
+      "from": "18.3.0",
+      "to": "19.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "jotai",
+      "from": "1.13.1",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jotai",
+      "from": "2.20.3",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-actions",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint-scss",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite-plugin-pwa",
+      "from": "0.20.1",
+      "to": "0.20.2",
+      "check": "build",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite-plugin-pwa",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-webpack-plugin",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-webpack-plugin",
+      "from": "3.2.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-webpack-plugin",
+      "from": "4.2.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite-plugin-dts",
+      "from": "2.3.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite-plugin-checker",
+      "from": "0.14.5",
+      "to": "1.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "madge",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-perfectionist",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-perfectionist",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mobx-react",
+      "from": "9.2.2",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@hello-pangea/dnd",
+      "from": "16.6.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react-webpack5",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react-webpack5",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react-webpack5",
+      "from": "7.6.17",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "syncpack",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "syncpack",
+      "from": "12.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "syncpack",
+      "from": "12.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "syncpack",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "syncpack",
+      "from": "13.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/big.js",
+      "from": "6.2.2",
+      "to": "7.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "chai-as-promised",
+      "from": "7.1.2",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-resize-detector",
+      "from": "10.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-resize-detector",
+      "from": "11.0.1",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@docusaurus/core",
+      "from": "2.4.3",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@docusaurus/preset-classic",
+      "from": "2.4.3",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/chai-as-promised",
+      "from": "7.1.8",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "parse-imports",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-youtube",
+      "from": "7.14.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-youtube",
+      "from": "8.3.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "tsc-watch",
+      "from": "5.0.3",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
