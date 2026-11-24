@@ -87,7 +87,7 @@ The date-fns-tz example verified a dependency-group decision. The target 3.2.0 p
 
 ## Frontend project discovery
 
-The [frontend project index](FRONTEND_PROJECT_INDEX.md) contains 30 distinct public repositories and 31 verified manifests. Its working target is 150 repositories. The index records workspace declarations and any catalog indirection separately from the reproduced migration recipes. See also the [React UI release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md).
+The [frontend project index](FRONTEND_PROJECT_INDEX.md) contains 37 distinct public repositories and 40 verified manifests. Its working target is 150 repositories. The index records workspace declarations and any catalog indirection separately from the reproduced migration recipes. See also the [React UI release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md).
 
 ## Coverage limits
 
