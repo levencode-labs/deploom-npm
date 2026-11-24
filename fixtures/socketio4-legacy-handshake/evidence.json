@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "c16cb807fe0e632aaa99c601ec7bba4135adedbf59bd93df391939f387acd7cf",
+  "claims": [
+    {
+      "package": "socket.io",
+      "from": "2.3.0",
+      "to": "4.1.2",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

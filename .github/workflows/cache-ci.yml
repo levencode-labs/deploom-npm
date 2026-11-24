@@ -17,6 +17,12 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - name: Verify Socket.IO 4 legacy client handshakes
+        working-directory: fixtures/socketio4-legacy-handshake
+        run: |
+          npm ci --prefix before --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs

@@ -1,0 +1,9 @@
+{
+  "name": "fixture-socketio4-legacy-handshake-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "socket.io": "2.3.0",
+    "socket.io-client": "2.3.0"
+  }
+}
