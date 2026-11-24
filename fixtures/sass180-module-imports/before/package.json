@@ -1,0 +1,8 @@
+{
+  "name": "fixture-sass180-module-imports-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "sass": "1.79.5"
+  }
+}

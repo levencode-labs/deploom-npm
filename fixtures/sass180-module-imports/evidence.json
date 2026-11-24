@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "dfb4153497209657ef8239ff5eddae4c5c0f999e127d880e0bc01b295841e275",
+  "claims": [
+    {
+      "package": "sass",
+      "from": "1.79.5",
+      "to": "1.80.0",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}
