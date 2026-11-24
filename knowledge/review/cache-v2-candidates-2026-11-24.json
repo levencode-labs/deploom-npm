@@ -2786,6 +2786,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "trpc11-link-transformer",
+      "kind": "breaking-change",
+      "package": "@trpc/client",
+      "fromMajor": 10,
+      "toMajor": 11,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "10.45.4",
+          "to": "11.19.0"
+        }
+      ],
+      "title": "Move the tRPC 11 transformer into the HTTP batch link",
+      "summary": "tRPC 11 leaves the tested SuperJSON response serialized when the transformer stays at client root. The HTTP batch link transformer restores the Date.",
+      "conditions": [
+        "The tRPC client supplies SuperJSON in its root options and makes requests through httpBatchLink."
+      ],
+      "actions": [
+        "Move transformer: superjson into httpBatchLink options and keep the server transformer configured.",
+        "Keep the tRPC client and server versions compatible and review any other active transport links."
+      ],
+      "verification": [
+        "Query a Date field and compare its runtime type and exact UTC timestamp."
+      ],
+      "negativeControls": [
+        {
+          "name": "root-transformer-leaves-response-serialized",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.isDate, false)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/eb797d42de1a48aa8d543684e58b7fda00174cde/fixtures/trpc11-link-transformer/check.cjs",
+        "fixtureSha256": "4ce885c119497978262a1e08ff3e0443fecc84bea1af07ca8a2e7121376be378",
+        "claim": {
+          "package": "@trpc/client",
+          "from": "10.45.4",
+          "to": "11.19.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "chalk5-commonjs-loader",
+      "kind": "breaking-change",
+      "package": "chalk",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.1.2",
+          "to": "5.6.2"
+        }
+      ],
+      "title": "Load Chalk 5 default export from CommonJS with dynamic import",
+      "summary": "Chalk 5 is ESM. The retained require() either fails or returns a module namespace without direct color methods. Importing the default export preserves the tested output.",
+      "conditions": [
+        "A CommonJS CLI reads color helpers directly from require('chalk') and needs to retain its CommonJS entry point."
+      ],
+      "actions": [
+        "Load the default export with native dynamic import before invoking color helpers.",
+        "Inspect transpiled output so that the import stays dynamic on supported runtimes."
+      ],
+      "verification": [
+        "Smoke-test both plain and ANSI-colored output on the actual CLI runtime."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-commonjs-require-fails-without-esm-interop",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /ERR_REQUIRE_ESM/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/b6c0615890d2c6964cba255dbcb2f88fced7f667/fixtures/chalk5-commonjs-loader/check.cjs",
+        "fixtureSha256": "c53ce0155a5fbaf7bcf70d652c430c70b412af95d8b1d7bb9b0cd8db5e9e95d1",
+        "claim": {
+          "package": "chalk",
+          "from": "4.1.2",
+          "to": "5.6.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
