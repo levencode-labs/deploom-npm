@@ -27,6 +27,11 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Verify jQuery 4 with the legacy Fancybox gallery
+        working-directory: fixtures/jquery4-fancybox
+        run: |
+          npm ci --ignore-scripts --strict-peer-deps --no-audit --no-fund
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp

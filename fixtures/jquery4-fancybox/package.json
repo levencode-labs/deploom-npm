@@ -1,0 +1,12 @@
+{
+  "name": "deploom-jquery4-fancybox-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@fancyapps/fancybox": "3.5.7",
+    "jquery": "4.0.0",
+    "jquery3": "npm:jquery@3.7.1",
+    "jquery-migrate": "4.0.2",
+    "jsdom": "26.1.0"
+  }
+}
