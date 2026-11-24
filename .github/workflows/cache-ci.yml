@@ -17,6 +17,11 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - name: Check the Prettier 3 format result
+        working-directory: fixtures/prettier3-await-format
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node check.cjs
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
