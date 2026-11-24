@@ -1,0 +1,9 @@
+{
+  "name": "deploom-svelte5-client-mount-after",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "svelte": "5.0.0",
+    "jsdom": "25.0.1"
+  }
+}
