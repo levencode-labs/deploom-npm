@@ -1,0 +1,8 @@
+{
+  "name": "fixture-node-cron4-start-gate-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "node-cron": "4.6.0"
+  }
+}

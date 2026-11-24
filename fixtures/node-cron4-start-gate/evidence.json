@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "e8af5c56c50ad846902f4f1247a3033c12e39c688b23899528f12a0ba1215bb6",
+  "claims": [
+    {
+      "package": "node-cron",
+      "from": "3.0.3",
+      "to": "4.6.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
