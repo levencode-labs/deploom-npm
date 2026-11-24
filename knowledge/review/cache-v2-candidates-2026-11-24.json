@@ -1737,6 +1737,105 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "sass180-module-imports",
+      "kind": "failure-mode",
+      "package": "sass",
+      "fromMajor": 1,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.79.5",
+          "to": "1.80.0"
+        }
+      ],
+      "title": "Qualify shared Sass variables when replacing @import with @use",
+      "summary": "Sass 1.80.0 warns on legacy @import and fails when the deprecation is fatal. A namespaced @use preserves the fixture CSS and passes strict compilation.",
+      "conditions": [
+        "An SCSS entry imports shared Sass variables with @import and uses them without a module namespace."
+      ],
+      "actions": [
+        "Load the module with @use and qualify the shared variables using its namespace.",
+        "Check module load order and repeat emissions if more than one module writes CSS."
+      ],
+      "verification": [
+        "Compare generated CSS and run a focused build with the import deprecation treated as an error."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-import-rejected-in-strict-mode",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => compile(after, legacy, true), /Sass @import rules are deprecated/)"
+        },
+        {
+          "name": "unqualified-module-variable-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => compile(after, unqualified, true), /Undefined variable/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/7019a35fe7f19285a0b0fcfa5e750d532fb9b409/fixtures/sass180-module-imports/check.cjs",
+        "fixtureSha256": "dfb4153497209657ef8239ff5eddae4c5c0f999e127d880e0bc01b295841e275",
+        "claim": {
+          "package": "sass",
+          "from": "1.79.5",
+          "to": "1.80.0",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "date-fns3-named-imports",
+      "kind": "breaking-change",
+      "package": "date-fns",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.30.0",
+          "to": "3.6.0"
+        }
+      ],
+      "title": "Use named imports when upgrading date-fns to v3",
+      "summary": "With synthetic default imports disabled, date-fns 3.6.0 declarations reject held default subpath imports. The JavaScript fallback still runs. Root named imports pass the fixture type check and preserve its outputs across both versions.",
+      "conditions": [
+        "An ES module imports date-fns function subpaths through default bindings and needs its declarations checked without synthetic default imports."
+      ],
+      "actions": [
+        "Switch the affected default subpath imports to named imports from the date-fns root.",
+        "The same named imports pass on 2.30.0, so the code edit can be verified before the dependency update."
+      ],
+      "verification": [
+        "Type-check and bundle the owning entry. Compare representative date and duration outputs."
+      ],
+      "negativeControls": [
+        {
+          "name": "v3-default-subpath-declarations-reject",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(diagnostic, /has no default export/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/349cbffccd3297fbc2575cd46ef20988f401c4cb/fixtures/date-fns3-named-imports/check.cjs",
+        "fixtureSha256": "e0bb1597714c79b15c1a46a234beb4a175d9acb23d643ced2de32b708c3bfe53",
+        "claim": {
+          "package": "date-fns",
+          "from": "2.30.0",
+          "to": "3.6.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
