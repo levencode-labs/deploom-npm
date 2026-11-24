@@ -3168,6 +3168,55 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "jquery4-fancybox3-migrate-order",
+      "kind": "breaking-change",
+      "package": "jquery",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.7.1",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Keep legacy Fancybox galleries working during a jQuery 4 upgrade",
+      "summary": "Fancybox 3.5.7 calls $.isArray when opening a gallery. The tested jQuery 4.0.0 transition throws until jquery-migrate 4.0.2 is loaded before Fancybox.",
+      "conditions": [
+        "The application keeps @fancyapps/fancybox 3.5.7 and uses its jQuery-backed gallery while updating jQuery to 4.x.",
+        "Inspect both the entry point that supplies window.jQuery and the legacy plugin's actual loading order."
+      ],
+      "actions": [
+        "If the project must retain Fancybox 3, load jquery-migrate@4.0.2 after the same jQuery 4 instance and before Fancybox. Keep the bridge scoped to entry points using the plugin.",
+        "Remove the compatibility dependency after upgrading or replacing the legacy plugin and verifying the gallery."
+      ],
+      "verification": [
+        "Open a representative gallery, verify its configured content renders, and close it.",
+        "Run the production build and check the receiving browser for load order, keyboard focus and media behavior."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-gallery-without-migrate",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => open($),"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/a30d450c0612088681cc3adc7e76cada4e124a58/fixtures/jquery4-fancybox/check.cjs",
+        "fixtureSha256": "4f3d2a0633b864aedf528f12e023ac9d865ccc516b1a8925841c84ccd905911d",
+        "claim": {
+          "package": "jquery",
+          "from": "3.7.1",
+          "to": "4.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
