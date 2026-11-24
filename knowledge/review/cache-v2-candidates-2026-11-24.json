@@ -2410,6 +2410,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "socketio4-legacy-handshake",
+      "kind": "breaking-change",
+      "package": "socket.io",
+      "fromMajor": 2,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.3.0",
+          "to": "4.1.2"
+        }
+      ],
+      "title": "Enable legacy Socket.IO handshakes during a v4 server rollout",
+      "summary": "Socket.IO 4 rejects the tested v2 polling client by default. allowEIO3 restores its handshake and event acknowledgement while the tested v4 client keeps working.",
+      "conditions": [
+        "Socket.IO server upgrades from v2 to v4 while deployed Socket.IO v2 clients still connect to it."
+      ],
+      "actions": [
+        "Set allowEIO3: true on the upgraded Socket.IO server for the staged client rollout.",
+        "After the old clients have migrated, remove the compatibility setting and verify the deployed transports."
+      ],
+      "verification": [
+        "Connect pinned old and new clients and round-trip an acknowledged event through the expected transport."
+      ],
+      "negativeControls": [
+        {
+          "name": "v4-default-rejects-v2-polling-handshake",
+          "expected": "reject",
+          "fixtureAssertion": "assert.rejects(exchange(legacyClient, url), /xhr poll error/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/2169e68cca811b88109e3f1bdf513d11c0448a8e/fixtures/socketio4-legacy-handshake/check.cjs",
+        "fixtureSha256": "c16cb807fe0e632aaa99c601ec7bba4135adedbf59bd93df391939f387acd7cf",
+        "claim": {
+          "package": "socket.io",
+          "from": "2.3.0",
+          "to": "4.1.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "graphql16-object-arguments",
+      "kind": "breaking-change",
+      "package": "graphql",
+      "fromMajor": 15,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "15.8.0",
+          "to": "16.13.2"
+        }
+      ],
+      "title": "Use the GraphQL argument object for execution",
+      "summary": "GraphQL 16 only accepts the graphql() argument object. Passing named fields preserves query execution on both pinned releases.",
+      "conditions": [
+        "The project invokes graphql() with positional arguments instead of an execution options object."
+      ],
+      "actions": [
+        "Move the schema, query source and any supplied root, context, variables and operation name into the argument object.",
+        "The tested object form works on the old and target versions, so the edit can land before the dependency bump."
+      ],
+      "verification": [
+        "Run a request with variables, a selected operation and a context-dependent resolver and compare the response."
+      ],
+      "negativeControls": [
+        {
+          "name": "held-graphql-positional-call-rejects",
+          "expected": "reject",
+          "fixtureAssertion": "assert.rejects(heldCall, /GraphQL schema/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/0a5fcf4a27eaefafabac687b659000ec54627953/fixtures/graphql16-object-arguments/check.cjs",
+        "fixtureSha256": "985b31dd5534f2a80750ebb0b791944bf0d62e6b7438c6a7f03800cb41f62455",
+        "claim": {
+          "package": "graphql",
+          "from": "15.8.0",
+          "to": "16.13.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
