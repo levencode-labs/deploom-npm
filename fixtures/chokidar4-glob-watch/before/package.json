@@ -1,0 +1,8 @@
+{
+  "name": "deploom-chokidar-watch-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "chokidar": "3.6.0"
+  }
+}
