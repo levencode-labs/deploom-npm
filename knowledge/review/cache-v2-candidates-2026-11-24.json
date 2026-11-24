@@ -3071,6 +3071,54 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "webpack-dev-server5-middleware-order",
+      "kind": "breaking-change",
+      "package": "webpack-dev-server",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.15.2",
+          "to": "5.2.2"
+        }
+      ],
+      "title": "Preserve middleware order when webpack-dev-server 5 removes the legacy hook",
+      "summary": "Version 5.2.2 rejects onBeforeSetupMiddleware. In the pinned local HTTP fixture, returning the middleware array from setupMiddlewares retained both a custom response and a real Webpack bundle.",
+      "conditions": [
+        "The project sets devServer.onBeforeSetupMiddleware and needs to preserve its hook behavior on the target version."
+      ],
+      "actions": [
+        "Move the callback to setupMiddlewares and return the middleware array. Prepend custom middleware that must run before the built-in stack.",
+        "Preserve the original hook side effects and any separate startup requirements within the approved scope."
+      ],
+      "verification": [
+        "Start the receiving dev server and verify the custom response, hook invocation count and compiled-bundle fallback.",
+        "Check any project-specific proxy, HTTPS and HMR behavior separately."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-hook-schema-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => new after.Server(options(legacy(() => {})), heldCompiler)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/95f5ba71b5e72f98af26fe43969e1e33b53d42c5/fixtures/webpack-dev-server5-middleware/check.cjs",
+        "fixtureSha256": "39cf81862de343934483686b13e1da5383c98a42baaee7630bfb712381055d2b",
+        "claim": {
+          "package": "webpack-dev-server",
+          "from": "4.15.2",
+          "to": "5.2.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }

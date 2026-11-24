@@ -10,13 +10,18 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 
 ## Verified candidate manifests
 
-65 public repositories and 68 verified manifests. The latest batch added 17 projects, including Angular, AngularJS, Vue 2, SvelteKit, and Knockout applications. Candidate manifests establish adoption. Reproduced migrations are tracked in the [Knowledge Cache review](KNOWLEDGE_CACHE_REVIEW_2026-11-24.md).
+81 public repositories and 86 verified manifests. The latest batch added 16 repositories and 18 manifests, including Gatsby, Lumino, Phaser, and Svelte applications. Candidate manifests establish adoption. Reproduced migrations are tracked in the [Knowledge Cache review](KNOWLEDGE_CACHE_REVIEW_2026-11-24.md).
 
 | Project | Pinned manifest | Frontend declaration |
 | --- | --- | --- |
 | activepieces/activepieces | [`packages/web/package.json`](https://github.com/activepieces/activepieces/blob/b85a121957a85da830e8754cb72cec84220da044/packages/web/package.json) | `dependencies.react` = `19` · `devDependencies.vite` = `8.3.5` |
+| actualbudget/actual | [`packages/desktop-client/package.json`](https://github.com/actualbudget/actual/blob/258dcab21006784c4419768f7601b92eae43d767/packages/desktop-client/package.json) | `devDependencies.react` = `19.3.0` |
 | apache/superset | [`superset-frontend/package.json`](https://github.com/apache/superset/blob/beeda435b2793add06aa8c2d1d31e97def423a79/superset-frontend/package.json) | `dependencies.react` = `^18.3.0` |
+| apitable/apitable | [`packages/datasheet/package.json`](https://github.com/apitable/apitable/blob/c9255a752a85913e2e6b362ff6c306b0fc3585df/packages/datasheet/package.json) | `dependencies.react` = `18.2.0` |
 | appsmithorg/appsmith | [`app/client/package.json`](https://github.com/appsmithorg/appsmith/blob/2713fe4471e2402e5268b3d4a276f1638df99fe0/app/client/package.json) | `dependencies.react` = `^17.0.2` |
+| bitwarden/clients | [`package.json`](https://github.com/bitwarden/clients/blob/8f3ca17bfee9a1c87b1e2596d9485a05b936c784/package.json) | `dependencies.@angular/core` = `21.2.17` |
+| Budibase/budibase | [`packages/builder/package.json`](https://github.com/Budibase/budibase/blob/d93e2ddc03dc270f226bd058711ce2b6f757fd0f/packages/builder/package.json) | `devDependencies.vite` = `7.3.7` |
+| Budibase/budibase | [`packages/client/package.json`](https://github.com/Budibase/budibase/blob/d93e2ddc03dc270f226bd058711ce2b6f757fd0f/packages/client/package.json) | `devDependencies.vite` = `7.3.7` |
 | ChatGPTNextWeb/NextChat | [`package.json`](https://github.com/ChatGPTNextWeb/NextChat/blob/1d3dc331512929a4b1d3e82354e72acce33b5c7a/package.json) | `dependencies.next` = `^14.1.1` · `dependencies.react` = `^18.2.0` |
 | dbeaver/cloudbeaver | [`webapp/packages/core-app/package.json`](https://github.com/dbeaver/cloudbeaver/blob/81941bbdba3c7d38e7b53c0d057917cf4378bc1a/webapp/packages/core-app/package.json) | `dependencies.react` = `^19` |
 | dbeaver/cloudbeaver | [`webapp/package.json`](https://github.com/dbeaver/cloudbeaver/blob/81941bbdba3c7d38e7b53c0d057917cf4378bc1a/webapp/package.json) | `devDependencies.react` = `^19` |
@@ -25,6 +30,7 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | docmost/docmost | [`apps/client/package.json`](https://github.com/docmost/docmost/blob/494806348576d76b117d13f21e60fd3751cb9896/apps/client/package.json) | `dependencies.react` = `19.2.7` · `devDependencies.vite` = `8.3.4` |
 | drawdb-io/drawdb | [`package.json`](https://github.com/drawdb-io/drawdb/blob/48b308394b08e1027cf3274a6a2e39c75ee2ce16/package.json) | `dependencies.react` = `^18.2.0` |
 | elastic/kibana | [`package.json`](https://github.com/elastic/kibana/blob/d7b0dde90a87c585341e97ab6c3d9acb37f53c3b/package.json) | `dependencies.react` = `18.2.0` |
+| element-hq/element-web | [`apps/web/package.json`](https://github.com/element-hq/element-web/blob/35d086199c7bf9475ecfae95271740323cb8183b/apps/web/package.json) | `dependencies.react` = `catalog:` · [workspace catalog](https://github.com/element-hq/element-web/blob/35d086199c7bf9475ecfae95271740323cb8183b/pnpm-workspace.yaml) sets `^19.0.0` |
 | excalidraw/excalidraw | [`excalidraw-app/package.json`](https://github.com/excalidraw/excalidraw/blob/542ad76fa6968b370a48de4ed2491a5b308cdbc0/excalidraw-app/package.json) | `dependencies.react` = `19.0.0` |
 | formbricks/formbricks | [`apps/web/package.json`](https://github.com/formbricks/formbricks/blob/2592398cd9d2d23d93e8c6d5e76a65d059165a08/apps/web/package.json) | `dependencies.next` = `16.4.5` |
 | freeCodeCamp/freeCodeCamp | [`client/package.json`](https://github.com/freeCodeCamp/freeCodeCamp/blob/085eff34ff3c447bb13a3458cd289eba551390bf/client/package.json) | `dependencies.gatsby` = `5.16.1` · `dependencies.react` = `18.3.1` |
@@ -38,7 +44,11 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | hoppscotch/hoppscotch | [`packages/hoppscotch-common/package.json`](https://github.com/hoppscotch/hoppscotch/blob/6177eae1875ea4cc8fc46604d65bf85478912d85/packages/hoppscotch-common/package.json) | `dependencies.vue` = `3.5.41` |
 | hoppscotch/hoppscotch | [`packages/hoppscotch-selfhost-web/package.json`](https://github.com/hoppscotch/hoppscotch/blob/6177eae1875ea4cc8fc46604d65bf85478912d85/packages/hoppscotch-selfhost-web/package.json) | `dependencies.vue` = `3.5.41` |
 | immich-app/immich | [`web/package.json`](https://github.com/immich-app/immich/blob/ba6213bcfca32b73c58d3424043174fec64f52bf/web/package.json) | `devDependencies.@sveltejs/kit` = `^3.0.0` |
+| internxt/drive-desktop | [`package.json`](https://github.com/internxt/drive-desktop/blob/e153d32f97143a7deff599bc78685e6be67c3f9b/package.json) | `dependencies.react` = `^17.0.2` · `devDependencies.webpack` = `^5.100.2` |
 | jellyfin/jellyfin-web | [`package.json`](https://github.com/jellyfin/jellyfin-web/blob/a1669f34205b613d7bfb886a9fa9bd32a1b5a229/package.json) | `dependencies.react` = `18.3.1` |
+| jitsi/jitsi-meet | [`package.json`](https://github.com/jitsi/jitsi-meet/blob/45d9e224b557b4d4f9b92594c3573e8bc762bca2/package.json) | `dependencies.react` = `19.2.3` |
+| jupyterlab/jupyterlab | [`packages/application/package.json`](https://github.com/jupyterlab/jupyterlab/blob/2ffda9a7b8b42d76a6858abaffe4aab9c2f1872a/packages/application/package.json) | `dependencies.@lumino/widgets` = `^2.10.0` |
+| jupyterlab/jupyterlab | [`packages/ui-components/package.json`](https://github.com/jupyterlab/jupyterlab/blob/2ffda9a7b8b42d76a6858abaffe4aab9c2f1872a/packages/ui-components/package.json) | `dependencies.@lumino/widgets` = `^2.10.0` · `dependencies.react` = `^18.2.0` |
 | karakeep-app/karakeep | [`apps/web/package.json`](https://github.com/karakeep-app/karakeep/blob/28ae67526755479b13a91ac89d34eb711638841b/apps/web/package.json) | `dependencies.next` = `16.4.6` · `dependencies.react` = `19.3.0` |
 | kestra-io/kestra | [`ui/package.json`](https://github.com/kestra-io/kestra/blob/ab22f41acd16becd54fb6193392206d310cd0a7c/ui/package.json) | `dependencies.vue` = `^3.5.44` |
 | keycloak/keycloak | [`js/apps/admin-ui/package.json`](https://github.com/keycloak/keycloak/blob/2e4728d98ce65592cefff24b5a0a666692406778/js/apps/admin-ui/package.json) | `dependencies.react` = `^18.3.1` |
@@ -49,10 +59,13 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | mattermost/mattermost | [`webapp/channels/package.json`](https://github.com/mattermost/mattermost/blob/0b805f4003273ddfb304c59d1b9b4e7e0fdd3241/webapp/channels/package.json) | `dependencies.react` = `19.3.1` |
 | meshery/meshery | [`ui/package.json`](https://github.com/meshery/meshery/blob/77e137cf7fbd868918e8af5b472deb3b798f09fd/ui/package.json) | `dependencies.next` = `^16.4.3` |
 | metabase/metabase | [`package.json`](https://github.com/metabase/metabase/blob/513dacb7ede2a067d5d9a9a5e4b339fa6eb3789d/package.json) | `dependencies.react` = `^19.0.0` |
+| microsoft/TypeScript-Website | [`packages/typescriptlang-org/package.json`](https://github.com/microsoft/TypeScript-Website/blob/cf57c7ec6762f3cae3a9ebc973e63851d88cb2a8/packages/typescriptlang-org/package.json) | `dependencies.gatsby` = `^5.16.1` · `dependencies.react` = `^18.3.1` |
+| midday-ai/midday | [`apps/dashboard/package.json`](https://github.com/midday-ai/midday/blob/51587319f26a0ffaa9dfccab1920373cb65689b7/apps/dashboard/package.json) | `dependencies.next` = `16.2.1` · `dependencies.react` = `catalog:` · [workspace catalog](https://github.com/midday-ai/midday/blob/51587319f26a0ffaa9dfccab1920373cb65689b7/package.json) sets `19.2.4` |
 | n8n-io/n8n | [`packages/frontend/editor-ui/package.json`](https://github.com/n8n-io/n8n/blob/1f57a29a40df8299562202d5440810449d09b741/packages/frontend/editor-ui/package.json) | `devDependencies.vue` = `catalog:frontend` · [workspace catalog](https://github.com/n8n-io/n8n/blob/1f57a29a40df8299562202d5440810449d09b741/pnpm-workspace.yaml) sets `^3.5.13` |
 | nextcloud/notes | [`package.json`](https://github.com/nextcloud/notes/blob/da8ef13c37506752a1cd6211d65a8805309bcb1e/package.json) | `dependencies.vue` = `^3.5.45` |
 | nextcloud/spreed | [`package.json`](https://github.com/nextcloud/spreed/blob/1fec49cabdc27c102ec9f4078f191efc67202ef3/package.json) | `dependencies.vue` = `^3.5.17` |
 | nocodb/nocodb | [`packages/nc-gui/package.json`](https://github.com/nocodb/nocodb/blob/52a3afd5101e8b4516fc453ec90d33c56e02837b/packages/nc-gui/package.json) | `devDependencies.nuxt` = `^4.6.2` |
+| nuxt/content | [`docs/package.json`](https://github.com/nuxt/content/blob/3c49cff60fb8a5fcb4899269699a7ef9b73e539e/docs/package.json) | `dependencies.nuxt` = `^4.6.4` |
 | nuxt/nuxt.com | [`package.json`](https://github.com/nuxt/nuxt.com/blob/93e13005a1fc8a76b9371c149cfabd57fa756a46/package.json) | `dependencies.nuxt` = `^4.6.4` |
 | open-webui/open-webui | [`package.json`](https://github.com/open-webui/open-webui/blob/0666e59d26a4d056e0bacee41742486badd71cf8/package.json) | `devDependencies.@sveltejs/kit` = `^2.5.27` |
 | opf/openproject | [`frontend/package.json`](https://github.com/opf/openproject/blob/c72d9a1be3d369cd3e2d97555bd02a5b0c3f365a/frontend/package.json) | `dependencies.@angular/core` = `^22.2.6` |
@@ -61,8 +74,10 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | penpot/penpot | [`frontend/package.json`](https://github.com/penpot/penpot/blob/01a7342f4b66fa9177730fc796dcf30f9f885858/frontend/package.json) | `devDependencies.react` = `19.3.1` |
 | plausible/analytics | [`assets/package.json`](https://github.com/plausible/analytics/blob/0855e28671ae1d04d9340dcbbc758e288233738c/assets/package.json) | `dependencies.react` = `^18.3.1` |
 | PostHog/posthog | [`frontend/package.json`](https://github.com/PostHog/posthog/blob/8cc1cfd0ae5e397900824ccc843ac8fdcd7bd30c/frontend/package.json) | `dependencies.react` = `^18.3.1` |
+| qdrant/qdrant-web-ui | [`package.json`](https://github.com/qdrant/qdrant-web-ui/blob/413a120d3dedde345ddca6138047d027f4b0509c/package.json) | `dependencies.react` = `^19.0.0` · `dependencies.vite` = `^6.2.0` |
 | rancher/dashboard | [`package.json`](https://github.com/rancher/dashboard/blob/054adb23ab7637bd9e8f402580c3e29c0bb2221d/package.json) | `devDependencies.vue` = `3.5.42` |
 | reactjs/react.dev | [`package.json`](https://github.com/reactjs/react.dev/blob/46a54e0592729712b7640308b53268e84fdc7c9f/package.json) | `dependencies.next` = `15.1.12` · `dependencies.react` = `^19.0.0` |
+| refinedev/refine | [`documentation/package.json`](https://github.com/refinedev/refine/blob/2352eb5b6539e2f39ad9aef652279ad1dcf2c467/documentation/package.json) | `dependencies.@docusaurus/core` = `2.4.0` · `dependencies.react` = `^17.0.2` |
 | RocketChat/Rocket.Chat | [`apps/meteor/package.json`](https://github.com/RocketChat/Rocket.Chat/blob/634add4e423bcb67c96d0669df3ff1ca89acbdb6/apps/meteor/package.json) | `dependencies.react` = `~19.2.8` |
 | single-spa/single-spa.js.org | [`package.json`](https://github.com/single-spa/single-spa.js.org/blob/7c8b48ee7bd0fd08451be50d6cee4addb6401a22/package.json) | `dependencies.@docusaurus/core` = `^3.1.1` · `dependencies.react` = `^18.2.0` |
 | strapi/strapi | [`packages/core/admin/package.json`](https://github.com/strapi/strapi/blob/859ca95a886d52535ef9ffb1997ad872ea57e4dd/packages/core/admin/package.json) | `devDependencies.react` = `18.3.1` |
@@ -78,10 +93,13 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | usebruno/bruno | [`packages/bruno-app/package.json`](https://github.com/usebruno/bruno/blob/c4f1c48e4fa3bca183cb49a2e0921df860dd39ea/packages/bruno-app/package.json) | `dependencies.react` = `19.0.0` |
 | vitejs/vite | [`docs/package.json`](https://github.com/vitejs/vite/blob/e16ca5a13d74dddd005763df9d4db9fa01c74a4d/docs/package.json) | `devDependencies.vitepress` = `^2.0.0-alpha.21` |
 | webdriverio/webdriverio | [`website/package.json`](https://github.com/webdriverio/webdriverio/blob/cfd6c6b2957b3bc92f65cdaa32cc635ee89f8173/website/package.json) | `dependencies.@docusaurus/core` = `^3.10.2` · `dependencies.react` = `^18.3.1` |
+| webrecorder/browsertrix | [`frontend/package.json`](https://github.com/webrecorder/browsertrix/blob/82ff3ab4031771be87f368c00befc9faa9ed7545/frontend/package.json) | `dependencies.lit` = `~3.3.3` · `dependencies.webpack` = `^5.108.4` |
 | windmill-labs/windmill | [`frontend/package.json`](https://github.com/windmill-labs/windmill/blob/cf8a1c38500e64567e5e8fd496feee5bf2e3b0b7/frontend/package.json) | `devDependencies.@sveltejs/kit` = `^2.69.1` · `dependencies.svelte` = `^5.55.7` |
 | withastro/astro.build | [`package.json`](https://github.com/withastro/astro.build/blob/5ba3fc8d87e53bc360a26bf039a5922fda6b4352/package.json) | `dependencies.astro` = `^7.4.13` |
 | withastro/docs | [`package.json`](https://github.com/withastro/docs/blob/eeead30f4417db26e329ba6c15034eae514c3b47/package.json) | `devDependencies.astro` = `^7.4.2` |
 | withastro/starlight | [`docs/package.json`](https://github.com/withastro/starlight/blob/2d241b028eaed4e96e6343799c1950529e52d5bb/docs/package.json) | `dependencies.astro` = `^7.3.6` |
+| workadventure/workadventure | [`play/package.json`](https://github.com/workadventure/workadventure/blob/b706ab863c67526b69aa389013252fe55a08a29b/play/package.json) | `devDependencies.svelte` = `^5.55.9` · `dependencies.phaser` = `4.2.0` |
+| zulip/zulip | [`package.json`](https://github.com/zulip/zulip/blob/21d4362f351a51796865c9a0cffa7a76fe5821a0/package.json) | `dependencies.jquery` = `^4.0.0` · `dependencies.handlebars` = `^4.7.2` |
 
 ## Component library migration sources
 
