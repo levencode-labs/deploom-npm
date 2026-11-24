@@ -3217,6 +3217,102 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "kind": "breaking-change",
+      "package": "react-markdown",
+      "fromMajor": 9,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "9.0.3",
+          "to": "10.0.0"
+        }
+      ],
+      "id": "react-markdown10-classname-wrapper",
+      "title": "Preserve Markdown wrapper classes when updating to React Markdown 10",
+      "summary": "React Markdown 10.0.0 renders the Markdown content without the wrapper created by the old className prop. An explicit wrapper restored the exact React server markup from 9.0.3.",
+      "conditions": [
+        "A React Markdown 9 call sets className and depends on the generated element for styling or selectors."
+      ],
+      "actions": [
+        "Move the class to the containing element, or add a wrapper at the same position when the old call supplied the wrapper.",
+        "Preserve the Markdown children, existing wrapper attributes and selectors tied to DOM structure."
+      ],
+      "verification": [
+        "Compare the rendered Markdown contents and classed parent element before and after the change.",
+        "Run the receiving page test and check layout or CSS selectors that use the parent class."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-prop-loses-wrapper",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(after('event-label'), '<p><strong>ready</strong></p>');"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/872d796a7bde3725fa5fdf0749a491283b919881/fixtures/react-markdown10-classname/check.cjs",
+        "fixtureSha256": "4ab9ab4862ce2ae4502278e7859396201ae0fb34a9918bfdf62f3b236bb7a944",
+        "claim": {
+          "package": "react-markdown",
+          "from": "9.0.3",
+          "to": "10.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "kind": "breaking-change",
+      "package": "@testing-library/jest-dom",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.17.0",
+          "to": "6.1.5"
+        }
+      ],
+      "id": "jest-dom6-global-entrypoint",
+      "title": "Load the jest-dom 6 root entry in test setups with global expect",
+      "summary": "With the same global expect setup, the 5.17.0 extend-expect import registers matchers, 6.1.5 rejects that subpath, and the 6.1.5 root import restores matcher registration.",
+      "conditions": [
+        "The test setup imports @testing-library/jest-dom/extend-expect and its runner provides global expect."
+      ],
+      "actions": [
+        "Replace the extend-expect import with @testing-library/jest-dom in the existing test setup.",
+        "When the runner does not provide global expect, use the runner-specific entry supported by the selected release."
+      ],
+      "verification": [
+        "Run the project test setup and an existing DOM matcher assertion under the receiving runner.",
+        "Check runner globals and TypeScript setup if matcher types are missing."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-subpath-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => registered(() => after(name + '/extend-expect')),"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/3839435bb07765788c8295471bdb19649d228533/fixtures/jest-dom6-entrypoint/check.cjs",
+        "fixtureSha256": "240aacf9bb52d7d05edaab8dbeeb9ca22aeb1023bc8b3152e74e075812566834",
+        "claim": {
+          "package": "@testing-library/jest-dom",
+          "from": "5.17.0",
+          "to": "6.1.5",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }

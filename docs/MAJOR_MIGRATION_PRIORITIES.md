@@ -1,6 +1,6 @@
 # Major migration priorities
 
-The first milestone is evidence for a relevant adjacent major boundary in at least 20 of these 30 packages. The current inventory covers **18 of 30**. Count a package once when an exact replay covers a boundary whose source and target majors both have declarations in the index. The proof may be a fixture already on main or an open verified draft. A nearby version pair remains a candidate. A multi-major jump remains useful evidence in the [review bundle](KNOWLEDGE_CACHE_REVIEW_2026-11-24.md) and does not enter this milestone.
+The first milestone is evidence for a relevant adjacent major boundary in at least 20 of these 30 packages. The current inventory covers **20 of 30**. Count a package once when an exact replay covers a boundary whose source and target majors both have declarations in the index. The proof may be a fixture already on main or an open verified draft. A nearby version pair remains a candidate. A multi-major jump remains useful evidence in the [review bundle](KNOWLEDGE_CACHE_REVIEW_2026-11-24.md) and does not enter this milestone.
 
 The selection uses all 163 pinned `package.json` files in the [frontend project index](FRONTEND_PROJECT_INDEX.md), representing 155 repositories. Count direct dependencies and devDependencies once per repository. Include the requested frameworks and build/test tools, then prioritize commonly declared packages with an independently actionable migration. Type declarations and ESLint configuration packages can be companions to their primary package in a recipe. A repository can declare different majors in separate workspaces. The major counts below use explicit single-major declarations. Unresolved catalogs, aliases and ambiguous ranges contribute to package adoption only. These counts show declared use at the pinned commits. The selected migration must still use exact lockfile versions.
 
@@ -22,7 +22,7 @@ The selection uses all 163 pinned `package.json` files in the [frontend project 
 | `@testing-library/react` | 51 | 9 (1), 11 (1), 12 (2), 14 (2), 15 (1), 16 (42) | — | 15 → 16 and the explicit DOM Testing Library peer |
 | `zod` | 48 | 3 (13), 4 (28) | [3 → 4 (review)](https://github.com/levencode-labs/deploom-npm/blob/2a89b3af83f511dc494e055a7fbe5186a70e6351/fixtures/zod4-record-key-schema/check.cjs) | 3 → 4 for a change observed in the consuming schema |
 | `uuid` | 45 | 3 (1), 8 (2), 9 (3), 10 (1), 11 (8), 13 (2), 14 (25) | — | A current ESM/CJS migration from an observed 11.x or 13.x baseline |
-| `@testing-library/jest-dom` | 44 | 5 (6), 6 (20), 7 (15), 8 (1) | — | 5 → 6 and the removed extend-expect entry point |
+| `@testing-library/jest-dom` | 44 | 5 (6), 6 (20), 7 (15), 8 (1) | [5 → 6 (review)](https://github.com/levencode-labs/deploom-npm/pull/130) | 6 → 7 when the pinned runner or matcher types change |
 | `date-fns` | 40 | 1 (1), 2 (7), 3 (4), 4 (25) | [2 → 3 (review)](https://github.com/levencode-labs/deploom-npm/blob/349cbffccd3297fbc2575cd46ef20988f401c4cb/fixtures/date-fns3-named-imports/check.cjs) | 3 → 4 on a consumer with time-zone requirements |
 | `@testing-library/user-event` | 35 | 7 (1), 12 (1), 13 (3), 14 (29) | [13 → 14 (review)](https://github.com/levencode-labs/deploom-npm/blob/f35a80f04cd8076f79da00bc20301df1e33f0429/fixtures/user-event14-await-interactions/check.cjs) | 13 → 14 with async setup and an ordinary user interaction |
 | `react-router-dom` | 34 | 5 (12), 6 (9), 7 (13) | [6 → 7 (review)](https://github.com/levencode-labs/deploom-npm/blob/d566a0588bf9c1cdaf55d522c3b054209bbdedfa/fixtures/react-router7-relative-splat/check.cjs) | 5 → 6 for surviving v5 apps, especially route matching |
@@ -32,11 +32,11 @@ The selection uses all 163 pinned `package.json` files in the [frontend project 
 | `react-i18next` | 30 | 10 (1), 11 (1), 12 (3), 13 (1), 14 (2), 15 (7), 16 (5), 17 (7), 18 (2) | — | 16 → 17 with an actual consumer and its i18next peer |
 | `@babel/core` | 29 | 7 (23), 8 (5) | — | 7 → 8, first confirm stable pins and plug-in compatibility |
 | `@tanstack/react-query` | 29 | 4 (2), 5 (26) | [4 → 5 (review)](https://github.com/levencode-labs/deploom-npm/blob/94c941ae750d796423cd4287a1c10f6c7aca85b9/fixtures/tanstack-query5-object-signatures/check.cjs) | 4 → 5 where object signatures affect a real query |
-| `react-markdown` | 27 | 5 (1), 8 (3), 9 (9), 10 (14) | — | 9 → 10 where the wrapper class controls styling |
+| `react-markdown` | 27 | 5 (1), 8 (3), 9 (9), 10 (14) | [9 → 10 (review)](https://github.com/levencode-labs/deploom-npm/pull/131) | 9 → 10 in a consumer with custom renderers or CSS selectors |
 | `webpack` | 27 | 4 (1), 5 (26) | — | 4 → 5 for a current webpack 4 consumer, preferably a loader or asset case |
 | `storybook` | 22 | 7 (1), 8 (6), 9 (1), 10 (11) | [8 → 9 (review)](https://github.com/levencode-labs/deploom-npm/blob/8ea29418d63473cd3d23a920f609847caca75bbb/fixtures/storybook9-test-imports/check.cjs) | 9 → 10 for a consumer with existing custom prebuild tooling |
 | `stylelint` | 24 | 13 (1), 14 (1), 15 (2), 16 (7), 17 (7), 18 (5) | [15 → 16 (review)](https://github.com/levencode-labs/deploom-npm/blob/b85b92a46271c6df935cdde33ff3f699491cc049/fixtures/stylelint16-hex-policy/check.cjs) | 16 → 17 on real configs with pinned plug-ins |
 
-The first gaps to investigate are jsdom, Testing Library and the Vite React plug-in. Select a pinned consumer before committing a new recipe. Look for a concrete change in the recipient, and record whether the evidence changes the dependency decision, allows a preparatory source edit, or adds a specific verification step.
+The next gaps to investigate are jsdom, React Testing Library and the Vite React plug-in. Select a pinned consumer before committing a new recipe. Look for a concrete change in the recipient, and record whether the evidence changes the dependency decision, allows a preparatory source edit, or adds a specific verification step.
 
 React UI has its own [release and codemod inventory](REACT_UI_MIGRATION_COVERAGE.md). Keep 4.x → 5.x and 5.x → 6.x evidence distinct and distinguish official public sources from results on particular registry archives.
