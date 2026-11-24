@@ -3023,6 +3023,54 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "stylelint16-preserve-hex-case",
+      "kind": "breaking-change",
+      "package": "stylelint",
+      "fromMajor": 15,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "15.10.1",
+          "to": "16.2.0"
+        }
+      ],
+      "title": "Preserve the lowercase hex color rule after the Stylelint 16 plugin migration",
+      "summary": "Stylelint 16.2.0 treats color-hex-case and stylistic/color-hex-case as unknown with the replacement plugin. @stylistic/color-hex-case kept lowercase enforcement for the Wikimedia-backed test.",
+      "conditions": [
+        "The project's style rules require lowercase hex, and its configuration uses color-hex-case or stylistic/color-hex-case."
+      ],
+      "actions": [
+        "If the policy should remain, request scope for a compatible @stylistic/stylelint-plugin and configure @stylistic/color-hex-case with the lower option.",
+        "Replace the legacy namespace and check inherited config and plugin peers before removing the old plugin."
+      ],
+      "verification": [
+        "Lint an uppercase value expecting a casing warning and a lowercase value expecting no warning.",
+        "Run the receiving repository's Stylelint task against its actual presets and file types."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-hex-rule-on-stylelint-16",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.errored, true)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/b85b92a46271c6df935cdde33ff3f699491cc049/fixtures/stylelint16-hex-policy/check.cjs",
+        "fixtureSha256": "cca6a3ae4bbc927b9920d4654c109445d28cc42fa3d29054ba8082d9cf63ef3e",
+        "claim": {
+          "package": "stylelint",
+          "from": "15.10.1",
+          "to": "16.2.0",
+          "check": "lint",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
