@@ -1836,6 +1836,105 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "user-event14-await-interactions",
+      "kind": "breaking-change",
+      "package": "@testing-library/user-event",
+      "fromMajor": 13,
+      "toMajor": 14,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "13.5.0",
+          "to": "14.6.7"
+        }
+      ],
+      "title": "Await user-event 14 typing and focus transitions",
+      "summary": "An immediate read after an unawaited v14 action sees stale state. Awaited actions preserve the typed value and the final focus.",
+      "conditions": [
+        "A test calls user-event type or tab and reads value or focus before the action completes."
+      ],
+      "actions": [
+        "Await the affected interactions before asserting their effects. A setup session can share interaction state across calls.",
+        "Direct calls can also be awaited. Check fake timers independently if the test uses them."
+      ],
+      "verification": [
+        "Check the entered value and tab order after awaiting the interaction."
+      ],
+      "negativeControls": [
+        {
+          "name": "unawaited-typing-keeps-old-value",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.immediate, '')"
+        },
+        {
+          "name": "unawaited-tab-keeps-old-focus",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.focusedImmediately, false)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f35a80f04cd8076f79da00bc20301df1e33f0429/fixtures/user-event14-await-interactions/check.cjs",
+        "fixtureSha256": "701618865a9b1767d57a36a51b47500a6c6b500931ce3571ff1ecba9bf4891d3",
+        "claim": {
+          "package": "@testing-library/user-event",
+          "from": "13.5.0",
+          "to": "14.6.7",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "pino10-pretty-transport",
+      "kind": "breaking-change",
+      "package": "pino",
+      "fromMajor": 6,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.14.0",
+          "to": "10.1.0"
+        }
+      ],
+      "title": "Replace Pino's removed prettyPrint option with a transport",
+      "summary": "The retained prettyPrint option prevents Pino 10.1.0 logger construction. A worker transport preserves readable output in the fixture.",
+      "conditions": [
+        "A Pino logger passes prettyPrint to its constructor and the upgraded environment still needs readable output."
+      ],
+      "actions": [
+        "Move the formatting options to a pino-pretty transport and preserve the desired destination.",
+        "Keep plain JSON sinks and check worker resolution and shutdown in the receiving deployment."
+      ],
+      "verification": [
+        "Emit a sample event, wait for the worker to drain, and check severity, message and structured fields."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-prettyprint-option-rejected",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.stderr, /prettyPrint option is no longer supported/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/939b373d0125e2e532a994e5c2244a8b5f67c70e/fixtures/pino10-pretty-transport/check.cjs",
+        "fixtureSha256": "76bb44a43d723b2c1ed7a237a97afcec7bd12c565fb0f01eb021656043b5f33a",
+        "claim": {
+          "package": "pino",
+          "from": "6.14.0",
+          "to": "10.1.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
