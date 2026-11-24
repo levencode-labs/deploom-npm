@@ -1,0 +1,8 @@
+{
+  "name": "fixture-glob10-promise-workspace-match-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "glob": "10.5.0"
+  }
+}
