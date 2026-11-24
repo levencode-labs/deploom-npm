@@ -3119,6 +3119,55 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "rollup4-platform-optional-package",
+      "kind": "breaking-change",
+      "package": "rollup",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.29.4",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Keep the matching native package when upgrading to Rollup 4",
+      "summary": "Rollup 4.0.0 could not load on the tested platforms when npm omitted optional packages. Including the platform package from the same locked installation restored the Rollup bundle.",
+      "conditions": [
+        "The npm build runs Rollup 4 and its native artifact for the target OS, architecture and libc is missing after install.",
+        "The fixture covers Windows x64 and glibc Linux x64 with the matching package present in the target lock."
+      ],
+      "actions": [
+        "If policy permits, include optional packages in the frozen npm install and keep the platform artifact selected by Rollup.",
+        "Inspect the target lock for the matching native package if including optional dependencies does not install it."
+      ],
+      "verification": [
+        "Check that the expected native package is installed on the build platform.",
+        "Run the actual project build with the target Rollup version."
+      ],
+      "negativeControls": [
+        {
+          "name": "native-package-omitted",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(() => after.load('rollup')"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/72dd335d8379c566d1dd90162f03c6b03006eec6/fixtures/rollup4-native-optional/check.cjs",
+        "fixtureSha256": "4a97f8d2a6da4b9dc8a087bc795ba96bc7a2acb2eef6fdaaca018b62713ffd77",
+        "claim": {
+          "package": "rollup",
+          "from": "3.29.4",
+          "to": "4.0.0",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
