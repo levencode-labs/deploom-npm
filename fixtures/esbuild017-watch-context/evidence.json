@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "38bd7927122aa0faf0d03bf92e3880519f44a1a8e4088f115cd1867d8f4c9935",
+  "claims": [
+    {
+      "package": "esbuild",
+      "from": "0.15.6",
+      "to": "0.17.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
