@@ -27,6 +27,12 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - name: Verify Headless UI state variants on Tailwind 4
+        working-directory: fixtures/tailwind4-headlessui-variants
+        run: |
+          npm ci --prefix before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          npm ci --prefix after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
