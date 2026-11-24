@@ -2975,6 +2975,54 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "chokidar4-glob-to-directory",
+      "kind": "breaking-change",
+      "package": "chokidar",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.6.0",
+          "to": "4.0.3"
+        }
+      ],
+      "title": "Chokidar 4 drops glob arguments to watch",
+      "summary": "Chokidar 4.0.3 reported no initial add events for the suffix glob that Chokidar 3.6.0 handled. Watching the root directory with a file-only filter recovered the nested matching file and kept unrelated files out.",
+      "conditions": [
+        "Project code passes a glob directly to chokidar.watch() rather than expanding it before the call."
+      ],
+      "actions": [
+        "Watch explicit root directories. For a simple suffix glob, ignore files with other suffixes while keeping directories traversable.",
+        "For path-sensitive patterns or exclusions, preserve their meaning with a dedicated matcher or expansion and keep the original watch roots."
+      ],
+      "verification": [
+        "Check initial discovery for a nested match, an excluded file and an out-of-root file.",
+        "Exercise live create, edit and removal events in the receiving environment when the application relies on them."
+      ],
+      "negativeControls": [
+        {
+          "name": "legacy-glob-on-chokidar-4",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(held, [])"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/377acfafc8faf0fa0d9041bf21b770bbccb322b7/fixtures/chokidar4-glob-watch/check.cjs",
+        "fixtureSha256": "0c3052a27857c213080a3d5e5107804a1f5db56979ec0946490648137156dd56",
+        "claim": {
+          "package": "chokidar",
+          "from": "3.6.0",
+          "to": "4.0.3",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }

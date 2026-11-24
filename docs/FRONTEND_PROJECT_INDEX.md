@@ -10,7 +10,7 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 
 ## Verified candidate manifests
 
-37 public repositories and 40 verified manifests. The latest batch added seven repositories and nine manifests, including Ember and SvelteKit workspaces. Candidate manifests establish adoption. Reproduced migrations are tracked in the [Knowledge Cache review](KNOWLEDGE_CACHE_REVIEW_2026-11-24.md).
+48 public repositories and 51 verified manifests. The latest batch screened 12 repositories and added 11, including Astro, Docusaurus, and VitePress sites. Candidate manifests establish adoption. Reproduced migrations are tracked in the [Knowledge Cache review](KNOWLEDGE_CACHE_REVIEW_2026-11-24.md).
 
 | Project | Pinned manifest | Frontend declaration |
 | --- | --- | --- |
@@ -21,6 +21,7 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | directus/directus | [`app/package.json`](https://github.com/directus/directus/blob/4856582eec1ea426f115b79a875c44c819fe0b9d/app/package.json) | `devDependencies.vue` = `catalog:` · [workspace catalog](https://github.com/directus/directus/blob/4856582eec1ea426f115b79a875c44c819fe0b9d/pnpm-workspace.yaml) sets `3.5.43` |
 | discourse/discourse | [`frontend/discourse/package.json`](https://github.com/discourse/discourse/blob/38369cb823151f9f975b7540ca8106f678858761/frontend/discourse/package.json) | `dependencies.ember-source` = `~7.3.0` · `devDependencies.vite` = `^8.2.4` |
 | drawdb-io/drawdb | [`package.json`](https://github.com/drawdb-io/drawdb/blob/48b308394b08e1027cf3274a6a2e39c75ee2ce16/package.json) | `dependencies.react` = `^18.2.0` |
+| elastic/kibana | [`package.json`](https://github.com/elastic/kibana/blob/d7b0dde90a87c585341e97ab6c3d9acb37f53c3b/package.json) | `dependencies.react` = `18.2.0` |
 | excalidraw/excalidraw | [`excalidraw-app/package.json`](https://github.com/excalidraw/excalidraw/blob/542ad76fa6968b370a48de4ed2491a5b308cdbc0/excalidraw-app/package.json) | `dependencies.react` = `19.0.0` |
 | formbricks/formbricks | [`apps/web/package.json`](https://github.com/formbricks/formbricks/blob/2592398cd9d2d23d93e8c6d5e76a65d059165a08/apps/web/package.json) | `dependencies.next` = `16.4.5` |
 | freeCodeCamp/freeCodeCamp | [`client/package.json`](https://github.com/freeCodeCamp/freeCodeCamp/blob/085eff34ff3c447bb13a3458cd289eba551390bf/client/package.json) | `dependencies.gatsby` = `5.16.1` · `dependencies.react` = `18.3.1` |
@@ -34,8 +35,10 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | kestra-io/kestra | [`ui/package.json`](https://github.com/kestra-io/kestra/blob/ab22f41acd16becd54fb6193392206d310cd0a7c/ui/package.json) | `dependencies.vue` = `^3.5.44` |
 | keycloak/keycloak | [`js/apps/admin-ui/package.json`](https://github.com/keycloak/keycloak/blob/2e4728d98ce65592cefff24b5a0a666692406778/js/apps/admin-ui/package.json) | `dependencies.react` = `^18.3.1` |
 | keycloak/keycloak | [`js/apps/account-ui/package.json`](https://github.com/keycloak/keycloak/blob/2e4728d98ce65592cefff24b5a0a666692406778/js/apps/account-ui/package.json) | `dependencies.react` = `^18.3.1` |
+| Kong/insomnia | [`packages/insomnia/package.json`](https://github.com/Kong/insomnia/blob/cb79b8d7c1477561294e3c7ba16329563636b58b/packages/insomnia/package.json) | `dependencies.react` = `^18.3.1` |
 | lobeHub/lobeHub | [`package.json`](https://github.com/lobeHub/lobeHub/blob/a1fca3ef9402c36a9499ba54aaa47cd8b8eb278a/package.json) | `dependencies.next` = `~16.3.8` |
 | logto-io/logto | [`packages/console/package.json`](https://github.com/logto-io/logto/blob/f29728ec90bacd4dded7badf8946405c2fb113b0/packages/console/package.json) | `devDependencies.react` = `^18.3.1` |
+| mattermost/mattermost | [`webapp/channels/package.json`](https://github.com/mattermost/mattermost/blob/0b805f4003273ddfb304c59d1b9b4e7e0fdd3241/webapp/channels/package.json) | `dependencies.react` = `19.3.1` |
 | meshery/meshery | [`ui/package.json`](https://github.com/meshery/meshery/blob/77e137cf7fbd868918e8af5b472deb3b798f09fd/ui/package.json) | `dependencies.next` = `^16.4.3` |
 | metabase/metabase | [`package.json`](https://github.com/metabase/metabase/blob/513dacb7ede2a067d5d9a9a5e4b339fa6eb3789d/package.json) | `dependencies.react` = `^19.0.0` |
 | n8n-io/n8n | [`packages/frontend/editor-ui/package.json`](https://github.com/n8n-io/n8n/blob/1f57a29a40df8299562202d5440810449d09b741/packages/frontend/editor-ui/package.json) | `devDependencies.vue` = `catalog:frontend` · [workspace catalog](https://github.com/n8n-io/n8n/blob/1f57a29a40df8299562202d5440810449d09b741/pnpm-workspace.yaml) sets `^3.5.13` |
@@ -45,12 +48,20 @@ The runner's network proxy blocked direct GitHub REST search and the live Ecosys
 | outline/outline | [`package.json`](https://github.com/outline/outline/blob/00b124d03c1e82baea84ff032a36950be5e2189e/package.json) | `dependencies.react` = `^19.3.1` |
 | paperless-ngx/paperless-ngx | [`src-ui/package.json`](https://github.com/paperless-ngx/paperless-ngx/blob/faa6f09f289bad52fe8dce9d97ab9e121ae37e6b/src-ui/package.json) | `dependencies.@angular/core` = `~22.2.3` |
 | rancher/dashboard | [`package.json`](https://github.com/rancher/dashboard/blob/054adb23ab7637bd9e8f402580c3e29c0bb2221d/package.json) | `devDependencies.vue` = `3.5.42` |
+| reactjs/react.dev | [`package.json`](https://github.com/reactjs/react.dev/blob/46a54e0592729712b7640308b53268e84fdc7c9f/package.json) | `dependencies.next` = `15.1.12` · `dependencies.react` = `^19.0.0` |
+| RocketChat/Rocket.Chat | [`apps/meteor/package.json`](https://github.com/RocketChat/Rocket.Chat/blob/634add4e423bcb67c96d0669df3ff1ca89acbdb6/apps/meteor/package.json) | `dependencies.react` = `~19.2.8` |
+| single-spa/single-spa.js.org | [`package.json`](https://github.com/single-spa/single-spa.js.org/blob/7c8b48ee7bd0fd08451be50d6cee4addb6401a22/package.json) | `dependencies.@docusaurus/core` = `^3.1.1` · `dependencies.react` = `^18.2.0` |
+| strapi/strapi | [`packages/core/admin/package.json`](https://github.com/strapi/strapi/blob/859ca95a886d52535ef9ffb1997ad872ea57e4dd/packages/core/admin/package.json) | `devDependencies.react` = `18.3.1` |
 | supabase/supabase | [`apps/studio/package.json`](https://github.com/supabase/supabase/blob/85838961148f00f336d38e87d6763f14f8da1746/apps/studio/package.json) | `dependencies.next` = `catalog:` · [workspace catalog](https://github.com/supabase/supabase/blob/85838961148f00f336d38e87d6763f14f8da1746/pnpm-workspace.yaml) sets `^16.4.3` |
 | sveltejs/svelte.dev | [`apps/svelte.dev/package.json`](https://github.com/sveltejs/svelte.dev/blob/9c9ba30d6709482d57946a5b961020a306efd003/apps/svelte.dev/package.json) | `devDependencies.@sveltejs/kit` = `catalog:` · [workspace catalog](https://github.com/sveltejs/svelte.dev/blob/9c9ba30d6709482d57946a5b961020a306efd003/pnpm-workspace.yaml) sets `^3.4.0` |
+| tauri-apps/tauri-docs | [`package.json`](https://github.com/tauri-apps/tauri-docs/blob/bbdfde76a5ccfae2f2605f51be3d204b60aa82cc/package.json) | `dependencies.astro` = `7.4.13` |
 | thingsboard/thingsboard | [`ui-ngx/package.json`](https://github.com/thingsboard/thingsboard/blob/d39bcf650ed7aefd84267b7ec452b743cb7a3def/ui-ngx/package.json) | `dependencies.@angular/core` = `20.3.34` |
 | tiny-craft/tiny-rdm | [`frontend/package.json`](https://github.com/tiny-craft/tiny-rdm/blob/4ddb94a3c55f3401dbc66870f0d21cf0d6203cbc/frontend/package.json) | `dependencies.vue` = `^3.5.39` |
 | tryghost/ghost | [`apps/admin/package.json`](https://github.com/tryghost/ghost/blob/3f5cd56f03ce08501ef6cc4533f2b35d3b2585e7/apps/admin/package.json) | `dependencies.react` = `catalog:` · [workspace catalog](https://github.com/tryghost/ghost/blob/3f5cd56f03ce08501ef6cc4533f2b35d3b2585e7/pnpm-workspace.yaml) sets `18.3.1` · `devDependencies.vite` = `catalog:` · [workspace catalog](https://github.com/tryghost/ghost/blob/3f5cd56f03ce08501ef6cc4533f2b35d3b2585e7/pnpm-workspace.yaml) sets `8.1.6` |
 | twentyhq/twenty | [`packages/twenty-front/package.json`](https://github.com/twentyhq/twenty/blob/80544b9b12a15cc8df13a15f18012fe86c77411e/packages/twenty-front/package.json) | `dependencies.react` = `^19.2.0` |
+| usebruno/bruno | [`packages/bruno-app/package.json`](https://github.com/usebruno/bruno/blob/c4f1c48e4fa3bca183cb49a2e0921df860dd39ea/packages/bruno-app/package.json) | `dependencies.react` = `19.0.0` |
+| vitejs/vite | [`docs/package.json`](https://github.com/vitejs/vite/blob/e16ca5a13d74dddd005763df9d4db9fa01c74a4d/docs/package.json) | `devDependencies.vitepress` = `^2.0.0-alpha.21` |
+| webdriverio/webdriverio | [`website/package.json`](https://github.com/webdriverio/webdriverio/blob/cfd6c6b2957b3bc92f65cdaa32cc635ee89f8173/website/package.json) | `dependencies.@docusaurus/core` = `^3.10.2` · `dependencies.react` = `^18.3.1` |
 | withastro/astro.build | [`package.json`](https://github.com/withastro/astro.build/blob/5ba3fc8d87e53bc360a26bf039a5922fda6b4352/package.json) | `dependencies.astro` = `^7.4.13` |
 | withastro/docs | [`package.json`](https://github.com/withastro/docs/blob/eeead30f4417db26e329ba6c15034eae514c3b47/package.json) | `devDependencies.astro` = `^7.4.2` |
 | withastro/starlight | [`docs/package.json`](https://github.com/withastro/starlight/blob/2d241b028eaed4e96e6343799c1950529e52d5bb/docs/package.json) | `dependencies.astro` = `^7.3.6` |
