@@ -1,0 +1,385 @@
+[
+  {
+    "row": [
+      "tsc-watch",
+      "6.3.1",
+      "7.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@mermaid-js/layout-elk",
+      "0.1.0",
+      "1.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "imports-loader",
+      "4.0.1",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@docusaurus/theme-mermaid",
+      "2.4.3",
+      "3.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": "^16.8.4 || ^17.0.0",
+        "b": "^18.0.0",
+        "before": "16.14.0",
+        "after": "18.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "expose-loader",
+      "4.1.0",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vite-plugin-lib-inject-css",
+      "1.3.0",
+      "2.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "24.0.0",
+      "25.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "24.0.0",
+      "26.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "25.0.0",
+      "26.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "12.3.0",
+      "13.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "13.3.0",
+      "14.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "14.7.1",
+      "15.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "15.1.0",
+      "16.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "16.1.0",
+      "17.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "17.0.1",
+      "18.0.0"
+    ],
+    "report": [
+      "hookz-document-title",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "18.0.1",
+      "19.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "19.2.0",
+      "20.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "20.1.0",
+      "21.0.0"
+    ],
+    "report": [
+      "hookz-public-root",
+      {
+        "held": "cjs/index"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "21.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "hookz-public-root",
+      {
+        "held": "dist/index"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "22.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "hookz-safe-state",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@react-hookz/web",
+      "23.1.0",
+      "24.0.0"
+    ],
+    "report": [
+      "hookz-esm-package",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@babel/plugin-proposal-throw-expressions",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@module-federation/utilities",
+      "0.5.0",
+      "1.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@module-federation/utilities",
+      "1.9.1",
+      "2.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@module-federation/utilities",
+      "2.0.7",
+      "3.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "csp-header",
+      "5.2.1",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.48.2",
+      "1.49.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.49.1",
+      "1.50.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.54.2",
+      "1.55.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.55.1",
+      "1.56.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.56.1",
+      "1.57.0"
+    ],
+    "report": [
+      "ct-aria-snapshot",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.57.0",
+      "1.58.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.58.2",
+      "1.59.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/experimental-ct-react17",
+      "1.59.1",
+      "1.60.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "stylelint-media-use-custom-media",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": "10 - 15",
+        "b": ">=16",
+        "before": "14.16.1",
+        "after": "16.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint-selector-tag-no-without-class",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "stylelint",
+        "a": ">= 9.x < 17",
+        "b": ">=17",
+        "before": "14.16.1",
+        "after": "17.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "creevey",
+      "0.10.35",
+      "0.10.36"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "unplugin-detect-duplicated-deps",
+      "1.0.0",
+      "2.0.0"
+    ],
+    "report": null
+  }
+]

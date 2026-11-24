@@ -1,0 +1,9 @@
+{
+  "name": "deploom-ct-accessibility",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "before": "npm:@playwright/experimental-ct-react17@1.56.1",
+    "after": "npm:@playwright/experimental-ct-react17@1.57.0"
+  }
+}

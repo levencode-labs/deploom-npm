@@ -1,0 +1,24 @@
+{
+  "@react-hookz/web": {
+    "documentTitle": [
+      "cjs/index\\.d\\.ts",
+      "(?m)^export[^\\r\\n]*\\buseDocumentTitle\\b"
+    ],
+    "safeState": [
+      "(?:cjs|dist)/index\\.d\\.ts",
+      "(?m)^export[^\\r\\n]*\\buseSafeState\\b"
+    ],
+    "cjsEntry": [
+      "cjs/index\\.js",
+      ""
+    ],
+    "distEntry": [
+      "dist/index\\.js",
+      ""
+    ],
+    "debounced": [
+      "(?:cjs|dist)/index\\.d\\.ts",
+      "(?m)^export[^\\r\\n]*\\buseDebouncedCallback\\b"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+  "claims": [
+    {
+      "package": "imports-loader",
+      "from": "4.0.1",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@docusaurus/theme-mermaid",
+      "from": "2.4.3",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "expose-loader",
+      "from": "4.1.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@react-hookz/web",
+      "from": "17.0.1",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@react-hookz/web",
+      "from": "20.1.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@react-hookz/web",
+      "from": "21.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@react-hookz/web",
+      "from": "22.0.0",
+      "to": "23.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@react-hookz/web",
+      "from": "23.1.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-proposal-throw-expressions",
+      "from": "7.29.7",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "csp-header",
+      "from": "5.2.1",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@playwright/experimental-ct-react17",
+      "from": "1.56.1",
+      "to": "1.57.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint-media-use-custom-media",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint-selector-tag-no-without-class",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    }
+  ]
+}
