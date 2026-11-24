@@ -1,0 +1,1358 @@
+[
+  {
+    "row": [
+      "happy-dom",
+      "16.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18.0.0",
+        "b": ">=20.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "16.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "16.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "16.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "17.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18.0.0",
+        "b": ">=20.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "17.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "17.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "17.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "18.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "18.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "18.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "19.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "happy-dom-no-script-default",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "19.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "happy-dom-no-script-default",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "20.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "happy-dom-no-css-default",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "copy-webpack-plugin",
+      "12.0.0",
+      "13.0.0"
+    ],
+    "report": [
+      "copy-webpack-glob-engine",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "copy-webpack-plugin",
+      "12.0.0",
+      "14.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">= 18.12.0",
+        "b": ">= 20.9.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "copy-webpack-plugin",
+      "13.0.0",
+      "14.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">= 18.12.0",
+        "b": ">= 20.9.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">= 10.13",
+        "b": ">= 20"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "15.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "15.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "15.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "15.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "16.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "16.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "16.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">= 16.8 || 18.0.0",
+        "b": ">= 18",
+        "before": "17.0.2",
+        "after": "18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "17.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "dropzone-file-type",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "17.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "dropzone-file-type",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "17.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": ">= 20",
+        "b": ">= 22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "18.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "dropzone-partial-batch",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "18.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": ">= 20",
+        "b": ">= 22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dropzone",
+      "19.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": ">= 20",
+        "b": ">= 22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react-vite",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^9.0.0",
+        "before": "8.0.0",
+        "after": "9.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react-vite",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^10.0.0",
+        "before": "8.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react-vite",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "storybook",
+        "a": "^9.0.0",
+        "b": "^10.0.0",
+        "before": "9.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "1.0.0",
+      "2.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "2.0.0",
+        "before": "1.0.0",
+        "after": "2.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "1.0.0",
+      "3.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "3.0.0",
+        "before": "1.0.0",
+        "after": "3.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "1.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "4.0.0",
+        "before": "1.0.0",
+        "after": "4.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "1.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "5.0.0",
+        "before": "1.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "2.0.0",
+      "3.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "2.0.0",
+        "b": "3.0.0",
+        "before": "2.0.0",
+        "after": "3.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "2.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "2.0.0",
+        "b": "4.0.0",
+        "before": "2.0.0",
+        "after": "4.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "2.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "2.0.0",
+        "b": "5.0.0",
+        "before": "2.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "3.0.0",
+        "b": "4.0.0",
+        "before": "3.0.0",
+        "after": "4.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "3.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "3.0.0",
+        "b": "5.0.0",
+        "before": "3.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/ui",
+      "4.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "4.0.0",
+        "b": "5.0.0",
+        "before": "4.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "18.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "sinon-fake-all-timers",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "18.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "sinon-fake-all-timers",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "18.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "sinon-fake-all-timers",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "18.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "sinon-fake-all-timers",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "19.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "sinon-fake-xhr",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "19.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "sinon-fake-xhr",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "19.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "sinon-fake-xhr",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "20.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "sinon-assert-error",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "20.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "sinon-assert-error",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sinon",
+      "21.0.0",
+      "22.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "22.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "puppeteer-browser-option",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "22.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "puppeteer-browser-option",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "22.0.0",
+      "25.0.2"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "23.0.0",
+      "24.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "puppeteer",
+      "23.0.0",
+      "25.0.2"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "puppeteer",
+      "24.0.0",
+      "25.0.2"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "webpack-cli",
+      "6.0.0",
+      "7.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": "^5.82.0",
+        "b": "^5.101.0",
+        "before": "5.82.0",
+        "after": "5.101.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18.12.0",
+        "b": ">=20.19.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint",
+      "16.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18.12.0",
+        "b": "^22.22.2 || ^24.15.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "stylelint",
+      "17.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.19.0",
+        "a": ">=20.19.0",
+        "b": "^22.22.2 || ^24.15.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "3.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": ">=4.40.0",
+        "b": ">=5.0.0",
+        "before": "4.47.0",
+        "after": "5.101.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "3.0.0",
+      "11.8.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": ">=4.40.0",
+        "b": ">=5.1.0",
+        "before": "4.47.0",
+        "after": "5.101.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "4.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": ">=4.40.0",
+        "b": ">=5.0.0",
+        "before": "4.47.0",
+        "after": "5.101.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "4.0.0",
+      "11.8.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": ">=4.40.0",
+        "b": ">=5.1.0",
+        "before": "4.47.0",
+        "after": "5.101.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/webpack-plugin",
+      "5.0.0",
+      "11.8.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">= 14",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@commitlint/cli",
+      "19.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "commitlint-url-lines",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@commitlint/cli",
+      "19.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=v18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@commitlint/cli",
+      "20.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=v18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@commitlint/config-conventional",
+      "19.0.0",
+      "20.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@commitlint/config-conventional",
+      "19.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=v18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@commitlint/config-conventional",
+      "20.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=v18",
+        "b": ">=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "18.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@swc-node/register",
+        "a": "^1.6.7",
+        "b": "^1.8.0",
+        "before": "1.6.7",
+        "after": "1.8.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "18.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@swc-node/register",
+        "a": "^1.6.7",
+        "b": "^1.8.0",
+        "before": "1.6.7",
+        "after": "1.8.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "18.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "18.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "18.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "18.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "nx-affected-tasks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "19.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "nx-workspace-data",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "19.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "19.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "19.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "19.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "nx-affected-tasks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "20.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "20.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "20.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "nx-custom-task-runners",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "20.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "nx-affected-tasks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "21.0.0",
+      "22.0.0"
+    ],
+    "report": [
+      "nx-create-nodes-v2",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "21.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@swc/core",
+        "a": "^1.3.85",
+        "b": "^1.15.8",
+        "before": "1.3.85",
+        "after": "1.15.8"
+      }
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "21.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "nx-affected-tasks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "22.0.0",
+      "23.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@swc/core",
+        "a": "^1.3.85",
+        "b": "^1.15.8",
+        "before": "1.3.85",
+        "after": "1.15.8"
+      }
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "22.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "nx-affected-tasks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "nx",
+      "23.0.0",
+      "24.0.0"
+    ],
+    "report": [
+      "nx-affected-tasks",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-a11y",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^9.0.0",
+        "before": "8.0.0",
+        "after": "9.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-a11y",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^10.0.0",
+        "before": "8.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  }
+]
