@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "2c0c154e63a785aba052a78fc7b9956c26bdb94c3fddffca76a653a4876e223b",
+  "claims": [
+    {
+      "package": "@faker-js/faker",
+      "from": "7.6.0",
+      "to": "9.8.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

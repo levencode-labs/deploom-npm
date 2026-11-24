@@ -1,0 +1,8 @@
+{
+  "name": "fixture-faker9-bounded-integers-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@faker-js/faker": "7.6.0"
+  }
+}
