@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "b86a42cbf8164f44c9b657e24619e9c2090d524a513311169b728af1e3212b04",
+  "claims": [
+    {
+      "package": "react-router-dom",
+      "from": "6.30.3",
+      "to": "7.18.4",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
