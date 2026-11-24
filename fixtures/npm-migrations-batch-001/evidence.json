@@ -1,0 +1,635 @@
+{
+  "fixtureSha256": "992af1f4c280aa6f1e3e453fac8dbc38aedcbd936eb6ebd5b0a8068347bd084f",
+  "claims": [
+    {
+      "package": "commander",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "commander",
+      "from": "12.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "commander",
+      "from": "12.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "commander",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "commander",
+      "from": "13.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "commander",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/node",
+      "from": "22.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/node",
+      "from": "22.0.0",
+      "to": "25.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/node",
+      "from": "22.0.0",
+      "to": "26.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/node",
+      "from": "24.0.0",
+      "to": "25.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/node",
+      "from": "24.0.0",
+      "to": "26.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/node",
+      "from": "25.0.0",
+      "to": "26.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "glob",
+      "from": "11.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "glob",
+      "from": "11.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "glob",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "glob",
+      "from": "12.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "10.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "10.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "10.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "11.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "11.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "11.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "12.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "esbuild",
+      "from": "0.21.5",
+      "to": "0.22.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "esbuild",
+      "from": "0.22.0",
+      "to": "0.23.0",
+      "check": "build",
+      "outcome": "passed"
+    },
+    {
+      "package": "esbuild",
+      "from": "0.24.2",
+      "to": "0.25.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "esbuild",
+      "from": "0.26.0",
+      "to": "0.27.0",
+      "check": "build",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "14.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "14.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "15.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "globals",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "path-to-regexp",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "path-to-regexp",
+      "from": "7.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "path-to-regexp",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "dotenv",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "6.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@typescript-eslint/eslint-plugin",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "content-disposition",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "content-disposition",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "content-disposition",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@typescript-eslint/parser",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "chai",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "25.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "26.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "27.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "28.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "23.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "25.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "26.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "27.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "28.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "24.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "25.0.0",
+      "to": "26.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "25.0.0",
+      "to": "27.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "25.0.0",
+      "to": "28.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "25.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "25.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "25.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "26.0.0",
+      "to": "27.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "26.0.0",
+      "to": "28.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "26.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "26.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "26.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "27.0.0",
+      "to": "28.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "27.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "27.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "27.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "28.0.0",
+      "to": "29.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "28.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "28.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "29.0.0",
+      "to": "30.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "29.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsdom",
+      "from": "30.0.0",
+      "to": "31.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "1.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "1.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vitest",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

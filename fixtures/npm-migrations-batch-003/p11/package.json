@@ -1,0 +1,10 @@
+{
+  "name": "deploom-migration-commitlint-cli",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-19-0-0": "npm:@commitlint/cli@19.0.0",
+    "v-20-0-0": "npm:@commitlint/cli@20.0.0",
+    "v-21-0-0": "npm:@commitlint/cli@21.0.0"
+  }
+}

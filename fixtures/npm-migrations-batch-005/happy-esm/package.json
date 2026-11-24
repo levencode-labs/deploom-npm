@@ -1,0 +1,9 @@
+{
+  "name": "deploom-happy-dom-esm",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "old-happy": "npm:happy-dom@9.20.3",
+    "new-happy": "npm:happy-dom@10.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "deploom-migration-sinon",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-18-0-0": "npm:sinon@18.0.0",
+    "v-19-0-0": "npm:sinon@19.0.0",
+    "v-20-0-0": "npm:sinon@20.0.0",
+    "v-21-0-0": "npm:sinon@21.0.0",
+    "v-22-0-0": "npm:sinon@22.0.0"
+  }
+}

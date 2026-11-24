@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-typescript-eslint-parser",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-7-0-0": "npm:@typescript-eslint/parser@7.0.0",
+    "v-8-0-0": "npm:@typescript-eslint/parser@8.0.0"
+  }
+}

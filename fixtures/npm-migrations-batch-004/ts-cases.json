@@ -1,0 +1,73 @@
+{
+  "4.6.2": {
+    "before": "class Person { value=1; method(){return 1} } function f<T extends Person>(v:T){const {value,...rest}=v;return rest.method()}",
+    "after": "class Person { value=1; method(){return 1} } function f<T extends Person>(v:T){return v.method()}",
+    "error": 2339,
+    "condition": "A generic object rest binding drops class methods.",
+    "action": "Invoke methods on the original object before or instead of destructuring."
+  },
+  "4.7.2": {
+    "before": "declare namespace JSX {interface IntrinsicElements {div: any} } declare const x: unknown; const elem=<div {...x}/>;",
+    "after": "declare namespace JSX {interface IntrinsicElements {div: any} } declare const x: unknown; const elem=<div {...(typeof x==='object' && x!==null ? x : {})}/>;",
+    "extension": ".tsx",
+    "error": 2698,
+    "condition": "JSX spreads a value typed as unknown.",
+    "action": "Narrow the value to a non-null object before spreading it."
+  },
+  "4.8.2": {
+    "before": "function f<T>(v:T){ const x: {} = v; return x; }",
+    "after": "function f<T extends {}>(v:T){ const x: {} = v; return x; }",
+    "error": 2322,
+    "condition": "An unconstrained type parameter is assigned to an object-shaped type with strict null checking.",
+    "action": "Add a non-null constraint or narrow the input before the assignment."
+  },
+  "4.9.3": {
+    "before": "export function f(value: number){ return value === NaN; }",
+    "after": "export function f(value: number){ return Number.isNaN(value); }",
+    "error": 2845,
+    "condition": "The source compares a value to NaN.",
+    "action": "Use Number.isNaN on the value."
+  },
+  "5.0.2": {
+    "before": "export function f(value: number | string){ return value > 0; }",
+    "after": "export function f(value: number | string){ return Number(value) > 0; }",
+    "error": 2365,
+    "condition": "A relational operator compares a number-or-string union directly with a number.",
+    "action": "Validate and normalize the input to a number before comparing."
+  },
+  "5.2.2": {
+    "before": "export const value=1;",
+    "after": "export const value=1;",
+    "originalOptions": {
+      "module": "esnext",
+      "moduleResolution": "node16"
+    },
+    "updatedOptions": {
+      "module": "node16",
+      "moduleResolution": "node16"
+    },
+    "error": 5110,
+    "condition": "The compiler config uses moduleResolution Node16 with a different module mode.",
+    "action": "Match the module and moduleResolution options to Node16."
+  },
+  "5.3.2": {
+    "before": "class Base { value = 0; } class Derived extends Base { go(){return super.value;} }",
+    "after": "class Base { value = 0; } class Derived extends Base { go(){return this.value;} }",
+    "error": 2855,
+    "condition": "Subclass code accesses a superclass instance field through super.",
+    "action": "Access the field through the instance or expose behavior through a superclass method."
+  },
+  "6.0.2": {
+    "before": "export const value=1;",
+    "after": "export const value=1;",
+    "originalOptions": {
+      "target": "es5"
+    },
+    "updatedOptions": {
+      "target": "es2015"
+    },
+    "error": 5107,
+    "condition": "The build targets ES5 with the compiler configuration.",
+    "action": "Choose a supported target such as ES2015 after checking the deployment runtime."
+  }
+}

@@ -1,0 +1,2075 @@
+{
+  "schema": 2,
+  "records": [
+    {
+      "schema": 2,
+      "id": "batch006-postcss-preset-env-10.0.0-11.0.0",
+      "kind": "breaking-change",
+      "package": "postcss-preset-env",
+      "fromMajor": 10,
+      "toMajor": 11,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "10.0.0",
+          "to": "11.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under >=18. The target excludes it under >=20.19.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.19.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.19.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "postcss-preset-env",
+          "from": "10.0.0",
+          "to": "11.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-postcss-preset-env-7.8.3-8.0.0",
+      "kind": "breaking-change",
+      "package": "postcss-preset-env",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.8.3",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 12.22.12 under ^12 || ^14 || >=16. The target excludes it under ^14 || ^16 || >=18.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside ^14 || ^16 || >=18."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in ^14 || ^16 || >=18 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "postcss-preset-env",
+          "from": "7.8.3",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-postcss-preset-env-9.6.0-10.0.0",
+      "kind": "breaking-change",
+      "package": "postcss-preset-env",
+      "fromMajor": 9,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "9.6.0",
+          "to": "10.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under ^14 || ^16 || >=18. The target excludes it under >=18.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=18."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=18 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "postcss-preset-env",
+          "from": "9.6.0",
+          "to": "10.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-rollup-plugin-visualizer-6.0.0-7.0.0",
+      "kind": "breaking-change",
+      "package": "rollup-plugin-visualizer",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.0",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under >=18. The target excludes it under >=22.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=22."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=22 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "rollup-plugin-visualizer",
+          "from": "6.0.0",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-types-mocha-9.1.1-10.0.0",
+      "kind": "breaking-change",
+      "package": "@types/mocha",
+      "fromMajor": 9,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "9.1.1",
+          "to": "10.0.0"
+        }
+      ],
+      "title": "Check the declared TypeScript support floor",
+      "summary": "The exact releases declare TypeScript support floors 3.9 and 4.1.",
+      "conditions": [
+        "The owning TypeScript compiler is older than the target's declared support floor 4.1."
+      ],
+      "actions": [
+        "Before upgrading the declarations, confirm the compiler can be raised to at least 4.1. Otherwise keep a compatible declarations version."
+      ],
+      "verification": [
+        "Run the project typecheck with the chosen compiler and target declarations."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@types/mocha",
+          "from": "9.1.1",
+          "to": "10.0.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-storybook-addon-links-9.0.0-10.0.0",
+      "kind": "breaking-change",
+      "package": "@storybook/addon-links",
+      "fromMajor": 9,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "9.0.0",
+          "to": "10.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for storybook changes from ^9.0.0 to ^10.0.0. Holding 9.0.0 is incompatible with the target, while 10.0.0 satisfies it.",
+      "conditions": [
+        "The workspace retains storybook at 9.0.0 or another version outside ^10.0.0."
+      ],
+      "actions": [
+        "Align storybook with ^10.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@storybook/addon-links",
+          "from": "9.0.0",
+          "to": "10.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-sentry-vite-plugin-3.0.0-11.8.0",
+      "kind": "breaking-change",
+      "package": "@sentry/vite-plugin",
+      "fromMajor": 3,
+      "toMajor": 11,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "11.8.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under >= 14. The target excludes it under >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@sentry/vite-plugin",
+          "from": "3.0.0",
+          "to": "11.8.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-sentry-vite-plugin-4.0.0-11.8.0",
+      "kind": "breaking-change",
+      "package": "@sentry/vite-plugin",
+      "fromMajor": 4,
+      "toMajor": 11,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "11.8.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under >= 14. The target excludes it under >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@sentry/vite-plugin",
+          "from": "4.0.0",
+          "to": "11.8.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-sentry-vite-plugin-5.0.0-11.8.0",
+      "kind": "breaking-change",
+      "package": "@sentry/vite-plugin",
+      "fromMajor": 5,
+      "toMajor": 11,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "11.8.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under >= 14. The target excludes it under >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@sentry/vite-plugin",
+          "from": "5.0.0",
+          "to": "11.8.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-types-react-test-renderer-18.3.0-19.0.0",
+      "kind": "breaking-change",
+      "package": "@types/react-test-renderer",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.3.0",
+          "to": "19.0.0"
+        }
+      ],
+      "title": "Check the declared TypeScript support floor",
+      "summary": "The exact releases declare TypeScript support floors 4.7 and 5.0.",
+      "conditions": [
+        "The owning TypeScript compiler is older than the target's declared support floor 5.0."
+      ],
+      "actions": [
+        "Before upgrading the declarations, confirm the compiler can be raised to at least 5.0. Otherwise keep a compatible declarations version."
+      ],
+      "verification": [
+        "Run the project typecheck with the chosen compiler and target declarations."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@types/react-test-renderer",
+          "from": "18.3.0",
+          "to": "19.0.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-jotai-1.13.1-2.0.0",
+      "kind": "breaking-change",
+      "package": "jotai",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.13.1",
+          "to": "2.0.0"
+        }
+      ],
+      "title": "Initialize Jotai state in an explicit store",
+      "summary": "The old Provider accepts initialValues. The target removes that option and declares the store prop.",
+      "conditions": [
+        "A Provider uses initialValues to seed atoms for a subtree or request."
+      ],
+      "actions": [
+        "Create a scoped store, seed the relevant atoms through store.set, and pass it to Provider. For hydration inside the tree, check the target's useHydrateAtoms support."
+      ],
+      "verification": [
+        "Verify initial values, isolation between providers and hydration behavior."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "jotai",
+          "from": "1.13.1",
+          "to": "2.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-jotai-2.20.3-3.0.0",
+      "kind": "breaking-change",
+      "package": "jotai",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.20.3",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for @types/react changes from >=17.0.0 to >=18.0.0. Holding 17.0.43 is incompatible with the target, while 18.3.13 satisfies it.",
+      "conditions": [
+        "The workspace retains @types/react at 17.0.43 or another version outside >=18.0.0."
+      ],
+      "actions": [
+        "Align @types/react with >=18.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "jotai",
+          "from": "2.20.3",
+          "to": "3.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-storybook-addon-actions-8.0.0-9.0.0",
+      "kind": "breaking-change",
+      "package": "@storybook/addon-actions",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.0.0",
+          "to": "9.0.0"
+        }
+      ],
+      "title": "Import actions from the Storybook 9 entry point",
+      "summary": "The previous addon-actions root declaration exports action. The target addon root has no public exports.",
+      "conditions": [
+        "A story imports action from @storybook/addon-actions."
+      ],
+      "actions": [
+        "Use the supported Storybook actions entry, storybook/actions, for deliberate action logging. For interaction assertions review fn from storybook/test."
+      ],
+      "verification": [
+        "Typecheck and build Storybook, then verify the action log and interaction tests."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@storybook/addon-actions",
+          "from": "8.0.0",
+          "to": "9.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-stylelint-scss-6.0.0-7.0.0",
+      "kind": "breaking-change",
+      "package": "stylelint-scss",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.0",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under >=18.12.0. The target excludes it under >=20.19.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.19.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.19.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "stylelint-scss",
+          "from": "6.0.0",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-vite-plugin-pwa-0.20.1-0.20.2",
+      "kind": "breaking-change",
+      "package": "vite-plugin-pwa",
+      "fromMajor": 0,
+      "toMajor": 0,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "0.20.1",
+          "to": "0.20.2"
+        }
+      ],
+      "title": "Handle oversized Vite PWA precache assets",
+      "summary": "A local Vite build passes on the source and rejects the target at the same Workbox limit. An explicit larger limit makes the target fixture build pass.",
+      "conditions": [
+        "A service worker precaches generated assets larger than its maximumFileSizeToCacheInBytes setting."
+      ],
+      "actions": [
+        "Identify the oversized asset, then reduce it, exclude it from precache, or explicitly raise the limit if the offline policy requires it."
+      ],
+      "verification": [
+        "Build the target service worker and confirm the intended assets are present in its precache list."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "vite-plugin-pwa",
+          "from": "0.20.1",
+          "to": "0.20.2",
+          "check": "build",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-vite-plugin-pwa-1.0.0-2.0.0",
+      "kind": "breaking-change",
+      "package": "vite-plugin-pwa",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "2.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 16.20.2 under >=16.0.0. The target excludes it under >=20.19.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.19.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.19.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "vite-plugin-pwa",
+          "from": "1.0.0",
+          "to": "2.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-eslint-webpack-plugin-5.0.0-6.0.0",
+      "kind": "breaking-change",
+      "package": "eslint-webpack-plugin",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for eslint changes from ^8.0.0 || ^9.0.0 to ^9.0.0 || ^10.0.0. Holding 8.57.0 is incompatible with the target, while 9.0.0 satisfies it.",
+      "conditions": [
+        "The workspace retains eslint at 8.57.0 or another version outside ^9.0.0 || ^10.0.0."
+      ],
+      "actions": [
+        "Align eslint with ^9.0.0 || ^10.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "eslint-webpack-plugin",
+          "from": "5.0.0",
+          "to": "6.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-eslint-webpack-plugin-3.2.0-4.0.0",
+      "kind": "breaking-change",
+      "package": "eslint-webpack-plugin",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.2.0",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for eslint changes from ^7.0.0 || ^8.0.0 to ^8.0.0. Holding 7.32.0 is incompatible with the target, while 8.57.0 satisfies it.",
+      "conditions": [
+        "The workspace retains eslint at 7.32.0 or another version outside ^8.0.0."
+      ],
+      "actions": [
+        "Align eslint with ^8.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "eslint-webpack-plugin",
+          "from": "3.2.0",
+          "to": "4.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-eslint-webpack-plugin-4.2.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "eslint-webpack-plugin",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.2.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under >= 14.15.0. The target excludes it under >= 18.12.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >= 18.12.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >= 18.12.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "eslint-webpack-plugin",
+          "from": "4.2.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-vite-plugin-dts-2.3.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "vite-plugin-dts",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.3.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Rename the declaration output option to outDir",
+      "summary": "The old vite-plugin-dts options define outputDir. The target removes it and defines outDir.",
+      "conditions": [
+        "The Vite declaration build passes outputDir to vite-plugin-dts."
+      ],
+      "actions": [
+        "Use outDir for the same intended target directory and review the package types entry."
+      ],
+      "verification": [
+        "Build and verify that declaration files land where package consumers resolve them."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "vite-plugin-dts",
+          "from": "2.3.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-vite-plugin-checker-0.14.5-1.0.0",
+      "kind": "breaking-change",
+      "package": "vite-plugin-checker",
+      "fromMajor": 0,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "0.14.5",
+          "to": "1.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 20.19.0 under >=20.19.0. The target excludes it under ^22.22.0 || >=24.11.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside ^22.22.0 || >=24.11.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in ^22.22.0 || >=24.11.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "vite-plugin-checker",
+          "from": "0.14.5",
+          "to": "1.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-madge-7.0.0-8.0.0",
+      "kind": "breaking-change",
+      "package": "madge",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.0.0",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for typescript changes from ^3.9.5 || ^4.9.5 || ^5 to ^5.4.4. Holding 3.9.10 is incompatible with the target, while 5.9.3 satisfies it.",
+      "conditions": [
+        "The workspace retains typescript at 3.9.10 or another version outside ^5.4.4."
+      ],
+      "actions": [
+        "Align typescript with ^5.4.4 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "madge",
+          "from": "7.0.0",
+          "to": "8.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-eslint-plugin-perfectionist-3.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "eslint-plugin-perfectionist",
+      "fromMajor": 3,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under ^18.0.0 || >=20.0.0. The target excludes it under ^20.0.0 || >=22.0.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside ^20.0.0 || >=22.0.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in ^20.0.0 || >=22.0.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "eslint-plugin-perfectionist",
+          "from": "3.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-eslint-plugin-perfectionist-4.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "eslint-plugin-perfectionist",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under ^18.0.0 || >=20.0.0. The target excludes it under ^20.0.0 || >=22.0.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside ^20.0.0 || >=22.0.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in ^20.0.0 || >=22.0.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "eslint-plugin-perfectionist",
+          "from": "4.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-mobx-react-9.2.2-10.0.0",
+      "kind": "breaking-change",
+      "package": "mobx-react",
+      "fromMajor": 9,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "9.2.2",
+          "to": "10.0.0"
+        }
+      ],
+      "title": "Replace MobX React's removed Provider export",
+      "summary": "The old package declares Provider. The target removes that export and retains observer.",
+      "conditions": [
+        "Components import Provider from mobx-react to share stores."
+      ],
+      "actions": [
+        "Expose the stores through a React context owned by the application and update affected consumers. Align the MobX peer range separately."
+      ],
+      "verification": [
+        "Typecheck and test store wiring and observed updates for affected components."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "mobx-react",
+          "from": "9.2.2",
+          "to": "10.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-hello-pangea-dnd-16.6.0-17.0.0",
+      "kind": "breaking-change",
+      "package": "@hello-pangea/dnd",
+      "fromMajor": 16,
+      "toMajor": 17,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "16.6.0",
+          "to": "17.0.0"
+        }
+      ],
+      "title": "Remove the legacy drag-and-drop server context reset",
+      "summary": "The old package declares resetServerContext. The target removes that symbol and retains DragDropContext.",
+      "conditions": [
+        "Server rendering calls resetServerContext from @hello-pangea/dnd."
+      ],
+      "actions": [
+        "Use the upgraded React 18-compatible integration without the old reset call, keeping SSR request state isolated."
+      ],
+      "verification": [
+        "Render and hydrate an affected drag-and-drop view and check for ID mismatches."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@hello-pangea/dnd",
+          "from": "16.6.0",
+          "to": "17.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-storybook-react-webpack5-8.0.0-9.0.0",
+      "kind": "breaking-change",
+      "package": "@storybook/react-webpack5",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.0.0",
+          "to": "9.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under >=18.0.0. The target excludes it under >=20.0.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=20.0.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=20.0.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@storybook/react-webpack5",
+          "from": "8.0.0",
+          "to": "9.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-storybook-react-webpack5-9.0.0-10.0.0",
+      "kind": "breaking-change",
+      "package": "@storybook/react-webpack5",
+      "fromMajor": 9,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "9.0.0",
+          "to": "10.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for storybook changes from ^9.0.0 to ^10.0.0. Holding 9.0.0 is incompatible with the target, while 10.0.0 satisfies it.",
+      "conditions": [
+        "The workspace retains storybook at 9.0.0 or another version outside ^10.0.0."
+      ],
+      "actions": [
+        "Align storybook with ^10.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@storybook/react-webpack5",
+          "from": "9.0.0",
+          "to": "10.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-storybook-react-webpack5-7.6.17-8.0.0",
+      "kind": "breaking-change",
+      "package": "@storybook/react-webpack5",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.6.17",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for typescript changes from * to >= 4.2.x. Holding 3.9.10 is incompatible with the target, while 4.9.5 satisfies it.",
+      "conditions": [
+        "The workspace retains typescript at 3.9.10 or another version outside >= 4.2.x."
+      ],
+      "actions": [
+        "Align typescript with >= 4.2.x in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@storybook/react-webpack5",
+          "from": "7.6.17",
+          "to": "8.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-syncpack-12.0.0-13.0.0",
+      "kind": "breaking-change",
+      "package": "syncpack",
+      "fromMajor": 12,
+      "toMajor": 13,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "12.0.0",
+          "to": "13.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 16.20.2 under >=16. The target excludes it under >=18.18.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=18.18.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=18.18.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "syncpack",
+          "from": "12.0.0",
+          "to": "13.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-syncpack-12.0.0-14.0.0",
+      "kind": "breaking-change",
+      "package": "syncpack",
+      "fromMajor": 12,
+      "toMajor": 14,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "12.0.0",
+          "to": "14.0.0"
+        }
+      ],
+      "title": "Replace the legacy Syncpack list-mismatches command",
+      "summary": "The exact source accepts help for list-mismatches. The target rejects that command and accepts help for lint.",
+      "conditions": [
+        "Package scripts or CI call syncpack list-mismatches."
+      ],
+      "actions": [
+        "Use syncpack lint for its version and range checks. Review the target's CLI filters and output before forwarding old flags."
+      ],
+      "verification": [
+        "Run the package consistency job on the real manifests and confirm its exit status is handled."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "syncpack",
+          "from": "12.0.0",
+          "to": "14.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-syncpack-12.0.0-15.0.0",
+      "kind": "breaking-change",
+      "package": "syncpack",
+      "fromMajor": 12,
+      "toMajor": 15,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "12.0.0",
+          "to": "15.0.0"
+        }
+      ],
+      "title": "Replace the legacy Syncpack list-mismatches command",
+      "summary": "The exact source accepts help for list-mismatches. The target rejects that command and accepts help for lint.",
+      "conditions": [
+        "Package scripts or CI call syncpack list-mismatches."
+      ],
+      "actions": [
+        "Use syncpack lint for its version and range checks. Review the target's CLI filters and output before forwarding old flags."
+      ],
+      "verification": [
+        "Run the package consistency job on the real manifests and confirm its exit status is handled."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "syncpack",
+          "from": "12.0.0",
+          "to": "15.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-syncpack-13.0.0-14.0.0",
+      "kind": "breaking-change",
+      "package": "syncpack",
+      "fromMajor": 13,
+      "toMajor": 14,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "13.0.0",
+          "to": "14.0.0"
+        }
+      ],
+      "title": "Replace the legacy Syncpack list-mismatches command",
+      "summary": "The exact source accepts help for list-mismatches. The target rejects that command and accepts help for lint.",
+      "conditions": [
+        "Package scripts or CI call syncpack list-mismatches."
+      ],
+      "actions": [
+        "Use syncpack lint for its version and range checks. Review the target's CLI filters and output before forwarding old flags."
+      ],
+      "verification": [
+        "Run the package consistency job on the real manifests and confirm its exit status is handled."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "syncpack",
+          "from": "13.0.0",
+          "to": "14.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-syncpack-13.0.0-15.0.0",
+      "kind": "breaking-change",
+      "package": "syncpack",
+      "fromMajor": 13,
+      "toMajor": 15,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "13.0.0",
+          "to": "15.0.0"
+        }
+      ],
+      "title": "Replace the legacy Syncpack list-mismatches command",
+      "summary": "The exact source accepts help for list-mismatches. The target rejects that command and accepts help for lint.",
+      "conditions": [
+        "Package scripts or CI call syncpack list-mismatches."
+      ],
+      "actions": [
+        "Use syncpack lint for its version and range checks. Review the target's CLI filters and output before forwarding old flags."
+      ],
+      "verification": [
+        "Run the package consistency job on the real manifests and confirm its exit status is handled."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "syncpack",
+          "from": "13.0.0",
+          "to": "15.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-types-big.js-6.2.2-7.0.0",
+      "kind": "breaking-change",
+      "package": "@types/big.js",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.2.2",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Check the declared TypeScript support floor",
+      "summary": "The exact releases declare TypeScript support floors 4.5 and 5.3.",
+      "conditions": [
+        "The owning TypeScript compiler is older than the target's declared support floor 5.3."
+      ],
+      "actions": [
+        "Before upgrading the declarations, confirm the compiler can be raised to at least 5.3. Otherwise keep a compatible declarations version."
+      ],
+      "verification": [
+        "Run the project typecheck with the chosen compiler and target declarations."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@types/big.js",
+          "from": "6.2.2",
+          "to": "7.0.0",
+          "check": "typecheck",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-chai-as-promised-7.1.2-8.0.0",
+      "kind": "breaking-change",
+      "package": "chai-as-promised",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.1.2",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Load Chai as Promised through ESM",
+      "summary": "A CommonJS-only loader accepts the source and rejects the target with ERR_REQUIRE_ESM. An ESM import registers the plugin and passes a promise assertion.",
+      "conditions": [
+        "The test setup uses require('chai-as-promised') in a loader without synchronous ESM support."
+      ],
+      "actions": [
+        "Import the plugin through ESM, or use an async import in the test initialization and register it with chai.use."
+      ],
+      "verification": [
+        "Run the promise assertions through the project's real test runner."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "chai-as-promised",
+          "from": "7.1.2",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-react-resize-detector-10.0.0-12.0.0",
+      "kind": "breaking-change",
+      "package": "react-resize-detector",
+      "fromMajor": 10,
+      "toMajor": 12,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "10.0.0",
+          "to": "12.0.0"
+        }
+      ],
+      "title": "Adapt CommonJS loader use of React Resize Detector",
+      "summary": "The old bundle exposes a CommonJS entry. The target publishes a module entry with the useResizeDetector ESM export and no separate require condition.",
+      "conditions": [
+        "A script or test runner loads react-resize-detector with CommonJS require in an environment that cannot require ESM."
+      ],
+      "actions": [
+        "Load the package through ESM or a compatible async import, and confirm the test runner transforms the target module if needed."
+      ],
+      "verification": [
+        "Run the component and resize tests through the actual app and test loaders."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "react-resize-detector",
+          "from": "10.0.0",
+          "to": "12.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-react-resize-detector-11.0.1-12.0.0",
+      "kind": "breaking-change",
+      "package": "react-resize-detector",
+      "fromMajor": 11,
+      "toMajor": 12,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "11.0.1",
+          "to": "12.0.0"
+        }
+      ],
+      "title": "Adapt CommonJS loader use of React Resize Detector",
+      "summary": "The old bundle exposes a CommonJS entry. The target publishes a module entry with the useResizeDetector ESM export and no separate require condition.",
+      "conditions": [
+        "A script or test runner loads react-resize-detector with CommonJS require in an environment that cannot require ESM."
+      ],
+      "actions": [
+        "Load the package through ESM or a compatible async import, and confirm the test runner transforms the target module if needed."
+      ],
+      "verification": [
+        "Run the component and resize tests through the actual app and test loaders."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "react-resize-detector",
+          "from": "11.0.1",
+          "to": "12.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-docusaurus-core-2.4.3-3.0.0",
+      "kind": "breaking-change",
+      "package": "@docusaurus/core",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.4.3",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for react changes from ^16.8.4 || ^17.0.0 to ^18.0.0. Holding 16.14.0 is incompatible with the target, while 18.2.0 satisfies it.",
+      "conditions": [
+        "The workspace retains react at 16.14.0 or another version outside ^18.0.0."
+      ],
+      "actions": [
+        "Align react with ^18.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@docusaurus/core",
+          "from": "2.4.3",
+          "to": "3.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-docusaurus-preset-classic-2.4.3-3.0.0",
+      "kind": "breaking-change",
+      "package": "@docusaurus/preset-classic",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.4.3",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for react changes from ^16.8.4 || ^17.0.0 to ^18.0.0. Holding 16.14.0 is incompatible with the target, while 18.2.0 satisfies it.",
+      "conditions": [
+        "The workspace retains react at 16.14.0 or another version outside ^18.0.0."
+      ],
+      "actions": [
+        "Align react with ^18.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@docusaurus/preset-classic",
+          "from": "2.4.3",
+          "to": "3.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-types-chai-as-promised-7.1.8-8.0.0",
+      "kind": "breaking-change",
+      "package": "@types/chai-as-promised",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.1.8",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Use the default import for Chai as Promised declarations",
+      "summary": "The type package changes from an export assignment to an ESM default export.",
+      "conditions": [
+        "A typed setup uses import equals require for chai-as-promised in a CommonJS-only test setup."
+      ],
+      "actions": [
+        "Use an ESM default import and keep the installed runtime and declarations on compatible release lines."
+      ],
+      "verification": [
+        "Typecheck the test configuration and rerun its promise assertions."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "@types/chai-as-promised",
+          "from": "7.1.8",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-parse-imports-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "parse-imports",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 18.16.1 under >= 18. The target excludes it under >= 22.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >= 22."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >= 22 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "parse-imports",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-react-youtube-7.14.0-8.0.0",
+      "kind": "breaking-change",
+      "package": "react-youtube",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.14.0",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 10.24.1 under >= 10.x. The target excludes it under >= 14.x.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >= 14.x."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >= 14.x before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "react-youtube",
+          "from": "7.14.0",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-react-youtube-8.3.0-9.0.0",
+      "kind": "breaking-change",
+      "package": "react-youtube",
+      "fromMajor": 8,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "8.3.0",
+          "to": "9.0.0"
+        }
+      ],
+      "title": "Move iframe styles to iframeClassName",
+      "summary": "The old component bundle maps containerClassName to its wrapper. The target uses className for the wrapper and iframeClassName for the iframe.",
+      "conditions": [
+        "React Youtube styling uses containerClassName or expects className on its iframe."
+      ],
+      "actions": [
+        "Map the wrapper class to className and the iframe class to iframeClassName."
+      ],
+      "verification": [
+        "Inspect the wrapper and iframe in the page and run the styles or layout check."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "react-youtube",
+          "from": "8.3.0",
+          "to": "9.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch006-tsc-watch-5.0.3-6.0.0",
+      "kind": "breaking-change",
+      "package": "tsc-watch",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.3",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 8.17.0 under >=8.17.0. The target excludes it under >=12.12.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=12.12.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=12.12.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/52bfac1652bc5adb0d4aed12a9e7686340920507/fixtures/npm-migrations-batch-006/check.cjs",
+        "fixtureSha256": "dd934de87e51a0a469f1601c4c63e6324403831375a90a072c61e0ed24d052d9",
+        "claim": {
+          "package": "tsc-watch",
+          "from": "5.0.3",
+          "to": "6.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    }
+  ]
+}

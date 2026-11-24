@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-react-error-boundary",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-5-0-0": "npm:react-error-boundary@5.0.0",
+    "v-6-0-0": "npm:react-error-boundary@6.0.0"
+  }
+}

@@ -1,0 +1,677 @@
+{
+  "fixtureSha256": "bd1f43c1b9e79a3d91f804e463d554ddd763da0b0aef84580fff8230e4ea6f5f",
+  "claims": [
+    {
+      "package": "happy-dom",
+      "from": "16.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "16.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "16.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "16.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "17.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "17.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "17.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "18.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "18.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "19.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "19.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "happy-dom",
+      "from": "20.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "copy-webpack-plugin",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "copy-webpack-plugin",
+      "from": "12.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "copy-webpack-plugin",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "15.0.0",
+      "to": "17.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "15.0.0",
+      "to": "18.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "15.0.0",
+      "to": "19.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "15.0.0",
+      "to": "20.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "16.0.0",
+      "to": "18.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "16.0.0",
+      "to": "19.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "16.0.0",
+      "to": "20.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "17.0.0",
+      "to": "19.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "17.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "18.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-dropzone",
+      "from": "19.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react-vite",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react-vite",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/react-vite",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "1.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "1.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "2.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vitest/ui",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "18.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "18.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "18.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "19.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "19.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "19.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "20.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sinon",
+      "from": "20.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "22.0.0",
+      "to": "23.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "22.0.0",
+      "to": "24.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "22.0.0",
+      "to": "25.0.2",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "23.0.0",
+      "to": "25.0.2",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "24.0.0",
+      "to": "25.0.2",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-cli",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint",
+      "from": "16.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/webpack-plugin",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/webpack-plugin",
+      "from": "3.0.0",
+      "to": "11.8.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/webpack-plugin",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/webpack-plugin",
+      "from": "4.0.0",
+      "to": "11.8.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sentry/webpack-plugin",
+      "from": "5.0.0",
+      "to": "11.8.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@commitlint/cli",
+      "from": "19.0.0",
+      "to": "20.0.0",
+      "check": "lint",
+      "outcome": "passed"
+    },
+    {
+      "package": "@commitlint/cli",
+      "from": "19.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@commitlint/cli",
+      "from": "20.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@commitlint/config-conventional",
+      "from": "19.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@commitlint/config-conventional",
+      "from": "20.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "18.0.0",
+      "to": "20.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "18.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "18.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "18.0.0",
+      "to": "23.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "18.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "19.0.0",
+      "to": "20.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "19.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "19.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "19.0.0",
+      "to": "23.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "19.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "20.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "20.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "20.0.0",
+      "to": "23.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "20.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "21.0.0",
+      "to": "22.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "21.0.0",
+      "to": "23.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "21.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "22.0.0",
+      "to": "23.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "22.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nx",
+      "from": "23.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-a11y",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "@storybook/addon-a11y",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    }
+  ]
+}

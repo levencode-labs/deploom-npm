@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-p11-v8",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "8.0.0",
+    "@typescript-eslint/parser": "8.0.0",
+    "eslint": "8.57.0",
+    "typescript": "5.3.3"
+  }
+}

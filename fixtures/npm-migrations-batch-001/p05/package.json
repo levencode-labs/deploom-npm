@@ -1,0 +1,18 @@
+{
+  "name": "deploom-migration-esbuild",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-0-19-12": "npm:esbuild@0.19.12",
+    "v-0-20-0": "npm:esbuild@0.20.0",
+    "v-0-21-5": "npm:esbuild@0.21.5",
+    "v-0-22-0": "npm:esbuild@0.22.0",
+    "v-0-23-0": "npm:esbuild@0.23.0",
+    "v-0-23-1": "npm:esbuild@0.23.1",
+    "v-0-24-0": "npm:esbuild@0.24.0",
+    "v-0-24-2": "npm:esbuild@0.24.2",
+    "v-0-25-0": "npm:esbuild@0.25.0",
+    "v-0-26-0": "npm:esbuild@0.26.0",
+    "v-0-27-0": "npm:esbuild@0.27.0"
+  }
+}

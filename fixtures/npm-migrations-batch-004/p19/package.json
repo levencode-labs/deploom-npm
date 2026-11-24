@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-axios",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-0-27-2": "npm:axios@0.27.2",
+    "v-1-0-0": "npm:axios@1.0.0"
+  }
+}

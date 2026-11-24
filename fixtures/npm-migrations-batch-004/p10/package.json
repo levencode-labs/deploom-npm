@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-rimraf",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-4-4-1": "npm:rimraf@4.4.1",
+    "v-5-0-0": "npm:rimraf@5.0.0",
+    "v-5-0-9": "npm:rimraf@5.0.9",
+    "v-6-0-0": "npm:rimraf@6.0.0"
+  }
+}

@@ -1,0 +1,1354 @@
+[
+  {
+    "row": [
+      "vitest",
+      "2.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": "^18.0.0 || >=20.0.0",
+        "b": "^20.0.0 || ^22.0.0 || >=24.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vitest",
+      "2.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": "^18.0.0 || >=20.0.0",
+        "b": "^22.12.0 || ^24.0.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vitest",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "b": "^20.0.0 || ^22.0.0 || >=24.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vitest",
+      "3.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "b": "^22.12.0 || ^24.0.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vitest",
+      "4.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": "^20.0.0 || ^22.0.0 || >=24.0.0",
+        "b": "^22.12.0 || ^24.0.0 || >=26.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-react-hooks",
+      "5.0.0",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">=10",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-react-hooks",
+      "5.0.0",
+      "7.0.0"
+    ],
+    "report": [
+      "react-hooks-recommended",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-react-hooks",
+      "6.0.0",
+      "7.0.0"
+    ],
+    "report": [
+      "react-hooks-recommended",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "typescript-eslint",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "16.20.2",
+        "a": "^16.0.0 || >=18.0.0",
+        "b": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitejs/plugin-react",
+      "5.0.0",
+      "6.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vite",
+        "a": "^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0",
+        "b": "^8.0.0",
+        "before": "7.0.0",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@testing-library/jest-dom",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "vitest",
+        "a": "no explicit peer range",
+        "b": ">=5 <6",
+        "before": "4.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@testing-library/react",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "testing-library-dom-peer",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.48.2",
+      "1.49.0"
+    ],
+    "report": [
+      "playwright-headless-shell",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.49.1",
+      "1.50.0"
+    ],
+    "report": [
+      "playwright-snapshot-changed",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.54.2",
+      "1.55.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.55.1",
+      "1.56.0"
+    ],
+    "report": [
+      "playwright-background-pages",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.57.0",
+      "1.58.0"
+    ],
+    "report": [
+      "playwright-devtools",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.58.2",
+      "1.59.0"
+    ],
+    "report": [
+      "playwright-junit-error",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.59.1",
+      "1.60.0"
+    ],
+    "report": [
+      "playwright-record-video",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.63.0",
+      "1.64.0"
+    ],
+    "report": [
+      "playwright-device-screen",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@playwright/test",
+      "1.64.1",
+      "1.65.0"
+    ],
+    "report": [
+      "playwright-class-fields",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-router",
+      "7.0.0",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": ">=20.0.0",
+        "b": ">=22.22.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "postcss-import",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18.0.0",
+        "b": ">=22.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "1.0.0",
+      "2.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "2.0.0",
+        "before": "1.0.0",
+        "after": "2.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "1.0.0",
+      "3.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "3.0.0",
+        "before": "1.0.0",
+        "after": "3.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "1.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "4.0.0",
+        "before": "1.0.0",
+        "after": "4.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "1.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "^1.0.0-0",
+        "b": "5.0.0",
+        "before": "1.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "2.0.0",
+      "3.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "2.0.0",
+        "b": "3.0.0",
+        "before": "2.0.0",
+        "after": "3.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "2.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "2.0.0",
+        "b": "4.0.0",
+        "before": "2.0.0",
+        "after": "4.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "2.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "2.0.0",
+        "b": "5.0.0",
+        "before": "2.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "3.0.0",
+        "b": "4.0.0",
+        "before": "3.0.0",
+        "after": "4.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "3.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "3.0.0",
+        "b": "5.0.0",
+        "before": "3.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitest/coverage-v8",
+      "4.0.0",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vitest",
+        "a": "4.0.0",
+        "b": "5.0.0",
+        "before": "4.0.0",
+        "after": "5.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sass",
+      "1.91.0",
+      "1.92.0"
+    ],
+    "report": [
+      "sass-mixed-declarations",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sass",
+      "1.106.1",
+      "1.107.0"
+    ],
+    "report": [
+      "sass-future-version",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "8.0.0",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "sentry-inp",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "9.0.0",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "10.0.0",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "lint-staged",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.18.3",
+        "a": ">=20.18",
+        "b": ">=22.22.1"
+      }
+    ]
+  },
+  {
+    "row": [
+      "debounce",
+      "3.0.0",
+      "4.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": ">=20",
+        "b": ">=22.2"
+      }
+    ]
+  },
+  {
+    "row": [
+      "pdfjs-dist",
+      "5.0.375",
+      "6.0.227"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "20.0.0",
+        "a": ">=20",
+        "b": ">=22.13.0 || >=24"
+      }
+    ]
+  },
+  {
+    "row": [
+      "query-string",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/react",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/react",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/react",
+      "8.0.0",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/react",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "sentry-inp",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@sentry/react",
+      "9.0.0",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/react",
+      "10.0.0",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "storybook",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "storybook-test-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "storybook",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "storybook-test-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "storybook",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "storybook-esm-test-entry",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "concurrently",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18",
+        "b": ">=22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^9.0.0",
+        "before": "8.0.0",
+        "after": "9.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^10.0.0",
+        "before": "8.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/react",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "storybook",
+        "a": "^9.0.0",
+        "b": "^10.0.0",
+        "before": "9.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "webpack-dev-server",
+      "5.0.0",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">= 18.12.0",
+        "b": ">= 22.15.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-docs",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^9.0.0",
+        "before": "8.0.0",
+        "after": "9.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-docs",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^10.0.0",
+        "before": "8.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/addon-docs",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "storybook",
+        "a": "^9.0.0",
+        "b": "^10.0.0",
+        "before": "9.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "14.0.0",
+      "15.0.0"
+    ],
+    "report": [
+      "sass-loader-embedded",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "14.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "sass-loader-modern",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "14.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">= 18.12.0",
+        "b": ">= 22.11.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "sass-loader-modern",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "15.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">= 18.12.0",
+        "b": ">= 22.11.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "sass-loader",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">= 18.12.0",
+        "b": ">= 22.11.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@faker-js/faker",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": ">=18.0.0",
+        "b": "^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-jest",
+      "28.0.0",
+      "29.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "16.20.2",
+        "a": "^16.10.0 || ^18.12.0 || >=20.0.0",
+        "b": "^20.12.0 || ^22.0.0 || >=24.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/builder-vite",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^9.0.0",
+        "before": "8.0.0",
+        "after": "9.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/builder-vite",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer-added",
+      {
+        "name": "storybook",
+        "a": "no explicit peer range",
+        "b": "^10.0.0",
+        "before": "8.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@storybook/builder-vite",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "storybook",
+        "a": "^9.0.0",
+        "b": "^10.0.0",
+        "before": "9.0.0",
+        "after": "10.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/types",
+      "8.0.0",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/types",
+      "8.0.0",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=14.18",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/types",
+      "9.0.0",
+      "10.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react-error-boundary",
+      "5.0.0",
+      "6.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "mocha",
+      "11.0.0",
+      "12.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.20.8",
+        "a": "^18.18.0 || ^20.9.0 || >=21.1.0",
+        "b": "^20.19.0 || >=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "14.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "15.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "13.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "happy-dom-interface",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "15.0.0"
+    ],
+    "report": [
+      "happy-dom-escaped-html",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "happy-dom-escaped-html",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "happy-dom-escaped-html",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "happy-dom-escaped-html",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "14.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "15.0.0",
+      "16.0.0"
+    ],
+    "report": [
+      "happy-dom-tbody",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "15.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "happy-dom-tbody",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "15.0.0",
+      "18.0.0"
+    ],
+    "report": [
+      "happy-dom-tbody",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "15.0.0",
+      "19.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "15.0.0",
+      "20.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "15.0.0",
+      "21.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "happy-dom",
+      "16.0.0",
+      "17.0.0"
+    ],
+    "report": [
+      "happy-dom-inline-modules",
+      {}
+    ]
+  }
+]

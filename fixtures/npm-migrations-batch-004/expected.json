@@ -1,0 +1,1273 @@
+[
+  {
+    "row": [
+      "@types/node",
+      "16.11.13",
+      "17.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/node",
+      "16.11.41",
+      "18.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/node",
+      "17.0.44",
+      "18.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/node",
+      "18.16.3",
+      "20.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/node",
+      "20.14.12",
+      "22.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "glob",
+      "7.2.3",
+      "8.1.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "8.17.0",
+        "a": "*",
+        "b": ">=12"
+      }
+    ]
+  },
+  {
+    "row": [
+      "glob",
+      "8.1.0",
+      "9.0.0"
+    ],
+    "report": [
+      "glob-named-promise",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "glob",
+      "9.3.5",
+      "10.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "glob",
+      "10.4.4",
+      "11.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": "14 >=14.21 || 16 >=16.20 || 18 || 20 || >=22",
+        "b": "20 || >=22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/types",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "8.17.0",
+        "a": ">=6.9.0",
+        "b": "^22.18.0 || >=24.11.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "4.5.5",
+      "4.6.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "4.6.2",
+        "code": 2339,
+        "condition": "A generic object rest binding drops class methods.",
+        "action": "Invoke methods on the original object before or instead of destructuring."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "4.6.4",
+      "4.7.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "4.7.2",
+        "code": 2698,
+        "condition": "JSX spreads a value typed as unknown.",
+        "action": "Narrow the value to a non-null object before spreading it."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "4.7.4",
+      "4.8.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "4.8.2",
+        "code": 2322,
+        "condition": "An unconstrained type parameter is assigned to an object-shaped type with strict null checking.",
+        "action": "Add a non-null constraint or narrow the input before the assignment."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "4.8.4",
+      "4.9.3"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "4.9.3",
+        "code": 2845,
+        "condition": "The source compares a value to NaN.",
+        "action": "Use Number.isNaN on the value."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "4.9.5",
+      "5.0.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "5.0.2",
+        "code": 2365,
+        "condition": "A relational operator compares a number-or-string union directly with a number.",
+        "action": "Validate and normalize the input to a number before comparing."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "5.0.4",
+      "5.1.3"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">=12.20",
+        "b": ">=14.17"
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "5.1.6",
+      "5.2.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "5.2.2",
+        "code": 5110,
+        "condition": "The compiler config uses moduleResolution Node16 with a different module mode.",
+        "action": "Match the module and moduleResolution options to Node16."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "5.2.2",
+      "5.3.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "5.3.2",
+        "code": 2855,
+        "condition": "Subclass code accesses a superclass instance field through super.",
+        "action": "Access the field through the instance or expose behavior through a superclass method."
+      }
+    ]
+  },
+  {
+    "row": [
+      "typescript",
+      "5.9.3",
+      "6.0.2"
+    ],
+    "report": [
+      "typescript-config-or-source",
+      {
+        "target": "6.0.2",
+        "code": 5107,
+        "condition": "The build targets ES5 with the compiler configuration.",
+        "action": "Choose a supported target such as ES2015 after checking the deployment runtime."
+      }
+    ]
+  },
+  {
+    "row": [
+      "globals",
+      "13.24.0",
+      "14.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "8.17.0",
+        "a": ">=8",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/runtime",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "babel-runtime-helper",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@babel/core",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "8.17.0",
+        "a": ">=6.9.0",
+        "b": "^22.18.0 || >=24.11.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vite",
+      "2.9.14",
+      "3.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">=12.2.0",
+        "b": ">=14.18.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vite",
+      "3.2.5",
+      "4.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "vite",
+      "4.5.0",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": "^14.18.0 || >=16.0.0",
+        "b": "^18.0.0 || >=20.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vite",
+      "4.5.5",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": "^14.18.0 || >=16.0.0",
+        "b": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vite",
+      "5.0.12",
+      "5.1.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "vite",
+      "5.4.11",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "21.7.3",
+        "a": "^18.0.0 || >=20.0.0",
+        "b": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "vite",
+      "5.4.19",
+      "7.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "18.16.1",
+        "a": "^18.0.0 || >=20.0.0",
+        "b": "^20.19.0 || >=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react",
+      "18.2.0",
+      "18.3.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react",
+      "18.3.0",
+      "18.3.1"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react",
+      "18.3.1",
+      "19.0.0"
+    ],
+    "report": [
+      "react-function-defaults-removed",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react",
+      "19.1.1",
+      "19.2.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "rimraf",
+      "4.4.1",
+      "5.0.0"
+    ],
+    "report": [
+      "rimraf-named",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "rimraf",
+      "5.0.9",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": "14 >=14.20 || 16 >=16.20 || >=18",
+        "b": "20 || >=22"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-dom",
+      "18.2.0",
+      "18.3.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react-dom",
+      "18.3.1",
+      "19.0.0"
+    ],
+    "report": [
+      "react-dom-root",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-dom",
+      "19.1.1",
+      "19.2.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "eslint",
+      "8.57.0",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.22.0 || ^14.17.0 || >=16.0.0",
+        "b": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint",
+      "8.57.1",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.22.0 || ^14.17.0 || >=16.0.0",
+        "b": "^20.19.0 || ^22.13.0 || >=24"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint",
+      "9.21.0",
+      "9.22.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/react",
+      "17.0.43",
+      "18.0.0"
+    ],
+    "report": [
+      "react-types-children",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@types/react",
+      "18.3.13",
+      "19.0.0"
+    ],
+    "report": [
+      "react-types-jsx",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@typescript-eslint/eslint-plugin",
+      "5.62.0",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.22.0 || ^14.17.0 || >=16.0.0",
+        "b": "^16.0.0 || >=18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@typescript-eslint/eslint-plugin",
+      "6.21.0",
+      "7.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "eslint",
+        "a": "^7.0.0 || ^8.0.0",
+        "b": "^8.56.0",
+        "before": "7.32.0",
+        "after": "8.56.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@typescript-eslint/parser",
+      "5.62.0",
+      "6.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.22.0 || ^14.17.0 || >=16.0.0",
+        "b": "^16.0.0 || >=18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@typescript-eslint/parser",
+      "6.21.0",
+      "7.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "eslint",
+        "a": "^7.0.0 || ^8.0.0",
+        "b": "^8.56.0",
+        "before": "7.32.0",
+        "after": "8.56.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "prettier",
+      "2.8.8",
+      "3.0.0"
+    ],
+    "report": [
+      "prettier-async",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "prettier",
+      "3.4.2",
+      "3.5.0"
+    ],
+    "report": [
+      "prettier-css-background-wrap",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@eslint/js",
+      "8.57.0",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": "^12.22.0 || ^14.17.0 || >=16.0.0",
+        "b": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@types/react-dom",
+      "17.0.14",
+      "18.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/react-dom",
+      "18.3.1",
+      "19.0.0"
+    ],
+    "report": [
+      "react-dom-types-render",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "axios",
+      "0.27.2",
+      "1.0.0"
+    ],
+    "report": [
+      "axios-interceptor-headers",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "chai",
+      "4.3.10",
+      "5.0.0"
+    ],
+    "report": [
+      "esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "vitest",
+      "0.34.6",
+      "1.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": ">=v14.18.0",
+        "b": "^18.0.0 || >=20.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-react-hooks",
+      "4.6.2",
+      "5.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@vitejs/plugin-react",
+      "1.3.2",
+      "2.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">=12.0.0",
+        "b": ">=14.18.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitejs/plugin-react",
+      "2.2.0",
+      "3.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "vite",
+        "a": "^3.0.0",
+        "b": "^4.0.0",
+        "before": "3.2.5",
+        "after": "4.5.5"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@vitejs/plugin-react",
+      "3.1.0",
+      "4.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@vitejs/plugin-react",
+      "4.7.0",
+      "5.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.21.3",
+        "a": "^14.18.0 || >=16.0.0",
+        "b": "^20.19.0 || >=22.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@types/chai",
+      "4.3.19",
+      "5.0.0"
+    ],
+    "report": [
+      "chai-types-esm",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@babel/plugin-transform-modules-commonjs",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@testing-library/dom",
+      "8.20.0",
+      "9.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">=12",
+        "b": ">=14"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@testing-library/dom",
+      "9.3.4",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">=14",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "eslint-config-prettier",
+      "8.10.0",
+      "9.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "eslint-config-prettier",
+      "9.1.0",
+      "10.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@testing-library/react",
+      "12.1.4",
+      "13.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": "*",
+        "b": "^18.0.0",
+        "before": "19.2.0",
+        "after": "18.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@testing-library/react",
+      "13.4.0",
+      "14.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">=12",
+        "b": ">=14"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@testing-library/react",
+      "14.3.0",
+      "15.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">=14",
+        "b": ">=18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/preset-typescript",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-router",
+      "6.3.0",
+      "6.4.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react-router",
+      "6.28.0",
+      "7.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">=16.8",
+        "b": ">=18",
+        "before": "17.0.2",
+        "after": "18.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/preset-env",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "reselect",
+      "4.1.8",
+      "5.0.0"
+    ],
+    "report": [
+      "reselect-memoizer",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-router-dom",
+      "6.3.0",
+      "6.4.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react-router-dom",
+      "6.28.0",
+      "7.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": ">=16.8",
+        "b": ">=18",
+        "before": "17.0.2",
+        "after": "18.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "postcss-import",
+      "14.1.0",
+      "15.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "10.24.1",
+        "a": ">=10.0.0",
+        "b": ">=14.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "postcss-import",
+      "15.1.0",
+      "16.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">=14.0.0",
+        "b": ">=18.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "redux",
+      "4.2.1",
+      "5.0.0"
+    ],
+    "report": [
+      "redux-string-action",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "eslint-plugin-prettier",
+      "4.2.1",
+      "5.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "eslint",
+        "a": ">=7.28.0",
+        "b": ">=8.0.0",
+        "before": "7.32.0",
+        "after": "8.56.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@types/jest",
+      "27.5.2",
+      "28.1.0"
+    ],
+    "report": [
+      "jest-timer-config",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@types/jest",
+      "28.1.8",
+      "29.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@types/jest",
+      "29.5.14",
+      "30.0.0"
+    ],
+    "report": [
+      "jest-call-alias",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@types/eslint",
+      "8.56.10",
+      "9.6.0"
+    ],
+    "report": [
+      "types-compiler-floor",
+      {
+        "oldFloor": "4.7",
+        "newFloor": "4.8"
+      }
+    ]
+  },
+  {
+    "row": [
+      "big.js",
+      "6.2.2",
+      "7.0.0"
+    ],
+    "report": [
+      "big-constructor-argument",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-redux",
+      "7.2.8",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react-redux",
+      "8.1.3",
+      "9.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "react",
+        "a": "^16.8 || ^17.0 || ^18.0",
+        "b": "^18.0",
+        "before": "17.0.2",
+        "after": "18.2.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/plugin-transform-runtime",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "react-markdown",
+      "7.1.2",
+      "8.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "react-markdown",
+      "8.0.7",
+      "9.0.0"
+    ],
+    "report": [
+      "markdown-link-components",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "react-markdown",
+      "9.1.0",
+      "10.0.0"
+    ],
+    "report": [
+      "markdown-wrapper-class",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@babel/preset-react",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "6.19.7",
+      "7.0.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "@sentry/browser",
+      "7.114.0",
+      "8.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "8.17.0",
+        "a": ">=8",
+        "b": ">=14.18"
+      }
+    ]
+  },
+  {
+    "row": [
+      "css-loader",
+      "6.11.0",
+      "7.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "12.22.12",
+        "a": ">= 12.13.0",
+        "b": ">= 18.12.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@babel/plugin-proposal-decorators",
+      "7.29.7",
+      "8.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "@babel/core",
+        "a": "^7.0.0-0",
+        "b": "^8.0.0",
+        "before": "7.29.7",
+        "after": "8.0.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "@reduxjs/toolkit",
+      "1.9.7",
+      "2.0.0"
+    ],
+    "report": [
+      "rtk-builder",
+      {}
+    ]
+  },
+  {
+    "row": [
+      "@reduxjs/toolkit",
+      "2.5.1",
+      "2.6.0"
+    ],
+    "report": null
+  },
+  {
+    "row": [
+      "babel-loader",
+      "8.2.5",
+      "9.0.0"
+    ],
+    "report": [
+      "peer",
+      {
+        "name": "webpack",
+        "a": ">=2",
+        "b": ">=5",
+        "before": "4.47.0",
+        "after": "5.82.0"
+      }
+    ]
+  },
+  {
+    "row": [
+      "babel-loader",
+      "9.2.1",
+      "10.0.0"
+    ],
+    "report": [
+      "node-engine",
+      {
+        "held": "14.16.0",
+        "a": ">= 14.15.0",
+        "b": "^18.20.0 || ^20.10.0 || >=22.0.0"
+      }
+    ]
+  }
+]

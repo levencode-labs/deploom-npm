@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-date-fns",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-3-0-0": "npm:date-fns@3.0.0",
+    "v-4-0-0": "npm:date-fns@4.0.0"
+  }
+}

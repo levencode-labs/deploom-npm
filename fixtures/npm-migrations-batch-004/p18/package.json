@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-types-react-dom",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-17-0-14": "npm:@types/react-dom@17.0.14",
+    "v-18-0-0": "npm:@types/react-dom@18.0.0",
+    "v-18-3-1": "npm:@types/react-dom@18.3.1",
+    "v-19-0-0": "npm:@types/react-dom@19.0.0"
+  }
+}

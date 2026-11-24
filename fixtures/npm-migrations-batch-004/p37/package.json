@@ -1,0 +1,13 @@
+{
+  "name": "deploom-migration-types-jest",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-27-5-2": "npm:@types/jest@27.5.2",
+    "v-28-1-0": "npm:@types/jest@28.1.0",
+    "v-28-1-8": "npm:@types/jest@28.1.8",
+    "v-29-0-0": "npm:@types/jest@29.0.0",
+    "v-29-5-14": "npm:@types/jest@29.5.14",
+    "v-30-0-0": "npm:@types/jest@30.0.0"
+  }
+}

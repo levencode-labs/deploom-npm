@@ -1,0 +1,11 @@
+{
+  "name": "deploom-migration-reduxjs-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-1-9-7": "npm:@reduxjs/toolkit@1.9.7",
+    "v-2-0-0": "npm:@reduxjs/toolkit@2.0.0",
+    "v-2-5-1": "npm:@reduxjs/toolkit@2.5.1",
+    "v-2-6-0": "npm:@reduxjs/toolkit@2.6.0"
+  }
+}

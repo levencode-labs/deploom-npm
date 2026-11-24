@@ -1,0 +1,2385 @@
+{
+  "@commitlint/cli": {
+    "19.0.0": {
+      "integrity": "sha512-SVBQG6k+eOOmlejYTtxnqJGmhrzy/m0qH3bVeoHY3gtlJBK3Kb32RjJioteBYk8Vuo58x5ehAjXwsQFX58X+xw==",
+      "engines": {
+        "node": ">=v18"
+      },
+      "type": "module",
+      "main": "index.cjs",
+      "dependencies": {
+        "@commitlint/format": "^19.0.0",
+        "@commitlint/lint": "^19.0.0",
+        "@commitlint/load": "^19.0.0",
+        "@commitlint/read": "^19.0.0",
+        "@commitlint/types": "^19.0.0",
+        "execa": "^8.0.1",
+        "resolve-from": "^5.0.0",
+        "resolve-global": "^2.0.0",
+        "yargs": "^17.0.0"
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-I3D7Yldq8ZhOB3qEaTvXWIgib6tSZhbCpRObfFQ/aYI0J9AH8NMwT07Ak+bpE3n6Yn7EtbqEhQUkJZ/jZ5kCeQ==",
+      "engines": {
+        "node": ">=v18"
+      },
+      "type": "module",
+      "main": "index.cjs",
+      "dependencies": {
+        "@commitlint/format": "^20.0.0",
+        "@commitlint/lint": "^20.0.0",
+        "@commitlint/load": "^20.0.0",
+        "@commitlint/read": "^20.0.0",
+        "@commitlint/types": "^20.0.0",
+        "tinyexec": "^1.0.0",
+        "yargs": "^17.0.0"
+      }
+    },
+    "21.0.0": {
+      "integrity": "sha512-p3y2oC0G2R45zaadMwBxCiSesS8digi5RDplP3Zrfpzm7xIgrgAj0W4fGzONjpHyg8obDVJDU45g5txzeMcblg==",
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "type": "module",
+      "main": "index.cjs",
+      "dependencies": {
+        "@commitlint/format": "^21.0.0",
+        "@commitlint/lint": "^21.0.0",
+        "@commitlint/load": "^21.0.0",
+        "@commitlint/read": "^21.0.0",
+        "@commitlint/types": "^21.0.0",
+        "tinyexec": "^1.0.0",
+        "yargs": "^18.0.0"
+      }
+    }
+  },
+  "@commitlint/config-conventional": {
+    "19.0.0": {
+      "integrity": "sha512-d8lPm+slPUdA8Zof2Y36RqAm/MmAYx/QQIEd2gKbpfLThQK1oYLs+0C3sMPD+4LIq2kh4cnbV9WnPA0P5sN8Ig==",
+      "engines": {
+        "node": ">=v18"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "@commitlint/types": "^19.0.0",
+        "conventional-changelog-conventionalcommits": "^7.0.2"
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-q7JroPIkDBtyOkVe9Bca0p7kAUYxZMxkrBArCfuD3yN4KjRAenP9PmYwnn7rsw8Q+hHq1QB2BRmBh0/Z19ZoJw==",
+      "engines": {
+        "node": ">=v18"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "@commitlint/types": "^20.0.0",
+        "conventional-changelog-conventionalcommits": "^7.0.2"
+      }
+    },
+    "21.0.0": {
+      "integrity": "sha512-QJX/rPK4Yu3f5J4OCIBy5aXq2e0EEdwSDFZ3NQvFAXTm3gs12ipyZ+yjhZxm3hHn6DB8wuv3zhFTL1I2tYzUBA==",
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "@commitlint/types": "^21.0.0",
+        "conventional-changelog-conventionalcommits": "^9.2.0"
+      }
+    }
+  },
+  "@sentry/webpack-plugin": {
+    "11.8.0": {
+      "integrity": "sha512-mJST5nVrWWEXHQJL0mwOgii2eOrehuj+u7pz/HEwBFWfgCF8/qF8MJjes3XChDlcTV578Lm1PnNnJ+npOmKZ5g==",
+      "engines": {
+        "node": ">=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0"
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "types": "./build/types/index.d.ts",
+          "import": "./build/esm/index.js",
+          "require": "./build/cjs/index.js"
+        },
+        "./webpack5": {
+          "types": "./build/types/webpack5.d.ts",
+          "import": "./build/esm/webpack5.js",
+          "require": "./build/cjs/webpack5.js"
+        }
+      },
+      "main": "build/cjs/index.js",
+      "dependencies": {
+        "@sentry/bundler-plugins": "11.8.0"
+      },
+      "peerDependencies": {
+        "webpack": ">=5.1.0"
+      }
+    },
+    "3.0.0": {
+      "integrity": "sha512-P0xPHFede37PHIP9ELmW0D6y/4F42vwkusFic+nxG+JInXN8SWlazAaM3Y50ejgV1WntGMR/tjAZ+1lcKGR5gA==",
+      "engines": {
+        "node": ">= 14"
+      },
+      "exports": {
+        ".": {
+          "import": "./dist/esm/index.mjs",
+          "require": "./dist/cjs/index.js",
+          "types": "./dist/types/index.d.ts"
+        }
+      },
+      "main": "dist/cjs/index.js",
+      "dependencies": {
+        "@sentry/bundler-plugin-core": "3.0.0",
+        "unplugin": "1.0.1",
+        "uuid": "^9.0.0"
+      },
+      "peerDependencies": {
+        "webpack": ">=4.40.0"
+      }
+    },
+    "4.0.0": {
+      "integrity": "sha512-Uhfjqnuxv4eYIt0GbPAdlFPum3BtasNhQrO3OJuVQRYRq21En7ARKXISoOhZHMo4tRRiiv+3npKYmpzHTALbQg==",
+      "engines": {
+        "node": ">= 14"
+      },
+      "exports": {
+        ".": {
+          "import": "./dist/esm/index.mjs",
+          "require": "./dist/cjs/index.js",
+          "types": "./dist/types/index.d.ts"
+        },
+        "./webpack5": {
+          "import": "./dist/esm/webpack5.mjs",
+          "require": "./dist/cjs/webpack5.js",
+          "types": "./dist/types/webpack5.d.ts"
+        }
+      },
+      "main": "dist/cjs/index.js",
+      "dependencies": {
+        "@sentry/bundler-plugin-core": "4.0.0",
+        "unplugin": "1.0.1",
+        "uuid": "^9.0.0"
+      },
+      "peerDependencies": {
+        "webpack": ">=4.40.0"
+      }
+    },
+    "5.0.0": {
+      "integrity": "sha512-4sizWf7bO8zWFPP741qQCp7lNyIa4Ubwfy1r5scAPdrZk8oUUeIG4fLx3H/fJyxqeDFRHUD8/q+fE7rXXWXKtQ==",
+      "engines": {
+        "node": ">= 14"
+      },
+      "exports": {
+        ".": {
+          "import": "./dist/esm/index.mjs",
+          "require": "./dist/cjs/index.js",
+          "types": "./dist/types/index.d.ts"
+        },
+        "./webpack5": {
+          "import": "./dist/esm/webpack5.mjs",
+          "require": "./dist/cjs/webpack5.js",
+          "types": "./dist/types/webpack5.d.ts"
+        }
+      },
+      "main": "dist/cjs/index.js",
+      "dependencies": {
+        "@sentry/bundler-plugin-core": "5.0.0",
+        "uuid": "^9.0.0"
+      },
+      "peerDependencies": {
+        "webpack": ">=5.0.0"
+      }
+    }
+  },
+  "@storybook/addon-a11y": {
+    "10.0.0": {
+      "integrity": "sha512-3Ny2zG16D7MvG/7mYTz5JqK6rD0/FZwROcMPE4JEAYZvYwriOKPGTkrDIPvhSOeJCxeJhl51y4fYio7PhgwqgA==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./manager": "./dist/manager.js",
+        "./package.json": "./package.json",
+        "./postinstall": "./dist/postinstall.js",
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "default": "./dist/preview.js"
+        }
+      },
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "axe-core": "^4.2.0"
+      },
+      "peerDependencies": {
+        "storybook": "^10.0.0"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-lxvXOMYqeM6DOUvNP3e18GzPDVhcOZtLnjkJ8XQbRk2xx2qHodAEiFhiKBhfStsn6/rg0zWLRpZ1NJxjnZ0l/Q==",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
+          "require": "./dist/index.js",
+          "import": "./dist/index.mjs"
+        },
+        "./manager": "./dist/manager.js",
+        "./preview": "./dist/preview.js",
+        "./register": "./dist/manager.js",
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@storybook/addon-highlight": "8.0.0",
+        "axe-core": "^4.2.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-lFiIQc3PPnrm310mT+sSKniPaiulXW1UMkr4nJw0DCko8BgWM1SItag22xMKbTb+QCV7SO+gJaAgRUFmIpngfg==",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "./preview": {
+          "types": "./dist/preview.d.ts",
+          "import": "./dist/preview.mjs",
+          "require": "./dist/preview.js"
+        },
+        "./manager": "./dist/manager.js",
+        "./register": "./dist/manager.js",
+        "./package.json": "./package.json",
+        "./postinstall": "./dist/postinstall.js"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@storybook/global": "^5.0.0",
+        "axe-core": "^4.2.0"
+      },
+      "peerDependencies": {
+        "storybook": "^9.0.0"
+      }
+    }
+  },
+  "@storybook/react-vite": {
+    "10.0.0": {
+      "integrity": "sha512-2R9RHuZsPuuNZZMyL3R+h+FJ2mhkj34zIJRgWNFx+41RujOjNUBFEAxUZ7aKcmZvWLN5SRzmAwKR3g42JNtS+A==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./node": {
+          "types": "./dist/node/index.d.ts",
+          "default": "./dist/node/index.js"
+        },
+        "./package.json": "./package.json",
+        "./preset": {
+          "types": "./dist/preset.d.ts",
+          "default": "./dist/preset.js"
+        }
+      },
+      "dependencies": {
+        "@joshwooding/vite-plugin-react-docgen-typescript": "0.6.1",
+        "@rollup/pluginutils": "^5.0.2",
+        "@storybook/builder-vite": "10.0.0",
+        "@storybook/react": "10.0.0",
+        "empathic": "^2.0.0",
+        "magic-string": "^0.30.0",
+        "react-docgen": "^8.0.0",
+        "resolve": "^1.22.8",
+        "tsconfig-paths": "^4.2.0"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "storybook": "^10.0.0",
+        "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
+      }
+    },
+    "8.0.0": {
+      "integrity": "sha512-ojUjI3n9BZkXichyHNa59hvgjYGSDVNxZjwENHMrkHqN92mHpOHdhHEsubw7Yi3O8e5fPSa3cX9S7ldPheTDmw==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
+          "require": "./dist/index.js",
+          "import": "./dist/index.mjs"
+        },
+        "./preset": {
+          "types": "./dist/preset.d.ts",
+          "require": "./dist/preset.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@joshwooding/vite-plugin-react-docgen-typescript": "0.3.0",
+        "@rollup/pluginutils": "^5.0.2",
+        "@storybook/builder-vite": "8.0.0",
+        "@storybook/node-logger": "8.0.0",
+        "@storybook/react": "8.0.0",
+        "find-up": "^5.0.0",
+        "magic-string": "^0.30.0",
+        "react-docgen": "^7.0.0",
+        "resolve": "^1.22.8",
+        "tsconfig-paths": "^4.2.0"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+        "vite": "^4.0.0 || ^5.0.0"
+      }
+    },
+    "9.0.0": {
+      "integrity": "sha512-kwejTvwj9gGUCKWl3FcRF/HxnVWK/sQvv7k874FvOiQGgzu/Nm9nd4Waz/0+e97K7tLO86LBlTcira0Su7eG9g==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "./preset": {
+          "types": "./dist/preset.d.ts",
+          "require": "./dist/preset.js"
+        },
+        "./node": {
+          "types": "./dist/node/index.d.ts",
+          "node": "./dist/node/index.js",
+          "import": "./dist/node/index.mjs",
+          "require": "./dist/node/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "@joshwooding/vite-plugin-react-docgen-typescript": "0.6.0",
+        "@rollup/pluginutils": "^5.0.2",
+        "@storybook/builder-vite": "9.0.0",
+        "@storybook/react": "9.0.0",
+        "find-up": "^5.0.0",
+        "magic-string": "^0.30.0",
+        "react-docgen": "^8.0.0",
+        "resolve": "^1.22.8",
+        "tsconfig-paths": "^4.2.0"
+      },
+      "peerDependencies": {
+        "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+        "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta",
+        "storybook": "^9.0.0",
+        "vite": "^5.0.0 || ^6.0.0"
+      }
+    }
+  },
+  "@vitest/ui": {
+    "1.0.0": {
+      "integrity": "sha512-x+/havkMRfglDZ9TAa1/CPD153815BX6bnOIQLiRqEZsQphRSflI6/bj12w2neJLiWORX4Ei4SjO82yDJVLUZQ==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./reporter": {
+          "types": "./reporter.d.ts",
+          "default": "./dist/reporter.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "fast-glob": "^3.3.2",
+        "fflate": "^0.8.1",
+        "flatted": "^3.2.9",
+        "pathe": "^1.1.1",
+        "picocolors": "^1.0.0",
+        "sirv": "^2.0.3",
+        "@vitest/utils": "1.0.0"
+      },
+      "peerDependencies": {
+        "vitest": "^1.0.0-0"
+      }
+    },
+    "2.0.0": {
+      "integrity": "sha512-MIAxNDq9UAHPaW4W9n7v6PyrTnrxq9/1gET4D2xwErerVFF866d50Yl54n6xWvL+20br9LCYbCdfAmGquwQxTA==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./reporter": {
+          "types": "./reporter.d.ts",
+          "default": "./dist/reporter.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "fast-glob": "^3.3.2",
+        "fflate": "^0.8.2",
+        "flatted": "^3.3.1",
+        "pathe": "^1.1.2",
+        "picocolors": "^1.0.1",
+        "sirv": "^2.0.4",
+        "vue-virtual-scroller": "2.0.0-beta.8",
+        "@vitest/utils": "2.0.0"
+      },
+      "peerDependencies": {
+        "vitest": "2.0.0"
+      }
+    },
+    "3.0.0": {
+      "integrity": "sha512-VBOkDjucENyg7LlSp0akQFEIuPN6sJuzmhiYBc/4DyMnxUQcXDYHjNFYh6J8sKjatEN28sXH+OVf+K8GpSMoag==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./reporter": {
+          "types": "./reporter.d.ts",
+          "default": "./dist/reporter.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "fflate": "^0.8.2",
+        "flatted": "^3.3.2",
+        "pathe": "^2.0.0",
+        "sirv": "^3.0.0",
+        "tinyglobby": "^0.2.10",
+        "tinyrainbow": "^2.0.0",
+        "@vitest/utils": "3.0.0"
+      },
+      "peerDependencies": {
+        "vitest": "3.0.0"
+      }
+    },
+    "4.0.0": {
+      "integrity": "sha512-1R6g7YLoJTtlcPD68bfWhbvAhJ2wFNtGn47xVC9pOYH8KUVWG62vNsQsHcJE4VI/TZLKXxtISNsvMvi3GEHdYg==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./reporter": {
+          "types": "./reporter.d.ts",
+          "default": "./dist/reporter.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "fflate": "^0.8.2",
+        "flatted": "^3.3.3",
+        "pathe": "^2.0.3",
+        "sirv": "^3.0.2",
+        "tinyglobby": "^0.2.15",
+        "tinyrainbow": "^3.0.3",
+        "@vitest/utils": "4.0.0"
+      },
+      "peerDependencies": {
+        "vitest": "4.0.0"
+      }
+    },
+    "5.0.0": {
+      "integrity": "sha512-h2FIFwggCY2GxUd2UdQoYNVQkOIqEQLPhNREcl3FUiRsdzQep7NWwYbSmhGEA9nFLPDq5pXzRMcBZQU8Py83sg==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./reporter": {
+          "types": "./reporter.d.ts",
+          "default": "./dist/reporter.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./dist/index.js",
+      "dependencies": {
+        "@vitest/utils": "5.0.0",
+        "fflate": "^0.8.3",
+        "flatted": "^3.4.4",
+        "pathe": "^2.0.3",
+        "sirv": "^3.0.2",
+        "tinyrainbow": "^3.1.1"
+      },
+      "peerDependencies": {
+        "vitest": "5.0.0"
+      }
+    }
+  },
+  "copy-webpack-plugin": {
+    "12.0.0": {
+      "integrity": "sha512-WQfxZKgoRB94/g0BP/cjADvE6jXQKoSk0lFFeIC5HZlE1JuabYPwhQUtOZsGI0cI+QMsi6vhdIDy4eNXKcTgFg==",
+      "engines": {
+        "node": ">= 18.12.0"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "fast-glob": "^3.3.2",
+        "glob-parent": "^6.0.1",
+        "globby": "^14.0.0",
+        "normalize-path": "^3.0.0",
+        "schema-utils": "^4.2.0",
+        "serialize-javascript": "^6.0.2"
+      },
+      "peerDependencies": {
+        "webpack": "^5.1.0"
+      }
+    },
+    "13.0.0": {
+      "integrity": "sha512-FgR/h5a6hzJqATDGd9YG41SeDViH+0bkHn6WNXCi5zKAZkeESeSxLySSsFLHqLEVCh0E+rITmCf0dusXWYukeQ==",
+      "engines": {
+        "node": ">= 18.12.0"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "glob-parent": "^6.0.1",
+        "normalize-path": "^3.0.0",
+        "schema-utils": "^4.2.0",
+        "serialize-javascript": "^6.0.2",
+        "tinyglobby": "^0.2.12"
+      },
+      "peerDependencies": {
+        "webpack": "^5.1.0"
+      }
+    },
+    "14.0.0": {
+      "integrity": "sha512-3JLW90aBGeaTLpM7mYQKpnVdgsUZRExY55giiZgLuX/xTQRUs1dOCwbBnWnvY6Q6rfZoXMNwzOQJCSZPppfqXA==",
+      "engines": {
+        "node": ">= 20.9.0"
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "glob-parent": "^6.0.1",
+        "normalize-path": "^3.0.0",
+        "schema-utils": "^4.2.0",
+        "serialize-javascript": "^7.0.3",
+        "tinyglobby": "^0.2.12"
+      },
+      "peerDependencies": {
+        "webpack": "^5.1.0"
+      }
+    }
+  },
+  "happy-dom": {
+    "16.0.0": {
+      "integrity": "sha512-Br2gCVyasiuBFSunZpgkKJ84ruoM/a1e6OnJj3MU1O2pz9+HDBc03WD00/DNQ2xnQpLlpGwU37TaubonvlZWIQ==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "webidl-conversions": "^7.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-jGuUr3UrgMzt1Mopyof3RzD49/GudAp1suP5KFU+EvNXmqUAMXpxux2zEJbabE1YXs0APrY61iRZ0BKMMWCGTg==",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "webidl-conversions": "^7.0.0",
+        "whatwg-mimetype": "^3.0.0"
+      }
+    },
+    "18.0.0": {
+      "integrity": "sha512-o3p2Axi1EdIfMaOUulDzO/5yXzLLV0g/54eLPVrkt3u20r3yOuOenHpyp2clAJ0eHMc+HyE139ulQxl+8pEJIw==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "require": "./cjs/index.cjs",
+          "default": "./lib/index.js"
+        },
+        "./lib/*.js": {
+          "import": "./lib/*.js",
+          "require": "./cjs/*.cjs",
+          "default": "./lib/*.js"
+        },
+        "./lib/*.ts": {
+          "import": "./lib/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./lib/*.ts"
+        },
+        "./lib/*.map": {
+          "import": "./lib/*.map",
+          "require": "./cjs/*.map",
+          "default": "./lib/*.map"
+        },
+        "./cjs/*.cjs": {
+          "import": "./cjs/*.cjs",
+          "require": "./cjs/*.cjs",
+          "default": "./cjs/*.cjs"
+        },
+        "./cjs/*.ts": {
+          "import": "./cjs/*.ts",
+          "require": "./cjs/*.ts",
+          "default": "./cjs/*.ts"
+        },
+        "./cjs/*.map": {
+          "import": "./cjs/*.map",
+          "require": "./cjs/*.map",
+          "default": "./cjs/*.map"
+        },
+        "./src/*.ts": "./src/*.ts",
+        "./package.json": "./package.json",
+        "./.eslintrc.cjs": "./.eslintrc.cjs",
+        "./.prettierrc.cjs": "./.prettierrc.cjs"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "whatwg-mimetype": "^3.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/node": "^20.0.0"
+      }
+    },
+    "19.0.0": {
+      "integrity": "sha512-UThsdvW0hiNGKddxPf1G3kf0oQcJgdazlzoq8bgzFy+X0hdl+6cj9N0sJD8Dk1exYHH67wVehec3ENhZZoErUA==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "whatwg-mimetype": "^3.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/node": "^20.0.0"
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-GkWnwIFxVGCf2raNrxImLo397RdGhLapj5cT3R2PT7FwL62Ze1DROhzmYW7+J3p9105DYMVenEejEbnq5wA37w==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "whatwg-mimetype": "^3.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/node": "^20.0.0"
+      }
+    },
+    "21.0.0": {
+      "integrity": "sha512-J4gG3KbH+kCFvrmUjrxAUOXz/SH9V65UIO9Nj8PC7nM2ni3JeaN7j4Xs0P4jS17o7jNo6auvLHpYB2HIyQ3mYw==",
+      "engines": {
+        "node": ">=20.0.0"
+      },
+      "type": "module",
+      "main": "lib/index.js",
+      "dependencies": {
+        "@types/node": ">=20.0.0",
+        "@types/whatwg-mimetype": "^3.0.2",
+        "@types/ws": "^8.18.1",
+        "entities": "^7.0.1",
+        "whatwg-mimetype": "^3.0.0",
+        "buffer-image-size": "^0.6.4",
+        "ws": "^8.21.0"
+      }
+    }
+  },
+  "nx": {
+    "18.0.0": {
+      "integrity": "sha512-CsqVQ5XjK1NLFX7U4Za1meu9x86iNLohhN6rCY9COdStg8jsC3ljhX9/9Kzz77xXtxQZmwGcEkdDMzjeFhYrRA==",
+      "type": "commonjs",
+      "main": "./bin/nx.js",
+      "dependencies": {
+        "@yarnpkg/lockfile": "^1.1.0",
+        "@yarnpkg/parsers": "3.0.0-rc.46",
+        "@zkochan/js-yaml": "0.0.6",
+        "axios": "^1.6.0",
+        "chalk": "^4.1.0",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "^8.0.1",
+        "dotenv": "~16.3.1",
+        "dotenv-expand": "~10.0.0",
+        "enquirer": "~2.3.6",
+        "figures": "3.2.0",
+        "flat": "^5.0.2",
+        "fs-extra": "^11.1.0",
+        "ignore": "^5.0.4",
+        "jest-diff": "^29.4.1",
+        "js-yaml": "4.1.0",
+        "jsonc-parser": "3.2.0",
+        "lines-and-columns": "~2.0.3",
+        "minimatch": "9.0.3",
+        "npm-run-path": "^4.0.1",
+        "open": "^8.4.0",
+        "semver": "^7.5.3",
+        "string-width": "^4.2.3",
+        "strong-log-transformer": "^2.1.0",
+        "tar-stream": "~2.2.0",
+        "tmp": "~0.2.1",
+        "tsconfig-paths": "^4.1.2",
+        "tslib": "^2.3.0",
+        "yargs": "^17.6.2",
+        "yargs-parser": "21.1.1",
+        "node-machine-id": "1.1.12",
+        "ora": "5.3.0",
+        "@nrwl/tao": "18.0.0"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.6.7",
+        "@swc/core": "^1.3.85"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": false,
+        "createNodesV2": false,
+        "migrations": {}
+      }
+    },
+    "19.0.0": {
+      "integrity": "sha512-+9gykv680iCeF7W+8FtQpeS0Z2NOIyBbvKZv4J3XQq+6g+2fHXicSmsurx2z1VmaRZlOZPH32SbKk+4GNcwJCg==",
+      "type": "commonjs",
+      "main": "./bin/nx.js",
+      "dependencies": {
+        "@yarnpkg/lockfile": "^1.1.0",
+        "@yarnpkg/parsers": "3.0.0-rc.46",
+        "@zkochan/js-yaml": "0.0.6",
+        "axios": "^1.6.0",
+        "chalk": "^4.1.0",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "^8.0.1",
+        "dotenv": "~16.3.1",
+        "dotenv-expand": "~10.0.0",
+        "enquirer": "~2.3.6",
+        "figures": "3.2.0",
+        "flat": "^5.0.2",
+        "fs-extra": "^11.1.0",
+        "ignore": "^5.0.4",
+        "jest-diff": "^29.4.1",
+        "js-yaml": "4.1.0",
+        "jsonc-parser": "3.2.0",
+        "lines-and-columns": "~2.0.3",
+        "minimatch": "9.0.3",
+        "npm-run-path": "^4.0.1",
+        "open": "^8.4.0",
+        "semver": "^7.5.3",
+        "string-width": "^4.2.3",
+        "strong-log-transformer": "^2.1.0",
+        "tar-stream": "~2.2.0",
+        "tmp": "~0.2.1",
+        "tsconfig-paths": "^4.1.2",
+        "tslib": "^2.3.0",
+        "yargs": "^17.6.2",
+        "yargs-parser": "21.1.1",
+        "node-machine-id": "1.1.12",
+        "ora": "5.3.0",
+        "@nrwl/tao": "19.0.0"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.8.0",
+        "@swc/core": "^1.3.85"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": true,
+        "createNodesV2": false,
+        "migrations": {}
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-xfTCFiSYqxhchIXQvT6cxKcyRmReAvpzEQJbpEZTtmhMucBqvDTkK25WIhY4cW2uPPUXSOgQGbFt2uIVQz5RTw==",
+      "type": "commonjs",
+      "main": "./bin/nx.js",
+      "dependencies": {
+        "@napi-rs/wasm-runtime": "0.2.4",
+        "@yarnpkg/lockfile": "^1.1.0",
+        "@yarnpkg/parsers": "3.0.0-rc.46",
+        "@zkochan/js-yaml": "0.0.7",
+        "axios": "^1.7.4",
+        "chalk": "^4.1.0",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "^8.0.1",
+        "dotenv": "~16.4.5",
+        "dotenv-expand": "~11.0.6",
+        "enquirer": "~2.3.6",
+        "figures": "3.2.0",
+        "flat": "^5.0.2",
+        "front-matter": "^4.0.2",
+        "ignore": "^5.0.4",
+        "jest-diff": "^29.4.1",
+        "jsonc-parser": "3.2.0",
+        "lines-and-columns": "2.0.3",
+        "minimatch": "9.0.3",
+        "npm-run-path": "^4.0.1",
+        "open": "^8.4.0",
+        "semver": "^7.5.3",
+        "string-width": "^4.2.3",
+        "tar-stream": "~2.2.0",
+        "tmp": "~0.2.1",
+        "tsconfig-paths": "^4.1.2",
+        "tslib": "^2.3.0",
+        "yargs": "^17.6.2",
+        "yargs-parser": "21.1.1",
+        "node-machine-id": "1.1.12",
+        "ora": "5.3.0"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.8.0",
+        "@swc/core": "^1.3.85"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": true,
+        "createNodesV2": true,
+        "migrations": {
+          "19-2-0-move-graph-cache-directory": {
+            "version": "19.2.0-beta.2",
+            "description": "Updates the default workspace data directory to .nx/workspace-data",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          }
+        }
+      }
+    },
+    "21.0.0": {
+      "integrity": "sha512-SiinQD5x85qarNy2brW5qaI3a2KW/gPp1El9tC/k1tjPgxY1nAkwhceiUdp+okmD++FIEHitF5ZDT4f7Odz8zw==",
+      "engines": {
+        "node": "^20.19.0 || ^22.12.0"
+      },
+      "type": "commonjs",
+      "main": "./bin/nx.js",
+      "dependencies": {
+        "@napi-rs/wasm-runtime": "0.2.4",
+        "@yarnpkg/lockfile": "^1.1.0",
+        "@yarnpkg/parsers": "3.0.2",
+        "@zkochan/js-yaml": "0.0.7",
+        "axios": "^1.8.3",
+        "chalk": "^4.1.0",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "^8.0.1",
+        "dotenv": "~16.4.5",
+        "dotenv-expand": "~11.0.6",
+        "enquirer": "~2.3.6",
+        "figures": "3.2.0",
+        "flat": "^5.0.2",
+        "front-matter": "^4.0.2",
+        "ignore": "^5.0.4",
+        "jest-diff": "^29.4.1",
+        "jsonc-parser": "3.2.0",
+        "lines-and-columns": "2.0.3",
+        "minimatch": "9.0.3",
+        "node-machine-id": "1.1.12",
+        "npm-run-path": "^4.0.1",
+        "open": "^8.4.0",
+        "ora": "5.3.0",
+        "resolve.exports": "2.0.3",
+        "semver": "^7.5.3",
+        "string-width": "^4.2.3",
+        "tar-stream": "~2.2.0",
+        "tmp": "~0.2.1",
+        "tree-kill": "^1.2.2",
+        "tsconfig-paths": "^4.1.2",
+        "tslib": "^2.3.0",
+        "yaml": "^2.6.0",
+        "yargs": "^17.6.2",
+        "yargs-parser": "21.1.1"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.8.0",
+        "@swc/core": "^1.3.85"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": true,
+        "createNodesV2": true,
+        "migrations": {
+          "19-2-0-move-graph-cache-directory": {
+            "version": "19.2.0-beta.2",
+            "description": "Updates the default workspace data directory to .nx/workspace-data",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-legacy-cache": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-custom-tasks-runner": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          }
+        }
+      }
+    },
+    "22.0.0": {
+      "integrity": "sha512-vut7762xXM3eWuAc+P9EBELDXcuS8oTdYssw2zRTePjfd3hcinuuBrsfGCSVF5i35MhPd6MZf3ie9DoM0wygbg==",
+      "type": "commonjs",
+      "main": "./bin/nx.js",
+      "dependencies": {
+        "@napi-rs/wasm-runtime": "0.2.4",
+        "@yarnpkg/lockfile": "^1.1.0",
+        "@yarnpkg/parsers": "3.0.2",
+        "@zkochan/js-yaml": "0.0.7",
+        "axios": "^1.12.0",
+        "chalk": "^4.1.0",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "^8.0.1",
+        "dotenv": "~16.4.5",
+        "dotenv-expand": "~11.0.6",
+        "enquirer": "~2.3.6",
+        "figures": "3.2.0",
+        "flat": "^5.0.2",
+        "front-matter": "^4.0.2",
+        "ignore": "^7.0.5",
+        "jest-diff": "^30.0.2",
+        "jsonc-parser": "3.2.0",
+        "lines-and-columns": "2.0.3",
+        "minimatch": "9.0.3",
+        "node-machine-id": "1.1.12",
+        "npm-run-path": "^4.0.1",
+        "open": "^8.4.0",
+        "ora": "5.3.0",
+        "resolve.exports": "2.0.3",
+        "semver": "^7.5.3",
+        "string-width": "^4.2.3",
+        "tar-stream": "~2.2.0",
+        "tmp": "~0.2.1",
+        "tree-kill": "^1.2.2",
+        "tsconfig-paths": "^4.1.2",
+        "tslib": "^2.3.0",
+        "yaml": "^2.6.0",
+        "yargs": "^17.6.2",
+        "yargs-parser": "21.1.1"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.8.0",
+        "@swc/core": "^1.3.85"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": false,
+        "createNodesV2": true,
+        "migrations": {
+          "19-2-0-move-graph-cache-directory": {
+            "version": "19.2.0-beta.2",
+            "description": "Updates the default workspace data directory to .nx/workspace-data",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-legacy-cache": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-custom-tasks-runner": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          }
+        }
+      }
+    },
+    "23.0.0": {
+      "integrity": "sha512-60HZVOQErtSTnR+UVPBYI5sYe8R2nrHttI0tVHhEj91kJpbXvL15gSh+rv6lUcAJtDfPymoEn20jGzN4oOLKAg==",
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "@nx/nx-source": "./bin/nx.ts",
+          "types": "./dist/bin/nx.d.ts",
+          "default": "./dist/bin/nx.js"
+        },
+        "./package.json": "./package.json",
+        "./package": "./package.json",
+        "./migrations.json": "./migrations.json",
+        "./migrations": "./migrations.json",
+        "./generators.json": "./generators.json",
+        "./generators": "./generators.json",
+        "./executors.json": "./executors.json",
+        "./executors": "./executors.json",
+        "./schemas/*": "./schemas/*.json",
+        "./schemas/*.json": "./schemas/*.json",
+        "./presets/*": {
+          "@nx/nx-source": "./presets/*.json",
+          "default": "./dist/presets/*.json"
+        },
+        "./presets/*.json": {
+          "@nx/nx-source": "./presets/*.json",
+          "default": "./dist/presets/*.json"
+        },
+        "./bin/*": {
+          "@nx/nx-source": "./bin/*.ts",
+          "types": "./dist/bin/*.d.ts",
+          "default": "./dist/bin/*.js"
+        },
+        "./bin/*.js": {
+          "@nx/nx-source": "./bin/*.ts",
+          "types": "./dist/bin/*.d.ts",
+          "default": "./dist/bin/*.js"
+        },
+        "./plugins/*": {
+          "@nx/nx-source": "./plugins/*.ts",
+          "types": "./dist/plugins/*.d.ts",
+          "default": "./dist/plugins/*.js"
+        },
+        "./plugins/*.js": {
+          "@nx/nx-source": "./plugins/*.ts",
+          "types": "./dist/plugins/*.d.ts",
+          "default": "./dist/plugins/*.js"
+        },
+        "./src/analytics": {
+          "@nx/nx-source": "./src/analytics/index.ts",
+          "types": "./dist/src/analytics/index.d.ts",
+          "default": "./dist/src/analytics/index.js"
+        },
+        "./src/command-line": {
+          "@nx/nx-source": "./src/command-line/index.ts",
+          "types": "./dist/src/command-line/index.d.ts",
+          "default": "./dist/src/command-line/index.js"
+        },
+        "./src/command-line/init/implementation/angular": {
+          "@nx/nx-source": "./src/command-line/init/implementation/angular/index.ts",
+          "types": "./dist/src/command-line/init/implementation/angular/index.d.ts",
+          "default": "./dist/src/command-line/init/implementation/angular/index.js"
+        },
+        "./src/command-line/release": {
+          "@nx/nx-source": "./src/command-line/release/index.ts",
+          "types": "./dist/src/command-line/release/index.d.ts",
+          "default": "./dist/src/command-line/release/index.js"
+        },
+        "./src/native": {
+          "@nx/nx-source": "./src/native/index.js",
+          "types": "./dist/src/native/index.d.ts",
+          "default": "./dist/src/native/index.js"
+        },
+        "./src/native/index": {
+          "@nx/nx-source": "./src/native/index.js",
+          "types": "./dist/src/native/index.d.ts",
+          "default": "./dist/src/native/index.js"
+        },
+        "./src/native/index.js": {
+          "@nx/nx-source": "./src/native/index.js",
+          "types": "./dist/src/native/index.d.ts",
+          "default": "./dist/src/native/index.js"
+        },
+        "./src/native/*.js": {
+          "@nx/nx-source": "./src/native/*.js",
+          "default": "./dist/src/native/*.js"
+        },
+        "./src/plugins/js": {
+          "@nx/nx-source": "./src/plugins/js/index.ts",
+          "types": "./dist/src/plugins/js/index.d.ts",
+          "default": "./dist/src/plugins/js/index.js"
+        },
+        "./src/plugins/package-json": {
+          "@nx/nx-source": "./src/plugins/package-json/index.ts",
+          "types": "./dist/src/plugins/package-json/index.d.ts",
+          "default": "./dist/src/plugins/package-json/index.js"
+        },
+        "./src/utils/plugins": {
+          "@nx/nx-source": "./src/utils/plugins/index.ts",
+          "types": "./dist/src/utils/plugins/index.d.ts",
+          "default": "./dist/src/utils/plugins/index.js"
+        },
+        "./src/utils/catalog": {
+          "@nx/nx-source": "./src/utils/catalog/index.ts",
+          "types": "./dist/src/utils/catalog/index.d.ts",
+          "default": "./dist/src/utils/catalog/index.js"
+        },
+        "./src/command-line/migrate/run-migration-process": {
+          "@nx/nx-source": "./src/command-line/migrate/run-migration-process.js",
+          "default": "./dist/src/command-line/migrate/run-migration-process.js"
+        },
+        "./src/command-line/migrate/run-migration-process.js": {
+          "@nx/nx-source": "./src/command-line/migrate/run-migration-process.js",
+          "default": "./dist/src/command-line/migrate/run-migration-process.js"
+        },
+        "./src/project-graph/plugins": {
+          "@nx/nx-source": "./src/project-graph/plugins/index.ts",
+          "types": "./dist/src/project-graph/plugins/index.d.ts",
+          "default": "./dist/src/project-graph/plugins/index.js"
+        },
+        "./src/project-graph/plugins/isolation": {
+          "@nx/nx-source": "./src/project-graph/plugins/isolation/index.ts",
+          "types": "./dist/src/project-graph/plugins/isolation/index.d.ts",
+          "default": "./dist/src/project-graph/plugins/isolation/index.js"
+        },
+        "./src/*/schema": {
+          "@nx/nx-source": "./src/*/schema.json",
+          "default": "./dist/src/*/schema.json"
+        },
+        "./src/*/schema.json": {
+          "@nx/nx-source": "./src/*/schema.json",
+          "default": "./dist/src/*/schema.json"
+        },
+        "./src/native/*.cjs": {
+          "@nx/nx-source": "./src/native/*.cjs",
+          "default": "./dist/src/native/*.cjs"
+        },
+        "./src/native/*.mjs": {
+          "@nx/nx-source": "./src/native/*.mjs",
+          "default": "./dist/src/native/*.mjs"
+        },
+        "./src/internal-testing-utils/*": {
+          "types": "./src/internal-testing-utils/*.ts",
+          "default": "./src/internal-testing-utils/*.ts"
+        },
+        "./src/*.js": {
+          "@nx/nx-source": "./src/*.ts",
+          "types": "./dist/src/*.d.ts",
+          "default": "./dist/src/*.js"
+        },
+        "./src/*": {
+          "@nx/nx-source": "./src/*.ts",
+          "types": "./dist/src/*.d.ts",
+          "default": "./dist/src/*.js"
+        },
+        "./release": {
+          "@nx/nx-source": "./release/index.ts",
+          "types": "./dist/release/index.d.ts",
+          "default": "./dist/release/index.js"
+        },
+        "./release/changelog-renderer": {
+          "@nx/nx-source": "./release/changelog-renderer/index.ts",
+          "types": "./dist/release/changelog-renderer/index.d.ts",
+          "default": "./dist/release/changelog-renderer/index.js"
+        },
+        "./release/*": {
+          "@nx/nx-source": "./release/*.ts",
+          "types": "./dist/release/*.d.ts",
+          "default": "./dist/release/*.js"
+        },
+        "./release/*.js": {
+          "@nx/nx-source": "./release/*.ts",
+          "types": "./dist/release/*.d.ts",
+          "default": "./dist/release/*.js"
+        },
+        "./tasks-runners/*": {
+          "@nx/nx-source": "./tasks-runners/*.ts",
+          "types": "./dist/tasks-runners/*.d.ts",
+          "default": "./dist/tasks-runners/*.js"
+        },
+        "./tasks-runners/*.js": {
+          "@nx/nx-source": "./tasks-runners/*.ts",
+          "types": "./dist/tasks-runners/*.d.ts",
+          "default": "./dist/tasks-runners/*.js"
+        }
+      },
+      "dependencies": {
+        "@emnapi/core": "1.4.5",
+        "@emnapi/runtime": "1.4.5",
+        "@emnapi/wasi-threads": "1.0.4",
+        "@jest/diff-sequences": "30.0.1",
+        "@napi-rs/wasm-runtime": "0.2.4",
+        "@tybys/wasm-util": "0.9.0",
+        "@yarnpkg/lockfile": "1.1.0",
+        "@zkochan/js-yaml": "0.0.7",
+        "ansi-colors": "4.1.3",
+        "ansi-regex": "5.0.1",
+        "ansi-styles": "4.3.0",
+        "argparse": "2.0.1",
+        "asynckit": "0.4.0",
+        "axios": "1.16.0",
+        "balanced-match": "4.0.3",
+        "base64-js": "1.5.1",
+        "bl": "4.1.0",
+        "brace-expansion": "5.0.6",
+        "buffer": "5.7.1",
+        "call-bind-apply-helpers": "1.0.2",
+        "chalk": "4.1.2",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "8.0.1",
+        "clone": "1.0.4",
+        "color-convert": "2.0.1",
+        "color-name": "1.1.4",
+        "combined-stream": "1.0.8",
+        "defaults": "1.0.4",
+        "define-lazy-prop": "2.0.0",
+        "delayed-stream": "1.0.0",
+        "dotenv": "16.4.7",
+        "dotenv-expand": "12.0.3",
+        "dunder-proto": "1.0.1",
+        "ejs": "5.0.1",
+        "emoji-regex": "8.0.0",
+        "end-of-stream": "1.4.5",
+        "enquirer": "2.3.6",
+        "es-define-property": "1.0.1",
+        "es-errors": "1.3.0",
+        "es-object-atoms": "1.1.1",
+        "es-set-tostringtag": "2.1.0",
+        "escalade": "3.2.0",
+        "escape-string-regexp": "1.0.5",
+        "figures": "3.2.0",
+        "flat": "5.0.2",
+        "follow-redirects": "1.16.0",
+        "form-data": "4.0.5",
+        "fs-constants": "1.0.0",
+        "function-bind": "1.1.2",
+        "get-caller-file": "2.0.5",
+        "get-intrinsic": "1.3.0",
+        "get-proto": "1.0.1",
+        "gopd": "1.2.0",
+        "has-flag": "4.0.0",
+        "has-symbols": "1.1.0",
+        "has-tostringtag": "1.0.2",
+        "hasown": "2.0.2",
+        "ieee754": "1.2.1",
+        "ignore": "7.0.5",
+        "inherits": "2.0.4",
+        "is-docker": "2.2.1",
+        "is-fullwidth-code-point": "3.0.0",
+        "is-interactive": "1.0.0",
+        "is-unicode-supported": "0.1.0",
+        "is-wsl": "2.2.0",
+        "isexe": "2.0.0",
+        "json5": "2.2.3",
+        "jsonc-parser": "3.3.1",
+        "lines-and-columns": "2.0.3",
+        "log-symbols": "4.1.0",
+        "math-intrinsics": "1.1.0",
+        "mime-db": "1.52.0",
+        "mime-types": "2.1.35",
+        "mimic-fn": "2.1.0",
+        "minimatch": "10.2.5",
+        "minimist": "1.2.8",
+        "npm-run-path": "4.0.1",
+        "once": "1.4.0",
+        "onetime": "5.1.2",
+        "open": "8.4.2",
+        "ora": "5.4.1",
+        "path-key": "3.1.1",
+        "picocolors": "1.1.1",
+        "proxy-from-env": "2.1.0",
+        "readable-stream": "3.6.2",
+        "require-directory": "2.1.1",
+        "resolve.exports": "2.0.3",
+        "restore-cursor": "3.1.0",
+        "safe-buffer": "5.2.1",
+        "semver": "7.7.4",
+        "signal-exit": "3.0.7",
+        "smol-toml": "1.6.1",
+        "string-width": "4.2.3",
+        "string_decoder": "1.3.0",
+        "strip-ansi": "6.0.1",
+        "strip-bom": "3.0.0",
+        "supports-color": "7.2.0",
+        "tar-stream": "2.2.0",
+        "tmp": "0.2.6",
+        "tsconfig-paths": "4.2.0",
+        "tslib": "2.8.1",
+        "util-deprecate": "1.0.2",
+        "wcwidth": "1.0.1",
+        "which": "3.0.1",
+        "wrap-ansi": "7.0.0",
+        "wrappy": "1.0.2",
+        "y18n": "5.0.8",
+        "yaml": "2.9.0",
+        "yargs": "17.7.2",
+        "yargs-parser": "21.1.1"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.11.1",
+        "@swc/core": "^1.15.8"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": true,
+        "createNodesV2": true,
+        "migrations": {
+          "19-2-0-move-graph-cache-directory": {
+            "version": "19.2.0-beta.2",
+            "description": "Updates the default workspace data directory to .nx/workspace-data",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-legacy-cache": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-custom-tasks-runner": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          }
+        }
+      }
+    },
+    "24.0.0": {
+      "integrity": "sha512-LchM3SyEUYL6qjHUneiSuyYlUscv8t6qpAYWUqnUY5OoSQSLIOLT/xrerLCKUTTcu7Yq1o/TDo9TiwhaBLvM4Q==",
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "@nx/nx-source": "./bin/nx.ts",
+          "types": "./dist/bin/nx.d.ts",
+          "default": "./dist/bin/nx.js"
+        },
+        "./package.json": "./package.json",
+        "./package": "./package.json",
+        "./nx-cloud-internals": {
+          "@nx/nx-source": "./nx-cloud-internals.ts",
+          "types": "./dist/nx-cloud-internals.d.ts",
+          "default": "./dist/nx-cloud-internals.js"
+        },
+        "./migrations.json": "./migrations.json",
+        "./migrations": "./migrations.json",
+        "./generators.json": "./generators.json",
+        "./generators": "./generators.json",
+        "./executors.json": "./executors.json",
+        "./executors": "./executors.json",
+        "./schemas/*": "./schemas/*.json",
+        "./schemas/*.json": "./schemas/*.json",
+        "./presets/*": {
+          "@nx/nx-source": "./presets/*.json",
+          "default": "./dist/presets/*.json"
+        },
+        "./presets/*.json": {
+          "@nx/nx-source": "./presets/*.json",
+          "default": "./dist/presets/*.json"
+        },
+        "./bin/*": {
+          "@nx/nx-source": "./bin/*.ts",
+          "types": "./dist/bin/*.d.ts",
+          "default": "./dist/bin/*.js"
+        },
+        "./bin/*.js": {
+          "@nx/nx-source": "./bin/*.ts",
+          "types": "./dist/bin/*.d.ts",
+          "default": "./dist/bin/*.js"
+        },
+        "./plugins/*": {
+          "@nx/nx-source": "./plugins/*.ts",
+          "types": "./dist/plugins/*.d.ts",
+          "default": "./dist/plugins/*.js"
+        },
+        "./plugins/*.js": {
+          "@nx/nx-source": "./plugins/*.ts",
+          "types": "./dist/plugins/*.d.ts",
+          "default": "./dist/plugins/*.js"
+        },
+        "./src/analytics": {
+          "@nx/nx-source": "./src/analytics/index.ts",
+          "types": "./dist/src/analytics/index.d.ts",
+          "default": "./dist/src/analytics/index.js"
+        },
+        "./src/command-line": {
+          "@nx/nx-source": "./src/command-line/index.ts",
+          "types": "./dist/src/command-line/index.d.ts",
+          "default": "./dist/src/command-line/index.js"
+        },
+        "./src/command-line/init/implementation/angular": {
+          "@nx/nx-source": "./src/command-line/init/implementation/angular/index.ts",
+          "types": "./dist/src/command-line/init/implementation/angular/index.d.ts",
+          "default": "./dist/src/command-line/init/implementation/angular/index.js"
+        },
+        "./src/command-line/release": {
+          "@nx/nx-source": "./src/command-line/release/index.ts",
+          "types": "./dist/src/command-line/release/index.d.ts",
+          "default": "./dist/src/command-line/release/index.js"
+        },
+        "./src/native": {
+          "@nx/nx-source": "./src/native/index.js",
+          "types": "./dist/src/native/index.d.ts",
+          "default": "./dist/src/native/index.js"
+        },
+        "./src/native/index": {
+          "@nx/nx-source": "./src/native/index.js",
+          "types": "./dist/src/native/index.d.ts",
+          "default": "./dist/src/native/index.js"
+        },
+        "./src/native/index.js": {
+          "@nx/nx-source": "./src/native/index.js",
+          "types": "./dist/src/native/index.d.ts",
+          "default": "./dist/src/native/index.js"
+        },
+        "./src/native/*.js": {
+          "@nx/nx-source": "./src/native/*.js",
+          "default": "./dist/src/native/*.js"
+        },
+        "./src/plugins/js": {
+          "@nx/nx-source": "./src/plugins/js/index.ts",
+          "types": "./dist/src/plugins/js/index.d.ts",
+          "default": "./dist/src/plugins/js/index.js"
+        },
+        "./src/plugins/package-json": {
+          "@nx/nx-source": "./src/plugins/package-json/index.ts",
+          "types": "./dist/src/plugins/package-json/index.d.ts",
+          "default": "./dist/src/plugins/package-json/index.js"
+        },
+        "./src/utils/plugins": {
+          "@nx/nx-source": "./src/utils/plugins/index.ts",
+          "types": "./dist/src/utils/plugins/index.d.ts",
+          "default": "./dist/src/utils/plugins/index.js"
+        },
+        "./src/utils/catalog": {
+          "@nx/nx-source": "./src/utils/catalog/index.ts",
+          "types": "./dist/src/utils/catalog/index.d.ts",
+          "default": "./dist/src/utils/catalog/index.js"
+        },
+        "./src/command-line/migrate/run-migration-process": {
+          "@nx/nx-source": "./src/command-line/migrate/run-migration-process.js",
+          "default": "./dist/src/command-line/migrate/run-migration-process.js"
+        },
+        "./src/command-line/migrate/run-migration-process.js": {
+          "@nx/nx-source": "./src/command-line/migrate/run-migration-process.js",
+          "default": "./dist/src/command-line/migrate/run-migration-process.js"
+        },
+        "./src/project-graph/plugins": {
+          "@nx/nx-source": "./src/project-graph/plugins/index.ts",
+          "types": "./dist/src/project-graph/plugins/index.d.ts",
+          "default": "./dist/src/project-graph/plugins/index.js"
+        },
+        "./src/project-graph/plugins/isolation": {
+          "@nx/nx-source": "./src/project-graph/plugins/isolation/index.ts",
+          "types": "./dist/src/project-graph/plugins/isolation/index.d.ts",
+          "default": "./dist/src/project-graph/plugins/isolation/index.js"
+        },
+        "./src/*/schema": {
+          "@nx/nx-source": "./src/*/schema.json",
+          "default": "./dist/src/*/schema.json"
+        },
+        "./src/*/schema.json": {
+          "@nx/nx-source": "./src/*/schema.json",
+          "default": "./dist/src/*/schema.json"
+        },
+        "./src/native/*.cjs": {
+          "@nx/nx-source": "./src/native/*.cjs",
+          "default": "./dist/src/native/*.cjs"
+        },
+        "./src/native/*.mjs": {
+          "@nx/nx-source": "./src/native/*.mjs",
+          "default": "./dist/src/native/*.mjs"
+        },
+        "./src/internal-testing-utils/*": {
+          "types": "./src/internal-testing-utils/*.ts",
+          "default": "./src/internal-testing-utils/*.ts"
+        },
+        "./src/*.js": {
+          "@nx/nx-source": "./src/*.ts",
+          "types": "./dist/src/*.d.ts",
+          "default": "./dist/src/*.js"
+        },
+        "./src/*": {
+          "@nx/nx-source": "./src/*.ts",
+          "types": "./dist/src/*.d.ts",
+          "default": "./dist/src/*.js"
+        },
+        "./release": {
+          "@nx/nx-source": "./release/index.ts",
+          "types": "./dist/release/index.d.ts",
+          "default": "./dist/release/index.js"
+        },
+        "./release/changelog-renderer": {
+          "@nx/nx-source": "./release/changelog-renderer/index.ts",
+          "types": "./dist/release/changelog-renderer/index.d.ts",
+          "default": "./dist/release/changelog-renderer/index.js"
+        },
+        "./release/*": {
+          "@nx/nx-source": "./release/*.ts",
+          "types": "./dist/release/*.d.ts",
+          "default": "./dist/release/*.js"
+        },
+        "./release/*.js": {
+          "@nx/nx-source": "./release/*.ts",
+          "types": "./dist/release/*.d.ts",
+          "default": "./dist/release/*.js"
+        },
+        "./tasks-runners/*": {
+          "@nx/nx-source": "./tasks-runners/*.ts",
+          "types": "./dist/tasks-runners/*.d.ts",
+          "default": "./dist/tasks-runners/*.js"
+        },
+        "./tasks-runners/*.js": {
+          "@nx/nx-source": "./tasks-runners/*.ts",
+          "types": "./dist/tasks-runners/*.d.ts",
+          "default": "./dist/tasks-runners/*.js"
+        }
+      },
+      "dependencies": {
+        "@clack/core": "1.4.3",
+        "@clack/prompts": "1.7.0",
+        "@emnapi/core": "1.4.5",
+        "@emnapi/runtime": "1.4.5",
+        "@emnapi/wasi-threads": "1.0.4",
+        "@jest/diff-sequences": "30.0.1",
+        "@napi-rs/wasm-runtime": "0.2.4",
+        "@tybys/wasm-util": "0.9.0",
+        "@yarnpkg/lockfile": "1.1.0",
+        "@zkochan/js-yaml": "0.0.7",
+        "ansi-regex": "5.0.1",
+        "ansi-styles": "4.3.0",
+        "argparse": "2.0.1",
+        "balanced-match": "4.0.3",
+        "base64-js": "1.5.1",
+        "bl": "4.1.0",
+        "brace-expansion": "5.0.12",
+        "buffer": "5.7.1",
+        "chalk": "4.1.2",
+        "cli-cursor": "3.1.0",
+        "cli-spinners": "2.6.1",
+        "cliui": "8.0.1",
+        "clone": "1.0.4",
+        "color-convert": "2.0.1",
+        "color-name": "1.1.4",
+        "defaults": "1.0.4",
+        "dotenv": "16.4.7",
+        "dotenv-expand": "12.0.3",
+        "ejs": "5.0.1",
+        "emoji-regex": "8.0.0",
+        "end-of-stream": "1.4.5",
+        "escalade": "3.2.0",
+        "escape-string-regexp": "1.0.5",
+        "fast-string-truncated-width": "3.0.3",
+        "fast-string-width": "3.0.2",
+        "fast-wrap-ansi": "0.2.0",
+        "figures": "3.2.0",
+        "fs-constants": "1.0.0",
+        "get-caller-file": "2.0.5",
+        "has-flag": "4.0.0",
+        "ieee754": "1.2.1",
+        "ignore": "7.0.12",
+        "inherits": "2.0.4",
+        "is-fullwidth-code-point": "3.0.0",
+        "is-interactive": "1.0.0",
+        "is-unicode-supported": "0.1.0",
+        "isexe": "2.0.0",
+        "json5": "2.2.3",
+        "jsonc-parser": "3.3.1",
+        "lines-and-columns": "2.0.3",
+        "log-symbols": "4.1.0",
+        "mimic-fn": "2.1.0",
+        "minimatch": "10.2.5",
+        "minimist": "1.2.8",
+        "npm-run-path": "4.0.1",
+        "once": "1.4.0",
+        "onetime": "5.1.2",
+        "ora": "5.4.1",
+        "path-key": "3.1.1",
+        "picocolors": "1.1.1",
+        "readable-stream": "3.6.2",
+        "require-directory": "2.1.1",
+        "resolve.exports": "2.0.3",
+        "restore-cursor": "3.1.0",
+        "safe-buffer": "5.2.1",
+        "semver": "7.8.5",
+        "signal-exit": "3.0.7",
+        "sisteransi": "1.0.5",
+        "smol-toml": "1.9.0",
+        "string-width": "4.2.3",
+        "string_decoder": "1.3.0",
+        "strip-ansi": "6.0.1",
+        "strip-bom": "3.0.0",
+        "supports-color": "7.2.0",
+        "tar-stream": "2.2.0",
+        "tmp": "0.2.7",
+        "tsconfig-paths": "4.2.0",
+        "tslib": "2.8.1",
+        "undici": "7.29.0",
+        "util-deprecate": "1.0.2",
+        "wcwidth": "1.0.1",
+        "which": "3.0.1",
+        "wrap-ansi": "7.0.0",
+        "wrappy": "1.0.2",
+        "y18n": "5.0.8",
+        "yaml": "2.9.0",
+        "yargs": "17.7.2",
+        "yargs-parser": "21.1.1"
+      },
+      "peerDependencies": {
+        "@swc-node/register": "^1.11.1",
+        "@swc/core": "^1.15.8"
+      },
+      "peerDependenciesMeta": {
+        "@swc-node/register": {
+          "optional": true
+        },
+        "@swc/core": {
+          "optional": true
+        }
+      },
+      "artifacts": {
+        "createNodesV1": true,
+        "createNodesV2": true,
+        "migrations": {
+          "19-2-0-move-graph-cache-directory": {
+            "version": "19.2.0-beta.2",
+            "description": "Updates the default workspace data directory to .nx/workspace-data",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-legacy-cache": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "remove-custom-tasks-runner": {
+            "version": "21.0.0-beta.8",
+            "description": "Removes the legacy cache configuration from nx.json",
+            "implementation": true,
+            "writesAffectedLegacy": false
+          },
+          "24-0-0-enable-legacy-affected": {
+            "version": "24.0.0-beta.3",
+            "description": "Sets affected.legacy to true in nx.json so nx affected keeps selecting whole projects. Nx 24 selects individual affected tasks by default.",
+            "implementation": true,
+            "writesAffectedLegacy": true
+          }
+        }
+      }
+    }
+  },
+  "puppeteer": {
+    "22.0.0": {
+      "integrity": "sha512-zYVnjwJngnSB4dbkWp7DHFSIc3nqHvZzrdHyo9+ugV1nq1Lm8obOMcmCFaGfR3PJs0EmYNz+/skBeO45yvASCQ==",
+      "engines": {
+        "node": ">=18"
+      },
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "types": "./lib/types.d.ts",
+          "import": "./lib/esm/puppeteer/puppeteer.js",
+          "require": "./lib/cjs/puppeteer/puppeteer.js"
+        },
+        "./internal/*": {
+          "import": "./lib/esm/puppeteer/*",
+          "require": "./lib/cjs/puppeteer/*"
+        },
+        "./*": {
+          "import": "./*",
+          "require": "./*"
+        }
+      },
+      "main": "./lib/cjs/puppeteer/puppeteer.js",
+      "dependencies": {
+        "cosmiconfig": "9.0.0",
+        "puppeteer-core": "22.0.0",
+        "@puppeteer/browsers": "2.0.0"
+      }
+    },
+    "23.0.0": {
+      "integrity": "sha512-lcFMHrTHK0vhYf3BKFpDjgjw9bVanp9SVLEHTNO0ZhYV+4an+Qi0LuDkI/Dj+5/L671F0qeVm3yUorXtmlp1gQ==",
+      "engines": {
+        "node": ">=18"
+      },
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "types": "./lib/types.d.ts",
+          "import": "./lib/esm/puppeteer/puppeteer.js",
+          "require": "./lib/cjs/puppeteer/puppeteer.js"
+        },
+        "./internal/*": {
+          "import": "./lib/esm/puppeteer/*",
+          "require": "./lib/cjs/puppeteer/*"
+        },
+        "./*": {
+          "import": "./*",
+          "require": "./*"
+        }
+      },
+      "main": "./lib/cjs/puppeteer/puppeteer.js",
+      "dependencies": {
+        "chromium-bidi": "0.6.4",
+        "cosmiconfig": "^9.0.0",
+        "puppeteer-core": "23.0.0",
+        "@puppeteer/browsers": "2.3.0",
+        "devtools-protocol": "0.0.1312386"
+      }
+    },
+    "24.0.0": {
+      "integrity": "sha512-KRF2iWdHGSZkQ8pqftR5XR1jqnTqKRVZghMGJfJ665zS8++0cErRG2tXWfp98YqvMzsVLHfzBtTQlk0MMhCxzg==",
+      "engines": {
+        "node": ">=18"
+      },
+      "type": "commonjs",
+      "exports": {
+        ".": {
+          "types": "./lib/types.d.ts",
+          "import": "./lib/esm/puppeteer/puppeteer.js",
+          "require": "./lib/cjs/puppeteer/puppeteer.js"
+        },
+        "./internal/*": {
+          "import": "./lib/esm/puppeteer/*",
+          "require": "./lib/cjs/puppeteer/*"
+        },
+        "./*": {
+          "import": "./*",
+          "require": "./*"
+        }
+      },
+      "main": "./lib/cjs/puppeteer/puppeteer.js",
+      "dependencies": {
+        "@puppeteer/browsers": "2.7.0",
+        "chromium-bidi": "0.12.0",
+        "cosmiconfig": "^9.0.0",
+        "devtools-protocol": "0.0.1367902",
+        "puppeteer-core": "24.0.0",
+        "typed-query-selector": "^2.12.0"
+      }
+    },
+    "25.0.2": {
+      "integrity": "sha512-cXj/5RlDCzSC7k1YdBIm6prb8lK8lEdmScVbcalX1rBn4fqNN1UNuEz/HZZYiDLsK8dOGvyLpGjh6CgxCyqKtg==",
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./lib/types.d.ts",
+          "import": "./lib/puppeteer/puppeteer.js",
+          "require": "./lib/puppeteer/puppeteer.js"
+        },
+        "./internal/*": {
+          "import": "./lib/puppeteer/*",
+          "require": "./lib/puppeteer/*"
+        },
+        "./*": {
+          "import": "./*",
+          "require": "./*"
+        }
+      },
+      "main": "./lib/puppeteer/puppeteer.js",
+      "dependencies": {
+        "@puppeteer/browsers": "3.0.2",
+        "chromium-bidi": "16.0.1",
+        "cosmiconfig": "^9.0.0",
+        "devtools-protocol": "0.0.1608973",
+        "puppeteer-core": "25.0.2",
+        "typed-query-selector": "^2.12.2"
+      }
+    }
+  },
+  "react-dropzone": {
+    "15.0.0": {
+      "integrity": "sha512-lGjYV/EoqEjEWPnmiSvH4v5IoIAwQM2W4Z1C0Q/Pw2xD0eVzKPS359BQTUMum+1fa0kH2nrKjuavmTPOGhpLPg==",
+      "engines": {
+        "node": ">= 10.13"
+      },
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./typings/react-dropzone.d.ts",
+            "default": "./dist/es/index.js"
+          },
+          "require": {
+            "types": "./typings/react-dropzone.d.ts",
+            "default": "./dist/index.js"
+          }
+        }
+      },
+      "main": "dist/index.js",
+      "dependencies": {
+        "attr-accept": "^2.2.4",
+        "file-selector": "^2.1.0",
+        "prop-types": "^15.8.1"
+      },
+      "peerDependencies": {
+        "react": ">= 16.8 || 18.0.0"
+      }
+    },
+    "16.0.0": {
+      "integrity": "sha512-Se0fi/i0/ymOJONQpZIC2qNzF9iis4RW/GQniOARVhJax4xb0qR/dV/Uw1aEVS3qwtjRqAO0RXpPOBC6FaSo3Q==",
+      "engines": {
+        "node": ">= 20"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./typings/react-dropzone.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/index.cjs",
+      "dependencies": {
+        "attr-accept": "^2.2.5",
+        "file-selector": "^2.1.0",
+        "prop-types": "^15.8.1"
+      },
+      "peerDependencies": {
+        "react": ">= 16.8 || 18.0.0"
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-yedj9VzdC/boq15u0XfzWRGX0Mqpb8dxy/TRDqOIFlISl8nhh38R9QKbztyFqxqLMwLdViVtLbXkv6x/b8gP8A==",
+      "engines": {
+        "node": ">= 20"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/index.cjs",
+      "dependencies": {
+        "attr-accept": "^2.2.5",
+        "file-selector": "^2.1.0"
+      },
+      "peerDependencies": {
+        "react": ">= 18"
+      }
+    },
+    "18.0.0": {
+      "integrity": "sha512-G3NFfBz/Qb/2q/Zsqh+/WdkBF9XAm48frZtD+lQec03IjYwOoXeo4I+MKiLrvK3KR5nEz1SRnJmR5Ad5kijUJg==",
+      "engines": {
+        "node": ">= 20"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/index.cjs",
+      "dependencies": {
+        "attr-accept": "^2.2.5",
+        "file-selector": "^4.0.1"
+      },
+      "peerDependencies": {
+        "react": ">= 18"
+      }
+    },
+    "19.0.0": {
+      "integrity": "sha512-Yk+ytPI3o018A0HT7ZfRndEXA2TNgJe/y0hHPRM0n/qyEGKxQYDrt8q+IcJsZVeo36bKh+inbPpD3Nebry/veQ==",
+      "engines": {
+        "node": ">= 20"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/index.cjs",
+      "dependencies": {
+        "attr-accept": "^2.2.5",
+        "file-selector": "^4.0.1"
+      },
+      "peerDependencies": {
+        "@types/react": "*",
+        "react": ">= 18"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        }
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-Xw8tvvVPJQzj8ir5wivUMzA+G6R+aGhdU5KQzUMvVBlJNb26AW/0137VoYVmb5UgZcbhM9OCpjE4KOqqSL9QuQ==",
+      "engines": {
+        "node": ">= 22"
+      },
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "main": "./dist/index.cjs",
+      "dependencies": {
+        "attr-accept": "^2.2.5",
+        "file-selector": "^4.1.0"
+      },
+      "peerDependencies": {
+        "@types/react": "*",
+        "react": ">= 18"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        }
+      }
+    }
+  },
+  "sinon": {
+    "18.0.0": {
+      "integrity": "sha512-+dXDXzD1sBO6HlmZDd7mXZCR/y5ECiEiGCBSGuFD/kZ0bDTofPYc6JaeGmPSF+1j1MejGUWkORbYOLDyvqCWpA==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "browser": "./pkg/sinon-esm.js",
+          "require": "./lib/sinon.js",
+          "import": "./pkg/sinon-esm.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./lib/sinon.js",
+      "dependencies": {
+        "@sinonjs/commons": "^3.0.1",
+        "@sinonjs/fake-timers": "^11.2.2",
+        "@sinonjs/samsam": "^8.0.0",
+        "diff": "^5.2.0",
+        "nise": "^6.0.0",
+        "supports-color": "^7"
+      }
+    },
+    "19.0.0": {
+      "integrity": "sha512-YwPCB6NgZDam4hsEWe0mzTNbtKWFUtnpMSSQR+CmhWtVCkMqynwl9d7AjmfE7pPlGCXkHSi80mPHy70RTsAijg==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "browser": "./pkg/sinon-esm.js",
+          "require": "./lib/sinon.js",
+          "import": "./pkg/sinon-esm.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./lib/sinon.js",
+      "dependencies": {
+        "@sinonjs/commons": "^3.0.1",
+        "@sinonjs/fake-timers": "13.0.1",
+        "@sinonjs/samsam": "^8.0.1",
+        "diff": "^7.0.0",
+        "nise": "^6.1.0",
+        "supports-color": "^7.2.0"
+      }
+    },
+    "20.0.0": {
+      "integrity": "sha512-+FXOAbdnj94AQIxH0w1v8gzNxkawVvNqE3jUzRLptR71Oykeu2RrQXXl/VQjKay+Qnh73fDt/oDfMo6xMeDQbQ==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "browser": "./pkg/sinon-esm.js",
+          "require": "./lib/sinon.js",
+          "import": "./pkg/sinon-esm.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./lib/sinon.js",
+      "dependencies": {
+        "@sinonjs/commons": "^3.0.1",
+        "@sinonjs/fake-timers": "^13.0.5",
+        "@sinonjs/samsam": "^8.0.1",
+        "diff": "^7.0.0",
+        "supports-color": "^7.2.0"
+      }
+    },
+    "21.0.0": {
+      "integrity": "sha512-TOgRcwFPbfGtpqvZw+hyqJDvqfapr1qUlOizROIk4bBLjlsjlB00Pg6wMFXNtJRpu+eCZuVOaLatG7M8105kAw==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "browser": "./pkg/sinon-esm.js",
+          "require": "./lib/sinon.js",
+          "import": "./pkg/sinon-esm.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./lib/sinon.js",
+      "dependencies": {
+        "@sinonjs/commons": "^3.0.1",
+        "@sinonjs/fake-timers": "^13.0.5",
+        "@sinonjs/samsam": "^8.0.1",
+        "diff": "^7.0.0",
+        "supports-color": "^7.2.0"
+      }
+    },
+    "22.0.0": {
+      "integrity": "sha512-sq/6DpdXOrLyfbKlXLg/Usc7xu8YXPeLkOFZRvA3bNUSA2lhbrZ06yuXbH1fkzBPCbz9O10+7hznzUsjaYNm0Q==",
+      "type": "module",
+      "exports": {
+        ".": {
+          "browser": "./pkg/sinon-esm.js",
+          "require": "./lib/sinon.js",
+          "import": "./pkg/sinon-esm.js"
+        },
+        "./*": "./*"
+      },
+      "main": "./lib/sinon.js",
+      "dependencies": {
+        "@sinonjs/commons": "^3.0.1",
+        "@sinonjs/fake-timers": "^15.4.0",
+        "@sinonjs/samsam": "^10.0.2",
+        "diff": "^9.0.0"
+      }
+    }
+  },
+  "stylelint": {
+    "16.0.0": {
+      "integrity": "sha512-AKwRjOL+a+QYIrjQLaY1uqsxEd2I/QlYvExelWxJ5hbobfBNzM0hkIc6d+CSVJP6KaVme9D3Jlr7VIXfXmHDKA==",
+      "engines": {
+        "node": ">=18.12.0"
+      },
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./types/stylelint/index.d.ts",
+            "default": "./lib/index.mjs"
+          },
+          "require": "./lib/index.cjs"
+        },
+        "./package.json": "./package.json",
+        "./lib/utils/*": "./lib/utils/*"
+      },
+      "main": "lib/index.cjs",
+      "dependencies": {
+        "@csstools/css-parser-algorithms": "^2.3.2",
+        "@csstools/css-tokenizer": "^2.2.1",
+        "@csstools/media-query-list-parser": "^2.1.5",
+        "@csstools/selector-specificity": "^3.0.0",
+        "balanced-match": "^2.0.0",
+        "colord": "^2.9.3",
+        "cosmiconfig": "^9.0.0",
+        "css-functions-list": "^3.2.1",
+        "css-tree": "^2.3.1",
+        "debug": "^4.3.4",
+        "fast-glob": "^3.3.2",
+        "fastest-levenshtein": "^1.0.16",
+        "file-entry-cache": "^7.0.2",
+        "global-modules": "^2.0.0",
+        "globby": "^11.1.0",
+        "globjoin": "^0.1.4",
+        "html-tags": "^3.3.1",
+        "ignore": "^5.3.0",
+        "imurmurhash": "^0.1.4",
+        "is-plain-object": "^5.0.0",
+        "known-css-properties": "^0.29.0",
+        "mathml-tag-names": "^2.1.3",
+        "meow": "^12.1.1",
+        "micromatch": "^4.0.5",
+        "normalize-path": "^3.0.0",
+        "picocolors": "^1.0.0",
+        "postcss": "^8.4.32",
+        "postcss-resolve-nested-selector": "^0.1.1",
+        "postcss-safe-parser": "^7.0.0",
+        "postcss-selector-parser": "^6.0.13",
+        "postcss-value-parser": "^4.2.0",
+        "resolve-from": "^5.0.0",
+        "string-width": "^4.2.3",
+        "strip-ansi": "^7.1.0",
+        "supports-hyperlinks": "^3.0.0",
+        "svg-tags": "^1.0.0",
+        "table": "^6.8.1",
+        "write-file-atomic": "^5.0.1"
+      }
+    },
+    "17.0.0": {
+      "integrity": "sha512-saMZ2mqdQre4AfouxcbTdpVglDRcROb4MIucKHvgsDb/0IX7ODhcaz+EOIyfxAsm8Zjl/7j4hJj6MgIYYM8Xwg==",
+      "engines": {
+        "node": ">=20.19.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./types/stylelint/index.d.ts",
+          "default": "./lib/index.mjs"
+        },
+        "./package.json": "./package.json",
+        "./lib/utils/*": "./lib/utils/*"
+      },
+      "dependencies": {
+        "@csstools/css-parser-algorithms": "^4.0.0",
+        "@csstools/css-syntax-patches-for-csstree": "^1.0.25",
+        "@csstools/css-tokenizer": "^4.0.0",
+        "@csstools/media-query-list-parser": "^5.0.0",
+        "@csstools/selector-resolve-nested": "^4.0.0",
+        "@csstools/selector-specificity": "^6.0.0",
+        "balanced-match": "^3.0.1",
+        "colord": "^2.9.3",
+        "cosmiconfig": "^9.0.0",
+        "css-functions-list": "^3.2.3",
+        "css-tree": "^3.1.0",
+        "debug": "^4.4.3",
+        "fast-glob": "^3.3.3",
+        "fastest-levenshtein": "^1.0.16",
+        "file-entry-cache": "^11.1.1",
+        "global-modules": "^2.0.0",
+        "globby": "^16.1.0",
+        "globjoin": "^0.1.4",
+        "html-tags": "^5.1.0",
+        "ignore": "^7.0.5",
+        "import-meta-resolve": "^4.2.0",
+        "imurmurhash": "^0.1.4",
+        "is-plain-object": "^5.0.0",
+        "known-css-properties": "^0.37.0",
+        "mathml-tag-names": "^4.0.0",
+        "meow": "^14.0.0",
+        "micromatch": "^4.0.8",
+        "normalize-path": "^3.0.0",
+        "picocolors": "^1.1.1",
+        "postcss": "^8.5.6",
+        "postcss-safe-parser": "^7.0.1",
+        "postcss-selector-parser": "^7.1.1",
+        "postcss-value-parser": "^4.2.0",
+        "string-width": "^8.1.0",
+        "supports-hyperlinks": "^4.4.0",
+        "svg-tags": "^1.0.0",
+        "table": "^6.9.0",
+        "write-file-atomic": "^7.0.0"
+      }
+    },
+    "18.0.0": {
+      "integrity": "sha512-kI10GsHXQvsH/AcklVZdQgwDuxtHi+A+h1Ujzd7h9LDf3e5jQiLQkWFlPtpynX3E6oVWHG1wo9v6dL0Mr+nnSA==",
+      "engines": {
+        "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./types/stylelint/index.d.ts",
+          "default": "./lib/index.mjs"
+        },
+        "./package.json": "./package.json",
+        "./lib/utils/*": "./lib/utils/*"
+      },
+      "dependencies": {
+        "@csstools/css-calc": "^3.4.3",
+        "@csstools/css-parser-algorithms": "^4.0.2",
+        "@csstools/css-syntax-patches-for-csstree": "^1.1.15",
+        "@csstools/css-tokenizer": "^4.0.2",
+        "@csstools/media-query-list-parser": "^5.0.2",
+        "@csstools/selector-resolve-nested": "^4.0.2",
+        "@csstools/selector-specificity": "^6.0.1",
+        "colord": "^2.10.0",
+        "cosmiconfig": "^10.0.1",
+        "css-tree": "^3.2.1",
+        "ignore": "^7.0.14",
+        "import-meta-resolve": "^4.2.0",
+        "picomatch": "^4.0.7",
+        "postcss": "^8.5.31",
+        "postcss-safe-parser": "^7.1.0",
+        "postcss-selector-parser": "^7.1.7",
+        "postcss-value-parser": "^4.2.0",
+        "tinyglobby": "^0.2.17",
+        "write-file-atomic": "^8.0.0"
+      }
+    }
+  },
+  "webpack-cli": {
+    "6.0.0": {
+      "integrity": "sha512-4MxiCcVjpl5h88mdrzz+ZQRHiT0JmwImP6Ss3xz0LkPYFR61qxuVx7/IPnwhUyRvXen4v/aLXlJONYmfhgVG7A==",
+      "engines": {
+        "node": ">=18.12.0"
+      },
+      "main": "./lib/index.js",
+      "dependencies": {
+        "@discoveryjs/json-ext": "^0.6.1",
+        "@webpack-cli/configtest": "^3.0.0",
+        "@webpack-cli/info": "^3.0.0",
+        "@webpack-cli/serve": "^3.0.0",
+        "colorette": "^2.0.14",
+        "commander": "^12.1.0",
+        "cross-spawn": "^7.0.3",
+        "envinfo": "^7.14.0",
+        "fastest-levenshtein": "^1.0.12",
+        "import-local": "^3.0.2",
+        "interpret": "^3.1.1",
+        "rechoir": "^0.8.0",
+        "webpack-merge": "^6.0.1"
+      },
+      "peerDependencies": {
+        "webpack": "^5.82.0"
+      },
+      "peerDependenciesMeta": {
+        "webpack-bundle-analyzer": {
+          "optional": true
+        },
+        "webpack-dev-server": {
+          "optional": true
+        }
+      }
+    },
+    "7.0.0": {
+      "integrity": "sha512-NbM62WodkUPXQGR/Ip3pSFsFUKJSseDIFr2H5Z1+4fHwB9X4cO10knPShIopFqAHZa8a5Q8pdtmtE6C12/mlMQ==",
+      "engines": {
+        "node": ">=20.9.0"
+      },
+      "main": "./lib/index.js",
+      "dependencies": {
+        "@discoveryjs/json-ext": "^1.0.0",
+        "commander": "^14.0.3",
+        "cross-spawn": "^7.0.6",
+        "envinfo": "^7.14.0",
+        "fastest-levenshtein": "^1.0.12",
+        "import-local": "^3.0.2",
+        "interpret": "^3.1.1",
+        "rechoir": "^0.8.0",
+        "webpack-merge": "^6.0.1"
+      },
+      "peerDependencies": {
+        "webpack": "^5.101.0",
+        "webpack-bundle-analyzer": "^4.0.0 || ^5.0.0",
+        "webpack-dev-server": "^5.0.0"
+      },
+      "peerDependenciesMeta": {
+        "webpack-bundle-analyzer": {
+          "optional": true
+        },
+        "webpack-dev-server": {
+          "optional": true
+        }
+      }
+    }
+  }
+}

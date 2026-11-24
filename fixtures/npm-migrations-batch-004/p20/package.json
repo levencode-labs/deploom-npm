@@ -1,0 +1,9 @@
+{
+  "name": "deploom-migration-chai",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "v-4-3-10": "npm:chai@4.3.10",
+    "v-5-0-0": "npm:chai@5.0.0"
+  }
+}

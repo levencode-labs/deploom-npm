@@ -1,0 +1,10 @@
+{
+  "name": "deploom-chai-esm",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "before": "npm:chai-as-promised@7.1.2",
+    "after": "npm:chai-as-promised@8.0.0",
+    "chai": "4.5.0"
+  }
+}

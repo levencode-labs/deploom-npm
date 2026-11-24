@@ -1,0 +1,603 @@
+{
+  "schema": 2,
+  "records": [
+    {
+      "schema": 2,
+      "id": "batch007-imports-loader-4.0.1-5.0.0",
+      "kind": "breaking-change",
+      "package": "imports-loader",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.1",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under >= 14.15.0. The target excludes it under >= 18.12.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >= 18.12.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >= 18.12.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "imports-loader",
+          "from": "4.0.1",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-docusaurus-theme-mermaid-2.4.3-3.0.0",
+      "kind": "breaking-change",
+      "package": "@docusaurus/theme-mermaid",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.4.3",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for react changes from ^16.8.4 || ^17.0.0 to ^18.0.0. Holding 16.14.0 is incompatible with the target, while 18.2.0 satisfies it.",
+      "conditions": [
+        "The workspace retains react at 16.14.0 or another version outside ^18.0.0."
+      ],
+      "actions": [
+        "Align react with ^18.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@docusaurus/theme-mermaid",
+          "from": "2.4.3",
+          "to": "3.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-expose-loader-4.1.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "expose-loader",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.1.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 14.16.0 under >= 14.15.0. The target excludes it under >= 18.12.0.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >= 18.12.0."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >= 18.12.0 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "expose-loader",
+          "from": "4.1.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-react-hookz-web-17.0.1-18.0.0",
+      "kind": "breaking-change",
+      "package": "@react-hookz/web",
+      "fromMajor": 17,
+      "toMajor": 18,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "17.0.1",
+          "to": "18.0.0"
+        }
+      ],
+      "title": "Replace the removed useDocumentTitle hook",
+      "summary": "The source exports useDocumentTitle. The target's shipped public declarations omit it.",
+      "conditions": [
+        "A component imports useDocumentTitle from @react-hookz/web."
+      ],
+      "actions": [
+        "Set document.title in a client-side React effect or through the app's existing head manager. Preserve cleanup behavior required by the route."
+      ],
+      "verification": [
+        "Test title updates when the route or title changes and through server rendering if supported."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@react-hookz/web",
+          "from": "17.0.1",
+          "to": "18.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-react-hookz-web-20.1.0-21.0.0",
+      "kind": "breaking-change",
+      "package": "@react-hookz/web",
+      "fromMajor": 20,
+      "toMajor": 21,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "20.1.0",
+          "to": "21.0.0"
+        }
+      ],
+      "title": "Replace a deep React Hookz entry with the public package import",
+      "summary": "The exact source ships the cjs/index JavaScript path. The target removes it and still exports useDebouncedCallback from its package entry.",
+      "conditions": [
+        "The project imports @react-hookz/web/cjs/index directly."
+      ],
+      "actions": [
+        "Use the public @react-hookz/web import and keep named hook imports."
+      ],
+      "verification": [
+        "Build the owning workspace and run the relevant hook tests."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@react-hookz/web",
+          "from": "20.1.0",
+          "to": "21.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-react-hookz-web-21.0.0-22.0.0",
+      "kind": "breaking-change",
+      "package": "@react-hookz/web",
+      "fromMajor": 21,
+      "toMajor": 22,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "21.0.0",
+          "to": "22.0.0"
+        }
+      ],
+      "title": "Replace a deep React Hookz entry with the public package import",
+      "summary": "The exact source ships the dist/index JavaScript path. The target removes it and still exports useDebouncedCallback from its package entry.",
+      "conditions": [
+        "The project imports @react-hookz/web/dist/index directly."
+      ],
+      "actions": [
+        "Use the public @react-hookz/web import and keep named hook imports."
+      ],
+      "verification": [
+        "Build the owning workspace and run the relevant hook tests."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@react-hookz/web",
+          "from": "21.0.0",
+          "to": "22.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-react-hookz-web-22.0.0-23.0.0",
+      "kind": "breaking-change",
+      "package": "@react-hookz/web",
+      "fromMajor": 22,
+      "toMajor": 23,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "22.0.0",
+          "to": "23.0.0"
+        }
+      ],
+      "title": "Remove the obsolete useSafeState import",
+      "summary": "The source exposes useSafeState in the root declaration. The target removes that hook.",
+      "conditions": [
+        "A component imports useSafeState from @react-hookz/web."
+      ],
+      "actions": [
+        "Use useState for local state and explicitly clean up async effects or subscriptions where needed."
+      ],
+      "verification": [
+        "Run the component and its unmount or request cancellation tests."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@react-hookz/web",
+          "from": "22.0.0",
+          "to": "23.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-react-hookz-web-23.1.0-24.0.0",
+      "kind": "breaking-change",
+      "package": "@react-hookz/web",
+      "fromMajor": 23,
+      "toMajor": 24,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "23.1.0",
+          "to": "24.0.0"
+        }
+      ],
+      "title": "Load React Hookz through its ESM entry",
+      "summary": "The source ships a CommonJS package entry. The target exports a module entry at the package root.",
+      "conditions": [
+        "The application loads @react-hookz/web through a CommonJS loader that cannot load ESM."
+      ],
+      "actions": [
+        "Use the ESM root import or an async import supported by the project's loader."
+      ],
+      "verification": [
+        "Build and run the application and test entries that load the hooks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@react-hookz/web",
+          "from": "23.1.0",
+          "to": "24.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-babel-plugin-proposal-throw-expressions-7.29.7-8.0.0",
+      "kind": "breaking-change",
+      "package": "@babel/plugin-proposal-throw-expressions",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.29.7",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for @babel/core changes from ^7.0.0-0 to ^8.0.0. Holding 7.29.7 is incompatible with the target, while 8.0.0 satisfies it.",
+      "conditions": [
+        "The workspace retains @babel/core at 7.29.7 or another version outside ^8.0.0."
+      ],
+      "actions": [
+        "Align @babel/core with ^8.0.0 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@babel/plugin-proposal-throw-expressions",
+          "from": "7.29.7",
+          "to": "8.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-csp-header-5.2.1-6.0.0",
+      "kind": "breaking-change",
+      "package": "csp-header",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.2.1",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Align Node.js with the target engine range",
+      "summary": "The published source accepts Node.js 10.24.1 under >=10. The target excludes it under >=18.",
+      "conditions": [
+        "Local development, deployment, or CI retains a Node.js version accepted by the source but outside >=18."
+      ],
+      "actions": [
+        "Update the runtime pins to a supported Node.js version in >=18 before installing the target."
+      ],
+      "verification": [
+        "Check the actual runtime in each environment, install with engine-strict, and run the owning project checks."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "csp-header",
+          "from": "5.2.1",
+          "to": "6.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-playwright-experimental-ct-react17-1.56.1-1.57.0",
+      "kind": "breaking-change",
+      "package": "@playwright/experimental-ct-react17",
+      "fromMajor": 1,
+      "toMajor": 1,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.56.1",
+          "to": "1.57.0"
+        }
+      ],
+      "title": "Replace Playwright page.accessibility snapshots with Locator.ariaSnapshot",
+      "summary": "The exact React 17 component-testing dependency chain loses page.accessibility. The target Locator sends the fixture selector and returns the expected ARIA snapshot.",
+      "conditions": [
+        "A component test calls page.accessibility.snapshot()."
+      ],
+      "actions": [
+        "Take a scoped snapshot using locator.ariaSnapshot and update assertions to the ARIA snapshot representation."
+      ],
+      "verification": [
+        "Run the owning component tests in the pinned browser and compare accessible roles and names."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "@playwright/experimental-ct-react17",
+          "from": "1.56.1",
+          "to": "1.57.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-stylelint-media-use-custom-media-3.0.0-4.0.0",
+      "kind": "breaking-change",
+      "package": "stylelint-media-use-custom-media",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for stylelint changes from 10 - 15 to >=16. Holding 14.16.1 is incompatible with the target, while 16.0.0 satisfies it.",
+      "conditions": [
+        "The workspace retains stylelint at 14.16.1 or another version outside >=16."
+      ],
+      "actions": [
+        "Align stylelint with >=16 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "stylelint-media-use-custom-media",
+          "from": "3.0.0",
+          "to": "4.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "batch007-stylelint-selector-tag-no-without-class-3.0.0-4.0.0",
+      "kind": "breaking-change",
+      "package": "stylelint-selector-tag-no-without-class",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Upgrade the package and its peer together",
+      "summary": "The published peer range for stylelint changes from >= 9.x < 17 to >=17. Holding 14.16.1 is incompatible with the target, while 17.0.0 satisfies it.",
+      "conditions": [
+        "The workspace retains stylelint at 14.16.1 or another version outside >=17."
+      ],
+      "actions": [
+        "Align stylelint with >=17 in the same upgrade, keeping the root and owning workspace pins consistent."
+      ],
+      "verification": [
+        "Perform a strict install and run the tooling feature that uses both packages."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-old-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(result, expected[i].report);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/19014a8add21b1fa3b65e454b99305419a9b533e/fixtures/npm-migrations-batch-007/check.cjs",
+        "fixtureSha256": "e27fe6dda0c7038a396349d8e87acaddcba59be31aec4b14ceae9384a99af5e4",
+        "claim": {
+          "package": "stylelint-selector-tag-no-without-class",
+          "from": "3.0.0",
+          "to": "4.0.0",
+          "check": "peer-compatibility",
+          "outcome": "passed"
+        }
+      }
+    }
+  ]
+}
