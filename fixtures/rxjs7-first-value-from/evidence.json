@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "e3ab83f55984ee627fe05bff97ab0abd330cdfc2beb0618b9aa6cd38a41bbd37",
+  "claims": [
+    {
+      "package": "rxjs",
+      "from": "6.6.7",
+      "to": "7.8.2",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
