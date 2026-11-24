@@ -1,0 +1,11 @@
+{
+  "name": "fixture-apollo4-react-entrypoints-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "3.9.5",
+    "graphql": "16.14.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

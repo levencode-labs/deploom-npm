@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "76bb44a43d723b2c1ed7a237a97afcec7bd12c565fb0f01eb021656043b5f33a",
+  "claims": [
+    {
+      "package": "pino",
+      "from": "6.14.0",
+      "to": "10.1.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

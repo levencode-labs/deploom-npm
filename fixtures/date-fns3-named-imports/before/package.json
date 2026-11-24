@@ -1,0 +1,8 @@
+{
+  "name": "fixture-date-fns3-named-imports-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "date-fns": "2.30.0"
+  }
+}

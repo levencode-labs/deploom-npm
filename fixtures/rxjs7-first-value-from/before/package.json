@@ -1,0 +1,9 @@
+{
+  "name": "fixture-rxjs7-first-value-from-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "rxjs": "6.6.7",
+    "typescript": "5.5.4"
+  }
+}

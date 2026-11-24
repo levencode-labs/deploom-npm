@@ -1,0 +1,8 @@
+{
+  "name": "fixture-msw2-http-response-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "msw": "2.13.4"
+  }
+}

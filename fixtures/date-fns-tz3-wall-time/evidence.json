@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "6da1f3e377b99b45d9095336611679a5ec7f14546dadb699da92e843850621bc",
+  "claims": [
+    {
+      "package": "date-fns-tz",
+      "from": "2.0.0",
+      "to": "3.2.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "4a97f8d2a6da4b9dc8a087bc795ba96bc7a2acb2eef6fdaaca018b62713ffd77",
+  "claims": [
+    {
+      "package": "rollup",
+      "from": "3.29.4",
+      "to": "4.0.0",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}

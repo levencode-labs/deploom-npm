@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "77a7ccb0512d81dc275f23f6754dd3d3bbe866374d46de4595102eb86877bb5a",
+  "claims": [
+    {
+      "package": "mongoose",
+      "from": "8.24.6",
+      "to": "9.11.3",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

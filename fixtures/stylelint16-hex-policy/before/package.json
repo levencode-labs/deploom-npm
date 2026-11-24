@@ -1,0 +1,9 @@
+{
+  "name": "deploom-stylelint-hex-policy-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "stylelint": "15.10.1",
+    "stylelint-stylistic": "0.4.3"
+  }
+}

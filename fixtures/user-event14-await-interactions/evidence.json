@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "701618865a9b1767d57a36a51b47500a6c6b500931ce3571ff1ecba9bf4891d3",
+  "claims": [
+    {
+      "package": "@testing-library/user-event",
+      "from": "13.5.0",
+      "to": "14.6.7",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

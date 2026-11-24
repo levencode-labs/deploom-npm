@@ -1,0 +1,8 @@
+{
+  "name": "fixture-node-cron4-start-gate-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "node-cron": "3.0.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "dd6febfdbe53825ac5a0deab7f48aa8e7fae7b3b9ba966bfc9baf7ae5c96855b",
+  "claims": [
+    {
+      "package": "@apollo/client",
+      "from": "3.9.5",
+      "to": "4.2.10",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "e0bb1597714c79b15c1a46a234beb4a175d9acb23d643ced2de32b708c3bfe53",
+  "claims": [
+    {
+      "package": "date-fns",
+      "from": "2.30.0",
+      "to": "3.6.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    }
+  ]
+}

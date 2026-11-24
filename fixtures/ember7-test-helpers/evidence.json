@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "31862a182b32368060348d0b75fd6e9139697fc9c9e8541712feb05681ddcf15",
+  "claims": [
+    {
+      "package": "ember-source",
+      "from": "6.10.1",
+      "to": "7.2.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    }
+  ]
+}

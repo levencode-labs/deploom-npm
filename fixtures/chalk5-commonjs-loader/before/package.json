@@ -1,0 +1,8 @@
+{
+  "name": "fixture-chalk5-commonjs-loader-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "chalk": "4.1.2"
+  }
+}

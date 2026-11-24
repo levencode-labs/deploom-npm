@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "edb167566e61b9b8ea170bba8d6cdd7255a2705d308bf9fc24efd00f4aea1644",
+  "claims": [
+    {
+      "package": "prettier",
+      "from": "2.8.8",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

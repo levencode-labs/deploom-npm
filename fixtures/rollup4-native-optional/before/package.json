@@ -1,0 +1,8 @@
+{
+  "name": "rollup4-native-optional-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "rollup": "3.29.4"
+  }
+}

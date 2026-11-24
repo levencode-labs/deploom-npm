@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "4b512732ff5082043234ad9cccbdc9cf8dcb8237dd6b8ff9652c4badb8fccbca",
+  "claims": [
+    {
+      "package": "@mui/material",
+      "from": "6.5.0",
+      "to": "7.3.11",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

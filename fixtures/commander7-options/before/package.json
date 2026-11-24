@@ -1,0 +1,8 @@
+{
+  "name": "fixture-commander7-options-before",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "commander": "4.1.1"
+  }
+}

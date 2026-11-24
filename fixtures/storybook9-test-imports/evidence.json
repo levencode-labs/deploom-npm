@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "c2c2f6315c8b5abcfa9dc83bfe0be9fe92b67788442d45e47b48f362068db73f",
+  "claims": [
+    {
+      "package": "storybook",
+      "from": "8.6.18",
+      "to": "9.1.20",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

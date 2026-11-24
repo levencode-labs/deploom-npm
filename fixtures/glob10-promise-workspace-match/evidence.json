@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "04ce535ef9aed5f03460db39b07f5a34551a786a280f8bebf652e35931a9cdc4",
+  "claims": [
+    {
+      "package": "glob",
+      "from": "7.2.3",
+      "to": "10.5.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "fixture-trpc11-link-transformer-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@trpc/client": "11.19.0",
+    "@trpc/server": "11.19.0",
+    "superjson": "2.2.6",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "cde109809dc96e26476b6a40a92e61d58828536aa74cf5513daa675b7280d469",
+  "claims": [
+    {
+      "package": "webpack",
+      "from": "4.46.0",
+      "to": "4.47.0",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}

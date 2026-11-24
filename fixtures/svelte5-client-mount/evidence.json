@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "621ffdee90b019d9b35d72c660704f2e8b6934cd50a31acf7fa7baf5fb93daab",
+  "claims": [
+    {
+      "package": "svelte",
+      "from": "4.2.18",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

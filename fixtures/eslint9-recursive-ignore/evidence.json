@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "3e082eb95ff14a1912c0599008b29154f811d6de9b6a99ec4a639d4871490cad",
+  "claims": [
+    {
+      "package": "eslint",
+      "from": "8.57.1",
+      "to": "9.0.0",
+      "check": "lint",
+      "outcome": "passed"
+    }
+  ]
+}

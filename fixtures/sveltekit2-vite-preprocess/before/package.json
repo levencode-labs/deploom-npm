@@ -1,0 +1,10 @@
+{
+  "name": "fixture-sveltekit2-vite-preprocess-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@sveltejs/kit": "1.30.4",
+    "svelte": "4.2.20",
+    "vite": "4.5.14"
+  }
+}

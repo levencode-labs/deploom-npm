@@ -1,0 +1,8 @@
+{
+  "name": "fixture-ajv8-date-formats-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "ajv": "6.15.0"
+  }
+}

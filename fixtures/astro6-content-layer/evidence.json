@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "cc9f06a49d533df4222e6d84b6b7e04fc338f1c22f82b3961dc268cc2c7309e6",
+  "claims": [
+    {
+      "package": "astro",
+      "from": "5.18.2",
+      "to": "6.4.8",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}

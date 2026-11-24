@@ -1,0 +1,10 @@
+{
+  "name": "deploom-tanstack-query5-object-signatures-before",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@tanstack/react-query": "4.36.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "4f3d2a0633b864aedf528f12e023ac9d865ccc516b1a8925841c84ccd905911d",
+  "claims": [
+    {
+      "package": "jquery",
+      "from": "3.7.1",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

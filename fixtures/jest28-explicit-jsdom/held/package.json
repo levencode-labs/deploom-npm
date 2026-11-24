@@ -1,0 +1,8 @@
+{
+  "name": "fixture-jest28-held",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "jest": "28.1.3"
+  }
+}

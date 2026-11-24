@@ -1,0 +1,9 @@
+{
+  "name": "deploom-dotenv18-quiet",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "dotenv-before": "npm:dotenv@16.6.1",
+    "dotenv-after": "npm:dotenv@18.0.8"
+  }
+}

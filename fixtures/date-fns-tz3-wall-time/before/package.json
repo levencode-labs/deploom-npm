@@ -1,0 +1,9 @@
+{
+  "name": "fixture-date-fns-tz3-wall-time-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "date-fns-tz": "2.0.0",
+    "date-fns": "2.29.3"
+  }
+}

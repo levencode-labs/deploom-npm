@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "66aff5c66a7cc5253bf45c718460bba1b2414f22321bd873db3d1f4ed2b01556",
+  "claims": [
+    {
+      "package": "typescript",
+      "from": "5.9.2",
+      "to": "6.0.3",
+      "check": "build",
+      "outcome": "passed"
+    }
+  ]
+}

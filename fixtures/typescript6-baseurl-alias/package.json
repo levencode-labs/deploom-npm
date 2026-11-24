@@ -1,0 +1,9 @@
+{
+  "name": "deploom-typescript6-baseurl-alias-replay",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "typescript-before": "npm:typescript@5.9.2",
+    "typescript-after": "npm:typescript@6.0.3"
+  }
+}

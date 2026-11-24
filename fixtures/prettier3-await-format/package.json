@@ -1,0 +1,9 @@
+{
+  "name": "deploom-prettier3-await-format-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "prettier-before": "npm:prettier@2.8.8",
+    "prettier-after": "npm:prettier@3.0.0"
+  }
+}
