@@ -21,6 +21,11 @@ jobs:
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
       - run: npx --yes --package=npm@11.16.0 -- node fixtures/vitest-vite-peer/check.cjs
+      - name: Verify Zod 4 request validation error responses
+        working-directory: fixtures/zod4-error-issues
+        run: |
+          npm ci --omit=optional --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+          node check.cjs
       - name: Check the Vitest mock transform
         working-directory: fixtures/vitest5-hoisted-mocks
         run: |
