@@ -1,0 +1,9 @@
+{
+  "name": "fixture-jest28-explicit-jsdom-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "jest": "28.1.3",
+    "jest-environment-jsdom": "28.1.3"
+  }
+}
