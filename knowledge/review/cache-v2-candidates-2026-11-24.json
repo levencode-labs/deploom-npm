@@ -2222,6 +2222,100 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "angular19-ngmodule-standalone",
+      "kind": "breaking-change",
+      "package": "@angular/core",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.2.14",
+          "to": "19.2.25"
+        }
+      ],
+      "title": "Keep NgModule declarations non-standalone in Angular 19",
+      "summary": "Angular 19 treats components as standalone when the flag is omitted. Existing NgModule declarations then fail compilation. Explicit standalone: false preserves the Angular 18 setup.",
+      "conditions": [
+        "An NgModule declares a component whose decorator omits standalone, and that component should remain module-declared."
+      ],
+      "actions": [
+        "Set standalone: false on affected declarations that stay in an NgModule.",
+        "Upgrade the compiler packages with core and check the target compiler's TypeScript peer range."
+      ],
+      "verification": [
+        "Compile the affected NgModules and check that they still accept their declarations."
+      ],
+      "negativeControls": [
+        {
+          "name": "omitted-standalone-flag-rejects-ngmodule-declaration",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.diagnostics, /(?:NG6008|TS-996008):[^\\n]*standalone/i)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/4bb7d99373f71ccffabdd1d42c3162d6d88900d7/fixtures/angular19-ngmodule-standalone/check.cjs",
+        "fixtureSha256": "4963145484330d54386f813349be35e8a4c24339920b52242e24aa7a6898441e",
+        "claim": {
+          "package": "@angular/core",
+          "from": "18.2.14",
+          "to": "19.2.25",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "rxjs7-first-value-from",
+      "kind": "breaking-change",
+      "package": "rxjs",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.6.7",
+          "to": "7.8.2"
+        }
+      ],
+      "title": "Convert single-emission RxJS observables with firstValueFrom",
+      "summary": "RxJS 7 adds undefined to the return type of toPromise(). firstValueFrom restores a strict Promise<T> for a single-emission source, but empty and multiple streams behave differently.",
+      "conditions": [
+        "A call to toPromise() converts a source known to emit one value into a non-optional Promise result."
+      ],
+      "actions": [
+        "Use firstValueFrom(source) when the first emission is the intended result.",
+        "Check empty behavior explicitly. Choose lastValueFrom for the last result when the source completes."
+      ],
+      "verification": [
+        "Type-check the affected Promise return and test representative single, empty and multiple-emission paths."
+      ],
+      "negativeControls": [
+        {
+          "name": "strict-nonoptional-promise-rejects-held-topromise",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.diagnostics, /TS2322: Type 'Promise<string \\| undefined>'/)"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/8f6ffe3f367f8f60d03144c7bd70dcb2b3095612/fixtures/rxjs7-first-value-from/check.cjs",
+        "fixtureSha256": "e3ab83f55984ee627fe05bff97ab0abd330cdfc2beb0618b9aa6cd38a41bbd37",
+        "claim": {
+          "package": "rxjs",
+          "from": "6.6.7",
+          "to": "7.8.2",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
