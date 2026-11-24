@@ -1,0 +1,12 @@
+{
+  "fixtureSha256": "3a53b592b20941f567fe7bc0be8dcd141aca3d616700c7af9fe513415852550e",
+  "claims": [
+    {
+      "package": "express",
+      "from": "4.18.1",
+      "to": "5.2.1",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}

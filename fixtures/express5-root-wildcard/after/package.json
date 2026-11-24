@@ -1,0 +1,8 @@
+{
+  "name": "fixture-express5-root-wildcard-after",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}
