@@ -515,3 +515,14 @@ jobs:
         run: |
           node fixtures/npm-github-api-contracts/check.cjs
           node fixtures/npm-github-esm-contracts/check.cjs
+      - name: Verify the second API, configuration and codemod batch
+        run: |
+          set -eu
+          for lock in fixtures/npm-github-api-config-002/*/package-lock.json; do
+            npm ci --prefix "${lock%/package-lock.json}" --omit=optional --ignore-scripts --no-audit --no-fund --strict-peer-deps
+          done
+          for arm in before after; do
+            npm ci --prefix "fixtures/npm-github-biome-002/$arm" --include=optional --ignore-scripts --no-audit --no-fund --strict-peer-deps
+          done
+          node fixtures/npm-github-api-config-002/check.cjs
+          node fixtures/npm-github-biome-002/check.cjs

@@ -1,0 +1,10 @@
+{
+  "name": "deploom-wave-two-sdk",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "pk-sentry-react-7-0-0": "npm:@sentry/react@7.0.0",
+    "pk-sentry-react-10-0-0": "npm:@sentry/react@10.0.0",
+    "react": "18.3.1"
+  }
+}

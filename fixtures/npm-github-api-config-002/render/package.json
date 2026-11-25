@@ -1,0 +1,11 @@
+{
+  "name": "deploom-wave-two-render",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "pk-qrcode.react-3-0-0": "npm:qrcode.react@3.0.0",
+    "pk-qrcode.react-4-0-0": "npm:qrcode.react@4.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "deploom-wave-two-svgr",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "pk-svgr-core-5-0-0": "npm:@svgr/core@5.0.0",
+    "pk-svgr-core-7-0-0": "npm:@svgr/core@7.0.0",
+    "@svgr/plugin-jsx": "7.0.0"
+  }
+}
