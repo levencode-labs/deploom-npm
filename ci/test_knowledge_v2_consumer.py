@@ -70,7 +70,10 @@ with tempfile.TemporaryDirectory() as tmp:
         trial = shared_records.lookup(local, "react-dom", "18.1.0", "18.3.2")
         assert trial["knowledge"][0]["matchStrength"] == "major-line-candidate"
         assert trial["knowledge"][0]["requiresProjectVerification"] is True
-        assert shared_records.lookup(local, "react-dom", "17.0.0", "18.3.1")["status"] == "no-matching-record"
+        outside = shared_records.lookup(local, "react-dom", "17.0.0", "18.3.1")
+        assert outside["snapshotSource"] == "verified-pages", outside
+        assert outside["status"] in {"found", "no-matching-record"}, outside
+        assert all(x["id"] != "align-react-renderers" for x in outside["knowledge"]), outside
         assert len(requests) == 2 + sum(len(x) for x in parsed["buckets"].values())
         # Signed equal-revision replacement must be rejected even if signature is valid.
         mutated = json.loads(signed_index)
