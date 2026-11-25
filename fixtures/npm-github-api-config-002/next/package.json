@@ -1,0 +1,10 @@
+{
+  "name": "deploom-wave-two-next",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "pk-next15": "npm:@next/eslint-plugin-next@15.0.0",
+    "pk-next16": "npm:@next/eslint-plugin-next@16.0.0",
+    "eslint": "9.39.1"
+  }
+}

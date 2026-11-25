@@ -1,0 +1,9 @@
+{
+  "name": "deploom-wave-two-babel7",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "7.0.0",
+    "@babel/core": "7.0.0"
+  }
+}
