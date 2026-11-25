@@ -1,0 +1,135 @@
+'use strict';
+const assert = require('node:assert/strict');
+const semver = require('semver');
+const facts = require('./facts.json');
+const expected = require('./expected.json');
+const pairs = [
+  ["dockerode","3.0.0","5.0.0"],
+  ["eslint-plugin-promise","4.0.0","5.0.0"],
+  ["eslint-plugin-promise","5.0.0","6.0.0"],
+  ["eslint-plugin-promise","6.0.0","7.0.0"],
+  ["postcss-values-parser","2.0.0","8.0.0"],
+  ["react-window","1.0.0","2.0.0"],
+  ["mongoose","5.0.0","8.0.0"],
+  ["mongoose","8.0.0","9.0.0"],
+  ["eslint-plugin-vue","7.0.0","8.0.0"],
+  ["eslint-plugin-vue","8.0.0","9.0.0"],
+  ["eslint-plugin-vue","9.0.0","10.0.0"],
+  ["stylelint-config-standard","20.0.0","25.0.0"],
+  ["stylelint-config-standard","29.0.0","35.0.0"],
+  ["stylelint-config-standard","35.0.0","36.0.0"],
+  ["stylelint-config-standard","36.0.0","40.0.0"],
+  ["stylelint-config-standard","40.0.0","41.0.0"],
+  ["jsonc-eslint-parser","2.0.0","3.0.0"],
+  ["eslint-plugin-import-x","0.0.0","4.0.0"],
+  ["eslint-config-airbnb-base","14.0.0","15.0.0"],
+  ["url-loader","1.0.0","4.0.0"],
+  ["eslint-plugin-jsdoc","30.0.0","39.0.0"],
+  ["eslint-plugin-jsdoc","39.0.0","46.0.0"],
+  ["eslint-plugin-jsdoc","46.0.0","48.0.0"],
+  ["eslint-plugin-jsdoc","50.0.0","61.0.0"],
+  ["eslint-plugin-jsdoc","61.0.0","62.0.0"],
+  ["eslint-plugin-jsdoc","62.0.0","63.0.0"],
+  ["eslint-plugin-jsdoc","63.0.0","64.0.0"],
+  ["electron","13.0.0","22.0.0"],
+  ["electron","41.0.0","42.0.0"],
+  ["jotai","2.0.0","3.0.0"],
+  ["vue-tsc","2.0.0","3.0.0"],
+  ["bcrypt","5.0.0","6.0.0"],
+  ["ink","5.0.0","6.0.0"],
+  ["ink","6.0.0","7.0.0"],
+  ["octokit","2.0.0","3.0.0"],
+  ["octokit","4.0.0","5.0.0"],
+  ["isomorphic-dompurify","2.0.0","3.0.0"],
+  ["p-throttle","4.0.0","8.0.0"],
+  ["knex","2.0.0","3.0.0"],
+  ["stylelint-scss","3.0.0","6.0.0"],
+  ["into-stream","6.0.0","9.0.0"],
+  ["tildify","2.0.0","3.0.0"],
+  ["eslint-plugin-playwright","1.0.0","2.0.0"],
+  ["inflection","2.0.0","3.0.0"],
+  ["screenfull","5.0.0","6.0.0"],
+  ["react-intersection-observer","8.0.0","10.0.0"],
+  ["raw-loader","3.0.0","4.0.0"],
+  ["sitemap","9.0.0","10.0.0"],
+  ["eslint-plugin-flowtype","4.0.0","8.0.0"],
+  ["lighthouse","5.0.0","13.0.0"],
+  ["c8","7.0.0","9.0.0"],
+  ["c8","9.0.0","10.0.0"],
+  ["c8","10.0.0","11.0.0"],
+  ["c8","11.0.0","12.0.0"],
+  ["react-toastify","10.0.0","11.0.0"],
+  ["eslint-webpack-plugin","2.0.0","4.0.0"],
+  ["hot-shots","12.0.0","17.0.0"],
+  ["babel-plugin-module-resolver","3.0.0","4.0.0"],
+  ["babel-plugin-module-resolver","4.0.0","5.0.0"],
+  ["fancy-log","1.0.0","2.0.0"],
+  ["eslint-config-react-app","6.0.0","7.0.0"],
+  ["electron-builder","20.0.0","23.0.0"],
+  ["antd","4.0.0","6.0.0"],
+  ["vercel","52.0.0","65.0.0"],
+  ["vue-i18n","9.0.0","10.0.0"],
+  ["react-email","3.0.0","6.0.0"],
+  ["stylelint-config-recommended-scss","13.0.0","17.0.0"],
+  ["eslint-plugin-cypress","2.0.0","3.0.0"],
+  ["eslint-plugin-cypress","3.0.0","4.0.0"],
+  ["plugin-error","1.0.0","2.0.0"],
+  ["eslint-plugin-node","8.0.0","10.0.0"],
+  ["vinyl-fs","3.0.0","4.0.0"],
+  ["pm2","3.0.0","5.0.0"],
+  ["pm2","5.0.0","7.0.0"],
+  ["karma","3.0.0","4.0.0"],
+  ["karma","4.0.0","5.0.0"],
+  ["json-schema-to-typescript","10.0.0","14.0.0"],
+  ["eslint-config-airbnb","18.0.0","19.0.0"],
+  ["dependency-cruiser","12.0.0","16.0.0"],
+  ["dependency-cruiser","16.0.0","17.0.0"],
+  ["dependency-cruiser","17.0.0","18.0.0"],
+  ["conventional-recommended-bump","6.0.0","11.0.0"],
+  ["react-app-polyfill","0.0.0","2.0.0"],
+  ["react-app-polyfill","2.0.0","3.0.0"],
+  ["react-intl","7.0.0","10.0.0"],
+  ["madge","1.0.0","6.0.0"],
+  ["madge","6.0.0","8.0.0"],
+  ["semantic-release","15.0.0","17.0.0"],
+  ["semantic-release","17.0.0","19.0.0"],
+  ["semantic-release","19.0.0","21.0.0"],
+  ["semantic-release","21.0.0","22.0.0"],
+  ["semantic-release","22.0.0","23.0.0"],
+  ["semantic-release","24.0.0","25.0.0"],
+  ["conventional-changelog","7.0.0","8.0.0"],
+  ["eslint-config-standard","6.0.0","11.0.0"],
+  ["eslint-config-standard","12.0.0","14.0.0"],
+  ["eslint-config-standard","14.0.0","15.0.0"],
+  ["eslint-config-standard","15.0.0","16.0.0"],
+  ["eslint-config-standard","16.0.0","17.0.0"],
+  ["firebase-tools","9.0.0","15.0.0"],
+  ["stylelint-config-standard-scss","14.0.0","17.0.0"],
+  ["karma-jasmine","2.0.0","3.0.0"],
+  ["karma-jasmine","3.0.0","4.0.0"],
+  ["karma-jasmine","4.0.0","5.0.0"],
+  ["jest-axe","3.0.0","6.0.0"],
+  ["jest-axe","6.0.0","10.0.0"],
+  ["jest-axe","10.0.0","11.0.0"],
+  ["react-scripts","2.0.0","3.0.0"],
+  ["react-scripts","3.0.0","5.0.0"],
+];
+assert.deepEqual(pairs, expected.map(([pair]) => pair));
+for (const [[name, from, to], kind, range] of expected) {
+  const a = facts[name][from], b = facts[name][to];
+  for (const release of [a,b]) assert.match(release.integrity, /^sha512-[A-Za-z0-9+/]{86}==$/);
+  if (kind === 'node-engine') {
+    assert.equal(a.engines.node, range.a);
+    assert.equal(b.engines.node, range.b);
+  } else {
+    assert.equal(kind, 'peer');
+    assert.equal(a.peerDependencies[range.name], range.a);
+    assert.equal(b.peerDependencies[range.name], range.b);
+    assert.notEqual(a.peerDependenciesMeta?.[range.name]?.optional, true);
+    assert.notEqual(b.peerDependenciesMeta?.[range.name]?.optional, true);
+  }
+  assert.equal(semver.satisfies(range.before, range.a), true);
+  assert.equal(semver.satisfies(range.before, range.b), false);
+  assert.equal(semver.satisfies(range.after, range.b), true);
+}
+console.log('Verified '+expected.length+' exact published Node.js and peer constraints');
