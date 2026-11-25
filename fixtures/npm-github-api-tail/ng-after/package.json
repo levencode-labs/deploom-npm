@@ -1,0 +1,10 @@
+{
+  "name": "deploom-tail-ng-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@angular/compiler-cli": "21.0.0",
+    "@angular/compiler": "21.0.0",
+    "typescript": "5.9.3"
+  }
+}

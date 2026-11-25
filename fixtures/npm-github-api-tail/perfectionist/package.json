@@ -1,0 +1,10 @@
+{
+  "name": "deploom-tail-perfectionist",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "p-eslint-plugin-perfectionist-2-0-0": "npm:eslint-plugin-perfectionist@2.0.0",
+    "p-eslint-plugin-perfectionist-5-0-0": "npm:eslint-plugin-perfectionist@5.0.0",
+    "eslint": "8.57.1"
+  }
+}

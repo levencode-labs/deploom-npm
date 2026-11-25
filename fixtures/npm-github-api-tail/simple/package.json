@@ -1,0 +1,24 @@
+{
+  "name": "deploom-tail-simple",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "p-node-cron-3-0-0": "npm:node-cron@3.0.0",
+    "p-node-cron-4-0-0": "npm:node-cron@4.0.0",
+    "p-xstate-4-0-0": "npm:xstate@4.0.0",
+    "p-xstate-5-0-0": "npm:xstate@5.0.0",
+    "p-msgpack-msgpack-2-0-0": "npm:@msgpack/msgpack@2.0.0",
+    "p-msgpack-msgpack-3-0-0": "npm:@msgpack/msgpack@3.0.0",
+    "p-ethers-5-0-0": "npm:ethers@5.0.0",
+    "p-ethers-6-0-0": "npm:ethers@6.0.0",
+    "p-graphql-subscriptions-2-0-0": "npm:graphql-subscriptions@2.0.0",
+    "p-graphql-subscriptions-3-0-0": "npm:graphql-subscriptions@3.0.0",
+    "p-redux-logger-2-0-0": "npm:redux-logger@2.0.0",
+    "p-redux-logger-3-0-0": "npm:redux-logger@3.0.0",
+    "markdown-it": "14.1.0",
+    "p-markdown-it-emoji-1-0-0": "npm:markdown-it-emoji@1.0.0",
+    "p-markdown-it-emoji-3-0-0": "npm:markdown-it-emoji@3.0.0",
+    "p-koa-body-2-0-0": "npm:koa-body@2.0.0",
+    "p-koa-body-8-0-0": "npm:koa-body@8.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "deploom-tail-lint",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "p-stylistic-eslint-plugin-3-0-0": "npm:@stylistic/eslint-plugin@3.0.0",
+    "p-stylistic-eslint-plugin-5-0-0": "npm:@stylistic/eslint-plugin@5.0.0",
+    "p-eslint-plugin-cypress-4-0-0": "npm:eslint-plugin-cypress@4.0.0",
+    "p-eslint-plugin-cypress-6-0-0": "npm:eslint-plugin-cypress@6.0.0",
+    "eslint": "9.39.1"
+  }
+}

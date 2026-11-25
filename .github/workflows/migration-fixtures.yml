@@ -526,3 +526,10 @@ jobs:
           done
           node fixtures/npm-github-api-config-002/check.cjs
           node fixtures/npm-github-biome-002/check.cjs
+      - name: Verify remaining exact API and configuration transitions
+        run: |
+          set -eu
+          for lock in fixtures/npm-github-api-tail/*/package-lock.json; do
+            npm ci --prefix "${lock%/package-lock.json}" --omit=optional --ignore-scripts --no-audit --no-fund --strict-peer-deps
+          done
+          node fixtures/npm-github-api-tail/check.cjs
