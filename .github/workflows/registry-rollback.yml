@@ -1,6 +1,12 @@
 name: Verify published npm update and rollback
 on:
   workflow_dispatch:
+    inputs:
+      channel:
+        description: Published npm channel to verify
+        type: choice
+        options: [latest, next]
+        default: latest
   workflow_call:
     inputs:
       expected-version:
@@ -30,8 +36,14 @@ jobs:
         id: published
         env:
           EXPECTED_VERSION: ${{ inputs.expected-version }}
+          MANUAL_CHANNEL: ${{ inputs.channel }}
         run: |
-          $channel = if ($env:EXPECTED_VERSION -and !$env:EXPECTED_VERSION.Contains('-')) { 'latest' } else { 'next' }
+          $channel = 'next'
+          if ($env:EXPECTED_VERSION -and !$env:EXPECTED_VERSION.Contains('-')) { $channel = 'latest' }
+          if (!$env:EXPECTED_VERSION -and $env:GITHUB_EVENT_NAME -eq 'workflow_dispatch') {
+            $channel = if ($env:MANUAL_CHANNEL) { $env:MANUAL_CHANNEL } else { 'latest' }
+          }
+          if ($channel -cnotin @('latest', 'next')) { throw 'Unsupported npm channel' }
           $current = npm.cmd view "@levencode/deploom@$channel" version --registry=https://registry.npmjs.org/ --prefer-online
           if ($LASTEXITCODE -or $current -notmatch '^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$') { throw 'Public channel version unavailable' }
           if ($env:EXPECTED_VERSION -and $current -cne $env:EXPECTED_VERSION) { throw 'Unexpected version on the public channel' }
