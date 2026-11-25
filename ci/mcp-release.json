@@ -1,9 +1,9 @@
 {
   "repository": "levencode-labs/deploom-mcp",
-  "version": "0.2.32",
-  "tag": "v0.2.32",
-  "commit": "4fc73907c07d1391c26a84296a6e2b9a2203a73f",
+  "version": "0.2.33",
+  "tag": "v0.2.33",
+  "commit": "73e4bcc04ec2a2c3aa85008a94b3a6958a03012d",
   "coreRevision": "3e9a1859cc1c6f502683d56ae6dfaa3cfa852d8f",
-  "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.32/deploom_mcp-0.2.32-py3-none-any.whl",
-  "sha256": "cc460feb48867e72dad9e9e3e1069425b40a1dac64a796792a7acf1d570a2fd0"
+  "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.33/deploom_mcp-0.2.33-py3-none-any.whl",
+  "sha256": "6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167"
 }
