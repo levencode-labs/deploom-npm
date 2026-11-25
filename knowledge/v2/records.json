@@ -63633,6 +63633,1938 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-octokit-core-5.0.0-6.0.0",
+      "kind": "breaking-change",
+      "package": "@octokit/core",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @octokit/core through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @octokit/core."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@octokit/core",
+          "from": "5.0.0",
+          "to": "6.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-flat-5.0.0-6.0.0",
+      "kind": "breaking-change",
+      "package": "flat",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads flat through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by flat."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "flat",
+          "from": "5.0.0",
+          "to": "6.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-change-case-4.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "change-case",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads change-case through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by change-case."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "change-case",
+          "from": "4.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-babel-preset-react-7.0.0-8.0.0",
+      "kind": "breaking-change",
+      "package": "@babel/preset-react",
+      "fromMajor": 7,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.0.0",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Set the JSX runtime explicitly",
+      "summary": "In production mode, the source emits React.createElement by default. The target emits a react/jsx-runtime import. Its explicit classic runtime restores the sample's call shape.",
+      "conditions": [
+        "The Babel preset omits runtime and the project expects classic JSX output."
+      ],
+      "actions": [
+        "Set runtime explicitly. Use classic where you need to retain React.createElement, or supply the supported JSX runtime for automatic mode."
+      ],
+      "verification": [
+        "Build a representative entry and check its emitted JSX calls and imports. Compare spread attributes and development output separately."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.doesNotMatch(run(after),/React\\.createElement/);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@babel/preset-react",
+          "from": "7.0.0",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-lint-staged-11.0.0-12.0.0",
+      "kind": "breaking-change",
+      "package": "lint-staged",
+      "fromMajor": 11,
+      "toMajor": 12,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "11.0.0",
+          "to": "12.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads lint-staged through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by lint-staged."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "lint-staged",
+          "from": "11.0.0",
+          "to": "12.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-winston-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "winston",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Construct loggers with createLogger",
+      "summary": "Constructing Logger with transports works on the source. The target rejects that constructor call; createLogger returns a logger with the expected info method.",
+      "conditions": [
+        "A logger is constructed through new winston.Logger(options)."
+      ],
+      "actions": [
+        "Use winston.createLogger with the chosen levels and transports. Review transport and format options separately."
+      ],
+      "verification": [
+        "Emit a test log and check level, formatting and sink output in the receiving application."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>new (target().Logger)({transports:[]}), /configure|options|constructor/i);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "winston",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-js-cookie-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "js-cookie",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Configure cookie defaults with withAttributes",
+      "summary": "The source exposes the mutable defaults object. The target omits it and can create an API instance with a path using withAttributes.",
+      "conditions": [
+        "Code mutates Cookies.defaults before setting or removing cookies."
+      ],
+      "actions": [
+        "Create a configured cookie API with Cookies.withAttributes and reuse it for writes and removals."
+      ],
+      "verification": [
+        "In a browser, verify the configured path and other attributes on write and removal."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(target().defaults,undefined);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "js-cookie",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-pascal-case-3.0.0-4.0.0",
+      "kind": "breaking-change",
+      "package": "pascal-case",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads pascal-case through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by pascal-case."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "pascal-case",
+          "from": "3.0.0",
+          "to": "4.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-d3-geo-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "d3-geo",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads d3-geo through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by d3-geo."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "d3-geo",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-isbot-4.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "isbot",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Get the matching expression through getPattern",
+      "summary": "The source exposes its matching expression as pattern. The target omits that property and returns a matcher through getPattern that matches the sample.",
+      "conditions": [
+        "Code reads isbot.pattern and applies it directly to a user-agent value."
+      ],
+      "actions": [
+        "Call getPattern to retrieve the matcher, or use the named isbot function when only the boolean classification is needed."
+      ],
+      "verification": [
+        "Check representative bot and non-bot inputs. Matching lists may change across releases."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(target().pattern,undefined);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "isbot",
+          "from": "4.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-debounce-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "debounce",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads debounce through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by debounce."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "debounce",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-webpack-merge-4.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "webpack-merge",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Import the named merge function",
+      "summary": "Calling the root module merges the source fixture. The target root is not callable. Its merge export combines the same plugin arrays.",
+      "conditions": [
+        "A Webpack configuration calls the value returned by require('webpack-merge')."
+      ],
+      "actions": [
+        "Destructure merge from the package, or import its named export in ESM."
+      ],
+      "verification": [
+        "Inspect the merged rules and plugins and run the receiving build."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>run(target()),TypeError);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "webpack-merge",
+          "from": "4.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-sentry-react-7.0.0-10.0.0",
+      "kind": "breaking-change",
+      "package": "@sentry/react",
+      "fromMajor": 7,
+      "toMajor": 10,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "7.0.0",
+          "to": "10.0.0"
+        }
+      ],
+      "title": "Replace getCurrentHub for current-scope tags",
+      "summary": "The old React SDK exposes getCurrentHub. The target has no callable getCurrentHub and can set a tag on a cloned current scope.",
+      "conditions": [
+        "React instrumentation calls getCurrentHub to work with its current scope."
+      ],
+      "actions": [
+        "For current-scope tags, use getCurrentScope or the documented scope helpers. Review isolation scope separately if the call was request-bound."
+      ],
+      "verification": [
+        "Verify tag inheritance and scope isolation in the receiving app without sending test events to production."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>current.getCurrentHub(),TypeError);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@sentry/react",
+          "from": "7.0.0",
+          "to": "10.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-d3-hierarchy-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "d3-hierarchy",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads d3-hierarchy through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by d3-hierarchy."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "d3-hierarchy",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-d3-force-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "d3-force",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads d3-force through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by d3-force."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "d3-force",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-shiki-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "shiki",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Use createHighlighter instead of getHighlighter",
+      "summary": "The Node ESM entry exports getHighlighter on the source. The target removes it and exposes createHighlighter.",
+      "conditions": [
+        "Code imports or reads getHighlighter from shiki."
+      ],
+      "actions": [
+        "Use the named createHighlighter API and explicitly configure the installed languages and themes."
+      ],
+      "verification": [
+        "Highlight a representative snippet and compare the HTML and theme output. The fixture checks export availability."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(current.stdout.trim(),'undefined function');"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "shiki",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-i18next-23.0.0-24.0.0",
+      "kind": "breaking-change",
+      "package": "i18next",
+      "fromMajor": 23,
+      "toMajor": 24,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "23.0.0",
+          "to": "24.0.0"
+        }
+      ],
+      "title": "Convert legacy plural resource keys to the v4 format",
+      "summary": "The source selects distinct singular and plural strings using v3 JSON suffixes. The target repeats the singular value for that data. Its v4 plural keys yield both expected forms.",
+      "conditions": [
+        "Configuration sets compatibilityJSON to v3 and translation resources use legacy plural suffixes."
+      ],
+      "actions": [
+        "Convert the resources to the documented v4 plural suffixes and remove the legacy option. Use the upstream converter only after reviewing its diff."
+      ],
+      "verification": [
+        "Exercise all plural categories for each supported locale with representative count values."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(await t(target(),false),['single','single']);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "i18next",
+          "from": "23.0.0",
+          "to": "24.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-url-join-4.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "url-join",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads url-join through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by url-join."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "url-join",
+          "from": "4.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-d3-dsv-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "d3-dsv",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads d3-dsv through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by d3-dsv."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "d3-dsv",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-formatjs-icu-messageformat-parser-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "@formatjs/icu-messageformat-parser",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @formatjs/icu-messageformat-parser through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @formatjs/icu-messageformat-parser."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@formatjs/icu-messageformat-parser",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-queue-6.0.0-7.0.0",
+      "kind": "breaking-change",
+      "package": "queue",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.0",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads queue through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by queue."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "queue",
+          "from": "6.0.0",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-jwt-decode-3.0.0-4.0.0",
+      "kind": "breaking-change",
+      "package": "jwt-decode",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Use the jwtDecode named export",
+      "summary": "The source package root is callable. The target root rejects that use, and its named jwtDecode export returns the same sample payload.",
+      "conditions": [
+        "The caller uses the default jwt-decode import or invokes the CommonJS root value."
+      ],
+      "actions": [
+        "Import or destructure jwtDecode and keep existing verification boundaries and error handling."
+      ],
+      "verification": [
+        "Check representative payload decoding and malformed input. Token validation remains a separate receiving application concern."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>target()(sample),TypeError);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "jwt-decode",
+          "from": "3.0.0",
+          "to": "4.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-csv-parse-2.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "csv-parse",
+      "fromMajor": 2,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Use the named csv-parse function",
+      "summary": "The old CommonJS root accepts CSV input and a callback. The target root is not callable. Its parse export returns the same sample records.",
+      "conditions": [
+        "CommonJS invokes require('csv-parse') directly."
+      ],
+      "actions": [
+        "Use the named parse export and retain the input options and error handling."
+      ],
+      "verification": [
+        "Parse representative files with quoting, delimiters and invalid inputs relevant to the application."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>target()(input),TypeError);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "csv-parse",
+          "from": "2.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-octokit-rest-20.0.0-22.0.0",
+      "kind": "breaking-change",
+      "package": "@octokit/rest",
+      "fromMajor": 20,
+      "toMajor": 22,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "20.0.0",
+          "to": "22.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @octokit/rest through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @octokit/rest."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@octokit/rest",
+          "from": "20.0.0",
+          "to": "22.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-svgr-core-5.0.0-7.0.0",
+      "kind": "breaking-change",
+      "package": "@svgr/core",
+      "fromMajor": 5,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Provide the JSX transform plugin explicitly",
+      "summary": "The source transforms an SVG into an exported React component with its defaults. The target bare transform does not produce that export. An explicit JSX plugin restores it.",
+      "conditions": [
+        "Programmatic SVGR code expects transform to compile SVG to React JSX without declaring plugins."
+      ],
+      "actions": [
+        "Call the named transform API and provide the compatible @svgr/plugin-jsx explicitly. Add other plugins only when the pipeline needs their output."
+      ],
+      "verification": [
+        "Generate a representative icon and verify the exported component, attributes and consuming build."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.doesNotMatch(await current.transform(svg,{}, {componentName:'FixtureIcon'}),"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@svgr/core",
+          "from": "5.0.0",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-actions-core-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "@actions/core",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @actions/core through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @actions/core."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@actions/core",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-actions-exec-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "@actions/exec",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @actions/exec through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @actions/exec."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@actions/exec",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-vue-devtools-api-6.0.0-8.0.0",
+      "kind": "breaking-change",
+      "package": "@vue/devtools-api",
+      "fromMajor": 6,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.0",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @vue/devtools-api through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @vue/devtools-api."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@vue/devtools-api",
+          "from": "6.0.0",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-generic-pool-2.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "generic-pool",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Use createPool and promise-based acquisition",
+      "summary": "The source Pool factory acquires an item by callback. The target removes the old factory. createPool acquires and releases an equivalent item through promises.",
+      "conditions": [
+        "The application constructs a pool with generic-pool.Pool and uses callback acquisition."
+      ],
+      "actions": [
+        "Use createPool with promise-returning create and destroy methods. Await acquire and release items in a finally block."
+      ],
+      "verification": [
+        "Exercise acquisition, release, rejection and shutdown for the receiving pool."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>target().Pool(),TypeError);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "generic-pool",
+          "from": "2.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-history-4.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "history",
+      "fromMajor": 4,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "4.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Destructure a History v5 listener update",
+      "summary": "The source listener receives pathname and action as two arguments. The old callback shape sees neither value on the target. Reading the target update object restores both.",
+      "conditions": [
+        "A history.listen callback accepts location and action as separate arguments."
+      ],
+      "actions": [
+        "Accept an update object and read its location and action properties."
+      ],
+      "verification": [
+        "Verify the route and action for pushes, replaces and back navigation used by the application."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.deepEqual(listen(target(),false),[undefined,undefined]);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "history",
+          "from": "4.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-webpack-node-externals-1.0.0-3.0.0",
+      "kind": "breaking-change",
+      "package": "webpack-node-externals",
+      "fromMajor": 1,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Rename whitelist to allowlist",
+      "summary": "The source accepts whitelist and leaves the sample dependency bundled. The target rejects the option. Using allowlist preserves the dependency decision in the target callback.",
+      "conditions": [
+        "The Webpack externalization config sets webpack-node-externals whitelist."
+      ],
+      "actions": [
+        "Use allowlist and ensure the externals callback uses the signature expected by the receiving Webpack version."
+      ],
+      "verification": [
+        "Build a representative entry and inspect allowed modules and actual externals."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "await assert.rejects(listener({whitelist:['fixture-module']},true), /allowlist/);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "webpack-node-externals",
+          "from": "1.0.0",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-commitlint-config-conventional-18.0.0-19.0.0",
+      "kind": "breaking-change",
+      "package": "@commitlint/config-conventional",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.0.0",
+          "to": "19.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @commitlint/config-conventional through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @commitlint/config-conventional."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@commitlint/config-conventional",
+          "from": "18.0.0",
+          "to": "19.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-pixelmatch-5.0.0-7.0.0",
+      "kind": "breaking-change",
+      "package": "pixelmatch",
+      "fromMajor": 5,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "7.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads pixelmatch through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by pixelmatch."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "pixelmatch",
+          "from": "5.0.0",
+          "to": "7.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-csv-stringify-5.0.0-6.0.0",
+      "kind": "breaking-change",
+      "package": "csv-stringify",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.0.0",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Use the named CSV stringify function",
+      "summary": "The old CommonJS root serializes rows through a callback. The target root is not callable. The stringify export serializes the same sample.",
+      "conditions": [
+        "CommonJS calls the result of require('csv-stringify') as a function."
+      ],
+      "actions": [
+        "Load the named stringify export and retain options and callback error handling."
+      ],
+      "verification": [
+        "Compare representative CSV outputs including escaped values and line terminators."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>target()(input),TypeError);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "csv-stringify",
+          "from": "5.0.0",
+          "to": "6.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-pbf-3.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "pbf",
+      "fromMajor": 3,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads pbf through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by pbf."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "pbf",
+          "from": "3.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-actions-github-6.0.0-9.0.0",
+      "kind": "breaking-change",
+      "package": "@actions/github",
+      "fromMajor": 6,
+      "toMajor": 9,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.0",
+          "to": "9.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @actions/github through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @actions/github."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@actions/github",
+          "from": "6.0.0",
+          "to": "9.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-idb-keyval-3.0.0-6.0.0",
+      "kind": "breaking-change",
+      "package": "idb-keyval",
+      "fromMajor": 3,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "6.0.0"
+        }
+      ],
+      "title": "Use createStore for a custom IndexedDB store",
+      "summary": "The published source exports the Store constructor. The target removes Store and exposes createStore.",
+      "conditions": [
+        "Code imports Store from idb-keyval and creates a custom IndexedDB store."
+      ],
+      "actions": [
+        "Use createStore with the existing database and store names and pass its result to the operations that need that store."
+      ],
+      "verification": [
+        "Verify reads, writes and persistence against a representative browser. The fixture verifies exports."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(result(after).stdout.trim(),'undefined function');"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "idb-keyval",
+          "from": "3.0.0",
+          "to": "6.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-qrcode.react-3.0.0-4.0.0",
+      "kind": "breaking-change",
+      "package": "qrcode.react",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "4.0.0"
+        }
+      ],
+      "title": "Use the named QRCodeSVG component",
+      "summary": "The source default component renders SVG with renderAs set to svg. The target no longer accepts that default component import. QRCodeSVG renders the representative SVG.",
+      "conditions": [
+        "React code uses the default qrcode.react component with renderAs='svg'."
+      ],
+      "actions": [
+        "Import QRCodeSVG from qrcode.react. Use the separately documented QRCodeCanvas when canvas output is intended."
+      ],
+      "verification": [
+        "Render a representative QR code with the desired size and validate the decoded value."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.throws(()=>render(after,false), /element type is invalid/i);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "qrcode.react",
+          "from": "3.0.0",
+          "to": "4.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-remark-math-3.0.0-5.0.0",
+      "kind": "breaking-change",
+      "package": "remark-math",
+      "fromMajor": 3,
+      "toMajor": 5,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.0.0",
+          "to": "5.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads remark-math through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by remark-math."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "remark-math",
+          "from": "3.0.0",
+          "to": "5.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-octokit-auth-app-6.0.0-8.0.0",
+      "kind": "breaking-change",
+      "package": "@octokit/auth-app",
+      "fromMajor": 6,
+      "toMajor": 8,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.0.0",
+          "to": "8.0.0"
+        }
+      ],
+      "title": "Load the public entry with an ES module import",
+      "summary": "With synchronous ESM loading disabled, require loads the source. It rejects the target entry, which imports successfully through dynamic import().",
+      "conditions": [
+        "The caller loads @octokit/auth-app through require in a runtime or test transformer that cannot load native ESM."
+      ],
+      "actions": [
+        "Use import() from async CommonJS or migrate the caller to ESM. Select the public export documented by @octokit/auth-app."
+      ],
+      "verification": [
+        "Run the project's real loader or test transformer and exercise the imported API."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(held.status, 1);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@octokit/auth-app",
+          "from": "6.0.0",
+          "to": "8.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-next-eslint-plugin-next-15.0.0-16.0.0",
+      "kind": "breaking-change",
+      "package": "@next/eslint-plugin-next",
+      "fromMajor": 15,
+      "toMajor": 16,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "15.0.0",
+          "to": "16.0.0"
+        }
+      ],
+      "title": "Use the Next.js flat recommended config",
+      "summary": "The recommended config changes from a legacy plugins array to a flat plugin map. The target preset reports the same no-img-element rule on the sample through ESLint Flat Config.",
+      "conditions": [
+        "A legacy ESLint configuration consumes the plugin's recommended preset."
+      ],
+      "actions": [
+        "Move the applicable configuration to eslint.config using the target plugin's flat recommended preset. Preserve parser settings and rule overrides."
+      ],
+      "verification": [
+        "Run ESLint on a representative Next.js file and check applied rules and overrides."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(Array.isArray(current.configs.recommended.plugins),false);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-api-config-002/check.cjs",
+        "fixtureSha256": "c56d938666a9381def4db5a9173ea05209f48acaab0157f9dd8dad1e173ce444",
+        "claim": {
+          "package": "@next/eslint-plugin-next",
+          "from": "15.0.0",
+          "to": "16.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "github-api2-biomejs-biome-1.0.0-2.0.0",
+      "kind": "codemod",
+      "package": "@biomejs/biome",
+      "fromMajor": 1,
+      "toMajor": 2,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "1.0.0",
+          "to": "2.0.0"
+        }
+      ],
+      "title": "Run the bundled Biome v2 config migrator",
+      "summary": "Biome 1 accepts organizeImports and the tested files.ignore exclusion. The target rejects the retained config. Its bundled migrate command rewrites both settings, and a target check preserves import sorting and the excluded file.",
+      "conditions": [
+        "The v1 Biome config uses organizeImports and files.ignore for generated sources."
+      ],
+      "actions": [
+        "Run the pinned target Biome CLI with migrate --write at the affected config root. Review the assist action and negated includes."
+      ],
+      "verification": [
+        "Inspect the migrated config source. Run the receiving project check on both included and excluded files."
+      ],
+      "negativeControls": [
+        {
+          "name": "hold-legacy-contract",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(held.diagnostics, /unknown key.*(?:organizeImports|ignore)/i);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/f5b684836587801a8d8a38ecc784866018b536f5/fixtures/npm-github-biome-002/check.cjs",
+        "fixtureSha256": "cc5c0001075a1095fbf971aef97ad04505247d1dc6ff524f8a31a46b5ab9b0ab",
+        "claim": {
+          "package": "@biomejs/biome",
+          "from": "1.0.0",
+          "to": "2.0.0",
+          "check": "lint",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }
