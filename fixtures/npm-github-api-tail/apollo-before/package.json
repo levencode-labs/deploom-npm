@@ -1,0 +1,11 @@
+{
+  "name": "deploom-tail-apollo-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@apollo/client": "3.0.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "graphql": "15.8.0"
+  }
+}

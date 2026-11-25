@@ -1,0 +1,11 @@
+{
+  "name": "deploom-tail-vtu-before",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@vue/test-utils": "1.0.0",
+    "vue": "2.6.14",
+    "jsdom": "24.1.3",
+    "vue-template-compiler": "2.6.14"
+  }
+}

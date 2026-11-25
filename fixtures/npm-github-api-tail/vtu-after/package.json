@@ -1,0 +1,10 @@
+{
+  "name": "deploom-tail-vtu-after",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@vue/test-utils": "2.0.0",
+    "vue": "3.2.47",
+    "jsdom": "24.1.3"
+  }
+}

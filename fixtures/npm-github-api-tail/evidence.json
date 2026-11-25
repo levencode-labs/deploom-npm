@@ -1,0 +1,229 @@
+{
+  "fixtureSha256": "e5c2479727fc9ba06fb9063bdb579a60eb7b7891860f74583356db4cea2705a9",
+  "claims": [
+    {
+      "package": "@apollo/client",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "node-cron",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "node-notifier",
+      "from": "10.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "remark",
+      "from": "9.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "xstate",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@manypkg/get-packages",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@vue/test-utils",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@msgpack/msgpack",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ethers",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@mapbox/mapbox-gl-supported",
+      "from": "2.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sort-package-json",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "graphql-subscriptions",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "monocart-coverage-reports",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@lingui/conf",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "redux-logger",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "gettext-parser",
+      "from": "4.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "markdown-it-emoji",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "franc-min",
+      "from": "4.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@apify/log",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "koa-body",
+      "from": "2.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "shlex",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "remark-toc",
+      "from": "5.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "remark-lint",
+      "from": "5.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "linguist-languages",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@sindresorhus/to-milliseconds",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "magnet-uri",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@ai-sdk/open-responses",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "remark",
+      "from": "6.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@stylistic/eslint-plugin",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-cypress",
+      "from": "4.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-perfectionist",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@angular/compiler-cli",
+      "from": "15.0.0",
+      "to": "21.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
