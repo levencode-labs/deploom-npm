@@ -1,0 +1,14 @@
+{
+  "name": "deploom-proof-tailwindcss1",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "tailwindcss": "4.0.0",
+    "postcss": "8.4.49",
+    "@tailwindcss/postcss": "4.0.0"
+  },
+  "overrides": {
+    "@tailwindcss/node": "4.0.0",
+    "@tailwindcss/oxide": "4.0.0"
+  }
+}

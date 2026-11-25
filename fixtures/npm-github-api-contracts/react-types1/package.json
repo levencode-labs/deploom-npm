@@ -1,0 +1,9 @@
+{
+  "name": "deploom-react-types-proof-1",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/react": "19.0.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "fixtureSha256": "8622aa61de181df6619bd4e474f2271aa4c73d668e2cec59b1d11a88365a5ee1",
+  "claims": [
+    {
+      "package": "semver",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "lru-cache",
+      "from": "5.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "commander",
+      "from": "2.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ajv",
+      "from": "6.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "js-yaml",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "js-yaml",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "3.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "uuid",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "signal-exit",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "zod",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mime",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "body-parser",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "pako",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "async",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "date-fns",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "date-fns",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "fast-xml-parser",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "protobufjs",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "terser",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@testing-library/jest-dom",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "immer",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "reselect",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "redux",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "web-vitals",
+      "from": "2.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "web-vitals",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vite",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "tailwindcss",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@types/react",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "typecheck",
+      "outcome": "passed"
+    }
+  ]
+}

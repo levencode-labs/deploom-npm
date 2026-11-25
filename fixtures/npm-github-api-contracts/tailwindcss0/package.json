@@ -1,0 +1,9 @@
+{
+  "name": "deploom-proof-tailwindcss0",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "tailwindcss": "3.0.0",
+    "postcss": "8.4.49"
+  }
+}
