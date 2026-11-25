@@ -490,3 +490,28 @@ jobs:
             npm ci --prefix "$fixture" --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
             node "$fixture/check.cjs"
           done
+
+  github-breaking-api:
+    name: GitHub npm API and config migration fixtures
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - name: Install pinned API and ESM fixture arms
+        run: |
+          set -eu
+          for fixture in fixtures/npm-github-{api,esm}-contracts/*/; do
+            case "${fixture%/}" in
+              */vite*|*/tailwindcss*) optional=--include=optional ;;
+              *) optional=--omit=optional ;;
+            esac
+            npm ci --prefix "$fixture" "$optional" --ignore-scripts --no-audit --no-fund --strict-peer-deps
+          done
+      - name: Verify API, config and CommonJS loader changes
+        run: |
+          node fixtures/npm-github-api-contracts/check.cjs
+          node fixtures/npm-github-esm-contracts/check.cjs

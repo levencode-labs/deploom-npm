@@ -1,0 +1,11 @@
+{
+  "name": "deploom-proof-tooling",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "pk-protobufjs-6-0-0": "npm:protobufjs@6.0.0",
+    "pk-protobufjs-7-0-0": "npm:protobufjs@7.0.0",
+    "pk-testing-library-jest-dom-5-0-0": "npm:@testing-library/jest-dom@5.0.0",
+    "pk-testing-library-jest-dom-6-0-0": "npm:@testing-library/jest-dom@6.0.0"
+  }
+}

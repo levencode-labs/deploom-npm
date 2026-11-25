@@ -1,0 +1,264 @@
+{
+  "fixtureSha256": "5f854cd18003d749d520b905c0b7a537bace4ea16af2648b6aba4ca77545fca6",
+  "claims": [
+    {
+      "package": "@babel/code-frame",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/types",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/parser",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "https-proxy-agent",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nanoid",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/generator",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/traverse",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/template",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/core",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/helper-module-imports",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/helper-plugin-utils",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "proxy-from-env",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jose",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "d3-array",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-syntax-jsx",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "long",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "d3-format",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "d3-time-format",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "d3-time",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "d3-scale",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-modules-commonjs",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "unist-util-visit",
+      "from": "1.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@ai-sdk/provider",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vfile",
+      "from": "2.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-typescript",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mdast-util-to-string",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/preset-typescript",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "unified",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-template-literals",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "remark-parse",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "through2",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-literals",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "markdown-table",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-react-jsx",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "remark-stringify",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@octokit/graphql",
+      "from": "7.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "@babel/plugin-transform-runtime",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
