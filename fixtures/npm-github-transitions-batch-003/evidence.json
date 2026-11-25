@@ -1,0 +1,1055 @@
+{
+  "fixtureSha256": "1509a081a85a579adac72bb43c3c4813cf457db05377fef3f0f6a0c706668a60",
+  "claims": [
+    {
+      "package": "cssnano",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cssnano",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cssnano",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "conventional-changelog-angular",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "npm",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "npm",
+      "from": "11.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "8.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "10.0.0",
+      "to": "12.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sass-loader",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "prisma",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "prisma",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "prisma",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "supertest",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "isbinaryfile",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "tempy",
+      "from": "1.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "filesize",
+      "from": "7.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "npm-packlist",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mongodb",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mongodb",
+      "from": "4.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mongodb",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "from": "23.0.0",
+      "to": "24.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "from": "24.0.0",
+      "to": "25.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "from": "25.0.0",
+      "to": "26.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "from": "26.0.0",
+      "to": "27.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "from": "27.0.0",
+      "to": "28.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "html-webpack-plugin",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-i18next",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "mocha",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mocha",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mocha",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mocha",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "mocha",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "helmet",
+      "from": "4.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "helmet",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "html-to-text",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "html-to-text",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nodemon",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "del",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "del",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "del",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "del",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "del",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "knip",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "knip",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "conventional-changelog-conventionalcommits",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "conventional-changelog-conventionalcommits",
+      "from": "5.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "conventional-changelog-conventionalcommits",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ts-loader",
+      "from": "2.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ts-loader",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ts-loader",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "redis",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-bundle-analyzer",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-bundle-analyzer",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "copy-webpack-plugin",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "copy-webpack-plugin",
+      "from": "6.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "copy-webpack-plugin",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jsonpath-plus",
+      "from": "10.0.0",
+      "to": "11.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ip-regex",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "source-map-loader",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "source-map-loader",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "graphql-ws",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "meriyah",
+      "from": "4.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "file-loader",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "file-loader",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "puppeteer",
+      "from": "21.0.0",
+      "to": "22.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-cli",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-cli",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "webpack-cli",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "matcher",
+      "from": "5.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "filenamify",
+      "from": "2.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "sigstore",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "wait-on",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "wait-on",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "is-builtin-module",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "posthog-node",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "googleapis",
+      "from": "31.0.0",
+      "to": "137.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "throttle-debounce",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jest-junit",
+      "from": "10.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "better-sqlite3",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "update-notifier",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "dd-trace",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unused-imports",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-nesting",
+      "from": "2.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-nesting",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-nesting",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "css-minimizer-webpack-plugin",
+      "from": "3.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "css-minimizer-webpack-plugin",
+      "from": "5.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "prom-client",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "workbox-build",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "detect-port",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-test-renderer",
+      "from": "18.0.0",
+      "to": "19.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "jest-watch-typeahead",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "jest-watch-typeahead",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nyc",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nyc",
+      "from": "15.0.0",
+      "to": "17.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nyc",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-testing-library",
+      "from": "6.0.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "multimatch",
+      "from": "2.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vinyl",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint-config-recommended",
+      "from": "3.0.0",
+      "to": "7.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "stylelint-config-recommended",
+      "from": "7.0.0",
+      "to": "14.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-n",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-n",
+      "from": "16.0.0",
+      "to": "17.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-n",
+      "from": "17.0.0",
+      "to": "18.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "tsup",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "tsup",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "koa",
+      "from": "2.0.0",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-custom-properties",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-custom-properties",
+      "from": "13.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vue-eslint-parser",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vue-eslint-parser",
+      "from": "8.0.0",
+      "to": "9.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "vue-eslint-parser",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "command-line-args",
+      "from": "5.0.0",
+      "to": "6.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "web-push",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-preset-env",
+      "from": "7.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "postcss-preset-env",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "3.0.0",
+      "to": "4.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "5.0.0",
+      "to": "8.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "8.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "cypress",
+      "from": "15.0.0",
+      "to": "16.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "use-debounce",
+      "from": "9.0.0",
+      "to": "10.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "less-loader",
+      "from": "5.0.0",
+      "to": "11.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "less-loader",
+      "from": "11.0.0",
+      "to": "12.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "less-loader",
+      "from": "12.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "http-server",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "from": "45.0.0",
+      "to": "48.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "from": "49.0.0",
+      "to": "56.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "from": "56.0.0",
+      "to": "59.0.0",
+      "check": "peer-compatibility",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "from": "59.0.0",
+      "to": "62.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "from": "64.0.0",
+      "to": "72.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "from": "77.0.0",
+      "to": "80.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "ky",
+      "from": "1.0.0",
+      "to": "2.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "marked-terminal",
+      "from": "5.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "delay",
+      "from": "4.0.0",
+      "to": "5.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "delay",
+      "from": "5.0.0",
+      "to": "7.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nock",
+      "from": "11.0.0",
+      "to": "13.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nock",
+      "from": "13.0.0",
+      "to": "14.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "nock",
+      "from": "14.0.0",
+      "to": "15.0.0",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
