@@ -53,5 +53,10 @@
     "reason": "CI/operator explicitly selects the legacy Python interpreter; the workflow creates that exact venv. The retained local test script and arguments are passed separately without a shell, with check=True and a 60-second deadline. Corpus, project and package data cannot select the executable. Source-mode and installed-wheel provenance checks remain separate.",
     "rule": "dangerous-subprocess-use-tainted-env-args",
     "sha256": "36534a405848f0f68829ff1276cb85f319a262424c6de2d3fc2ee38c615c0fff"
+  },
+  "deploom-npm/docs/stage-c/exercise-installed-cli.py": {
+    "reason": "Reproduction harness intentionally executes operator-selected local CLI/runtime and PATH-resolved Node/strace with fixed argument vectors, no shell, 5/45-second deadlines and isolated temporary layout. Project/corpus/evidence URLs cannot choose commands. Removes injection-related environment, verifies installed candidate bytes and compares before/after state. The operator-selected executable remains the explicit trust boundary; this is not a binary sandbox. Independent review and original two findings are retained in docs/stage-c/source-scan-review.md.",
+    "rule": "dangerous-subprocess-use-tainted-env-args",
+    "sha256": "2df4b56fd418f7ca95905d7e96192ca61735d858e054df3e02c73b70cdc6075b"
   }
 }
