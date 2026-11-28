@@ -46,11 +46,11 @@ async function run(browser,arm,versions,bad=false){
     assert.equal(await page.getByRole('button',{name:'Save',exact:true}).isDisabled(),true);
     await page.getByRole('textbox',{name:'Name'}).fill('Ada');
     await page.getByRole('button',{name:'Save',exact:true}).click();
-    assert.equal(await page.getByRole('status').textContent(),'Ada','STAGE_B_BROWSER_SAVE');
+    assert.equal(await page.locator('p[role="status"]').textContent(),'Ada','STAGE_B_BROWSER_SAVE');
     await page.getByRole('button',{name:'Reset',exact:true}).click();
     assert.equal(await page.locator('output').textContent(),'0','STAGE_B_BROWSER_RESET');
     assert.equal(await page.getByRole('textbox',{name:'Name'}).inputValue(),'');
-    assert.equal(await page.getByRole('status').textContent(),'');
+    assert.equal(await page.locator('p[role="status"]').textContent(),'');
     assert.deepEqual(errors,[]);
     console.log('STAGE_B_VUE_BROWSER_PASS '+arm);
   }finally{
