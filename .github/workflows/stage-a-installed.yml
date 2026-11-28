@@ -113,7 +113,9 @@ jobs:
       - name: R01 and R02 on the installed published runtime
         run: python ci/qualify_installed_release.py --core-tests build/acceptance-core --mcp-tests build/acceptance-mcp --output installed-correctness.json
       - name: Complete corpus and installed legacy/current v2/v3 parity
-        run: python ci/test_knowledge_editions.py --installed-lock ci/mcp-release.json --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" > installed-parity.jsonl
+        run: |
+          set -euo pipefail
+          python ci/test_knowledge_editions.py --installed-lock ci/mcp-release.json --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" | tee installed-parity.jsonl
       - uses: actions/upload-artifact@v4
         if: always()
         with:
