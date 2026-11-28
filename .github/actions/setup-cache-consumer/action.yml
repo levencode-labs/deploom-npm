@@ -6,7 +6,7 @@ runs:
     - uses: actions/checkout@v4
       with:
         repository: levencode-labs/deploom-mcp
-        ref: d8307c5f54592e13ab3df6280ea67cbfacf638c7
+        ref: 2306152056667c4a60f2b66aa8d1dfda1ff7b365
         path: build/consumer-v2
         persist-credentials: false
     - shell: bash
