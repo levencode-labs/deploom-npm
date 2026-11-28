@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/c1f6dbcb3b53/deploom-npm/ci/check_legacy_knowledge.py", line 163, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/c1f6dbcb3b53/deploom-npm/ci/check_legacy_knowledge.py", line 130, in main
+    verify_direct_url(direct, {
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+        "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.33/deploom_mcp-0.2.33-py3-none-any.whl",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "sha256": "6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/workspace/scratch/c1f6dbcb3b53/deploom-npm/ci/installed_release_guard.py", line 47, in verify_direct_url
+    raise ValueError("INSTALLED_WHEEL_ORIGIN_HASH_MISMATCH")
+ValueError: INSTALLED_WHEEL_ORIGIN_HASH_MISMATCH
+Traceback (most recent call last):
+  File "/workspace/scratch/c1f6dbcb3b53/deploom-npm/ci/test_knowledge_editions.py", line 184, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/scratch/c1f6dbcb3b53/deploom-npm/ci/test_knowledge_editions.py", line 114, in main
+    subprocess.run([old_python, str(ROOT / "ci/check_legacy_knowledge.py"), str(site),
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    str(pin), str(corpus_file), *(["--installed"] if args.legacy_python else [])],
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   env=old_env, check=True, timeout=60)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/workspace/scratch/c1f6dbcb3b53/.venv-legacy-0233/bin/python', '/workspace/scratch/c1f6dbcb3b53/deploom-npm/ci/check_legacy_knowledge.py', '/tmp/tmpyy29_qkq/site', '/tmp/tmpyy29_qkq/publisher.hex', '/workspace/scratch/c1f6dbcb3b53/deploom-npm/knowledge/v2/records.json', '--installed']' returned non-zero exit status 1.

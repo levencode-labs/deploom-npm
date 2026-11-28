@@ -70358,6 +70358,357 @@
           "outcome": "passed"
         }
       }
+    },
+    {
+      "schema": 2,
+      "id": "stageb-prettier3-async-package-managers",
+      "kind": "breaking-change",
+      "package": "prettier",
+      "fromMajor": 2,
+      "toMajor": 3,
+      "packageManagers": [
+        "npm",
+        "yarn",
+        "pnpm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "2.8.8",
+          "to": "3.0.0"
+        }
+      ],
+      "title": "Await Prettier 3 format results across npm, Yarn PnP and pnpm",
+      "summary": "The retained direct consumer calls prettier.format with the built-in Babel parser and immediately trims the returned string. It works with Prettier 2.8.8 and throws TypeError with 3.0.0. Awaiting format before trimming preserves the exact formatted output under all three pinned package managers. Invalid JavaScript still rejects, and removing the async repair reproduces the failure.",
+      "conditions": [
+        "The retained dependency graph changes Prettier 2.8.8 and Zod 3.25.76 together to Prettier 3.0.0 and Zod 4.6.7; the checks call each package's public API directly.",
+        "Replay uses Node 24.18.0 with npm 11.16.0 node_modules, Yarn 4.12.0 Plug'n'Play, or pnpm 10.29.3 with its isolated node_modules layout and each manager's retained frozen lockfile.",
+        "The Yarn execution uses its CommonJS and ESM PnP loaders with no arm node_modules; every package must resolve from the selected arm, even when matching-version packages exist in a parent directory.",
+        "The application uses the programmatic format API with parser: 'babel' and performs a string operation on its result; this case does not test third-party plugins, editor integrations or CLI behavior."
+      ],
+      "actions": [
+        "Make the formatting consumer async and await prettier.format(source, options) before trimming, serializing or returning the resulting text.",
+        "Propagate the asynchronous boundary through the actual caller and preserve syntax-error rejection instead of replacing failures with successful output.",
+        "Install with the recipient's frozen lockfile and execute through its selected manager; use yarn node for the retained PnP case so both CommonJS and ESM resolution use the arm's loaders.",
+        "Treat this as advisory migration evidence. Verify the recipient's actual parser, options, plugins, entry points and supported platforms before accepting its final tree."
+      ],
+      "verification": [
+        "Run both exact package graphs under each manager; assert the old sync consumer passes before the upgrade, fails afterward, and the awaited consumer yields 'const data = { key: 1 };'.",
+        "Check that malformed JavaScript such as 'const =' still rejects with the formatter's syntax diagnostic after the repair.",
+        "Confirm a restored synchronous consumer fails on the target and a missing arm or omitted PnP loader is rejected despite an accessible matching-version parent package.",
+        "Compare repaired target output to baseline output, retain unchanged manifests and frozen locks, then run the recipient's formatting and downstream caller tests."
+      ],
+      "negativeControls": [
+        {
+          "name": "target-sync-and-reverted-consumers-fail",
+          "expected": "reject",
+          "fixtureAssertion": "PRETTIER_OLD_SYNC_CONSUMER_FAILS"
+        },
+        {
+          "name": "invalid-javascript-still-rejects",
+          "expected": "reject",
+          "fixtureAssertion": "FORMAT_INVALID_SOURCE_REJECTED"
+        },
+        {
+          "name": "missing-manager-arm-cannot-use-parent-package",
+          "expected": "reject",
+          "fixtureAssertion": "MANAGER_ARM_ISOLATION"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-package-managers/check.cjs",
+        "fixtureSha256": "da1439f85b88a5f4523c664347c91331038baab0177be8c286e7fdbbc1307804",
+        "claim": {
+          "package": "prettier",
+          "from": "2.8.8",
+          "to": "3.0.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "stageb-zod4-issues-package-managers",
+      "kind": "breaking-change",
+      "package": "zod",
+      "fromMajor": 3,
+      "toMajor": 4,
+      "packageManagers": [
+        "npm",
+        "yarn",
+        "pnpm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "3.25.76",
+          "to": "4.6.7"
+        }
+      ],
+      "title": "Preserve Zod validation failures with issues across three package managers",
+      "summary": "A direct safeParse consumer reads error.errors[0].message to form an invalid-email response. The pinned Zod 4.6.7 graph throws TypeError on that failure path while valid input still succeeds. Reading error.issues preserves the baseline invalid response, issue path and successful parsed data under npm, Yarn PnP and pnpm. The fixture calls a response-producing function; it does not run an HTTP server.",
+      "conditions": [
+        "The retained dependency graph changes Prettier 2.8.8 and Zod 3.25.76 together to Prettier 3.0.0 and Zod 4.6.7; the checks call each package's public API directly.",
+        "Replay uses Node 24.18.0 with npm 11.16.0 node_modules, Yarn 4.12.0 Plug'n'Play, or pnpm 10.29.3 with its isolated node_modules layout and each manager's retained frozen lockfile.",
+        "The Yarn execution uses its CommonJS and ESM PnP loaders with no arm node_modules; every package must resolve from the selected arm, even when matching-version packages exist in a parent directory.",
+        "The schema is an object with a string email field and an explicit 'Invalid email address' message; the caller reads the first validation issue after safeParse reports failure.",
+        "The invalid input is an invalid email string; the valid case also checks that the schema strips an extra property. Other schema types and Zod integrations require recipient-specific tests."
+      ],
+      "actions": [
+        "On the unsuccessful safeParse branch, replace the removed errors alias with error.issues while preserving the caller's response shape and explicit error message.",
+        "Keep the success branch based on result.data so that parsed output and unknown-property handling remain observable.",
+        "Exercise both valid and invalid inputs through the actual consumer; a successful request alone cannot demonstrate that the error-path migration works.",
+        "Replay with the recipient's frozen install and manager runtime, then verify its actual schemas, error mapping and response boundary before accepting the project."
+      ],
+      "verification": [
+        "Assert baseline and repaired target return status 400 with 'Invalid email address' for the invalid email and that the issue path is ['email'].",
+        "Assert valid input returns status 200 with only the parsed email field on both package graphs; the unchanged target errors consumer also passes this valid-only control.",
+        "Restore error.errors and confirm invalid input throws TypeError on the target, then confirm error.issues still rejects invalid data through the intended response.",
+        "Run the same behavior under npm, real Yarn PnP and pnpm; reject a missing arm or missing PnP loader instead of falling back to a matching-version parent package.",
+        "Run the recipient's validation and actual transport tests when it exposes the result over HTTP; this fixture's response object alone is not transport evidence."
+      ],
+      "negativeControls": [
+        {
+          "name": "target-errors-alias-and-reverted-repair-fail",
+          "expected": "reject",
+          "fixtureAssertion": "ZOD_ERRORS_ALIAS_FAILS"
+        },
+        {
+          "name": "invalid-email-remains-a-validation-failure",
+          "expected": "reject",
+          "fixtureAssertion": "VALIDATION_INVALID_INPUT_REJECTED"
+        },
+        {
+          "name": "missing-manager-arm-cannot-use-parent-package",
+          "expected": "reject",
+          "fixtureAssertion": "MANAGER_ARM_ISOLATION"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-package-managers/check.cjs",
+        "fixtureSha256": "da1439f85b88a5f4523c664347c91331038baab0177be8c286e7fdbbc1307804",
+        "claim": {
+          "package": "zod",
+          "from": "3.25.76",
+          "to": "4.6.7",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "stageb-typescript6-composite-workspace",
+      "kind": "breaking-change",
+      "package": "typescript",
+      "fromMajor": 5,
+      "toMajor": 6,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "5.9.2",
+          "to": "6.0.3"
+        }
+      ],
+      "title": "Preserve TypeScript 6 workspace declarations and runtime after removing baseUrl",
+      "summary": "The three-package composite workspace builds and runs with TypeScript 5.9.2. The unchanged 6.0.3 build reports TS5101 for baseUrl; removing only baseUrl exposes TS5090 for non-relative paths targets. Removing baseUrl and making those targets explicitly relative restores the clean build, emitted-declaration consumption and executable result. Separate controls reject missing references, altered declarations and a failed rebuild whose stale JavaScript still runs.",
+      "conditions": [
+        "The exact transition is TypeScript 5.9.2 to 6.0.3 using Node 24.18.0 and npm 11.16.0 with three linked npm workspaces: contracts, domain and app.",
+        "Each package uses composite project references, strict checking, declaration output, explicit rootDir/outDir, noEmitOnError and Node16 CommonJS emission.",
+        "An inherited config declares baseUrl: '.' with non-relative paths targets such as packages/contracts/src/index.ts; those aliases match real workspace package names with main/types pointing to emitted dist files.",
+        "The evidence covers this npm package boundary and solution build. Yarn/pnpm workspaces, bundler aliases, ESM conversion and the recipient's full source graph need separate verification."
+      ],
+      "actions": [
+        "Remove baseUrl from the owning inherited config and resolve each paths target relative to that config, adding './' where needed to preserve the original target location.",
+        "Preserve project references and package main/types declarations so downstream projects consume emitted declarations and runtime imports resolve to the built workspace packages.",
+        "Perform a clean solution build before runtime acceptance. Do not silence the deprecation, disable strict checking or accept a successful execution of output left by a failed build.",
+        "Validate incremental propagation after editing an upstream contract and run the recipient's final workspace build and runtime checks before accepting the migration."
+      ],
+      "verification": [
+        "Run clean tsc -b builds on the old graph and repaired target, then execute the built app and compare the USD receipt: subtotal 2500 cents, tax 188 cents and total 2688 cents.",
+        "Inspect the app's --listFilesOnly result: contracts and domain must contribute emitted .d.ts files, with their upstream .ts source files absent from the app compilation.",
+        "Delete the app's project references and expect TS6059/TS6307; change the emitted domain return declaration to Promise<Receipt> and expect TS2739 without editing its source.",
+        "Change the upstream tax constant from 750 to 1000 basis points, rebuild incrementally and assert the new declaration literal and runtime total of 2750 cents.",
+        "Introduce an invalid EUR currency and require TS2322 rejection even though unchanged stale JavaScript remains executable; then repeat the recipient's own clean build and behavioral acceptance."
+      ],
+      "negativeControls": [
+        {
+          "name": "unfixed-target-rejects-baseurl",
+          "expected": "reject",
+          "fixtureAssertion": "reject(heldBuild, [5101, 6305, 7006]);"
+        },
+        {
+          "name": "baseurl-removal-without-relative-paths-fails",
+          "expected": "reject",
+          "fixtureAssertion": "reject(partialBuild, [5090, 6305, 7006]);"
+        },
+        {
+          "name": "missing-project-references-fail",
+          "expected": "reject",
+          "fixtureAssertion": "reject(noReferenceBuild, [6059, 6307]);"
+        },
+        {
+          "name": "incorrect-emitted-declaration-fails",
+          "expected": "reject",
+          "fixtureAssertion": "reject(wrongDeclaration, [2739]);"
+        },
+        {
+          "name": "type-invalid-rebuild-fails",
+          "expected": "reject",
+          "fixtureAssertion": "reject(failedRebuild, [2322]);"
+        },
+        {
+          "name": "runnable-stale-output-does-not-accept-failed-build",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(stale.accepted, false);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-typescript-workspaces/check.cjs",
+        "fixtureSha256": "c0809fb7d156b41f9357a5dcc68162c909d2cc759d261e20d8aaed62a5dbc1ad",
+        "claim": {
+          "package": "typescript",
+          "from": "5.9.2",
+          "to": "6.0.3",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "stageb-react-dom19-coupled-browser-transition",
+      "kind": "breaking-change",
+      "package": "react-dom",
+      "fromMajor": 18,
+      "toMajor": 19,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "18.3.1",
+          "to": "19.3.0"
+        }
+      ],
+      "title": "Preserve browser transitions and focus during the coupled React 19 migration",
+      "summary": "In the exact React/DOM/Router cohort, upgrading the old application makes react-transition-group 4.4.5 fail on the removed findDOMNode API. Passing the same stable DOM ref to CSSTransition and its child restores two real browser enter/exit cycles, visible panel state and focus return. A separate Router repair is also required for the intended sibling route; each partial repair leaves the other failure observable.",
+      "conditions": [
+        "The coupled baseline is React 18.3.1, react-dom 18.3.1, react-router-dom 6.30.3 and react-transition-group 4.4.5; the target is React 19.3.0, react-dom 19.3.0, react-router-dom 7.18.4 and unchanged react-transition-group 4.4.5.",
+        "The fixture uses npm 11.16.0 on Node 24.18.0, esbuild 0.25.10 with the automatic JSX transform, Playwright 1.56.1 and Chromium Headless Shell 141.0.7390.37, revision 1194.",
+        "This is a BrowserRouter application with declarative routes, one unkeyed CSSTransition and local form state. Hydration, data loaders, keyed transition lists and other browser engines are outside the retained evidence.",
+        "Browser behavior is replayed at 1280x800 and an emulated 390x844 mobile viewport. The mobile case is Chromium viewport and touch emulation, not a physical-device result.",
+        "The baseline CSSTransition omits nodeRef, unmounts on exit and moves focus between its open and close buttons; a separate dashboard/* route contains a relative reports link."
+      ],
+      "actions": [
+        "Create a stable ref for the transitioning DOM element, attach it to that element and pass that same ref as CSSTransition's nodeRef.",
+        "Review transition callbacks when supplying nodeRef: use the ref for the element and account for changed callback arguments; the retained onEnter check receives isAppearing rather than a DOM node.",
+        "Apply the independent Router repair where the same route pattern exists: split /dashboard/* into a /dashboard parent and * child, then use ../reports for the sibling link.",
+        "Replay the recipient's transitions, focus handling, route history and state retention with its supported browsers before accepting the coupled upgrade."
+      ],
+      "verification": [
+        "Replay old graph/old code, new graph/old code, each single repair and both repairs at desktop and emulated mobile sizes; assert the specified failure or behavior in every arm.",
+        "Use the keyboard to type a draft, Tab to the opener, open with Space and close with Enter. Assert visibility and opacity 1 on the first enter; complete two enter/exit cycles with panel removal and focus returned to the opener after each exit.",
+        "Check the nodeRef callback's first argument and that the ref points to the panel; verify the form value survives relative navigation, an absolute-link control, browser Back and transition cycles.",
+        "Require both intended sibling navigation and transition success on the repaired cohort, no unexpected page errors, no external requests and no horizontal overflow.",
+        "Retain browser/tool versions, package and input hashes, emitted bundle hashes and screenshots; separately test recipient hydration, keyed lists and other browser engines when used."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-code-and-route-only-repair-fail-transition",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(observed.transitionError, /findDOMNode is not a function/);"
+        },
+        {
+          "name": "failed-transition-must-not-render-panel",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(await page.getByTestId('panel').count(), 0);"
+        },
+        {
+          "name": "transition-only-repair-keeps-wrong-route",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(observed.relativeHref, '/dashboard/team/reports');"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-react-ui/check.cjs",
+        "fixtureSha256": "ba4a7f1a7f736f28cd65e35063f3996e4349afad990a10626ef2bcf164280a11",
+        "claim": {
+          "package": "react-dom",
+          "from": "18.3.1",
+          "to": "19.3.0",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "schema": 2,
+      "id": "stageb-react-router7-coupled-browser-splat",
+      "kind": "breaking-change",
+      "package": "react-router-dom",
+      "fromMajor": 6,
+      "toMajor": 7,
+      "packageManagers": [
+        "npm"
+      ],
+      "verifiedTransitions": [
+        {
+          "from": "6.30.3",
+          "to": "7.18.4"
+        }
+      ],
+      "title": "Preserve browser sibling navigation during the coupled Router 7 migration",
+      "summary": "With the retained coupled React/DOM/Router upgrade, a relative reports link rendered under /dashboard/* at /dashboard/team moves to /dashboard/team/reports and leaves the intended Reports page unopened. Splitting the parent and splat child and changing the link to ../reports restores the sibling URL, rendered page and browser Back behavior. The accompanying transition still needs its independent nodeRef repair.",
+      "conditions": [
+        "The coupled baseline is React 18.3.1, react-dom 18.3.1, react-router-dom 6.30.3 and react-transition-group 4.4.5; the target is React 19.3.0, react-dom 19.3.0, react-router-dom 7.18.4 and unchanged react-transition-group 4.4.5.",
+        "The fixture uses npm 11.16.0 on Node 24.18.0, esbuild 0.25.10 with the automatic JSX transform, Playwright 1.56.1 and Chromium Headless Shell 141.0.7390.37, revision 1194.",
+        "This is a BrowserRouter application with declarative routes, one unkeyed CSSTransition and local form state. Hydration, data loaders, keyed transition lists and other browser engines are outside the retained evidence.",
+        "Browser behavior is replayed at 1280x800 and an emulated 390x844 mobile viewport. The mobile case is Chromium viewport and touch emulation, not a physical-device result.",
+        "A multi-segment splat route /dashboard/* renders Link to='reports' from /dashboard/team with the intention of navigating to the sibling /dashboard/reports route; the baseline does not opt into the v7 relative-splat behavior."
+      ],
+      "actions": [
+        "Separate the named /dashboard parent route from its * child and change this sibling link to ../reports, preserving the intended /dashboard/reports destination.",
+        "Keep the absolute /dashboard/reports link as an independent control and inspect the recipient's nested/index route shapes before applying the same pattern elsewhere.",
+        "Wait for the expected rendered route as well as the browser URL when testing Router 7 navigation, because the URL can update before the React transition commits.",
+        "Repair the coupled CSSTransition with a stable nodeRef on the child and transition; then verify recipient navigation, browser history, focus and form state on its final tree."
+      ],
+      "verification": [
+        "At /dashboard/team, click the relative link and check both /dashboard/reports in browser history and the rendered Reports page; use Back and assert the original route and retained draft value.",
+        "Run the absolute-link control in every arm, including the broken relative-route arms, so navigation availability alone cannot satisfy sibling-route acceptance.",
+        "Run all five old/new/partial/full repair arms at desktop and emulated mobile sizes. The new graph without the route repair must expose /dashboard/team/reports even if the transition is repaired.",
+        "Require both fixes to preserve keyboard entry, two transition cycles, focus return, form state and the intended sibling route without unexpected page errors or external requests.",
+        "Run the recipient's actual route, index, data-loader and hydration cases where present; the retained declarative Chromium application does not establish those broader outcomes."
+      ],
+      "negativeControls": [
+        {
+          "name": "old-code-and-transition-only-repair-misroute",
+          "expected": "reject",
+          "fixtureAssertion": "assert.equal(observed.relativeHref, '/dashboard/team/reports');"
+        },
+        {
+          "name": "wrong-relative-route-does-not-show-reports",
+          "expected": "reject",
+          "fixtureAssertion": "item.badRoute ? 'Team page' : 'Reports page'"
+        },
+        {
+          "name": "route-only-repair-keeps-finddomnode-failure",
+          "expected": "reject",
+          "fixtureAssertion": "assert.match(observed.transitionError, /findDOMNode is not a function/);"
+        }
+      ],
+      "evidence": {
+        "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-react-ui/check.cjs",
+        "fixtureSha256": "ba4a7f1a7f736f28cd65e35063f3996e4349afad990a10626ef2bcf164280a11",
+        "claim": {
+          "package": "react-router-dom",
+          "from": "6.30.3",
+          "to": "7.18.4",
+          "check": "test",
+          "outcome": "passed"
+        }
+      }
     }
   ]
 }

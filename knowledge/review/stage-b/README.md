@@ -82,3 +82,56 @@ Passing these fixtures supports `fixture-behavior` evidence for their reviewed
 claims. It does not establish acceptance of a recipient project. The knowledge
 records retain `projectStatus: UNKNOWN`, required applicability conditions,
 and the existing archive-evidence policy.
+
+## Qualified source and prepared knowledge
+
+[PR #154](https://github.com/levencode-labs/deploom-npm/pull/154) was merged as
+`66bc76d933cc40459a6b152d179ac2a70ee32c32` after all six PR/push workflows passed.
+Its source tree equals the qualified fixture revision
+`d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc`. The complete Stage B
+[qualification run](https://github.com/levencode-labs/deploom-npm/actions/runs/46162323251)
+passed all ten Linux/Windows legs and aggregate verification: 12 package-manager
+case executions, 16 workspace scenarios, and 20 browser scenarios.
+
+The [qualification record](qualification/qualification.md) retains all eleven
+original artifact ZIPs, all reports and receipts, twelve browser screenshots,
+the failed original Windows setup run, and commands for independent offline
+verification. [The manifest](qualification/manifest.json) binds the exact
+artifact IDs, Git inputs and hashes. The Python availability correction kept
+every matrix leg and fixture assertion intact.
+
+Five new records are prepared in the pending publisher branch:
+
+| Record | Verified managers |
+| --- | --- |
+| `stageb-prettier3-async-package-managers` | npm, Yarn PnP, pnpm |
+| `stageb-zod4-issues-package-managers` | npm, Yarn PnP, pnpm |
+| `stageb-typescript6-composite-workspace` | npm |
+| `stageb-react-dom19-coupled-browser-transition` | npm |
+| `stageb-react-router7-coupled-browser-splat` | npm |
+
+The original 1,525 records and their scopes remain unchanged. The prepared
+corpus contains **1,530 records across 695 packages**, with **104 reviewed
+fixture sources** and **1,038 retained input entries**. All five additions have
+the reviewed `fixture-behavior` level, increasing that level from 201 to 206
+records. Archive and recipient-project outcomes remain `UNKNOWN`.
+
+The complete offline publisher/reader check passed all 1,530 records through
+the real production signers and separately pinned legacy v2/current v3 source
+consumers. It also passed **45 new lookup checks** across legacy v2, current v2
+and current v3: 27 supported exact queries and 18 unsupported-manager exclusions.
+The old query, signature-domain, equal-revision and missing-scope controls stay
+in place. [Actual stdout](knowledge-parity.jsonl) and its
+[input identities](knowledge-parity-inputs.json) are retained. The test replaces
+only the live registry identity probe; publication keeps that separate gate.
+
+| Prepared bytes | SHA-256 |
+| --- | --- |
+| Raw v2 corpus | `bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8` |
+| Annotated v3 corpus | `1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992` |
+| Explicit review ledger | `1ae7d699a8dce222bc52b534c657508d93bae40c91ffa84ef2d6c6bd3ab92d4a` |
+
+Package and Stage B public-data releases are deferred. The prepared knowledge
+is held in [publisher PR #151](https://github.com/levencode-labs/deploom-npm/pull/151),
+so the fixture merge alone does not publish the new records. The existing
+release-wheel gate still applies before that publisher reaches main.

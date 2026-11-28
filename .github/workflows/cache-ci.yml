@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - name: Reject source imports, stale release locks and invalid installed-wheel origins
+        run: python -m unittest discover -s ci -p test_installed_release_guard.py -v
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
@@ -28,6 +30,13 @@ jobs:
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
       - uses: ./.github/actions/setup-cache-consumer
+      - name: Keep the released strict v2 reader in the compatibility matrix
+        uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: 73e4bcc04ec2a2c3aa85008a94b3a6958a03012d
+          path: build/consumer-legacy
+          persist-credentials: false
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
@@ -51,7 +60,7 @@ jobs:
           PYTHONPATH: build/consumer-v2/src:cache
         run: |
           python -m unittest discover -s cache -v
-          python ci/test_knowledge_v2_consumer.py
+          python ci/test_knowledge_editions.py --legacy-consumer build/consumer-legacy
 
   renderer-fixture-windows:
     runs-on: windows-latest

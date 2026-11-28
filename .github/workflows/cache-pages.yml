@@ -2,7 +2,7 @@ name: Deploy public cache to Pages
 on:
   push:
     branches: [main]
-    paths: ['docs/**', 'cache/**', 'knowledge/v2/**', 'ci/cache-requirements.txt', 'ci/verify_public_data.py', '.github/actions/setup-cache-consumer/**', '.github/workflows/cache-pages.yml']
+    paths: ['docs/**', 'cache/**', 'knowledge/v2/**', 'knowledge/v3/**', 'ci/cache-requirements.txt', 'ci/verify_public_data.py', '.github/actions/setup-cache-consumer/**', '.github/workflows/cache-pages.yml']
   workflow_run:
     workflows: ['Build public OSV release']
     branches: [main]
@@ -20,6 +20,7 @@ jobs:
     outputs:
       digest: ${{ steps.digest.outputs.sha }}
       v2_digest: ${{ steps.digest.outputs.v2_sha }}
+      v3_digest: ${{ steps.digest.outputs.v3_sha }}
     timeout-minutes: 20
     permissions:
       contents: read
@@ -52,15 +53,16 @@ jobs:
         env:
           PYTHONPATH: build/contracts/src
         run: python cache/records_intake.py "$(git rev-parse HEAD)" build/site/v1/cache.json
-      - name: Validate maintainer-controlled v2-native knowledge and pinned fixture claims
+      - name: Validate pinned fixtures and publish legacy v2 plus reviewed scoped v3
         env:
           PYTHONPATH: build/consumer-v2/src:cache
         run: |
-          python cache/shards_v2.py knowledge/v2/records.json build/site/v2 --revision "$(git rev-list --first-parent --count HEAD)" --trusted-commit "$(git rev-parse HEAD)"
+          python cache/shards_v3.py knowledge/v2/records.json knowledge/v3/evidence-scopes.json build/site --revision "$(git rev-list --first-parent --count HEAD)" --trusted-commit "$(git rev-parse HEAD)"
       - id: digest
         run: |
           echo "sha=$(sha256sum build/site/v1/cache.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
           echo "v2_sha=$(sha256sum build/site/v2/index.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          echo "v3_sha=$(sha256sum build/site/v3/index.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: validated-site
@@ -90,17 +92,86 @@ jobs:
         env:
           EXPECTED_V2: ${{ needs.prepare.outputs.v2_digest }}
         run: echo "$EXPECTED_V2  build/site/v2/index.json" | sha256sum --check
+      - name: Check v3 index matches the reviewed candidate
+        env:
+          EXPECTED_V3: ${{ needs.prepare.outputs.v3_digest }}
+        run: echo "$EXPECTED_V3  build/site/v3/index.json" | sha256sum --check
       - name: Sign the validated public snapshot
         env:
           DEPLOOM_RECORDS_SIGNING_KEY: ${{ secrets.DEPLOOM_RECORDS_SIGNING_KEY }}
         run: |
           node cache/sign-records.cjs build/site/v1/cache.json build/site/v1/cache.sig cache/records-public.hex
           node cache/sign-shards-v2.cjs build/site/v2/index.json build/site/v2/index.sig cache/records-public.hex
+          node cache/sign-shards-v3.cjs build/site/v3/index.json build/site/v3/index.sig cache/records-public.hex
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: build/site
-  deploy:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signed-candidate
+          path: build/site
+          if-no-files-found: error
+  verify-candidate:
     needs: sign
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-core
+          ref: 8c65fc7311062169d1b1e058c5463a39efaed3d9
+          path: build/acceptance-core
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: 0c990137e3b713f944cd7a053f04d0e8470af337
+          path: build/acceptance-mcp
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: signed-candidate
+          path: build/signed-candidate
+      - name: Install current and legacy published wheels under exact hash locks
+        run: |
+          python -m pip install --only-binary=:all: --require-hashes -r bin/posix-requirements.txt
+          python -m venv "$RUNNER_TEMP/legacy-reader"
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          lines = Path('bin/posix-requirements.txt').read_text().splitlines()
+          lines = [line for line in lines if not line.startswith('deploom-mcp @ ')]
+          lines.append('deploom-mcp @ https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.33/deploom_mcp-0.2.33-py3-none-any.whl --hash=sha256:6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167')
+          Path(os.environ['RUNNER_TEMP'], 'legacy-requirements.txt').write_text('\n'.join(lines) + '\n')
+          PY
+          "$RUNNER_TEMP/legacy-reader/bin/python" -m pip install --only-binary=:all: --require-hashes -r "$RUNNER_TEMP/legacy-requirements.txt"
+      - name: Run R01 and R02 with installed production modules and retained exact test sources
+        run: python ci/qualify_installed_release.py --core-tests build/acceptance-core --mcp-tests build/acceptance-mcp --output installed-correctness.json
+      - name: Preserve complete corpus, 45 lookups, signature and revision negatives on installed wheels
+        run: python ci/test_knowledge_editions.py --installed-lock ci/mcp-release.json --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" > installed-parity.jsonl
+      - name: Read the actual signed candidate before public deployment
+        run: python ci/verify_signed_candidate.py --site build/signed-candidate --revision "$(git rev-list --first-parent --count HEAD)" --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" --output installed-candidate.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installed-candidate-acceptance
+          path: |
+            installed-correctness.json
+            installed-parity.jsonl
+            installed-candidate.json
+          if-no-files-found: error
+  deploy:
+    needs: verify-candidate
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -127,8 +198,8 @@ jobs:
       - name: Install the released DepLoom runtime from its hash lock
         run: |
           python -m pip install --only-binary=:all: --require-hashes -r bin/posix-requirements.txt
-      - name: Read the published pointer, signed knowledge and seven-day expiry boundary
-        run: python ci/verify_public_data.py --source knowledge/v2/records.json --revision "$(git rev-list --first-parent --count HEAD)" --output public-data-verification.json
+      - name: Read both signed editions with the installed client and check OSV expiry
+        run: python ci/verify_public_data.py --source knowledge/v2/records.json --scopes knowledge/v3/evidence-scopes.json --revision "$(git rev-list --first-parent --count HEAD)" --output public-data-verification.json
       - uses: actions/upload-artifact@v4
         with:
           name: installed-public-data-verification

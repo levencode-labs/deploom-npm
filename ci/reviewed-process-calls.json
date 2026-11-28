@@ -48,5 +48,10 @@
     "reason": "The public benchmark supplies fixed npm install/ci arguments and an operator-selected temporary workspace.",
     "rule": "dangerous-subprocess-use-tainted-env-args",
     "sha256": "f6b00c5cc33a5e4d5be1593d9bfb57fdb67b6d539c63a4529e41643adbd75da9"
+  },
+  "deploom-npm/ci/test_knowledge_editions.py": {
+    "reason": "CI/operator explicitly selects the legacy Python interpreter; the workflow creates that exact venv. The retained local test script and arguments are passed separately without a shell, with check=True and a 60-second deadline. Corpus, project and package data cannot select the executable. Source-mode and installed-wheel provenance checks remain separate.",
+    "rule": "dangerous-subprocess-use-tainted-env-args",
+    "sha256": "36534a405848f0f68829ff1276cb85f319a262424c6de2d3fc2ee38c615c0fff"
   }
 }

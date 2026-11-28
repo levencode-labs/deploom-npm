@@ -1,0 +1,41 @@
+{
+  "currentConsumerSourceCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+  "currentConsumerSourceTree": "85eaaa8debb926cba7bbd0f2083c1425d61b5c88",
+  "fixtureSource": "d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc",
+  "inputs": [
+    {
+      "bytes": 8266,
+      "path": "ci/check_legacy_knowledge.py",
+      "sha256": "a9c470362e9e5a56279f03f8455b708890fc99feebf9ec6dcf8a01148340883c"
+    },
+    {
+      "bytes": 9246,
+      "path": "ci/test_knowledge_editions.py",
+      "sha256": "d6690a6cfc49b99114dd6b77009b0b2ee46af92ea89e0954fcf4b42e3191457e"
+    },
+    {
+      "bytes": 2578019,
+      "path": "knowledge/v2/records.json",
+      "sha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8"
+    },
+    {
+      "bytes": 850218,
+      "path": "knowledge/v3/evidence-scopes.json",
+      "sha256": "1ae7d699a8dce222bc52b534c657508d93bae40c91ffa84ef2d6c6bd3ab92d4a"
+    }
+  ],
+  "kind": "local-offline-publisher-reader-compatibility",
+  "legacyConsumerSourceCommit": "73e4bcc04ec2a2c3aa85008a94b3a6958a03012d",
+  "node": "v24.18.0",
+  "python": "3.12.14",
+  "registryIdentityProbe": "substituted only for the offline test; the production admission probe remains required",
+  "registryRequests": 0,
+  "schema": 1,
+  "status": "passed",
+  "stdout": {
+    "bytes": 900,
+    "path": "knowledge-parity.jsonl",
+    "sha256": "4e731da3c73acaddda4688836913dca0705f1ad040901b300b6ad3710ea7ded5"
+  },
+  "trustedFixtureMain": "66bc76d933cc40459a6b152d179ac2a70ee32c32"
+}

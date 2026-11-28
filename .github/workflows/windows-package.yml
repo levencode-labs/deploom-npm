@@ -63,10 +63,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - uses: actions/checkout@v4
-        if: ${{ !inputs.release }}
+        if: ${{ !inputs.release && github.event.pull_request.number != 151 }}
         with:
           repository: levencode-labs/deploom-mcp
-          ref: cc6854f2625cc8a77557b4cd098667dae7634f58
+          ref: 0c990137e3b713f944cd7a053f04d0e8470af337
           submodules: true
           path: build/upstream
           persist-credentials: false
@@ -77,16 +77,22 @@ jobs:
         with:
           node-version: '22'
       - name: Build the development MCP wheel
-        if: ${{ !inputs.release }}
+        if: ${{ !inputs.release && github.event.pull_request.number != 151 }}
         run: |
           python -m pip install build
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
           python -m build --wheel build/upstream --outdir build/wheels
       - name: Download the reviewed public release wheel
-        if: inputs.release
+        if: inputs.release || github.event.pull_request.number == 151
+        env:
+          DEPLOOM_TAGGED_RELEASE: ${{ inputs.release }}
         run: |
-          git merge-base --is-ancestor $env:GITHUB_SHA origin/main
-          if ($LASTEXITCODE) { throw 'Release tag must point to a commit on main' }
+          # Only a tagged publication requires the candidate commit on main.
+          # PR 151 separately verifies installed release provenance before merge.
+          if ($env:DEPLOOM_TAGGED_RELEASE -eq 'true') {
+            git merge-base --is-ancestor $env:GITHUB_SHA origin/main
+            if ($LASTEXITCODE) { throw 'Release tag must point to a commit on main' }
+          }
           $lock = Get-Content -Raw ci/mcp-release.json | ConvertFrom-Json
           $name = "deploom_mcp-$($lock.version)-py3-none-any.whl"
           $url = "https://github.com/levencode-labs/deploom-mcp/releases/download/v$($lock.version)/$name"

@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "PUBLISHED_API_METADATA_OBSERVED_BYTE_READBACK_PENDING",
+  "components": [
+    {
+      "package": "deploom-core",
+      "version": "0.1.22",
+      "repository": "levencode-labs/deploom-core",
+      "tag": "v0.1.22",
+      "commit": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+      "tagObject": "42837adb7a8abee87cefd3c34d335e48fb9d6b44",
+      "run": 46182573672,
+      "releaseId": 461813406,
+      "publishedAt": "2026-11-28T19:44:03Z",
+      "assets": {
+        "deploom_core-0.1.22-py3-none-any.whl": {
+          "size": 1088001,
+          "digest": "sha256:680547546aaa7af13845c7e482250816c548bf5772184155153101cb372008b5",
+          "url": "https://github.com/levencode-labs/deploom-core/releases/download/v0.1.22/deploom_core-0.1.22-py3-none-any.whl"
+        },
+        "deploom_core-0.1.22.tar.gz": {
+          "size": 1158105,
+          "digest": "sha256:7b586d8e169c13bfad627b63eba7780d24118a92abc5b24cf33056f2854cf59f",
+          "url": "https://github.com/levencode-labs/deploom-core/releases/download/v0.1.22/deploom_core-0.1.22.tar.gz"
+        },
+        "RELEASE-EVIDENCE.json": {
+          "size": 1106,
+          "digest": "sha256:670f7f1142cf51fb654e19f4c3cefc3318bb3fda0db46b802a048a5d9f1913e1",
+          "url": "https://github.com/levencode-labs/deploom-core/releases/download/v0.1.22/RELEASE-EVIDENCE.json"
+        },
+        "SHA256SUMS.txt": {
+          "size": 287,
+          "digest": "sha256:1db9c39ea0e95e31531889d2a84b0c8522652b980f98a6665ef09c60f6913933",
+          "url": "https://github.com/levencode-labs/deploom-core/releases/download/v0.1.22/SHA256SUMS.txt"
+        }
+      }
+    },
+    {
+      "package": "deploom-mcp",
+      "version": "0.2.34",
+      "repository": "levencode-labs/deploom-mcp",
+      "tag": "v0.2.34",
+      "commit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+      "tagObject": "110a99c5d62c048ee8fe5e9b4db5321fed270c15",
+      "run": 46183472031,
+      "releaseId": 461820822,
+      "publishedAt": "2026-11-28T19:56:35Z",
+      "assets": {
+        "deploom_mcp-0.2.34-py3-none-any.whl": {
+          "size": 3187488,
+          "digest": "sha256:38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+          "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+        },
+        "deploom_mcp-0.2.34.tar.gz": {
+          "size": 3257122,
+          "digest": "sha256:11aa2bc480e975ad3b4b43470b3c60b1847a297542513aed2b697affdf4f12d7",
+          "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34.tar.gz"
+        },
+        "RELEASE-EVIDENCE.json": {
+          "size": 1250,
+          "digest": "sha256:d1b2d13f367765815ecffa53d943e8d729ae0e5f400c1ba4ac49cb1580e6a22d",
+          "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/RELEASE-EVIDENCE.json"
+        },
+        "SHA256SUMS.txt": {
+          "size": 285,
+          "digest": "sha256:ab0762b7b78222fd557d8c0dc3862b2018606af5e4015882169aef6d80b8b145",
+          "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/SHA256SUMS.txt"
+        }
+      }
+    }
+  ],
+  "registryVersion031": "RECHECK_REQUIRED",
+  "installedReleaseAcceptance": "PENDING_HOSTED_PR_GATE",
+  "note": "Release workflows and public API metadata confirmed. Downloaded bytes, independent SHA256SUMS and release evidence comparison, and installed runtime acceptance are separate mandatory PR checks. No production publication or registry installation is claimed."
+}
