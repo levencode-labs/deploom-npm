@@ -1,0 +1,126 @@
+name: Stage A installed release qualification
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  installed-stage-a:
+    # This is the one-time release-A gate for publisher PR 151. Existing
+    # package/public-data/security workflows remain mandatory and unchanged.
+    if: github.event.pull_request.number == 151
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-core
+          ref: 8c65fc7311062169d1b1e058c5463a39efaed3d9
+          path: build/acceptance-core
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: 0c990137e3b713f944cd7a053f04d0e8470af337
+          path: build/acceptance-mcp
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - name: Independently read back both component releases and compare all bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/component-readback/core" "$RUNNER_TEMP/component-readback/mcp"
+          gh release download v0.1.22 --repo levencode-labs/deploom-core --dir "$RUNNER_TEMP/component-readback/core"
+          gh release download v0.2.34 --repo levencode-labs/deploom-mcp --dir "$RUNNER_TEMP/component-readback/mcp"
+          python - <<'PY'
+          import json, os, sys
+          from pathlib import Path
+          # Reuse the accepted release-source verifier in this separate
+          # provenance process; no production module is imported from source.
+          sys.path.insert(0, str(Path("build/acceptance-mcp/scripts").resolve()))
+          import release_ci
+          receipt = json.loads(Path("ci/release-a/published-components.json").read_bytes())
+          lock = json.loads(Path("ci/mcp-release.json").read_bytes())
+          rows = []
+          for value, folder in zip(receipt["components"], ("core", "mcp"), strict=True):
+              expected = release_ci.expected_assets(Path(os.environ["RUNNER_TEMP"]) / "component-readback" / folder, value)
+              release_ci.remote_tag_matches(value)
+              endpoint = "repos/" + value["repository"]
+              release = release_ci.api(endpoint + "/releases/tags/" + value["tag"])
+              run = release_ci.api(endpoint + "/actions/runs/" + str(value["run"]))
+              if release["draft"] or release["id"] != value["releaseId"] or release["tag_name"] != value["tag"]:
+                  raise ValueError("COMPONENT_RELEASE_IDENTITY_MISMATCH")
+              if run["head_sha"] != value["commit"] or run["head_branch"] != value["tag"] or run["status"] != "completed" or run["conclusion"] != "success":
+                  raise ValueError("COMPONENT_RELEASE_CI_NOT_GREEN")
+              if release_ci.reconcile_assets(release["assets"], expected):
+                  raise ValueError("COMPONENT_RELEASE_ASSET_MISSING")
+              for name, actual in expected.items():
+                  if any(actual[k] != value["assets"][name][k] for k in ("digest", "size")):
+                      raise ValueError("COMPONENT_RELEASE_OBSERVED_DIGEST_MISMATCH")
+              evidence = json.loads((Path(os.environ["RUNNER_TEMP"]) / "component-readback" / folder / "RELEASE-EVIDENCE.json").read_bytes())
+              if evidence["status"] != "EXACT_SOURCE_DISTRIBUTION_CHECKS_PASS" or evidence["run"] != run["html_url"]:
+                  raise ValueError("COMPONENT_RELEASE_EVIDENCE_MISMATCH")
+              if folder == "mcp":
+                  wheel = expected["deploom_mcp-0.2.34-py3-none-any.whl"]
+                  if evidence["corePin"] != lock["coreRevision"] or wheel["digest"] != "sha256:" + lock["sha256"]:
+                      raise ValueError("MCP_RELEASE_LOCK_MISMATCH")
+              rows.append({"package": value["package"], "commit": value["commit"], "tagObject": value["tagObject"], "run": run["html_url"], "assets": expected, "status": "PASS"})
+          report = {"status": "PASS", "components": rows, "testedCommit": os.environ["GITHUB_SHA"]}
+          Path("component-readback.json").write_text(json.dumps(report, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(report, sort_keys=True))
+          PY
+      - name: Recheck that the planned npm version is not occupied
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.request import urlopen
+          from urllib.error import HTTPError
+          url = "https://registry.npmjs.org/@levencode%2fdeploom/0.2.31"
+          try:
+              with urlopen(url, timeout=30):
+                  raise ValueError("NPM_STAGE_A_VERSION_ALREADY_OCCUPIED")
+          except HTTPError as error:
+              if error.code != 404:
+                  raise
+          report = {"package": "@levencode/deploom", "version": "0.2.31", "registry": url, "httpStatus": 404, "status": "AVAILABLE_AT_CHECK"}
+          Path("npm-version-availability.json").write_text(json.dumps(report, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(report, sort_keys=True))
+          PY
+      - name: Install both published wheels under exact hash locks
+        run: |
+          python -m pip install --only-binary=:all: --require-hashes -r bin/posix-requirements.txt
+          python -m venv "$RUNNER_TEMP/legacy-reader"
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          lines = Path("bin/posix-requirements.txt").read_text().splitlines()
+          lines = [line for line in lines if not line.startswith("deploom-mcp @ ")]
+          lines.append("deploom-mcp @ https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.33/deploom_mcp-0.2.33-py3-none-any.whl --hash=sha256:6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167")
+          Path(os.environ["RUNNER_TEMP"], "legacy-requirements.txt").write_text("\n".join(lines) + "\n")
+          PY
+          "$RUNNER_TEMP/legacy-reader/bin/python" -m pip install --only-binary=:all: --require-hashes -r "$RUNNER_TEMP/legacy-requirements.txt"
+      - name: R01 and R02 on the installed published runtime
+        run: python ci/qualify_installed_release.py --core-tests build/acceptance-core --mcp-tests build/acceptance-mcp --output installed-correctness.json
+      - name: Complete corpus and installed legacy/current v2/v3 parity
+        run: python ci/test_knowledge_editions.py --installed-lock ci/mcp-release.json --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" > installed-parity.jsonl
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage-a-installed-premerge
+          path: |
+            component-readback.json
+            npm-version-availability.json
+            installed-correctness.json
+            installed-parity.jsonl
+          if-no-files-found: warn
