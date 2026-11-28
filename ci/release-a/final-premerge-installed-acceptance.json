@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "status": "PASS_INSTALLED_PUBLISHED_COMPONENTS",
+  "sourceHead": "fb8b90dc33264b980a1faa7ec17ac3a560664344",
+  "testedMerge": "2e01ca687e0d09bb9dc2948026056133f1466e6a",
+  "tree": "bc7a3054d28885581edb4281b21680c1aeeb47d6",
+  "run": "https://github.com/levencode-labs/deploom-npm/actions/runs/46184048639",
+  "jobId": 141099866271,
+  "artifact": {
+    "id": 15279316164,
+    "digest": "sha256:654d7c1ac802b0668cd205af583822f965b9faa5506eba3068db5a56f4f71358",
+    "bytes": 3096,
+    "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46184048639/artifacts/15279316164"
+  },
+  "receiptOrigin": "Exact JSON values from hosted CI log; hosted job independently hashed component release asset bytes. Artifact ZIP digest is GitHub API metadata, not independently hashed in the current session.",
+  "componentReadback": {
+    "components": [
+      {
+        "assets": {
+          "RELEASE-EVIDENCE.json": {
+            "digest": "sha256:670f7f1142cf51fb654e19f4c3cefc3318bb3fda0db46b802a048a5d9f1913e1",
+            "size": 1106
+          },
+          "SHA256SUMS.txt": {
+            "digest": "sha256:1db9c39ea0e95e31531889d2a84b0c8522652b980f98a6665ef09c60f6913933",
+            "size": 287
+          },
+          "deploom_core-0.1.22-py3-none-any.whl": {
+            "digest": "sha256:680547546aaa7af13845c7e482250816c548bf5772184155153101cb372008b5",
+            "size": 1088001
+          },
+          "deploom_core-0.1.22.tar.gz": {
+            "digest": "sha256:7b586d8e169c13bfad627b63eba7780d24118a92abc5b24cf33056f2854cf59f",
+            "size": 1158105
+          }
+        },
+        "commit": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+        "package": "deploom-core",
+        "run": "https://github.com/levencode-labs/deploom-core/actions/runs/46182573672",
+        "status": "PASS",
+        "tagObject": "42837adb7a8abee87cefd3c34d335e48fb9d6b44"
+      },
+      {
+        "assets": {
+          "RELEASE-EVIDENCE.json": {
+            "digest": "sha256:d1b2d13f367765815ecffa53d943e8d729ae0e5f400c1ba4ac49cb1580e6a22d",
+            "size": 1250
+          },
+          "SHA256SUMS.txt": {
+            "digest": "sha256:ab0762b7b78222fd557d8c0dc3862b2018606af5e4015882169aef6d80b8b145",
+            "size": 285
+          },
+          "deploom_mcp-0.2.34-py3-none-any.whl": {
+            "digest": "sha256:38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+            "size": 3187488
+          },
+          "deploom_mcp-0.2.34.tar.gz": {
+            "digest": "sha256:11aa2bc480e975ad3b4b43470b3c60b1847a297542513aed2b697affdf4f12d7",
+            "size": 3257122
+          }
+        },
+        "commit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+        "package": "deploom-mcp",
+        "run": "https://github.com/levencode-labs/deploom-mcp/actions/runs/46183472031",
+        "status": "PASS",
+        "tagObject": "110a99c5d62c048ee8fe5e9b4db5321fed270c15"
+      }
+    ],
+    "status": "PASS",
+    "testedCommit": "2e01ca687e0d09bb9dc2948026056133f1466e6a"
+  },
+  "registryAvailability": {
+    "httpStatus": 404,
+    "package": "@levencode/deploom",
+    "registry": "https://registry.npmjs.org/@levencode%2fdeploom/0.2.31",
+    "status": "AVAILABLE_AT_CHECK",
+    "version": "0.2.31"
+  },
+  "installedCorrectness": {
+    "acceptance": {
+      "R01": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "status": "PASS",
+        "tests": 17
+      },
+      "R02": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "status": "PASS",
+        "tests": 11
+      }
+    },
+    "productionModules": "installed-wheel-only",
+    "publicNetworkRequests": 0,
+    "r01Transport": "isolated-loopback-HTTP",
+    "r02Surfaces": [
+      "single",
+      "batch",
+      "plan"
+    ],
+    "runtime": {
+      "coreFilesVerified": 158,
+      "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+      "installedRecordFilesVerified": 294,
+      "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+      "mcpVersion": "0.2.34",
+      "runtimeOrigin": "installed-published-wheel",
+      "sourceImportsAllowed": false,
+      "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+      "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+      "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+    },
+    "schema": 1,
+    "testSources": [
+      {
+        "commit": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+        "path": "tests/test_online_security_evidence.py",
+        "sha256": "ec2121b677df9370fc468cf5e6f5da7a8ff85d85f07ee347ffc3b442a4130257"
+      },
+      {
+        "commit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+        "path": "tests/test_shared_knowledge_batch.py",
+        "sha256": "f40f4654cc93956b4c991ddf3d580e195103f725ed7bf363f250a994738732a5"
+      },
+      {
+        "commit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+        "path": "tests/test_shared_records_private_policy.py",
+        "sha256": "8ca60d7e2f3286d2fe3def97b3221eaa75d5df1537ea1c7c42bda8a2f7297c1d"
+      }
+    ]
+  },
+  "legacyV2": {
+    "crossDomainRejected": true,
+    "equalRevisionRejected": true,
+    "exactRecordParity": true,
+    "installedLegacyWheel": true,
+    "legacyConsumer": "0.2.33",
+    "lookupSemantics": true,
+    "records": 1530,
+    "schema": 2,
+    "stageBLookups": {
+      "exactQueries": 9,
+      "records": 5,
+      "schema": 2,
+      "unsupportedManagerQueries": 6
+    }
+  },
+  "fullParity": {
+    "equalRevisionReplacement": "REJECTED",
+    "evidenceLevels": {
+      "fixture-behavior": 206,
+      "module-load": 124,
+      "source-inspection": 70,
+      "source-pinned-metadata": 1103,
+      "typecheck": 27
+    },
+    "installedRuntime": {
+      "coreFilesVerified": 158,
+      "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+      "installedRecordFilesVerified": 294,
+      "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+      "mcpVersion": "0.2.34",
+      "runtimeOrigin": "installed-published-wheel",
+      "sourceImportsAllowed": false,
+      "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+      "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+      "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+    },
+    "legacyV2": "PASS",
+    "records": 1530,
+    "registryRequests": 0,
+    "scopedV3": "PASS",
+    "signedMissingScope": "REJECTED",
+    "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992",
+    "stageBLookups": {
+      "currentV2": {
+        "exactQueries": 9,
+        "records": 5,
+        "schema": 2,
+        "unsupportedManagerQueries": 6
+      },
+      "currentV3": {
+        "exactQueries": 9,
+        "records": 5,
+        "schema": 3,
+        "unsupportedManagerQueries": 6
+      },
+      "legacyV2": "PASS"
+    },
+    "v2LookupSemantics": "PASS"
+  },
+  "stageBQueryCount": 45,
+  "productionSignedCandidateAcceptance": false,
+  "pagesDeploymentAcceptance": false,
+  "registryInstallationAcceptance": false
+}
