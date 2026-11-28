@@ -1,0 +1,19 @@
+{
+  "fixtureSha256": "da1439f85b88a5f4523c664347c91331038baab0177be8c286e7fdbbc1307804",
+  "claims": [
+    {
+      "package": "prettier",
+      "from": "2.8.8",
+      "to": "3.0.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "zod",
+      "from": "3.25.76",
+      "to": "4.6.7",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ]
+}
