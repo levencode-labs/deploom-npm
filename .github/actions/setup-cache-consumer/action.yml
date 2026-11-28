@@ -1,5 +1,5 @@
 name: Prepare pinned public-cache consumer
-description: Use one source-exact consumer and hashed dependency lock for cache CI and publication
+description: Use one source-exact consumer and dependency lock for cache CI and publication
 runs:
   using: composite
   steps:
@@ -11,6 +11,6 @@ runs:
         persist-credentials: false
     - shell: bash
       run: |
-        python -m pip install --only-binary=:all: --require-hashes -r ci/cache-requirements.txt
+        python -m pip install --only-binary=:all: -r ci/cache-requirements.txt
     - shell: bash
       run: echo "PYTHONPATH=$GITHUB_WORKSPACE/build/consumer-v2/src:$GITHUB_WORKSPACE/cache" >> "$GITHUB_ENV"
