@@ -61,6 +61,7 @@ jobs:
         run: |
           python -m unittest discover -s cache -v
           python ci/test_knowledge_editions.py --legacy-consumer build/consumer-legacy
+          python cache/coverage_map.py --check
 
   renderer-fixture-windows:
     runs-on: windows-latest

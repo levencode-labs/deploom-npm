@@ -1,0 +1,31 @@
+{
+  "canonicalBytes": "json.dumps(sort_keys=True,separators=(comma,colon),ensure_ascii=True).encode(UTF-8); no newline",
+  "identityVersion": "recommendation-identity.v1",
+  "schema": 1,
+  "vectors": [
+    {
+      "recommendationId": "rec-34a8c5ba65ce3960e3af1b219a57c0283f161abfb4a5d7e986982a57dd42221d",
+      "recordId": "align-react-renderers"
+    },
+    {
+      "recommendationId": "rec-b7f62f19bb5f7bdc1a0407125ead56f9d3e4a1f065bc806c31fae033cd61197e",
+      "recordId": "stageb-prettier3-async-package-managers"
+    },
+    {
+      "recommendationId": "rec-24b33bc3318b8db08e4aa2cac3b464ca99f45401c8eab8e5484b665a61ed5c45",
+      "recordId": "stageb-zod4-issues-package-managers"
+    },
+    {
+      "recommendationId": "rec-a3416fd24ebace830e03c76b42b2e07a9a0e2ef28950b75998a5de43f5c20dc9",
+      "recordId": "stageb-typescript6-composite-workspace"
+    },
+    {
+      "recommendationId": "rec-e7fb24110d022a43df5e481d36e92aa1612cb133c78b369c3350da890b210086",
+      "recordId": "stageb-react-dom19-coupled-browser-transition"
+    },
+    {
+      "recommendationId": "rec-b5a9b6a58ce3afc60b65a8bc377ada2d096cbfe16448935d3b3098afc1f9f96f",
+      "recordId": "stageb-react-router7-coupled-browser-splat"
+    }
+  ]
+}

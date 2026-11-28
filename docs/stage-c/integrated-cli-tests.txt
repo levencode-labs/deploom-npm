@@ -1,0 +1,31 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @levencode/deploom@0.2.30 test
+> node --test
+
+✔ local status uses the source timestamp and exact seven-day expiry (22.637121ms)
+✔ missing, partial and same-size corrupt editions give no freshness claim (10.840465ms)
+✔ CLI checks the configured directory before setup and leaves the data home untouched (216.480402ms)
+✔ offline diagnostic forwards arguments to the installed version and preserves its error status (233.510886ms)
+✔ missing runtime returns structured local status and creates nothing (134.019378ms)
+✔ diagnostic invokes only the selected installed runtime with isolation and no writes (113.96892ms)
+✔ a common active version is selected even when the invoking CLI is newer (97.148111ms)
+✔ different active versions require an explicit profile without inspecting arbitrary config (88.79811ms)
+✔ old runtime is explicit and human output gives a concrete next step (68.530605ms)
+✔ runtime stderr and malformed output cannot leak credentials (98.79094ms)
+✔ invalid arguments never initialize a runtime (69.455671ms)
+✔ packaged release pins are passed to the installed diagnostic when available (68.03389ms)
+✔ cache-only mode keeps verified local knowledge enabled and preserves explicit host disable (1.289582ms)
+✔ an observed wheel archive digest must match the packaged expected digest (69.021532ms)
+✔ malformed packaged wheel hash is not silently treated as an absent expected pin (70.033928ms)
+✔ runtime download follows HTTPS redirects and writes exact bytes (17.907163ms)
+✔ installer without curl uses Node and checks the archive before extraction (8.014229ms)
+✔ runtime download refuses a downgrade before requesting the redirect (1.129151ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1237.274888

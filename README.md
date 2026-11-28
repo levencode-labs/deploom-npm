@@ -117,6 +117,13 @@ private key remains in the protected publisher environment, never in agents.
 
 The [v2 protocol](docs/KNOWLEDGE_CACHE_V2.md) describes the signed index, the shards, and how MCP verifies them.
 
+The generated coverage map ([English](docs/COVERAGE.md), [Русский](docs/COVERAGE.ru.md),
+[JSON](docs/coverage-map.json)) separates records, distinct recommendations, exact transitions,
+manager support and explicit evidence levels. It binds platform and browser claims to retained
+qualification receipts. Prepared, published-export and installed-local states remain separate;
+record counts do not measure compatibility of arbitrary projects. CI rejects a stale map.
+
+
 ## Public data
 
 Run `python cache/build_osv.py build/osv` with Python 3.12 or newer to create an index from the public npm ecosystem export. The output includes the compressed SQLite database and its versioned manifest. Run `python -m unittest discover -s cache` for the synthetic export test.
@@ -138,3 +145,8 @@ Semgrep scans the installer and exact Core and MCP revisions. Trivy scans the fo
 The installer and first-party data tooling use the [Apache License 2.0](LICENSE). Runtime components retain their upstream licenses. Installation and redistribution of the Windows binaries are offered subject to the [CPython Windows binary conditions](https://github.com/python/cpython/blob/3.13/PC/crtlicense.txt). Distributors and external users must agree to those terms for the Microsoft code delivered with the Python interpreter. The package contains the complete original terms in `runtime/LICENSE.txt` and `THIRD_PARTY_NOTICES/CPython/LICENSE.txt`.
 
 The two Visual C++ runtime files included with CPython are distributed unchanged as part of that interpreter. The Z3 binaries are built from the pinned Z3 source with MinGW-w64. Their source identity, compiler notices and GCC Runtime Library Exception are included under `THIRD_PARTY_NOTICES/z3-solver/`. The Windows integration includes the pywin32 components used by the MCP. The optional Pythonwin GUI and Exchange MAPI extensions are omitted.
+
+
+## Installed-state diagnostics (Stage C)
+
+Use MCP `get_installed_state` or CLI `deploom diagnose --json` with a Stage C runtime. The diagnostic reports the actual runtime and Core pin, verifies local OSV/v1/v2/v3 separately, and distinguishes a failed refresh from a still-usable verified cache. If active versions differ, select a profile with `--client codex|claude|opencode`. It does not refresh data or change the environment. [Contract and limits](docs/INSTALLED_STATE.md).

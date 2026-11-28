@@ -1,0 +1,32 @@
+{
+  "baseCommit": "b03d1549373db4fb9353bafbd66cda0f7af793ca",
+  "command": "node --test",
+  "installedWheelAcceptance": "NOT_CLAIMED_BY_THIS_REPORT",
+  "mode": "source-development-tests",
+  "publication": "NOT_PERFORMED",
+  "redControl": {
+    "command": "node --test --test-name-pattern='cache-only mode' test/diagnose-installed.test.cjs",
+    "expectedExitCode": 1,
+    "failure": "implicit DISABLE_EXTERNAL_EVIDENCE='1' suppressed verified local knowledge",
+    "observedExitCode": 1,
+    "sourceCommit": "e23eed1",
+    "stdout": "docs/stage-c/cache-only-before-fix.txt",
+    "stdoutSha256": "1d699302f01c87d3d9f3314958c348c921c3d24ef7ac5d0c6971b0a55b0495e1"
+  },
+  "result": "PASS",
+  "reviewFixes": [
+    "bind refresh history to exact cache-root pair",
+    "reject mutable SQLite WAL/rollback-journal snapshots without sidecar writes",
+    "reject installed distribution fallback to external Core checkout",
+    "distinguish Core headless package version from product VERSION",
+    "cache-only blocks outbound evidence but preserves verified local knowledge; explicit host disable is retained",
+    "distinguish sanitized installer origin from remote publication; compare observed and packaged archive digest when both exist",
+    "reject malformed packaged wheel hash instead of treating it as an absent expected pin"
+  ],
+  "runtime": "Node v24.22.3",
+  "schemaVersion": 1,
+  "stage": "C3",
+  "stdout": "docs/stage-c/diagnostics-node.txt",
+  "stdoutSha256": "a0ac0eb2df2b8bc3f6273f3643097ea1964fbd1d383edbe8c9506d1369cb8193",
+  "tests": 18
+}

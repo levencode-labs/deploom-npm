@@ -1,0 +1,30 @@
+✖ cache-only mode keeps verified local knowledge enabled and preserves explicit host disable (2.275284ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.067246
+
+✖ failing tests:
+
+test at work-c3-npm/test/diagnose-installed.test.cjs:175:1
+✖ cache-only mode keeps verified local knowledge enabled and preserves explicit host disable (2.275284ms)
+  AssertionError [ERR_ASSERTION]: cache-only must block network without also disabling verified cached knowledge
+  
+  '1' !== undefined
+  
+      at TestContext.<anonymous> (/workspace/scratch/c1f6dbcb3b53/work-c3-npm/test/diagnose-installed.test.cjs:181:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '1',
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
