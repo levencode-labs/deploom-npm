@@ -1,0 +1,363 @@
+{
+  "schema": 1,
+  "status": "PASS_PRODUCTION_SIGNED_PUBLIC_DATA",
+  "releaseSource": "a000d33d72aa47fd734cc627a30bbf5c76d7a37d",
+  "releaseTree": "bc7a3054d28885581edb4281b21680c1aeeb47d6",
+  "stageCMerge": "19f9457a41d45cefe8f0ebd19dec41d48a1a1394",
+  "ci": [
+    {
+      "id": 46188817728,
+      "name": "Verify published cache",
+      "event": "workflow_run",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46188817728"
+    },
+    {
+      "id": 46188130760,
+      "name": "Verify published cache",
+      "event": "workflow_run",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46188130760"
+    },
+    {
+      "id": 46187471732,
+      "name": "Deploy public cache to Pages",
+      "event": "workflow_run",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187471732"
+    },
+    {
+      "id": 46187424607,
+      "name": "Build public OSV release",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187424607"
+    },
+    {
+      "id": 46187424570,
+      "name": "Scan release sources",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187424570"
+    },
+    {
+      "id": 46187424550,
+      "name": "Public data checks",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187424550"
+    },
+    {
+      "id": 46187424564,
+      "name": "Test native Linux and macOS npm archives",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187424564"
+    },
+    {
+      "id": 46187424556,
+      "name": "Deploy public cache to Pages",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187424556"
+    },
+    {
+      "id": 46187424562,
+      "name": "Test the Windows npm archive",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187424562"
+    }
+  ],
+  "signedCandidate": {
+    "evidenceLevels": {
+      "fixture-behavior": 206,
+      "module-load": 124,
+      "source-inspection": 70,
+      "source-pinned-metadata": 1103,
+      "typecheck": 27
+    },
+    "knowledge": {
+      "v2": {
+        "indexSha256": "a8818022061cc5237108bca635250d40842f0949bf4501d70fa1256ba5b9b885",
+        "records": 1530,
+        "revision": 63,
+        "signatureVerified": true,
+        "sourceSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8",
+        "stageBLookups": {
+          "exactQueries": 9,
+          "records": 5,
+          "schema": 2,
+          "unsupportedManagerQueries": 6
+        },
+        "tamperRejected": true,
+        "wrongDomainRejected": true
+      },
+      "v3": {
+        "indexSha256": "039c6bf634f7930fe172f85883447a699a23c62ed9ce914456945e6fbb5cf6a9",
+        "records": 1530,
+        "revision": 63,
+        "signatureVerified": true,
+        "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992",
+        "stageBLookups": {
+          "exactQueries": 9,
+          "records": 5,
+          "schema": 3,
+          "unsupportedManagerQueries": 6
+        },
+        "tamperRejected": true,
+        "wrongDomainRejected": true
+      }
+    },
+    "legacyV2": {
+      "crossDomainRejected": true,
+      "equalRevisionRejected": "covered-by-separate-full-parity",
+      "exactRecordParity": true,
+      "installedLegacyWheel": true,
+      "legacyConsumer": "0.2.33",
+      "lookupSemantics": true,
+      "records": 1530,
+      "schema": 2,
+      "stageBLookups": {
+        "exactQueries": 9,
+        "records": 5,
+        "schema": 2,
+        "unsupportedManagerQueries": 6
+      }
+    },
+    "publicNetworkRequests": 0,
+    "runtime": {
+      "coreFilesVerified": 158,
+      "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+      "installedRecordFilesVerified": 294,
+      "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+      "mcpVersion": "0.2.34",
+      "runtimeOrigin": "installed-published-wheel",
+      "sourceImportsAllowed": false,
+      "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+      "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+      "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+    },
+    "schema": 1,
+    "state": "SIGNED_CANDIDATE_NOT_YET_DEPLOYED",
+    "v1": {
+      "revision": 63,
+      "signatureVerified": true
+    }
+  },
+  "postDeploymentReadback": {
+    "aggregateRefresh": {
+      "ok": true,
+      "schemaVersion": 1,
+      "sources": {
+        "knowledgeV1": {
+          "status": "READY"
+        },
+        "knowledgeV2": {
+          "status": "READY"
+        },
+        "knowledgeV3": {
+          "status": "READY"
+        },
+        "osv": {
+          "edition": "osv-1795894424-98f352db91dff780",
+          "status": "READY"
+        }
+      },
+      "status": "READY"
+    },
+    "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+    "expiredSnapshot": {
+      "reason": "SNAPSHOT_STALE",
+      "status": "UNKNOWN"
+    },
+    "installedRuntime": {
+      "coreFilesVerified": 158,
+      "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+      "installedRecordFilesVerified": 294,
+      "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+      "mcpVersion": "0.2.34",
+      "runtimeOrigin": "installed-published-wheel",
+      "sourceImportsAllowed": false,
+      "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+      "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+      "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+    },
+    "knowledge": {
+      "evidenceLevels": {
+        "fixture-behavior": 206,
+        "module-load": 124,
+        "source-inspection": 70,
+        "source-pinned-metadata": 1103,
+        "typecheck": 27
+      },
+      "reviewedRecordParity": true,
+      "v1": {
+        "revision": 63,
+        "signatureVerified": true
+      },
+      "v2": {
+        "records": 1530,
+        "revision": 63,
+        "signatureVerified": true,
+        "sourceSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8"
+      },
+      "v3": {
+        "records": 1530,
+        "revision": 63,
+        "signatureVerified": true,
+        "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992"
+      }
+    },
+    "mcpVersion": "0.2.34",
+    "osv": {
+      "expires": 1796499224,
+      "manifestAndDatabaseVerified": true,
+      "published": 1795894424,
+      "sha256": "98f352db91dff7803ff4545acc2757fe5dec8cdf2bba463d0e30f787ea36f466",
+      "tag": "osv-1795894424-98f352db91dff780"
+    }
+  },
+  "independentScheduledWorkflowReadback": {
+    "aggregateRefresh": {
+      "ok": true,
+      "schemaVersion": 1,
+      "sources": {
+        "knowledgeV1": {
+          "status": "READY"
+        },
+        "knowledgeV2": {
+          "status": "READY"
+        },
+        "knowledgeV3": {
+          "status": "READY"
+        },
+        "osv": {
+          "edition": "osv-1795894424-98f352db91dff780",
+          "status": "READY"
+        }
+      },
+      "status": "READY"
+    },
+    "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+    "expiredSnapshot": {
+      "reason": "SNAPSHOT_STALE",
+      "status": "UNKNOWN"
+    },
+    "installedRuntime": {
+      "coreFilesVerified": 158,
+      "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+      "installedRecordFilesVerified": 294,
+      "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+      "mcpVersion": "0.2.34",
+      "runtimeOrigin": "installed-published-wheel",
+      "sourceImportsAllowed": false,
+      "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+      "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+      "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+    },
+    "knowledge": {
+      "evidenceLevels": {
+        "fixture-behavior": 206,
+        "module-load": 124,
+        "source-inspection": 70,
+        "source-pinned-metadata": 1103,
+        "typecheck": 27
+      },
+      "reviewedRecordParity": true,
+      "v1": {
+        "revision": 63,
+        "signatureVerified": true
+      },
+      "v2": {
+        "records": 1530,
+        "revision": 63,
+        "signatureVerified": true,
+        "sourceSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8"
+      },
+      "v3": {
+        "records": 1530,
+        "revision": 63,
+        "signatureVerified": true,
+        "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992"
+      }
+    },
+    "mcpVersion": "0.2.34",
+    "osv": {
+      "expires": 1796499224,
+      "manifestAndDatabaseVerified": true,
+      "published": 1795894424,
+      "sha256": "98f352db91dff7803ff4545acc2757fe5dec8cdf2bba463d0e30f787ea36f466",
+      "tag": "osv-1795894424-98f352db91dff780"
+    }
+  },
+  "artifacts": [
+    {
+      "run": 46187471732,
+      "id": 15280872255,
+      "name": "installed-public-data-verification",
+      "bytes": 1051,
+      "digest": "sha256:c3b03b21c7b04f6690fe1a4029fb7a41c1cebd1804c443e961345c14cdf146a6",
+      "expired": false,
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187471732/artifacts/15280872255"
+    },
+    {
+      "run": 46187471732,
+      "id": 15280781198,
+      "name": "signed-candidate",
+      "bytes": 1067886,
+      "digest": "sha256:e4fb8a101d003390278e31755588057b5ad6d7c165bdf121681b94d0770a280c",
+      "expired": false,
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187471732/artifacts/15280781198"
+    },
+    {
+      "run": 46187471732,
+      "id": 15280591763,
+      "name": "installed-candidate-acceptance",
+      "bytes": 2988,
+      "digest": "sha256:12dbbd527634212b610eac4978c79c0b1224742323dcd93b9043c357c7393898",
+      "expired": false,
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187471732/artifacts/15280591763"
+    },
+    {
+      "run": 46187471732,
+      "id": 15280343700,
+      "name": "validated-site",
+      "bytes": 1067331,
+      "digest": "sha256:f837577ebf43eca2871bd1fd0530d9f4152ee6a541725cb72c013b30c04a8468",
+      "expired": false,
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187471732/artifacts/15280343700"
+    },
+    {
+      "run": 46187471732,
+      "id": 15280262541,
+      "name": "github-pages",
+      "bytes": 547740,
+      "digest": "sha256:8ac4420220173ffab93f666d43def7a6d3129f07d31a35588f045d433c39cabc",
+      "expired": false,
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46187471732/artifacts/15280262541"
+    },
+    {
+      "run": 46188817728,
+      "id": 15281141358,
+      "name": "scheduled-public-data-verification",
+      "bytes": 1051,
+      "digest": "sha256:53cb8fbb941c28a6bd2055fbbce254e0d9c27bb251987880d23fc09e22efe8a9",
+      "expired": false,
+      "url": "https://github.com/levencode-labs/deploom-npm/actions/runs/46188817728/artifacts/15281141358"
+    }
+  ],
+  "receiptOrigin": "Actual structured JSON extracted from completed hosted CI stdout, artifact digests from GitHub API. No independent ZIP download/rehash claimed in this session.",
+  "npmRegistryPublicationAcceptance": false,
+  "npmOrdinaryInstallAcceptance": false,
+  "npmTagTarget": "a000d33d72aa47fd734cc627a30bbf5c76d7a37d"
+}

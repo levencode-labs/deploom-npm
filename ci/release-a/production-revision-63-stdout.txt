@@ -1,0 +1,147 @@
+2026-11-28T20:52:55.3733336Z {"evidenceLevels": {"fixture-behavior": 206, "module-load": 124, "source-inspection": 70, "source-pinned-metadata": 1103, "typecheck": 27}, "knowledge": {"v2": {"indexSha256": "a8818022061cc5237108bca635250d40842f0949bf4501d70fa1256ba5b9b885", "records": 1530, "revision": 63, "signatureVerified": true, "sourceSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8", "stageBLookups": {"exactQueries": 9, "records": 5, "schema": 2, "unsupportedManagerQueries": 6}, "tamperRejected": true, "wrongDomainRejected": true}, "v3": {"indexSha256": "039c6bf634f7930fe172f85883447a699a23c62ed9ce914456945e6fbb5cf6a9", "records": 1530, "revision": 63, "signatureVerified": true, "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992", "stageBLookups": {"exactQueries": 9, "records": 5, "schema": 3, "unsupportedManagerQueries": 6}, "tamperRejected": true, "wrongDomainRejected": true}}, "legacyV2": {"crossDomainRejected": true, "equalRevisionRejected": "covered-by-separate-full-parity", "exactRecordParity": true, "installedLegacyWheel": true, "legacyConsumer": "0.2.33", "lookupSemantics": true, "records": 1530, "schema": 2, "stageBLookups": {"exactQueries": 9, "records": 5, "schema": 2, "unsupportedManagerQueries": 6}}, "publicNetworkRequests": 0, "runtime": {"coreFilesVerified": 158, "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9", "installedRecordFilesVerified": 294, "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337", "mcpVersion": "0.2.34", "runtimeOrigin": "installed-published-wheel", "sourceImportsAllowed": false, "status": "EXACT_PUBLISHED_WHEEL_INSTALLED", "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad", "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"}, "schema": 1, "state": "SIGNED_CANDIDATE_NOT_YET_DEPLOYED", "v1": {"revision": 63, "signatureVerified": true}}
+2026-11-28T20:54:20.6751234Z {
+2026-11-28T20:54:20.6751823Z   "aggregateRefresh": {
+2026-11-28T20:54:20.6752123Z     "ok": true,
+2026-11-28T20:54:20.6752393Z     "schemaVersion": 1,
+2026-11-28T20:54:20.6752644Z     "sources": {
+2026-11-28T20:54:20.6752876Z       "knowledgeV1": {
+2026-11-28T20:54:20.6753130Z         "status": "READY"
+2026-11-28T20:54:20.6753372Z       },
+2026-11-28T20:54:20.6753579Z       "knowledgeV2": {
+2026-11-28T20:54:20.6753808Z         "status": "READY"
+2026-11-28T20:54:20.6754036Z       },
+2026-11-28T20:54:20.6754243Z       "knowledgeV3": {
+2026-11-28T20:54:20.6754465Z         "status": "READY"
+2026-11-28T20:54:20.6754712Z       },
+2026-11-28T20:54:20.6754910Z       "osv": {
+2026-11-28T20:54:20.6755180Z         "edition": "osv-1795894424-98f352db91dff780",
+2026-11-28T20:54:20.6755512Z         "status": "READY"
+2026-11-28T20:54:20.6755762Z       }
+2026-11-28T20:54:20.6755959Z     },
+2026-11-28T20:54:20.6756176Z     "status": "READY"
+2026-11-28T20:54:20.6756394Z   },
+2026-11-28T20:54:20.6756672Z   "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+2026-11-28T20:54:20.6757052Z   "expiredSnapshot": {
+2026-11-28T20:54:20.6757320Z     "reason": "SNAPSHOT_STALE",
+2026-11-28T20:54:20.6757593Z     "status": "UNKNOWN"
+2026-11-28T20:54:20.6757819Z   },
+2026-11-28T20:54:20.6758017Z   "installedRuntime": {
+2026-11-28T20:54:20.6758265Z     "coreFilesVerified": 158,
+2026-11-28T20:54:20.6758606Z     "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+2026-11-28T20:54:20.6758994Z     "installedRecordFilesVerified": 294,
+2026-11-28T20:54:20.6759357Z     "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+2026-11-28T20:54:20.6759697Z     "mcpVersion": "0.2.34",
+2026-11-28T20:54:20.6759996Z     "runtimeOrigin": "installed-published-wheel",
+2026-11-28T20:54:20.6760479Z     "sourceImportsAllowed": false,
+2026-11-28T20:54:20.6760818Z     "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+2026-11-28T20:54:20.6761311Z     "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+2026-11-28T20:54:20.6762196Z     "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+2026-11-28T20:54:20.6763057Z   },
+2026-11-28T20:54:20.6763250Z   "knowledge": {
+2026-11-28T20:54:20.6763473Z     "evidenceLevels": {
+2026-11-28T20:54:20.6763719Z       "fixture-behavior": 206,
+2026-11-28T20:54:20.6763980Z       "module-load": 124,
+2026-11-28T20:54:20.6764240Z       "source-inspection": 70,
+2026-11-28T20:54:20.6764517Z       "source-pinned-metadata": 1103,
+2026-11-28T20:54:20.6764817Z       "typecheck": 27
+2026-11-28T20:54:20.6765036Z     },
+2026-11-28T20:54:20.6765252Z     "reviewedRecordParity": true,
+2026-11-28T20:54:20.6765520Z     "v1": {
+2026-11-28T20:54:20.6765722Z       "revision": 63,
+2026-11-28T20:54:20.6765955Z       "signatureVerified": true
+2026-11-28T20:54:20.6766273Z     },
+2026-11-28T20:54:20.6766661Z     "v2": {
+2026-11-28T20:54:20.6766859Z       "records": 1530,
+2026-11-28T20:54:20.6767082Z       "revision": 63,
+2026-11-28T20:54:20.6767316Z       "signatureVerified": true,
+2026-11-28T20:54:20.6788704Z       "sourceSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8"
+2026-11-28T20:54:20.6789264Z     },
+2026-11-28T20:54:20.6789491Z     "v3": {
+2026-11-28T20:54:20.6789715Z       "records": 1530,
+2026-11-28T20:54:20.6789967Z       "revision": 63,
+2026-11-28T20:54:20.6790382Z       "signatureVerified": true,
+2026-11-28T20:54:20.6790850Z       "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992"
+2026-11-28T20:54:20.6791321Z     }
+2026-11-28T20:54:20.6791519Z   },
+2026-11-28T20:54:20.6791731Z   "mcpVersion": "0.2.34",
+2026-11-28T20:54:20.6791966Z   "osv": {
+2026-11-28T20:54:20.6792172Z     "expires": 1796499224,
+2026-11-28T20:54:20.6792447Z     "manifestAndDatabaseVerified": true,
+2026-11-28T20:54:20.6792781Z     "published": 1795894424,
+2026-11-28T20:54:20.6793191Z     "sha256": "98f352db91dff7803ff4545acc2757fe5dec8cdf2bba463d0e30f787ea36f466",
+2026-11-28T20:54:20.6793653Z     "tag": "osv-1795894424-98f352db91dff780"
+2026-11-28T20:54:20.6793941Z   }
+2026-11-28T20:54:20.6794135Z }
+2026-11-28T20:55:41.4754884Z {
+2026-11-28T20:55:41.4757013Z   "aggregateRefresh": {
+2026-11-28T20:55:41.4757354Z     "ok": true,
+2026-11-28T20:55:41.4757654Z     "schemaVersion": 1,
+2026-11-28T20:55:41.4757922Z     "sources": {
+2026-11-28T20:55:41.4758173Z       "knowledgeV1": {
+2026-11-28T20:55:41.4758369Z         "status": "READY"
+2026-11-28T20:55:41.4758565Z       },
+2026-11-28T20:55:41.4758733Z       "knowledgeV2": {
+2026-11-28T20:55:41.4758916Z         "status": "READY"
+2026-11-28T20:55:41.4759098Z       },
+2026-11-28T20:55:41.4759416Z       "knowledgeV3": {
+2026-11-28T20:55:41.4759638Z         "status": "READY"
+2026-11-28T20:55:41.4759814Z       },
+2026-11-28T20:55:41.4759964Z       "osv": {
+2026-11-28T20:55:41.4760165Z         "edition": "osv-1795894424-98f352db91dff780",
+2026-11-28T20:55:41.4760412Z         "status": "READY"
+2026-11-28T20:55:41.4760587Z       }
+2026-11-28T20:55:41.4760741Z     },
+2026-11-28T20:55:41.4760907Z     "status": "READY"
+2026-11-28T20:55:41.4761086Z   },
+2026-11-28T20:55:41.4761294Z   "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+2026-11-28T20:55:41.4761568Z   "expiredSnapshot": {
+2026-11-28T20:55:41.4761936Z     "reason": "SNAPSHOT_STALE",
+2026-11-28T20:55:41.4762139Z     "status": "UNKNOWN"
+2026-11-28T20:55:41.4762315Z   },
+2026-11-28T20:55:41.4762477Z   "installedRuntime": {
+2026-11-28T20:55:41.4762683Z     "coreFilesVerified": 158,
+2026-11-28T20:55:41.4762944Z     "coreRevision": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+2026-11-28T20:55:41.4763230Z     "installedRecordFilesVerified": 294,
+2026-11-28T20:55:41.4763501Z     "mcpCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+2026-11-28T20:55:41.4763763Z     "mcpVersion": "0.2.34",
+2026-11-28T20:55:41.4763997Z     "runtimeOrigin": "installed-published-wheel",
+2026-11-28T20:55:41.4764260Z     "sourceImportsAllowed": false,
+2026-11-28T20:55:41.4764505Z     "status": "EXACT_PUBLISHED_WHEEL_INSTALLED",
+2026-11-28T20:55:41.4764876Z     "wheelSha256": "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad",
+2026-11-28T20:55:41.4765466Z     "wheelUrl": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.34/deploom_mcp-0.2.34-py3-none-any.whl"
+2026-11-28T20:55:41.4766216Z   },
+2026-11-28T20:55:41.4766376Z   "knowledge": {
+2026-11-28T20:55:41.4766551Z     "evidenceLevels": {
+2026-11-28T20:55:41.4766745Z       "fixture-behavior": 206,
+2026-11-28T20:55:41.4766952Z       "module-load": 124,
+2026-11-28T20:55:41.4767147Z       "source-inspection": 70,
+2026-11-28T20:55:41.4767354Z       "source-pinned-metadata": 1103,
+2026-11-28T20:55:41.4767569Z       "typecheck": 27
+2026-11-28T20:55:41.4767741Z     },
+2026-11-28T20:55:41.4767909Z     "reviewedRecordParity": true,
+2026-11-28T20:55:41.4768107Z     "v1": {
+2026-11-28T20:55:41.4768271Z       "revision": 63,
+2026-11-28T20:55:41.4768449Z       "signatureVerified": true
+2026-11-28T20:55:41.4768638Z     },
+2026-11-28T20:55:41.4768785Z     "v2": {
+2026-11-28T20:55:41.4768942Z       "records": 1530,
+2026-11-28T20:55:41.4769465Z       "revision": 63,
+2026-11-28T20:55:41.4769779Z       "signatureVerified": true,
+2026-11-28T20:55:41.4770380Z       "sourceSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8"
+2026-11-28T20:55:41.4770991Z     },
+2026-11-28T20:55:41.4771234Z     "v3": {
+2026-11-28T20:55:41.4771475Z       "records": 1530,
+2026-11-28T20:55:41.4771666Z       "revision": 63,
+2026-11-28T20:55:41.4771858Z       "signatureVerified": true,
+2026-11-28T20:55:41.4772181Z       "sourceSha256": "1ce0090f5c0479389be7cc9efb4eaa59a0e5ea3cfe3001fcb9b7a40d479c8992"
+2026-11-28T20:55:41.4772560Z     }
+2026-11-28T20:55:41.4772778Z   },
+2026-11-28T20:55:41.4773037Z   "mcpVersion": "0.2.34",
+2026-11-28T20:55:41.4773353Z   "osv": {
+2026-11-28T20:55:41.4773625Z     "expires": 1796499224,
+2026-11-28T20:55:41.4773979Z     "manifestAndDatabaseVerified": true,
+2026-11-28T20:55:41.4774343Z     "published": 1795894424,
+2026-11-28T20:55:41.4774660Z     "sha256": "98f352db91dff7803ff4545acc2757fe5dec8cdf2bba463d0e30f787ea36f466",
+2026-11-28T20:55:41.4775005Z     "tag": "osv-1795894424-98f352db91dff780"
+2026-11-28T20:55:41.4775218Z   }
+2026-11-28T20:55:41.4775471Z }
