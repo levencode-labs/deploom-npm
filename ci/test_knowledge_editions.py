@@ -13,6 +13,7 @@ import os
 import subprocess
 import tempfile
 from collections import Counter
+from functools import partial
 from pathlib import Path
 from unittest.mock import patch
 
@@ -23,7 +24,7 @@ from deploom_mcp import shared_records_v2, shared_records_v3
 from evidence_scopes import annotate_corpus, canonical
 from shards_v2 import write_shards
 from shards_v3 import write_editions
-from check_legacy_knowledge import check_v2_queries
+from check_legacy_knowledge import check_stage_b_queries, check_v2_queries
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -97,7 +98,7 @@ def main():
         original_pin = shared_records_v2.public_key_file
         shared_records_v2.public_key_file = pin
         try:
-            check_v2_queries(site / "v2", scratch / "current-v2-only-client", intermediate=True)
+            current_v2_stage_b = check_v2_queries(site / "v2", scratch / "current-v2-only-client", intermediate=True)
             current = site / "v3"
             def read(path, limit):
                 raw = (current / path).read_bytes()
@@ -120,6 +121,7 @@ def main():
                 assert hit["snapshotSchema"] == 3 and hit["status"] == "found", hit
                 assert any(row["id"] == expected_id and row["evidenceScope"]["level"] == level
                            for row in hit["knowledge"]), hit
+            current_v3_stage_b = check_stage_b_queries(partial(shared_records_v3.lookup, cache), 3)
 
             # A valid v3 signature still cannot authorize unscoped legacy rows.
             damaged = copy.deepcopy(enriched)
@@ -153,6 +155,8 @@ def main():
         row["evidenceScope"]["level"] for row in enriched)), "sourceSha256": result["v3"]["sourceSha256"],
         "legacyV2": "PASS", "scopedV3": "PASS", "signedMissingScope": "REJECTED",
         "v2LookupSemantics": "PASS", "equalRevisionReplacement": "REJECTED",
+        "stageBLookups": {"legacyV2": "PASS", "currentV2": current_v2_stage_b,
+                          "currentV3": current_v3_stage_b},
         "registryRequests": 0}, sort_keys=True))
 
 

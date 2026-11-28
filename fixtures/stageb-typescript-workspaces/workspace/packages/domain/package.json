@@ -1,0 +1,15 @@
+{
+  "name": "@deploom-stageb/domain",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "dependencies": { "@deploom-stageb/contracts": "1.0.0" }
+}

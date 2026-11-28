@@ -3,9 +3,54 @@ import argparse
 import hashlib
 import json
 import tempfile
+from functools import partial
 from pathlib import Path
 
 from deploom_mcp import __version__, shared_records, shared_records_v2
+
+
+def check_stage_b_queries(lookup, schema):
+    """Find the new advisory cards through a refreshed edition's real reader."""
+    assert schema in (2, 3), schema
+    cases = (
+        ("prettier", "2.8.8", "3.0.0", "stageb-prettier3-async-package-managers", ("npm", "yarn", "pnpm")),
+        ("zod", "3.25.76", "4.6.7", "stageb-zod4-issues-package-managers", ("npm", "yarn", "pnpm")),
+        ("typescript", "5.9.2", "6.0.3", "stageb-typescript6-composite-workspace", ("npm",)),
+        ("react-dom", "18.3.1", "19.3.0", "stageb-react-dom19-coupled-browser-transition", ("npm",)),
+        ("react-router-dom", "6.30.3", "7.18.4", "stageb-react-router7-coupled-browser-splat", ("npm",)),
+    )
+    exact_queries = unsupported_queries = 0
+    for package, before, after, identity, supported in cases:
+        for manager in ("npm", "yarn", "pnpm"):
+            query = (schema, package, before, after, manager, identity)
+            hit = lookup(package, before, after, manager=manager)
+            assert hit is not None and hit["ok"] is True, (query, hit)
+            assert hit["snapshotSource"] == "verified-pages" and hit["snapshotSchema"] == schema, (query, hit)
+            assert hit["authority"] == "ADVISORY_ONLY" and hit["recipes"] == [], (query, hit)
+            selected = [row for row in hit["knowledge"] if row["id"] == identity]
+            if manager not in supported:
+                # Other admitted cards may legitimately match this query.
+                assert hit["status"] in {"found", "no-matching-record"}, (query, hit)
+                assert not selected, (query, selected)
+                unsupported_queries += 1
+                continue
+            assert hit["status"] == "found" and len(selected) == 1, (query, hit)
+            card = selected[0]
+            assert card["package"] == package and card["matchStrength"] == "verified-exact-transition", (query, card)
+            assert card["authority"] == "ADVISORY_ONLY" and card["requiresProjectVerification"] is True, (query, card)
+            # The released reader predates testedTransition; its evidence claim
+            # still carries the exact tested endpoints without executable recipes.
+            claim = card["evidence"]["claim"]
+            assert (claim["package"], claim["from"], claim["to"]) == (package, before, after), (query, claim)
+            if schema == 3:
+                scope = card["evidenceScope"]
+                assert scope["level"] == "fixture-behavior", (query, scope)
+                assert (scope["archiveStatus"], scope["projectStatus"]) == ("UNKNOWN", "UNKNOWN"), (query, scope)
+                assert scope["conditionsRequired"] is True, (query, scope)
+            exact_queries += 1
+    assert (exact_queries, unsupported_queries) == (9, 6)
+    return {"schema": schema, "records": len(cases), "exactQueries": exact_queries,
+            "unsupportedManagerQueries": unsupported_queries}
 
 
 def check_v2_queries(site, cache, *, intermediate=False):
@@ -47,6 +92,7 @@ def check_v2_queries(site, cache, *, intermediate=False):
         outside = shared_records.lookup(cache, "react-dom", "17.0.0", "18.3.0")
     assert all(row["id"] != "align-react-renderers" for row in outside["knowledge"]), outside
     assert len(requests) == 2 + sum(map(len, index["buckets"].values()))
+    stage_b = check_stage_b_queries(partial(shared_records_v2.lookup, cache), 2)
     # Both files are produced with the same test key by the real v2 signer.
     resources[shared_records_v2.BASE + "index.json"] = (site / "equal-revision.json").read_bytes()
     resources[shared_records_v2.BASE + "index.sig"] = (site / "equal-revision.sig").read_bytes()
@@ -55,6 +101,7 @@ def check_v2_queries(site, cache, *, intermediate=False):
     assert replacement["revision"] == index["revision"] and replacement != index
     assert not shared_records_v2.refresh(cache, fetch=fetch)
     assert shared_records.lookup(cache, "react-dom", "18.2.0", "18.3.1")["status"] == "found"
+    return stage_b
 
 
 def main():
@@ -76,7 +123,7 @@ def main():
     assert sorted(actual, key=lambda row: row["id"]) == sorted(expected, key=lambda row: row["id"])
     assert not any("evidenceScope" in row for row in actual)
     with tempfile.TemporaryDirectory() as cache:
-        check_v2_queries(site, Path(cache))
+        stage_b = check_v2_queries(site, Path(cache))
     try:
         shared_records_v2.verified_index((args.site / "v3/index.json").read_bytes(),
                                          (args.site / "v3/index.sig").read_bytes())
@@ -86,7 +133,8 @@ def main():
         raise AssertionError("Legacy v2 reader accepted a v3 signature domain")
     print(json.dumps({"legacyConsumer": __version__, "schema": 2, "records": len(actual),
                       "exactRecordParity": True, "crossDomainRejected": True,
-                      "lookupSemantics": True, "equalRevisionRejected": True}, sort_keys=True))
+                      "lookupSemantics": True, "equalRevisionRejected": True,
+                      "stageBLookups": stage_b}, sort_keys=True))
 
 
 if __name__ == "__main__":

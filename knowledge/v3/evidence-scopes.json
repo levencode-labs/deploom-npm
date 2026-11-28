@@ -19729,6 +19729,384 @@
           }
         }
       ]
+    },
+    {
+      "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-package-managers/check.cjs",
+      "fixtureSha256": "da1439f85b88a5f4523c664347c91331038baab0177be8c286e7fdbbc1307804",
+      "inputRoots": [
+        "fixtures/stageb-package-managers"
+      ],
+      "inputs": [
+        {
+          "path": "fixtures/stageb-package-managers/.gitignore",
+          "bytes": 128,
+          "sha256": "fb5488a7a4c42eae7fdc63417c1882e36f48a17b7bf74937c20e6c5b4d8d7b2e"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/README.md",
+          "bytes": 4802,
+          "sha256": "c37bc0c6e4fce637babaac53056e544ec0d9a956ffcab2a6ac4dc34902325e5c"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/npm-after/package-lock.json",
+          "bytes": 1137,
+          "sha256": "fbcc700bf22366d025cfe5643f4c5a60ade948380953757f41f91be4283ebf2f"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/npm-after/package.json",
+          "bytes": 186,
+          "sha256": "26be0f7a18f47bff1c409035ef4c634332311b181eefbbe986f218ff0f1dc76c"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/npm-before/package-lock.json",
+          "bytes": 1149,
+          "sha256": "4f4e2203677cccf8472d657fff6edb8cb3a56d5e9d4b67d142edbbf50b1b5de8"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/npm-before/package.json",
+          "bytes": 189,
+          "sha256": "b1b75a6111776b53193b9aa45f3a5fc171fc58c9b33d238e01fd5e098aae3b43"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/pnpm-after/.npmrc",
+          "bytes": 169,
+          "sha256": "bb1f2514b35c58142892848bc25e4b925b456ce8f82248c7c2cffa05ae0a5e10"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/pnpm-after/package.json",
+          "bytes": 188,
+          "sha256": "611a86f888089f9429427f86d62b385d2b09fa33787b60408a4357eaa4fc8475"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/pnpm-after/pnpm-lock.yaml",
+          "bytes": 642,
+          "sha256": "1a93cc22889c63e1278177c8db887779559cf4cfcc32800a444902686e656a0c"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/pnpm-before/.npmrc",
+          "bytes": 169,
+          "sha256": "bb1f2514b35c58142892848bc25e4b925b456ce8f82248c7c2cffa05ae0a5e10"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/pnpm-before/package.json",
+          "bytes": 191,
+          "sha256": "25c07989f32533712b21b1560da82f7aed159e3bd2b1f4051852e9621d913beb"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/pnpm-before/pnpm-lock.yaml",
+          "bytes": 655,
+          "sha256": "5c5b84f66c30ebf1f97281625f5484ae8a49e4d234eda2f3304b12196294e2a8"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/yarn-after/.yarnrc.yml",
+          "bytes": 177,
+          "sha256": "60b1a349f10a9ad14d4630ba45463687501314c169572e7ada99890a69aef7a9"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/yarn-after/package.json",
+          "bytes": 187,
+          "sha256": "205979f7d229605862c233a9a5a1d7b2f07950c2017a2ec4d77d801d0a805895"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/yarn-after/yarn.lock",
+          "bytes": 943,
+          "sha256": "fc1ca5e26272ad4eb4b0119830d806df7265c34f31642f19ee7fa9dac1d8b65d"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/yarn-before/.yarnrc.yml",
+          "bytes": 177,
+          "sha256": "60b1a349f10a9ad14d4630ba45463687501314c169572e7ada99890a69aef7a9"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/yarn-before/package.json",
+          "bytes": 190,
+          "sha256": "30e402ff46e641185f46457f538b10ecdf2a6fc63619941b21b92e9942129232"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/arms/yarn-before/yarn.lock",
+          "bytes": 952,
+          "sha256": "6b1b061476cb34988a9644f4c7f2374c2dcca4c2f069a379cf011bb60fe9c255"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/check.cjs",
+          "bytes": 7836,
+          "sha256": "da1439f85b88a5f4523c664347c91331038baab0177be8c286e7fdbbc1307804"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/evidence.json",
+          "bytes": 375,
+          "sha256": "303d10e3a6c49d07c5935c2e491e2efde16d149057bd02121c5a14fa5edbf9b2"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/install.cjs",
+          "bytes": 2459,
+          "sha256": "574721268f908e8b2fdf850954171d07163e10fab527ed0b433b6e5ebb593519"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/reports/local-linux-npm.json",
+          "bytes": 7416,
+          "sha256": "9809ceb2e93d8da57e03dfa2e9cc0b73706c0edc267ad3e20a1ad7ecc51403bb"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/reports/local-linux-pnpm.json",
+          "bytes": 7575,
+          "sha256": "5df3e41a3fc71f17ac42a76d01f2175059f8b92621bf5e5cd9ac7d4184bff653"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/reports/local-linux-yarn.json",
+          "bytes": 7610,
+          "sha256": "a545bc21668c3aa81f380a694a782fb4c4fa4def34f2bf550ef3c0c42263669d"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/runner.cjs",
+          "bytes": 5305,
+          "sha256": "c3686e5d5cdb1ee15336e8a4ad7eda0b670206778d88b93fa320dace0862cb1d"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/spec.json",
+          "bytes": 570,
+          "sha256": "9e00bf06cca4be0a79b4598644d064b48f434a0c82e04caad5a0956f592de842"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/tools/package-lock.json",
+          "bytes": 47287,
+          "sha256": "1fc22a58a5c2349d89398601b849b28cb710262c8931537a31462c7bfc1cada4"
+        },
+        {
+          "path": "fixtures/stageb-package-managers/tools/package.json",
+          "bytes": 233,
+          "sha256": "93725e27fb2ee974dcb0accc7d7acf8b4d8c800fdb1725ef235e9d8a76db9bb5"
+        }
+      ],
+      "records": [
+        {
+          "id": "stageb-prettier3-async-package-managers",
+          "recordSha256": "842cdd1889b67c375f07a663f3c97e58cb6bb0554bb01c09dfd0b21836858689",
+          "level": "fixture-behavior",
+          "basis": {
+            "path": "fixtures/stageb-package-managers/runner.cjs",
+            "contains": "assert.equal(await formatFixed(input), formatted);"
+          }
+        },
+        {
+          "id": "stageb-zod4-issues-package-managers",
+          "recordSha256": "a266cc6fabb69aaefcd0e380e04c5a98e296e4a9edee5db50a543aee19ae2b84",
+          "level": "fixture-behavior",
+          "basis": {
+            "path": "fixtures/stageb-package-managers/runner.cjs",
+            "contains": "assert.deepEqual(endpoint(invalid, 'issues'), rejected,"
+          }
+        }
+      ]
+    },
+    {
+      "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-typescript-workspaces/check.cjs",
+      "fixtureSha256": "c0809fb7d156b41f9357a5dcc68162c909d2cc759d261e20d8aaed62a5dbc1ad",
+      "inputRoots": [
+        "fixtures/stageb-typescript-workspaces"
+      ],
+      "inputs": [
+        {
+          "path": "fixtures/stageb-typescript-workspaces/README.md",
+          "bytes": 5871,
+          "sha256": "c63a8d209b8a8c3ad64ac524becde35753df80519197a57e4e601e6e1605d45b"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/check.cjs",
+          "bytes": 11927,
+          "sha256": "c0809fb7d156b41f9357a5dcc68162c909d2cc759d261e20d8aaed62a5dbc1ad"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/evidence.json",
+          "bytes": 245,
+          "sha256": "dd67a18a86b32619e81814eb7942d238439c9af1279adefbc0e83c3bc2508f06"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/observed/linux-x64.json",
+          "bytes": 9594,
+          "sha256": "b86f6aae3775a5c7600305830b21da7c1a2147999bab31e229e2eb6024864106"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/package-lock.json",
+          "bytes": 1432,
+          "sha256": "93f2a235d3df3f5c2f6c32f859cb2b968f3862518be967824326c5245693d971"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/package.json",
+          "bytes": 351,
+          "sha256": "d6f96848bb665b00df5124cfc4edd9cf9f57edfa76c2d57b825ba3e136286982"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/package-lock.json",
+          "bytes": 1091,
+          "sha256": "c9a62881323f4d0f6b43f4bbff73aac8b1ec444e44da434e34511a130ff523c9"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/package.json",
+          "bytes": 158,
+          "sha256": "282243fd93a3c777083a146c28d72cdc99997a4503a770a0320d4137d8f12941"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/app/package.json",
+          "bytes": 204,
+          "sha256": "d4e01b413a0842952b7926bafca7075a89633ed10b0bb48e72d908fd040d87fd"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/app/src/index.ts",
+          "bytes": 380,
+          "sha256": "400b3cf46fbc9d8ce3e28f5877987fae514f30cc6d80dc2199a169a96ebb7fc9"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/app/tsconfig.json",
+          "bytes": 269,
+          "sha256": "24c34dfda1f4facd4f0ca2fd6354701ee792373f85b910e407e81e54fec8c7e4"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/contracts/package.json",
+          "bytes": 274,
+          "sha256": "a7a04ebd1e9a309ee59927477ede5b3ad4c01f07bfb5f6eb87756fa80c4e53f2"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/contracts/src/index.ts",
+          "bytes": 309,
+          "sha256": "36c3b6c0a4f8f0ce61dc06be1726635c98627cde53c1ab5a2a6a183f3ba0b259"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/contracts/tsconfig.json",
+          "bytes": 196,
+          "sha256": "f31b853ee26755cd98c667fb6d069465b5fd46006e5621e638b66e91fcc2c4f7"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/domain/package.json",
+          "bytes": 331,
+          "sha256": "a8af8f299812ddfec8629cb150a0e04e609e7dab60a6e37f15150366b8e9c604"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/domain/src/index.ts",
+          "bytes": 426,
+          "sha256": "2192aacd5e0cb0c309522197bb06f254ea21c4f59378b7c20ea69a525b21c456"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/packages/domain/tsconfig.json",
+          "bytes": 244,
+          "sha256": "2812907c9f3efd6b69b582e3cefbedb962fe6b1526eaa15466a2c8f035ba0cc2"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/tsconfig.base.json",
+          "bytes": 468,
+          "sha256": "1f2ed97242f31174205656bd93112fc6b2e130550275d8aa5796d22bab9c676c"
+        },
+        {
+          "path": "fixtures/stageb-typescript-workspaces/workspace/tsconfig.json",
+          "bytes": 68,
+          "sha256": "3abcc7d7773fa044983a1e09565f3361b7815fef9d2c3723504bd6329cb0de3e"
+        }
+      ],
+      "records": [
+        {
+          "id": "stageb-typescript6-composite-workspace",
+          "recordSha256": "2d3fc3352bca54beb4838ed13558971d55907f969f74de3ab4bd66d8d142ec06",
+          "level": "fixture-behavior",
+          "basis": {
+            "path": "fixtures/stageb-typescript-workspaces/check.cjs",
+            "contains": "assert.deepEqual(patchedApp.value, expected);"
+          }
+        }
+      ]
+    },
+    {
+      "source": "https://github.com/levencode-labs/deploom-npm/blob/d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc/fixtures/stageb-react-ui/check.cjs",
+      "fixtureSha256": "ba4a7f1a7f736f28cd65e35063f3996e4349afad990a10626ef2bcf164280a11",
+      "inputRoots": [
+        "fixtures/stageb-react-ui"
+      ],
+      "inputs": [
+        {
+          "path": "fixtures/stageb-react-ui/.gitattributes",
+          "bytes": 19,
+          "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/.gitignore",
+          "bytes": 38,
+          "sha256": "0d097b8648df7de22bcfbab0fa92e3cb6c25b6b9a7c362e97a1ce5df3dd2deb3"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/README.md",
+          "bytes": 5400,
+          "sha256": "95ed63471227b1bde8aa19df7265d7cf8ebd276d6c5c76fbf7b405decd96bf4e"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/after/package-lock.json",
+          "bytes": 6817,
+          "sha256": "40bed7cd7f34f7be3ffee2163f5fa424a895d7f66374e2545d03058027680d45"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/after/package.json",
+          "bytes": 323,
+          "sha256": "8ed958199064877bd4dde73b6754bd536a883d0dff0d6b2c4bb0b6e34d2b6211"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/app.jsx",
+          "bytes": 3460,
+          "sha256": "0ecaaaf2b715b181e52031f3af8b461f355890d1ce134d8d18c4f48772a999ff"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/before/package-lock.json",
+          "bytes": 6476,
+          "sha256": "fa22a83d91a99e8efe685880ffad0facc329d3f7ef5997b256c3cedd604d416d"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/before/package.json",
+          "bytes": 324,
+          "sha256": "1ad81497ff9519a19cf2805d23c46d425755f4f7fed1e01437def63e15b078b9"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/check.cjs",
+          "bytes": 13195,
+          "sha256": "ba4a7f1a7f736f28cd65e35063f3996e4349afad990a10626ef2bcf164280a11"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/evidence.json",
+          "bytes": 391,
+          "sha256": "ec19012cc3121414a1f2e3700a51ae7bbe8fff10110ce8af0a8d6e265c0bb131"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/package-lock.json",
+          "bytes": 16177,
+          "sha256": "2d6975e4226dd8049d66a7687df4f98c635ef4ab08c301a434bd7528d65d82d7"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/package.json",
+          "bytes": 258,
+          "sha256": "b837c670ff38446f33d12e484fb80f3df0e3a8f1e5c7c7dfb3b1d177846b1b93"
+        },
+        {
+          "path": "fixtures/stageb-react-ui/style.css",
+          "bytes": 1164,
+          "sha256": "f54f31773c3e48e3a59f7e5d0971f3811f1fb15ea49723c0f83014a20dbd476a"
+        }
+      ],
+      "records": [
+        {
+          "id": "stageb-react-dom19-coupled-browser-transition",
+          "recordSha256": "f892f88c6f4bfc11064498ce62c91465d71c56546d8ffab48e3f6404820405e5",
+          "level": "fixture-behavior",
+          "basis": {
+            "path": "fixtures/stageb-react-ui/check.cjs",
+            "contains": "assert.equal(await page.getByTestId('panel').isVisible(), true);"
+          }
+        },
+        {
+          "id": "stageb-react-router7-coupled-browser-splat",
+          "recordSha256": "2799d19ea094e4f5baad48d0b12180c6f9fed6a3776fe5a6aac5acf09334a27f",
+          "level": "fixture-behavior",
+          "basis": {
+            "path": "fixtures/stageb-react-ui/check.cjs",
+            "contains": "await page.getByTestId('reports-relative').click();\n    await waitLocation(page, origin, observed.relativeHref);\n    assert.equal(await page.getByTestId('route-title').textContent(), item.badRoute ? 'Team page' : 'Reports page');"
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,217 @@
+{
+  "schema": 1,
+  "fixture": "stageb-typescript-workspaces",
+  "status": "passed",
+  "toolchain": {
+    "node": "v24.18.0",
+    "platform": "linux",
+    "arch": "x64",
+    "npm": "11.16.0",
+    "typescriptBefore": "5.9.2",
+    "typescriptAfter": "6.0.3"
+  },
+  "transition": {
+    "package": "typescript",
+    "from": "5.9.2",
+    "to": "6.0.3"
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "expected": "pass",
+      "compiler": "5.9.2",
+      "install": {
+        "exit": 0,
+        "mode": "offline-npm-ci",
+        "lockfileUnchanged": true,
+        "localWorkspaceLinks": 3
+      },
+      "build": {
+        "exit": 0,
+        "diagnostics": [],
+        "stdout": "",
+        "stderr": ""
+      },
+      "runtime": {
+        "exit": 0,
+        "value": {
+          "currency": "USD",
+          "subtotalCents": 2500,
+          "taxCents": 188,
+          "totalCents": 2688
+        }
+      },
+      "emittedDeclarationsConsumed": [
+        "contracts",
+        "domain"
+      ],
+      "dependencySourceFilesConsumed": []
+    },
+    {
+      "id": "target-unchanged",
+      "expected": "reject",
+      "compiler": "6.0.3",
+      "install": {
+        "exit": 0,
+        "mode": "offline-npm-ci",
+        "lockfileUnchanged": true,
+        "localWorkspaceLinks": 3
+      },
+      "build": {
+        "exit": 1,
+        "diagnostics": [
+          5101,
+          6305,
+          7006
+        ],
+        "stdout": "packages/contracts/tsconfig.json(3,3): error TS5101: Option 'baseUrl' is deprecated and will stop functioning in TypeScript 7.0. Specify compilerOption '\"ignoreDeprecations\": \"6.0\"' to silence this error.\n  Visit https://aka.ms/ts6 for migration information.\npackages/domain/src/index.ts(1,60): error TS6305: Output file '<workspace>/packages/contracts/dist/index.d.ts' has not been built from source file '<workspace>/packages/contracts/src/index.ts'.\npackages/domain/src/index.ts(4,47): error TS7006: Parameter 'sum' implicitly has an 'any' type.\npackages/domain/src/index.ts(4,52): error TS7006: Parameter 'item' implicitly has an 'any' type.\npackages/domain/tsconfig.json(3,3): error TS5101: Option 'baseUrl' is deprecated and will stop functioning in TypeScript 7.0. Specify compilerOption '\"ignoreDeprecations\": \"6.0\"' to silence this error.\n  Visit https://aka.ms/ts6 for migration information.\npackages/app/src/index.ts(1,44): error TS6305: Output file '<workspace>/packages/contracts/dist/index.d.ts' has not been built from source file '<workspace>/packages/contracts/src/index.ts'.\npackages/app/src/index.ts(2,30): error TS6305: Output file '<workspace>/packages/domain/dist/index.d.ts' has not been built from source file '<workspace>/packages/domain/src/index.ts'.\npackages/app/tsconfig.json(3,3): error TS5101: Option 'baseUrl' is deprecated and will stop functioning in TypeScript 7.0. Specify compilerOption '\"ignoreDeprecations\": \"6.0\"' to silence this error.\n  Visit https://aka.ms/ts6 for migration information.",
+        "stderr": ""
+      },
+      "runtime": {
+        "status": "blocked"
+      }
+    },
+    {
+      "id": "remove-baseurl-only",
+      "expected": "reject",
+      "compiler": "6.0.3",
+      "install": {
+        "exit": 0,
+        "mode": "offline-npm-ci",
+        "lockfileUnchanged": true,
+        "localWorkspaceLinks": 3
+      },
+      "build": {
+        "exit": 1,
+        "diagnostics": [
+          5090,
+          6305,
+          7006
+        ],
+        "stdout": "packages/contracts/tsconfig.json(3,3): error TS5090: Non-relative paths are not allowed when 'baseUrl' is not set. Did you forget a leading './'?\npackages/domain/src/index.ts(1,60): error TS6305: Output file '<workspace>/packages/contracts/dist/index.d.ts' has not been built from source file '<workspace>/packages/contracts/src/index.ts'.\npackages/domain/src/index.ts(4,47): error TS7006: Parameter 'sum' implicitly has an 'any' type.\npackages/domain/src/index.ts(4,52): error TS7006: Parameter 'item' implicitly has an 'any' type.\npackages/domain/tsconfig.json(3,3): error TS5090: Non-relative paths are not allowed when 'baseUrl' is not set. Did you forget a leading './'?\npackages/app/src/index.ts(1,44): error TS6305: Output file '<workspace>/packages/contracts/dist/index.d.ts' has not been built from source file '<workspace>/packages/contracts/src/index.ts'.\npackages/app/src/index.ts(2,30): error TS6305: Output file '<workspace>/packages/domain/dist/index.d.ts' has not been built from source file '<workspace>/packages/domain/src/index.ts'.\npackages/app/tsconfig.json(3,3): error TS5090: Non-relative paths are not allowed when 'baseUrl' is not set. Did you forget a leading './'?",
+        "stderr": ""
+      },
+      "runtime": {
+        "status": "blocked"
+      }
+    },
+    {
+      "id": "target-patched",
+      "expected": "pass",
+      "compiler": "6.0.3",
+      "install": {
+        "exit": 0,
+        "mode": "offline-npm-ci",
+        "lockfileUnchanged": true,
+        "localWorkspaceLinks": 3
+      },
+      "build": {
+        "exit": 0,
+        "diagnostics": [],
+        "stdout": "",
+        "stderr": ""
+      },
+      "runtime": {
+        "exit": 0,
+        "value": {
+          "currency": "USD",
+          "subtotalCents": 2500,
+          "taxCents": 188,
+          "totalCents": 2688
+        }
+      },
+      "emittedDeclarationsConsumed": [
+        "contracts",
+        "domain"
+      ],
+      "dependencySourceFilesConsumed": []
+    },
+    {
+      "id": "missing-project-references",
+      "expected": "reject",
+      "compiler": "6.0.3",
+      "install": {
+        "exit": 0,
+        "mode": "offline-npm-ci",
+        "lockfileUnchanged": true,
+        "localWorkspaceLinks": 3
+      },
+      "build": {
+        "exit": 1,
+        "diagnostics": [
+          6059,
+          6307
+        ],
+        "stdout": "packages/app/src/index.ts(1,44): error TS6059: File '<workspace>/packages/contracts/src/index.ts' is not under 'rootDir' '<workspace>/packages/app/src'. 'rootDir' is expected to contain all source files.\n  The file is in the program because:\n    Imported via '@deploom-stageb/contracts' from file '<workspace>/packages/app/src/index.ts'\n    Imported via '@deploom-stageb/contracts' from file '<workspace>/packages/domain/src/index.ts'\n  File is CommonJS module because '<workspace>/packages/contracts/package.json' has field \"type\" whose value is not \"module\"\npackages/app/src/index.ts(1,44): error TS6307: File '<workspace>/packages/contracts/src/index.ts' is not listed within the file list of project '<workspace>/packages/app/tsconfig.json'. Projects must list all files or use an 'include' pattern.\n  The file is in the program because:\n    Imported via '@deploom-stageb/contracts' from file '<workspace>/packages/app/src/index.ts'\n    Imported via '@deploom-stageb/contracts' from file '<workspace>/packages/domain/src/index.ts'\n  File is CommonJS module because '<workspace>/packages/contracts/package.json' has field \"type\" whose value is not \"module\"\npackages/app/src/index.ts(2,30): error TS6059: File '<workspace>/packages/domain/src/index.ts' is not under 'rootDir' '<workspace>/packages/app/src'. 'rootDir' is expected to contain all source files.\n  File is CommonJS module because '<workspace>/packages/domain/package.json' has field \"type\" whose value is not \"module\"\npackages/app/src/index.ts(2,30): error TS6307: File '<workspace>/packages/domain/src/index.ts' is not listed within the file list of project '<workspace>/packages/app/tsconfig.json'. Projects must list all files or use an 'include' pattern.\n  File is CommonJS module because '<workspace>/packages/domain/package.json' has field \"type\" whose value is not \"module\"",
+        "stderr": ""
+      },
+      "runtime": {
+        "status": "blocked"
+      }
+    },
+    {
+      "id": "declaration-contract-mismatch",
+      "expected": "reject",
+      "compiler": "6.0.3",
+      "build": {
+        "exit": 2,
+        "diagnostics": [
+          2739
+        ],
+        "stdout": "packages/app/src/index.ts(12,7): error TS2739: Type 'Promise<Receipt>' is missing the following properties from type 'Receipt': currency, subtotalCents, taxCents, totalCents",
+        "stderr": ""
+      },
+      "runtime": {
+        "status": "blocked"
+      }
+    },
+    {
+      "id": "incremental-reference-rebuild",
+      "expected": "pass",
+      "compiler": "6.0.3",
+      "build": {
+        "exit": 0,
+        "diagnostics": [],
+        "stdout": "",
+        "stderr": ""
+      },
+      "runtime": {
+        "exit": 0,
+        "value": {
+          "currency": "USD",
+          "subtotalCents": 2500,
+          "taxCents": 250,
+          "totalCents": 2750
+        }
+      }
+    },
+    {
+      "id": "stale-js-cannot-prove-build",
+      "expected": "reject",
+      "compiler": "6.0.3",
+      "build": {
+        "exit": 1,
+        "diagnostics": [
+          2322
+        ],
+        "stdout": "packages/app/src/index.ts(5,3): error TS2322: Type '\"EUR\"' is not assignable to type '\"USD\"'.",
+        "stderr": ""
+      },
+      "staleRuntime": {
+        "exit": 0,
+        "value": {
+          "currency": "USD",
+          "subtotalCents": 2500,
+          "taxCents": 250,
+          "totalCents": 2750
+        }
+      },
+      "emittedJsUnchanged": true,
+      "accepted": false
+    }
+  ],
+  "fixtureSha256": "c0809fb7d156b41f9357a5dcc68162c909d2cc759d261e20d8aaed62a5dbc1ad",
+  "toolchainLockSha256": "93f2a235d3df3f5c2f6c32f859cb2b968f3862518be967824326c5245693d971",
+  "workspaceLockSha256": "c9a62881323f4d0f6b43f4bbff73aac8b1ec444e44da434e34511a130ff523c9",
+  "completedAt": "2026-11-28T15:39:08.738Z"
+}

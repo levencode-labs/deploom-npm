@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "strict": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "skipLibCheck": false,
+    "baseUrl": ".",
+    "paths": {
+      "@deploom-stageb/contracts": [ "packages/contracts/src/index.ts" ],
+      "@deploom-stageb/domain": [ "packages/domain/src/index.ts" ]
+    }
+  }
+}

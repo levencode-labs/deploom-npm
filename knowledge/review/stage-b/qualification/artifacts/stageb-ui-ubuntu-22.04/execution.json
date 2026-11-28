@@ -1,0 +1,464 @@
+{
+  "schema": 1,
+  "fixture": "stageb-react-ui",
+  "status": "passed",
+  "outcome": "passed",
+  "node": "v24.18.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "tools": {
+    "playwright": "1.56.1",
+    "esbuild": "0.25.10",
+    "browser": "141.0.7390.37",
+    "browserDistribution": "chromium-headless-shell",
+    "browserRevision": "1194",
+    "browserBinarySha256": "6c82af1bb96955970f0ff50884bcbd75f200222414dc136076ada667bf4628d1"
+  },
+  "packages": {
+    "before": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1",
+      "react-router-dom": "6.30.3",
+      "react-transition-group": "4.4.5"
+    },
+    "after": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "react-router-dom": "7.18.4",
+      "react-transition-group": "4.4.5"
+    }
+  },
+  "inputs": [
+    {
+      "path": "check.cjs",
+      "bytes": 13195,
+      "sha256": "ba4a7f1a7f736f28cd65e35063f3996e4349afad990a10626ef2bcf164280a11"
+    },
+    {
+      "path": "app.jsx",
+      "bytes": 3460,
+      "sha256": "0ecaaaf2b715b181e52031f3af8b461f355890d1ce134d8d18c4f48772a999ff"
+    },
+    {
+      "path": "style.css",
+      "bytes": 1164,
+      "sha256": "f54f31773c3e48e3a59f7e5d0971f3811f1fb15ea49723c0f83014a20dbd476a"
+    },
+    {
+      "path": "package.json",
+      "bytes": 258,
+      "sha256": "b837c670ff38446f33d12e484fb80f3df0e3a8f1e5c7c7dfb3b1d177846b1b93"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 16177,
+      "sha256": "2d6975e4226dd8049d66a7687df4f98c635ef4ab08c301a434bd7528d65d82d7"
+    },
+    {
+      "path": "before/package.json",
+      "bytes": 324,
+      "sha256": "1ad81497ff9519a19cf2805d23c46d425755f4f7fed1e01437def63e15b078b9"
+    },
+    {
+      "path": "before/package-lock.json",
+      "bytes": 6476,
+      "sha256": "fa22a83d91a99e8efe685880ffad0facc329d3f7ef5997b256c3cedd604d416d"
+    },
+    {
+      "path": "after/package.json",
+      "bytes": 323,
+      "sha256": "8ed958199064877bd4dde73b6754bd536a883d0dff0d6b2c4bb0b6e34d2b6211"
+    },
+    {
+      "path": "after/package-lock.json",
+      "bytes": 6817,
+      "sha256": "40bed7cd7f34f7be3ffee2163f5fa424a895d7f66374e2545d03058027680d45"
+    }
+  ],
+  "bundleSha256": {
+    "before": "3dca12521de90eb4dbe30ad39cb81a203052fef2e05605d3a45789dbf8d2369f",
+    "after": "daf9f49e37576b5c83dff81009b67df919818b41518d65df2a101e6f0106ce52"
+  },
+  "claims": [
+    {
+      "package": "react-dom",
+      "from": "18.3.1",
+      "to": "19.3.0",
+      "check": "test",
+      "outcome": "passed"
+    },
+    {
+      "package": "react-router-dom",
+      "from": "6.30.3",
+      "to": "7.18.4",
+      "check": "test",
+      "outcome": "passed"
+    }
+  ],
+  "results": [
+    {
+      "variant": "baseline",
+      "viewport": "desktop",
+      "settings": {
+        "nodeRef": false,
+        "splitRoute": false
+      },
+      "relativeHref": "/dashboard/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "sibling-route-and-back-passed",
+      "absoluteControl": "passed",
+      "screenshot": {
+        "path": "screenshots/baseline-desktop.png",
+        "sha256": "ffb8a5411be1d7989f56df37322c1c99da02c1f255050dc9a93843b332afbab9"
+      },
+      "transition": "two-enter-exit-cycles-passed",
+      "focusReturn": "open-button-after-each-exit",
+      "events": [
+        {
+          "name": "enter",
+          "firstArgument": "element",
+          "refMatches": null
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        },
+        {
+          "name": "enter",
+          "firstArgument": "element",
+          "refMatches": null
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        }
+      ],
+      "boundaryErrors": [],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "baseline",
+      "viewport": "mobile",
+      "settings": {
+        "nodeRef": false,
+        "splitRoute": false
+      },
+      "relativeHref": "/dashboard/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "sibling-route-and-back-passed",
+      "absoluteControl": "passed",
+      "screenshot": {
+        "path": "screenshots/baseline-mobile.png",
+        "sha256": "0e387dfdf392f0d25b250d22e2c061d4f3b1adab9a70859ab88c1deeffe22f3f"
+      },
+      "transition": "two-enter-exit-cycles-passed",
+      "focusReturn": "open-button-after-each-exit",
+      "events": [
+        {
+          "name": "enter",
+          "firstArgument": "element",
+          "refMatches": null
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        },
+        {
+          "name": "enter",
+          "firstArgument": "element",
+          "refMatches": null
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        }
+      ],
+      "boundaryErrors": [],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "upgraded-unfixed",
+      "viewport": "desktop",
+      "settings": {
+        "nodeRef": false,
+        "splitRoute": false
+      },
+      "relativeHref": "/dashboard/team/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "wrong-relative-path-confirmed",
+      "absoluteControl": "passed",
+      "transitionError": "import_react_dom.default.findDOMNode is not a function",
+      "transition": "removed-findDOMNode-failure-confirmed",
+      "events": [],
+      "boundaryErrors": [
+        "import_react_dom.default.findDOMNode is not a function"
+      ],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "upgraded-unfixed",
+      "viewport": "mobile",
+      "settings": {
+        "nodeRef": false,
+        "splitRoute": false
+      },
+      "relativeHref": "/dashboard/team/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "wrong-relative-path-confirmed",
+      "absoluteControl": "passed",
+      "transitionError": "import_react_dom.default.findDOMNode is not a function",
+      "transition": "removed-findDOMNode-failure-confirmed",
+      "events": [],
+      "boundaryErrors": [
+        "import_react_dom.default.findDOMNode is not a function"
+      ],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "transition-fix-only",
+      "viewport": "desktop",
+      "settings": {
+        "nodeRef": true,
+        "splitRoute": false
+      },
+      "relativeHref": "/dashboard/team/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "wrong-relative-path-confirmed",
+      "absoluteControl": "passed",
+      "screenshot": {
+        "path": "screenshots/transition-fix-only-desktop.png",
+        "sha256": "9518ba6718cef7b5deccd8745d845b1b4417571138aec3daa2ba5b5fc082a4b0"
+      },
+      "transition": "two-enter-exit-cycles-passed",
+      "focusReturn": "open-button-after-each-exit",
+      "events": [
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        },
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        }
+      ],
+      "boundaryErrors": [],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "transition-fix-only",
+      "viewport": "mobile",
+      "settings": {
+        "nodeRef": true,
+        "splitRoute": false
+      },
+      "relativeHref": "/dashboard/team/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "wrong-relative-path-confirmed",
+      "absoluteControl": "passed",
+      "screenshot": {
+        "path": "screenshots/transition-fix-only-mobile.png",
+        "sha256": "73c76ba12045dbe260538a3a4d20b8e632bc8b389f1ff7e7a60c65435eb8fe70"
+      },
+      "transition": "two-enter-exit-cycles-passed",
+      "focusReturn": "open-button-after-each-exit",
+      "events": [
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        },
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        }
+      ],
+      "boundaryErrors": [],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "route-fix-only",
+      "viewport": "desktop",
+      "settings": {
+        "nodeRef": false,
+        "splitRoute": true
+      },
+      "relativeHref": "/dashboard/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "sibling-route-and-back-passed",
+      "absoluteControl": "passed",
+      "transitionError": "import_react_dom.default.findDOMNode is not a function",
+      "transition": "removed-findDOMNode-failure-confirmed",
+      "events": [],
+      "boundaryErrors": [
+        "import_react_dom.default.findDOMNode is not a function"
+      ],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "route-fix-only",
+      "viewport": "mobile",
+      "settings": {
+        "nodeRef": false,
+        "splitRoute": true
+      },
+      "relativeHref": "/dashboard/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "sibling-route-and-back-passed",
+      "absoluteControl": "passed",
+      "transitionError": "import_react_dom.default.findDOMNode is not a function",
+      "transition": "removed-findDOMNode-failure-confirmed",
+      "events": [],
+      "boundaryErrors": [
+        "import_react_dom.default.findDOMNode is not a function"
+      ],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "both-fixes",
+      "viewport": "desktop",
+      "settings": {
+        "nodeRef": true,
+        "splitRoute": true
+      },
+      "relativeHref": "/dashboard/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "sibling-route-and-back-passed",
+      "absoluteControl": "passed",
+      "screenshot": {
+        "path": "screenshots/both-fixes-desktop.png",
+        "sha256": "9518ba6718cef7b5deccd8745d845b1b4417571138aec3daa2ba5b5fc082a4b0"
+      },
+      "transition": "two-enter-exit-cycles-passed",
+      "focusReturn": "open-button-after-each-exit",
+      "events": [
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        },
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        }
+      ],
+      "boundaryErrors": [],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    },
+    {
+      "variant": "both-fixes",
+      "viewport": "mobile",
+      "settings": {
+        "nodeRef": true,
+        "splitRoute": true
+      },
+      "relativeHref": "/dashboard/reports",
+      "absoluteHref": "/dashboard/reports",
+      "navigation": "sibling-route-and-back-passed",
+      "absoluteControl": "passed",
+      "screenshot": {
+        "path": "screenshots/both-fixes-mobile.png",
+        "sha256": "73c76ba12045dbe260538a3a4d20b8e632bc8b389f1ff7e7a60c65435eb8fe70"
+      },
+      "transition": "two-enter-exit-cycles-passed",
+      "focusReturn": "open-button-after-each-exit",
+      "events": [
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        },
+        {
+          "name": "enter",
+          "firstArgument": false,
+          "refMatches": true
+        },
+        {
+          "name": "entered"
+        },
+        {
+          "name": "exited"
+        }
+      ],
+      "boundaryErrors": [],
+      "keyboardInputAndTabOrder": "passed",
+      "horizontalOverflow": false,
+      "externalRequests": 0
+    }
+  ],
+  "limitations": [
+    "Synthetic application, not recipient-project acceptance.",
+    "Chromium only; mobile is a Chromium viewport emulation, not a physical device."
+  ]
+}

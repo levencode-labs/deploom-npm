@@ -1,0 +1,12 @@
+{
+  "node": "24.18.0",
+  "managers": {
+    "npm": { "version": "11.16.0", "package": "npm", "cli": "bin/npm-cli.js", "lock": "package-lock.json", "mode": "node-modules" },
+    "yarn": { "version": "4.12.0", "package": "@yarnpkg/cli-dist", "cli": "bin/yarn.js", "lock": "yarn.lock", "mode": "pnp" },
+    "pnpm": { "version": "10.29.3", "package": "pnpm", "cli": "bin/pnpm.cjs", "lock": "pnpm-lock.yaml", "mode": "isolated-node-modules" }
+  },
+  "arms": {
+    "before": { "prettier": "2.8.8", "zod": "3.25.76" },
+    "after": { "prettier": "3.0.0", "zod": "4.6.7" }
+  }
+}
