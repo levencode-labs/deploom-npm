@@ -27,13 +27,13 @@ jobs:
           npm ci --prefix v4 --ignore-scripts --no-audit --no-fund
           npm ci --prefix v5 --ignore-scripts --no-audit --no-fund
           node check.cjs
+      - uses: ./.github/actions/setup-cache-consumer
       - uses: actions/checkout@v4
         with:
           repository: levencode-labs/deploom-mcp
           ref: f57246f111104934853c56f2e8fb7efa192a7d33
           path: build/contracts
           persist-credentials: false
-      - run: 'python -m pip install --only-binary=:all: jsonschema==4.25.1 "cryptography>=42"'
       - name: Validate the public snapshots with the consumer contract
         env:
           PYTHONPATH: build/contracts/src
@@ -46,12 +46,6 @@ jobs:
               print(kind, len(validate(kind, rows)))
           PY
           python ci/check_record_signature.py
-      - uses: actions/checkout@v4
-        with:
-          repository: levencode-labs/deploom-mcp
-          ref: b3eea1f58950286049ec13cbf7449e613b53f8b9
-          path: build/consumer-v2
-          persist-credentials: false
       - name: Validate native records, negative controls, and signed MCP compatibility
         env:
           PYTHONPATH: build/consumer-v2/src:cache

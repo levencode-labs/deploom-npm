@@ -1,5 +1,8 @@
 name: Build public OSV release
 on:
+  push:
+    branches: [main]
+    paths: ['cache/build_osv.py', 'cache/test_build_osv.py', 'ci/cache-requirements.txt', '.github/actions/setup-cache-consumer/**', '.github/workflows/osv-release.yml']
   workflow_dispatch:
   schedule:
     - cron: '43 3 * * *'
@@ -24,6 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: ./.github/actions/setup-cache-consumer
       - run: python -m unittest discover -s cache
       - run: python cache/build_osv.py build/osv
       - uses: actions/attest@v4
@@ -48,3 +52,4 @@ jobs:
           gh release download "$tag" "${params[@]}" --dir build/readback
           cmp "$manifest" build/readback/manifest.json
           cmp "build/osv/$asset" "build/readback/$asset"
+
