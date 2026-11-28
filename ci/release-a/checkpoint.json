@@ -6,6 +6,7 @@
     "ci/release-a/installed-legacy-source-current-parity.jsonl": "13ce556a07eccef3ee878b23196204e2c645f92fd4b076a73ea1f778ae9e8afa",
     "ci/release-a/legacy-origin-negative.txt": "ef5adf7825a182887738b0d681e55cd487222d8217c77b84ba7faa58430dab3f",
     "ci/release-a/source-parity.jsonl": "f479de2ba7371128553f9c91577444a080810d70f6cee60240694f19562190a6",
+    "ci/reviewed-process-calls.json": "3022a435397394f9c3062d9d682da2752133a03b9758750d9ff55f854f845f33",
     "ci/test_knowledge_editions.py": "36534a405848f0f68829ff1276cb85f319a262424c6de2d3fc2ee38c615c0fff",
     "ci/verify_public_data.py": "b0f0b3775477f80f9e4966371a2c0af07a1d60ca3e6d450dcf3ca89db142a057",
     "ci/verify_signed_candidate.py": "ceadd982a8c03d5708cf57599a64d123a494e360d30421014811f0e53a81117a",
@@ -29,5 +30,12 @@
   "requiredMcp": "0.2.34",
   "schema": 1,
   "sourceParity": "PASS_NOT_INSTALLED_ACCEPTANCE",
+  "sourceScanReview": {
+    "finding": "dangerous-subprocess-use-tainted-env-args",
+    "head": "48f78e19f99104d88bde93b67e62ef38bed72101",
+    "runId": 46171016366,
+    "sourceSha256": "36534a405848f0f68829ff1276cb85f319a262424c6de2d3fc2ee38c615c0fff",
+    "status": "INDEPENDENTLY_REVIEWED_FINAL_HEAD_SCAN_REQUIRED"
+  },
   "status": "BLOCKED_ANNOTATED_TAG_CREATION"
 }
