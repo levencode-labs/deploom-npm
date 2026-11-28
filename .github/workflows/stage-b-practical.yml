@@ -29,7 +29,7 @@ jobs:
           node-version: '24.18.0'
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12.14'
+          python-version: '3.13.9'
       - name: Install the hash-locked manager tools
         run: npm ci --prefix fixtures/stageb-package-managers/tools --cache fixtures/stageb-package-managers/.cache/npm-tools --ignore-scripts --no-audit --no-fund --engine-strict
       - name: Install both arms with immutable locks
@@ -63,7 +63,7 @@ jobs:
           node-version: '24.18.0'
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12.14'
+          python-version: '3.13.9'
       - name: Install exact compiler toolchains
         run: npm ci --prefix fixtures/stageb-typescript-workspaces --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
       - name: Verify clean builds, declarations, runtime and negative controls
@@ -97,7 +97,7 @@ jobs:
           node-version: '24.18.0'
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12.14'
+          python-version: '3.13.9'
       - name: Install exact browser tools
         run: npm ci --prefix fixtures/stageb-react-ui --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
       - name: Install the baseline dependency cohort
@@ -143,7 +143,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12.14'
+          python-version: '3.13.9'
       - name: Verify the tamper and incomplete-matrix controls
         run: python -m unittest discover -s ci -p test_stage_b_receipts.py -v
       - uses: actions/download-artifact@v4
