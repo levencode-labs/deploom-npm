@@ -25,8 +25,8 @@ def encode(obj):
     return (json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=True) + "\n").encode("ascii")
 
 
-def git(*args):
-    return subprocess.check_output(["git", *args], timeout=60)
+def git(*args, cwd=None):
+    return subprocess.check_output(["git", *args], cwd=cwd, timeout=60)
 
 
 class NoRegistryRedirect(HTTPRedirectHandler):
@@ -52,38 +52,63 @@ def public_version(package, version):
     return True
 
 
+class _TrustedFixtureVerifier:
+    """Reuse immutable source bytes only within one publisher invocation.
+
+    Each instance binds one trusted commit and repository. Claims, recorded
+    hashes, public versions and negative controls remain per-record checks.
+    """
+
+    def __init__(self, trusted_commit):
+        if not re.fullmatch(r"[a-f0-9]{40}", trusted_commit):
+            raise ValueError("Invalid immutable fixture identity")
+        self.trusted_commit = trusted_commit
+        self.cwd = Path.cwd()
+        self.sources = {}
+
+    def _source(self, source):
+        match = SOURCE.fullmatch(source)
+        if not match:
+            raise ValueError("Invalid immutable fixture identity")
+        if source not in self.sources:
+            commit, path = match.groups()
+            subprocess.run(["git", "merge-base", "--is-ancestor", commit, self.trusted_commit],
+                           cwd=self.cwd, stdout=subprocess.DEVNULL, check=True, timeout=30)
+            raw = git("show", f"{commit}:{path}", cwd=self.cwd)
+            if len(raw) > 16_000:
+                raise ValueError("Oversized fixture source")
+            actual_sha = hashlib.sha256(raw).hexdigest()
+            receipt_path = path.removesuffix("check.cjs") + "evidence.json"
+            receipt_raw = git("show", f"{commit}:{receipt_path}", cwd=self.cwd)
+            if len(receipt_raw) > 64_000:
+                raise ValueError("Oversized evidence receipt")
+            receipt = json.loads(receipt_raw)
+            if (not isinstance(receipt, dict) or set(receipt) != {"fixtureSha256", "claims"}
+                    or receipt["fixtureSha256"] != actual_sha):
+                raise ValueError("No independently reviewed matching source-exact fixture claim")
+            self.sources[source] = actual_sha, receipt["claims"], raw.decode("utf-8")
+        return self.sources[source]
+
+    def verify(self, record):
+        actual_sha, claims, text = self._source(record["evidence"]["source"])
+        if actual_sha != record["evidence"]["fixtureSha256"]:
+            raise ValueError("Fixture identity differs from recorded SHA256")
+        claim = record["evidence"]["claim"]
+        if claim not in claims:
+            raise ValueError("No independently reviewed matching source-exact fixture claim")
+        for transition in record["verifiedTransitions"]:
+            public_version(record["package"], transition["from"])
+            public_version(record["package"], transition["to"])
+        for expected in (claim["package"], claim["from"], claim["to"],
+                         *(item["fixtureAssertion"] for item in record["negativeControls"])):
+            if expected not in text:
+                raise ValueError("Missing negative control or version claim in pinned fixture")
+        return True
+
+
 def trusted_fixture(record, trusted_commit):
     """Verify source/receipt from a pinned ancestor of trusted main, never PR files."""
-    source = record["evidence"]["source"]
-    match = SOURCE.fullmatch(source)
-    if not match or not re.fullmatch(r"[a-f0-9]{40}", trusted_commit):
-        raise ValueError("Invalid immutable fixture identity")
-    commit, path = match.groups()
-    subprocess.run(["git", "merge-base", "--is-ancestor", commit, trusted_commit],
-                   stdout=subprocess.DEVNULL, check=True, timeout=30)
-    raw = git("show", f"{commit}:{path}")
-    actual_sha = hashlib.sha256(raw).hexdigest()
-    if actual_sha != record["evidence"]["fixtureSha256"] or len(raw) > 16_000:
-        raise ValueError("Fixture identity differs from recorded SHA256")
-    receipt_path = path.removesuffix("check.cjs") + "evidence.json"
-    receipt_raw = git("show", f"{commit}:{receipt_path}")
-    if len(receipt_raw) > 64_000:
-        raise ValueError("Oversized evidence receipt")
-    receipt = json.loads(receipt_raw)
-    if (not isinstance(receipt, dict) or set(receipt) != {"fixtureSha256", "claims"}
-            or receipt["fixtureSha256"] != actual_sha
-            or record["evidence"]["claim"] not in receipt["claims"]):
-        raise ValueError("No independently reviewed matching source-exact fixture claim")
-    text = raw.decode("utf-8")
-    claim = record["evidence"]["claim"]
-    for transition in record["verifiedTransitions"]:
-        public_version(record["package"], transition["from"])
-        public_version(record["package"], transition["to"])
-    for expected in (claim["package"], claim["from"], claim["to"],
-                     *(item["fixtureAssertion"] for item in record["negativeControls"])):
-        if expected not in text:
-            raise ValueError("Missing negative control or version claim in pinned fixture")
-    return True
+    return _TrustedFixtureVerifier(trusted_commit).verify(record)
 
 
 def write_shards(raw, destination, *, revision, trusted_commit=None, max_shard_bytes=MAX_SHARD):
@@ -93,8 +118,9 @@ def write_shards(raw, destination, *, revision, trusted_commit=None, max_shard_b
         raise ValueError("Invalid shard size budget")
     data = validate_corpus(raw)
     if trusted_commit is not None:
+        verifier = _TrustedFixtureVerifier(trusted_commit)
         for row in data["records"]:
-            trusted_fixture(row, trusted_commit)
+            verifier.verify(row)
     grouped = defaultdict(list)
     for record in data["records"]:
         bucket = hashlib.sha256(record["package"].encode("ascii")).hexdigest()[:2]
