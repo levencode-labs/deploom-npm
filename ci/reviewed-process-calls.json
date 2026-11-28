@@ -50,9 +50,9 @@
     "sha256": "f6b00c5cc33a5e4d5be1593d9bfb57fdb67b6d539c63a4529e41643adbd75da9"
   },
   "deploom-npm/ci/test_knowledge_editions.py": {
-    "reason": "CI/operator explicitly selects the legacy Python interpreter; the workflow creates that exact venv. The retained local test script and arguments are passed separately without a shell, with check=True and a 60-second deadline. Corpus, project and package data cannot select the executable. Source-mode and installed-wheel provenance checks remain separate.",
+    "reason": "CI/operator explicitly selects the legacy Python interpreter; the workflow creates that exact venv. The retained local test script and arguments are passed separately without a shell, with check=True and a 60-second deadline. Corpus, project and package data cannot select the executable. Source-mode and installed-wheel provenance checks remain separate. Only the trust-anchor selection is delegated to knowledge_trust; the reviewed interpreter invocation is unchanged.",
     "rule": "dangerous-subprocess-use-tainted-env-args",
-    "sha256": "36534a405848f0f68829ff1276cb85f319a262424c6de2d3fc2ee38c615c0fff"
+    "sha256": "e09452330820b83d150d2a8915c083d06ba3109a4a86e632a31a092d5a976ab7"
   },
   "deploom-npm/docs/stage-c/exercise-installed-cli.py": {
     "reason": "Reproduction harness intentionally executes operator-selected local CLI/runtime and PATH-resolved Node/strace with fixed argument vectors, no shell, 5/45-second deadlines and isolated temporary layout. Project/corpus/evidence URLs cannot choose commands. Removes injection-related environment, verifies installed candidate bytes and compares before/after state. The operator-selected executable remains the explicit trust boundary; this is not a binary sandbox. Independent review and original two findings are retained in docs/stage-c/source-scan-review.md.",
