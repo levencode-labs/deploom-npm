@@ -111,12 +111,18 @@ def trusted_fixture(record, trusted_commit):
     return _TrustedFixtureVerifier(trusted_commit).verify(record)
 
 
-def write_shards(raw, destination, *, revision, trusted_commit=None, max_shard_bytes=MAX_SHARD):
+def write_shards(raw, destination, *, revision, trusted_commit=None, max_shard_bytes=MAX_SHARD,
+                 edition_schema=2):
     if type(revision) is not int or not 25 <= revision < 2**53:
         raise ValueError("Invalid signed edition revision")
     if not 512 <= max_shard_bytes <= MAX_SHARD:
         raise ValueError("Invalid shard size budget")
+    if type(edition_schema) is not int or edition_schema not in (2, 3):
+        raise ValueError("Invalid signed knowledge edition schema")
     data = validate_corpus(raw)
+    for row in data["records"]:
+        if ("evidenceScope" in row) != (edition_schema == 3):
+            raise ValueError("Scoped evidence belongs only in a complete v3 edition")
     if trusted_commit is not None:
         verifier = _TrustedFixtureVerifier(trusted_commit)
         for row in data["records"]:
@@ -125,7 +131,7 @@ def write_shards(raw, destination, *, revision, trusted_commit=None, max_shard_b
     for record in data["records"]:
         bucket = hashlib.sha256(record["package"].encode("ascii")).hexdigest()[:2]
         grouped[bucket].append(record)
-    manifest = {"schema": 2, "revision": revision, "sourceSha256": hashlib.sha256(raw).hexdigest(),
+    manifest = {"schema": edition_schema, "revision": revision, "sourceSha256": hashlib.sha256(raw).hexdigest(),
                 "recordCount": len(data["records"]), "buckets": {}}
     blobs = {}
     for bucket in sorted(grouped):
