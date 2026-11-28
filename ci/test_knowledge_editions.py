@@ -49,9 +49,8 @@ def main():
     corpus_file = ROOT / "knowledge/v2/records.json"
     corpus = corpus_file.read_bytes()
     ledger = (ROOT / "knowledge/v3/evidence-scopes.json").read_bytes()
-    trusted = subprocess.check_output(["git", "rev-parse", "--verify", "refs/remotes/origin/main"],
-                                      text=True).strip()
-    subprocess.run(["git", "merge-base", "--is-ancestor", trusted, "HEAD"], check=True, timeout=30)
+    from knowledge_trust import trusted_commit
+    trusted = trusted_commit(ROOT)
     rows = json.loads(corpus)["records"]
     identities = {(row["package"], item[version]) for row in rows for item in row["verifiedTransitions"]
                   for version in ("from", "to")}

@@ -1,0 +1,95 @@
+name: Verify immutable Stage A release readback
+on:
+  pull_request:
+    paths:
+      - 'ci/knowledge_trust.py'
+      - 'ci/test_knowledge_trust.py'
+      - 'ci/test_knowledge_editions.py'
+      - 'ci/verify-published-release.py'
+      - '.github/workflows/stage-a-release-readback.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: a000d33d72aa47fd734cc627a30bbf5c76d7a37d
+          path: build/historical-release
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: ./.github/actions/setup-cache-consumer
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: 73e4bcc04ec2a2c3aa85008a94b3a6958a03012d
+          path: build/consumer-legacy
+          persist-credentials: false
+      - name: Replay historical corpus using only the corrected test harness
+        run: |
+          set -euo pipefail
+          old="$GITHUB_WORKSPACE/build/historical-release"
+          test "$(git -C "$old" rev-parse HEAD)" = a000d33d72aa47fd734cc627a30bbf5c76d7a37d
+          test "$(git -C "$old" rev-parse 'refs/tags/npm-v0.2.31^{commit}')" = a000d33d72aa47fd734cc627a30bbf5c76d7a37d
+          git -C "$old" merge-base --is-ancestor HEAD refs/remotes/origin/main
+          # Only two test harness files change, never the release tree/tag or corpus.
+          cp ci/knowledge_trust.py ci/test_knowledge_editions.py "$old/ci/"
+          cd "$old"
+          env GITHUB_REF_TYPE=tag GITHUB_REF=refs/tags/npm-v0.2.31 PYTHONPATH="$GITHUB_WORKSPACE/build/consumer-v2/src:$old/cache" python ci/test_knowledge_editions.py --legacy-consumer "$GITHUB_WORKSPACE/build/consumer-legacy" | tee "$RUNNER_TEMP/historical-parity.jsonl"
+          git diff --exit-code -- knowledge cache
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-release-parity
+          path: ${{ runner.temp }}/historical-parity.jsonl
+          if-no-files-found: error
+  exact-published-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      attestations: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify all four immutable archives and npm provenance for 0.2.31
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -B ci/verify-published-release.py 0.2.31 handoff
+      - name: Bind upstream manifest to accepted Stage A identity
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("handoff/upstream.json").read_bytes())
+          print(json.dumps(data, sort_keys=True))
+          assert data["version"] == "0.2.31"
+          assert data["commit"] == "a000d33d72aa47fd734cc627a30bbf5c76d7a37d"
+          assert data["mcp"]["commit"] == "0c990137e3b713f944cd7a053f04d0e8470af337"
+          assert data["mcp"]["coreRevision"] == "8c65fc7311062169d1b1e058c5463a39efaed3d9"
+          assert data["mcp"]["sha256"] == "38bf385854cedb97734d5f86d38803d2bba49ce106a1e36d3bded2b89cabc5ad"
+          assert {a["platform"] for a in data["platformArchives"]} == {"linux-x64", "linux-arm64", "darwin-arm64"}
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: exact-stage-a-upstream-evidence
+          path: |
+            handoff/*.json
+            handoff/*.jsonl
+          if-no-files-found: error
