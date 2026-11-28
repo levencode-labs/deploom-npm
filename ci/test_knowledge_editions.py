@@ -12,6 +12,7 @@ import json
 import os
 import subprocess
 import tempfile
+import sys
 from collections import Counter
 from functools import partial
 from pathlib import Path
@@ -21,6 +22,7 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
 from deploom_mcp import shared_records_v2, shared_records_v3
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "cache"))
 from evidence_scopes import annotate_corpus, canonical
 from shards_v2 import write_shards
 from shards_v3 import write_editions
@@ -31,8 +33,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--legacy-consumer", type=Path, required=True)
+    legacy = parser.add_mutually_exclusive_group(required=True)
+    legacy.add_argument("--legacy-consumer", type=Path)
+    legacy.add_argument("--legacy-python", type=Path,
+                        help="Interpreter with hash-pinned released 0.2.33 installed; no source PYTHONPATH")
+    parser.add_argument("--installed-lock", type=Path,
+                        help="Require exact installed published Stage A runtime before parity testing")
     args = parser.parse_args()
+    installed = None
+    if args.installed_lock:
+        from installed_release_guard import check_installed
+        installed = check_installed(args.installed_lock)
+        if not args.legacy_python:
+            raise ValueError("Installed parity requires a separately installed legacy reader")
     corpus_file = ROOT / "knowledge/v2/records.json"
     corpus = corpus_file.read_bytes()
     ledger = (ROOT / "knowledge/v3/evidence-scopes.json").read_bytes()
@@ -91,9 +104,16 @@ def main():
                        env=env, check=True, timeout=30)
 
         # The old interpreter process imports only the released strict v2 source.
-        old_env = dict(os.environ, PYTHONPATH=str(args.legacy_consumer.resolve() / "src"))
-        subprocess.run([os.sys.executable, str(ROOT / "ci/check_legacy_knowledge.py"), str(site),
-                        str(pin), str(corpus_file)], env=old_env, check=True, timeout=60)
+        old_env = dict(os.environ)
+        if args.legacy_consumer:
+            old_env["PYTHONPATH"] = str(args.legacy_consumer.resolve() / "src")
+        else:
+            old_env.pop("PYTHONPATH", None)
+        # Resolving a venv interpreter symlink would select the base interpreter.
+        old_python = str(args.legacy_python.absolute()) if args.legacy_python else sys.executable
+        subprocess.run([old_python, str(ROOT / "ci/check_legacy_knowledge.py"), str(site),
+                        str(pin), str(corpus_file), *(["--installed"] if args.legacy_python else [])],
+                       env=old_env, check=True, timeout=60)
 
         original_pin = shared_records_v2.public_key_file
         shared_records_v2.public_key_file = pin
@@ -157,7 +177,7 @@ def main():
         "v2LookupSemantics": "PASS", "equalRevisionReplacement": "REJECTED",
         "stageBLookups": {"legacyV2": "PASS", "currentV2": current_v2_stage_b,
                           "currentV3": current_v3_stage_b},
-        "registryRequests": 0}, sort_keys=True))
+        "registryRequests": 0, "installedRuntime": installed}, sort_keys=True))
 
 
 if __name__ == "__main__":

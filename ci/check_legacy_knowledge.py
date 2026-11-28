@@ -3,6 +3,8 @@ import argparse
 import hashlib
 import json
 import tempfile
+import importlib.metadata
+import os
 from functools import partial
 from pathlib import Path
 
@@ -53,7 +55,7 @@ def check_stage_b_queries(lookup, schema):
             "unsupportedManagerQueries": unsupported_queries}
 
 
-def check_v2_queries(site, cache, *, intermediate=False):
+def check_v2_queries(site, cache, *, intermediate=False, replacement_control=True):
     """Preserve the original cross-repository v2 gates for either reader."""
     raw_index = (site / "index.json").read_bytes()
     signature = (site / "index.sig").read_bytes()
@@ -93,6 +95,8 @@ def check_v2_queries(site, cache, *, intermediate=False):
     assert all(row["id"] != "align-react-renderers" for row in outside["knowledge"]), outside
     assert len(requests) == 2 + sum(map(len, index["buckets"].values()))
     stage_b = check_stage_b_queries(partial(shared_records_v2.lookup, cache), 2)
+    if not replacement_control:
+        return stage_b
     # Both files are produced with the same test key by the real v2 signer.
     resources[shared_records_v2.BASE + "index.json"] = (site / "equal-revision.json").read_bytes()
     resources[shared_records_v2.BASE + "index.sig"] = (site / "equal-revision.sig").read_bytes()
@@ -109,8 +113,24 @@ def main():
     parser.add_argument("site", type=Path)
     parser.add_argument("pin", type=Path)
     parser.add_argument("corpus", type=Path)
+    parser.add_argument("--signed-candidate", action="store_true",
+                        help="Read actual signed deployment bytes; replacement negatives run in full parity separately")
+    parser.add_argument("--installed", action="store_true")
     args = parser.parse_args()
     assert __version__ == "0.2.33", __version__
+    if args.installed:
+        import deploom_mcp
+        assert not os.environ.get("PYTHONPATH"), "Legacy installed gate forbids source PYTHONPATH"
+        dist = importlib.metadata.distribution("deploom-mcp")
+        root = Path(deploom_mcp.__file__).resolve().parent
+        assert root == Path(dist.locate_file("deploom_mcp")).resolve()
+        assert root.parent.name in {"site-packages", "dist-packages"} and dist.version == "0.2.33"
+        direct = json.loads(dist.read_text("direct_url.json"))
+        from installed_release_guard import verify_direct_url
+        verify_direct_url(direct, {
+            "url": "https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.33/deploom_mcp-0.2.33-py3-none-any.whl",
+            "sha256": "6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167",
+        })
     shared_records_v2.public_key_file = args.pin
     expected = json.loads(args.corpus.read_bytes())["records"]
     site = args.site / "v2"
@@ -123,7 +143,7 @@ def main():
     assert sorted(actual, key=lambda row: row["id"]) == sorted(expected, key=lambda row: row["id"])
     assert not any("evidenceScope" in row for row in actual)
     with tempfile.TemporaryDirectory() as cache:
-        stage_b = check_v2_queries(site, Path(cache))
+        stage_b = check_v2_queries(site, Path(cache), replacement_control=not args.signed_candidate)
     try:
         shared_records_v2.verified_index((args.site / "v3/index.json").read_bytes(),
                                          (args.site / "v3/index.sig").read_bytes())
@@ -133,7 +153,9 @@ def main():
         raise AssertionError("Legacy v2 reader accepted a v3 signature domain")
     print(json.dumps({"legacyConsumer": __version__, "schema": 2, "records": len(actual),
                       "exactRecordParity": True, "crossDomainRejected": True,
-                      "lookupSemantics": True, "equalRevisionRejected": True,
+                      "lookupSemantics": True,
+                      "equalRevisionRejected": "covered-by-separate-full-parity" if args.signed_candidate else True,
+                      "installedLegacyWheel": args.installed,
                       "stageBLookups": stage_b}, sort_keys=True))
 
 

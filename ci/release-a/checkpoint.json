@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "ci/check_legacy_knowledge.py": "cf95a16b93c6ce1fcd9f07157cf922af4a28343ae2d444324410771b4d735542",
+    "ci/installed_release_guard.py": "f00f0fbda12583858ec62f20e1ec546e12494e6ee2e4d441d95cc0467a284b15",
+    "ci/qualify_installed_release.py": "709586bb03cc8de383a693b97a1cd66fe3954cfe198fe0f7b7f510c4196ec8f7",
+    "ci/release-a/installed-legacy-source-current-parity.jsonl": "13ce556a07eccef3ee878b23196204e2c645f92fd4b076a73ea1f778ae9e8afa",
+    "ci/release-a/legacy-origin-negative.txt": "ef5adf7825a182887738b0d681e55cd487222d8217c77b84ba7faa58430dab3f",
+    "ci/release-a/source-parity.jsonl": "f479de2ba7371128553f9c91577444a080810d70f6cee60240694f19562190a6",
+    "ci/test_knowledge_editions.py": "36534a405848f0f68829ff1276cb85f319a262424c6de2d3fc2ee38c615c0fff",
+    "ci/verify_public_data.py": "b0f0b3775477f80f9e4966371a2c0af07a1d60ca3e6d450dcf3ca89db142a057",
+    "ci/verify_signed_candidate.py": "ceadd982a8c03d5708cf57599a64d123a494e360d30421014811f0e53a81117a",
+    "knowledge/v2/records.json": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8",
+    "knowledge/v3/evidence-scopes.json": "1ae7d699a8dce222bc52b534c657508d93bae40c91ffa84ef2d6c6bd3ab92d4a"
+  },
+  "installedLegacyCompatibility": "PASS_1530_RECORDS_AND_15_B_QUERIES",
+  "installedLegacyWheel": "0.2.33",
+  "installedLegacyWheelSha256": "6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167",
+  "installedReleaseAcceptance": "NOT_RUN_RELEASE_ARTIFACT_ABSENT",
+  "main": {
+    "core": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+    "mcp": "0c990137e3b713f944cd7a053f04d0e8470af337",
+    "npm": "66bc76d933cc40459a6b152d179ac2a70ee32c32",
+    "playground": "edabf1af5dea5669d3480e48f17e3500a6fc546f"
+  },
+  "npmVersion031AvailableAtObservation": true,
+  "observedAt": "2026-11-28T17:25:55Z",
+  "publishedMcpObserved": "0.2.33",
+  "publisherBase": "b03d1549373db4fb9353bafbd66cda0f7af793ca",
+  "requiredMcp": "0.2.34",
+  "schema": 1,
+  "sourceParity": "PASS_NOT_INSTALLED_ACCEPTANCE",
+  "status": "BLOCKED_ANNOTATED_TAG_CREATION"
+}

@@ -106,8 +106,72 @@ jobs:
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: build/site
-  deploy:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signed-candidate
+          path: build/site
+          if-no-files-found: error
+  verify-candidate:
     needs: sign
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-core
+          ref: 8c65fc7311062169d1b1e058c5463a39efaed3d9
+          path: build/acceptance-core
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: levencode-labs/deploom-mcp
+          ref: 0c990137e3b713f944cd7a053f04d0e8470af337
+          path: build/acceptance-mcp
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: signed-candidate
+          path: build/signed-candidate
+      - name: Install current and legacy published wheels under exact hash locks
+        run: |
+          python -m pip install --only-binary=:all: --require-hashes -r bin/posix-requirements.txt
+          python -m venv "$RUNNER_TEMP/legacy-reader"
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          lines = Path('bin/posix-requirements.txt').read_text().splitlines()
+          lines = [line for line in lines if not line.startswith('deploom-mcp @ ')]
+          lines.append('deploom-mcp @ https://github.com/levencode-labs/deploom-mcp/releases/download/v0.2.33/deploom_mcp-0.2.33-py3-none-any.whl --hash=sha256:6b500635388342d959b4013947dec99a4fbfaaea53e75aa27f9bbf6ef1404167')
+          Path(os.environ['RUNNER_TEMP'], 'legacy-requirements.txt').write_text('\n'.join(lines) + '\n')
+          PY
+          "$RUNNER_TEMP/legacy-reader/bin/python" -m pip install --only-binary=:all: --require-hashes -r "$RUNNER_TEMP/legacy-requirements.txt"
+      - name: Run R01 and R02 with installed production modules and retained exact test sources
+        run: python ci/qualify_installed_release.py --core-tests build/acceptance-core --mcp-tests build/acceptance-mcp --output installed-correctness.json
+      - name: Preserve complete corpus, 45 lookups, signature and revision negatives on installed wheels
+        run: python ci/test_knowledge_editions.py --installed-lock ci/mcp-release.json --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" > installed-parity.jsonl
+      - name: Read the actual signed candidate before public deployment
+        run: python ci/verify_signed_candidate.py --site build/signed-candidate --revision "$(git rev-list --first-parent --count HEAD)" --legacy-python "$RUNNER_TEMP/legacy-reader/bin/python" --output installed-candidate.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installed-candidate-acceptance
+          path: |
+            installed-correctness.json
+            installed-parity.jsonl
+            installed-candidate.json
+          if-no-files-found: error
+  deploy:
+    needs: verify-candidate
     runs-on: ubuntu-latest
     permissions:
       pages: write

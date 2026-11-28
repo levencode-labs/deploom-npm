@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - name: Reject source imports, stale release locks and invalid installed-wheel origins
+        run: python -m unittest discover -s ci -p test_installed_release_guard.py -v
       - run: node fixtures/react-renderers/check.cjs
       - run: node fixtures/react-ssr/check.cjs
       - run: node fixtures/react19-renderer-commit/check.cjs
