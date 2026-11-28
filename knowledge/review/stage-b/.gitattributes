@@ -1,0 +1,3 @@
+# Preserve the exact reader-compatibility evidence bytes on Windows too.
+knowledge-parity.jsonl -text
+knowledge-parity-inputs.json -text
