@@ -1,0 +1,32 @@
+name: Stage B practical migration research
+on:
+  pull_request:
+    paths: ['research/stage-b/**', '.github/workflows/stage-b-research.yml']
+permissions:
+  contents: read
+jobs:
+  evidence:
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [react-yarn, ts-pnpm, vue-npm]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - name: Install pinned public package managers
+        run: npm install --global --ignore-scripts --no-audit --no-fund npm@11.16.0 yarn@1.22.22 pnpm@10.11.0
+      - name: Discover locks and execute fixed research matrix
+        run: bash research/stage-b/check.sh ${{ matrix.case }} discover
+      - name: Preserve exact locks and receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage-b-${{ matrix.case }}
+          path: ${{ runner.temp }}/stage-b-receipt-${{ matrix.case }}
+          if-no-files-found: error
