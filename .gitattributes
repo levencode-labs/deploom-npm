@@ -1,0 +1,2 @@
+# Keep the exact retained fixture bytes on both qualification platforms.
+fixtures/stageb-*/** text=auto eol=lf

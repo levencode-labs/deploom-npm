@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f5f7fa; color: #172536; font: 16px/1.5 system-ui, sans-serif; }
+main { width: min(100% - 32px, 760px); margin: 24px auto; padding: 20px; background: white; border: 1px solid #c8d3df; }
+h1 { margin: 0 0 12px; font-size: 1.65rem; line-height: 1.25; }
+h2 { font-size: 1.1rem; }
+label, input { display: block; width: 100%; }
+input { margin: 4px 0 12px; padding: 8px; border: 1px solid #75889a; }
+button { padding: 8px 12px; border: 1px solid #234d6f; background: #234d6f; color: white; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #df9226; outline-offset: 3px; }
+nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+a { color: #174f79; }
+output { overflow-wrap: anywhere; }
+.panel { margin-top: 16px; padding: 16px; background: #ecf3fa; border: 1px solid #adc4d9; }
+.phase-enter { opacity: 0; transform: translateY(-6px); }
+.phase-enter-active { opacity: 1; transform: translateY(0); transition: opacity 120ms, transform 120ms; }
+.phase-enter-done { opacity: 1; }
+.phase-exit { opacity: 1; }
+.phase-exit-active { opacity: 0; transition: opacity 120ms; }

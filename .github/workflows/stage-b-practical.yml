@@ -1,0 +1,160 @@
+name: Stage B practical migrations
+on:
+  pull_request:
+    paths: ['fixtures/stageb-*/**', 'ci/stage_b_receipts.py', 'ci/test_stage_b_receipts.py', '.github/workflows/stage-b-practical.yml', '.gitattributes']
+  push:
+    branches: [main]
+    paths: ['fixtures/stageb-*/**', 'ci/stage_b_receipts.py', 'ci/test_stage_b_receipts.py', '.github/workflows/stage-b-practical.yml', '.gitattributes']
+permissions:
+  contents: read
+env:
+  STAGE_B_SOURCE: ${{ github.event.pull_request.head.sha || github.sha }}
+jobs:
+  managers:
+    name: Package managers (${{ matrix.os }}, ${{ matrix.manager }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, windows-latest]
+        manager: [npm, yarn, pnpm]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.STAGE_B_SOURCE }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Install the hash-locked manager tools
+        run: npm ci --prefix fixtures/stageb-package-managers/tools --cache fixtures/stageb-package-managers/.cache/npm-tools --ignore-scripts --no-audit --no-fund --engine-strict
+      - name: Install both arms with immutable locks
+        run: node fixtures/stageb-package-managers/install.cjs --manager ${{ matrix.manager }}
+      - name: Check behavior and resolution isolation
+        run: node fixtures/stageb-package-managers/check.cjs --manager ${{ matrix.manager }} --output build/stage-b/execution.json
+      - name: Bind execution to the checked-out source and inputs
+        run: python ci/stage_b_receipts.py capture --suite package-managers --runner ${{ matrix.os }} --manager ${{ matrix.manager }} --report build/stage-b/execution.json --output build/stage-b/receipt.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stageb-managers-${{ matrix.os }}-${{ matrix.manager }}
+          path: build/stage-b/
+          if-no-files-found: warn
+          retention-days: 90
+  workspaces:
+    name: TypeScript workspaces (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.STAGE_B_SOURCE }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Install exact compiler toolchains
+        run: npm ci --prefix fixtures/stageb-typescript-workspaces --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+      - name: Verify clean builds, declarations, runtime and negative controls
+        run: node fixtures/stageb-typescript-workspaces/check.cjs --output build/stage-b/execution.json
+      - name: Bind execution to the checked-out source and inputs
+        run: python ci/stage_b_receipts.py capture --suite typescript-workspaces --runner ${{ matrix.os }} --report build/stage-b/execution.json --output build/stage-b/receipt.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stageb-workspaces-${{ matrix.os }}
+          path: build/stage-b/
+          if-no-files-found: warn
+          retention-days: 90
+  ui:
+    name: Coupled React browser migration (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, windows-latest]
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/fixtures/stageb-react-ui/.browser-cache
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.STAGE_B_SOURCE }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.18.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Install exact browser tools
+        run: npm ci --prefix fixtures/stageb-react-ui --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+      - name: Install the baseline dependency cohort
+        run: npm ci --prefix fixtures/stageb-react-ui/before --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+      - name: Install the target dependency cohort
+        run: npm ci --prefix fixtures/stageb-react-ui/after --ignore-scripts --no-audit --no-fund --engine-strict --strict-peer-deps
+      - name: Install the pinned Chromium revision on Linux
+        if: runner.os == 'Linux'
+        run: node fixtures/stageb-react-ui/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Install the pinned Chromium revision on Windows
+        if: runner.os == 'Windows'
+        run: node fixtures/stageb-react-ui/node_modules/playwright/cli.js install chromium
+      - name: Replay baseline, unfixed, partial fixes and final UI
+        run: node fixtures/stageb-react-ui/check.cjs --output build/stage-b/execution.json
+      - name: Bind execution to the checked-out source and inputs
+        run: python ci/stage_b_receipts.py capture --suite react-ui --runner ${{ matrix.os }} --report build/stage-b/execution.json --output build/stage-b/receipt.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stageb-ui-${{ matrix.os }}
+          path: build/stage-b/
+          if-no-files-found: warn
+          retention-days: 90
+  evidence:
+    name: Verify all ten source-bound evidence legs
+    if: always()
+    needs: [managers, workspaces, ui]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - name: Require all execution groups to succeed
+        env:
+          MANAGERS_RESULT: ${{ needs.managers.result }}
+          WORKSPACES_RESULT: ${{ needs.workspaces.result }}
+          UI_RESULT: ${{ needs.ui.result }}
+        run: |
+          test "$MANAGERS_RESULT" = success
+          test "$WORKSPACES_RESULT" = success
+          test "$UI_RESULT" = success
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.STAGE_B_SOURCE }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Verify the tamper and incomplete-matrix controls
+        run: python -m unittest discover -s ci -p test_stage_b_receipts.py -v
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: stageb-*
+          path: build/stage-b-artifacts
+      - name: Verify every original report and retained input
+        run: python ci/stage_b_receipts.py verify build/stage-b-artifacts --commit "$STAGE_B_SOURCE" --run-id "$GITHUB_RUN_ID" --output build/stage-b-acceptance.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stageb-acceptance
+          path: build/stage-b-acceptance.json
+          if-no-files-found: error
+          retention-days: 90

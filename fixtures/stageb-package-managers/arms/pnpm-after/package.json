@@ -1,0 +1,10 @@
+{
+  "name": "deploom-stageb-pnpm-after",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.29.3",
+  "dependencies": {
+    "prettier": "3.0.0",
+    "zod": "4.6.7"
+  }
+}

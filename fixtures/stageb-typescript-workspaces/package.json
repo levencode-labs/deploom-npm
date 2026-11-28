@@ -1,0 +1,12 @@
+{
+  "name": "deploom-stageb-typescript-workspaces",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@11.16.0",
+  "engines": { "node": "24.18.0", "npm": "11.16.0" },
+  "scripts": { "check": "node check.cjs" },
+  "devDependencies": {
+    "typescript-before": "npm:typescript@5.9.2",
+    "typescript-after": "npm:typescript@6.0.3"
+  }
+}

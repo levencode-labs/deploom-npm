@@ -1,0 +1,7 @@
+{
+  "name": "deploom-stageb-workspace-replay",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@11.16.0",
+  "workspaces": [ "packages/*" ]
+}

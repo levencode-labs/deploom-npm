@@ -1,0 +1,10 @@
+{
+  "name": "@deploom-stageb/app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@deploom-stageb/contracts": "1.0.0",
+    "@deploom-stageb/domain": "1.0.0"
+  }
+}

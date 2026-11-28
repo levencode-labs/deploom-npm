@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "observedAt": "2026-11-28T15:38:08.143Z",
+  "runtime": {
+    "node": "24.18.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "manager": "pnpm",
+  "inputs": [
+    {
+      "path": ".gitignore",
+      "sha256": "fb5488a7a4c42eae7fdc63417c1882e36f48a17b7bf74937c20e6c5b4d8d7b2e",
+      "bytes": 128
+    },
+    {
+      "path": "README.md",
+      "sha256": "c37bc0c6e4fce637babaac53056e544ec0d9a956ffcab2a6ac4dc34902325e5c",
+      "bytes": 4802
+    },
+    {
+      "path": "arms/npm-after/package-lock.json",
+      "sha256": "fbcc700bf22366d025cfe5643f4c5a60ade948380953757f41f91be4283ebf2f",
+      "bytes": 1137
+    },
+    {
+      "path": "arms/npm-after/package.json",
+      "sha256": "26be0f7a18f47bff1c409035ef4c634332311b181eefbbe986f218ff0f1dc76c",
+      "bytes": 186
+    },
+    {
+      "path": "arms/npm-before/package-lock.json",
+      "sha256": "4f4e2203677cccf8472d657fff6edb8cb3a56d5e9d4b67d142edbbf50b1b5de8",
+      "bytes": 1149
+    },
+    {
+      "path": "arms/npm-before/package.json",
+      "sha256": "b1b75a6111776b53193b9aa45f3a5fc171fc58c9b33d238e01fd5e098aae3b43",
+      "bytes": 189
+    },
+    {
+      "path": "arms/pnpm-after/.npmrc",
+      "sha256": "bb1f2514b35c58142892848bc25e4b925b456ce8f82248c7c2cffa05ae0a5e10",
+      "bytes": 169
+    },
+    {
+      "path": "arms/pnpm-after/package.json",
+      "sha256": "611a86f888089f9429427f86d62b385d2b09fa33787b60408a4357eaa4fc8475",
+      "bytes": 188
+    },
+    {
+      "path": "arms/pnpm-after/pnpm-lock.yaml",
+      "sha256": "1a93cc22889c63e1278177c8db887779559cf4cfcc32800a444902686e656a0c",
+      "bytes": 642
+    },
+    {
+      "path": "arms/pnpm-before/.npmrc",
+      "sha256": "bb1f2514b35c58142892848bc25e4b925b456ce8f82248c7c2cffa05ae0a5e10",
+      "bytes": 169
+    },
+    {
+      "path": "arms/pnpm-before/package.json",
+      "sha256": "25c07989f32533712b21b1560da82f7aed159e3bd2b1f4051852e9621d913beb",
+      "bytes": 191
+    },
+    {
+      "path": "arms/pnpm-before/pnpm-lock.yaml",
+      "sha256": "5c5b84f66c30ebf1f97281625f5484ae8a49e4d234eda2f3304b12196294e2a8",
+      "bytes": 655
+    },
+    {
+      "path": "arms/yarn-after/.yarnrc.yml",
+      "sha256": "60b1a349f10a9ad14d4630ba45463687501314c169572e7ada99890a69aef7a9",
+      "bytes": 177
+    },
+    {
+      "path": "arms/yarn-after/package.json",
+      "sha256": "205979f7d229605862c233a9a5a1d7b2f07950c2017a2ec4d77d801d0a805895",
+      "bytes": 187
+    },
+    {
+      "path": "arms/yarn-after/yarn.lock",
+      "sha256": "fc1ca5e26272ad4eb4b0119830d806df7265c34f31642f19ee7fa9dac1d8b65d",
+      "bytes": 943
+    },
+    {
+      "path": "arms/yarn-before/.yarnrc.yml",
+      "sha256": "60b1a349f10a9ad14d4630ba45463687501314c169572e7ada99890a69aef7a9",
+      "bytes": 177
+    },
+    {
+      "path": "arms/yarn-before/package.json",
+      "sha256": "30e402ff46e641185f46457f538b10ecdf2a6fc63619941b21b92e9942129232",
+      "bytes": 190
+    },
+    {
+      "path": "arms/yarn-before/yarn.lock",
+      "sha256": "6b1b061476cb34988a9644f4c7f2374c2dcca4c2f069a379cf011bb60fe9c255",
+      "bytes": 952
+    },
+    {
+      "path": "check.cjs",
+      "sha256": "da1439f85b88a5f4523c664347c91331038baab0177be8c286e7fdbbc1307804",
+      "bytes": 7836
+    },
+    {
+      "path": "install.cjs",
+      "sha256": "574721268f908e8b2fdf850954171d07163e10fab527ed0b433b6e5ebb593519",
+      "bytes": 2459
+    },
+    {
+      "path": "runner.cjs",
+      "sha256": "c3686e5d5cdb1ee15336e8a4ad7eda0b670206778d88b93fa320dace0862cb1d",
+      "bytes": 5305
+    },
+    {
+      "path": "spec.json",
+      "sha256": "9e00bf06cca4be0a79b4598644d064b48f434a0c82e04caad5a0956f592de842",
+      "bytes": 570
+    },
+    {
+      "path": "tools/package-lock.json",
+      "sha256": "1fc22a58a5c2349d89398601b849b28cb710262c8931537a31462c7bfc1cada4",
+      "bytes": 47287
+    },
+    {
+      "path": "tools/package.json",
+      "sha256": "93725e27fb2ee974dcb0accc7d7acf8b4d8c800fdb1725ef235e9d8a76db9bb5",
+      "bytes": 233
+    }
+  ],
+  "results": [
+    {
+      "manager": "pnpm",
+      "managerVersion": "10.29.3",
+      "mode": "isolated-node-modules",
+      "status": "passed",
+      "cases": [
+        {
+          "package": "prettier",
+          "from": "2.8.8",
+          "to": "3.0.0",
+          "baseline": "passed",
+          "upgradedOldCode": "expected-TypeError",
+          "fixed": "passed",
+          "revertedFixNegative": "passed",
+          "invalidInputNegative": "passed"
+        },
+        {
+          "package": "zod",
+          "from": "3.25.76",
+          "to": "4.6.7",
+          "baseline": "passed",
+          "upgradedOldCode": "expected-TypeError",
+          "fixed": "passed",
+          "revertedFixNegative": "passed",
+          "invalidInputNegative": "passed"
+        }
+      ],
+      "arms": {
+        "before": {
+          "manager": "pnpm",
+          "arm": "before",
+          "versions": {
+            "prettier": "2.8.8",
+            "zod": "3.25.76"
+          },
+          "mode": "isolated-node-modules",
+          "resolutions": {
+            "prettier": "node_modules/.pnpm/prettier@2.8.8/node_modules/prettier/package.json",
+            "zod": "node_modules/.pnpm/zod@3.25.76/node_modules/zod/package.json"
+          },
+          "checks": {
+            "baseline": "passed",
+            "fixed": "passed",
+            "invalidInputControls": "passed"
+          },
+          "output": {
+            "formatted": "const data = { key: 1 };",
+            "invalidEmail": {
+              "status": 400,
+              "body": {
+                "error": "Invalid email address"
+              }
+            },
+            "validEmail": {
+              "status": 200,
+              "body": {
+                "email": "fixture@example.com"
+              }
+            }
+          }
+        },
+        "after": {
+          "manager": "pnpm",
+          "arm": "after",
+          "versions": {
+            "prettier": "3.0.0",
+            "zod": "4.6.7"
+          },
+          "mode": "isolated-node-modules",
+          "resolutions": {
+            "prettier": "node_modules/.pnpm/prettier@3.0.0/node_modules/prettier/package.json",
+            "zod": "node_modules/.pnpm/zod@4.6.7/node_modules/zod/package.json"
+          },
+          "checks": {
+            "upgradedOldCode": {
+              "prettier": "expected-TypeError",
+              "zod": "expected-TypeError"
+            },
+            "revertedFixNegatives": "passed",
+            "fixed": "passed",
+            "invalidInputControls": "passed"
+          },
+          "output": {
+            "formatted": "const data = { key: 1 };",
+            "invalidEmail": {
+              "status": 400,
+              "body": {
+                "error": "Invalid email address"
+              }
+            },
+            "validEmail": {
+              "status": 200,
+              "body": {
+                "email": "fixture@example.com"
+              }
+            }
+          }
+        }
+      },
+      "isolation": {
+        "before": {
+          "status": "passed",
+          "matchingVersionParentPoisonObserved": true,
+          "missingArmRejected": true,
+          "loaderOmitted": false
+        },
+        "after": {
+          "status": "passed",
+          "matchingVersionParentPoisonObserved": true,
+          "missingArmRejected": true,
+          "loaderOmitted": false
+        }
+      },
+      "negativeControls": [
+        "PRETTIER_OLD_SYNC_CONSUMER_FAILS",
+        "ZOD_ERRORS_ALIAS_FAILS",
+        "MANAGER_ARM_ISOLATION",
+        "FORMAT_INVALID_SOURCE_REJECTED",
+        "VALIDATION_INVALID_INPUT_REJECTED"
+      ]
+    }
+  ]
+}
