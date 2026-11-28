@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "cacheTests": {
+      "passed": 37
+    },
+    "coverageCheck": "PASS",
+    "fullCorpus": {
+      "crossDomainSignature": "REJECTED",
+      "equalRevisionReplacement": "REJECTED",
+      "readers": [
+        "actual published installed legacy MCP0.2.33",
+        "installed unreleased C candidate v2",
+        "installed unreleased C candidate v3"
+      ],
+      "records": 1530,
+      "stageBQueries": 45,
+      "v3MissingScopes": "REJECTED"
+    },
+    "npmTests": {
+      "passed": 18
+    }
+  },
+  "commands": [
+    "npm test",
+    "<installed-c-python> -m unittest discover -s cache -p test_*.py -v",
+    "<installed-c-python> cache/coverage_map.py --check",
+    "<installed-c-python> ci/test_knowledge_editions.py --legacy-python <installed-published-0.2.33-python>"
+  ],
+  "inputs": {
+    "acceptedCoreA": "8c65fc7311062169d1b1e058c5463a39efaed3d9",
+    "acceptedMcpA": "0c990137e3b713f944cd7a053f04d0e8470af337",
+    "candidateWheelSha256": "44b533aa8b3ae28d92ac684e688bc48a774ee2870b336e126cbcdb5856c2fef8",
+    "corpusSha256": "bc89d4601eea4d2a57ba87124d147c6c11ab64ed5b89bff996b438a218d520b8",
+    "ledgerSha256": "1ae7d699a8dce222bc52b534c657508d93bae40c91ffa84ef2d6c6bd3ab92d4a",
+    "publisherBase": "c590aff7c46722f20252e3135ad38374811c27d0",
+    "stageBFixtureSource": "d90fd3f01dbf84778222b7e3ba1c11f22e89b2dc"
+  },
+  "limitations": [
+    "installedRuntime:null in the unchanged parity harness means the published-A guard was not requested; this receipt describes the separate locally built C interpreter. It does not imply A publication or acceptance.",
+    "Initial local test invocations used an invalid cache/tests directory, then a dependency-only interpreter without MCP. Corrected to the existing cache directory and the independently installed C interpreter; no test or matrix was removed.",
+    "Hosted CI exact-head qualification is recorded in the pull request after it completes."
+  ],
+  "ordinaryRegistryInstallAccepted": false,
+  "releaseAAccepted": false,
+  "schemaVersion": 1,
+  "scope": "STAGE_C_UNRELEASED_INSTALLED_CANDIDATE",
+  "toolchain": {
+    "dependencies": "Unchanged hash-locked bin/posix-requirements.txt dependencies; MCP replaced only in isolated C test venv by locally built candidate.",
+    "node": "v24.22.3",
+    "python": "3.13.5"
+  }
+}

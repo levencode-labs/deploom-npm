@@ -1,0 +1,16 @@
+DepLoom installed state: UNKNOWN
+CLI 0.2.30; selected runtime 0.0.0-stagec.fixture (COMMON_ACTIVE_PROFILE)
+MCP 0.2.34; Core 0.1.22; INSTALLED_WHEEL
+Install origin: LOCAL_WHEEL (installer metadata; publication not checked)
+Core pin: 8c65fc7311062169d1b1e058c5463a39efaed3d9 (MATCHES_RELEASE_INVENTORY)
+knowledgeV1: UNKNOWN ; KNOWLEDGE_SNAPSHOT_UNAVAILABLE; last refresh NOT_RECORDED
+knowledgeV2: UNKNOWN ; KNOWLEDGE_SNAPSHOT_UNAVAILABLE; last refresh NOT_RECORDED
+knowledgeV3: UNKNOWN ; KNOWLEDGE_SNAPSHOT_UNAVAILABLE; last refresh NOT_RECORDED
+osv: UNKNOWN ; SNAPSHOT_UNAVAILABLE; last refresh NOT_RECORDED
+codex: 0.0.0-stagec.fixture
+Publisher current edition: not checked. Prepared corpus: not observed.
+Next: Run an explicitly authorized cache refresh, then repeat this read-only diagnostic.
+Next: Run an explicitly authorized cache refresh, then repeat this read-only diagnostic.
+Next: Run an explicitly authorized cache refresh, then repeat this read-only diagnostic.
+Next: Run an explicitly authorized cache refresh, then repeat this read-only diagnostic.
+Project verification is still required: check conditions, build, tests and affected user flows.

@@ -1,0 +1,108 @@
+{
+  "baseCommit": "b03d1549373db4fb9353bafbd66cda0f7af793ca",
+  "checks": [
+    {
+      "command": "python -m unittest discover -s cache -v",
+      "newCoverageTests": 14,
+      "status": "PASS",
+      "stdout": "coverage-cache-tests.txt",
+      "tests": 37
+    },
+    {
+      "command": "python cache/coverage_map.py && python cache/coverage_map.py --check",
+      "deterministicGeneration": "tested byte-for-byte twice",
+      "status": "PASS",
+      "stdout": "coverage-check.jsonl"
+    },
+    {
+      "command": "python ci/test_knowledge_editions.py --legacy-consumer <exact-0.2.33-source>",
+      "records": 1530,
+      "registryRequests": 0,
+      "stageBQueries": 45,
+      "status": "PASS",
+      "stdout": "coverage-editions-parity.jsonl"
+    }
+  ],
+  "consumerCommit": "0c990137e3b713f944cd7a053f04d0e8470af337",
+  "consumerMode": "PINNED_SOURCE_FOR_COVERAGE_AND_PARITY_TESTS",
+  "inputs": [
+    {
+      "path": "cache/coverage_identity.py",
+      "sha256": "2d5cd674d1aa115cf683ec04007280744146b1c591d88afaa7d27d51ebb928ae"
+    },
+    {
+      "path": "cache/coverage_map.py",
+      "sha256": "ba06971fea61778d661e11dafb4b4733814126c61a7bdba3037c8bb26a01ae68"
+    },
+    {
+      "path": "cache/test_coverage_map.py",
+      "sha256": "50b51dd81e781b5bef82ec52794b04fa445e3748779cba4d90c94ea29ce3ccb3"
+    },
+    {
+      "path": "docs/coverage-map.json",
+      "sha256": "e2b45db1c1a8db48dbc6bfcfe1df8ec80712ca4e96ffbd042ecb83c1b4fc4113"
+    },
+    {
+      "path": "docs/COVERAGE.md",
+      "sha256": "3345d1900da07629ab18d1e3202375ae46f7e910a3cf2f5d728c8ab6404d559c"
+    },
+    {
+      "path": "docs/COVERAGE.ru.md",
+      "sha256": "b4950e4d11542c65a317cf09a780c20f48e23b834bcbdf864fdb75bf2bffb335"
+    },
+    {
+      "path": "knowledge/coverage-inputs.json",
+      "sha256": "00a43b88f1ebe08af202ea5f597fa6f279f711fdd90459e07fcda721811e4048"
+    },
+    {
+      "path": "knowledge/review/recommendation-identity-v1.json",
+      "sha256": "f6cc95a56c5ffeda7bd343dab0d7eefae626bcd16bfc7d93f410df97f56ab533"
+    },
+    {
+      "path": "knowledge/review/recommendation-identity-canonicalization-v1.json",
+      "sha256": "3c60457f4c320cf97f90fd50a682c96eace127670bafd5a9ef946f6d0a319dc2"
+    }
+  ],
+  "legacyConsumerCommit": "73e4bcc04ec2a2c3aa85008a94b3a6958a03012d",
+  "logs": [
+    {
+      "path": "coverage-cache-tests.txt",
+      "sha256": "b9365c1f30d0271382f686c7c1639bfc64914c991a9a724a5466aa73672c7cc9"
+    },
+    {
+      "path": "coverage-generation.jsonl",
+      "sha256": "4a007a7adc4c30fd065a1c591bab57b82e8dac09ba8994102bd446265293e579"
+    },
+    {
+      "path": "coverage-check.jsonl",
+      "sha256": "84d4c91ef753a9eb5bc7eb3b62186a00ba5b47787c42f1851cb6447bdb95c9f5"
+    },
+    {
+      "path": "coverage-editions-parity.jsonl",
+      "sha256": "4e731da3c73acaddda4688836913dca0705f1ad040901b300b6ad3710ea7ded5"
+    }
+  ],
+  "releaseAcceptance": false,
+  "review": {
+    "findingsResolved": [
+      "Reject live SQLite WAL and rollback journal",
+      "Validate exact trusted commit before Git invocation",
+      "Contain retained verifier path inside repository",
+      "Check SQLite identity after read to reject concurrent replacement"
+    ],
+    "reviewer": "independent c3_diagnostics agent"
+  },
+  "runtime": {
+    "cryptography": "50.0.2",
+    "cvss": "3.6",
+    "dependencyInstallationScope": "Hash-locked non-MCP dependencies only; production consumers imported from the exact source SHAs above.",
+    "dependencyLock": "bin/posix-requirements.txt",
+    "dependencyLockSha256": "86fa3ef847aa5b3e4c9843f159f074447da9957d605d13959a24344319c6663b",
+    "git": "2.56.1",
+    "jsonschema": "4.26.0",
+    "node": "24.22.3",
+    "python": "3.13.5"
+  },
+  "schema": 1,
+  "validatedAt": "2026-11-28T17:33:49.955131+00:00"
+}

@@ -174,6 +174,13 @@ function collectVersions() {
 }
 
 async function main() {
+  if (command === 'diagnose') {
+    const { installedState, humanReadable } = require('./diagnose.cjs');
+    const result = installedState({ pkg, base, args: process.argv.slice(3) });
+    console.log(result.json ? JSON.stringify(result.report) : humanReadable(result.report));
+    process.exitCode = result.exitCode;
+    return;
+  }
   if (command === 'diagnose-coverage') {
     const version = require('../package.json').version;
     const python = pythonBin(versionDir(version));
@@ -202,7 +209,7 @@ async function main() {
   }
   const clientCommand = ['setup', 'rollback'].includes(command) && ['opencode', 'codex', 'claude'].includes(client);
   if ((!refreshCache && !clientCommand) || process.argv.length !== 4) {
-    throw Error('Usage: deploom <setup|rollback> <opencode|codex|claude>, deploom cache <refresh|status>, or deploom diagnose-coverage <result.json> [options]');
+    throw Error('Usage: deploom <setup|rollback> <opencode|codex|claude>, deploom cache <refresh|status>, deploom diagnose [--json] [--client codex|claude|opencode], or deploom diagnose-coverage <result.json> [options]');
   }
   if (process.platform === 'win32') {
     if (process.arch !== 'x64') throw Error('Windows x64 is required');

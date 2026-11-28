@@ -1,0 +1,26 @@
+✔ local status uses the source timestamp and exact seven-day expiry (16.622097ms)
+✔ missing, partial and same-size corrupt editions give no freshness claim (8.652085ms)
+✔ CLI checks the configured directory before setup and leaves the data home untouched (219.365436ms)
+✔ offline diagnostic forwards arguments to the installed version and preserves its error status (232.913969ms)
+✔ missing runtime returns structured local status and creates nothing (122.137ms)
+✔ diagnostic invokes only the selected installed runtime with isolation and no writes (79.235457ms)
+✔ a common active version is selected even when the invoking CLI is newer (74.283251ms)
+✔ different active versions require an explicit profile without inspecting arbitrary config (87.275402ms)
+✔ old runtime is explicit and human output gives a concrete next step (74.254711ms)
+✔ runtime stderr and malformed output cannot leak credentials (69.642526ms)
+✔ invalid arguments never initialize a runtime (70.956703ms)
+✔ packaged release pins are passed to the installed diagnostic when available (69.615077ms)
+✔ cache-only mode keeps verified local knowledge enabled and preserves explicit host disable (1.168125ms)
+✔ an observed wheel archive digest must match the packaged expected digest (103.913621ms)
+✔ malformed packaged wheel hash is not silently treated as an absent expected pin (86.723516ms)
+✔ runtime download follows HTTPS redirects and writes exact bytes (17.187828ms)
+✔ installer without curl uses Node and checks the archive before extraction (10.769269ms)
+✔ runtime download refuses a downgrade before requesting the redirect (0.929851ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1002.866428

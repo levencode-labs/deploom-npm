@@ -45,6 +45,8 @@ jobs:
           echo "$RUNNER_TEMP/records-venv/bin" >> "$GITHUB_PATH"
       - uses: ./.github/actions/setup-cache-consumer
       - run: cmp cache/records-public.hex build/contracts/src/deploom_mcp/records-public.hex
+      - name: Reject stale coverage documentation before preparing public data
+        run: python cache/coverage_map.py --check
       - name: Verify the release before advancing the pointer
         env:
           GH_TOKEN: ${{ github.token }}

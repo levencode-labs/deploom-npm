@@ -111,6 +111,19 @@ function recover(profile) {
   fs.rmSync(tx.backup, { recursive: true, force: true });
   fs.unlinkSync(file);
 }
+function runtimeEnvironment(base, version, source = process.env) {
+  const env = { ...source, DEPLOOM_CLI_VERSION: version };
+  if (env.DEPLOOM_MCP_LOCAL_CACHE_ONLY === '1') {
+    // LOCAL_CACHE_ONLY already blocks network; an explicit host disable stays
+    // intact, but must not be synthesized to suppress verified local knowledge.
+    env.DEPLOOM_MCP_MIGRATION_OFFLINE = '1';
+  }
+  env.DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK ??= '1';
+  env.DEPLOOM_MCP_OSV_DIR ||= path.join(base, 'cache', 'osv');
+  env.DEPLOOM_MCP_RECORDS_DIR ||= path.join(base, 'cache', 'records');
+  return env;
+}
+
 async function launch(profile) {
   const base = path.resolve(profile, '../..');
   await withLock(base, async () => {
@@ -118,16 +131,7 @@ async function launch(profile) {
     const { version } = JSON.parse(fs.readFileSync(path.join(profile, 'active.json'), 'utf8'));
     if (typeof version !== 'string' || !versionPattern.test(version)) throw Error('Invalid active version');
     const runtime = path.join(base, 'versions', version);
-    const cache = path.join(base, 'cache', 'osv');
-    const env = { ...process.env };
-    if (env.DEPLOOM_MCP_LOCAL_CACHE_ONLY === '1') {
-      env.DEPLOOM_MCP_DISABLE_EXTERNAL_EVIDENCE = '1';
-      env.DEPLOOM_MCP_MIGRATION_OFFLINE = '1';
-    }
-    env.DEPLOOM_MCP_PUBLIC_ADVISORY_FALLBACK ??= '1';
-    if (!env.DEPLOOM_MCP_OSV_DIR) env.DEPLOOM_MCP_OSV_DIR = cache;
-    const records = path.join(base, 'cache', 'records');
-    if (!env.DEPLOOM_MCP_RECORDS_DIR) env.DEPLOOM_MCP_RECORDS_DIR = records;
+    const env = runtimeEnvironment(base, version);
     const leases = path.join(base, 'running', version);
     fs.mkdirSync(leases, { recursive: true });
     const starting = path.join(leases, 'starting-' + crypto.randomUUID());
@@ -153,5 +157,5 @@ async function launch(profile) {
   });
 }
 
-module.exports = { versionPattern, withLock, pythonBin, sitePackages, locations, read, writeAtomic, checkPath, recover };
+module.exports = { runtimeEnvironment, versionPattern, withLock, pythonBin, sitePackages, locations, read, writeAtomic, checkPath, recover };
 if (require.main === module) launch(__dirname).catch(err => { console.error(err.message); process.exitCode = 1; });

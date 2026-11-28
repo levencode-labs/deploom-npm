@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "identity": "recommendation-identity.v1",
+  "canonicalization": "json.dumps(sort_keys=True,separators=(comma,colon),ensure_ascii=True), UTF-8, no trailing newline",
+  "vectors": [
+    {
+      "name": "baseline",
+      "record": {
+        "package": "example",
+        "kind": "breaking-change",
+        "verifiedTransitions": [
+          {
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ],
+        "packageManagers": [
+          "yarn",
+          "npm"
+        ],
+        "conditions": [
+          "The exact joint graph uses peer 3.0.0.",
+          "A caf\u00e9 label is rendered."
+        ],
+        "actions": [
+          "Await the formatter.",
+          "Preserve rejection."
+        ],
+        "verification": [
+          "Run consumer tests."
+        ]
+      },
+      "recommendationId": "rec-36e4ff7e2a189e48936bae185a0a5a47a9f943d5412a1ab4c308f9704bd2d834"
+    },
+    {
+      "name": "sets-reordered",
+      "record": {
+        "package": "example",
+        "kind": "breaking-change",
+        "verifiedTransitions": [
+          {
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ],
+        "packageManagers": [
+          "npm",
+          "yarn"
+        ],
+        "conditions": [
+          "A caf\u00e9 label is rendered.",
+          "The exact joint graph uses peer 3.0.0."
+        ],
+        "actions": [
+          "Await the formatter.",
+          "Preserve rejection."
+        ],
+        "verification": [
+          "Run consumer tests."
+        ]
+      },
+      "recommendationId": "rec-36e4ff7e2a189e48936bae185a0a5a47a9f943d5412a1ab4c308f9704bd2d834"
+    },
+    {
+      "name": "action-order-differs",
+      "record": {
+        "package": "example",
+        "kind": "breaking-change",
+        "verifiedTransitions": [
+          {
+            "from": "1.0.0",
+            "to": "2.0.0"
+          }
+        ],
+        "packageManagers": [
+          "yarn",
+          "npm"
+        ],
+        "conditions": [
+          "The exact joint graph uses peer 3.0.0.",
+          "A caf\u00e9 label is rendered."
+        ],
+        "actions": [
+          "Preserve rejection.",
+          "Await the formatter."
+        ],
+        "verification": [
+          "Run consumer tests."
+        ]
+      },
+      "recommendationId": "rec-2dd978642fa30e1e5099989ad30cb5bff5bd4c9173df7623ad6bfe60259bf5b6"
+    },
+    {
+      "name": "exact-transition-differs",
+      "record": {
+        "package": "example",
+        "kind": "breaking-change",
+        "verifiedTransitions": [
+          {
+            "from": "1.0.0",
+            "to": "2.1.0"
+          }
+        ],
+        "packageManagers": [
+          "yarn",
+          "npm"
+        ],
+        "conditions": [
+          "The exact joint graph uses peer 3.0.0.",
+          "A caf\u00e9 label is rendered."
+        ],
+        "actions": [
+          "Await the formatter.",
+          "Preserve rejection."
+        ],
+        "verification": [
+          "Run consumer tests."
+        ]
+      },
+      "recommendationId": "rec-6994636fb02f13b1a4646eb171a9b85238c69e56c7217caa4e7beb7ca889f38b"
+    }
+  ]
+}
